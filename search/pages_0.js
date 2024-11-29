@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elin_20modding_20documentation_0',['Elin Modding Documentation',['../index.html',1,'']]]
+  ['elin_20decompiled_20documentation_0',['Elin Decompiled Documentation',['../index.html',1,'']]]
 ];

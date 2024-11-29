@@ -121,7 +121,7 @@ var searchData=
   ['elepoison_118',['elePoison',['../classSKILL.html#ac454d38384486047221aec5857a5a989',1,'SKILL']]],
   ['elesound_119',['eleSound',['../classSKILL.html#a8571fdf424e3560df458058fd0ab659a',1,'SKILL']]],
   ['elevator_120',['Elevator',['../classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a963695ded6583fecdbda7392e973ac6c',1,'ZoneTransition']]],
-  ['elin_20modding_20documentation_121',['Elin Modding Documentation',['../index.html',1,'']]],
+  ['elin_20decompiled_20documentation_121',['Elin Decompiled Documentation',['../index.html',1,'']]],
   ['elingift_122',['elinGift',['../classPlayer_1_1Flags.html#ac29eb4ec0213c206ff2b5622e0b17a86',1,'Player::Flags']]],
   ['elomap_123',['EloMap',['../classEloMap.html',1,'']]],
   ['elomap_124',['elomap',['../classUIZoneInfo.html#acdea122674a38322c92097fb7b8d819a',1,'UIZoneInfo.elomap()'],['../classUIFactionInfo.html#a94ca658a4bf889bd81dd3945c150e0bb',1,'UIFactionInfo.elomap()'],['../classTileSelectorElona.html#a9fddb245eda936ce168812474f61278b',1,'TileSelectorElona.elomap()'],['../classTileMapElona.html#a49e671ed65b0e1190fdd02a3ae8da777',1,'TileMapElona.elomap()'],['../classScene.html#ac69cb156b9ecdcb3b83fbf4ed528c6fe',1,'Scene.elomap()'],['../classRegion.html#a0a3cedbd3028eb6fead482e2336f58b2',1,'Region.elomap()'],['../classEloPos.html#a957f6697c809218d850ccc52b0c54445',1,'EloPos.elomap()'],['../classEloMapTileSelector.html#aa878fad2251baced16cd9dcb1c89572b',1,'EloMapTileSelector.elomap()'],['../classEloMapActor.html#aebdccd457884172c1be9c544509e57e2',1,'EloMapActor.elomap()']]],
