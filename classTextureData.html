@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTextureData.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -178,7 +198,15 @@ Public Attributes</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00245">245</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_enumvalue" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7ab9b57aae83585e17ede4570dcede353c">Pass</a>,</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_enumvalue" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7af5a7924e621e84c9280a9a27e1bcb7f6">World</a>,</div>
+<div class="line"><span class="lineno">  249</span>        <a class="code hl_enumvalue" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7ae483203327525a1e508426d91236ee1f">DestTex</a></div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_a5465cbb9f4b002114e1bfb9f449738d7ab9b57aae83585e17ede4570dcede353c"><div class="ttname"><a href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7ab9b57aae83585e17ede4570dcede353c">TextureData.Type.Pass</a></div><div class="ttdeci">@ Pass</div></div>
+<div class="ttc" id="aclassTextureData_html_a5465cbb9f4b002114e1bfb9f449738d7ae483203327525a1e508426d91236ee1f"><div class="ttname"><a href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7ae483203327525a1e508426d91236ee1f">TextureData.Type.DestTex</a></div><div class="ttdeci">@ DestTex</div></div>
+<div class="ttc" id="aclassTextureData_html_a5465cbb9f4b002114e1bfb9f449738d7af5a7924e621e84c9280a9a27e1bcb7f6"><div class="ttname"><a href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7af5a7924e621e84c9280a9a27e1bcb7f6">TextureData.Type.World</a></div><div class="ttdeci">@ World</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -207,6 +235,36 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00155">155</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a> textureReplace = this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.TryGetValue(r.<a class="code hl_variable" href="classTextureReplace.html#adc3c160694d31aca2aa2183741c5fa47">index</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (textureReplace != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classTextureReplace.html#a6806f1dd6807cacde37952988293a87d">source</a> == <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a>.<a class="code hl_enumeration" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">Source</a>.Local &amp;&amp; textureReplace.<a class="code hl_variable" href="classTextureReplace.html#a6806f1dd6807cacde37952988293a87d">source</a> != <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a>.<a class="code hl_enumeration" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">Source</a>.Local)</div>
+<div class="line"><span class="lineno">  161</span>            {</div>
+<div class="line"><span class="lineno">  162</span>                r.original = textureReplace;</div>
+<div class="line"><span class="lineno">  163</span>            }</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  165</span>            {</div>
+<div class="line"><span class="lineno">  166</span>                textureReplace.<a class="code hl_function" href="classTextureReplace.html#afef11e8540d1963f3b24276cea2aea5b">DestoryTex</a>();</div>
+<div class="line"><span class="lineno">  167</span>            }</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classTextureReplace.html#a6806f1dd6807cacde37952988293a87d">source</a> == <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a>.<a class="code hl_enumeration" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">Source</a>.Local)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            this.<a class="code hl_variable" href="classTextureData.html#add571c123257b0fb701069f405f748b1">listReplaceLocal</a>.Add(r);</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>        this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>[r.<a class="code hl_variable" href="classTextureReplace.html#adc3c160694d31aca2aa2183741c5fa47">index</a>] = r;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_a382068a67bab438e50859afddf1b9ef2"><div class="ttname"><a href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">TextureData.dictReplace</a></div><div class="ttdeci">Dictionary&lt; int, TextureReplace &gt; dictReplace</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00222">TextureData.cs:222</a></div></div>
+<div class="ttc" id="aclassTextureData_html_add571c123257b0fb701069f405f748b1"><div class="ttname"><a href="classTextureData.html#add571c123257b0fb701069f405f748b1">TextureData.listReplaceLocal</a></div><div class="ttdeci">List&lt; TextureReplace &gt; listReplaceLocal</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00225">TextureData.cs:225</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html"><div class="ttname"><a href="classTextureReplace.html">TextureReplace</a></div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00005">TextureReplace.cs:6</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a2590dcd97f19076413e6f42b89a98cd7"><div class="ttname"><a href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">TextureReplace.Source</a></div><div class="ttdeci">Source</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00067">TextureReplace.cs:68</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a6806f1dd6807cacde37952988293a87d"><div class="ttname"><a href="classTextureReplace.html#a6806f1dd6807cacde37952988293a87d">TextureReplace.source</a></div><div class="ttdeci">TextureReplace.Source source</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00063">TextureReplace.cs:63</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_adc3c160694d31aca2aa2183741c5fa47"><div class="ttname"><a href="classTextureReplace.html#adc3c160694d31aca2aa2183741c5fa47">TextureReplace.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00057">TextureReplace.cs:57</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_afef11e8540d1963f3b24276cea2aea5b"><div class="ttname"><a href="classTextureReplace.html#afef11e8540d1963f3b24276cea2aea5b">TextureReplace.DestoryTex</a></div><div class="ttdeci">void DestoryTex()</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00044">TextureReplace.cs:44</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00044">TextureReplace.DestoryTex()</a>, <a class="el" href="TextureData_8cs_source.html#l00222">dictReplace</a>, <a class="el" href="TextureReplace_8cs_source.html#l00057">TextureReplace.index</a>, <a class="el" href="TextureData_8cs_source.html#l00225">listReplaceLocal</a>, and <a class="el" href="TextureReplace_8cs_source.html#l00063">TextureReplace.source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00127">TextureManager.TryAddReplace()</a>.</p>
 
 </div>
 </div>
@@ -263,6 +321,33 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00136">136</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">string</span> str = this.id + <span class="stringliteral">&quot;_&quot;</span> + index.ToString() + <span class="stringliteral">&quot;.png&quot;</span>;</div>
+<div class="line"><span class="lineno">  139</span>        Texture2D texture2D = <span class="keyword">new</span> Texture2D(this.<a class="code hl_variable" href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">tileW</a> * sizeX, this.<a class="code hl_variable" href="classTextureData.html#abcd6f451246000a3d8fca19aab968ea8">tileH</a> * sizeY);</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">int</span> srcX = index % 100 * this.<a class="code hl_variable" href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">tileW</a>;</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> srcY = this.tex.height - index / 100 * this.tileH - texture2D.height;</div>
+<div class="line"><span class="lineno">  142</span>        Graphics.CopyTexture(this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>, 0, 0, srcX, srcY, this.<a class="code hl_variable" href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">tileW</a> * sizeX, this.<a class="code hl_variable" href="classTextureData.html#abcd6f451246000a3d8fca19aab968ea8">tileH</a> * sizeY, texture2D, 0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">byte</span>[] bytes = texture2D.EncodeToPNG();</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            File.WriteAllBytes(<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a> + str, bytes);</div>
+<div class="line"><span class="lineno">  147</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.textures.TryAddReplace(<span class="keyword">new</span> FileInfo(<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a> + str), source, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        UnityEngine.Object.Destroy(texture2D);</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassTextureData_html_a0a4fb7e4b1695730b5963899165f074c"><div class="ttname"><a href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">TextureData.tex</a></div><div class="ttdeci">Texture2D tex</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00204">TextureData.cs:204</a></div></div>
+<div class="ttc" id="aclassTextureData_html_a67c0c5f69a5112b90bed9ecfaace7267"><div class="ttname"><a href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">TextureData.tileW</a></div><div class="ttdeci">int tileW</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00208">TextureData.cs:208</a></div></div>
+<div class="ttc" id="aclassTextureData_html_abcd6f451246000a3d8fca19aab968ea8"><div class="ttname"><a href="classTextureData.html#abcd6f451246000a3d8fca19aab968ea8">TextureData.tileH</a></div><div class="ttdeci">int tileH</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00210">TextureData.cs:210</a></div></div>
+<div class="ttc" id="aclassTextureData_html_ae80b7f3bdcbea253581d4a06065c16ab"><div class="ttname"><a href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">TextureData.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00213">TextureData.cs:213</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="TextureData_8cs_source.html#l00213">path</a>, <a class="el" href="TextureData_8cs_source.html#l00204">tex</a>, <a class="el" href="TextureData_8cs_source.html#l00210">tileH</a>, and <a class="el" href="TextureData_8cs_source.html#l00208">tileW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -291,6 +376,16 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00176">176</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        r.<a class="code hl_variable" href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">file</a>.Delete();</div>
+<div class="line"><span class="lineno">  179</span>        this.<a class="code hl_function" href="classTextureData.html#af3def33233af7e6ff313d4291d53cde3">RemoveDeletedReplace</a>(r.<a class="code hl_variable" href="classTextureReplace.html#adc3c160694d31aca2aa2183741c5fa47">index</a>);</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_af3def33233af7e6ff313d4291d53cde3"><div class="ttname"><a href="classTextureData.html#af3def33233af7e6ff313d4291d53cde3">TextureData.RemoveDeletedReplace</a></div><div class="ttdeci">void RemoveDeletedReplace(int index)</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00182">TextureData.cs:182</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a027e48d52f965d133f85cafb642e4e81"><div class="ttname"><a href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">TextureReplace.file</a></div><div class="ttdeci">FileInfo file</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00053">TextureReplace.cs:53</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00053">TextureReplace.file</a>, <a class="el" href="TextureReplace_8cs_source.html#l00057">TextureReplace.index</a>, and <a class="el" href="TextureData_8cs_source.html#l00182">RemoveDeletedReplace()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -318,6 +413,15 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00044">44</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        this.forceRefresh = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_function" href="classTextureData.html#a6ed69e629f50b4e6c4410ad3ead3a652">TryRefresh</a>();</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_a6ed69e629f50b4e6c4410ad3ead3a652"><div class="ttname"><a href="classTextureData.html#a6ed69e629f50b4e6c4410ad3ead3a652">TextureData.TryRefresh</a></div><div class="ttdeci">void TryRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00008">TextureData.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00050">RefreshAll()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -345,6 +449,34 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00062">62</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_enumeration" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">TextureData.Type</a> <a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a> = this.<a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a>;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (type != <a class="code hl_class" href="classTextureData.html">TextureData</a>.<a class="code hl_enumeration" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">Type</a>.Pass)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a> != TextureData.Type.World || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a93a4fa0594cd28bbcb2676f52d59f2ac">tileset</a>.AtlasTexture;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keyword">using</span> (List&lt;MeshPass&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classTextureData.html#ac81cba4b71e2de6d028417b4e8973ab6">listPass</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (!enumerator.Current.mat.GetTexture(<span class="keyword">this</span>.texName))</div>
+<div class="line"><span class="lineno">   74</span>                {</div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   76</span>                }</div>
+<div class="line"><span class="lineno">   77</span>            }</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassScene_html_a93a4fa0594cd28bbcb2676f52d59f2ac"><div class="ttname"><a href="classScene.html#a93a4fa0594cd28bbcb2676f52d59f2ac">Scene.tileset</a></div><div class="ttdeci">Tileset tileset</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01073">Scene.cs:1073</a></div></div>
+<div class="ttc" id="aclassTextureData_html"><div class="ttname"><a href="classTextureData.html">TextureData</a></div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00006">TextureData.cs:7</a></div></div>
+<div class="ttc" id="aclassTextureData_html_a5465cbb9f4b002114e1bfb9f449738d7"><div class="ttname"><a href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">TextureData.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00245">TextureData.cs:246</a></div></div>
+<div class="ttc" id="aclassTextureData_html_aaf239929a1564a0d59a80cddae2a3a0e"><div class="ttname"><a href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">TextureData.type</a></div><div class="ttdeci">TextureData.Type type</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00200">TextureData.cs:200</a></div></div>
+<div class="ttc" id="aclassTextureData_html_ac81cba4b71e2de6d028417b4e8973ab6"><div class="ttname"><a href="classTextureData.html#ac81cba4b71e2de6d028417b4e8973ab6">TextureData.listPass</a></div><div class="ttdeci">List&lt; MeshPass &gt; listPass</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00219">TextureData.cs:219</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureData_8cs_source.html#l00219">listPass</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l01073">Scene.tileset</a>, and <a class="el" href="TextureData_8cs_source.html#l00200">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -373,6 +505,68 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00082">82</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (!dateMatched)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            Texture2D texture2D = IO.LoadPNG(this.<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a>, FilterMode.Point);</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (!texture2D)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                Debug.Log(this.<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a>);</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>.width != texture2D.width || <span class="keyword">this</span>.tex.height != texture2D.height)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   94</span>                {</div>
+<div class="line"><span class="lineno">   95</span>                    this.<a class="code hl_variable" href="classTextureData.html#ad7c5c1b70872141d95ead516d0549c69">id</a>,</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   97</span>                    texture2D.width.ToString(),</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   99</span>                    texture2D.height.ToString(),</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  101</span>                    <span class="keyword">this</span>.path</div>
+<div class="line"><span class="lineno">  102</span>                }));</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>            this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>.SetPixels32(texture2D.GetPixels32());</div>
+<div class="line"><span class="lineno">  105</span>            this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>.Apply();</div>
+<div class="line"><span class="lineno">  106</span>            UnityEngine.Object.Destroy(texture2D);</div>
+<div class="line"><span class="lineno">  107</span>            Debug.Log(<span class="stringliteral">&quot;Reloaded Texture:&quot;</span> + this.<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a>);</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_enumeration" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">TextureData.Type</a> <a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a> = this.<a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a>;</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (type != <a class="code hl_class" href="classTextureData.html">TextureData</a>.<a class="code hl_enumeration" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">Type</a>.Pass)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e">type</a> != <a class="code hl_class" href="classTextureData.html">TextureData</a>.<a class="code hl_enumeration" href="classTextureData.html#a5465cbb9f4b002114e1bfb9f449738d7">Type</a>.World)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keyword">using</span> (List&lt;MeshPass&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classTextureData.html#ac81cba4b71e2de6d028417b4e8973ab6">listPass</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  122</span>                {</div>
+<div class="line"><span class="lineno">  123</span>                    <a class="code hl_class" href="classMeshPass.html">MeshPass</a> meshPass = enumerator.Current;</div>
+<div class="line"><span class="lineno">  124</span>                    meshPass.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.SetTexture(this.<a class="code hl_variable" href="classTextureData.html#a908cb8010839ae1b8bcaef910ac7f575">texName</a>, this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>);</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (meshPass.<a class="code hl_variable" href="classMeshPass.html#aae531a29f6e9d8d5561fbbffa244d3e0">haveShadowPass</a>)</div>
+<div class="line"><span class="lineno">  126</span>                    {</div>
+<div class="line"><span class="lineno">  127</span>                        meshPass.<a class="code hl_variable" href="classMeshPass.html#ac259734457b225cfa5c223acf4888868">shadowPass</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.SetTexture(this.<a class="code hl_variable" href="classTextureData.html#a908cb8010839ae1b8bcaef910ac7f575">texName</a>, this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>);</div>
+<div class="line"><span class="lineno">  128</span>                    }</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        EClass.scene.tileset.AtlasTexture = this.<a class="code hl_variable" href="classTextureData.html#a0a4fb7e4b1695730b5963899165f074c">tex</a>;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassMeshPass_html"><div class="ttname"><a href="classMeshPass.html">MeshPass</a></div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00007">MeshPass.cs:8</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a867e46b34b801aa583aa5257121d4902"><div class="ttname"><a href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">MeshPass.mat</a></div><div class="ttdeci">Material mat</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00431">MeshPass.cs:431</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_aae531a29f6e9d8d5561fbbffa244d3e0"><div class="ttname"><a href="classMeshPass.html#aae531a29f6e9d8d5561fbbffa244d3e0">MeshPass.haveShadowPass</a></div><div class="ttdeci">bool haveShadowPass</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00461">MeshPass.cs:461</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_ac259734457b225cfa5c223acf4888868"><div class="ttname"><a href="classMeshPass.html#ac259734457b225cfa5c223acf4888868">MeshPass.shadowPass</a></div><div class="ttdeci">MeshPass shadowPass</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00429">MeshPass.cs:429</a></div></div>
+<div class="ttc" id="aclassTextureData_html_a908cb8010839ae1b8bcaef910ac7f575"><div class="ttname"><a href="classTextureData.html#a908cb8010839ae1b8bcaef910ac7f575">TextureData.texName</a></div><div class="ttdeci">string texName</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00216">TextureData.cs:216</a></div></div>
+<div class="ttc" id="aclassTextureData_html_ad7c5c1b70872141d95ead516d0549c69"><div class="ttname"><a href="classTextureData.html#ad7c5c1b70872141d95ead516d0549c69">TextureData.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00198">TextureData.cs:198</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00461">MeshPass.haveShadowPass</a>, <a class="el" href="TextureData_8cs_source.html#l00198">id</a>, <a class="el" href="TextureData_8cs_source.html#l00219">listPass</a>, <a class="el" href="MeshPass_8cs_source.html#l00431">MeshPass.mat</a>, <a class="el" href="TextureData_8cs_source.html#l00213">path</a>, <a class="el" href="MeshPass_8cs_source.html#l00429">MeshPass.shadowPass</a>, <a class="el" href="TextureData_8cs_source.html#l00204">tex</a>, <a class="el" href="TextureData_8cs_source.html#l00216">texName</a>, and <a class="el" href="TextureData_8cs_source.html#l00200">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -400,6 +594,19 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00050">50</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classTextureData.html">TextureData</a> textureData <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.textures.texMap.Values)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            textureData.<a class="code hl_function" href="classTextureData.html#abaceafeac7f9b033f4d4e848c7fcf97e">ForceRefresh</a>();</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_abaceafeac7f9b033f4d4e848c7fcf97e"><div class="ttname"><a href="classTextureData.html#abaceafeac7f9b033f4d4e848c7fcf97e">TextureData.ForceRefresh</a></div><div class="ttdeci">void ForceRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00044">TextureData.cs:44</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="TextureData_8cs_source.html#l00044">ForceRefresh()</a>.</p>
 
 </div>
 </div>
@@ -428,6 +635,25 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00182">182</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>    {</div>
+<div class="line"><span class="lineno">  184</span>        <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a> textureReplace = this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.TryGetValue(index, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (textureReplace == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        textureReplace.<a class="code hl_function" href="classTextureReplace.html#afef11e8540d1963f3b24276cea2aea5b">DestoryTex</a>();</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (textureReplace.<a class="code hl_variable" href="classTextureReplace.html#ae20e6f68a3108d0fff85b2f254158848">original</a> != <span class="keyword">null</span> &amp;&amp; textureReplace.<a class="code hl_variable" href="classTextureReplace.html#ae20e6f68a3108d0fff85b2f254158848">original</a>.<a class="code hl_variable" href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">file</a>.Exists)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>[index] = textureReplace.<a class="code hl_variable" href="classTextureReplace.html#ae20e6f68a3108d0fff85b2f254158848">original</a>;</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.Remove(index);</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="ttc" id="aclassTextureReplace_html_ae20e6f68a3108d0fff85b2f254158848"><div class="ttname"><a href="classTextureReplace.html#ae20e6f68a3108d0fff85b2f254158848">TextureReplace.original</a></div><div class="ttdeci">TextureReplace original</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00065">TextureReplace.cs:65</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00044">TextureReplace.DestoryTex()</a>, <a class="el" href="TextureData_8cs_source.html#l00222">dictReplace</a>, <a class="el" href="TextureReplace_8cs_source.html#l00053">TextureReplace.file</a>, and <a class="el" href="TextureReplace_8cs_source.html#l00065">TextureReplace.original</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00176">DeleteReplace()</a>, and <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -455,6 +681,49 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00008">8</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        DateTime lastWriteTime = File.GetLastWriteTime(this.<a class="code hl_variable" href="classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab">path</a>);</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordtype">bool</span> flag = this.date.DateTime.Year != 1 &amp;&amp; this.<a class="code hl_variable" href="classTextureData.html#abbc6d9d10764a86d4150c45c057bdfd3">date</a>.DateTime.Equals(lastWriteTime);</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            List&lt;int&gt; list = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classTextureReplace.html">TextureReplace</a> textureReplace <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.Values)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                <span class="keywordflow">if</span> (!File.Exists(textureReplace.<a class="code hl_variable" href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">file</a>.FullName))</div>
+<div class="line"><span class="lineno">   18</span>                {</div>
+<div class="line"><span class="lineno">   19</span>                    this.forceRefresh = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>                    list.Add(textureReplace.<a class="code hl_variable" href="classTextureReplace.html#adc3c160694d31aca2aa2183741c5fa47">index</a>);</div>
+<div class="line"><span class="lineno">   21</span>                }</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> index <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                this.<a class="code hl_function" href="classTextureData.html#af3def33233af7e6ff313d4291d53cde3">RemoveDeletedReplace</a>(index);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTextureData.html#a367330cc973a0d930ed564f6450a2bb1">forceRefresh</a>)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            this.forceRefresh = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (!flag || !this.<a class="code hl_function" href="classTextureData.html#a876b77525a462b851fecb75dccd1c9e7">IsValid</a>())</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            this.<a class="code hl_function" href="classTextureData.html#ad153b59e0124d90408fe99a9acc961ca">Load</a>(flag);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classTextureReplace.html">TextureReplace</a> textureReplace2 <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTextureData.html#a382068a67bab438e50859afddf1b9ef2">dictReplace</a>.Values)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            textureReplace2.<a class="code hl_function" href="classTextureReplace.html#a84fedfd0a0aa3667412fd4eb154b15cb">TryRefresh</a>(!flag);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        this.date.DateTime = lastWriteTime;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_a367330cc973a0d930ed564f6450a2bb1"><div class="ttname"><a href="classTextureData.html#a367330cc973a0d930ed564f6450a2bb1">TextureData.forceRefresh</a></div><div class="ttdeci">bool forceRefresh</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00206">TextureData.cs:206</a></div></div>
+<div class="ttc" id="aclassTextureData_html_a876b77525a462b851fecb75dccd1c9e7"><div class="ttname"><a href="classTextureData.html#a876b77525a462b851fecb75dccd1c9e7">TextureData.IsValid</a></div><div class="ttdeci">virtual bool IsValid()</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00062">TextureData.cs:62</a></div></div>
+<div class="ttc" id="aclassTextureData_html_abbc6d9d10764a86d4150c45c057bdfd3"><div class="ttname"><a href="classTextureData.html#abbc6d9d10764a86d4150c45c057bdfd3">TextureData.date</a></div><div class="ttdeci">TextureData.Date date</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00202">TextureData.cs:202</a></div></div>
+<div class="ttc" id="aclassTextureData_html_ad153b59e0124d90408fe99a9acc961ca"><div class="ttname"><a href="classTextureData.html#ad153b59e0124d90408fe99a9acc961ca">TextureData.Load</a></div><div class="ttdeci">void Load(bool dateMatched)</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00082">TextureData.cs:82</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a84fedfd0a0aa3667412fd4eb154b15cb"><div class="ttname"><a href="classTextureReplace.html#a84fedfd0a0aa3667412fd4eb154b15cb">TextureReplace.TryRefresh</a></div><div class="ttdeci">void TryRefresh(bool force)</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00015">TextureReplace.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureData_8cs_source.html#l00202">date</a>, <a class="el" href="TextureData_8cs_source.html#l00222">dictReplace</a>, <a class="el" href="TextureReplace_8cs_source.html#l00053">TextureReplace.file</a>, <a class="el" href="TextureData_8cs_source.html#l00206">forceRefresh</a>, <a class="el" href="TextureReplace_8cs_source.html#l00057">TextureReplace.index</a>, <a class="el" href="TextureData_8cs_source.html#l00062">IsValid()</a>, <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>, <a class="el" href="TextureData_8cs_source.html#l00213">path</a>, <a class="el" href="TextureData_8cs_source.html#l00182">RemoveDeletedReplace()</a>, and <a class="el" href="TextureReplace_8cs_source.html#l00015">TextureReplace.TryRefresh()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00044">ForceRefresh()</a>, <a class="el" href="TextureManager_8cs_source.html#l00088">TextureManager.RefreshTextures()</a>, and <a class="el" href="TextureManager_8cs_source.html#l00127">TextureManager.TryAddReplace()</a>.</p>
 
 </div>
 </div>
@@ -473,6 +742,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00202">202</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
+
 </div>
 </div>
 <a id="a382068a67bab438e50859afddf1b9ef2" name="a382068a67bab438e50859afddf1b9ef2"></a>
@@ -488,6 +759,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00222">222</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00066">TextureManager.AddBase()</a>, <a class="el" href="TextureData_8cs_source.html#l00155">AddReplace()</a>, <a class="el" href="TextureManager_8cs_source.html#l00166">TextureManager.ApplyLocalReplace()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>, <a class="el" href="TextureData_8cs_source.html#l00182">RemoveDeletedReplace()</a>, <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -505,6 +778,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00206">206</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
+
 </div>
 </div>
 <a id="ad7c5c1b70872141d95ead516d0549c69" name="ad7c5c1b70872141d95ead516d0549c69"></a>
@@ -520,6 +795,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00198">198</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00077">TextureManager.Add()</a>, <a class="el" href="TextureManager_8cs_source.html#l00066">TextureManager.AddBase()</a>, <a class="el" href="TextureManager_8cs_source.html#l00082">TextureManager.AddList()</a>, <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>.</p>
 
 </div>
 </div>
@@ -537,6 +814,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00219">219</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00062">IsValid()</a>, <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>, and <a class="el" href="TextureManager_8cs_source.html#l00127">TextureManager.TryAddReplace()</a>.</p>
+
 </div>
 </div>
 <a id="add571c123257b0fb701069f405f748b1" name="add571c123257b0fb701069f405f748b1"></a>
@@ -552,6 +831,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00225">225</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00155">AddReplace()</a>, and <a class="el" href="TextureManager_8cs_source.html#l00166">TextureManager.ApplyLocalReplace()</a>.</p>
 
 </div>
 </div>
@@ -569,6 +850,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00213">213</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00136">CreateReplace()</a>, <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>, and <a class="el" href="TextureData_8cs_source.html#l00008">TryRefresh()</a>.</p>
+
 </div>
 </div>
 <a id="a0a4fb7e4b1695730b5963899165f074c" name="a0a4fb7e4b1695730b5963899165f074c"></a>
@@ -584,6 +867,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00204">204</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00066">TextureManager.AddBase()</a>, <a class="el" href="TextureData_8cs_source.html#l00136">CreateReplace()</a>, <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>.</p>
 
 </div>
 </div>
@@ -601,6 +886,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00216">216</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>.</p>
+
 </div>
 </div>
 <a id="abcd6f451246000a3d8fca19aab968ea8" name="abcd6f451246000a3d8fca19aab968ea8"></a>
@@ -616,6 +903,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00210">210</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00066">TextureManager.AddBase()</a>, <a class="el" href="TextureData_8cs_source.html#l00136">CreateReplace()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -633,6 +922,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00208">208</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00136">CreateReplace()</a>, <a class="el" href="TextureReplace_8cs_source.html#l00030">TextureReplace.Load()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00066">LayerTextureViewer.SetPos()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
+
 </div>
 </div>
 <a id="aaf239929a1564a0d59a80cddae2a3a0e" name="aaf239929a1564a0d59a80cddae2a3a0e"></a>
@@ -649,15 +940,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureData_8cs_source.html#l00200">200</a> of file <a class="el" href="TextureData_8cs_source.html">TextureData.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00062">IsValid()</a>, and <a class="el" href="TextureData_8cs_source.html#l00082">Load()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TextureData_8cs_source.html">TextureData.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTextureData.html">TextureData</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

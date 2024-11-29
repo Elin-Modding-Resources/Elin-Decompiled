@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Trolley.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -700,7 +720,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a0fc638accd60819daab652193aad04ca">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00015">15</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a684c4ec733cb6d3f01bbd2d23337b470" name="a684c4ec733cb6d3f01bbd2d23337b470"></a>
@@ -727,6 +750,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00111">111</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">int</span>[] array = <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>.<a class="code hl_variable" href="classAI__Trolley.html#ae217298ee19a0f391f71d9c629bcf26f">DirList</a>[this.<a class="code hl_property" href="classAI__Trolley.html#a0cd5efe3e6d5dcbabf8d2a31d50b1ecd">dir</a>];</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3 + (this.running ? 0 : 1); i++)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordtype">int</span> num = array[i];</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classAI__Trolley.html#a91617b5e47ce8104d3f267822d6a4384">GetPoint</a>(num, <span class="keyword">true</span>) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="ttc" id="aclassAI__Trolley_html"><div class="ttname"><a href="classAI__Trolley.html">AI_Trolley</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00005">AI_Trolley.cs:6</a></div></div>
+<div class="ttc" id="aclassAI__Trolley_html_a0cd5efe3e6d5dcbabf8d2a31d50b1ecd"><div class="ttname"><a href="classAI__Trolley.html#a0cd5efe3e6d5dcbabf8d2a31d50b1ecd">AI_Trolley.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00007">AI_Trolley.cs:8</a></div></div>
+<div class="ttc" id="aclassAI__Trolley_html_a91617b5e47ce8104d3f267822d6a4384"><div class="ttname"><a href="classAI__Trolley.html#a91617b5e47ce8104d3f267822d6a4384">AI_Trolley.GetPoint</a></div><div class="ttdeci">Point GetPoint(int d, bool onlyValid=true)</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00085">AI_Trolley.cs:85</a></div></div>
+<div class="ttc" id="aclassAI__Trolley_html_ae217298ee19a0f391f71d9c629bcf26f"><div class="ttname"><a href="classAI__Trolley.html#ae217298ee19a0f391f71d9c629bcf26f">AI_Trolley.DirList</a></div><div class="ttdeci">static int[][] DirList</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00140">AI_Trolley.cs:140</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AI__Trolley_8cs_source.html#l00008">dir</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00140">DirList</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00085">GetPoint()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -765,6 +808,50 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00085">85</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>();</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_class" href="classPoint.html">Point</a> pos = this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>;</div>
+<div class="line"><span class="lineno">   89</span>        point.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(pos.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>.<a class="code hl_variable" href="classAI__Trolley.html#a2f55042573886f2af86507764830f5d5">VecList</a>[d].x, pos.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> + <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>.<a class="code hl_variable" href="classAI__Trolley.html#a2f55042573886f2af86507764830f5d5">VecList</a>[d].y);</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a> || !point.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a> || !point.<a class="code hl_property" href="classPoint.html#a5d771a30efd66f26c5e8808fdd6ae0b1">HasRail</a> || point.<a class="code hl_property" href="classPoint.html#a6616973a1d297c13f4b13f6221c88d19">IsBlocked</a>)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keyword">using</span> (List&lt;Thing&gt;.Enumerator enumerator = point.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   97</span>            {</div>
+<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (!enumerator.Current.IsMultisize)</div>
+<div class="line"><span class="lineno">   99</span>                {</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  101</span>                }</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(point))</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> point;</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclassAI__Trolley_html_a2f55042573886f2af86507764830f5d5"><div class="ttname"><a href="classAI__Trolley.html#a2f55042573886f2af86507764830f5d5">AI_Trolley.VecList</a></div><div class="ttdeci">static Vector2Int[] VecList</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00172">AI_Trolley.cs:172</a></div></div>
+<div class="ttc" id="aclassAI__Trolley_html_af13d6ccc09e491d2fb84103c8ce2dc4b"><div class="ttname"><a href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">AI_Trolley.trolley</a></div><div class="ttdeci">TraitTrolley trolley</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00180">AI_Trolley.cs:180</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_a5d771a30efd66f26c5e8808fdd6ae0b1"><div class="ttname"><a href="classPoint.html#a5d771a30efd66f26c5e8808fdd6ae0b1">Point.HasRail</a></div><div class="ttdeci">bool HasRail</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00233">Point.cs:234</a></div></div>
+<div class="ttc" id="aclassPoint_html_a6616973a1d297c13f4b13f6221c88d19"><div class="ttname"><a href="classPoint.html#a6616973a1d297c13f4b13f6221c88d19">Point.IsBlocked</a></div><div class="ttdeci">bool IsBlocked</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00496">Point.cs:497</a></div></div>
+<div class="ttc" id="aclassPoint_html_a683b8213ae7243d6f8531fc0e90e70e7"><div class="ttname"><a href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Point.Things</a></div><div class="ttdeci">List&lt; Thing &gt; Things</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00456">Point.cs:457</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae5bd32e3472ef6f1f687ebed62b14a36"><div class="ttname"><a href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">Point.IsInBounds</a></div><div class="ttdeci">bool IsInBounds</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00188">Point.cs:189</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Point_8cs_source.html#l00234">Point.HasRail</a>, <a class="el" href="Point_8cs_source.html#l00497">Point.IsBlocked</a>, <a class="el" href="Point_8cs_source.html#l00189">Point.IsInBounds</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Point_8cs_source.html#l00457">Point.Things</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00180">trolley</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00172">VecList</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00111">GetNextDir()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -794,6 +881,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a34784155fda9e0bd48316556fb3c9a5d">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00135">135</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>        this.<a class="code hl_function" href="classAI__Trolley.html#af78ad08016382874e2f8c7564d1a94c6">Stop</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclassAI__Trolley_html_af78ad08016382874e2f8c7564d1a94c6"><div class="ttname"><a href="classAI__Trolley.html#af78ad08016382874e2f8c7564d1a94c6">AI_Trolley.Stop</a></div><div class="ttdeci">AIAct.Status Stop(Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00125">AI_Trolley.cs:125</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AI__Trolley_8cs_source.html#l00125">Stop()</a>.</p>
 
 </div>
 </div>
@@ -823,6 +916,67 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00044">44</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_property" href="classTraitTrolley.html#aac4b1624e10b00b395604662c1e0f53c">HideChara</a>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;ride2&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">int</span> nextDir = this.<a class="code hl_function" href="classAI__Trolley.html#a684c4ec733cb6d3f01bbd2d23337b470">GetNextDir</a>();</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> || nextDir == -1)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAI__Trolley.html#af78ad08016382874e2f8c7564d1a94c6">Stop</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            this.trolley.owner.dir = nextDir;</div>
+<div class="line"><span class="lineno">   59</span>            <a class="code hl_class" href="classPoint.html">Point</a> point = this.<a class="code hl_function" href="classAI__Trolley.html#a91617b5e47ce8104d3f267822d6a4384">GetPoint</a>(this.<a class="code hl_property" href="classAI__Trolley.html#a0cd5efe3e6d5dcbabf8d2a31d50b1ecd">dir</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   60</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#ac1305d65c89df69d517c208db719b786">SetDir</a>(nextDir);</div>
+<div class="line"><span class="lineno">   61</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Truck, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">string</span> idSound = this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_function" href="classTraitTrolley.html#a8044046332f08d1dc60011a5c459e5e0">GetIdSound</a>();</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(idSound, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>))</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(idSound, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   70</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.Stop(idSound, Mathf.Max(1f, <span class="keyword">this</span>.trolley.FadeDuration));</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> t <span class="keywordflow">in</span> point.<a class="code hl_function" href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">ListCharas</a>())</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#a759bf0595497763d3bf733a977d22575">Kick</a>(t, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a3911b9929e97f18523241a8fc0ac87f2">MoveCard</a>(point, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">   77</span>            this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a77d1b776ab2275eb156d6224008d0d9c">MoveImmediate</a>(point, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>            this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Truck, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>            this.running = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   80</span>            yield <span class="keywordflow">return</span> base.KeepRunning();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAI__Trolley_html_a684c4ec733cb6d3f01bbd2d23337b470"><div class="ttname"><a href="classAI__Trolley.html#a684c4ec733cb6d3f01bbd2d23337b470">AI_Trolley.GetNextDir</a></div><div class="ttdeci">int GetNextDir()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00111">AI_Trolley.cs:111</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06060">Card.cs:6060</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassCard_html_a77d1b776ab2275eb156d6224008d0d9c"><div class="ttname"><a href="classCard.html#a77d1b776ab2275eb156d6224008d0d9c">Card.MoveImmediate</a></div><div class="ttdeci">unsafe void MoveImmediate(Point p, bool focus=true, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05238">Card.cs:5238</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1b2bd10695eb7422474797d6dbe222f"><div class="ttname"><a href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">Card.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05539">Card.cs:5539</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09506">Chara.cs:9506</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a759bf0595497763d3bf733a977d22575"><div class="ttname"><a href="classChara.html#a759bf0595497763d3bf733a977d22575">Chara.Kick</a></div><div class="ttdeci">void Kick(Point p, bool ignoreSelf=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05144">Chara.cs:5144</a></div></div>
+<div class="ttc" id="aclassChara_html_ac1305d65c89df69d517c208db719b786"><div class="ttname"><a href="classChara.html#ac1305d65c89df69d517c208db719b786">Chara.SetDir</a></div><div class="ttdeci">override void SetDir(int d)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03027">Chara.cs:3027</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00159">EClass.cs:160</a></div></div>
+<div class="ttc" id="aclassMap_html_a3911b9929e97f18523241a8fc0ac87f2"><div class="ttname"><a href="classMap.html#a3911b9929e97f18523241a8fc0ac87f2">Map.MoveCard</a></div><div class="ttdeci">void MoveCard(Point p, Card t)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00802">Map.cs:802</a></div></div>
+<div class="ttc" id="aclassPoint_html_a965804b59f2be20290d5d14ceeda6625"><div class="ttname"><a href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">Point.ListCharas</a></div><div class="ttdeci">List&lt; Chara &gt; ListCharas()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01217">Point.cs:1217</a></div></div>
+<div class="ttc" id="aclassTraitTrolley_html_a8044046332f08d1dc60011a5c459e5e0"><div class="ttname"><a href="classTraitTrolley.html#a8044046332f08d1dc60011a5c459e5e0">TraitTrolley.GetIdSound</a></div><div class="ttdeci">virtual string GetIdSound()</div><div class="ttdef"><b>Definition:</b> <a href="TraitTrolley_8cs_source.html#l00059">TraitTrolley.cs:59</a></div></div>
+<div class="ttc" id="aclassTraitTrolley_html_aac4b1624e10b00b395604662c1e0f53c"><div class="ttname"><a href="classTraitTrolley.html#aac4b1624e10b00b395604662c1e0f53c">TraitTrolley.HideChara</a></div><div class="ttdeci">virtual bool HideChara</div><div class="ttdef"><b>Definition:</b> <a href="TraitTrolley_8cs_source.html#l00005">TraitTrolley.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00008">dir</a>, <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="TraitTrolley_8cs_source.html#l00059">TraitTrolley.GetIdSound()</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00111">GetNextDir()</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00085">GetPoint()</a>, <a class="el" href="TraitTrolley_8cs_source.html#l00006">TraitTrolley.HideChara</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l05144">Chara.Kick()</a>, <a class="el" href="Map_8cs_source.html#l00802">Map.MoveCard()</a>, <a class="el" href="Card_8cs_source.html#l05238">Card.MoveImmediate()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05539">Card.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l03027">Chara.SetDir()</a>, <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00125">Stop()</a>, <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00180">trolley</a>.</p>
 
 </div>
 </div>
@@ -851,6 +1005,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00125">125</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.Stop(this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_function" href="classTraitTrolley.html#a8044046332f08d1dc60011a5c459e5e0">GetIdSound</a>(), <span class="keyword">this</span>.trolley.FadeDuration);</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride_unride&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> base.Success(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitTrolley_8cs_source.html#l00059">TraitTrolley.GetIdSound()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00180">trolley</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00135">OnCancel()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -876,6 +1042,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00140">140</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00111">GetNextDir()</a>.</p>
 
 </div>
 </div>
@@ -909,6 +1077,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00180">180</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TraitTrolley_8cs_source.html#l00021">TraitTrolley.CanActivate()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00085">GetPoint()</a>, <a class="el" href="AI__Trolley_8cs_source.html#l00044">Run()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00125">Stop()</a>.</p>
+
 </div>
 </div>
 <a id="a2f55042573886f2af86507764830f5d5" name="a2f55042573886f2af86507764830f5d5"></a>
@@ -940,6 +1110,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00172">172</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00085">GetPoint()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -964,7 +1136,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00020">20</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> this.owner != <span class="keyword">null</span> &amp;&amp; (!this.owner.IsPC || this.owner.hp &lt; this.owner.MaxHP / 3);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aae75d46aa9d32b2262abed790a29326f" name="aae75d46aa9d32b2262abed790a29326f"></a>
@@ -988,7 +1166,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00028">28</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0cd5efe3e6d5dcbabf8d2a31d50b1ecd" name="a0cd5efe3e6d5dcbabf8d2a31d50b1ecd"></a>
@@ -1012,6 +1196,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b">trolley</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassCard_html_acead09796e17d25d2c320e10c7da820a"><div class="ttname"><a href="classCard.html#acead09796e17d25d2c320e10c7da820a">Card.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00103">Card.cs:104</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00111">GetNextDir()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -1036,16 +1229,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Trolley_8cs_source.html#l00036">36</a> of file <a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Trolley_8cs_source.html">AI_Trolley.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Trolley.html">AI_Trolley</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

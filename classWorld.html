@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWorld.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -412,6 +432,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00032">32</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        this.dayData = <span class="keyword">new</span> <a class="code hl_class" href="classDayData.html">DayData</a>();</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_class" href="classDayData.html">DayData</a>.<a class="code hl_variable" href="classDayData.html#ace4443356d6c8c966b711be045727c62">LuckRange</a>.Length; i++)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (num &gt;= <a class="code hl_class" href="classDayData.html">DayData</a>.<a class="code hl_variable" href="classDayData.html#ace4443356d6c8c966b711be045727c62">LuckRange</a>[i])</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                this.dayData.luck = i.ToEnum&lt;<a class="code hl_class" href="classDayData.html">DayData</a>.<a class="code hl_enumeration" href="classDayData.html#a6e21e42558518ebb28e71f634dc4bec1">Luck</a>&gt;();</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        this.dayData.seed = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100000);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassDayData_html"><div class="ttname"><a href="classDayData.html">DayData</a></div><div class="ttdef"><b>Definition:</b> <a href="DayData_8cs_source.html#l00003">DayData.cs:4</a></div></div>
+<div class="ttc" id="aclassDayData_html_a6e21e42558518ebb28e71f634dc4bec1"><div class="ttname"><a href="classDayData.html#a6e21e42558518ebb28e71f634dc4bec1">DayData.Luck</a></div><div class="ttdeci">Luck</div><div class="ttdef"><b>Definition:</b> <a href="DayData_8cs_source.html#l00019">DayData.cs:20</a></div></div>
+<div class="ttc" id="aclassDayData_html_ace4443356d6c8c966b711be045727c62"><div class="ttname"><a href="classDayData.html#ace4443356d6c8c966b711be045727c62">DayData.LuckRange</a></div><div class="ttdeci">static int[] LuckRange</div><div class="ttdef"><b>Definition:</b> <a href="DayData_8cs_source.html#l00005">DayData.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DayData_8cs_source.html#l00005">DayData.LuckRange</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>, <a class="el" href="World_8cs_source.html#l00014">OnCreate()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00018">LayerNewspaper.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -440,6 +482,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00047">47</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        this.ether += a;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWorld.html#ad563384b86a6aa4692ccee67c050075d">ether</a> &gt;= 100)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.ether = 0;</div>
+<div class="line"><span class="lineno">   53</span>            this.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_function" href="classWeather.html#ac5fad12ed585c2b202bad70845964d93">SetCondition</a>(<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Ether, 24, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00006">Weather.cs:7</a></div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1c"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a></div><div class="ttdeci">Condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00304">Weather.cs:305</a></div></div>
+<div class="ttc" id="aclassWeather_html_ac5fad12ed585c2b202bad70845964d93"><div class="ttname"><a href="classWeather.html#ac5fad12ed585c2b202bad70845964d93">Weather.SetCondition</a></div><div class="ttdeci">void SetCondition(Weather.Condition condition, int _duration=20, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00227">Weather.cs:227</a></div></div>
+<div class="ttc" id="aclassWorld_html_abe79d49b82af83246cebd487414ba156"><div class="ttname"><a href="classWorld.html#abe79d49b82af83246cebd487414ba156">World.weather</a></div><div class="ttdeci">Weather weather</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00069">World.cs:69</a></div></div>
+<div class="ttc" id="aclassWorld_html_ad563384b86a6aa4692ccee67c050075d"><div class="ttname"><a href="classWorld.html#ad563384b86a6aa4692ccee67c050075d">World.ether</a></div><div class="ttdeci">int ether</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00078">World.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="World_8cs_source.html#l00078">ether</a>, <a class="el" href="Weather_8cs_source.html#l00227">Weather.SetCondition()</a>, and <a class="el" href="World_8cs_source.html#l00069">weather</a>.</p>
 
 </div>
 </div>
@@ -469,6 +526,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classSpatial.html#a23eedba5194d6f73cb944a3be1670605">Spatial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00014">14</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_class" href="classPrologue.html">Prologue</a> prologue = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Prologue</a>;</div>
+<div class="line"><span class="lineno">   17</span>        this.date.year = prologue.<a class="code hl_variable" href="classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0">year</a>;</div>
+<div class="line"><span class="lineno">   18</span>        this.date.month = prologue.<a class="code hl_variable" href="classPrologue.html#a5638ba5673578da5004ba909415b29f6">month</a>;</div>
+<div class="line"><span class="lineno">   19</span>        this.date.day = prologue.<a class="code hl_variable" href="classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502">day</a>;</div>
+<div class="line"><span class="lineno">   20</span>        this.date.hour = prologue.<a class="code hl_variable" href="classPrologue.html#a95da02f8e132212d4723925a0814b8b2">hour</a>;</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            this.<a class="code hl_variable" href="classWorld.html#a575e8689ca373443aa8437e68d31d87c">schedule</a>.<a class="code hl_variable" href="classSchedule.html#ae74dd201923f69b6bbc393324a5f5252">list</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classSchedule.html">Schedule</a>.<a class="code hl_class" href="classSchedule_1_1Item.html">Item</a></div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                date = this.date.Copy()</div>
+<div class="line"><span class="lineno">   26</span>            });</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        this.weather._currentCondition = prologue.<a class="code hl_variable" href="classPrologue.html#a4238692911288efddeb45c0528efe5b7">weather</a>;</div>
+<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_function" href="classWorld.html#a2d3bc836c6621d37681f1b1d4b89ee51">CreateDayData</a>();</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a7e2d9e6c3760641fe15a4d5412e0524e"><div class="ttname"><a href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Game.Prologue</a></div><div class="ttdeci">Prologue Prologue</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00040">Game.cs:41</a></div></div>
+<div class="ttc" id="aclassPrologue_html"><div class="ttname"><a href="classPrologue.html">Prologue</a></div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00005">Prologue.cs:6</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a4238692911288efddeb45c0528efe5b7"><div class="ttname"><a href="classPrologue.html#a4238692911288efddeb45c0528efe5b7">Prologue.weather</a></div><div class="ttdeci">Weather.Condition weather</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00027">Prologue.cs:27</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a5638ba5673578da5004ba909415b29f6"><div class="ttname"><a href="classPrologue.html#a5638ba5673578da5004ba909415b29f6">Prologue.month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00015">Prologue.cs:15</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a70c7f8521b5c7b4e9e0fc9d3b1c19502"><div class="ttname"><a href="classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502">Prologue.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00017">Prologue.cs:17</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a8d481459364a5a40dfd923a1c3f458e0"><div class="ttname"><a href="classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0">Prologue.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00013">Prologue.cs:13</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a95da02f8e132212d4723925a0814b8b2"><div class="ttname"><a href="classPrologue.html#a95da02f8e132212d4723925a0814b8b2">Prologue.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00019">Prologue.cs:19</a></div></div>
+<div class="ttc" id="aclassSchedule_1_1Item_html"><div class="ttname"><a href="classSchedule_1_1Item.html">Schedule.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00010">Schedule.cs:11</a></div></div>
+<div class="ttc" id="aclassSchedule_html"><div class="ttname"><a href="classSchedule.html">Schedule</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00005">Schedule.cs:6</a></div></div>
+<div class="ttc" id="aclassSchedule_html_ae74dd201923f69b6bbc393324a5f5252"><div class="ttname"><a href="classSchedule.html#ae74dd201923f69b6bbc393324a5f5252">Schedule.list</a></div><div class="ttdeci">List&lt; Schedule.Item &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00008">Schedule.cs:8</a></div></div>
+<div class="ttc" id="aclassWorld_html_a2d3bc836c6621d37681f1b1d4b89ee51"><div class="ttname"><a href="classWorld.html#a2d3bc836c6621d37681f1b1d4b89ee51">World.CreateDayData</a></div><div class="ttdeci">void CreateDayData()</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00032">World.cs:32</a></div></div>
+<div class="ttc" id="aclassWorld_html_a575e8689ca373443aa8437e68d31d87c"><div class="ttname"><a href="classWorld.html#a575e8689ca373443aa8437e68d31d87c">World.schedule</a></div><div class="ttdeci">Schedule schedule</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00072">World.cs:72</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="World_8cs_source.html#l00032">CreateDayData()</a>, <a class="el" href="Prologue_8cs_source.html#l00017">Prologue.day</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Prologue_8cs_source.html#l00019">Prologue.hour</a>, <a class="el" href="Schedule_8cs_source.html#l00008">Schedule.list</a>, <a class="el" href="Prologue_8cs_source.html#l00015">Prologue.month</a>, <a class="el" href="Game_8cs_source.html#l00041">Game.Prologue</a>, <a class="el" href="World_8cs_source.html#l00072">schedule</a>, <a class="el" href="Prologue_8cs_source.html#l00027">Prologue.weather</a>, and <a class="el" href="Prologue_8cs_source.html#l00013">Prologue.year</a>.</p>
 
 </div>
 </div>
@@ -497,6 +585,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00057">57</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a40056cd45ef4725a21ef309c1a622b36">listPackage</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(p);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00823">ActPlan.cs:823</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a40056cd45ef4725a21ef309c1a622b36"><div class="ttname"><a href="classCardManager.html#a40056cd45ef4725a21ef309c1a622b36">CardManager.listPackage</a></div><div class="ttdeci">List&lt; Thing &gt; listPackage</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00080">CardManager.cs:80</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00823">ActPlan.List.Add()</a>, <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, and <a class="el" href="CardManager_8cs_source.html#l00080">CardManager.listPackage</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>, <a class="el" href="GameDate_8cs_source.html#l00227">GameDate.AdvanceYear()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="Faction_82_8cs_source.html#l00234">Faction.OnAdvanceMonth()</a>, <a class="el" href="InvOwnerDeliver_8cs_source.html#l00052">InvOwnerDeliver.PayBill()</a>, <a class="el" href="GameDate_8cs_source.html#l00385">GameDate.ShipLetter()</a>, <a class="el" href="GameDate_8cs_source.html#l00340">GameDate.ShipPackages()</a>, <a class="el" href="GameDate_8cs_source.html#l00430">GameDate.ShipRandomPackages()</a>, and <a class="el" href="Faction_82_8cs_source.html#l00274">Faction.TryPayBill()</a>.</p>
 
 </div>
 </div>
@@ -515,6 +613,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00063">63</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00034">InvOwnerGene._OnProcess()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00028">WidgetDate._Refresh()</a>, <a class="el" href="Zone_8cs_source.html#l02102">Zone.AbandonZone()</a>, <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="MsgLog_8cs_source.html#l00034">MsgLog.Add()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01354">FactionBranch.AddRecruit()</a>, <a class="el" href="Faction_82_8cs_source.html#l00189">Faction.AddReserve()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="Zone_8cs_source.html#l02118">Zone.CanDestroy()</a>, <a class="el" href="Region_8cs_source.html#l00086">Region.CheckRandomSites()</a>, <a class="el" href="Chara_8cs_source.html#l07811">Chara.ChooseNewGoal()</a>, <a class="el" href="Zone_8cs_source.html#l02048">Zone.ClaimZone()</a>, <a class="el" href="GameIndex_8cs_source.html#l00049">GameIndex.Create()</a>, <a class="el" href="SpatialGen_8cs_source.html#l00044">SpatialGen.CreateInstance()</a>, <a class="el" href="Region_8cs_source.html#l00140">Region.CreateRandomSite()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="Zone_8cs_source.html#l01955">Zone.Deactivate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00366">DramaOutcome.get_scratch()</a>, <a class="el" href="Card_8cs_source.html#l05783">Card.GetLightRadius()</a>, <a class="el" href="TraitGeneMachine_8cs_source.html#l00041">TraitGeneMachine.GetProgress()</a>, <a class="el" href="TraitGeneMachine_8cs_source.html#l00056">TraitGeneMachine.GetProgressText()</a>, <a class="el" href="Trait_8cs_source.html#l01933">Trait.GetRestockedIcon()</a>, <a class="el" href="StickyHomeReport_8cs_source.html#l00013">StickyHomeReport.GetText()</a>, <a class="el" href="Trait_8cs_source.html#l01910">Trait.GetTextRestock()</a>, <a class="el" href="Weather_8cs_source.html#l00205">Weather.GetTimeSinceLastRain()</a>, <a class="el" href="Weather_8cs_source.html#l00135">Weather.GetWeatherForecast()</a>, <a class="el" href="Quest_8cs_source.html#l00386">Quest.Init()</a>, <a class="el" href="Quest_8cs_source.html#l00343">Quest.IsVisibleOnQuestBoard()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00029">TraitMoongate.LoadMap()</a>, <a class="el" href="Player_8cs_source.html#l00802">Player.MoveZone()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00013">WidgetArtTool.OnActivate()</a>, <a class="el" href="Region_8cs_source.html#l00329">Region.OnAdvanceHour()</a>, <a class="el" href="Trait_8cs_source.html#l01955">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00217">BaseListPeople.OnClick()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00021">QuestLoytelFarm.OnComplete()</a>, <a class="el" href="QuestShippingChest_8cs_source.html#l00021">QuestShippingChest.OnComplete()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00093">QuestVernis.OnComplete()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00189">FactionBranch.OnCreate()</a>, <a class="el" href="QuestDialog_8cs_source.html#l00029">QuestDialog.OnDropReward()</a>, <a class="el" href="Zone__Field_8cs_source.html#l00157">Zone_Field.OnGenerateMap()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00018">LayerNewspaper.OnInit()</a>, <a class="el" href="Game_8cs_source.html#l00153">Game.OnLoad()</a>, <a class="el" href="QuestIntoDarkness_8cs_source.html#l00013">QuestIntoDarkness.OnStart()</a>, <a class="el" href="Player_8cs_source.html#l00187">Player.OnStartNewGame()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00038">TraitDaggerGrave.OnUse()</a>, <a class="el" href="TraitGachaBall_8cs_source.html#l00013">TraitGachaBall.OnUse()</a>, <a class="el" href="TraitHat_8cs_source.html#l00005">TraitHat.OnUse()</a>, <a class="el" href="Zone_8cs_source.html#l01361">Zone.OnVisit()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00044">FoodEffect.Proc()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="Weather_8cs_source.html#l00181">Weather.RefreshForecasts()</a>, <a class="el" href="Zone_8cs_source.html#l01351">Zone.RefreshHat()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00022">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00244">UIHomeInfo.RefreshReport()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00453">BaseGameScreen.RefreshSky()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00354">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="Zone_8cs_source.html#l01403">Zone.Revive()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00047">AI_Steal.Run()</a>, <a class="el" href="Weather_8cs_source.html#l00227">Weather.SetCondition()</a>, <a class="el" href="AIWork_8cs_source.html#l00066">AIWork.SetDestination()</a>, <a class="el" href="GameDate_8cs_source.html#l00236">GameDate.ShipGoods()</a>, <a class="el" href="HotItemContext_8cs_source.html#l00083">HotItemContext.Show()</a>, <a class="el" href="Zone_8cs_source.html#l01469">Zone.Simulate()</a>, <a class="el" href="Zone_8cs_source.html#l00685">Zone.ToString()</a>, <a class="el" href="Thing_8cs_source.html#l01958">Thing.TryLickEnchant()</a>, <a class="el" href="SlaverData_8cs_source.html#l00007">SlaverData.TryRefresh()</a>, <a class="el" href="TraitCoreZone_8cs_source.html#l00046">TraitCoreZone.TrySetAct()</a>, <a class="el" href="TraitSyringeGene_8cs_source.html#l00014">TraitSyringeGene.TrySetHeldAct()</a>, <a class="el" href="Trait_8cs_source.html#l01488">Trait.TryToggle()</a>, <a class="el" href="Chara_8cs_source.html#l08192">Chara.TryWorkOutside()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00117">GameUpdater.Update()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>, <a class="el" href="Zone_8cs_source.html#l03554">Zone.UpdateQuests()</a>, <a class="el" href="Scene_8cs_source.html#l00627">Scene.UpdateTimeRatio()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00015">VirtualDate.VirtualDate()</a>.</p>
+
 </div>
 </div>
 <a id="a77d38e165e742d8a4c153d99e6bd5d66" name="a77d38e165e742d8a4c153d99e6bd5d66"></a>
@@ -530,6 +630,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00075">75</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">LayerNewspaper.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -547,6 +649,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00078">78</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="World_8cs_source.html#l00047">ModEther()</a>.</p>
+
 </div>
 </div>
 <a id="a575e8689ca373443aa8437e68d31d87c" name="a575e8689ca373443aa8437e68d31d87c"></a>
@@ -562,6 +666,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00072">72</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="World_8cs_source.html#l00014">OnCreate()</a>, and <a class="el" href="ContentTop_8cs_source.html#l00005">ContentTop.OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -579,6 +685,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00066">66</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00086">Weather.RefreshWeather()</a>, and <a class="el" href="Weather_8cs_source.html#l00227">Weather.SetCondition()</a>.</p>
+
 </div>
 </div>
 <a id="abe79d49b82af83246cebd487414ba156" name="abe79d49b82af83246cebd487414ba156"></a>
@@ -594,6 +702,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00069">69</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00028">WidgetDate._Refresh()</a>, <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00340">GameUpdater.SurfaceUpdater.FixedUpdate()</a>, <a class="el" href="Scene_8cs_source.html#l00050">Scene.Init()</a>, <a class="el" href="World_8cs_source.html#l00047">ModEther()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00013">WidgetArtTool.OnActivate()</a>, <a class="el" href="TraitGenerator_8cs_source.html#l00042">TraitGenerator.OnSimulateHour()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.RefreshScreenSize()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00110">LayerNewspaper.RefreshWeather()</a>, <a class="el" href="Chara_8cs_source.html#l03193">Chara.TickConditions()</a>, <a class="el" href="Trait_8cs_source.html#l01488">Trait.TryToggle()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00020">GameUpdater.Update100ms()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -619,6 +729,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="World_8cs_source.html#l00006">6</a> of file <a class="el" href="World_8cs_source.html">World.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">children</a>[0] as <a class="code hl_class" href="classRegion.html">Region</a>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassRegion_html"><div class="ttname"><a href="classRegion.html">Region</a></div><div class="ttdef"><b>Definition:</b> <a href="Region_8cs_source.html#l00007">Region.cs:8</a></div></div>
+<div class="ttc" id="aclassSpatial_html_af941e4a530bb3395b3cfc663ad8be1d3"><div class="ttname"><a href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">Spatial.children</a></div><div class="ttdeci">List&lt; Spatial &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00866">Spatial.cs:866</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>, <a class="el" href="Region_8cs_source.html#l00249">Region.CanCreateZone()</a>, <a class="el" href="ThingGen_8cs_source.html#l00130">ThingGen.CreateMap()</a>, <a class="el" href="Expedition_8cs_source.html#l00088">Expedition.End()</a>, <a class="el" href="Chara_8cs_source.html#l03014">Chara.FallFromZone()</a>, <a class="el" href="GlobalGoalExplore_8cs_source.html#l00006">GlobalGoalExplore.GetDestZone()</a>, <a class="el" href="GlobalGoalVisitTown_8cs_source.html#l00005">GlobalGoalVisitTown.GetDestZone()</a>, <a class="el" href="EloMapActor_8cs_source.html#l00075">EloMapActor.GetEloMap()</a>, <a class="el" href="EloMap_8cs_source.html#l00354">EloMap.GetRoadDist()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00063">SpatialManager.ListReturnLocations()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00029">TraitMoongate.LoadMap()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01505">CoreDebug.LOG_Spatials()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00209">TraitNewZone.MoveZone()</a>, <a class="el" href="GlobalGoalAdv_8cs_source.html#l00005">GlobalGoalAdv.OnAdvanceHour()</a>, <a class="el" href="Chara_8cs_source.html#l01062">Chara.OnBanish()</a>, <a class="el" href="Game_8cs_source.html#l00153">Game.OnLoad()</a>, <a class="el" href="TraitScrollMap_8cs_source.html#l00068">TraitScrollMap.OnRead()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00007">LayerTreasureMap.SetMap()</a>, and <a class="el" href="Chara_8cs_source.html#l03411">Chara.Tick()</a>.</p>
 
 </div>
 </div>
@@ -626,9 +746,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="World_8cs_source.html">World.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWorld.html">World</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

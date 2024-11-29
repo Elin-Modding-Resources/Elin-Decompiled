@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGuild.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -315,6 +335,38 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00070">70</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#aa52f9c395e60da9371f30fc21af7e621">Fighter</a>.<a class="code hl_property" href="classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158">IsCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#aa52f9c395e60da9371f30fc21af7e621">Fighter</a>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a7ec0ae38a575c14802a1aa6ee6987653">Mage</a>.<a class="code hl_property" href="classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c">IsCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a7ec0ae38a575c14802a1aa6ee6987653">Mage</a>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Thief</a>.<a class="code hl_property" href="classGuildThief.html#a5b8f5bd873fc29bca4c3b2c8f493da41">IsCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Thief</a>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8">Merchant</a>.<a class="code hl_property" href="classGuildMerchant.html#a6d41f632d415e9a9171d08420dd9c2b0">IsCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8">Merchant</a>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="ttc" id="aclassGuildFighter_html_a4a2f7c8e99bdd6642f4d9533d586e158"><div class="ttname"><a href="classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158">GuildFighter.IsCurrentZone</a></div><div class="ttdeci">override bool IsCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="GuildFighter_8cs_source.html#l00013">GuildFighter.cs:14</a></div></div>
+<div class="ttc" id="aclassGuildMage_html_a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c"><div class="ttname"><a href="classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c">GuildMage.IsCurrentZone</a></div><div class="ttdeci">override bool IsCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="GuildMage_8cs_source.html#l00013">GuildMage.cs:14</a></div></div>
+<div class="ttc" id="aclassGuildMerchant_html_a6d41f632d415e9a9171d08420dd9c2b0"><div class="ttname"><a href="classGuildMerchant.html#a6d41f632d415e9a9171d08420dd9c2b0">GuildMerchant.IsCurrentZone</a></div><div class="ttdeci">override bool IsCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="GuildMerchant_8cs_source.html#l00013">GuildMerchant.cs:14</a></div></div>
+<div class="ttc" id="aclassGuildThief_html_a5b8f5bd873fc29bca4c3b2c8f493da41"><div class="ttname"><a href="classGuildThief.html#a5b8f5bd873fc29bca4c3b2c8f493da41">GuildThief.IsCurrentZone</a></div><div class="ttdeci">override bool IsCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="GuildThief_8cs_source.html#l00013">GuildThief.cs:14</a></div></div>
+<div class="ttc" id="aclassGuild_html"><div class="ttname"><a href="classGuild.html">Guild</a></div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00003">Guild.cs:4</a></div></div>
+<div class="ttc" id="aclassGuild_html_a3f91ff199d8d0b1ddfb13ce56210ecf8"><div class="ttname"><a href="classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8">Guild.Merchant</a></div><div class="ttdeci">static GuildMerchant Merchant</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00049">Guild.cs:50</a></div></div>
+<div class="ttc" id="aclassGuild_html_a7ec0ae38a575c14802a1aa6ee6987653"><div class="ttname"><a href="classGuild.html#a7ec0ae38a575c14802a1aa6ee6987653">Guild.Mage</a></div><div class="ttdeci">static GuildMage Mage</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00033">Guild.cs:34</a></div></div>
+<div class="ttc" id="aclassGuild_html_aa52f9c395e60da9371f30fc21af7e621"><div class="ttname"><a href="classGuild.html#aa52f9c395e60da9371f30fc21af7e621">Guild.Fighter</a></div><div class="ttdeci">static GuildFighter Fighter</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00025">Guild.cs:26</a></div></div>
+<div class="ttc" id="aclassGuild_html_abbd12d65b6b73f64e1032cfdfe8aa2b5"><div class="ttname"><a href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Guild.Thief</a></div><div class="ttdeci">static GuildThief Thief</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00041">Guild.cs:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Guild_8cs_source.html#l00026">Fighter</a>, <a class="el" href="GuildFighter_8cs_source.html#l00014">GuildFighter.IsCurrentZone</a>, <a class="el" href="GuildMage_8cs_source.html#l00014">GuildMage.IsCurrentZone</a>, <a class="el" href="GuildMerchant_8cs_source.html#l00014">GuildMerchant.IsCurrentZone</a>, <a class="el" href="GuildThief_8cs_source.html#l00014">GuildThief.IsCurrentZone</a>, <a class="el" href="Guild_8cs_source.html#l00034">Mage</a>, <a class="el" href="Guild_8cs_source.html#l00050">Merchant</a>, and <a class="el" href="Guild_8cs_source.html#l00042">Thief</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00427">DramaOutcome.guild_promote()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l01759">CoreDebug.ModContribution()</a>.</p>
 
 </div>
 </div>
@@ -342,6 +394,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00091">91</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        EClass._zone.development = (10 + this.relation.rank * 5) * 10;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00427">DramaOutcome.guild_promote()</a>.</p>
 
 </div>
 </div>
@@ -367,6 +424,35 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00005">5</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="stringliteral">&quot;guild_merchant&quot;</span>)</div>
+<div class="line"><span class="lineno">   10</span>            {</div>
+<div class="line"><span class="lineno">   11</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>;</div>
+<div class="line"><span class="lineno">   12</span>            }</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="stringliteral">&quot;lumiest&quot;</span>)</div>
+<div class="line"><span class="lineno">   14</span>            {</div>
+<div class="line"><span class="lineno">   15</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a79daf8064a8517c7099f070c9f92d13f">Mage</a>;</div>
+<div class="line"><span class="lineno">   16</span>            }</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="stringliteral">&quot;derphy&quot;</span>))</div>
+<div class="line"><span class="lineno">   18</span>            {</div>
+<div class="line"><span class="lineno">   19</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#aae85b90271365cb2d8049ce21c1a530c">Fighter</a>;</div>
+<div class="line"><span class="lineno">   20</span>            }</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a39ca2a4c61034c30f6c97be140674fbe">Thief</a>;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassFactionManager_html_a1c1ff3b10ed0937e3c4dad0ea7984b16"><div class="ttname"><a href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">FactionManager.Merchant</a></div><div class="ttdeci">GuildMerchant Merchant</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00078">FactionManager.cs:78</a></div></div>
+<div class="ttc" id="aclassFactionManager_html_a39ca2a4c61034c30f6c97be140674fbe"><div class="ttname"><a href="classFactionManager.html#a39ca2a4c61034c30f6c97be140674fbe">FactionManager.Thief</a></div><div class="ttdeci">GuildThief Thief</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00075">FactionManager.cs:75</a></div></div>
+<div class="ttc" id="aclassFactionManager_html_a79daf8064a8517c7099f070c9f92d13f"><div class="ttname"><a href="classFactionManager.html#a79daf8064a8517c7099f070c9f92d13f">FactionManager.Mage</a></div><div class="ttdeci">GuildMage Mage</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00072">FactionManager.cs:72</a></div></div>
+<div class="ttc" id="aclassFactionManager_html_aae85b90271365cb2d8049ce21c1a530c"><div class="ttname"><a href="classFactionManager.html#aae85b90271365cb2d8049ce21c1a530c">FactionManager.Fighter</a></div><div class="ttdeci">GuildFighter Fighter</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00069">FactionManager.cs:69</a></div></div>
+<div class="ttc" id="aclassGame_html_af485c2fceeb7286e19ca2d199cb3f20e"><div class="ttname"><a href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">Game.factions</a></div><div class="ttdeci">FactionManager factions</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00796">Game.cs:796</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00842">Spatial.cs:842</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameLang_8cs_source.html#l00006">GameLang.ConvertDrama()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00405">DramaOutcome.guild_join()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00427">DramaOutcome.guild_promote()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00395">DramaOutcome.guild_trial()</a>, <a class="el" href="CalcPlat_8cs_source.html#l00006">CalcPlat.Learn()</a>, and <a class="el" href="CalcPlat_8cs_source.html#l00016">CalcPlat.Train()</a>.</p>
 
 </div>
 </div>
@@ -391,6 +477,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00057">57</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classGuild.html">Guild</a> guild = <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#aa02b90839a3c3cb345553aa8178f312b">Current</a>;</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (guild == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> guild.<a class="code hl_property" href="classGuild.html#abdc43697f65c21cc26a2758131232b18">Quest</a>;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassGuild_html_aa02b90839a3c3cb345553aa8178f312b"><div class="ttname"><a href="classGuild.html#aa02b90839a3c3cb345553aa8178f312b">Guild.Current</a></div><div class="ttdeci">static Guild Current</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00005">Guild.cs:6</a></div></div>
+<div class="ttc" id="aclassGuild_html_abdc43697f65c21cc26a2758131232b18"><div class="ttname"><a href="classGuild.html#abdc43697f65c21cc26a2758131232b18">Guild.Quest</a></div><div class="ttdeci">virtual QuestGuild Quest</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00104">Guild.cs:105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00405">DramaOutcome.guild_join()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00417">DramaOutcome.guild_mageTrial()</a>.</p>
 
 </div>
 </div>
@@ -415,6 +516,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00025">25</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#aae85b90271365cb2d8049ce21c1a530c">Fighter</a>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="Guild_8cs_source.html#l00070">GetCurrentGuild()</a>, <a class="el" href="Chara_8cs_source.html#l06015">Chara.GetHoverText()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00021">CalcMoney.Heal()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00031">CalcMoney.Identify()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00016">CalcMoney.Meal()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00026">CalcMoney.Picklock()</a>.</p>
 
 </div>
 </div>
@@ -439,7 +548,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00112">112</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab78f43f602566ac06f5e2047e978dd20" name="ab78f43f602566ac06f5e2047e978dd20"></a>
@@ -463,6 +578,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00120">120</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> this.relation.type == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00005">FactionRelation.cs:6</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00087">FactionRelation.cs:88</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06602">Card.GetPrice()</a>.</p>
 
 </div>
 </div>
@@ -487,6 +612,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00033">33</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a79daf8064a8517c7099f070c9f92d13f">Mage</a>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Guild_8cs_source.html#l00070">GetCurrentGuild()</a>, <a class="el" href="Card_8cs_source.html#l06602">Card.GetPrice()</a>, and <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>.</p>
 
 </div>
 </div>
@@ -511,6 +644,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00049">49</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l00025">DramaCustomSequence.Build()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="Guild_8cs_source.html#l00070">GetCurrentGuild()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00056">CalcMoney.InvestShop()</a>.</p>
 
 </div>
 </div>
@@ -535,7 +676,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00104">104</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a52ba7465f4616db45d8b622c42049325" name="a52ba7465f4616db45d8b622c42049325"></a>
@@ -559,7 +706,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00096">96</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;sub_guild&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abbd12d65b6b73f64e1032cfdfe8aa2b5" name="abbd12d65b6b73f64e1032cfdfe8aa2b5"></a>
@@ -583,6 +736,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Guild_8cs_source.html#l00041">41</a> of file <a class="el" href="Guild_8cs_source.html">Guild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a39ca2a4c61034c30f6c97be140674fbe">Thief</a>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__Shopping_8cs_source.html#l00153">AI_Shopping.Buy()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="Guild_8cs_source.html#l00070">GetCurrentGuild()</a>, <a class="el" href="Card_8cs_source.html#l06602">Card.GetPrice()</a>, <a class="el" href="Trait_8cs_source.html#l01955">Trait.OnBarter()</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00155">ShopTransaction.OnEndTransaction()</a>.</p>
 
 </div>
 </div>
@@ -590,9 +751,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="Guild_8cs_source.html">Guild.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGuild.html">Guild</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

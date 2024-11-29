@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitRoomPlate.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -676,6 +696,50 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00058">58</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a> || <span class="keyword">this</span>.owner.pos.cell.room == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keyword">using</span> (List&lt;<a class="code hl_class" href="classBaseArea.html">BaseArea</a>.<a class="code hl_class" href="classBaseArea_1_1Interaction.html">Interaction</a>&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>.<a class="code hl_function" href="classBaseArea.html#a1d334755c5cd60a5e67d39558055092b">ListInteractions</a>().GetEnumerator())</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                <a class="code hl_class" href="classBaseArea_1_1Interaction.html">BaseArea.Interaction</a> a = enumerator.Current;</div>
+<div class="line"><span class="lineno">   73</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(a.<a class="code hl_variable" href="classBaseArea_1_1Interaction.html#ac1d1fe44de391404415035c87441bb5e">text</a>, delegate()</div>
+<div class="line"><span class="lineno">   74</span>                {</div>
+<div class="line"><span class="lineno">   75</span>                    a.<a class="code hl_variable" href="classBaseArea_1_1Interaction.html#ac35cbe1d252d7ab9512b897b2dd0b958">action</a>();</div>
+<div class="line"><span class="lineno">   76</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a8270be4ddfbee895c502315214e1af18">rooms</a>.<a class="code hl_function" href="classRoomManager.html#a48da1d27ebd0e88ddde789e2ef3a4ba2">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   78</span>                }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassBaseArea_1_1Interaction_html"><div class="ttname"><a href="classBaseArea_1_1Interaction.html">BaseArea.Interaction</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00328">BaseArea.cs:329</a></div></div>
+<div class="ttc" id="aclassBaseArea_1_1Interaction_html_ac1d1fe44de391404415035c87441bb5e"><div class="ttname"><a href="classBaseArea_1_1Interaction.html#ac1d1fe44de391404415035c87441bb5e">BaseArea.Interaction.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00330">BaseArea.cs:330</a></div></div>
+<div class="ttc" id="aclassBaseArea_1_1Interaction_html_ac35cbe1d252d7ab9512b897b2dd0b958"><div class="ttname"><a href="classBaseArea_1_1Interaction.html#ac35cbe1d252d7ab9512b897b2dd0b958">BaseArea.Interaction.action</a></div><div class="ttdeci">Action action</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00332">BaseArea.cs:332</a></div></div>
+<div class="ttc" id="aclassBaseArea_html"><div class="ttname"><a href="classBaseArea.html">BaseArea</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00006">BaseArea.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseArea_html_a1d334755c5cd60a5e67d39558055092b"><div class="ttname"><a href="classBaseArea.html#a1d334755c5cd60a5e67d39558055092b">BaseArea.ListInteractions</a></div><div class="ttdeci">List&lt; BaseArea.Interaction &gt; ListInteractions()</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00141">BaseArea.cs:141</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassMap_html_a8270be4ddfbee895c502315214e1af18"><div class="ttname"><a href="classMap.html#a8270be4ddfbee895c502315214e1af18">Map.rooms</a></div><div class="ttdeci">RoomManager rooms</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02836">Map.cs:2836</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRoomManager_html_a48da1d27ebd0e88ddde789e2ef3a4ba2"><div class="ttname"><a href="classRoomManager.html#a48da1d27ebd0e88ddde789e2ef3a4ba2">RoomManager.RefreshAll</a></div><div class="ttdeci">void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="RoomManager_8cs_source.html#l00025">RoomManager.cs:25</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="BaseArea_8cs_source.html#l00332">BaseArea.Interaction.action</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="BaseArea_8cs_source.html#l00141">BaseArea.ListInteractions()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="RoomManager_8cs_source.html#l00025">RoomManager.RefreshAll()</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="Map_8cs_source.html#l02836">Map.rooms</a>, <a class="el" href="BaseArea_8cs_source.html#l00330">BaseArea.Interaction.text</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -701,6 +765,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00046">46</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.GetObj&lt;<a class="code hl_class" href="classAreaData.html">AreaData</a>&gt;(3) ?? this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>&lt;<a class="code hl_class" href="classAreaData.html">AreaData</a>&gt;(3, <span class="keyword">new</span> <a class="code hl_class" href="classAreaData.html">AreaData</a>());</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>(3, value);</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassAreaData_html"><div class="ttname"><a href="classAreaData.html">AreaData</a></div><div class="ttdef"><b>Definition:</b> <a href="AreaData_8cs_source.html#l00005">AreaData.cs:6</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_a27a8dbca89eb27a56b60b86c69195adc"><div class="ttname"><a href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">BaseCard.SetObj</a></div><div class="ttdeci">void SetObj(int id, object o)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00082">BaseCard.cs:82</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Room_8cs_source.html#l00053">Room.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -725,7 +803,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6724215f8edab886ab4dc4a2285c0ba4" name="a6724215f8edab886ab4dc4a2285c0ba4"></a>
@@ -749,7 +833,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab17dd62bedd1048338b1f14b2c46e345" name="ab17dd62bedd1048338b1f14b2c46e345"></a>
@@ -773,7 +863,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00030">30</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a27f3e38fdf204ea437e0d9e1cfe4cb92" name="a27f3e38fdf204ea437e0d9e1cfe4cb92"></a>
@@ -797,7 +893,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a738261f447a82cdb204add9779035832" name="a738261f447a82cdb204add9779035832"></a>
@@ -821,16 +923,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoomPlate_8cs_source.html#l00038">38</a> of file <a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitRoomPlate_8cs_source.html">TraitRoomPlate.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitRoomPlate.html">TraitRoomPlate</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

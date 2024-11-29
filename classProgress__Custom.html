@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classProgress__Custom.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -740,6 +760,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#ae58fb6887cbb8950eeb69498aaf73334">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00053">53</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        Func&lt;bool&gt; func = this.<a class="code hl_variable" href="classProgress__Custom.html#a7cbce0f1f0ad095f3572f85d7b8d2bf7">canProgress</a>;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> func == <span class="keyword">null</span> || func();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a7cbce0f1f0ad095f3572f85d7b8d2bf7"><div class="ttname"><a href="classProgress__Custom.html#a7cbce0f1f0ad095f3572f85d7b8d2bf7">Progress_Custom.canProgress</a></div><div class="ttdeci">Func&lt; bool &gt; canProgress</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00118">Progress_Custom.cs:118</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Progress__Custom_8cs_source.html#l00118">canProgress</a>.</p>
 
 </div>
 </div>
@@ -769,6 +796,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a46d4ed96ca5e069b19e7a1526dcfe403">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00079">79</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        Action action = this.<a class="code hl_variable" href="classProgress__Custom.html#a7a85c3cadef1d2b86ac09a176d0c0e12">onBeforeProgress</a>;</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (action == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        action();</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a7a85c3cadef1d2b86ac09a176d0c0e12"><div class="ttname"><a href="classProgress__Custom.html#a7a85c3cadef1d2b86ac09a176d0c0e12">Progress_Custom.onBeforeProgress</a></div><div class="ttdeci">Action onBeforeProgress</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00120">Progress_Custom.cs:120</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Progress__Custom_8cs_source.html#l00120">onBeforeProgress</a>.</p>
 
 </div>
 </div>
@@ -798,6 +836,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a3f0fe0884e634f34aa9040ac182043f0">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00059">59</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        Action&lt;Progress_Custom&gt; action = this.<a class="code hl_variable" href="classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61">onProgress</a>;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (action == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        action(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a9fd907953c4c00ea8d4fcab4371dac61"><div class="ttname"><a href="classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61">Progress_Custom.onProgress</a></div><div class="ttdeci">Action&lt; Progress_Custom &gt; onProgress</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00126">Progress_Custom.cs:126</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Progress__Custom_8cs_source.html#l00126">onProgress</a>.</p>
 
 </div>
 </div>
@@ -827,6 +876,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIProgress.html#a0ada7c6abf71889f8f3bc429358a0521">AIProgress</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00089">89</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        Action action = this.<a class="code hl_variable" href="classProgress__Custom.html#a0def6c44c654e86e3704aa9162dcde3c">onProgressBegin</a>;</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (action == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        action();</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a0def6c44c654e86e3704aa9162dcde3c"><div class="ttname"><a href="classProgress__Custom.html#a0def6c44c654e86e3704aa9162dcde3c">Progress_Custom.onProgressBegin</a></div><div class="ttdeci">Action onProgressBegin</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00124">Progress_Custom.cs:124</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Progress__Custom_8cs_source.html#l00124">onProgressBegin</a>.</p>
 
 </div>
 </div>
@@ -856,6 +916,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#ac93e4c4275a15fa903bd7aba64cb81c5">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00069">69</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        Action action = this.<a class="code hl_variable" href="classProgress__Custom.html#ab14a578203b73bc6b663719d20a0c6ff">onProgressComplete</a>;</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (action == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        action();</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_ab14a578203b73bc6b663719d20a0c6ff"><div class="ttname"><a href="classProgress__Custom.html#ab14a578203b73bc6b663719d20a0c6ff">Progress_Custom.onProgressComplete</a></div><div class="ttdeci">Action onProgressComplete</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00122">Progress_Custom.cs:122</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Progress__Custom_8cs_source.html#l00122">onProgressComplete</a>.</p>
 
 </div>
 </div>
@@ -894,6 +965,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00099">99</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        this.maxProgress = max;</div>
+<div class="line"><span class="lineno">  102</span>        this.interval = _interval;</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__PracticeDummy_8cs_source.html#l00034">AI_PracticeDummy.CreateProgress()</a>, <a class="el" href="AI__Torture_8cs_source.html#l00048">AI_Torture.CreateProgress()</a>, <a class="el" href="AI__Cook_8cs_source.html#l00027">AI_Cook.Run()</a>, <a class="el" href="AI__Deconstruct_8cs_source.html#l00012">AI_Deconstruct.Run()</a>, <a class="el" href="AI__Paint_8cs_source.html#l00012">AI_Paint.Run()</a>, <a class="el" href="AI__Pray_8cs_source.html#l00026">AI_Pray.Run()</a>, and <a class="el" href="AI__Steal_8cs_source.html#l00047">AI_Steal.Run()</a>.</p>
 
 </div>
 </div>
@@ -944,6 +1022,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00118">118</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Progress__Custom_8cs_source.html#l00053">CanProgress()</a>.</p>
+
 </div>
 </div>
 <a id="a81605ce5217048c822f8c6cc4ab57786" name="a81605ce5217048c822f8c6cc4ab57786"></a>
@@ -992,6 +1072,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00120">120</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Progress__Custom_8cs_source.html#l00079">OnBeforeProgress()</a>.</p>
+
 </div>
 </div>
 <a id="a9fd907953c4c00ea8d4fcab4371dac61" name="a9fd907953c4c00ea8d4fcab4371dac61"></a>
@@ -1007,6 +1089,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00126">126</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Progress__Custom_8cs_source.html#l00059">OnProgress()</a>.</p>
 
 </div>
 </div>
@@ -1024,6 +1108,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00124">124</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Progress__Custom_8cs_source.html#l00089">OnProgressBegin()</a>.</p>
+
 </div>
 </div>
 <a id="ab14a578203b73bc6b663719d20a0c6ff" name="ab14a578203b73bc6b663719d20a0c6ff"></a>
@@ -1039,6 +1125,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00122">122</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Progress__Custom_8cs_source.html#l00069">OnProgressComplete()</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1184,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00013">13</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80">cancelWhenDamaged</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a8badd4ffbcc1959e6ad4374262b77e80"><div class="ttname"><a href="classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80">Progress_Custom.cancelWhenDamaged</a></div><div class="ttdeci">bool cancelWhenDamaged</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00114">Progress_Custom.cs:114</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a22adbd51efeff474c1a98cddbdf01547" name="a22adbd51efeff474c1a98cddbdf01547"></a>
@@ -1120,7 +1215,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00005">5</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#a3c760e3ba21fa9197cdf9d2fd7ce356a">cancelWhenMoved</a>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a3c760e3ba21fa9197cdf9d2fd7ce356a"><div class="ttname"><a href="classProgress__Custom.html#a3c760e3ba21fa9197cdf9d2fd7ce356a">Progress_Custom.cancelWhenMoved</a></div><div class="ttdeci">bool cancelWhenMoved</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00112">Progress_Custom.cs:112</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="affec2c3e525ac2a72ff5aa25433567d1" name="affec2c3e525ac2a72ff5aa25433567d1"></a>
@@ -1144,7 +1246,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00037">37</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#a81605ce5217048c822f8c6cc4ab57786">interval</a>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a81605ce5217048c822f8c6cc4ab57786"><div class="ttname"><a href="classProgress__Custom.html#a81605ce5217048c822f8c6cc4ab57786">Progress_Custom.interval</a></div><div class="ttdeci">int interval</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00110">Progress_Custom.cs:110</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a21a9bbd98677b5fa23b08ee95d9e94dd" name="a21a9bbd98677b5fa23b08ee95d9e94dd"></a>
@@ -1168,7 +1277,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00021">21</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c">maxProgress</a>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a8d542d5ffcb5bcad6970d15ab3438d9c"><div class="ttname"><a href="classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c">Progress_Custom.maxProgress</a></div><div class="ttdeci">int maxProgress</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00108">Progress_Custom.cs:108</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a03ad598f3fc07d37861ae540a86beac0" name="a03ad598f3fc07d37861ae540a86beac0"></a>
@@ -1192,7 +1308,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00029">29</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#aa61ffcb9fe2c5f8515bd21b0fc21bb3c">showProgress</a>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_aa61ffcb9fe2c5f8515bd21b0fc21bb3c"><div class="ttname"><a href="classProgress__Custom.html#aa61ffcb9fe2c5f8515bd21b0fc21bb3c">Progress_Custom.showProgress</a></div><div class="ttdeci">bool showProgress</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00116">Progress_Custom.cs:116</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad6ab018f7d99048bd93b8318418cfc14" name="ad6ab018f7d99048bd93b8318418cfc14"></a>
@@ -1216,16 +1339,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Progress__Custom_8cs_source.html#l00045">45</a> of file <a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c">textHint</a>;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassProgress__Custom_html_a180aee1eea56965f7dd0efa4e3cd1c3c"><div class="ttname"><a href="classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c">Progress_Custom.textHint</a></div><div class="ttdeci">string textHint</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00106">Progress_Custom.cs:106</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Progress__Custom_8cs_source.html">Progress_Custom.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classProgress__Custom.html">Progress_Custom</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

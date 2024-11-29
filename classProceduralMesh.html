@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classProceduralMesh.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -157,6 +177,24 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00056">56</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#ab66669bfc7f06ac8de2c69a5de2247f3">triangles</a>.AddRange(<span class="keyword">new</span> <span class="keywordtype">int</span>[]</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">triOffset</a>,</div>
+<div class="line"><span class="lineno">   61</span>            1 + this.<a class="code hl_variable" href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">triOffset</a>,</div>
+<div class="line"><span class="lineno">   62</span>            2 + this.<a class="code hl_variable" href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">triOffset</a>,</div>
+<div class="line"><span class="lineno">   63</span>            2 + this.<a class="code hl_variable" href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">triOffset</a>,</div>
+<div class="line"><span class="lineno">   64</span>            3 + this.<a class="code hl_variable" href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">triOffset</a>,</div>
+<div class="line"><span class="lineno">   65</span>            this.triOffset</div>
+<div class="line"><span class="lineno">   66</span>        });</div>
+<div class="line"><span class="lineno">   67</span>        this.triOffset += 4;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassProceduralMesh_html_ab66669bfc7f06ac8de2c69a5de2247f3"><div class="ttname"><a href="classProceduralMesh.html#ab66669bfc7f06ac8de2c69a5de2247f3">ProceduralMesh.triangles</a></div><div class="ttdeci">List&lt; int &gt; triangles</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00100">ProceduralMesh.cs:100</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_acfbfb8eb075e9a0dbcc028c7190b75f9"><div class="ttname"><a href="classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9">ProceduralMesh.triOffset</a></div><div class="ttdeci">int triOffset</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00106">ProceduralMesh.cs:106</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ProceduralMesh_8cs_source.html#l00100">triangles</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00106">triOffset</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -184,6 +222,58 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00016">16</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        this.mesh = <span class="keyword">new</span> Mesh();</div>
+<div class="line"><span class="lineno">   19</span>        this.triOffset = 0;</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#ab66669bfc7f06ac8de2c69a5de2247f3">triangles</a>.Clear();</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#a5c94eddfa0b668cdc9a2359af366027d">vertices</a>.Clear();</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af">uv</a>.Clear();</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classProceduralMesh.html#a90029523a1dbdb81248068676a5700b9">top</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#a5c94eddfa0b668cdc9a2359af366027d">vertices</a>.AddRange(<span class="keyword">new</span> Vector3[]</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keyword">new</span> Vector3(0f, this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.y, <span class="keyword">this</span>.size.z) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.x, <span class="keyword">this</span>.size.y, <span class="keyword">this</span>.size.z) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.x, <span class="keyword">this</span>.size.y, 0f) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keyword">new</span> Vector3(0f, this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.y, 0f) + this.pos</div>
+<div class="line"><span class="lineno">   31</span>            });</div>
+<div class="line"><span class="lineno">   32</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af">uv</a>.AddRange(this.<a class="code hl_function" href="classProceduralMesh.html#af393d4ea95d89c6508055596445f5efb">GetUVs</a>(0));</div>
+<div class="line"><span class="lineno">   33</span>            this.<a class="code hl_function" href="classProceduralMesh.html#a43a1fc6ab099ac21637c9f33b7eacb54">AddTriangles</a>();</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#a5c94eddfa0b668cdc9a2359af366027d">vertices</a>.AddRange(<span class="keyword">new</span> Vector3[]</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keyword">new</span> Vector3(0f, this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.y, 0f) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.x, <span class="keyword">this</span>.size.y, 0f) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">size</a>.x, <span class="keyword">this</span>.offset.y, 0f) + this.<a class="code hl_variable" href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">pos</a>,</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keyword">new</span> Vector3(0f, this.<a class="code hl_variable" href="classProceduralMesh.html#a6436b699d650d8552ba5c838862896f2">offset</a>.y, 0f) + this.pos</div>
+<div class="line"><span class="lineno">   43</span>            });</div>
+<div class="line"><span class="lineno">   44</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af">uv</a>.AddRange(this.<a class="code hl_function" href="classProceduralMesh.html#af393d4ea95d89c6508055596445f5efb">GetUVs</a>(0));</div>
+<div class="line"><span class="lineno">   45</span>            this.<a class="code hl_function" href="classProceduralMesh.html#a43a1fc6ab099ac21637c9f33b7eacb54">AddTriangles</a>();</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>.SetVertices(this.<a class="code hl_variable" href="classProceduralMesh.html#a5c94eddfa0b668cdc9a2359af366027d">vertices</a>);</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>.SetUVs(0, this.<a class="code hl_variable" href="classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af">uv</a>);</div>
+<div class="line"><span class="lineno">   49</span>        this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>.SetTriangles(this.<a class="code hl_variable" href="classProceduralMesh.html#ab66669bfc7f06ac8de2c69a5de2247f3">triangles</a>, 0);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classProceduralMesh.html#a054b8794762eba9800818d4d79fa7a39">calculateNormal</a>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>.RecalculateNormals();</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassProceduralMesh_html_a054b8794762eba9800818d4d79fa7a39"><div class="ttname"><a href="classProceduralMesh.html#a054b8794762eba9800818d4d79fa7a39">ProceduralMesh.calculateNormal</a></div><div class="ttdeci">bool calculateNormal</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00096">ProceduralMesh.cs:96</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a0d9a39e631ce79d80d9ec1b305b241af"><div class="ttname"><a href="classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af">ProceduralMesh.uv</a></div><div class="ttdeci">List&lt; Vector2 &gt; uv</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00104">ProceduralMesh.cs:104</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a43a1fc6ab099ac21637c9f33b7eacb54"><div class="ttname"><a href="classProceduralMesh.html#a43a1fc6ab099ac21637c9f33b7eacb54">ProceduralMesh.AddTriangles</a></div><div class="ttdeci">void AddTriangles()</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00056">ProceduralMesh.cs:56</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a47831297089318a8e31346b273ebaff3"><div class="ttname"><a href="classProceduralMesh.html#a47831297089318a8e31346b273ebaff3">ProceduralMesh.size</a></div><div class="ttdeci">Vector3 size</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00092">ProceduralMesh.cs:92</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a54c58437fd378dbd796367fed2ba5bd4"><div class="ttname"><a href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">ProceduralMesh.mesh</a></div><div class="ttdeci">Mesh mesh</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00098">ProceduralMesh.cs:98</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a5c94eddfa0b668cdc9a2359af366027d"><div class="ttname"><a href="classProceduralMesh.html#a5c94eddfa0b668cdc9a2359af366027d">ProceduralMesh.vertices</a></div><div class="ttdeci">List&lt; Vector3 &gt; vertices</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00102">ProceduralMesh.cs:102</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a6436b699d650d8552ba5c838862896f2"><div class="ttname"><a href="classProceduralMesh.html#a6436b699d650d8552ba5c838862896f2">ProceduralMesh.offset</a></div><div class="ttdeci">Vector3 offset</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00090">ProceduralMesh.cs:90</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_a90029523a1dbdb81248068676a5700b9"><div class="ttname"><a href="classProceduralMesh.html#a90029523a1dbdb81248068676a5700b9">ProceduralMesh.top</a></div><div class="ttdeci">bool top</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00094">ProceduralMesh.cs:94</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_af393d4ea95d89c6508055596445f5efb"><div class="ttname"><a href="classProceduralMesh.html#af393d4ea95d89c6508055596445f5efb">ProceduralMesh.GetUVs</a></div><div class="ttdeci">Vector2[] GetUVs(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00070">ProceduralMesh.cs:70</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_af8f81e07870f27302f1047f59b4468c2"><div class="ttname"><a href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">ProceduralMesh.pos</a></div><div class="ttdeci">Vector3 pos</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00088">ProceduralMesh.cs:88</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ProceduralMesh_8cs_source.html#l00056">AddTriangles()</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00096">calculateNormal</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00070">GetUVs()</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00098">mesh</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00090">offset</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00088">pos</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00092">size</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00094">top</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00100">triangles</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00104">uv</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00102">vertices</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00007">GetMesh()</a>.</p>
 
 </div>
 </div>
@@ -211,6 +301,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00007">7</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            this.<a class="code hl_function" href="classProceduralMesh.html#ae9ac9ac0ba2a40143d72b1bc326abe7c">Create</a>();</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classProceduralMesh.html#a54c58437fd378dbd796367fed2ba5bd4">mesh</a>;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassProceduralMesh_html_ae9ac9ac0ba2a40143d72b1bc326abe7c"><div class="ttname"><a href="classProceduralMesh.html#ae9ac9ac0ba2a40143d72b1bc326abe7c">ProceduralMesh.Create</a></div><div class="ttdeci">void Create()</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00016">ProceduralMesh.cs:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00098">mesh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00389">MeshPass._Refresh()</a>.</p>
 
 </div>
 </div>
@@ -239,6 +341,23 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00070">70</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        Vector2[] array = <span class="keyword">new</span> Vector2[4];</div>
+<div class="line"><span class="lineno">   73</span>        Vector2 vector = <span class="keyword">new</span> Vector2(1f / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x, 1f / <span class="keyword">this</span>.tiling.y);</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> num = <span class="keywordtype">id</span> % (int)this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> num2 = <span class="keywordtype">id</span> / (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x;</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">float</span> num3 = this.UVPadding / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x;</div>
+<div class="line"><span class="lineno">   77</span>        array[0] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)num / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + num3, 1f - (<span class="keywordtype">float</span>)num2 / <span class="keyword">this</span>.tiling.y - num3);</div>
+<div class="line"><span class="lineno">   78</span>        array[1] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)num / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + vector.x - num3, 1f - (<span class="keywordtype">float</span>)num2 / <span class="keyword">this</span>.tiling.y - num3);</div>
+<div class="line"><span class="lineno">   79</span>        array[2] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)num / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + vector.x - num3, 1f - ((<span class="keywordtype">float</span>)num2 / <span class="keyword">this</span>.tiling.y + vector.y) + num3);</div>
+<div class="line"><span class="lineno">   80</span>        array[3] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)num / this.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + num3, 1f - ((<span class="keywordtype">float</span>)num2 / <span class="keyword">this</span>.tiling.y + vector.y) + num3);</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> array;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassProceduralMesh_html_aedaad433ecb7daf2d7e8518ca6710840"><div class="ttname"><a href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">ProceduralMesh.tiling</a></div><div class="ttdeci">Vector2 tiling</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00084">ProceduralMesh.cs:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ProceduralMesh_8cs_source.html#l00084">tiling</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -256,6 +375,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00096">96</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -281,6 +402,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00098">98</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00007">GetMesh()</a>.</p>
+
 </div>
 </div>
 <a id="a6436b699d650d8552ba5c838862896f2" name="a6436b699d650d8552ba5c838862896f2"></a>
@@ -296,6 +419,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00090">90</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -313,6 +438,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00088">88</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00140">RenderRow.SetRenderData()</a>.</p>
+
 </div>
 </div>
 <a id="a47831297089318a8e31346b273ebaff3" name="a47831297089318a8e31346b273ebaff3"></a>
@@ -328,6 +455,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00092">92</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>, <a class="el" href="RenderDataObjV_8cs_source.html#l00014">RenderDataObjV.Draw()</a>, and <a class="el" href="RenderDataTile_8cs_source.html#l00005">RenderDataTile.Draw()</a>.</p>
 
 </div>
 </div>
@@ -345,6 +474,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00084">84</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00066">TextureManager.AddBase()</a>, <a class="el" href="RenderData_8cs_source.html#l00091">RenderData.ConvertTile()</a>, <a class="el" href="RenderDataObjAdd_8cs_source.html#l00014">RenderDataObjAdd.Draw()</a>, <a class="el" href="RenderDataObjV_8cs_source.html#l00014">RenderDataObjV.Draw()</a>, <a class="el" href="RenderRow_8cs_source.html#l00257">RenderRow.GetSprite()</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00070">GetUVs()</a>, <a class="el" href="RenderRow_8cs_source.html#l00236">RenderRow.SetTiles()</a>, <a class="el" href="SourceChara_8cs_source.html#l00166">SourceChara.Row.SetTiles()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00131">SourceThing.Row.SetTiles()</a>.</p>
+
 </div>
 </div>
 <a id="a90029523a1dbdb81248068676a5700b9" name="a90029523a1dbdb81248068676a5700b9"></a>
@@ -360,6 +491,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00094">94</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -385,6 +518,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00100">100</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00056">AddTriangles()</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
+
 </div>
 </div>
 <a id="acfbfb8eb075e9a0dbcc028c7190b75f9" name="acfbfb8eb075e9a0dbcc028c7190b75f9"></a>
@@ -409,6 +544,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00106">106</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00056">AddTriangles()</a>.</p>
+
 </div>
 </div>
 <a id="a0d9a39e631ce79d80d9ec1b305b241af" name="a0d9a39e631ce79d80d9ec1b305b241af"></a>
@@ -432,6 +569,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00104">104</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
 
 </div>
 </div>
@@ -473,15 +612,21 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProceduralMesh_8cs_source.html#l00102">102</a> of file <a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ProceduralMesh_8cs_source.html#l00016">Create()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ProceduralMesh_8cs_source.html">ProceduralMesh.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classProceduralMesh.html">ProceduralMesh</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

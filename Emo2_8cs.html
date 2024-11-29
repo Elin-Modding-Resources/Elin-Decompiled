@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Emo2_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -142,13 +158,53 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Emo2_8cs_source.html#l00003">3</a> of file <a class="el" href="Emo2_8cs_source.html">Emo2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a334c4a4c42fdb79d7ebc3e73b517e6f8">none</a>,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a56ab24c15b72a457069c5ea42fcfc640">happy</a>,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a72672db3a8af4231cb7e984f6c09af3c">insane</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a35393c24384b8862798716628f7bc6f4">poison</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac68e1e6faa33bfdf051e2ad6e3ce967d">bleeding</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6013221752df892237d0fc99fd8a328f">blind</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a0e82533c37fced763be34a5c21d720c9">silence</a>,</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a1a7f2a5ad77128b2f81feddac78df213">confused</a>,</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aeb88d7636980738cd0522ea69e212905">fear</a>,</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6aeb2ea736acae77caa2944be44c53da">speeing</a>,</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac982717e53ebc5802607247af070d870">paralyzed</a>,</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aaec34f6af628cb6181e5f1d975f14c3e">restock</a>,</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a2ccd89b67324dd915dd2d286f613332e">blessing</a>,</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0">fur</a>,</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>,</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc">fur2</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad">baby</a></div>
+<div class="line"><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a0e82533c37fced763be34a5c21d720c9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a0e82533c37fced763be34a5c21d720c9">Emo2.silence</a></div><div class="ttdeci">@ silence</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a1a7f2a5ad77128b2f81feddac78df213"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a1a7f2a5ad77128b2f81feddac78df213">Emo2.confused</a></div><div class="ttdeci">@ confused</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a2ccd89b67324dd915dd2d286f613332e"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a2ccd89b67324dd915dd2d286f613332e">Emo2.blessing</a></div><div class="ttdeci">@ blessing</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a334c4a4c42fdb79d7ebc3e73b517e6f8"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a334c4a4c42fdb79d7ebc3e73b517e6f8">Emo2.none</a></div><div class="ttdeci">@ none</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a35393c24384b8862798716628f7bc6f4"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a35393c24384b8862798716628f7bc6f4">Emo2.poison</a></div><div class="ttdeci">@ poison</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0">Emo2.fur</a></div><div class="ttdeci">@ fur</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a56ab24c15b72a457069c5ea42fcfc640"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a56ab24c15b72a457069c5ea42fcfc640">Emo2.happy</a></div><div class="ttdeci">@ happy</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a6013221752df892237d0fc99fd8a328f"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6013221752df892237d0fc99fd8a328f">Emo2.blind</a></div><div class="ttdeci">@ blind</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad">Emo2.baby</a></div><div class="ttdeci">@ baby</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a6aeb2ea736acae77caa2944be44c53da"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6aeb2ea736acae77caa2944be44c53da">Emo2.speeing</a></div><div class="ttdeci">@ speeing</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088a72672db3a8af4231cb7e984f6c09af3c"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a72672db3a8af4231cb7e984f6c09af3c">Emo2.insane</a></div><div class="ttdeci">@ insane</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aaec34f6af628cb6181e5f1d975f14c3e"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aaec34f6af628cb6181e5f1d975f14c3e">Emo2.restock</a></div><div class="ttdeci">@ restock</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088ac68e1e6faa33bfdf051e2ad6e3ce967d"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac68e1e6faa33bfdf051e2ad6e3ce967d">Emo2.bleeding</a></div><div class="ttdeci">@ bleeding</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc">Emo2.fur2</a></div><div class="ttdeci">@ fur2</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088ac982717e53ebc5802607247af070d870"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac982717e53ebc5802607247af070d870">Emo2.paralyzed</a></div><div class="ttdeci">@ paralyzed</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aeb88d7636980738cd0522ea69e212905"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aeb88d7636980738cd0522ea69e212905">Emo2.fear</a></div><div class="ttdeci">@ fear</div></div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">Emo2.hint</a></div><div class="ttdeci">@ hint</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="Emo2_8cs.html">Emo2.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

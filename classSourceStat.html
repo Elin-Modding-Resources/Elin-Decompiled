@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceStat.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -137,7 +157,45 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceStat_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceStat_1_1Row.html">SourceStat.Row</a></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordtype">id</span> = SourceData.GetInt(0),</div>
+<div class="line"><span class="lineno">   11</span>            alias = SourceData.GetString(1),</div>
+<div class="line"><span class="lineno">   12</span>            name_JP = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   13</span>            name = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">   14</span>            type = SourceData.GetString(4),</div>
+<div class="line"><span class="lineno">   15</span>            group = SourceData.GetString(5),</div>
+<div class="line"><span class="lineno">   16</span>            curse = SourceData.GetString(6),</div>
+<div class="line"><span class="lineno">   17</span>            duration = SourceData.GetString(7),</div>
+<div class="line"><span class="lineno">   18</span>            hexPower = SourceData.GetInt(8),</div>
+<div class="line"><span class="lineno">   19</span>            negate = SourceData.GetStringArray(9),</div>
+<div class="line"><span class="lineno">   20</span>            defenseAttb = SourceData.GetStringArray(10),</div>
+<div class="line"><span class="lineno">   21</span>            resistance = SourceData.GetStringArray(11),</div>
+<div class="line"><span class="lineno">   22</span>            gainRes = SourceData.GetInt(12),</div>
+<div class="line"><span class="lineno">   23</span>            elements = SourceData.GetStringArray(13),</div>
+<div class="line"><span class="lineno">   24</span>            nullify = SourceData.GetStringArray(14),</div>
+<div class="line"><span class="lineno">   25</span>            tag = SourceData.GetStringArray(15),</div>
+<div class="line"><span class="lineno">   26</span>            phase = SourceData.GetIntArray(16),</div>
+<div class="line"><span class="lineno">   27</span>            colors = SourceData.GetString(17),</div>
+<div class="line"><span class="lineno">   28</span>            element = SourceData.GetString(18),</div>
+<div class="line"><span class="lineno">   29</span>            effect = SourceData.GetStringArray(19),</div>
+<div class="line"><span class="lineno">   30</span>            strPhase_JP = SourceData.GetStringArray(20),</div>
+<div class="line"><span class="lineno">   31</span>            strPhase = SourceData.GetStringArray(21),</div>
+<div class="line"><span class="lineno">   32</span>            textPhase_JP = SourceData.GetString(22),</div>
+<div class="line"><span class="lineno">   33</span>            textPhase = SourceData.GetString(23),</div>
+<div class="line"><span class="lineno">   34</span>            textEnd_JP = SourceData.GetString(24),</div>
+<div class="line"><span class="lineno">   35</span>            textEnd = SourceData.GetString(25),</div>
+<div class="line"><span class="lineno">   36</span>            textPhase2_JP = SourceData.GetString(26),</div>
+<div class="line"><span class="lineno">   37</span>            textPhase2 = SourceData.GetString(27),</div>
+<div class="line"><span class="lineno">   38</span>            gradient = SourceData.GetString(28),</div>
+<div class="line"><span class="lineno">   39</span>            invert = SourceData.GetBool(29),</div>
+<div class="line"><span class="lineno">   40</span>            detail_JP = SourceData.GetString(30),</div>
+<div class="line"><span class="lineno">   41</span>            detail = SourceData.GetString(31)</div>
+<div class="line"><span class="lineno">   42</span>        };</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassSourceStat_1_1Row_html"><div class="ttname"><a href="classSourceStat_1_1Row.html">SourceStat.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceStat_8cs_source.html#l00079">SourceStat.cs:80</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab3e984909114a6e5e48534b0327f3cf0" name="ab3e984909114a6e5e48534b0327f3cf0"></a>
@@ -164,6 +222,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceStat_8cs_source.html#l00050">50</a> of file <a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceStat.html">SourceStat</a>.<a class="code hl_class" href="classSourceStat_1_1Row.html">Row</a> row in <span class="keyword">this</span>.rows)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (!row.group.IsEmpty())</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                this.<a class="code hl_variable" href="classSourceStat.html#a97c45323a93b1c9127c81c82e1fa84f9">groups</a>.GetOrCreate(row.group, <span class="keyword">null</span>).Add(row);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassSourceStat_html"><div class="ttname"><a href="classSourceStat.html">SourceStat</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceStat_8cs_source.html#l00004">SourceStat.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceStat_html_a97c45323a93b1c9127c81c82e1fa84f9"><div class="ttname"><a href="classSourceStat.html#a97c45323a93b1c9127c81c82e1fa84f9">SourceStat.groups</a></div><div class="ttdeci">Dictionary&lt; string, List&lt; SourceStat.Row &gt; &gt; groups</div><div class="ttdef"><b>Definition:</b> <a href="SourceStat_8cs_source.html#l00076">SourceStat.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceStat_8cs_source.html#l00076">groups</a>.</p>
 
 </div>
 </div>
@@ -192,7 +263,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceStat_8cs_source.html#l00045">45</a> of file <a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        this.map[r.<a class="code hl_variable" href="classSourceStat_1_1Row.html#a09c669c33f19da84890220399369e6e5">id</a>] = r;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassSourceStat_1_1Row_html_a09c669c33f19da84890220399369e6e5"><div class="ttname"><a href="classSourceStat_1_1Row.html#a09c669c33f19da84890220399369e6e5">SourceStat.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceStat_8cs_source.html#l00097">SourceStat.cs:97</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -209,6 +284,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceStat_8cs_source.html#l00076">76</a> of file <a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceStat_8cs_source.html#l00050">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -234,16 +311,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceStat_8cs_source.html#l00061">61</a> of file <a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="stringliteral">&quot;strPhase&quot;</span>,</div>
+<div class="line"><span class="lineno">   68</span>                <span class="stringliteral">&quot;textPhase&quot;</span>,</div>
+<div class="line"><span class="lineno">   69</span>                <span class="stringliteral">&quot;textPhase2&quot;</span>,</div>
+<div class="line"><span class="lineno">   70</span>                <span class="stringliteral">&quot;textEnd&quot;</span></div>
+<div class="line"><span class="lineno">   71</span>            };</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceStat_8cs_source.html">SourceStat.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceStat.html">SourceStat</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

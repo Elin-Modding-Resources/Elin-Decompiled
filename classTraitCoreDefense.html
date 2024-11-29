@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitCoreDefense.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -666,6 +686,51 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCoreDefense_8cs_source.html#l00037">37</a> of file <a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="classZoneEventDefenseGame.html">ZoneEventDefenseGame</a> ev = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.GetEvent&lt;<a class="code hl_class" href="classZoneEventDefenseGame.html">ZoneEventDefenseGame</a>&gt;();</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (ev == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (ev.<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> % 5 != 0 &amp;&amp; !ev.<a class="code hl_variable" href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">retreated</a>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWarhorn&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                ev.<a class="code hl_function" href="classZoneEventDefenseGame.html#af46342b646766c1ab458f80dcd4a7d38">Horn_Next</a>();</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>            }, <span class="keyword">null</span>, 1);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (ev.<a class="code hl_property" href="classZoneEventDefenseGame.html#aa10e5c9847a181482a46d14fff899551">CanRetreat</a> &amp;&amp; !ev.<a class="code hl_variable" href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">retreated</a>)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actEvacDefense&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                ev.<a class="code hl_function" href="classZoneEventDefenseGame.html#a52ce3364c2a1b478339b2c93d2e58e3a">Horn_Retreat</a>();</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }, <span class="keyword">null</span>, 1);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (ev.<a class="code hl_property" href="classZoneEventDefenseGame.html#a53419b139c7b1ad82c248fdf54f44b34">CanCallAlly</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actCallAlly&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                ev.<a class="code hl_function" href="classZoneEventDefenseGame.html#aa991cb02751f0d532feb2fe3925a4747">Horn_Ally</a>();</div>
+<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>            }, <span class="keyword">null</span>, 1);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html"><div class="ttname"><a href="classZoneEventDefenseGame.html">ZoneEventDefenseGame</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00005">ZoneEventDefenseGame.cs:6</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_a52ce3364c2a1b478339b2c93d2e58e3a"><div class="ttname"><a href="classZoneEventDefenseGame.html#a52ce3364c2a1b478339b2c93d2e58e3a">ZoneEventDefenseGame.Horn_Retreat</a></div><div class="ttdeci">void Horn_Retreat()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00133">ZoneEventDefenseGame.cs:133</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_a53419b139c7b1ad82c248fdf54f44b34"><div class="ttname"><a href="classZoneEventDefenseGame.html#a53419b139c7b1ad82c248fdf54f44b34">ZoneEventDefenseGame.CanCallAlly</a></div><div class="ttdeci">bool CanCallAlly</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00023">ZoneEventDefenseGame.cs:24</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_aa10e5c9847a181482a46d14fff899551"><div class="ttname"><a href="classZoneEventDefenseGame.html#aa10e5c9847a181482a46d14fff899551">ZoneEventDefenseGame.CanRetreat</a></div><div class="ttdeci">bool CanRetreat</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00015">ZoneEventDefenseGame.cs:16</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_aa991cb02751f0d532feb2fe3925a4747"><div class="ttname"><a href="classZoneEventDefenseGame.html#aa991cb02751f0d532feb2fe3925a4747">ZoneEventDefenseGame.Horn_Ally</a></div><div class="ttdeci">void Horn_Ally()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00142">ZoneEventDefenseGame.cs:142</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_aaa2b13d35371e4e47103717c04f1b3f0"><div class="ttname"><a href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">ZoneEventDefenseGame.retreated</a></div><div class="ttdeci">bool retreated</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00184">ZoneEventDefenseGame.cs:184</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_ab66e74987e358a881f4edfd4df6b05e6"><div class="ttname"><a href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">ZoneEventDefenseGame.wave</a></div><div class="ttdeci">int wave</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00163">ZoneEventDefenseGame.cs:163</a></div></div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html_af46342b646766c1ab458f80dcd4a7d38"><div class="ttname"><a href="classZoneEventDefenseGame.html#af46342b646766c1ab458f80dcd4a7d38">ZoneEventDefenseGame.Horn_Next</a></div><div class="ttdeci">void Horn_Next()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00115">ZoneEventDefenseGame.cs:115</a></div></div>
+<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03858">Zone.cs:3858</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00024">ZoneEventDefenseGame.CanCallAlly</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00016">ZoneEventDefenseGame.CanRetreat</a>, <a class="el" href="Zone_8cs_source.html#l03858">Zone.events</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00142">ZoneEventDefenseGame.Horn_Ally()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00115">ZoneEventDefenseGame.Horn_Next()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00133">ZoneEventDefenseGame.Horn_Retreat()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00184">ZoneEventDefenseGame.retreated</a>, <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00163">ZoneEventDefenseGame.wave</a>.</p>
 
 </div>
 </div>
@@ -691,7 +756,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCoreDefense_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a20bb574cc480d20ee51ebdd66ba81b43" name="a20bb574cc480d20ee51ebdd66ba81b43"></a>
@@ -715,7 +786,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCoreDefense_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afc60370b27a9b742fd571f4915e4ca5e" name="afc60370b27a9b742fd571f4915e4ca5e"></a>
@@ -739,7 +816,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCoreDefense_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a3851f4f968c75de0aae62232384c78" name="a5a3851f4f968c75de0aae62232384c78"></a>
@@ -763,16 +846,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCoreDefense_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitCoreDefense_8cs_source.html">TraitCoreDefense.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitCoreDefense.html">TraitCoreDefense</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

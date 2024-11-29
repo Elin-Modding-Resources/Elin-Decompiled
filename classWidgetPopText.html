@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetPopText.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -348,6 +368,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00050">50</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        PopItemText popItemText = this.<a class="code hl_variable" href="classWidgetPopText.html#ac0f5c9e28662c551b284a50d0eac69c3">pop</a>.PopText(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, sprite ?? this.<a class="code hl_variable" href="classWidgetPopText.html#a457b4130c96f39cb1c124e59e175d510">icons</a>[0], <span class="stringliteral">&quot;PopNotification&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), 0f);</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (fontColor != FontColor.Default)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            popItemText.text.color = SkinManager.Instance.skinDark.Colors.GetTextColor(fontColor);</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassWidgetPopText_html_a457b4130c96f39cb1c124e59e175d510"><div class="ttname"><a href="classWidgetPopText.html#a457b4130c96f39cb1c124e59e175d510">WidgetPopText.icons</a></div><div class="ttdeci">Sprite[] icons</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00063">WidgetPopText.cs:63</a></div></div>
+<div class="ttc" id="aclassWidgetPopText_html_ac0f5c9e28662c551b284a50d0eac69c3"><div class="ttname"><a href="classWidgetPopText.html#ac0f5c9e28662c551b284a50d0eac69c3">WidgetPopText.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00061">WidgetPopText.cs:61</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00063">icons</a>, and <a class="el" href="WidgetPopText_8cs_source.html#l00061">pop</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00029">Say()</a>.</p>
 
 </div>
 </div>
@@ -386,6 +421,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00038">38</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        PopItemText popItemText = this.<a class="code hl_variable" href="classWidgetPopText.html#ac0f5c9e28662c551b284a50d0eac69c3">pop</a>.PopText(<span class="stringliteral">&quot;notifyAddThing&quot;</span>.lang(t.<a class="code hl_function" href="classThing.html#abf919b04ba952974c2778a7f50ab647c">GetName</a>(<a class="code hl_enumeration" href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a>.Full, num), t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="keyword">null</span>, <span class="stringliteral">&quot;PopNotification&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), 0f);</div>
+<div class="line"><span class="lineno">   41</span>        t.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(popItemText.image);</div>
+<div class="line"><span class="lineno">   42</span>        popItemText.image.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aNameStyle_8cs_html_abf34abdeef335d7689e17246b418a71a"><div class="ttname"><a href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a></div><div class="ttdeci">NameStyle</div><div class="ttdef"><b>Definition:</b> <a href="NameStyle_8cs_source.html#l00003">NameStyle.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05467">Card.cs:5467</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
+<div class="ttc" id="aclassThing_html_abf919b04ba952974c2778a7f50ab647c"><div class="ttname"><a href="classThing.html#abf919b04ba952974c2778a7f50ab647c">Thing.GetName</a></div><div class="ttdeci">override string GetName(NameStyle style, int _num=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00479">Thing.cs:479</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Thing_8cs_source.html#l00479">Thing.GetName()</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00061">pop</a>, and <a class="el" href="Card_8cs_source.html#l05467">Card.SetImage()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00011">SayPick()</a>.</p>
 
 </div>
 </div>
@@ -436,6 +484,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00045">45</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_function" href="classWidgetPopText.html#a6e29c3e84b474c58fd5590d92975be0f">Say</a>(name + <span class="stringliteral">&quot; &quot;</span> + ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + a.ToString(), negative ? FontColor.Bad : FontColor.Default, sprite);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassWidgetPopText_html"><div class="ttname"><a href="classWidgetPopText.html">WidgetPopText</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00004">WidgetPopText.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetPopText_html_a6e29c3e84b474c58fd5590d92975be0f"><div class="ttname"><a href="classWidgetPopText.html#a6e29c3e84b474c58fd5590d92975be0f">WidgetPopText.Say</a></div><div class="ttdeci">static void Say(string text, FontColor fontColor=FontColor.Default, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00029">WidgetPopText.cs:29</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopText_8cs_source.html#l00029">Say()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00020">SayValue()</a>.</p>
 
 </div>
 </div>
@@ -465,7 +522,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        WidgetPopText.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6e29c3e84b474c58fd5590d92975be0f" name="a6e29c3e84b474c58fd5590d92975be0f"></a>
@@ -509,6 +569,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>.<a class="code hl_function" href="classWidgetPopText.html#a556c7fb04fa13fe11318d00e613c6435">_Say</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, fontColor, sprite);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassWidgetPopText_html_a556c7fb04fa13fe11318d00e613c6435"><div class="ttname"><a href="classWidgetPopText.html#a556c7fb04fa13fe11318d00e613c6435">WidgetPopText._Say</a></div><div class="ttdeci">void _Say(string text, FontColor fontColor=FontColor.Default, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00050">WidgetPopText.cs:50</a></div></div>
+<div class="ttc" id="aclassWidgetPopText_html_ac956128c39fc539f244983f0e5d637c7"><div class="ttname"><a href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">WidgetPopText.Instance</a></div><div class="ttdeci">static WidgetPopText Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00059">WidgetPopText.cs:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopText_8cs_source.html#l00050">_Say()</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00059">Instance</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00045">_SayValue()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01096">FactionBranch.AddFeat()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00092">ResearchManager.AddPlan()</a>, <a class="el" href="PolicyManager_8cs_source.html#l00022">PolicyManager.AddPolicy()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00105">ResearchManager.CompletePlan()</a>, <a class="el" href="Chara_8cs_source.html#l04750">Chara.Die()</a>, <a class="el" href="Expedition_8cs_source.html#l00088">Expedition.End()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00082">ElementContainerCard.OnLevelUp()</a>, <a class="el" href="ElementContainerZone_8cs_source.html#l00011">ElementContainerZone.OnLevelUp()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00559">FactionBranch.ReceivePackages()</a>, <a class="el" href="Expedition_8cs_source.html#l00066">Expedition.Start()</a>, and <a class="el" href="Map_8cs_source.html#l01172">Map.TryShatter()</a>.</p>
 
 </div>
 </div>
@@ -547,6 +620,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>.<a class="code hl_function" href="classWidgetPopText.html#af0df425269ee14bc25405829931ee377">_SayPick</a>(t, num);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassWidgetPopText_html_af0df425269ee14bc25405829931ee377"><div class="ttname"><a href="classWidgetPopText.html#af0df425269ee14bc25405829931ee377">WidgetPopText._SayPick</a></div><div class="ttdeci">void _SayPick(Thing t, int num)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00038">WidgetPopText.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopText_8cs_source.html#l00038">_SayPick()</a>, and <a class="el" href="WidgetPopText_8cs_source.html#l00059">Instance</a>.</p>
 
 </div>
 </div>
@@ -597,6 +680,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00020">20</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_variable" href="classWidgetPopText.html#ac956128c39fc539f244983f0e5d637c7">Instance</a>.<a class="code hl_function" href="classWidgetPopText.html#ac5e1e6cb75872f9960bb0870578252e8">_SayValue</a>(name, a, negative, sprite);</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassWidgetPopText_html_ac5e1e6cb75872f9960bb0870578252e8"><div class="ttname"><a href="classWidgetPopText.html#ac5e1e6cb75872f9960bb0870578252e8">WidgetPopText._SayValue</a></div><div class="ttdeci">void _SayValue(string name, int a, bool negative=false, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00045">WidgetPopText.cs:45</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopText_8cs_source.html#l00045">_SayValue()</a>, and <a class="el" href="WidgetPopText_8cs_source.html#l00059">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HomeResource_8cs_source.html#l00011">HomeResource.Mod()</a>.</p>
 
 </div>
 </div>
@@ -614,6 +709,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00063">63</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00050">_Say()</a>.</p>
 
 </div>
 </div>
@@ -639,6 +736,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00059">59</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00029">Say()</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00011">SayPick()</a>, and <a class="el" href="WidgetPopText_8cs_source.html#l00020">SayValue()</a>.</p>
+
 </div>
 </div>
 <a id="ac0f5c9e28662c551b284a50d0eac69c3" name="ac0f5c9e28662c551b284a50d0eac69c3"></a>
@@ -655,15 +754,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopText_8cs_source.html#l00061">61</a> of file <a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00050">_Say()</a>, and <a class="el" href="WidgetPopText_8cs_source.html#l00038">_SayPick()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetPopText_8cs_source.html">WidgetPopText.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetPopText.html">WidgetPopText</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

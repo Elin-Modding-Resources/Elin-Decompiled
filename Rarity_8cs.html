@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Rarity_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -119,13 +135,33 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Rarity_8cs_source.html#l00003">3</a> of file <a class="el" href="Rarity_8cs_source.html">Rarity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a> = -999,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9a88a95cae2b773e5134a06d74dde1aa">Crude</a> = -1,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64dbb87794fbe7f587582b27d08ace2b">Superior</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9461cd71b44420aa1d0e6487f1b7bb60">Legendary</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9cce556535c54f0a868908310f75a92e">Mythical</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b">Artifact</a></div>
+<div class="line"><span class="lineno">   12</span>}</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Rarity.Random</a></div><div class="ttdeci">@ Random</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a64dbb87794fbe7f587582b27d08ace2b"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64dbb87794fbe7f587582b27d08ace2b">Rarity.Superior</a></div><div class="ttdeci">@ Superior</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a9461cd71b44420aa1d0e6487f1b7bb60"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9461cd71b44420aa1d0e6487f1b7bb60">Rarity.Legendary</a></div><div class="ttdeci">@ Legendary</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a960b44c579bc2f6818d2daaf9e4c16f0"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a960b44c579bc2f6818d2daaf9e4c16f0">Rarity.Normal</a></div><div class="ttdeci">@ Normal</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a9a88a95cae2b773e5134a06d74dde1aa"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9a88a95cae2b773e5134a06d74dde1aa">Rarity.Crude</a></div><div class="ttdeci">@ Crude</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a9cce556535c54f0a868908310f75a92e"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9cce556535c54f0a868908310f75a92e">Rarity.Mythical</a></div><div class="ttdeci">@ Mythical</div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b">Rarity.Artifact</a></div><div class="ttdeci">@ Artifact</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="Rarity_8cs.html">Rarity.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Eat.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -684,7 +704,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a0fc638accd60819daab652193aad04ca">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00020">20</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abb16725cd6cdd3efaa1c6fbe4b98883d" name="abb16725cd6cdd3efaa1c6fbe4b98883d"></a>
@@ -712,6 +735,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> c != <span class="keyword">null</span> &amp;&amp; c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a828119de5defe5508d1552e59bcbc5d1">CanEat</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassTrait_html_a828119de5defe5508d1552e59bcbc5d1"><div class="ttname"><a href="classTrait.html#a828119de5defe5508d1552e59bcbc5d1">Trait.CanEat</a></div><div class="ttdeci">virtual bool CanEat(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01159">Trait.cs:1159</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l01159">Trait.CanEat()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Eat_8cs_source.html#l00037">Run()</a>.</p>
 
 </div>
 </div>
@@ -741,7 +774,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a7f1aeb9df50f4c1858e1eada2105f661">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00033">33</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aae37e615d1212e9383c9ea14bdda7bc8" name="aae37e615d1212e9383c9ea14bdda7bc8"></a>
@@ -770,6 +805,149 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00037">37</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a> != <span class="keyword">null</span> &amp;&amp; (this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>() == <span class="keyword">this</span>.owner || <span class="keyword">this</span>.target.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a> == <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#a553135218ff65af6604da6ac62df0db4">HoldCard</a>(this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>, 1);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            yield <span class="keywordflow">return</span> base.DoGrab(this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>, 1, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d">IsValidTarget</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>))</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                yield <span class="keywordflow">return</span> base.DoGrab&lt;<a class="code hl_class" href="classTraitFood.html">TraitFood</a>&gt;();</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d">IsValidTarget</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>))</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   55</span>                }</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Eat.html#ab690b73b45a79070cc3064497a145f7e">cook</a>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                yield <span class="keywordflow">return</span> base.Do(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Cook.html">AI_Cook</a>(), <span class="keyword">new</span> Func&lt;AIAct.Status&gt;(base.KeepRunning));</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d">IsValidTarget</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>))</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   63</span>                }</div>
+<div class="line"><span class="lineno">   64</span>                yield <span class="keywordflow">return</span> base.DoGotoSpot&lt;<a class="code hl_class" href="classTraitHearth.html">TraitHearth</a>&gt;(<span class="keyword">new</span> Func&lt;<a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>&gt;(base.KeepRunning), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        this.target = this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a> &amp;&amp; !<span class="keyword">this</span>.owner.IsPCParty &amp;&amp; <span class="keyword">this</span>.owner.memberType != <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Livestock &amp;&amp; !<span class="keyword">this</span>.owner.noMove)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            yield <span class="keywordflow">return</span> base.DoGotoSpot&lt;<a class="code hl_class" href="classTraitSpotDining.html">TraitSpotDining</a>&gt;(<span class="keyword">new</span> Func&lt;<a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>&gt;(base.KeepRunning), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">int</span> max = (this.target.SelfWeight &lt; 100) ? 1 : (2 + (<span class="keywordtype">int</span>)Mathf.Sqrt((<span class="keywordtype">float</span>)(this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_property" href="classCard.html#a4b99bf0f5d0c01206b0f3d047593e684">SelfWeight</a> * 2 / 3)));</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">int</span> turn = 0;</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> seq = <span class="keyword">new</span> <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a></div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            cancelWhenMoved = <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">   81</span>            canProgress = (() =&gt; this.<a class="code hl_function" href="classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d">IsValidTarget</a>(this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>) &amp;&amp; this.owner.held == this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>),</div>
+<div class="line"><span class="lineno">   82</span>            onProgressBegin = delegate()</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;eat_start&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_function" href="classCard.html#a09ed12b45211014fea5832324d52b4fe">GetName</a>(<a class="code hl_enumeration" href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a>.Full, 1), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   85</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;eat&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   86</span>            },</div>
+<div class="line"><span class="lineno">   87</span>            onProgress = delegate(<a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> p)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Eat, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordtype">int</span> turn;</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">if</span> (turn == 1 &amp;&amp; this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <span class="keyword">this</span>.owner.hunger.GetPhase() == 0 &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a055a45a20d32da70ceaca3cf0701baae">godFood</a>)</div>
+<div class="line"><span class="lineno">   92</span>                {</div>
+<div class="line"><span class="lineno">   93</span>                    this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;eat_full&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   94</span>                    p.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   95</span>                }</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (turn == 1)</div>
+<div class="line"><span class="lineno">   97</span>                {</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
+<div class="line"><span class="lineno">   99</span>                    {</div>
+<div class="line"><span class="lineno">  100</span>                        <span class="keywordflow">if</span> (!element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.foodEffect.IsEmpty())</div>
+<div class="line"><span class="lineno">  101</span>                        {</div>
+<div class="line"><span class="lineno">  102</span>                            <span class="keywordtype">string</span>[] foodEffect = element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.foodEffect;</div>
+<div class="line"><span class="lineno">  103</span>                            <span class="keywordflow">if</span> (foodEffect[0] == <span class="stringliteral">&quot;poison&quot;</span> || foodEffect[0] == <span class="stringliteral">&quot;love&quot;</span>)</div>
+<div class="line"><span class="lineno">  104</span>                            {</div>
+<div class="line"><span class="lineno">  105</span>                                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;eatWeird&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  106</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  107</span>                            }</div>
+<div class="line"><span class="lineno">  108</span>                        }</div>
+<div class="line"><span class="lineno">  109</span>                    }</div>
+<div class="line"><span class="lineno">  110</span>                    <a class="code hl_class" href="classCardRow.html">CardRow</a> refCard = this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_property" href="classCard.html#a216cce2dd2df3642de35aeb45fb06593">refCard</a>;</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (refCard != <span class="keyword">null</span> &amp;&amp; refCard.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a> == <span class="stringliteral">&quot;mammoth&quot;</span>)</div>
+<div class="line"><span class="lineno">  112</span>                    {</div>
+<div class="line"><span class="lineno">  113</span>                        EClass.player.forceTalk = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  114</span>                        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;eatammoth&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  115</span>                    }</div>
+<div class="line"><span class="lineno">  116</span>                }</div>
+<div class="line"><span class="lineno">  117</span>                turn = turn;</div>
+<div class="line"><span class="lineno">  118</span>                turn++;</div>
+<div class="line"><span class="lineno">  119</span>            },</div>
+<div class="line"><span class="lineno">  120</span>            onProgressComplete = delegate()</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <span class="keyword">this</span>.owner.hunger.GetPhase() == 0 &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a055a45a20d32da70ceaca3cf0701baae">godFood</a>)</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;eat_full&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  126</span>                }</div>
+<div class="line"><span class="lineno">  127</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;eat_end&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_function" href="classCard.html#a09ed12b45211014fea5832324d52b4fe">GetName</a>(<a class="code hl_enumeration" href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a>.Full, 1), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  128</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.happy, 0f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_class" href="classFoodEffect.html">FoodEffect</a>.<a class="code hl_function" href="classFoodEffect.html#a65b400d17658cdb8b6a9f6d7291975cd">Proc</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>);</div>
+<div class="line"><span class="lineno">  130</span>                this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }.SetDuration(max, 5);</div>
+<div class="line"><span class="lineno">  133</span>        yield <span class="keywordflow">return</span> base.Do(seq, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  134</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00003">Emo.cs:4</a></div></div>
+<div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00003">FactionMemberType.cs:4</a></div></div>
+<div class="ttc" id="aNameStyle_8cs_html_abf34abdeef335d7689e17246b418a71a"><div class="ttname"><a href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a></div><div class="ttdeci">NameStyle</div><div class="ttdef"><b>Definition:</b> <a href="NameStyle_8cs_source.html#l00003">NameStyle.cs:4</a></div></div>
+<div class="ttc" id="aclassAIAct_html"><div class="ttname"><a href="classAIAct.html">AIAct</a></div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00005">AIAct.cs:6</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00727">AIAct.cs:728</a></div></div>
+<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
+<div class="ttc" id="aclassAI__Cook_html"><div class="ttname"><a href="classAI__Cook.html">AI_Cook</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Cook_8cs_source.html#l00004">AI_Cook.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Eat_html_ab690b73b45a79070cc3064497a145f7e"><div class="ttname"><a href="classAI__Eat.html#ab690b73b45a79070cc3064497a145f7e">AI_Eat.cook</a></div><div class="ttdeci">bool cook</div><div class="ttdef"><b>Definition:</b> <a href="AI__Eat_8cs_source.html#l00139">AI_Eat.cs:139</a></div></div>
+<div class="ttc" id="aclassAI__Eat_html_abb16725cd6cdd3efaa1c6fbe4b98883d"><div class="ttname"><a href="classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d">AI_Eat.IsValidTarget</a></div><div class="ttdeci">bool IsValidTarget(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="AI__Eat_8cs_source.html#l00007">AI_Eat.cs:7</a></div></div>
+<div class="ttc" id="aclassAI__Eat_html_ae21cfc17cad4b3fe77805c23c6d35a27"><div class="ttname"><a href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">AI_Eat.target</a></div><div class="ttdeci">Card target</div><div class="ttdef"><b>Definition:</b> <a href="AI__Eat_8cs_source.html#l00137">AI_Eat.cs:137</a></div></div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
+<div class="ttc" id="aclassCard_html_a09ed12b45211014fea5832324d52b4fe"><div class="ttname"><a href="classCard.html#a09ed12b45211014fea5832324d52b4fe">Card.GetName</a></div><div class="ttdeci">virtual string GetName(NameStyle style, int num=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02195">Card.cs:2195</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a216cce2dd2df3642de35aeb45fb06593"><div class="ttname"><a href="classCard.html#a216cce2dd2df3642de35aeb45fb06593">Card.refCard</a></div><div class="ttdeci">CardRow refCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01787">Card.cs:1788</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a4b99bf0f5d0c01206b0f3d047593e684"><div class="ttname"><a href="classCard.html#a4b99bf0f5d0c01206b0f3d047593e684">Card.SelfWeight</a></div><div class="ttdeci">virtual int SelfWeight</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01914">Card.cs:1915</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06060">Card.cs:6060</a></div></div>
+<div class="ttc" id="aclassCard_html_a5fdd419eccae9c9ab3af2c954091692c"><div class="ttname"><a href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">Card.parent</a></div><div class="ttdeci">ICardParent parent</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07300">Card.cs:7300</a></div></div>
+<div class="ttc" id="aclassCard_html_a9381cbefabfa31e73a65c0046c3256d9"><div class="ttname"><a href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">Card.ShowEmo</a></div><div class="ttdeci">void ShowEmo(Emo _emo=Emo.none, float duration=0f, bool skipSame=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05482">Card.cs:5482</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02003">Card.cs:2004</a></div></div>
+<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03401">Card.cs:3401</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1b2bd10695eb7422474797d6dbe222f"><div class="ttname"><a href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">Card.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05539">Card.cs:5539</a></div></div>
+<div class="ttc" id="aclassCard_html_ae8e34c12f7fdaf3c6b3a50e27e4e3090"><div class="ttname"><a href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">Card.ModNum</a></div><div class="ttdeci">void ModNum(int a, bool notify=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03487">Card.cs:3487</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassChara_html_a1a07bdf34edac20229f9c2ac895e83f8"><div class="ttname"><a href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">Chara.held</a></div><div class="ttdeci">Card held</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09386">Chara.cs:9386</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a553135218ff65af6604da6ac62df0db4"><div class="ttname"><a href="classChara.html#a553135218ff65af6604da6ac62df0db4">Chara.HoldCard</a></div><div class="ttdeci">void HoldCard(Card t, int num=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03904">Chara.cs:3904</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a055a45a20d32da70ceaca3cf0701baae"><div class="ttname"><a href="classCoreDebug.html#a055a45a20d32da70ceaca3cf0701baae">CoreDebug.godFood</a></div><div class="ttdeci">bool godFood</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02196">CoreDebug.cs:2196</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00887">ElementContainer.cs:887</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassFoodEffect_html"><div class="ttname"><a href="classFoodEffect.html">FoodEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="FoodEffect_8cs_source.html#l00006">FoodEffect.cs:7</a></div></div>
+<div class="ttc" id="aclassFoodEffect_html_a65b400d17658cdb8b6a9f6d7291975cd"><div class="ttname"><a href="classFoodEffect.html#a65b400d17658cdb8b6a9f6d7291975cd">FoodEffect.Proc</a></div><div class="ttdeci">static void Proc(Chara c, Thing food)</div><div class="ttdef"><b>Definition:</b> <a href="FoodEffect_8cs_source.html#l00044">FoodEffect.cs:44</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html"><div class="ttname"><a href="classProgress__Custom.html">Progress_Custom</a></div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00003">Progress_Custom.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitFood_html"><div class="ttname"><a href="classTraitFood.html">TraitFood</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFood_8cs_source.html#l00003">TraitFood.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitHearth_html"><div class="ttname"><a href="classTraitHearth.html">TraitHearth</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00003">TraitHearth.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitSpotDining_html"><div class="ttname"><a href="classTraitSpotDining.html">TraitSpotDining</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpotDining_8cs_source.html#l00003">TraitSpotDining.cs:4</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="AI__Eat_8cs_source.html#l00139">cook</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="ElementContainer_8cs_source.html#l00887">ElementContainer.dict</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02195">Card.GetName()</a>, <a class="el" href="Card_8cs_source.html#l03401">Card.GetRootCard()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02196">CoreDebug.godFood</a>, <a class="el" href="Chara_8cs_source.html#l09386">Chara.held</a>, <a class="el" href="Chara_8cs_source.html#l03904">Chara.HoldCard()</a>, <a class="el" href="CardRow_8cs_source.html#l00123">CardRow.id</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="AI__Eat_8cs_source.html#l00007">IsValidTarget()</a>, <a class="el" href="Card_8cs_source.html#l03487">Card.ModNum()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l07300">Card.parent</a>, <a class="el" href="Card_8cs_source.html#l05539">Card.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00044">FoodEffect.Proc()</a>, <a class="el" href="Card_8cs_source.html#l01788">Card.refCard</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l01915">Card.SelfWeight</a>, <a class="el" href="Card_8cs_source.html#l05482">Card.ShowEmo()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>, <a class="el" href="AI__Eat_8cs_source.html#l00137">target</a>, and <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>.</p>
 
 </div>
 </div>
@@ -788,6 +966,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00139">139</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__Eat_8cs_source.html#l00037">Run()</a>.</p>
+
 </div>
 </div>
 <a id="ae21cfc17cad4b3fe77805c23c6d35a27" name="ae21cfc17cad4b3fe77805c23c6d35a27"></a>
@@ -803,6 +983,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00137">137</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Eat_8cs_source.html#l00037">Run()</a>.</p>
 
 </div>
 </div>
@@ -828,7 +1010,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00025">25</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> this.target != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27">target</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassCard_html_a26108155cef3dd565735e6d8e3bc6322"><div class="ttname"><a href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">Card.isNPCProperty</a></div><div class="ttdeci">bool isNPCProperty</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00487">Card.cs:488</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfde6bf6461e7ffac35078af83ee4dc9" name="acfde6bf6461e7ffac35078af83ee4dc9"></a>
@@ -852,16 +1041,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Eat_8cs_source.html#l00012">12</a> of file <a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Eat_8cs_source.html">AI_Eat.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Eat.html">AI_Eat</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

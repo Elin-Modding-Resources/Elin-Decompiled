@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Paint.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -672,6 +692,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Paint_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__Paint_8cs_source.html#l00012">Run()</a>.</p>
 
 </div>
 </div>
@@ -701,6 +726,58 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Paint_8cs_source.html#l00012">12</a> of file <a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">bool</span> isCamera = this.painter.PaintType == <a class="code hl_class" href="classTraitPainter.html">TraitPainter</a>.<a class="code hl_enumeration" href="classTraitPainter.html#a804454fa49e9e95eb60096914c11a747">Type</a>.Camera;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Paint.html#a12849eb0a5c1fa3befaa5519b55520c2">painter</a>.<a class="code hl_property" href="classTrait.html#a802f79d608e7d42e6e9d9ec36b9ea1cd">ExistsOnMap</a>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(this.<a class="code hl_variable" href="classAI__Paint.html#a12849eb0a5c1fa3befaa5519b55520c2">painter</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> progress_Custom = <span class="keyword">new</span> <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a>();</div>
+<div class="line"><span class="lineno">   20</span>        progress_Custom.canProgress = (() =&gt; this.<a class="code hl_function" href="classAI__Paint.html#a07475b456272f69679aa6672721f2420">IsValidTarget</a>());</div>
+<div class="line"><span class="lineno">   21</span>        progress_Custom.onProgressBegin = delegate()</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>        };</div>
+<div class="line"><span class="lineno">   24</span>        progress_Custom.onProgress = delegate(<a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> p)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(isCamera ? <span class="stringliteral">&quot;camera&quot;</span> : this.<a class="code hl_variable" href="classAI__Paint.html#a12849eb0a5c1fa3befaa5519b55520c2">painter</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.GetSoundImpact(<span class="keyword">null</span>), 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   27</span>            this.<a class="code hl_variable" href="classAI__Paint.html#a12849eb0a5c1fa3befaa5519b55520c2">painter</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver, <span class="keywordflow">default</span>(Vector3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   28</span>        };</div>
+<div class="line"><span class="lineno">   29</span>        progress_Custom.onProgressComplete = delegate()</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classAI__Paint.html#a4097900fb5141a2722685e81e8b407cb">canvas</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a1ea44a484859724ae36b61a781fe1774">Split</a>(1);</div>
+<div class="line"><span class="lineno">   32</span>            thing.c_textureData = this.<a class="code hl_variable" href="classAI__Paint.html#a379e9a5de03e509e5e3331995d68d731">data</a>;</div>
+<div class="line"><span class="lineno">   33</span>            thing.isModified = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a69eb825b1260c4790ccd42913572c492">TryHoldCard</a>(thing, -1, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   35</span>        };</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> seq = progress_Custom.<a class="code hl_function" href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">SetDuration</a>(isCamera ? 2 : 10, 2);</div>
+<div class="line"><span class="lineno">   37</span>        yield <span class="keywordflow">return</span> base.<a class="code hl_function" href="classAIAct.html#a50e701a7456f00e7e0eeb70a5e7b98fc">Do</a>(seq, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   38</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a50e701a7456f00e7e0eeb70a5e7b98fc"><div class="ttname"><a href="classAIAct.html#a50e701a7456f00e7e0eeb70a5e7b98fc">AIAct.Do</a></div><div class="ttdeci">AIAct.Status Do(AIAct _seq, Func&lt; AIAct.Status &gt; _onChildFail=null)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00503">AIAct.cs:503</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAI__Paint_html_a07475b456272f69679aa6672721f2420"><div class="ttname"><a href="classAI__Paint.html#a07475b456272f69679aa6672721f2420">AI_Paint.IsValidTarget</a></div><div class="ttdeci">bool IsValidTarget()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Paint_8cs_source.html#l00007">AI_Paint.cs:7</a></div></div>
+<div class="ttc" id="aclassAI__Paint_html_a12849eb0a5c1fa3befaa5519b55520c2"><div class="ttname"><a href="classAI__Paint.html#a12849eb0a5c1fa3befaa5519b55520c2">AI_Paint.painter</a></div><div class="ttdeci">TraitPainter painter</div><div class="ttdef"><b>Definition:</b> <a href="AI__Paint_8cs_source.html#l00041">AI_Paint.cs:41</a></div></div>
+<div class="ttc" id="aclassAI__Paint_html_a379e9a5de03e509e5e3331995d68d731"><div class="ttname"><a href="classAI__Paint.html#a379e9a5de03e509e5e3331995d68d731">AI_Paint.data</a></div><div class="ttdeci">byte[] data</div><div class="ttdef"><b>Definition:</b> <a href="AI__Paint_8cs_source.html#l00045">AI_Paint.cs:45</a></div></div>
+<div class="ttc" id="aclassAI__Paint_html_a4097900fb5141a2722685e81e8b407cb"><div class="ttname"><a href="classAI__Paint.html#a4097900fb5141a2722685e81e8b407cb">AI_Paint.canvas</a></div><div class="ttdeci">TraitCanvas canvas</div><div class="ttdef"><b>Definition:</b> <a href="AI__Paint_8cs_source.html#l00043">AI_Paint.cs:43</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a06d351f92c327d70f1ae22553c1d0ace"><div class="ttname"><a href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">CardRenderer.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00442">CardRenderer.cs:442</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ea44a484859724ae36b61a781fe1774"><div class="ttname"><a href="classCard.html#a1ea44a484859724ae36b61a781fe1774">Card.Split</a></div><div class="ttdeci">Thing Split(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03456">Card.cs:3456</a></div></div>
+<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01943">Card.cs:1944</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassChara_html_a69eb825b1260c4790ccd42913572c492"><div class="ttname"><a href="classChara.html#a69eb825b1260c4790ccd42913572c492">Chara.TryHoldCard</a></div><div class="ttdeci">bool TryHoldCard(Card t, int num=-1, bool pickHeld=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03882">Chara.cs:3882</a></div></div>
+<div class="ttc" id="aclassChara_html_adfc4e346a21e435fbd52582af3788692"><div class="ttname"><a href="classChara.html#adfc4e346a21e435fbd52582af3788692">Chara.LookAt</a></div><div class="ttdeci">override void LookAt(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03048">Chara.cs:3048</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html"><div class="ttname"><a href="classProgress__Custom.html">Progress_Custom</a></div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00003">Progress_Custom.cs:4</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html_a9c399dedace1a2eb051b2aadc687ce06"><div class="ttname"><a href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">Progress_Custom.SetDuration</a></div><div class="ttdeci">Progress_Custom SetDuration(int max, int _interval=2)</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.cs:99</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html"><div class="ttname"><a href="classTraitPainter.html">TraitPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00004">TraitPainter.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html_a804454fa49e9e95eb60096914c11a747"><div class="ttname"><a href="classTraitPainter.html#a804454fa49e9e95eb60096914c11a747">TraitPainter.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00035">TraitPainter.cs:36</a></div></div>
+<div class="ttc" id="aclassTrait_html_a802f79d608e7d42e6e9d9ec36b9ea1cd"><div class="ttname"><a href="classTrait.html#a802f79d608e7d42e6e9d9ec36b9ea1cd">Trait.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00765">Trait.cs:766</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AI__Paint_8cs_source.html#l00043">canvas</a>, <a class="el" href="AI__Paint_8cs_source.html#l00045">data</a>, <a class="el" href="AIAct_8cs_source.html#l00503">AIAct.Do()</a>, <a class="el" href="Trait_8cs_source.html#l00766">Trait.ExistsOnMap</a>, <a class="el" href="AI__Paint_8cs_source.html#l00007">IsValidTarget()</a>, <a class="el" href="Chara_8cs_source.html#l03048">Chara.LookAt()</a>, <a class="el" href="Card_8cs_source.html#l01944">Card.material</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="AI__Paint_8cs_source.html#l00041">painter</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="CardRenderer_8cs_source.html#l00442">CardRenderer.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.SetDuration()</a>, <a class="el" href="Card_8cs_source.html#l03456">Card.Split()</a>, and <a class="el" href="Chara_8cs_source.html#l03882">Chara.TryHoldCard()</a>.</p>
 
 </div>
 </div>
@@ -719,6 +796,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Paint_8cs_source.html#l00043">43</a> of file <a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__Paint_8cs_source.html#l00012">Run()</a>.</p>
+
 </div>
 </div>
 <a id="a379e9a5de03e509e5e3331995d68d731" name="a379e9a5de03e509e5e3331995d68d731"></a>
@@ -734,6 +813,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Paint_8cs_source.html#l00045">45</a> of file <a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Paint_8cs_source.html#l00012">Run()</a>.</p>
 
 </div>
 </div>
@@ -751,15 +832,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Paint_8cs_source.html#l00041">41</a> of file <a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__Paint_8cs_source.html#l00012">Run()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Paint_8cs_source.html">AI_Paint.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Paint.html">AI_Paint</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

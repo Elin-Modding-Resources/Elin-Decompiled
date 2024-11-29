@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGameIO.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -235,6 +255,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00069">69</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b">pathTemp</a>);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            DirectoryInfo[] directories = directoryInfo.GetDirectories();</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; directories.Length; i++)</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                directories[i].Delete(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            FileInfo[] files = directoryInfo.GetFiles();</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; files.Length; i++)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                files[i].Delete();</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aclassGameIO_html"><div class="ttname"><a href="classGameIO.html">GameIO</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00009">GameIO.cs:10</a></div></div>
+<div class="ttc" id="aclassGameIO_html_aef236f0db1092bfdb7867749f09f9e3b"><div class="ttname"><a href="classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b">GameIO.pathTemp</a></div><div class="ttdeci">static string pathTemp</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00035">GameIO.cs:36</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00036">pathTemp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00147">LoadGame()</a>, and <a class="el" href="GameIO_8cs_source.html#l00087">SaveGame()</a>.</p>
 
 </div>
 </div>
@@ -262,6 +304,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00260">260</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>    {</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a>).GetDirectories())</div>
+<div class="line"><span class="lineno">  263</span>        {</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (directoryInfo.Name != <span class="stringliteral">&quot;Backup&quot;</span>)</div>
+<div class="line"><span class="lineno">  265</span>            {</div>
+<div class="line"><span class="lineno">  266</span>                DirectoryInfo directoryInfo2 = directoryInfo;</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">if</span> (!File.Exists(((directoryInfo2 != <span class="keyword">null</span>) ? directoryInfo2.ToString() : <span class="keyword">null</span>) + <span class="stringliteral">&quot;/game.txt&quot;</span>))</div>
+<div class="line"><span class="lineno">  268</span>                {</div>
+<div class="line"><span class="lineno">  269</span>                    directoryInfo.Delete(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  270</span>                }</div>
+<div class="line"><span class="lineno">  271</span>            }</div>
+<div class="line"><span class="lineno">  272</span>        }</div>
+<div class="line"><span class="lineno">  273</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_abdddfbd6d6dfdf14c1c1846b61a7e6b5"><div class="ttname"><a href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">GameIO.pathSaveRoot</a></div><div class="ttdeci">static string pathSaveRoot</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00019">GameIO.cs:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00020">pathSaveRoot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00396">Core.OnApplicationQuit()</a>.</p>
 
 </div>
 </div>
@@ -300,6 +360,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00183">183</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            directoryInfo.Delete(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (deleteBackup)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            directoryInfo = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3b6ca166437e1f0b3eddb69766c503c4">pathBackup</a> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                directoryInfo.Delete(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  200</span>            }</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_a3b6ca166437e1f0b3eddb69766c503c4"><div class="ttname"><a href="classGameIO.html#a3b6ca166437e1f0b3eddb69766c503c4">GameIO.pathBackup</a></div><div class="ttdeci">static string pathBackup</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00011">GameIO.cs:12</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00012">pathBackup</a>, and <a class="el" href="GameIO_8cs_source.html#l00020">pathSaveRoot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -328,6 +412,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00171">171</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> File.Exists(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a>,</div>
+<div class="line"><span class="lineno">  176</span>            <a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a5863738013b90cbe2e863df446667210">id</a>,</div>
+<div class="line"><span class="lineno">  177</span>            <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  178</span>            id,</div>
+<div class="line"><span class="lineno">  179</span>            <span class="stringliteral">&quot;.txt&quot;</span></div>
+<div class="line"><span class="lineno">  180</span>        }));</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00008">Game.cs:9</a></div></div>
+<div class="ttc" id="aclassGame_html_a5863738013b90cbe2e863df446667210"><div class="ttname"><a href="classGame.html#a5863738013b90cbe2e863df446667210">Game.id</a></div><div class="ttdeci">static string id</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00782">Game.cs:782</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00782">Game.id</a>, and <a class="el" href="GameIO_8cs_source.html#l00020">pathSaveRoot</a>.</p>
 
 </div>
 </div>
@@ -366,6 +464,56 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00216">216</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>    {</div>
+<div class="line"><span class="lineno">  218</span>        List&lt;GameIndex&gt; list = <span class="keyword">new</span> List&lt;GameIndex&gt;();</div>
+<div class="line"><span class="lineno">  219</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (!directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo2 <span class="keywordflow">in</span> directoryInfo.GetDirectories())</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            DirectoryInfo directoryInfo3 = directoryInfo2;</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (File.Exists(((directoryInfo3 != <span class="keyword">null</span>) ? directoryInfo3.ToString() : <span class="keyword">null</span>) + <span class="stringliteral">&quot;/index.txt&quot;</span>))</div>
+<div class="line"><span class="lineno">  228</span>            {</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  230</span>                {</div>
+<div class="line"><span class="lineno">  231</span>                    DirectoryInfo directoryInfo4 = directoryInfo2;</div>
+<div class="line"><span class="lineno">  232</span>                    <a class="code hl_class" href="classGameIndex.html">GameIndex</a> gameIndex = IO.LoadFile&lt;<a class="code hl_class" href="classGameIndex.html">GameIndex</a>&gt;(((directoryInfo4 != <span class="keyword">null</span>) ? directoryInfo4.ToString() : <span class="keyword">null</span>) + <span class="stringliteral">&quot;/index.txt&quot;</span>, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  233</span>                    gameIndex.id = directoryInfo2.Name;</div>
+<div class="line"><span class="lineno">  234</span>                    gameIndex.path = directoryInfo2.FullName;</div>
+<div class="line"><span class="lineno">  235</span>                    list.Add(gameIndex);</div>
+<div class="line"><span class="lineno">  236</span>                }</div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">catch</span> (Exception)</div>
+<div class="line"><span class="lineno">  238</span>                {</div>
+<div class="line"><span class="lineno">  239</span>                }</div>
+<div class="line"><span class="lineno">  240</span>            }</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (sortByName)</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            list.Sort(delegate(<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b)</div>
+<div class="line"><span class="lineno">  245</span>            {</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordtype">int</span> num;</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordtype">int</span>.TryParse(a.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out num);</div>
+<div class="line"><span class="lineno">  248</span>                <span class="keywordtype">int</span> num2;</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordtype">int</span>.TryParse(b.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out num2);</div>
+<div class="line"><span class="lineno">  250</span>                <span class="keywordflow">return</span> num2 - num;</div>
+<div class="line"><span class="lineno">  251</span>            });</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            list.Sort((<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b) =&gt; b.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>(0) - a.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>(0));</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  258</span>    }</div>
+<div class="ttc" id="aclassDate_html_aa982f31616d3a2dfb5261592f83feb1f"><div class="ttname"><a href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">Date.GetRawReal</a></div><div class="ttdeci">int GetRawReal(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00319">Date.cs:319</a></div></div>
+<div class="ttc" id="aclassGameIndex_html"><div class="ttname"><a href="classGameIndex.html">GameIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00006">GameIndex.cs:7</a></div></div>
+<div class="ttc" id="aclassGameIndex_html_a3de95db1434ea4398f1fb551066fe9c9"><div class="ttname"><a href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">GameIndex.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00088">GameIndex.cs:88</a></div></div>
+<div class="ttc" id="aclassGameIndex_html_a82da8f243b0ad86ae2f3443209d7f4cc"><div class="ttname"><a href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">GameIndex.real</a></div><div class="ttdeci">Date real</div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00086">GameIndex.cs:86</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00319">Date.GetRawReal()</a>, <a class="el" href="GameIndex_8cs_source.html#l00088">GameIndex.id</a>, and <a class="el" href="GameIndex_8cs_source.html#l00086">GameIndex.real</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00043">LayerLoadGame.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -410,6 +558,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00275">275</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>    {</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = start; i &lt; 999999; i++)</div>
+<div class="line"><span class="lineno">  279</span>        {</div>
+<div class="line"><span class="lineno">  280</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = prefix + i.ToString();</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">if</span> (!Directory.Exists(path + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>))</div>
+<div class="line"><span class="lineno">  282</span>            {</div>
+<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  284</span>            }</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00378">Game.Create()</a>, and <a class="el" href="GameIO_8cs_source.html#l00115">MakeBackup()</a>.</p>
 
 </div>
 </div>
@@ -446,6 +611,14 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00166">166</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                     : <span class="keyword">new</span>()</div>
+<div class="line"><span class="lineno">  167</span>    {</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> IO.LoadFile&lt;T&gt;(path, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_a1d658b737ddb54b05671416aa1321217"><div class="ttname"><a href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">GameIO.compressSave</a></div><div class="ttdeci">static bool compressSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00051">GameIO.cs:52</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a8ac1d1a919de145a5cf5fd40fcf5b5e8"><div class="ttname"><a href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">GameIO.jsReadGame</a></div><div class="ttdeci">static JsonSerializerSettings jsReadGame</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00289">GameIO.cs:289</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00052">compressSave</a>, and <a class="el" href="GameIO_8cs_source.html#l00289">jsReadGame</a>.</p>
 
 </div>
 </div>
@@ -484,6 +657,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00147">147</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        Game.id = id;</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5">ClearTemp</a>();</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">string</span> path = root + <span class="stringliteral">&quot;/game.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;<a class="code hl_class" href="classGame.html">Game</a>&gt;(IO.IsCompressed(path) ? IO.Decompress(path) : File.ReadAllText(path), <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_a64c870593f1e4353c5e8eb1e5e7bc3c5"><div class="ttname"><a href="classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5">GameIO.ClearTemp</a></div><div class="ttdeci">static void ClearTemp()</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00069">GameIO.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00069">ClearTemp()</a>, and <a class="el" href="GameIO_8cs_source.html#l00289">jsReadGame</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00122">Game.Load()</a>.</p>
 
 </div>
 </div>
@@ -522,6 +706,42 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00115">115</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        Debug.Log(<span class="stringliteral">&quot;Start backup:&quot;</span> + index.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = index.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>;</div>
+<div class="line"><span class="lineno">  119</span>        IO.CreateDirectory(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3b6ca166437e1f0b3eddb69766c503c4">pathBackup</a>);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = GameIO.pathBackup + id;</div>
+<div class="line"><span class="lineno">  121</span>        IO.CreateDirectory(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  122</span>        Debug.Log(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  123</span>        List&lt;DirectoryInfo&gt; dirs = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>).GetDirectories().ToList&lt;DirectoryInfo&gt;();</div>
+<div class="line"><span class="lineno">  124</span>        dirs.ForeachReverse(delegate(DirectoryInfo i)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordtype">int</span> num;</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">int</span>.TryParse(i.Name, out num))</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                dirs.Remove(i);</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        });</div>
+<div class="line"><span class="lineno">  132</span>        dirs.Sort((DirectoryInfo a, DirectoryInfo b) =&gt; <span class="keywordtype">int</span>.Parse(a.Name) - <span class="keywordtype">int</span>.Parse(b.Name));</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">int</span> count = dirs.Count;</div>
+<div class="line"><span class="lineno">  134</span>        Debug.Log(<span class="stringliteral">&quot;Deleting excess backup:&quot;</span> + dirs.Count.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d">NumBackup</a>.ToString());</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (count &gt; <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d">NumBackup</a>)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; count - <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d">NumBackup</a>; j++)</div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                IO.DeleteDirectory(dirs[j].FullName);</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>        Debug.Log(<span class="stringliteral">&quot;Copying backup:&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">string</span> newId = <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GetNewId</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, (dirs.Count == 0) ? 1 : <span class="keywordtype">int</span>.Parse(dirs.LastItem&lt;DirectoryInfo&gt;().Name));</div>
+<div class="line"><span class="lineno">  144</span>        IO.CopyDir(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;/&quot;</span>, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/&quot;</span> + newId, (<span class="keywordtype">string</span> s) =&gt; s == <span class="stringliteral">&quot;Temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_a26c1b96af10f68ff67c262a31d542d0d"><div class="ttname"><a href="classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d">GameIO.NumBackup</a></div><div class="ttdeci">static int NumBackup</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00043">GameIO.cs:44</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a33c393c075f356bdad0d427c1924e0ff"><div class="ttname"><a href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GameIO.GetNewId</a></div><div class="ttdeci">static string GetNewId(string path, string prefix=&quot;&quot;, int start=1)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00275">GameIO.cs:275</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00275">GetNewId()</a>, <a class="el" href="GameIndex_8cs_source.html#l00088">GameIndex.id</a>, <a class="el" href="GameIO_8cs_source.html#l00044">NumBackup</a>, <a class="el" href="GameIO_8cs_source.html#l00012">pathBackup</a>, <a class="el" href="GameIO_8cs_source.html#l00020">pathSaveRoot</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, and <a class="el" href="Game_8cs_source.html#l00641">Game.Save()</a>.</p>
 
 </div>
 </div>
@@ -550,6 +770,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00204">204</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            Directory.CreateDirectory(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;/Temp&quot;</span>))</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            Directory.CreateDirectory(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;/Temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00020">pathSaveRoot</a>.</p>
 
 </div>
 </div>
@@ -577,6 +809,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00059">59</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b">pathTemp</a>);</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            directoryInfo.Delete(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        IO.CreateDirectory(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b">pathTemp</a>);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00036">pathTemp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00378">Game.Create()</a>.</p>
 
 </div>
 </div>
@@ -615,6 +859,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00161">161</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        IO.SaveFile(path, obj, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_variable" href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">jsWriteGame</a>);</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="ttc" id="aclassGameIO_html_a472e51294a31ce7706182f850aabaa5e"><div class="ttname"><a href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">GameIO.jsWriteGame</a></div><div class="ttdeci">static JsonSerializerSettings jsWriteGame</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00298">GameIO.cs:298</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00052">compressSave</a>, and <a class="el" href="GameIO_8cs_source.html#l00298">jsWriteGame</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapSubset_8cs_source.html#l00021">MapSubset.Save()</a>, and <a class="el" href="Map_8cs_source.html#l00335">Map.Save()</a>.</p>
 
 </div>
 </div>
@@ -642,6 +894,44 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00087">87</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = JsonConvert.SerializeObject(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.game, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_variable" href="classGameIO.html#a59fefb2d671a202312d30e9d1ba03140">formatting</a>, <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_variable" href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">jsWriteGame</a>);</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">string</span> path = GameIO.pathCurrentSave + <span class="stringliteral">&quot;game.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="classGameIndex.html">GameIndex</a> gameIndex = <span class="keyword">new</span> <a class="code hl_class" href="classGameIndex.html">GameIndex</a>().<a class="code hl_function" href="classGameIndex.html#a0a22e276afebd3a87b76d32e66e863d3">Create</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.game);</div>
+<div class="line"><span class="lineno">   92</span>        gameIndex.id = <a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a5863738013b90cbe2e863df446667210">id</a>;</div>
+<div class="line"><span class="lineno">   93</span>        IO.SaveFile(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">pathCurrentSave</a> + <span class="stringliteral">&quot;index.txt&quot;</span>, gameIndex, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            IO.Compress(path, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            File.WriteAllText(path, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">pathCurrentSave</a>).GetDirectories())</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordtype">int</span> key;</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (<span class="keywordtype">int</span>.TryParse(directoryInfo.Name, out key) &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.ContainsKey(key))</div>
+<div class="line"><span class="lineno">  106</span>            {</div>
+<div class="line"><span class="lineno">  107</span>                IO.DeleteDirectory(directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  108</span>                Debug.Log(<span class="stringliteral">&quot;Deleting unused map:&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5">ClearTemp</a>();</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> gameIndex;</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a3d95322fcd775b6675b6f5195ca0643f"><div class="ttname"><a href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">GameIO.pathCurrentSave</a></div><div class="ttdeci">static string pathCurrentSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00027">GameIO.cs:28</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a59fefb2d671a202312d30e9d1ba03140"><div class="ttname"><a href="classGameIO.html#a59fefb2d671a202312d30e9d1ba03140">GameIO.formatting</a></div><div class="ttdeci">static Formatting formatting</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00308">GameIO.cs:308</a></div></div>
+<div class="ttc" id="aclassGameIndex_html_a0a22e276afebd3a87b76d32e66e863d3"><div class="ttname"><a href="classGameIndex.html#a0a22e276afebd3a87b76d32e66e863d3">GameIndex.Create</a></div><div class="ttdeci">GameIndex Create(Game game)</div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00049">GameIndex.cs:49</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a54dc5f41115039fd65cd42c74e43025d"><div class="ttname"><a href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">SpatialManager.map</a></div><div class="ttdeci">SpatialManager.GlobalSpatialList map</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00097">SpatialManager.cs:97</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00069">ClearTemp()</a>, <a class="el" href="GameIO_8cs_source.html#l00052">compressSave</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="GameIndex_8cs_source.html#l00049">GameIndex.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00308">formatting</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Game_8cs_source.html#l00782">Game.id</a>, <a class="el" href="GameIO_8cs_source.html#l00298">jsWriteGame</a>, <a class="el" href="SpatialManager_8cs_source.html#l00097">SpatialManager.map</a>, <a class="el" href="GameIO_8cs_source.html#l00028">pathCurrentSave</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00641">Game.Save()</a>.</p>
 
 </div>
 </div>
@@ -670,6 +960,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00155">155</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        i.madeBackup = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  158</span>        IO.SaveFile(i.<a class="code hl_variable" href="classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701">path</a> + <span class="stringliteral">&quot;/index.txt&quot;</span>, i, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="ttc" id="aclassGameIndex_html_ad1a11a204404a1bcfe8536e69866e701"><div class="ttname"><a href="classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701">GameIndex.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00119">GameIndex.cs:119</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameIndex_8cs_source.html#l00119">GameIndex.path</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -695,6 +994,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00308">308</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00087">SaveGame()</a>.</p>
 
 </div>
 </div>
@@ -727,6 +1028,8 @@ Properties</h2></td></tr>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00289">289</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00166">LoadFile&lt; T &gt;()</a>, and <a class="el" href="GameIO_8cs_source.html#l00147">LoadGame()</a>.</p>
 
 </div>
 </div>
@@ -761,6 +1064,8 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00298">298</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00161">SaveFile()</a>, and <a class="el" href="GameIO_8cs_source.html#l00087">SaveGame()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -785,6 +1090,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00051">51</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> EClass.core.config.compressSave &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a15f1d35955e4423c89aeb591d74a85d0">dontCompressSave</a>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a15f1d35955e4423c89aeb591d74a85d0"><div class="ttname"><a href="classCoreDebug.html#a15f1d35955e4423c89aeb591d74a85d0">CoreDebug.dontCompressSave</a></div><div class="ttdeci">bool dontCompressSave</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02145">CoreDebug.cs:2145</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00166">LoadFile&lt; T &gt;()</a>, <a class="el" href="GameIO_8cs_source.html#l00161">SaveFile()</a>, and <a class="el" href="GameIO_8cs_source.html#l00087">SaveGame()</a>.</p>
 
 </div>
 </div>
@@ -809,6 +1124,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00043">43</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)MathF.Max(5f, (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.game.numBackup);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00115">MakeBackup()</a>.</p>
 
 </div>
 </div>
@@ -833,6 +1156,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00011">11</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> CorePath.RootSave + <span class="stringliteral">&quot;Backup/&quot;</span>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00183">DeleteGame()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">MakeBackup()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -857,6 +1188,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00027">27</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> GameIO.pathSaveRoot + Game.id + <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00471">Player.EditBackgroundText()</a>, <a class="el" href="Player_8cs_source.html#l00432">Player.GenerateBackgroundText()</a>, <a class="el" href="Player_8cs_source.html#l00438">Player.GetBackgroundText()</a>, and <a class="el" href="GameIO_8cs_source.html#l00087">SaveGame()</a>.</p>
 
 </div>
 </div>
@@ -881,6 +1220,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00019">19</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> CorePath.RootSave;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">LayerFeedback.CollectFiles()</a>, <a class="el" href="Game_8cs_source.html#l00378">Game.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00260">DeleteEmptyGameFolders()</a>, <a class="el" href="GameIO_8cs_source.html#l00183">DeleteGame()</a>, <a class="el" href="GameIO_8cs_source.html#l00171">FileExist()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00009">LayerLoadGame.Init()</a>, <a class="el" href="Game_8cs_source.html#l00117">Game.Load()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">MakeBackup()</a>, <a class="el" href="GameIO_8cs_source.html#l00204">MakeDirectories()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -905,6 +1252,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameIO_8cs_source.html#l00035">35</a> of file <a class="el" href="GameIO_8cs_source.html">GameIO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> GameIO.pathCurrentSave + <span class="stringliteral">&quot;Temp/&quot;</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00069">ClearTemp()</a>, and <a class="el" href="GameIO_8cs_source.html#l00059">ResetTemp()</a>.</p>
 
 </div>
 </div>
@@ -912,9 +1267,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="GameIO_8cs_source.html">GameIO.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGameIO.html">GameIO</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

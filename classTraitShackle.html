@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitShackle.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -678,7 +698,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a4b2d59088504ce0145c3096fb99645fc">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a141ae3562c5f5c57a3a5ca23924a16eb" name="a141ae3562c5f5c57a3a5ca23924a16eb"></a>
@@ -708,6 +731,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00035">35</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> EClass._zone.IsPCFaction &amp;&amp; this.owner.IsInstalled &amp;&amp; !EClass.pc.isRestrained &amp;&amp; (this.owner.pos.FirstChara == <span class="keyword">null</span> || !this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a>);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassCard_html_a330dfeedb08c341b8f9337fec2e3af64"><div class="ttname"><a href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">Card.isRestrained</a></div><div class="ttdeci">bool isRestrained</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00499">Card.cs:500</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassPoint_html_adc2028a1488786ea6d4e75c42fdaec5c"><div class="ttname"><a href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">Point.FirstChara</a></div><div class="ttdeci">Chara FirstChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00390">Point.cs:391</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00391">Point.FirstChara</a>, <a class="el" href="Card_8cs_source.html#l00500">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>.</p>
 
 </div>
 </div>
@@ -735,6 +767,41 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00076">76</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a> || <span class="keyword">this</span>.owner.pos == <span class="keyword">null</span> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aea45cf11de64eee79c44238d81a34df3">simulatingZone</a>)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Charas</a>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; <span class="keyword">this</span>.owner.c_uidRefCard == chara.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>)</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (chara2.<a class="code hl_property" href="classChara.html#a8cb247fc5bb52c33dc793b4ef367426d">isChara</a> &amp;&amp; chara2.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; chara2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<span class="keyword">this</span>.owner.pos))</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                this.owner.c_uidRefCard = chara2.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a8cb247fc5bb52c33dc793b4ef367426d"><div class="ttname"><a href="classChara.html#a8cb247fc5bb52c33dc793b4ef367426d">Chara.isChara</a></div><div class="ttdeci">override bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00580">Chara.cs:581</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+<div class="ttc" id="aclassPlayer_html_aea45cf11de64eee79c44238d81a34df3"><div class="ttname"><a href="classPlayer.html#aea45cf11de64eee79c44238d81a34df3">Player.simulatingZone</a></div><div class="ttdeci">bool simulatingZone</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01613">Player.cs:1613</a></div></div>
+<div class="ttc" id="aclassPoint_html_a7c39f4085805ef81c56b538e34f16f8a"><div class="ttname"><a href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Point.Charas</a></div><div class="ttdeci">List&lt; Chara &gt; Charas</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00464">Point.cs:465</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="Point_8cs_source.html#l00465">Point.Charas</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l00581">Chara.isChara</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00500">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Player_8cs_source.html#l01613">Player.simulatingZone</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
 
 </div>
 </div>
@@ -765,6 +832,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00056">56</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        c.<a class="code hl_function" href="classCard.html#a77d1b776ab2275eb156d6224008d0d9c">MoveImmediate</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">new</span> <a class="code hl_class" href="classActRestrain.html">ActRestrain</a></div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            shackle = <span class="keyword">this</span></div>
+<div class="line"><span class="lineno">   62</span>        }.<a class="code hl_function" href="classActRestrain.html#af748a0d763546c2512b63fe349c2a57c">Perform</a>(c, c, c.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassActRestrain_html"><div class="ttname"><a href="classActRestrain.html">ActRestrain</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRestrain_8cs_source.html#l00003">ActRestrain.cs:4</a></div></div>
+<div class="ttc" id="aclassActRestrain_html_af748a0d763546c2512b63fe349c2a57c"><div class="ttname"><a href="classActRestrain.html#af748a0d763546c2512b63fe349c2a57c">ActRestrain.Perform</a></div><div class="ttdeci">override bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="ActRestrain_8cs_source.html#l00043">ActRestrain.cs:43</a></div></div>
+<div class="ttc" id="aclassCard_html_a77d1b776ab2275eb156d6224008d0d9c"><div class="ttname"><a href="classCard.html#a77d1b776ab2275eb156d6224008d0d9c">Card.MoveImmediate</a></div><div class="ttdeci">unsafe void MoveImmediate(Point p, bool focus=true, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05238">Card.cs:5238</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05238">Card.MoveImmediate()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="ActRestrain_8cs_source.html#l00043">ActRestrain.Perform()</a>, and <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>.</p>
 
 </div>
 </div>
@@ -803,6 +883,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00066">66</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        tc.isRestrained = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   69</span>        this.owner.c_uidRefCard = tc.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (msg)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            tc.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;restrained&quot;</span>, tc, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__MoveInstalled_8cs_source.html#l00257">AM_MoveInstalled.OnProcessTiles()</a>, and <a class="el" href="ActRestrain_8cs_source.html#l00043">ActRestrain.Perform()</a>.</p>
 
 </div>
 </div>
@@ -833,6 +926,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00048">48</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="keyword">new</span> <a class="code hl_class" href="classActRestrain.html">ActRestrain</a></div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            shackle = <span class="keyword">this</span></div>
+<div class="line"><span class="lineno">   53</span>        }, p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00797">ActPlan.cs:797</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00391">Point.FirstChara</a>, <a class="el" href="ActPlan_8cs_source.html#l00797">ActPlan.pos</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -858,6 +961,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__Torture_8cs_source.html#l00048">AI_Torture.CreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -882,7 +994,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00027">27</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> !this.<a class="code hl_function" href="classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea">IsRestraining</a>();</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassTraitShackle_html_a73afae1bd9ceb07d9073834574bea8ea"><div class="ttname"><a href="classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea">TraitShackle.IsRestraining</a></div><div class="ttdeci">bool IsRestraining()</div><div class="ttdef"><b>Definition:</b> <a href="TraitShackle_8cs_source.html#l00076">TraitShackle.cs:76</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d385cbd1b4dbd50b850831f8ec9c49a" name="a0d385cbd1b4dbd50b850831f8ec9c49a"></a>
@@ -906,6 +1025,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.posShackle;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a000b0eb1e81cc120ffacafb5630c8899"><div class="ttname"><a href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">GameSetting.render</a></div><div class="ttdeci">GameSetting.RenderSetting render</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00027">GameSetting.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -930,16 +1059,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitShackle_8cs_source.html#l00040">40</a> of file <a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ActRestrain&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitShackle_8cs_source.html">TraitShackle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitShackle.html">TraitShackle</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

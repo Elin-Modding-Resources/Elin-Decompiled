@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemActionSleep.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -210,6 +230,57 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotAction.html#a71adf12189b7219e634cd70c1f85957e">HotAction</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemActionSleep_8cs_source.html#l00021">21</a> of file <a class="el" href="HotItemActionSleep_8cs_source.html">HotItemActionSleep.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a9fc43f15847739ac146ce292df28f2a0">CanSleep</a>())</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.GetEvent&lt;<a class="code hl_class" href="classZoneEventQuest.html">ZoneEventQuest</a>&gt;() != <span class="keyword">null</span>) ? <span class="stringliteral">&quot;badidea&quot;</span> : <span class="stringliteral">&quot;notSleepy&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a8e6f39672fc8a671990852cfb2deda4e">returnInfo</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;badidea&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>&lt;<a class="code hl_class" href="classTraitBed.html">TraitBed</a>&gt;();</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (thing == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noBedFound&quot;</span>.langGame());</div>
+<div class="line"><span class="lineno">   37</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>&lt;<a class="code hl_class" href="classTraitPillow.html">TraitPillow</a>&gt;();</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classItemPosition.html">ItemPosition</a> posBed = <a class="code hl_class" href="classItemPosition.html">ItemPosition</a>.<a class="code hl_function" href="classItemPosition.html#a3cdd9bb143b40c31fdf4456e62043bd2">Get</a>(thing);</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classItemPosition.html">ItemPosition</a> posPillow = <a class="code hl_class" href="classItemPosition.html">ItemPosition</a>.<a class="code hl_function" href="classItemPosition.html#a3cdd9bb143b40c31fdf4456e62043bd2">Get</a>(thing2);</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (thing2 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing2, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#af298c0f9c6d055ab42a8b0ae3ff4be79">Sleep</a>(thing, thing2, <span class="keyword">true</span>, posBed, posPillow);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07283">Card.cs:7283</a></div></div>
+<div class="ttc" id="aclassCard_html_ad4cc8d8221b24490cd8d45ddfd04bf38"><div class="ttname"><a href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Card.Install</a></div><div class="ttdeci">Card Install()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03590">Card.cs:3590</a></div></div>
+<div class="ttc" id="aclassChara_html_a9fc43f15847739ac146ce292df28f2a0"><div class="ttname"><a href="classChara.html#a9fc43f15847739ac146ce292df28f2a0">Chara.CanSleep</a></div><div class="ttdeci">bool CanSleep()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00904">Chara.cs:904</a></div></div>
+<div class="ttc" id="aclassChara_html_af298c0f9c6d055ab42a8b0ae3ff4be79"><div class="ttname"><a href="classChara.html#af298c0f9c6d055ab42a8b0ae3ff4be79">Chara.Sleep</a></div><div class="ttdeci">void Sleep(Thing bed=null, Thing pillow=null, bool pickup=false, ItemPosition posBed=null, ItemPosition posPillow=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08738">Chara.cs:8738</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassItemPosition_html"><div class="ttname"><a href="classItemPosition.html">ItemPosition</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00004">ItemPosition.cs:5</a></div></div>
+<div class="ttc" id="aclassItemPosition_html_a3cdd9bb143b40c31fdf4456e62043bd2"><div class="ttname"><a href="classItemPosition.html#a3cdd9bb143b40c31fdf4456e62043bd2">ItemPosition.Get</a></div><div class="ttdeci">static ItemPosition Get(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00006">ItemPosition.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a8e6f39672fc8a671990852cfb2deda4e"><div class="ttname"><a href="classPlayer.html#a8e6f39672fc8a671990852cfb2deda4e">Player.returnInfo</a></div><div class="ttdeci">Player.ReturnInfo returnInfo</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01332">Player.cs:1332</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a203972cb9293020b40d298d968d79a52"><div class="ttname"><a href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">ThingContainer.Find</a></div><div class="ttdeci">Thing Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00456">ThingContainer.cs:456</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitBed_html"><div class="ttname"><a href="classTraitBed.html">TraitBed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitBed_8cs_source.html#l00004">TraitBed.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitPillow_html"><div class="ttname"><a href="classTraitPillow.html">TraitPillow</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPillow_8cs_source.html#l00003">TraitPillow.cs:4</a></div></div>
+<div class="ttc" id="aclassZoneEventQuest_html"><div class="ttname"><a href="classZoneEventQuest.html">ZoneEventQuest</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventQuest_8cs_source.html#l00005">ZoneEventQuest.cs:6</a></div></div>
+<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03858">Zone.cs:3858</a></div></div>
+<div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02262">Zone.cs:2262</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l02262">Zone.AddCard()</a>, <a class="el" href="Chara_8cs_source.html#l00904">Chara.CanSleep()</a>, <a class="el" href="Zone_8cs_source.html#l03858">Zone.events</a>, <a class="el" href="ThingContainer_8cs_source.html#l00456">ThingContainer.Find()</a>, <a class="el" href="ItemPosition_8cs_source.html#l00006">ItemPosition.Get()</a>, <a class="el" href="Card_8cs_source.html#l03590">Card.Install()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Player_8cs_source.html#l01332">Player.returnInfo</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Chara_8cs_source.html#l08738">Chara.Sleep()</a>, and <a class="el" href="Card_8cs_source.html#l07283">Card.things</a>.</p>
 
 </div>
 </div>
@@ -235,7 +306,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemActionSleep_8cs_source.html#l00013">13</a> of file <a class="el" href="HotItemActionSleep_8cs_source.html">HotItemActionSleep.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ace388731b3b2496a15d9316b3bed2741" name="ace388731b3b2496a15d9316b3bed2741"></a>
@@ -259,16 +336,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemActionSleep_8cs_source.html#l00005">5</a> of file <a class="el" href="HotItemActionSleep_8cs_source.html">HotItemActionSleep.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Sleep&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemActionSleep_8cs_source.html">HotItemActionSleep.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemActionSleep.html">HotItemActionSleep</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

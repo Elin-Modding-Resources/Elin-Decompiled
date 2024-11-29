@@ -1,0 +1,37 @@
+var classZoneProfile =
+[
+    [ "Seeds", "classZoneProfile_1_1Seeds.html", "classZoneProfile_1_1Seeds" ],
+    [ "GenType", "classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76a", [
+      [ "Default", "classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "Sky", "classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa03462a41aec357b74c89eb8d272532f7", null ],
+      [ "Underground", "classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa78eeb11057619ca7b6a6a179984eab5a", null ]
+    ] ],
+    [ "Generate", "classZoneProfile.html#ac598fe339ff09b966d9974ddaf14ff54", null ],
+    [ "Load", "classZoneProfile.html#a52243c4f97943f94876be4973f045130", null ],
+    [ "RerollBiome", "classZoneProfile.html#ac18b74f0dba74586f6f192bf16106d38", null ],
+    [ "RerollBiomeSub", "classZoneProfile.html#a5c1314fe960624d14c215e59a30cfd7d", null ],
+    [ "RerollBush", "classZoneProfile.html#afc395f5683f0900aa73f5dfc9d760172", null ],
+    [ "biomeSubScale", "classZoneProfile.html#a7e7ef76bb22a03ae62b239c7f55dc0ef", null ],
+    [ "blockHeight", "classZoneProfile.html#a6f3e9311a8ff80d2f6f88f76d52df565", null ],
+    [ "bushMod", "classZoneProfile.html#a6dda7bd1a4456c9c04e594ae5d16db2c", null ],
+    [ "clearEdge", "classZoneProfile.html#aa6650d322902a3110790008f259a7bda", null ],
+    [ "extraShores", "classZoneProfile.html#af822a2c9d109b4011c212f0e650c76a8", null ],
+    [ "genType", "classZoneProfile.html#af67a717fca214a0c8a319e94b9893c70", null ],
+    [ "height", "classZoneProfile.html#acc95029310654847c926795775d609d8", null ],
+    [ "idSceneProfile", "classZoneProfile.html#a432e39212f2399ae30982fe406303f77", null ],
+    [ "indoor", "classZoneProfile.html#a86b2c9168b8074e8d378fea93455a934", null ],
+    [ "isShore", "classZoneProfile.html#a375b0d86b89756b626c3dd40ef14175f", null ],
+    [ "mapBG", "classZoneProfile.html#a1ade493a25bab3f0e434a8c5319c4684", null ],
+    [ "noWater", "classZoneProfile.html#a093d1f51df1d01ef4136944868af4404", null ],
+    [ "offsetX", "classZoneProfile.html#aea945d32c5ae888ee53f2c5922c942db", null ],
+    [ "offsetZ", "classZoneProfile.html#adced1799f806c748e922ba8c0416dc77", null ],
+    [ "river", "classZoneProfile.html#aae07ae7e438e8d3d1849b0ad2fecc191", null ],
+    [ "seeds", "classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c", null ],
+    [ "setShore", "classZoneProfile.html#a725d1e47844e452d0076b31b6f2106f1", null ],
+    [ "shoreHeight", "classZoneProfile.html#a23a777d358ea40442f25ac292fabde02", null ],
+    [ "size", "classZoneProfile.html#a1727a6602d90ff265460be2dce529118", null ],
+    [ "sizeBounds", "classZoneProfile.html#a399587806ba96a774ec05e08d968a6a4", null ],
+    [ "useRootSize", "classZoneProfile.html#a85a71f2dc87924fdda40576b8a7c16f3", null ],
+    [ "variation", "classZoneProfile.html#ac3588449ce8bd6d2b57b747fba9604f2", null ],
+    [ "water", "classZoneProfile.html#a076f750e6d3e34d7b296349e440b8b40", null ]
+];

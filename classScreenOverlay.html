@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classScreenOverlay.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -188,6 +208,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenOverlay_8cs_source.html#l00006">6</a> of file <a class="el" href="ScreenOverlay_8cs_source.html">ScreenOverlay.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.offsetAnime += this.speed * <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">gameDelta</a>;</div>
+<div class="line"><span class="lineno">    9</span>        Vector3 vector = EMono.screen.position * -1f;</div>
+<div class="line"><span class="lineno">   10</span>        vector.x += vector.z * this.<a class="code hl_variable" href="classScreenOverlay.html#ac93a461c70df76a6e21e1d9075e31ef8">heightSpeed</a>.x;</div>
+<div class="line"><span class="lineno">   11</span>        vector.y += vector.z * this.<a class="code hl_variable" href="classScreenOverlay.html#ac93a461c70df76a6e21e1d9075e31ef8">heightSpeed</a>.y;</div>
+<div class="line"><span class="lineno">   12</span>        vector.z = 0f;</div>
+<div class="line"><span class="lineno">   13</span>        Vector3 vector2 = Quaternion.Euler(this.<a class="code hl_variable" href="classScreenOverlay.html#a95cf4eeefcde3bc5c910939d5254e24c">cameraAngle</a>) * vector;</div>
+<div class="line"><span class="lineno">   14</span>        this._renderer.sharedMaterial.mainTextureOffset = this.offsetAnime + <span class="keyword">new</span> Vector2(vector2.x * <span class="keyword">this</span>.cameraSpeed.x, vector2.y * <span class="keyword">this</span>.cameraSpeed.y);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a8661ed62f17a60ae1169ed07c0b56812"><div class="ttname"><a href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">Core.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00697">Core.cs:697</a></div></div>
+<div class="ttc" id="aclassScreenOverlay_html_a95cf4eeefcde3bc5c910939d5254e24c"><div class="ttname"><a href="classScreenOverlay.html#a95cf4eeefcde3bc5c910939d5254e24c">ScreenOverlay.cameraAngle</a></div><div class="ttdeci">Vector3 cameraAngle</div><div class="ttdef"><b>Definition:</b> <a href="ScreenOverlay_8cs_source.html#l00023">ScreenOverlay.cs:23</a></div></div>
+<div class="ttc" id="aclassScreenOverlay_html_ac93a461c70df76a6e21e1d9075e31ef8"><div class="ttname"><a href="classScreenOverlay.html#ac93a461c70df76a6e21e1d9075e31ef8">ScreenOverlay.heightSpeed</a></div><div class="ttdeci">Vector2 heightSpeed</div><div class="ttdef"><b>Definition:</b> <a href="ScreenOverlay_8cs_source.html#l00021">ScreenOverlay.cs:21</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ScreenOverlay_8cs_source.html#l00023">cameraAngle</a>, and <a class="el" href="ScreenOverlay_8cs_source.html#l00021">heightSpeed</a>.</p>
 
 </div>
 </div>
@@ -222,6 +257,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ScreenOverlay_8cs_source.html#l00023">23</a> of file <a class="el" href="ScreenOverlay_8cs_source.html">ScreenOverlay.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ScreenOverlay_8cs_source.html#l00006">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a85544cbaca43191c0fa545e57b78f9f1" name="a85544cbaca43191c0fa545e57b78f9f1"></a>
@@ -253,6 +290,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenOverlay_8cs_source.html#l00021">21</a> of file <a class="el" href="ScreenOverlay_8cs_source.html">ScreenOverlay.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ScreenOverlay_8cs_source.html#l00006">Update()</a>.</p>
 
 </div>
 </div>
@@ -300,9 +339,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="ScreenOverlay_8cs_source.html">ScreenOverlay.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classScreenOverlay.html">ScreenOverlay</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

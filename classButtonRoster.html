@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classButtonRoster.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -150,6 +170,17 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00070">70</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMouseover.html">WidgetMouseover</a>.<a class="code hl_variable" href="classWidgetMouseover.html#afcf255a277dc526ef6499e4079703a4a">Instance</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            WidgetMouseover.Instance.roster = this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aclassButtonRoster_html_a5d3a4edc66713d93ec8b2aa042ecca6c"><div class="ttname"><a href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">ButtonRoster.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00086">ButtonRoster.cs:86</a></div></div>
+<div class="ttc" id="aclassWidgetMouseover_html"><div class="ttname"><a href="classWidgetMouseover.html">WidgetMouseover</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMouseover_8cs_source.html#l00008">WidgetMouseover.cs:9</a></div></div>
+<div class="ttc" id="aclassWidgetMouseover_html_afcf255a277dc526ef6499e4079703a4a"><div class="ttname"><a href="classWidgetMouseover.html#afcf255a277dc526ef6499e4079703a4a">WidgetMouseover.Instance</a></div><div class="ttdeci">static WidgetMouseover Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMouseover_8cs_source.html#l00147">WidgetMouseover.cs:147</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonRoster_8cs_source.html#l00086">chara</a>, and <a class="el" href="WidgetMouseover_8cs_source.html#l00147">WidgetMouseover.Instance</a>.</p>
 
 </div>
 </div>
@@ -178,6 +209,14 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00078">78</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMouseover.html">WidgetMouseover</a>.<a class="code hl_variable" href="classWidgetMouseover.html#afcf255a277dc526ef6499e4079703a4a">Instance</a>)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            WidgetMouseover.Instance.roster = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMouseover_8cs_source.html#l00147">WidgetMouseover.Instance</a>.</p>
 
 </div>
 </div>
@@ -205,6 +244,73 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00028">28</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classButtonRoster.html">ButtonRoster</a>.<a class="code hl_variable" href="classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96">gradient</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            ButtonRoster.gradient = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_property" href="classColorProfile.html#a01d391ece830e5ad4ce19434680000b2">Dark</a>.gradients[<span class="stringliteral">&quot;mood&quot;</span>];</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> num = Mathf.Clamp((<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classCard.html#a593fb4b7395052856ce5e759a5eeb525">hp</a> / (<span class="keywordtype">float</span>)<span class="keyword">this</span>.chara.MaxHP, 0f, 1f);</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classButtonRoster.html#ada12a0c92a3eca26fe328946f0ce243f">barMood</a>.Rect().localScale = <span class="keyword">new</span> Vector3(num, 1f, 1f);</div>
+<div class="line"><span class="lineno">   36</span>        this.barMood.color = <a class="code hl_class" href="classButtonRoster.html">ButtonRoster</a>.<a class="code hl_variable" href="classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96">gradient</a>.Evaluate(num);</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> c = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_property" href="classColorProfile.html#a01d391ece830e5ad4ce19434680000b2">Dark</a>.gradientHP.Evaluate((<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classCard.html#a593fb4b7395052856ce5e759a5eeb525">hp</a> / (<span class="keywordtype">float</span>)<span class="keyword">this</span>.chara.MaxHP);</div>
+<div class="line"><span class="lineno">   38</span>        this.mainText.text = <span class="stringliteral">&quot;&quot;</span>.TagColor(c, this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classCard.html#a593fb4b7395052856ce5e759a5eeb525">hp</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>        this.mainText.SetActive(this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.showHP);</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.showHP)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            this.<a class="code hl_variable" href="classButtonRoster.html#a6cdafebacb3ed4fde13149b303860609">textName</a>.SetText(this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            this.textName.text = <span class="stringliteral">&quot;&quot;</span>.TagColor(c, this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classButtonRoster.html#a6cdafebacb3ed4fde13149b303860609">textName</a>.SetActive(this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.onlyName);</div>
+<div class="line"><span class="lineno">   49</span>        this.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.IsActive;</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> layer = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>&gt;(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (layer &amp;&amp; layer.<a class="code hl_property" href="classLayerInventory.html#a51496791eab91e54a5ddf18c2b94873f">Inv</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#ac6e6b02d77f312cfcc73660827250a90">IsPCFaction</a> &amp;&amp; layer.<a class="code hl_property" href="classLayerInventory.html#a51496791eab91e54a5ddf18c2b94873f">Inv</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a> == <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.None)</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> || <span class="keyword">this</span>.chara.IsDisabled || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#ac3a94b99896802674865cfd6e4109e80">HasNoGoal</a> || flag)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                SE.Beep();</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CloseLayers();</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">CreateContainer</a>(this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>);</div>
+<div class="line"><span class="lineno">   67</span>        });</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassButtonRoster_html"><div class="ttname"><a href="classButtonRoster.html">ButtonRoster</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00006">ButtonRoster.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonRoster_html_a6cdafebacb3ed4fde13149b303860609"><div class="ttname"><a href="classButtonRoster.html#a6cdafebacb3ed4fde13149b303860609">ButtonRoster.textName</a></div><div class="ttdeci">UIText textName</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00092">ButtonRoster.cs:92</a></div></div>
+<div class="ttc" id="aclassButtonRoster_html_a8be1e2ef123971ea5409d949e700dd96"><div class="ttname"><a href="classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96">ButtonRoster.gradient</a></div><div class="ttdeci">static Gradient gradient</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00098">ButtonRoster.cs:98</a></div></div>
+<div class="ttc" id="aclassButtonRoster_html_ad644bdd47045017f562a4988227330f3"><div class="ttname"><a href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">ButtonRoster.roster</a></div><div class="ttdeci">WidgetRoster roster</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00008">ButtonRoster.cs:9</a></div></div>
+<div class="ttc" id="aclassButtonRoster_html_ada12a0c92a3eca26fe328946f0ce243f"><div class="ttname"><a href="classButtonRoster.html#ada12a0c92a3eca26fe328946f0ce243f">ButtonRoster.barMood</a></div><div class="ttdeci">Image barMood</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00090">ButtonRoster.cs:90</a></div></div>
+<div class="ttc" id="aclassCard_html_a593fb4b7395052856ce5e759a5eeb525"><div class="ttname"><a href="classCard.html#a593fb4b7395052856ce5e759a5eeb525">Card.hp</a></div><div class="ttdeci">int hp</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00187">Card.cs:188</a></div></div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02179">Card.cs:2180</a></div></div>
+<div class="ttc" id="aclassCard_html_ac6e6b02d77f312cfcc73660827250a90"><div class="ttname"><a href="classCard.html#ac6e6b02d77f312cfcc73660827250a90">Card.IsPCFaction</a></div><div class="ttdeci">virtual bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02402">Card.cs:2403</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a94b99896802674865cfd6e4109e80"><div class="ttname"><a href="classChara.html#ac3a94b99896802674865cfd6e4109e80">Chara.HasNoGoal</a></div><div class="ttdeci">bool HasNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00840">Chara.cs:841</a></div></div>
+<div class="ttc" id="aclassColorProfile_html_a01d391ece830e5ad4ce19434680000b2"><div class="ttname"><a href="classColorProfile.html#a01d391ece830e5ad4ce19434680000b2">ColorProfile.Dark</a></div><div class="ttdeci">SkinColorProfile Dark</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00014">ColorProfile.cs:15</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a0803a3f94e106e7d65031cb5c9f23ebe"><div class="ttname"><a href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">EClass.Colors</a></div><div class="ttdeci">static ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00127">EClass.cs:128</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01363">InvOwner.cs:1363</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a947d136801ebfa0545976485202e13e6"><div class="ttname"><a href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">InvOwner.currency</a></div><div class="ttdeci">CurrencyType currency</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01357">InvOwner.cs:1357</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a236c25bffa8fba7846e22317c892f70b"><div class="ttname"><a href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">LayerInventory.CreateContainer</a></div><div class="ttdeci">static LayerInventory CreateContainer(Card owner)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00516">LayerInventory.cs:516</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a51496791eab91e54a5ddf18c2b94873f"><div class="ttname"><a href="classLayerInventory.html#a51496791eab91e54a5ddf18c2b94873f">LayerInventory.Inv</a></div><div class="ttdeci">InvOwner Inv</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00182">LayerInventory.cs:183</a></div></div>
+<div class="ttc" id="aclassWidgetRoster_html_ae13fa71778c87b5b6984238d95a7b896"><div class="ttname"><a href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">WidgetRoster.extra</a></div><div class="ttdeci">WidgetRoster.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00014">WidgetRoster.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonRoster_8cs_source.html#l00090">barMood</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00086">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, <a class="el" href="LayerInventory_8cs_source.html#l00516">LayerInventory.CreateContainer()</a>, <a class="el" href="InvOwner_8cs_source.html#l01357">InvOwner.currency</a>, <a class="el" href="ColorProfile_8cs_source.html#l00015">ColorProfile.Dark</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00015">WidgetRoster.extra</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00098">gradient</a>, <a class="el" href="Chara_8cs_source.html#l00841">Chara.HasNoGoal</a>, <a class="el" href="Card_8cs_source.html#l00188">Card.hp</a>, <a class="el" href="LayerInventory_8cs_source.html#l00183">LayerInventory.Inv</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l02403">Card.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l02180">Card.NameSimple</a>, <a class="el" href="InvOwner_8cs_source.html#l01363">InvOwner.owner</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00009">roster</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00092">textName</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetRoster_8cs_source.html#l00100">WidgetRoster.Refresh()</a>, and <a class="el" href="ButtonRoster_8cs_source.html#l00016">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -233,6 +339,25 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00016">16</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        this.chara = c;</div>
+<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(this.icon);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">bool</span> flag = this.roster.extra.portrait &amp;&amp; !this.<a class="code hl_variable" href="classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c">chara</a>.<a class="code hl_function" href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">GetIdPortrait</a>().IsEmpty();</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_variable" href="classButtonRoster.html#a554c4259ae7b001b941b4a8c4464af69">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(c, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classButtonRoster.html#a554c4259ae7b001b941b4a8c4464af69">portrait</a>.SetActive(flag &amp;&amp; !this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.onlyName);</div>
+<div class="line"><span class="lineno">   23</span>        this.icon.enabled = (!flag &amp;&amp; !this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.onlyName);</div>
+<div class="line"><span class="lineno">   24</span>        this.icon.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(0f, (<span class="keywordtype">float</span>)(this.<a class="code hl_property" href="classButtonRoster.html#ad644bdd47045017f562a4988227330f3">roster</a>.<a class="code hl_property" href="classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896">extra</a>.width / 2));</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_function" href="classButtonRoster.html#a2057821985506b77b6ec1ca8ee1352a0">Refresh</a>();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassButtonRoster_html_a2057821985506b77b6ec1ca8ee1352a0"><div class="ttname"><a href="classButtonRoster.html#a2057821985506b77b6ec1ca8ee1352a0">ButtonRoster.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00028">ButtonRoster.cs:28</a></div></div>
+<div class="ttc" id="aclassButtonRoster_html_a554c4259ae7b001b941b4a8c4464af69"><div class="ttname"><a href="classButtonRoster.html#a554c4259ae7b001b941b4a8c4464af69">ButtonRoster.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ButtonRoster_8cs_source.html#l00096">ButtonRoster.cs:96</a></div></div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05467">Card.cs:5467</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a0d547b42414135e4f3f721f4602d8"><div class="ttname"><a href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">Chara.GetIdPortrait</a></div><div class="ttdeci">string GetIdPortrait()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07220">Chara.cs:7220</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00098">Portrait.cs:98</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonRoster_8cs_source.html#l00086">chara</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00015">WidgetRoster.extra</a>, <a class="el" href="Chara_8cs_source.html#l07220">Chara.GetIdPortrait()</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00096">portrait</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00009">roster</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, and <a class="el" href="Card_8cs_source.html#l05467">Card.SetImage()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetRoster_8cs_source.html#l00113">WidgetRoster.Add()</a>.</p>
 
 </div>
 </div>
@@ -251,6 +376,8 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00090">90</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a5d3a4edc66713d93ec8b2aa042ecca6c" name="a5d3a4edc66713d93ec8b2aa042ecca6c"></a>
@@ -266,6 +393,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00086">86</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00070">OnPointerEnter()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00144">WidgetRoster.OnSetContextMenu()</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>, and <a class="el" href="ButtonRoster_8cs_source.html#l00016">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -290,6 +419,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00098">98</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -323,6 +454,8 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00096">96</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00016">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="adc7ab604e613ba7db6b6e3cd9af9479c" name="adc7ab604e613ba7db6b6e3cd9af9479c"></a>
@@ -355,6 +488,8 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00092">92</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -379,6 +514,16 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonRoster_8cs_source.html#l00008">8</a> of file <a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_variable" href="classWidgetRoster.html#a1cb8d04f5e4a8df78508a85fbc6e612a">Instance</a>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassWidgetRoster_html"><div class="ttname"><a href="classWidgetRoster.html">WidgetRoster</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00007">WidgetRoster.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetRoster_html_a1cb8d04f5e4a8df78508a85fbc6e612a"><div class="ttname"><a href="classWidgetRoster.html#a1cb8d04f5e4a8df78508a85fbc6e612a">WidgetRoster.Instance</a></div><div class="ttdeci">static WidgetRoster Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00210">WidgetRoster.cs:210</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ButtonRoster_8cs_source.html#l00028">Refresh()</a>, and <a class="el" href="ButtonRoster_8cs_source.html#l00016">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -386,9 +531,13 @@ Static Private Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="ButtonRoster_8cs_source.html">ButtonRoster.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classButtonRoster.html">ButtonRoster</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

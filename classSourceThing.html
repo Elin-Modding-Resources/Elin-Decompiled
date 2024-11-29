@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceThing.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -139,6 +159,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00069">69</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_variable" href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">_rows</a>.Clear();</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <span class="keyword">this</span>.rows)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_variable" href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">_rows</a>[row.id] = row;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00099">SourceThing.cs:100</a></div></div>
+<div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceThing_html_ad6119b5882c151d0ec2127fd8ea8141e"><div class="ttname"><a href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">SourceThing._rows</a></div><div class="ttdeci">Dictionary&lt; string, SourceThing.Row &gt; _rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00096">SourceThing.cs:96</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00096">_rows</a>.</p>
 
 </div>
 </div>
@@ -166,7 +198,65 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">   11</span>            name_JP = SourceData.GetString(1),</div>
+<div class="line"><span class="lineno">   12</span>            unknown_JP = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   13</span>            unit_JP = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">   14</span>            naming = SourceData.GetString(4),</div>
+<div class="line"><span class="lineno">   15</span>            name = SourceData.GetString(5),</div>
+<div class="line"><span class="lineno">   16</span>            unit = SourceData.GetString(6),</div>
+<div class="line"><span class="lineno">   17</span>            unknown = SourceData.GetString(7),</div>
+<div class="line"><span class="lineno">   18</span>            category = SourceData.GetString(8),</div>
+<div class="line"><span class="lineno">   19</span>            sort = SourceData.GetInt(10),</div>
+<div class="line"><span class="lineno">   20</span>            _tileType = SourceData.GetString(11),</div>
+<div class="line"><span class="lineno">   21</span>            _idRenderData = SourceData.GetString(12),</div>
+<div class="line"><span class="lineno">   22</span>            tiles = SourceData.GetIntArray(13),</div>
+<div class="line"><span class="lineno">   23</span>            altTiles = SourceData.GetIntArray(14),</div>
+<div class="line"><span class="lineno">   24</span>            anime = SourceData.GetIntArray(15),</div>
+<div class="line"><span class="lineno">   25</span>            skins = SourceData.GetIntArray(16),</div>
+<div class="line"><span class="lineno">   26</span>            size = SourceData.GetIntArray(17),</div>
+<div class="line"><span class="lineno">   27</span>            colorMod = SourceData.GetInt(18),</div>
+<div class="line"><span class="lineno">   28</span>            colorType = SourceData.GetString(19),</div>
+<div class="line"><span class="lineno">   29</span>            recipeKey = SourceData.GetStringArray(20),</div>
+<div class="line"><span class="lineno">   30</span>            factory = SourceData.GetStringArray(21),</div>
+<div class="line"><span class="lineno">   31</span>            components = SourceData.GetStringArray(22),</div>
+<div class="line"><span class="lineno">   32</span>            disassemble = SourceData.GetStringArray(23),</div>
+<div class="line"><span class="lineno">   33</span>            defMat = SourceData.GetString(24),</div>
+<div class="line"><span class="lineno">   34</span>            tierGroup = SourceData.GetString(25),</div>
+<div class="line"><span class="lineno">   35</span>            value = SourceData.GetInt(26),</div>
+<div class="line"><span class="lineno">   36</span>            LV = SourceData.GetInt(27),</div>
+<div class="line"><span class="lineno">   37</span>            chance = SourceData.GetInt(28),</div>
+<div class="line"><span class="lineno">   38</span>            quality = SourceData.GetInt(29),</div>
+<div class="line"><span class="lineno">   39</span>            HP = SourceData.GetInt(30),</div>
+<div class="line"><span class="lineno">   40</span>            weight = SourceData.GetInt(31),</div>
+<div class="line"><span class="lineno">   41</span>            electricity = SourceData.GetInt(32),</div>
+<div class="line"><span class="lineno">   42</span>            trait = SourceData.GetStringArray(33),</div>
+<div class="line"><span class="lineno">   43</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(34, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   44</span>            range = SourceData.GetInt(35),</div>
+<div class="line"><span class="lineno">   45</span>            attackType = SourceData.GetString(36),</div>
+<div class="line"><span class="lineno">   46</span>            offense = SourceData.GetIntArray(37),</div>
+<div class="line"><span class="lineno">   47</span>            substats = SourceData.GetIntArray(38),</div>
+<div class="line"><span class="lineno">   48</span>            defense = SourceData.GetIntArray(39),</div>
+<div class="line"><span class="lineno">   49</span>            lightData = SourceData.GetString(40),</div>
+<div class="line"><span class="lineno">   50</span>            idExtra = SourceData.GetString(41),</div>
+<div class="line"><span class="lineno">   51</span>            idToggleExtra = SourceData.GetString(42),</div>
+<div class="line"><span class="lineno">   52</span>            idActorEx = SourceData.GetString(43),</div>
+<div class="line"><span class="lineno">   53</span>            idSound = SourceData.GetString(44),</div>
+<div class="line"><span class="lineno">   54</span>            tag = SourceData.GetStringArray(45),</div>
+<div class="line"><span class="lineno">   55</span>            workTag = SourceData.GetString(46),</div>
+<div class="line"><span class="lineno">   56</span>            filter = SourceData.GetStringArray(47),</div>
+<div class="line"><span class="lineno">   57</span>            roomName_JP = SourceData.GetStringArray(48),</div>
+<div class="line"><span class="lineno">   58</span>            roomName = SourceData.GetStringArray(49),</div>
+<div class="line"><span class="lineno">   59</span>            detail_JP = SourceData.GetString(50),</div>
+<div class="line"><span class="lineno">   60</span>            detail = SourceData.GetString(51)</div>
+<div class="line"><span class="lineno">   61</span>        };</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00645">Core.cs:645</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47ddfd634748359993511ab00d22f660" name="a47ddfd634748359993511ab00d22f660"></a>
@@ -193,7 +283,9 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00078">78</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a45d8ea29a18a091bab87a89bdbdd7c47" name="a45d8ea29a18a091bab87a89bdbdd7c47"></a>
@@ -221,7 +313,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00064">64</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        this.map[r.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>] = r;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -238,6 +334,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00096">96</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00069">BackupPref()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -263,16 +361,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00082">82</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <span class="stringliteral">&quot;unit&quot;</span>,</div>
+<div class="line"><span class="lineno">   89</span>                <span class="stringliteral">&quot;unknown&quot;</span>,</div>
+<div class="line"><span class="lineno">   90</span>                <span class="stringliteral">&quot;roomName&quot;</span>,</div>
+<div class="line"><span class="lineno">   91</span>                <span class="stringliteral">&quot;name2&quot;</span></div>
+<div class="line"><span class="lineno">   92</span>            };</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceThing.html">SourceThing</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

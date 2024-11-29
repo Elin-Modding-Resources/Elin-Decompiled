@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitMod.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -679,6 +699,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a465361d0239bbdd1358d35046e4e6c87">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00043">43</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">int</span> num = this.source.value * this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> base.GetValue() * num / 100;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassCard_html_a9c3b6d0fb8ee414aecdd21c21153204b"><div class="ttname"><a href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">Card.encLV</a></div><div class="ttdeci">int encLV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00271">Card.cs:272</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00272">Card.encLV</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -709,6 +737,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        Tuple&lt;<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a>, <span class="keywordtype">int</span>&gt; tuple = <a class="code hl_class" href="classThing.html">Thing</a>.<a class="code hl_function" href="classThing.html#a9cdf95472d3f6e9d960a0b6b82c109a9">GetEnchant</a>(lv, (<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> r) =&gt; r.tag.Contains(<span class="stringliteral">&quot;modRanged&quot;</span>), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (tuple == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            tuple = <span class="keyword">new</span> Tuple&lt;<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a>, <span class="keywordtype">int</span>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[600], <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10) + 1);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        this.owner.refVal = tuple.Item1.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>;</div>
+<div class="line"><span class="lineno">   29</span>        this.owner.encLV = tuple.Item2;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00273">SourceElement.cs:273</a></div></div>
+<div class="ttc" id="aclassSourceElement_html"><div class="ttname"><a href="classSourceElement.html">SourceElement</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00007">SourceElement.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassThing_html_a9cdf95472d3f6e9d960a0b6b82c109a9"><div class="ttname"><a href="classThing.html#a9cdf95472d3f6e9d960a0b6b82c109a9">Thing.GetEnchant</a></div><div class="ttdeci">static Tuple&lt; SourceElement.Row, int &gt; GetEnchant(int lv, Func&lt; SourceElement.Row, bool &gt; func, bool neg)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l01924">Thing.cs:1924</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, <a class="el" href="Thing_8cs_source.html#l01924">Thing.GetEnchant()</a>, <a class="el" href="SourceElement_8cs_source.html#l00273">SourceElement.Row.id</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -739,6 +787,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00032">32</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_function" href="classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7">Create</a>(<span class="keyword">new</span> <a class="code hl_class" href="classInvOwnerMod.html">InvOwnerMod</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.None), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+<div class="ttc" id="aclassInvOwnerMod_html"><div class="ttname"><a href="classInvOwnerMod.html">InvOwnerMod</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerMod_8cs_source.html#l00005">InvOwnerMod.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html"><div class="ttname"><a href="classLayerDragGrid.html">LayerDragGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00006">LayerDragGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_a797f5abd479b75ac4335c151ee4ff8a7"><div class="ttname"><a href="classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7">LayerDragGrid.Create</a></div><div class="ttdeci">static LayerDragGrid Create(InvOwnerDraglet owner, bool refuelFromLayerDragGrid=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00324">LayerDragGrid.cs:324</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDragGrid_8cs_source.html#l00324">LayerDragGrid.Create()</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -769,6 +827,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aed664cfcbe19bd9b7cb288461852ad46">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00038">38</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        s = <span class="stringliteral">&quot;_of&quot;</span>.lang(this.<a class="code hl_property" href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">source</a>.GetName(), s, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassTraitMod_html_aa5ac6744c07cc86edd9b9a46f152d79d"><div class="ttname"><a href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">TraitMod.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00013">TraitMod.cs:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitMod_8cs_source.html#l00014">source</a>.</p>
 
 </div>
 </div>
@@ -794,7 +858,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa5ac6744c07cc86edd9b9a46f152d79d" name="aa5ac6744c07cc86edd9b9a46f152d79d"></a>
@@ -818,6 +888,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMod_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>];</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00151">Card.cs:152</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03522">Card.ApplySocket()</a>, <a class="el" href="TraitMod_8cs_source.html#l00038">SetName()</a>, and <a class="el" href="InvOwnerMod_8cs_source.html#l00033">InvOwnerMod.ShouldShowGuide()</a>.</p>
 
 </div>
 </div>
@@ -825,9 +904,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitMod_8cs_source.html">TraitMod.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitMod.html">TraitMod</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

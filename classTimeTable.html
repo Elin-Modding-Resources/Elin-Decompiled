@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTimeTable.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -227,7 +247,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00066">66</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_enumvalue" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158ab24ce0cd392a5b0b8dedc66c25213594">Free</a>,</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_enumvalue" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158abd26b44bdadb13511edfa8e95455a43f">Eat</a>,</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_enumvalue" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158a0f9263536b9fc61ada745644735bfd8f">Work</a>,</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_enumvalue" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158a243924bfd56a682be235638b53961e09">Sleep</a></div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158a0f9263536b9fc61ada745644735bfd8f"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158a0f9263536b9fc61ada745644735bfd8f">TimeTable.Span.Work</a></div><div class="ttdeci">@ Work</div></div>
+<div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158a243924bfd56a682be235638b53961e09"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158a243924bfd56a682be235638b53961e09">TimeTable.Span.Sleep</a></div><div class="ttdeci">@ Sleep</div></div>
+<div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158ab24ce0cd392a5b0b8dedc66c25213594"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158ab24ce0cd392a5b0b8dedc66c25213594">TimeTable.Span.Free</a></div><div class="ttdeci">@ Free</div></div>
+<div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158abd26b44bdadb13511edfa8e95455a43f"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158abd26b44bdadb13511edfa8e95455a43f">TimeTable.Span.Eat</a></div><div class="ttdeci">@ Eat</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -266,6 +296,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00017">17</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classTimeTable.html">TimeTable</a> timeTable = <span class="keyword">new</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>();</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 24; i++)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            timeTable.<a class="code hl_variable" href="classTimeTable.html#a840cf02a8deedfc8644c9a0992503d3a">spans</a>[i] = <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_function" href="classTimeTable.html#a79fdc5b6c2df15a16c8cc9a0b725dc43">GetSpan</a>(raw[i]);</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_variable" href="classTimeTable.html#a7e8418538a0e2d439314d749aabf0d60">dict</a>.Add(<span class="keywordtype">id</span>, timeTable);</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> timeTable;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassTimeTable_html"><div class="ttname"><a href="classTimeTable.html">TimeTable</a></div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00004">TimeTable.cs:5</a></div></div>
+<div class="ttc" id="aclassTimeTable_html_a79fdc5b6c2df15a16c8cc9a0b725dc43"><div class="ttname"><a href="classTimeTable.html#a79fdc5b6c2df15a16c8cc9a0b725dc43">TimeTable.GetSpan</a></div><div class="ttdeci">static TimeTable.Span GetSpan(string id, int hour)</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00033">TimeTable.cs:33</a></div></div>
+<div class="ttc" id="aclassTimeTable_html_a7e8418538a0e2d439314d749aabf0d60"><div class="ttname"><a href="classTimeTable.html#a7e8418538a0e2d439314d749aabf0d60">TimeTable.dict</a></div><div class="ttdeci">static Dictionary&lt; string, TimeTable &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00060">TimeTable.cs:60</a></div></div>
+<div class="ttc" id="aclassTimeTable_html_a840cf02a8deedfc8644c9a0992503d3a"><div class="ttname"><a href="classTimeTable.html#a840cf02a8deedfc8644c9a0992503d3a">TimeTable.spans</a></div><div class="ttdeci">TimeTable.Span[] spans</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00064">TimeTable.cs:64</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TimeTable_8cs_source.html#l00060">dict</a>, <a class="el" href="TimeTable_8cs_source.html#l00033">GetSpan()</a>, and <a class="el" href="TimeTable_8cs_source.html#l00064">spans</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TimeTable_8cs_source.html#l00006">Init()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +341,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00038">38</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (s == <span class="charliteral">&#39;e&#39;</span>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_enumeration" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">Span</a>.Eat;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (s == <span class="charliteral">&#39;w&#39;</span>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_enumeration" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">Span</a>.Work;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (s == <span class="charliteral">&#39;z&#39;</span>)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_enumeration" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">Span</a>.Sleep;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_enumeration" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">Span</a>.Free;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">TimeTable.Span</a></div><div class="ttdeci">Span</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00066">TimeTable.cs:67</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaceb9d3f2384d80cdaa6fe50700ed69f" name="aaceb9d3f2384d80cdaa6fe50700ed69f"></a>
@@ -322,7 +385,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00055">55</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_enumeration" href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">Span</a>.Free;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a79fdc5b6c2df15a16c8cc9a0b725dc43" name="a79fdc5b6c2df15a16c8cc9a0b725dc43"></a>
@@ -360,6 +426,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00033">33</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_variable" href="classTimeTable.html#a7e8418538a0e2d439314d749aabf0d60">dict</a>[id].spans[hour];</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TimeTable_8cs_source.html#l00060">dict</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TimeTable_8cs_source.html#l00017">Add()</a>, <a class="el" href="Chara_8cs_source.html#l07843">Chara.GetGoalFromTimeTable()</a>, and <a class="el" href="Chara_8cs_source.html#l08170">Chara.TickWork()</a>.</p>
 
 </div>
 </div>
@@ -388,6 +461,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00028">28</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_variable" href="classTimeTable.html#a7e8418538a0e2d439314d749aabf0d60">dict</a>[id];</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TimeTable_8cs_source.html#l00060">dict</a>.</p>
 
 </div>
 </div>
@@ -415,6 +493,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00006">6</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_variable" href="classTimeTable.html#a03b822a09f8cbc91da2f407153c620c3">unityInit</a>)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>        <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_function" href="classTimeTable.html#ab216dad2525266631f2cd63eeff5f67c">Add</a>(<span class="stringliteral">&quot;zzzzzz  ewwwwwwwwwwe    z&quot;</span>, <span class="stringliteral">&quot;default&quot;</span>);</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_function" href="classTimeTable.html#ab216dad2525266631f2cd63eeff5f67c">Add</a>(<span class="stringliteral">&quot;zzzzzz  ewwwwwwwwwwe    z&quot;</span>, <span class="stringliteral">&quot;owl&quot;</span>);</div>
+<div class="line"><span class="lineno">   14</span>        TimeTable.unityInit = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassTimeTable_html_a03b822a09f8cbc91da2f407153c620c3"><div class="ttname"><a href="classTimeTable.html#a03b822a09f8cbc91da2f407153c620c3">TimeTable.unityInit</a></div><div class="ttdeci">static bool unityInit</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00062">TimeTable.cs:62</a></div></div>
+<div class="ttc" id="aclassTimeTable_html_ab216dad2525266631f2cd63eeff5f67c"><div class="ttname"><a href="classTimeTable.html#ab216dad2525266631f2cd63eeff5f67c">TimeTable.Add</a></div><div class="ttdeci">static TimeTable Add(string raw, string id)</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00017">TimeTable.cs:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TimeTable_8cs_source.html#l00017">Add()</a>, and <a class="el" href="TimeTable_8cs_source.html#l00062">unityInit</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">SourceManager.Init()</a>.</p>
 
 </div>
 </div>
@@ -441,6 +534,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00060">60</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TimeTable_8cs_source.html#l00017">Add()</a>, <a class="el" href="TimeTable_8cs_source.html#l00033">GetSpan()</a>, and <a class="el" href="TimeTable_8cs_source.html#l00028">GetTimeTable()</a>.</p>
+
 </div>
 </div>
 <a id="a840cf02a8deedfc8644c9a0992503d3a" name="a840cf02a8deedfc8644c9a0992503d3a"></a>
@@ -456,6 +551,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00064">64</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TimeTable_8cs_source.html#l00017">Add()</a>.</p>
 
 </div>
 </div>
@@ -481,15 +578,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TimeTable_8cs_source.html#l00062">62</a> of file <a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TimeTable_8cs_source.html#l00006">Init()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TimeTable_8cs_source.html">TimeTable.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTimeTable.html">TimeTable</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

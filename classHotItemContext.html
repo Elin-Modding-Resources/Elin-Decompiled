@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemContext.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -208,6 +228,22 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00288">288</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>    {</div>
+<div class="line"><span class="lineno">  290</span>        flag = !flag;</div>
+<div class="line"><span class="lineno">  291</span>        <a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_function" href="classWidgetMenuPanel.html#aa4f6c6c82be1b52fbd55f93656e18ca6">OnChangeMode</a>();</div>
+<div class="line"><span class="lineno">  292</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">hotbars</a>.<a class="code hl_function" href="classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e">ResetHotbar</a>(2);</div>
+<div class="line"><span class="lineno">  293</span>        SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">  294</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassHotbarManager_html_af53b94f23ea108ff451105b2c44a4e8e"><div class="ttname"><a href="classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e">HotbarManager.ResetHotbar</a></div><div class="ttdeci">void ResetHotbar(int id)</div><div class="ttdef"><b>Definition:</b> <a href="HotbarManager_8cs_source.html#l00006">HotbarManager.cs:6</a></div></div>
+<div class="ttc" id="aclassPlayer_html_afb46f86512c8ccf198ceeb7e323b712a"><div class="ttname"><a href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">Player.hotbars</a></div><div class="ttdeci">HotbarManager hotbars</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01524">Player.cs:1524</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html"><div class="ttname"><a href="classWidgetMenuPanel.html">WidgetMenuPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00005">WidgetMenuPanel.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_aa4f6c6c82be1b52fbd55f93656e18ca6"><div class="ttname"><a href="classWidgetMenuPanel.html#aa4f6c6c82be1b52fbd55f93656e18ca6">WidgetMenuPanel.OnChangeMode</a></div><div class="ttdeci">static void OnChangeMode()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00035">WidgetMenuPanel.cs:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01524">Player.hotbars</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00035">WidgetMenuPanel.OnChangeMode()</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, and <a class="el" href="HotbarManager_8cs_source.html#l00006">HotbarManager.ResetHotbar()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00083">Show()</a>.</p>
 
 </div>
 </div>
@@ -236,6 +272,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00066">66</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.contextMenu.isActive)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>(this.<span class="keywordtype">id</span>, UIButton.buttonPos);</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassHotItemContext_html"><div class="ttname"><a href="classHotItemContext.html">HotItemContext</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00007">HotItemContext.cs:8</a></div></div>
+<div class="ttc" id="aclassHotItemContext_html_a8d3be1368e51279fea10fc6889075bdb"><div class="ttname"><a href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">HotItemContext.Show</a></div><div class="ttdeci">static void Show(string id, Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00083">HotItemContext.cs:83</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HotItemContext_8cs_source.html#l00083">Show()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00057">OnHover()</a>.</p>
 
 </div>
 </div>
@@ -264,6 +314,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00057">57</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classHotItemContext.html#a49a350d962c2e2392a84f7729f9c642b">AutoExpand</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.BlockInput)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_function" href="classHotItemContext.html#ae22d272730010f9b2fdedc90079349d8">OnClick</a>(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassHotItemContext_html_a49a350d962c2e2392a84f7729f9c642b"><div class="ttname"><a href="classHotItemContext.html#a49a350d962c2e2392a84f7729f9c642b">HotItemContext.AutoExpand</a></div><div class="ttdeci">bool AutoExpand</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00049">HotItemContext.cs:50</a></div></div>
+<div class="ttc" id="aclassHotItemContext_html_ae22d272730010f9b2fdedc90079349d8"><div class="ttname"><a href="classHotItemContext.html#ae22d272730010f9b2fdedc90079349d8">HotItemContext.OnClick</a></div><div class="ttdeci">override void OnClick(UIButton b)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00066">HotItemContext.cs:66</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HotItemContext_8cs_source.html#l00050">AutoExpand</a>, <a class="el" href="HotItemContext_8cs_source.html#l00066">OnClick()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -292,6 +353,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00075">75</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        m.AddToggle(<span class="stringliteral">&quot;autoExpand&quot;</span>, this.<a class="code hl_variable" href="classHotItemContext.html#a65f22cd59850befc1d58bf7f28345151">autoExpand</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            this.autoExpand = on;</div>
+<div class="line"><span class="lineno">   80</span>        });</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassHotItemContext_html_a65f22cd59850befc1d58bf7f28345151"><div class="ttname"><a href="classHotItemContext.html#a65f22cd59850befc1d58bf7f28345151">HotItemContext.autoExpand</a></div><div class="ttdeci">bool autoExpand</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00300">HotItemContext.cs:300</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HotItemContext_8cs_source.html#l00300">autoExpand</a>.</p>
 
 </div>
 </div>
@@ -330,6 +400,265 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00083">83</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;&gt;c__DisplayClass15_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;&gt;c__DisplayClass15_0();</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">string</span> menuName = (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;system&quot;</span>) ? <span class="stringliteral">&quot;ContextSystem&quot;</span> : <span class="stringliteral">&quot;ContextMenu&quot;</span>;</div>
+<div class="line"><span class="lineno">   87</span>        CS$&lt;&gt;8__locals1.m = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.contextMenu.Create(menuName, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   88</span>        CS$&lt;&gt;8__locals1.d = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.game.world.date;</div>
+<div class="line"><span class="lineno">   89</span>        CS$&lt;&gt;8__locals1.conf = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>;</div>
+<div class="line"><span class="lineno">   90</span>        CS$&lt;&gt;8__locals1.isRegion = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;mapTool&quot;</span>))</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;system&quot;</span>)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                UIContextMenu uicontextMenu = CS$&lt;&gt;8__locals1.m.AddChild(<span class="stringliteral">&quot;etc&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;LayerFeedback&quot;</span>.lang() + <span class="stringliteral">&quot;(&quot;</span> + EInput.keys.report.key.ToString() + <span class="stringliteral">&quot;)&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   97</span>                {</div>
+<div class="line"><span class="lineno">   98</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleFeedback();</div>
+<div class="line"><span class="lineno">   99</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  100</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;LayerConsole&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  101</span>                {</div>
+<div class="line"><span class="lineno">  102</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerConsole.html">LayerConsole</a>&gt;();</div>
+<div class="line"><span class="lineno">  103</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  104</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;LayerCredit&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  105</span>                {</div>
+<div class="line"><span class="lineno">  106</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerCredit.html">LayerCredit</a>&gt;();</div>
+<div class="line"><span class="lineno">  107</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  108</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;announce&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  109</span>                {</div>
+<div class="line"><span class="lineno">  110</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer(<span class="stringliteral">&quot;LayerAnnounce&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  112</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;about&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  113</span>                {</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer(<span class="stringliteral">&quot;LayerAbout&quot;</span>);</div>
+<div class="line"><span class="lineno">  115</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  116</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;hideUI&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">  119</span>                    EClass.ui.canvas.enabled = !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.canvas.enabled;</div>
+<div class="line"><span class="lineno">  120</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  121</span>                UIContextMenu uicontextMenu2 = CS$&lt;&gt;8__locals1.m.AddChild(<span class="stringliteral">&quot;tool&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>                uicontextMenu2.AddButton(<span class="stringliteral">&quot;LayerMod&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerMod.html">LayerMod</a>&gt;();</div>
+<div class="line"><span class="lineno">  125</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  126</span>                uicontextMenu2.AddButton(<span class="stringliteral">&quot;LayerTextureViewer&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerTextureViewer.html">LayerTextureViewer</a>&gt;();</div>
+<div class="line"><span class="lineno">  129</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  130</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  131</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;help&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;general&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><span class="lineno">  134</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  135</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;widget&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  136</span>                {</div>
+<div class="line"><span class="lineno">  137</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;();</div>
+<div class="line"><span class="lineno">  138</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  139</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;config&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  140</span>                {</div>
+<div class="line"><span class="lineno">  141</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerConfig.html">LayerConfig</a>&gt;();</div>
+<div class="line"><span class="lineno">  142</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  143</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  144</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;LayerHoard&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  145</span>                {</div>
+<div class="line"><span class="lineno">  146</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerHoard.html">LayerHoard</a>&gt;();</div>
+<div class="line"><span class="lineno">  147</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  148</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a3c872c4d0e2c10950e03bfe27cfafba1">Difficulty</a>.<a class="code hl_variable" href="classGameDifficulty.html#ad51ed54d6dcb891384746c9d06ebd81c">allowManualSave</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  150</span>                {</div>
+<div class="line"><span class="lineno">  151</span>                    CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;save&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  152</span>                    {</div>
+<div class="line"><span class="lineno">  153</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_function" href="classGame.html#adddd2df9e4f107f00e9b7b380ff6ef42">Save</a>(<span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  154</span>                    }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  155</span>                    CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;load&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  156</span>                    {</div>
+<div class="line"><span class="lineno">  157</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerLoadGame.html">LayerLoadGame</a>&gt;().Init(<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  158</span>                    }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  159</span>                }</div>
+<div class="line"><span class="lineno">  160</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  161</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;title&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  162</span>                {</div>
+<div class="line"><span class="lineno">  163</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_function" href="classGame.html#a5e3ca3abf508a285d06b39b2f732b77b">GotoTitle</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  164</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  165</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;quit&quot;</span>, <span class="keyword">new</span> Action(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_function" href="classGame.html#ad8df470c569d4ed80aa973fd08e6efac">Quit</a>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  166</span>                CS$&lt;&gt;8__locals1.m.GetComponent&lt;Image&gt;().SetAlpha(1f);</div>
+<div class="line"><span class="lineno">  167</span>            }</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>.<a class="code hl_property" href="classActionMode.html#abf275036cfd89fca7339ddd34c858443">IsBuildMode</a>)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  172</span>            {</div>
+<div class="line"><span class="lineno">  173</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;Reset Map&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  174</span>                {</div>
+<div class="line"><span class="lineno">  175</span>                    Zone.forceRegenerate = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  176</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a3f3a1d01c6a6326ec72d799dc67d6dd9">Activate</a>();</div>
+<div class="line"><span class="lineno">  177</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  178</span>                CS$&lt;&gt;8__locals1.m.AddChild(<span class="stringliteral">&quot;Map Subset&quot;</span>);</div>
+<div class="line"><span class="lineno">  179</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  180</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderMonth|1();</div>
+<div class="line"><span class="lineno">  181</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderHour|2();</div>
+<div class="line"><span class="lineno">  182</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderWeather|3();</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (!CS$&lt;&gt;8__locals1.isRegion &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#adc53454afca58649eb6676fcdeae3aba">flock</a>.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                CS$&lt;&gt;8__locals1.m.AddButton(<span class="stringliteral">&quot;birdView&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  190</span>                {</div>
+<div class="line"><span class="lineno">  191</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a6cb405e383c2843197ff2141d855720b">ToggleBirdView</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  192</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  193</span>            }</div>
+<div class="line"><span class="lineno">  194</span>            CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddTilt|4();</div>
+<div class="line"><span class="lineno">  195</span>            CS$&lt;&gt;8__locals1.m.AddToggle(<span class="stringliteral">&quot;highlightArea&quot;</span>, CS$&lt;&gt;8__locals1.conf.highlightArea, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  196</span>            {</div>
+<div class="line"><span class="lineno">  197</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a2a65d4fb37e3c23658c1e57f5f142c16">ToggleHighlightArea</a>();</div>
+<div class="line"><span class="lineno">  198</span>            });</div>
+<div class="line"><span class="lineno">  199</span>            CS$&lt;&gt;8__locals1.m.AddToggle(<span class="stringliteral">&quot;noRoof&quot;</span>, CS$&lt;&gt;8__locals1.conf.noRoof, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">ToggleRoof</a>();</div>
+<div class="line"><span class="lineno">  202</span>            });</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>)</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;zoomRegion&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; (a * (float)<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>).ToString() + <span class="stringliteral">&quot;%&quot;</span>, (float)(CS$&lt;&gt;8__locals1.conf.regionZoom / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  206</span>                {</div>
+<div class="line"><span class="lineno">  207</span>                    CS$&lt;&gt;8__locals1.conf.regionZoom = (int)b * <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>;</div>
+<div class="line"><span class="lineno">  208</span>                }, (float)(100 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), (float)(200 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a91f9c77202148737d631dc4d99c1a02b">zoomOut2</a>)</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;zoomAlt&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; (a * (float)<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>).ToString() + <span class="stringliteral">&quot;%&quot;</span>, (float)(CS$&lt;&gt;8__locals1.conf.zoomedZoom / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  213</span>                {</div>
+<div class="line"><span class="lineno">  214</span>                    CS$&lt;&gt;8__locals1.conf.zoomedZoom = (int)b * <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>;</div>
+<div class="line"><span class="lineno">  215</span>                }, (float)(50 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), (float)(200 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  216</span>            }</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  218</span>            {</div>
+<div class="line"><span class="lineno">  219</span>                CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;zoom&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; (a * (float)<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>).ToString() + <span class="stringliteral">&quot;%&quot;</span>, (float)(CS$&lt;&gt;8__locals1.conf.defaultZoom / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    CS$&lt;&gt;8__locals1.conf.defaultZoom = (int)b * <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>;</div>
+<div class="line"><span class="lineno">  222</span>                }, (float)(50 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), (float)(200 / <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">ZoomStep</a>), <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  223</span>            }</div>
+<div class="line"><span class="lineno">  224</span>            CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;backDrawAlpha&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() + <span class="stringliteral">&quot;%&quot;</span>, (float)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.backDrawAlpha, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  225</span>            {</div>
+<div class="line"><span class="lineno">  226</span>                EClass.game.config.backDrawAlpha = (int)b;</div>
+<div class="line"><span class="lineno">  227</span>            }, 0f, 50f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  229</span>            {</div>
+<div class="line"><span class="lineno">  230</span>                CS$&lt;&gt;8__locals1.m.AddSeparator(0);</div>
+<div class="line"><span class="lineno">  231</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderMonth|1();</div>
+<div class="line"><span class="lineno">  232</span>                CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;sliderDay&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  233</span>                {</div>
+<div class="line"><span class="lineno">  234</span>                    <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)b != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>)</div>
+<div class="line"><span class="lineno">  235</span>                    {</div>
+<div class="line"><span class="lineno">  236</span>                        EClass.world.date.day = (int)b - 1;</div>
+<div class="line"><span class="lineno">  237</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classGameDate.html#a55e9ba2562daff5ed2f74ee8157e6b43">AdvanceDay</a>();</div>
+<div class="line"><span class="lineno">  238</span>                    }</div>
+<div class="line"><span class="lineno">  239</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">RefreshAllTiles</a>();</div>
+<div class="line"><span class="lineno">  240</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">  241</span>                }, 1f, 30f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  242</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderHour|2();</div>
+<div class="line"><span class="lineno">  243</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;g__AddSliderWeather|3();</div>
+<div class="line"><span class="lineno">  244</span>                CS$&lt;&gt;8__locals1.m.AddSlider(<span class="stringliteral">&quot;sliderAnimeSpeed&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.animeSpeed.ToString() + <span class="stringliteral">&quot;%&quot;</span>, (float)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.animeSpeed, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  245</span>                {</div>
+<div class="line"><span class="lineno">  246</span>                    EClass.game.config.animeSpeed = (int)b;</div>
+<div class="line"><span class="lineno">  247</span>                }, 0f, 100f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  248</span>                UIContextMenu uicontextMenu3 = CS$&lt;&gt;8__locals1.m.AddChild(<span class="stringliteral">&quot;debug&quot;</span>);</div>
+<div class="line"><span class="lineno">  249</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;reveal_map&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a4bc5da553b9f3ac92b769786b27dee82">revealMap</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  250</span>                {</div>
+<div class="line"><span class="lineno">  251</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_function" href="classCoreDebug.html#a31de3e997347e8d96979a90439cebfe0">ToggleRevealMap</a>();</div>
+<div class="line"><span class="lineno">  252</span>                });</div>
+<div class="line"><span class="lineno">  253</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;test_los&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#adcedb0871ca68d748162a6425b2e9846">testLOS</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  254</span>                {</div>
+<div class="line"><span class="lineno">  255</span>                    <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;<a class="code hl_function" href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">g__Toggle</a>|15_0(ref <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#adcedb0871ca68d748162a6425b2e9846">testLOS</a>);</div>
+<div class="line"><span class="lineno">  256</span>                });</div>
+<div class="line"><span class="lineno">  257</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;test_los2&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a94aa171b61a43308ea106830dd8e623a">testLOS2</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  258</span>                {</div>
+<div class="line"><span class="lineno">  259</span>                    <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;<a class="code hl_function" href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">g__Toggle</a>|15_0(ref <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a94aa171b61a43308ea106830dd8e623a">testLOS2</a>);</div>
+<div class="line"><span class="lineno">  260</span>                });</div>
+<div class="line"><span class="lineno">  261</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;godBuild&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_property" href="classCoreDebug.html#aa3a934419cfa84c02f58a6f9b4fd8cad">godBuild</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  262</span>                {</div>
+<div class="line"><span class="lineno">  263</span>                    <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;<a class="code hl_function" href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">g__Toggle</a>|15_0(ref <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a3a27692b085ee18baec1e1ef4815c849">_godBuild</a>);</div>
+<div class="line"><span class="lineno">  264</span>                });</div>
+<div class="line"><span class="lineno">  265</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;godMode&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a0455627201978881f346eef856587e04">godMode</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  266</span>                {</div>
+<div class="line"><span class="lineno">  267</span>                    <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;<a class="code hl_function" href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">g__Toggle</a>|15_0(ref <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a0455627201978881f346eef856587e04">godMode</a>);</div>
+<div class="line"><span class="lineno">  268</span>                });</div>
+<div class="line"><span class="lineno">  269</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;autoAdvanceQuest&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aa4a5280c3d04a2fdb593e5192db34679">autoAdvanceQuest</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  270</span>                {</div>
+<div class="line"><span class="lineno">  271</span>                    <a class="code hl_class" href="classHotItemContext.html">HotItemContext</a>.&lt;<a class="code hl_function" href="classHotItemContext.html#a8d3be1368e51279fea10fc6889075bdb">Show</a>&gt;<a class="code hl_function" href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">g__Toggle</a>|15_0(ref <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aa4a5280c3d04a2fdb593e5192db34679">autoAdvanceQuest</a>);</div>
+<div class="line"><span class="lineno">  272</span>                });</div>
+<div class="line"><span class="lineno">  273</span>                uicontextMenu3.AddSlider(<span class="stringliteral">&quot;slopeMod&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)CS$&lt;&gt;8__locals1.conf.slopeMod, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  274</span>                {</div>
+<div class="line"><span class="lineno">  275</span>                    EClass.game.config.slopeMod = (int)b;</div>
+<div class="line"><span class="lineno">  276</span>                    (EClass.pc.renderer as <a class="code hl_class" href="classCharaRenderer.html">CharaRenderer</a>).first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  277</span>                }, 0f, 500f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  278</span>            }</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        CS$&lt;&gt;8__locals1.m.Show(pos);</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;system&quot;</span>)</div>
+<div class="line"><span class="lineno">  282</span>        {</div>
+<div class="line"><span class="lineno">  283</span>            CS$&lt;&gt;8__locals1.m.hideOnMouseLeave = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="ttc" id="aclassAM__Adv_html_a91f9c77202148737d631dc4d99c1a02b"><div class="ttname"><a href="classAM__Adv.html#a91f9c77202148737d631dc4d99c1a02b">AM_Adv.zoomOut2</a></div><div class="ttdeci">bool zoomOut2</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l01252">AM_Adv.cs:1252</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_abf275036cfd89fca7339ddd34c858443"><div class="ttname"><a href="classActionMode.html#abf275036cfd89fca7339ddd34c858443">ActionMode.IsBuildMode</a></div><div class="ttdeci">virtual bool IsBuildMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00276">ActionMode.cs:277</a></div></div>
+<div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01699">ActionMode.cs:1699</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a92379235a4d6fbca6fc53ebdc9131bd7"><div class="ttname"><a href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">BaseGameScreen.RefreshAll</a></div><div class="ttdeci">void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.cs:395</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html"><div class="ttname"><a href="classCharaRenderer.html">CharaRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00004">CharaRenderer.cs:5</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html"><div class="ttname"><a href="classCoreConfig.html">CoreConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00011">CoreConfig.cs:12</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a3d529f963eb6f5e38f43515dc65dc164"><div class="ttname"><a href="classCoreConfig.html#a3d529f963eb6f5e38f43515dc65dc164">CoreConfig.ZoomStep</a></div><div class="ttdeci">static int ZoomStep</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00021">CoreConfig.cs:22</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a0455627201978881f346eef856587e04"><div class="ttname"><a href="classCoreDebug.html#a0455627201978881f346eef856587e04">CoreDebug.godMode</a></div><div class="ttdeci">bool godMode</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02186">CoreDebug.cs:2186</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a31de3e997347e8d96979a90439cebfe0"><div class="ttname"><a href="classCoreDebug.html#a31de3e997347e8d96979a90439cebfe0">CoreDebug.ToggleRevealMap</a></div><div class="ttdeci">void ToggleRevealMap()</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02035">CoreDebug.cs:2035</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a3a27692b085ee18baec1e1ef4815c849"><div class="ttname"><a href="classCoreDebug.html#a3a27692b085ee18baec1e1ef4815c849">CoreDebug._godBuild</a></div><div class="ttdeci">bool _godBuild</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02192">CoreDebug.cs:2192</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a4bc5da553b9f3ac92b769786b27dee82"><div class="ttname"><a href="classCoreDebug.html#a4bc5da553b9f3ac92b769786b27dee82">CoreDebug.revealMap</a></div><div class="ttdeci">bool revealMap</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02167">CoreDebug.cs:2167</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a94aa171b61a43308ea106830dd8e623a"><div class="ttname"><a href="classCoreDebug.html#a94aa171b61a43308ea106830dd8e623a">CoreDebug.testLOS2</a></div><div class="ttdeci">bool testLOS2</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02163">CoreDebug.cs:2163</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_aa3a934419cfa84c02f58a6f9b4fd8cad"><div class="ttname"><a href="classCoreDebug.html#aa3a934419cfa84c02f58a6f9b4fd8cad">CoreDebug.godBuild</a></div><div class="ttdeci">bool godBuild</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00012">CoreDebug.cs:13</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_aa4a5280c3d04a2fdb593e5192db34679"><div class="ttname"><a href="classCoreDebug.html#aa4a5280c3d04a2fdb593e5192db34679">CoreDebug.autoAdvanceQuest</a></div><div class="ttdeci">bool autoAdvanceQuest</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02224">CoreDebug.cs:2224</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_adcedb0871ca68d748162a6425b2e9846"><div class="ttname"><a href="classCoreDebug.html#adcedb0871ca68d748162a6425b2e9846">CoreDebug.testLOS</a></div><div class="ttdeci">bool testLOS</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02161">CoreDebug.cs:2161</a></div></div>
+<div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00030">Date.cs:31</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassGameDate_html_a55e9ba2562daff5ed2f74ee8157e6b43"><div class="ttname"><a href="classGameDate.html#a55e9ba2562daff5ed2f74ee8157e6b43">GameDate.AdvanceDay</a></div><div class="ttdeci">void AdvanceDay()</div><div class="ttdef"><b>Definition:</b> <a href="GameDate_8cs_source.html#l00138">GameDate.cs:138</a></div></div>
+<div class="ttc" id="aclassGameDifficulty_html_ad51ed54d6dcb891384746c9d06ebd81c"><div class="ttname"><a href="classGameDifficulty.html#ad51ed54d6dcb891384746c9d06ebd81c">GameDifficulty.allowManualSave</a></div><div class="ttdeci">bool allowManualSave</div><div class="ttdef"><b>Definition:</b> <a href="GameDifficulty_8cs_source.html#l00022">GameDifficulty.cs:22</a></div></div>
+<div class="ttc" id="aclassGame_html_a3c872c4d0e2c10950e03bfe27cfafba1"><div class="ttname"><a href="classGame.html#a3c872c4d0e2c10950e03bfe27cfafba1">Game.Difficulty</a></div><div class="ttdeci">GameDifficulty Difficulty</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00048">Game.cs:49</a></div></div>
+<div class="ttc" id="aclassGame_html_a5e3ca3abf508a285d06b39b2f732b77b"><div class="ttname"><a href="classGame.html#a5e3ca3abf508a285d06b39b2f732b77b">Game.GotoTitle</a></div><div class="ttdeci">void GotoTitle(bool showDialog=true)</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00614">Game.cs:614</a></div></div>
+<div class="ttc" id="aclassGame_html_abc8a6c6cf00c78236e51e7f6a94407f4"><div class="ttname"><a href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">Game.config</a></div><div class="ttdeci">Game.Config config</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00850">Game.cs:850</a></div></div>
+<div class="ttc" id="aclassGame_html_ad8df470c569d4ed80aa973fd08e6efac"><div class="ttname"><a href="classGame.html#ad8df470c569d4ed80aa973fd08e6efac">Game.Quit</a></div><div class="ttdeci">void Quit()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00630">Game.cs:630</a></div></div>
+<div class="ttc" id="aclassGame_html_adddd2df9e4f107f00e9b7b380ff6ef42"><div class="ttname"><a href="classGame.html#adddd2df9e4f107f00e9b7b380ff6ef42">Game.Save</a></div><div class="ttdeci">void Save(bool isAutoSave=false, Action onComplete=null, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00641">Game.cs:641</a></div></div>
+<div class="ttc" id="aclassHotItemContext_html_a7d040a9ef4938ec2728e15cc598c84e9"><div class="ttname"><a href="classHotItemContext.html#a7d040a9ef4938ec2728e15cc598c84e9">HotItemContext.g__Toggle</a></div><div class="ttdeci">static void&lt; Show &gt; g__Toggle(ref bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00288">HotItemContext.cs:288</a></div></div>
+<div class="ttc" id="aclassLayerConfig_html"><div class="ttname"><a href="classLayerConfig.html">LayerConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerConfig_8cs_source.html#l00008">LayerConfig.cs:9</a></div></div>
+<div class="ttc" id="aclassLayerConsole_html"><div class="ttname"><a href="classLayerConsole.html">LayerConsole</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerConsole_8cs_source.html#l00004">LayerConsole.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerCredit_html"><div class="ttname"><a href="classLayerCredit.html">LayerCredit</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCredit_8cs_source.html#l00003">LayerCredit.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html"><div class="ttname"><a href="classLayerHelp.html">LayerHelp</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00003">LayerHelp.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_a8c2b68bab7fee455dcd42a72525d2799"><div class="ttname"><a href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">LayerHelp.Toggle</a></div><div class="ttdeci">static void Toggle(string idFile, string idTopic=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00028">LayerHelp.cs:28</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html"><div class="ttname"><a href="classLayerHoard.html">LayerHoard</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00006">LayerHoard.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerLoadGame_html"><div class="ttname"><a href="classLayerLoadGame.html">LayerLoadGame</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerLoadGame_8cs_source.html#l00007">LayerLoadGame.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerMod_html"><div class="ttname"><a href="classLayerMod.html">LayerMod</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00005">LayerMod.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerTextureViewer_html"><div class="ttname"><a href="classLayerTextureViewer.html">LayerTextureViewer</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerTextureViewer_8cs_source.html#l00006">LayerTextureViewer.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerWidget_html"><div class="ttname"><a href="classLayerWidget.html">LayerWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00004">LayerWidget.cs:5</a></div></div>
+<div class="ttc" id="aclassMap_html_aee8120d9016faadc762f0b80bf0ef1e8"><div class="ttname"><a href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">Map.RefreshAllTiles</a></div><div class="ttdeci">void RefreshAllTiles()</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02160">Map.cs:2160</a></div></div>
+<div class="ttc" id="aclassScene_html_a2a65d4fb37e3c23658c1e57f5f142c16"><div class="ttname"><a href="classScene.html#a2a65d4fb37e3c23658c1e57f5f142c16">Scene.ToggleHighlightArea</a></div><div class="ttdeci">void ToggleHighlightArea()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00790">Scene.cs:790</a></div></div>
+<div class="ttc" id="aclassScene_html_a6cb405e383c2843197ff2141d855720b"><div class="ttname"><a href="classScene.html#a6cb405e383c2843197ff2141d855720b">Scene.ToggleBirdView</a></div><div class="ttdeci">void ToggleBirdView(bool sound=true)</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00796">Scene.cs:796</a></div></div>
+<div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01049">Scene.cs:1049</a></div></div>
+<div class="ttc" id="aclassScene_html_aaa4c834df143d223bc8be2e8417d27c7"><div class="ttname"><a href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">Scene.ToggleRoof</a></div><div class="ttdeci">void ToggleRoof()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00763">Scene.cs:763</a></div></div>
+<div class="ttc" id="aclassScene_html_adc53454afca58649eb6676fcdeae3aba"><div class="ttname"><a href="classScene.html#adc53454afca58649eb6676fcdeae3aba">Scene.flock</a></div><div class="ttdeci">FlockController flock</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01039">Scene.cs:1039</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+<div class="ttc" id="aclassZone_html_a3f3a1d01c6a6326ec72d799dc67d6dd9"><div class="ttname"><a href="classZone.html#a3f3a1d01c6a6326ec72d799dc67d6dd9">Zone.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00863">Zone.cs:863</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreDebug_8cs_source.html#l02192">CoreDebug._godBuild</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Scene_8cs_source.html#l01049">Scene.actionMode</a>, <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="ActionMode_8cs_source.html#l01699">ActionMode.Adv</a>, <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>, <a class="el" href="GameDifficulty_8cs_source.html#l00022">GameDifficulty.allowManualSave</a>, <a class="el" href="CoreDebug_8cs_source.html#l02224">CoreDebug.autoAdvanceQuest</a>, <a class="el" href="Game_8cs_source.html#l00850">Game.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00031">Date.day</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="Game_8cs_source.html#l00049">Game.Difficulty</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="Scene_8cs_source.html#l01039">Scene.flock</a>, <a class="el" href="HotItemContext_8cs_source.html#l00288">g__Toggle()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CoreDebug_8cs_source.html#l00013">CoreDebug.godBuild</a>, <a class="el" href="CoreDebug_8cs_source.html#l02186">CoreDebug.godMode</a>, <a class="el" href="Game_8cs_source.html#l00614">Game.GotoTitle()</a>, <a class="el" href="ActionMode_8cs_source.html#l00277">ActionMode.IsBuildMode</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="Game_8cs_source.html#l00630">Game.Quit()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.RefreshAll()</a>, <a class="el" href="Map_8cs_source.html#l02160">Map.RefreshAllTiles()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02167">CoreDebug.revealMap</a>, <a class="el" href="Game_8cs_source.html#l00641">Game.Save()</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="HotItemContext_8cs_source.html#l00083">Show()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02161">CoreDebug.testLOS</a>, <a class="el" href="CoreDebug_8cs_source.html#l02163">CoreDebug.testLOS2</a>, <a class="el" href="LayerHelp_8cs_source.html#l00028">LayerHelp.Toggle()</a>, <a class="el" href="Scene_8cs_source.html#l00796">Scene.ToggleBirdView()</a>, <a class="el" href="Scene_8cs_source.html#l00790">Scene.ToggleHighlightArea()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02035">CoreDebug.ToggleRevealMap()</a>, <a class="el" href="Scene_8cs_source.html#l00763">Scene.ToggleRoof()</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>, <a class="el" href="AM__Adv_8cs_source.html#l01252">AM_Adv.zoomOut2</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00022">CoreConfig.ZoomStep</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00066">OnClick()</a>, <a class="el" href="AM__BaseGameMode_8cs_source.html#l00065">AM_BaseGameMode.OnUpdateInput()</a>, and <a class="el" href="HotItemContext_8cs_source.html#l00083">Show()</a>.</p>
 
 </div>
 </div>
@@ -347,6 +676,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00300">300</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00075">OnShowContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -388,6 +719,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00049">49</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemContext.html#a65f22cd59850befc1d58bf7f28345151">autoExpand</a>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00057">OnHover()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +751,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00009">9</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> (<span class="stringliteral">&quot;m_&quot;</span> + this.<span class="keywordtype">id</span>).lang();</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad9e1761dfcfbb65f78ce22ca74633ae9" name="ad9e1761dfcfbb65f78ce22ca74633ae9"></a>
@@ -436,7 +781,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00025">25</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (!(this.<span class="keywordtype">id</span> == <span class="stringliteral">&quot;system&quot;</span>))</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_&quot;</span> + this.<a class="code hl_variable" href="classHotItemContext.html#a086da35e59baeab4258b96f8f5c58aea">id</a>;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_m_system&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassHotItemContext_html_a086da35e59baeab4258b96f8f5c58aea"><div class="ttname"><a href="classHotItemContext.html#a086da35e59baeab4258b96f8f5c58aea">HotItemContext.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="HotItemContext_8cs_source.html#l00297">HotItemContext.cs:297</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9e4b7f0cfc20a1bdbe63797e8e2c707a" name="a9e4b7f0cfc20a1bdbe63797e8e2c707a"></a>
@@ -460,7 +816,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00017">17</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> this.<span class="keywordtype">id</span>.lang();</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ace9ca9d9022f445fbbf69c104f6b1284" name="ace9ca9d9022f445fbbf69c104f6b1284"></a>
@@ -484,16 +846,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemContext_8cs_source.html#l00037">37</a> of file <a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classHotItemContext.html#a49a350d962c2e2392a84f7729f9c642b">AutoExpand</a>)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> base.Transition;</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> Selectable.Transition.None;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemContext_8cs_source.html">HotItemContext.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemContext.html">HotItemContext</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerEditHouse.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -263,6 +283,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00266">266</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
+<div class="line"><span class="lineno">  268</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_function" href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  269</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a1833e13dcf8e5eb37c8bfcb68c9a61d9">toggleAltRoof</a>.SetActive(this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a>.idRoofTile != 0);</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+<div class="ttc" id="aclassLayerEditHouse_html_a1833e13dcf8e5eb37c8bfcb68c9a61d9"><div class="ttname"><a href="classLayerEditHouse.html#a1833e13dcf8e5eb37c8bfcb68c9a61d9">LayerEditHouse.toggleAltRoof</a></div><div class="ttdeci">UIButton toggleAltRoof</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00307">LayerEditHouse.cs:307</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a427c9e2d562813680287c6931c9925a2"><div class="ttname"><a href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">LayerEditHouse.board</a></div><div class="ttdeci">TraitHouseBoard board</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00281">LayerEditHouse.cs:281</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_html_a3776ba3ef43506d1a670f6119b406ada"><div class="ttname"><a href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">TraitHouseBoard.ApplyData</a></div><div class="ttdeci">void ApplyData()</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00067">TraitHouseBoard.cs:67</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_html_af97bc19c391a6f04987a5474dc899ea2"><div class="ttname"><a href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">TraitHouseBoard.data</a></div><div class="ttdeci">TraitHouseBoard.Data data</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00007">TraitHouseBoard.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitHouseBoard_8cs_source.html#l00067">TraitHouseBoard.ApplyData()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00281">board</a>, <a class="el" href="TraitHouseBoard_8cs_source.html#l00008">TraitHouseBoard.data</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00307">toggleAltRoof</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00251">RefreshTemplates()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -290,6 +322,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;save&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.WaitForEndOfFrame(delegate</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = StandaloneFileBrowser.SaveFilePanel(<span class="stringliteral">&quot;Save Template&quot;</span>, CorePath.LotTemplate, <span class="stringliteral">&quot;new house&quot;</span>, <span class="stringliteral">&quot;tpl&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>                if (!<span class="keywordtype">string</span>.IsNullOrEmpty(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>))</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    IO.SaveFile(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a>, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   28</span>                    <span class="keyword">this</span>.RefreshTemplates();</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span>            });</div>
+<div class="line"><span class="lineno">   31</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEditHouse_8cs_source.html#l00281">board</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="TraitHouseBoard_8cs_source.html#l00008">TraitHouseBoard.data</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
 
 </div>
 </div>
@@ -317,6 +368,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00272">272</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>    {</div>
+<div class="line"><span class="lineno">  274</span>        ELayer.screen.tileMap.usingHouseBoard = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>)</div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+<div class="ttc" id="aclassBuildMenu_html"><div class="ttname"><a href="classBuildMenu.html">BuildMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00007">BuildMenu.cs:8</a></div></div>
+<div class="ttc" id="aclassBuildMenu_html_a37580e3789ed4b4e57ad109dbd08475a"><div class="ttname"><a href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">BuildMenu.Instance</a></div><div class="ttdeci">static BuildMenu Instance</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00709">BuildMenu.cs:709</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BuildMenu_8cs_source.html#l00709">BuildMenu.Instance</a>.</p>
 
 </div>
 </div>
@@ -344,6 +406,149 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00139">139</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#ad37df76017207fd5bc35e213f4cc6ab6">roofStyles</a>[this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idRoofStyle].<a class="code hl_variable" href="classRoofStyle.html#af714c435f5318217c7f29f97fb89bae3">type</a> != <a class="code hl_class" href="classRoofStyle.html">RoofStyle</a>.<a class="code hl_enumeration" href="classRoofStyle.html#aaf1c9d850540f499788438ba4b98cf5b">Type</a>.FlatFloor;</div>
+<div class="line"><span class="lineno">  142</span>        List&lt;int&gt; blocks = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keyword">using</span> (List&lt;<a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_class" href="classSourceBlock_1_1Row.html">Row</a>&gt;.Enumerator enumerator = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.rows.GetEnumerator())</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                    <a class="code hl_class" href="classSourceBlock_1_1Row.html">SourceBlock.Row</a> row = enumerator.Current;</div>
+<div class="line"><span class="lineno">  150</span>                    <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9">tileType</a> == <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#afca5a7092a22d2536c97994d1f79658d">Block</a>)</div>
+<div class="line"><span class="lineno">  151</span>                    {</div>
+<div class="line"><span class="lineno">  152</span>                        blocks.Add(row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>);</div>
+<div class="line"><span class="lineno">  153</span>                    }</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">goto</span> IL_E2;</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceFloor.html">SourceFloor</a>.<a class="code hl_class" href="classSourceFloor_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.rows)</div>
+<div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            blocks.Add(row2.id);</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        IL_E2:</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordtype">int</span> num = blocks.IndexOf(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idBlock);</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            num = 0;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a4c0af16b3d6a2347487ec414a9cb1791">sliderBlock</a>.SetList&lt;<span class="keywordtype">int</span>&gt;(num, blocks, delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            this.data.idBlock = b;</div>
+<div class="line"><span class="lineno">  171</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  172</span>        }, (<span class="keywordtype">int</span> a) =&gt; blocks.IndexOf(a).ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>        this.buttonColorRoof.icon.color = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colRoof);</div>
+<div class="line"><span class="lineno">  174</span>        Action&lt;PickerState, Color&gt; &lt;&gt;9__6;</div>
+<div class="line"><span class="lineno">  175</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#ae0e294de1efcaa8f27e2cc377bb8fad4">buttonColorRoof</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> startColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colRoof);</div>
+<div class="line"><span class="lineno">  179</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> resetColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colRoof);</div>
+<div class="line"><span class="lineno">  180</span>            Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__6) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  182</span>            {</div>
+<div class="line"><span class="lineno">  183</span>                onChangeColor = (&lt;&gt;9__6 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> c)</div>
+<div class="line"><span class="lineno">  184</span>                {</div>
+<div class="line"><span class="lineno">  185</span>                    this.data.colRoof = IntColor.ToInt(c);</div>
+<div class="line"><span class="lineno">  186</span>                    this.buttonColorRoof.icon.color = c;</div>
+<div class="line"><span class="lineno">  187</span>                    this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_function" href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  188</span>                });</div>
+<div class="line"><span class="lineno">  189</span>            }</div>
+<div class="line"><span class="lineno">  190</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(startColor, resetColor, onChangeColor);</div>
+<div class="line"><span class="lineno">  191</span>        });</div>
+<div class="line"><span class="lineno">  192</span>        this.buttonColorBlock.icon.color = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colBlock);</div>
+<div class="line"><span class="lineno">  193</span>        Action&lt;PickerState, Color&gt; &lt;&gt;9__7;</div>
+<div class="line"><span class="lineno">  194</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a05f44030b160c85ee9e2b1b8d18be43b">buttonColorBlock</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">  197</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> startColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colBlock);</div>
+<div class="line"><span class="lineno">  198</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> resetColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colBlock);</div>
+<div class="line"><span class="lineno">  199</span>            Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__7) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  201</span>            {</div>
+<div class="line"><span class="lineno">  202</span>                onChangeColor = (&lt;&gt;9__7 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> c)</div>
+<div class="line"><span class="lineno">  203</span>                {</div>
+<div class="line"><span class="lineno">  204</span>                    this.data.colBlock = IntColor.ToInt(c);</div>
+<div class="line"><span class="lineno">  205</span>                    this.buttonColorBlock.icon.color = c;</div>
+<div class="line"><span class="lineno">  206</span>                    this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_function" href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  207</span>                });</div>
+<div class="line"><span class="lineno">  208</span>            }</div>
+<div class="line"><span class="lineno">  209</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(startColor, resetColor, onChangeColor);</div>
+<div class="line"><span class="lineno">  210</span>        });</div>
+<div class="line"><span class="lineno">  211</span>        this.buttonColorDeco.icon.color = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco);</div>
+<div class="line"><span class="lineno">  212</span>        Action&lt;PickerState, Color&gt; &lt;&gt;9__8;</div>
+<div class="line"><span class="lineno">  213</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a39d5264d184ab9b977a2aa57d3b8779e">buttonColorDeco</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">  216</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> startColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco);</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> resetColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco);</div>
+<div class="line"><span class="lineno">  218</span>            Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__8) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  220</span>            {</div>
+<div class="line"><span class="lineno">  221</span>                onChangeColor = (&lt;&gt;9__8 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> c)</div>
+<div class="line"><span class="lineno">  222</span>                {</div>
+<div class="line"><span class="lineno">  223</span>                    this.data.colDeco = IntColor.ToInt(c);</div>
+<div class="line"><span class="lineno">  224</span>                    this.buttonColorDeco.icon.color = c;</div>
+<div class="line"><span class="lineno">  225</span>                    this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_function" href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  226</span>                });</div>
+<div class="line"><span class="lineno">  227</span>            }</div>
+<div class="line"><span class="lineno">  228</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(startColor, resetColor, onChangeColor);</div>
+<div class="line"><span class="lineno">  229</span>        });</div>
+<div class="line"><span class="lineno">  230</span>        this.buttonColorDeco2.icon.color = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco2);</div>
+<div class="line"><span class="lineno">  231</span>        Action&lt;PickerState, Color&gt; &lt;&gt;9__9;</div>
+<div class="line"><span class="lineno">  232</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#ae77735e77ac861fed22a8de66738faa0">buttonColorDeco2</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">  235</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> startColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco2);</div>
+<div class="line"><span class="lineno">  236</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> resetColor = IntColor.FromInt(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.colDeco2);</div>
+<div class="line"><span class="lineno">  237</span>            Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__9) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  239</span>            {</div>
+<div class="line"><span class="lineno">  240</span>                onChangeColor = (&lt;&gt;9__9 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> c)</div>
+<div class="line"><span class="lineno">  241</span>                {</div>
+<div class="line"><span class="lineno">  242</span>                    this.data.colDeco2 = IntColor.ToInt(c);</div>
+<div class="line"><span class="lineno">  243</span>                    this.buttonColorDeco2.icon.color = c;</div>
+<div class="line"><span class="lineno">  244</span>                    this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_function" href="classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  245</span>                });</div>
+<div class="line"><span class="lineno">  246</span>            }</div>
+<div class="line"><span class="lineno">  247</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(startColor, resetColor, onChangeColor);</div>
+<div class="line"><span class="lineno">  248</span>        });</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.cs:857</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_ad37df76017207fd5bc35e213f4cc6ab6"><div class="ttname"><a href="classBaseTileMap.html#ad37df76017207fd5bc35e213f4cc6ab6">BaseTileMap.roofStyles</a></div><div class="ttdeci">RoofStyle[] roofStyles</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03853">BaseTileMap.cs:3853</a></div></div>
+<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00126">ELayer.cs:127</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassELayer_html_ad53616b9a079016467151457786ef3f3"><div class="ttname"><a href="classELayer.html#ad53616b9a079016467151457786ef3f3">ELayer.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00094">ELayer.cs:95</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html_a7bef92c42fdcfea302d10f6efbb34713"><div class="ttname"><a href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">LayerColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a05f44030b160c85ee9e2b1b8d18be43b"><div class="ttname"><a href="classLayerEditHouse.html#a05f44030b160c85ee9e2b1b8d18be43b">LayerEditHouse.buttonColorBlock</a></div><div class="ttdeci">UIButton buttonColorBlock</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00311">LayerEditHouse.cs:311</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a35db829c04510b9a5f8a608486e5656f"><div class="ttname"><a href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">LayerEditHouse.ApplyData</a></div><div class="ttdeci">void ApplyData()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00266">LayerEditHouse.cs:266</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a39d5264d184ab9b977a2aa57d3b8779e"><div class="ttname"><a href="classLayerEditHouse.html#a39d5264d184ab9b977a2aa57d3b8779e">LayerEditHouse.buttonColorDeco</a></div><div class="ttdeci">UIButton buttonColorDeco</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00313">LayerEditHouse.cs:313</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a4c0af16b3d6a2347487ec414a9cb1791"><div class="ttname"><a href="classLayerEditHouse.html#a4c0af16b3d6a2347487ec414a9cb1791">LayerEditHouse.sliderBlock</a></div><div class="ttdeci">UISlider sliderBlock</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00283">LayerEditHouse.cs:283</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_adbf1d8bf2fae148602aacf6341029cb6"><div class="ttname"><a href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">LayerEditHouse.data</a></div><div class="ttdeci">TraitHouseBoard.Data data</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00010">LayerEditHouse.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_ae0e294de1efcaa8f27e2cc377bb8fad4"><div class="ttname"><a href="classLayerEditHouse.html#ae0e294de1efcaa8f27e2cc377bb8fad4">LayerEditHouse.buttonColorRoof</a></div><div class="ttdeci">UIButton buttonColorRoof</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00309">LayerEditHouse.cs:309</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_ae77735e77ac861fed22a8de66738faa0"><div class="ttname"><a href="classLayerEditHouse.html#ae77735e77ac861fed22a8de66738faa0">LayerEditHouse.buttonColorDeco2</a></div><div class="ttdeci">UIButton buttonColorDeco2</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00315">LayerEditHouse.cs:315</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a92b1a12f2812bb1c486ce1b23ce093c9"><div class="ttname"><a href="classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9">RenderRow.tileType</a></div><div class="ttdeci">TileType tileType</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00504">RenderRow.cs:504</a></div></div>
+<div class="ttc" id="aclassRoofStyle_html"><div class="ttname"><a href="classRoofStyle.html">RoofStyle</a></div><div class="ttdef"><b>Definition:</b> <a href="RoofStyle_8cs_source.html#l00005">RoofStyle.cs:6</a></div></div>
+<div class="ttc" id="aclassRoofStyle_html_aaf1c9d850540f499788438ba4b98cf5b"><div class="ttname"><a href="classRoofStyle.html#aaf1c9d850540f499788438ba4b98cf5b">RoofStyle.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="RoofStyle_8cs_source.html#l00044">RoofStyle.cs:45</a></div></div>
+<div class="ttc" id="aclassRoofStyle_html_af714c435f5318217c7f29f97fb89bae3"><div class="ttname"><a href="classRoofStyle.html#af714c435f5318217c7f29f97fb89bae3">RoofStyle.type</a></div><div class="ttdeci">RoofStyle.Type type</div><div class="ttdef"><b>Definition:</b> <a href="RoofStyle_8cs_source.html#l00016">RoofStyle.cs:16</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html"><div class="ttname"><a href="classSourceBlock_1_1Row.html">SourceBlock.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00107">SourceBlock.cs:108</a></div></div>
+<div class="ttc" id="aclassSourceBlock_html"><div class="ttname"><a href="classSourceBlock.html">SourceBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00004">SourceBlock.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceFloor_1_1Row_html"><div class="ttname"><a href="classSourceFloor_1_1Row.html">SourceFloor.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00114">SourceFloor.cs:115</a></div></div>
+<div class="ttc" id="aclassSourceFloor_html"><div class="ttname"><a href="classSourceFloor.html">SourceFloor</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00004">SourceFloor.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6bbe3e57f372109d0661eb0872cf590e"><div class="ttname"><a href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">SourceManager.blocks</a></div><div class="ttdeci">SourceBlock blocks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00177">SourceManager.cs:177</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_af0401efa5aae8bd83979a2a12bad1893"><div class="ttname"><a href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">SourceManager.floors</a></div><div class="ttdeci">SourceFloor floors</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00179">SourceManager.cs:179</a></div></div>
+<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00019">TileRow.cs:19</a></div></div>
+<div class="ttc" id="aclassTileType_html"><div class="ttname"><a href="classTileType.html">TileType</a></div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00006">TileType.cs:7</a></div></div>
+<div class="ttc" id="aclassTileType_html_afca5a7092a22d2536c97994d1f79658d"><div class="ttname"><a href="classTileType.html#afca5a7092a22d2536c97994d1f79658d">TileType.Block</a></div><div class="ttdeci">static TileTypeBlock Block</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00722">TileType.cs:722</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEditHouse_8cs_source.html#l00266">ApplyData()</a>, <a class="el" href="TraitHouseBoard_8cs_source.html#l00067">TraitHouseBoard.ApplyData()</a>, <a class="el" href="TileType_8cs_source.html#l00722">TileType.Block</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00281">board</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00311">buttonColorBlock</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00313">buttonColorDeco</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00315">buttonColorDeco2</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00309">buttonColorRoof</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00011">data</a>, <a class="el" href="SourceManager_8cs_source.html#l00179">SourceManager.floors</a>, <a class="el" href="TileRow_8cs_source.html#l00019">TileRow.id</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03853">BaseTileMap.roofStyles</a>, <a class="el" href="ELayer_8cs_source.html#l00095">ELayer.screen</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.SetColor()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00283">sliderBlock</a>, <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>, <a class="el" href="RenderRow_8cs_source.html#l00504">RenderRow.tileType</a>, <a class="el" href="RoofStyle_8cs_source.html#l00016">RoofStyle.type</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -371,6 +576,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00251">251</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>    {</div>
+<div class="line"><span class="lineno">  253</span>        FileInfo[] list = (from a in <span class="keyword">new</span> DirectoryInfo(CorePath.LotTemplate).GetFiles()</div>
+<div class="line"><span class="lineno">  254</span>        where a.Name.EndsWith(<span class="stringliteral">&quot;.tpl&quot;</span>)</div>
+<div class="line"><span class="lineno">  255</span>        select a).ToArray&lt;FileInfo&gt;();</div>
+<div class="line"><span class="lineno">  256</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#af8fee528be44a5d4e7aa74a3b83d03ca">ddTemplate</a>.SetList&lt;FileInfo&gt;(0, list, (FileInfo a, <span class="keywordtype">int</span> b) =&gt; a.Name, delegate(<span class="keywordtype">int</span> a, FileInfo b)</div>
+<div class="line"><span class="lineno">  257</span>        {</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordtype">int</span> idBGM = this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a>.idBGM;</div>
+<div class="line"><span class="lineno">  259</span>            this.board.data = IO.LoadFile&lt;<a class="code hl_class" href="classTraitHouseBoard.html">TraitHouseBoard</a>.<a class="code hl_class" href="classTraitHouseBoard_1_1Data.html">Data</a>&gt;(b.FullName, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  260</span>            this.board.data.idBGM = idBGM;</div>
+<div class="line"><span class="lineno">  261</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  262</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a8834000c640af9b1815ddd3941fd057a">SetBoard</a>(this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>);</div>
+<div class="line"><span class="lineno">  263</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="ttc" id="aclassLayerEditHouse_html_a8834000c640af9b1815ddd3941fd057a"><div class="ttname"><a href="classLayerEditHouse.html#a8834000c640af9b1815ddd3941fd057a">LayerEditHouse.SetBoard</a></div><div class="ttdeci">void SetBoard(TraitHouseBoard b)</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00034">LayerEditHouse.cs:34</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_af8fee528be44a5d4e7aa74a3b83d03ca"><div class="ttname"><a href="classLayerEditHouse.html#af8fee528be44a5d4e7aa74a3b83d03ca">LayerEditHouse.ddTemplate</a></div><div class="ttdeci">UIDropdown ddTemplate</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00303">LayerEditHouse.cs:303</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html">TraitHouseBoard.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00118">TraitHouseBoard.cs:119</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_html"><div class="ttname"><a href="classTraitHouseBoard.html">TraitHouseBoard</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00005">TraitHouseBoard.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEditHouse_8cs_source.html#l00266">ApplyData()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00281">board</a>, <a class="el" href="TraitHouseBoard_8cs_source.html#l00008">TraitHouseBoard.data</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00303">ddTemplate</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -399,6 +625,134 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00034">34</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        ELayer.screen.tileMap.usingHouseBoard = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   41</span>        this.board = b2;</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a6850a2baa5af6644474ddab7d68aa32f">ddRoofStyle</a>.SetList&lt;<a class="code hl_class" href="classRoofStyle.html">RoofStyle</a>&gt;(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idRoofStyle, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#ad37df76017207fd5bc35e213f4cc6ab6">roofStyles</a>, (<a class="code hl_class" href="classRoofStyle.html">RoofStyle</a> a, <span class="keywordtype">int</span> b) =&gt; a.<a class="code hl_function" href="classRoofStyle.html#ab5f02bb73217155cd018a7e8b7a1eae9">GetName</a>(b).lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classRoofStyle.html">RoofStyle</a> b)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            this.data.idRoofStyle = a;</div>
+<div class="line"><span class="lineno">   45</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   46</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#aea648181b7288d5dd6392f80332d118c">RefreshBlockList</a>();</div>
+<div class="line"><span class="lineno">   47</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a554be2a731a2ea969d27df0dab613606">toggleReverse</a>.SetToggle(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.reverse, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            this.data.reverse = on;</div>
+<div class="line"><span class="lineno">   51</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   52</span>        });</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a1833e13dcf8e5eb37c8bfcb68c9a61d9">toggleAltRoof</a>.SetToggle(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.altRoof, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            this.data.altRoof = on;</div>
+<div class="line"><span class="lineno">   56</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   57</span>        });</div>
+<div class="line"><span class="lineno">   58</span>        List&lt;int&gt; blocks = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   59</span>        blocks.Add(0);</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> row in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.rows)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (row.tileType == <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#aa42a42b8b3f18aa01d39dce4c3ae2db2">Roof</a> &amp;&amp; !row.tag.Contains(<span class="stringliteral">&quot;hidden&quot;</span>))</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                blocks.Add(row.id);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> num = blocks.IndexOf(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idRoofTile);</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            num = 0;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a8cc86d85c98848846ab7fb5e1d449e52">sliderRoof</a>.SetList&lt;<span class="keywordtype">int</span>&gt;(num, blocks, delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            this.data.idRoofTile = b;</div>
+<div class="line"><span class="lineno">   75</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   76</span>        }, (<span class="keywordtype">int</span> a) =&gt; blocks.IndexOf(a).ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>        List&lt;int&gt; ramps = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_class" href="classSourceBlock_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.rows)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (row2.tileType == <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#af7a4c27969fd129853729ae637b770ca">Stairs</a> || row2.tileType == <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5">Slope</a>)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                ramps.Add(row2.id);</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">int</span> num2 = ramps.IndexOf(this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idRamp);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (num2 == -1)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a1e8bea054d4e00f7e8dcb94119c3259f">sliderRamp</a>.SetList&lt;<span class="keywordtype">int</span>&gt;(num2, ramps, delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            this.data.idRamp = b;</div>
+<div class="line"><span class="lineno">   93</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   94</span>        }, (<span class="keywordtype">int</span> a) =&gt; ramps.IndexOf(a).ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a7a6591564d68583b56d9dde142c029fe">sliderWallHeight</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.height, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            this.data.height = (int)a;</div>
+<div class="line"><span class="lineno">   98</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>        }, 1, 20, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a1a18095082aeff20d327b9015b2ef09c">sliderHeightFix</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.heightFix, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            this.data.heightFix = (int)a;</div>
+<div class="line"><span class="lineno">  104</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  106</span>        }, 0, 60, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  107</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a395733c9a9c3a3f87646d469f3f21266">sliderDecoFix</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.decoFix, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            this.data.decoFix = (int)a;</div>
+<div class="line"><span class="lineno">  110</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>        }, -20, 20, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  113</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#aba7d782d0b7ffcc2707e0a2d28ef4d07">sliderDecoFix2</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.decoFix2, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            this.data.decoFix2 = (int)a;</div>
+<div class="line"><span class="lineno">  116</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  118</span>        }, -20, 400, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  119</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a4565d25b1e2f59f085e7197f484a329c">sliderDeco</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idDeco, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            this.data.idDeco = (int)a;</div>
+<div class="line"><span class="lineno">  122</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  124</span>        }, 0, this.<a class="code hl_variable" href="classLayerEditHouse.html#a7eb36cfb9c6f92cd1115093d6abdba71">maxWallDeco</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  125</span>        this.<a class="code hl_variable" href="classLayerEditHouse.html#a96f52fbb6dc01f4f90f906e081ce2c99">sliderDeco2</a>.SetSlider((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerEditHouse.html#adbf1d8bf2fae148602aacf6341029cb6">data</a>.idDeco2, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            this.data.idDeco2 = (int)a;</div>
+<div class="line"><span class="lineno">  128</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f">ApplyData</a>();</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  130</span>        }, 0, this.<a class="code hl_variable" href="classLayerEditHouse.html#a7eb36cfb9c6f92cd1115093d6abdba71">maxWallDeco</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerEditHouse.html#a74f542cce2c531f721775c77e1a713cd">first</a>)</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            this.<a class="code hl_function" href="classLayerEditHouse.html#a8fb969ad91c3465d5ca1124d766ba26e">RefreshTemplates</a>();</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        this.<a class="code hl_function" href="classLayerEditHouse.html#aea648181b7288d5dd6392f80332d118c">RefreshBlockList</a>();</div>
+<div class="line"><span class="lineno">  136</span>        this.first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aclassLayerEditHouse_html_a1a18095082aeff20d327b9015b2ef09c"><div class="ttname"><a href="classLayerEditHouse.html#a1a18095082aeff20d327b9015b2ef09c">LayerEditHouse.sliderHeightFix</a></div><div class="ttdeci">UISlider sliderHeightFix</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00291">LayerEditHouse.cs:291</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a1e8bea054d4e00f7e8dcb94119c3259f"><div class="ttname"><a href="classLayerEditHouse.html#a1e8bea054d4e00f7e8dcb94119c3259f">LayerEditHouse.sliderRamp</a></div><div class="ttdeci">UISlider sliderRamp</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00287">LayerEditHouse.cs:287</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a395733c9a9c3a3f87646d469f3f21266"><div class="ttname"><a href="classLayerEditHouse.html#a395733c9a9c3a3f87646d469f3f21266">LayerEditHouse.sliderDecoFix</a></div><div class="ttdeci">UISlider sliderDecoFix</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00297">LayerEditHouse.cs:297</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a4565d25b1e2f59f085e7197f484a329c"><div class="ttname"><a href="classLayerEditHouse.html#a4565d25b1e2f59f085e7197f484a329c">LayerEditHouse.sliderDeco</a></div><div class="ttdeci">UISlider sliderDeco</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00293">LayerEditHouse.cs:293</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a554be2a731a2ea969d27df0dab613606"><div class="ttname"><a href="classLayerEditHouse.html#a554be2a731a2ea969d27df0dab613606">LayerEditHouse.toggleReverse</a></div><div class="ttdeci">UIButton toggleReverse</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00305">LayerEditHouse.cs:305</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a6850a2baa5af6644474ddab7d68aa32f"><div class="ttname"><a href="classLayerEditHouse.html#a6850a2baa5af6644474ddab7d68aa32f">LayerEditHouse.ddRoofStyle</a></div><div class="ttdeci">UIDropdown ddRoofStyle</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00301">LayerEditHouse.cs:301</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a74f542cce2c531f721775c77e1a713cd"><div class="ttname"><a href="classLayerEditHouse.html#a74f542cce2c531f721775c77e1a713cd">LayerEditHouse.first</a></div><div class="ttdeci">bool first</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00321">LayerEditHouse.cs:321</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a7a6591564d68583b56d9dde142c029fe"><div class="ttname"><a href="classLayerEditHouse.html#a7a6591564d68583b56d9dde142c029fe">LayerEditHouse.sliderWallHeight</a></div><div class="ttdeci">UISlider sliderWallHeight</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00289">LayerEditHouse.cs:289</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a7eb36cfb9c6f92cd1115093d6abdba71"><div class="ttname"><a href="classLayerEditHouse.html#a7eb36cfb9c6f92cd1115093d6abdba71">LayerEditHouse.maxWallDeco</a></div><div class="ttdeci">int maxWallDeco</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00319">LayerEditHouse.cs:319</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a8cc86d85c98848846ab7fb5e1d449e52"><div class="ttname"><a href="classLayerEditHouse.html#a8cc86d85c98848846ab7fb5e1d449e52">LayerEditHouse.sliderRoof</a></div><div class="ttdeci">UISlider sliderRoof</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00285">LayerEditHouse.cs:285</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a8fb969ad91c3465d5ca1124d766ba26e"><div class="ttname"><a href="classLayerEditHouse.html#a8fb969ad91c3465d5ca1124d766ba26e">LayerEditHouse.RefreshTemplates</a></div><div class="ttdeci">void RefreshTemplates()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00251">LayerEditHouse.cs:251</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_a96f52fbb6dc01f4f90f906e081ce2c99"><div class="ttname"><a href="classLayerEditHouse.html#a96f52fbb6dc01f4f90f906e081ce2c99">LayerEditHouse.sliderDeco2</a></div><div class="ttdeci">UISlider sliderDeco2</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00295">LayerEditHouse.cs:295</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_aba7d782d0b7ffcc2707e0a2d28ef4d07"><div class="ttname"><a href="classLayerEditHouse.html#aba7d782d0b7ffcc2707e0a2d28ef4d07">LayerEditHouse.sliderDecoFix2</a></div><div class="ttdeci">UISlider sliderDecoFix2</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00299">LayerEditHouse.cs:299</a></div></div>
+<div class="ttc" id="aclassLayerEditHouse_html_aea648181b7288d5dd6392f80332d118c"><div class="ttname"><a href="classLayerEditHouse.html#aea648181b7288d5dd6392f80332d118c">LayerEditHouse.RefreshBlockList</a></div><div class="ttdeci">void RefreshBlockList()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.cs:139</a></div></div>
+<div class="ttc" id="aclassRoofStyle_html_ab5f02bb73217155cd018a7e8b7a1eae9"><div class="ttname"><a href="classRoofStyle.html#ab5f02bb73217155cd018a7e8b7a1eae9">RoofStyle.GetName</a></div><div class="ttdeci">string GetName(int i)</div><div class="ttdef"><b>Definition:</b> <a href="RoofStyle_8cs_source.html#l00007">RoofStyle.cs:7</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a38f1a362e2021aef4516d1b34101d179"><div class="ttname"><a href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">SourceManager.objs</a></div><div class="ttdeci">SourceObj objs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00183">SourceManager.cs:183</a></div></div>
+<div class="ttc" id="aclassSourceObj_1_1Row_html"><div class="ttname"><a href="classSourceObj_1_1Row.html">SourceObj.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00111">SourceObj.cs:112</a></div></div>
+<div class="ttc" id="aclassSourceObj_html"><div class="ttname"><a href="classSourceObj.html">SourceObj</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00004">SourceObj.cs:5</a></div></div>
+<div class="ttc" id="aclassTileType_html_a5fb9d9984fdf9601c53ba0dd921987f5"><div class="ttname"><a href="classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5">TileType.Slope</a></div><div class="ttdeci">static TileTypeSlope Slope</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00726">TileType.cs:726</a></div></div>
+<div class="ttc" id="aclassTileType_html_aa42a42b8b3f18aa01d39dce4c3ae2db2"><div class="ttname"><a href="classTileType.html#aa42a42b8b3f18aa01d39dce4c3ae2db2">TileType.Roof</a></div><div class="ttdeci">static TileTypeRoof Roof</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00804">TileType.cs:804</a></div></div>
+<div class="ttc" id="aclassTileType_html_af7a4c27969fd129853729ae637b770ca"><div class="ttname"><a href="classTileType.html#af7a4c27969fd129853729ae637b770ca">TileType.Stairs</a></div><div class="ttdeci">static TileTypeStairs Stairs</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00730">TileType.cs:730</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEditHouse_8cs_source.html#l00266">ApplyData()</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00011">data</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00301">ddRoofStyle</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00321">first</a>, <a class="el" href="RoofStyle_8cs_source.html#l00007">RoofStyle.GetName()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00709">BuildMenu.Instance</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00319">maxWallDeco</a>, <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.objs</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00251">RefreshTemplates()</a>, <a class="el" href="TileType_8cs_source.html#l00804">TileType.Roof</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03853">BaseTileMap.roofStyles</a>, <a class="el" href="ELayer_8cs_source.html#l00095">ELayer.screen</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00293">sliderDeco</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00295">sliderDeco2</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00297">sliderDecoFix</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00299">sliderDecoFix2</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00291">sliderHeightFix</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00287">sliderRamp</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00285">sliderRoof</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00289">sliderWallHeight</a>, <a class="el" href="TileType_8cs_source.html#l00726">TileType.Slope</a>, <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>, <a class="el" href="TileType_8cs_source.html#l00730">TileType.Stairs</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00307">toggleAltRoof</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00305">toggleReverse</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00251">RefreshTemplates()</a>.</p>
 
 </div>
 </div>
@@ -417,6 +771,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00281">281</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00266">ApplyData()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00018">OnInit()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00251">RefreshTemplates()</a>.</p>
+
 </div>
 </div>
 <a id="a05f44030b160c85ee9e2b1b8d18be43b" name="a05f44030b160c85ee9e2b1b8d18be43b"></a>
@@ -432,6 +788,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00311">311</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>.</p>
 
 </div>
 </div>
@@ -449,6 +807,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00313">313</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>.</p>
+
 </div>
 </div>
 <a id="ae77735e77ac861fed22a8de66738faa0" name="ae77735e77ac861fed22a8de66738faa0"></a>
@@ -464,6 +824,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00315">315</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>.</p>
 
 </div>
 </div>
@@ -481,6 +843,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00309">309</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>.</p>
+
 </div>
 </div>
 <a id="a6850a2baa5af6644474ddab7d68aa32f" name="a6850a2baa5af6644474ddab7d68aa32f"></a>
@@ -497,6 +861,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00301">301</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="af8fee528be44a5d4e7aa74a3b83d03ca" name="af8fee528be44a5d4e7aa74a3b83d03ca"></a>
@@ -512,6 +878,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00303">303</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00251">RefreshTemplates()</a>.</p>
 
 </div>
 </div>
@@ -537,6 +905,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00321">321</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="a7eb36cfb9c6f92cd1115093d6abdba71" name="a7eb36cfb9c6f92cd1115093d6abdba71"></a>
@@ -552,6 +922,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00319">319</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -569,6 +941,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00283">283</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>.</p>
+
 </div>
 </div>
 <a id="a4565d25b1e2f59f085e7197f484a329c" name="a4565d25b1e2f59f085e7197f484a329c"></a>
@@ -584,6 +958,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00293">293</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -601,6 +977,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00295">295</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="a395733c9a9c3a3f87646d469f3f21266" name="a395733c9a9c3a3f87646d469f3f21266"></a>
@@ -616,6 +994,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00297">297</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -633,6 +1013,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00299">299</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="a1a18095082aeff20d327b9015b2ef09c" name="a1a18095082aeff20d327b9015b2ef09c"></a>
@@ -648,6 +1030,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00291">291</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -665,6 +1049,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00287">287</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="a8cc86d85c98848846ab7fb5e1d449e52" name="a8cc86d85c98848846ab7fb5e1d449e52"></a>
@@ -680,6 +1066,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00285">285</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -697,6 +1085,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00289">289</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <a id="a1833e13dcf8e5eb37c8bfcb68c9a61d9" name="a1833e13dcf8e5eb37c8bfcb68c9a61d9"></a>
@@ -712,6 +1102,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00307">307</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00266">ApplyData()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -745,6 +1137,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00305">305</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -769,6 +1163,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEditHouse_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classLayerEditHouse.html#a427c9e2d562813680287c6931c9925a2">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00139">RefreshBlockList()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00034">SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -776,9 +1178,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="LayerEditHouse_8cs_source.html">LayerEditHouse.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerEditHouse.html">LayerEditHouse</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

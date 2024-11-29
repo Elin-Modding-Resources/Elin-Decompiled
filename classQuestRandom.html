@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestRandom.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -463,6 +483,82 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a33e9857d888452b864384d509105df73">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00053">53</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> num = this.bonusMoney * (55 + this.difficulty * 15) / 100;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> num2 = this.rewardMoney + num;</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;reward_bonus&quot;</span>, num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            base.DropReward(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ae7d129df204b9092499fad5f944c750e">CreateCurrency</a>(num2, <span class="stringliteral">&quot;money&quot;</span>));</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">GetTopZone</a>();</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> ((!zone.<a class="code hl_property" href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">IsTown</a> || zone.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>) &amp;&amp; base.ClientZone != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_class" href="classZone.html">Zone</a> topZone = base.ClientZone.<a class="code hl_function" href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">GetTopZone</a>();</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (topZone.<a class="code hl_property" href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">IsTown</a> &amp;&amp; !topZone.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                zone = topZone;</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        Rand.SetSeed(this.<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = Util.EnumToList&lt;<a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_enumeration" href="classQuest.html#a14a357f3949714e4cdad890ae074aaa2">SubReward</a>&gt;().RandomItem&lt;Quest.SubReward&gt;().ToString();</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">id</span> = <span class="stringliteral">&quot;gacha_coin_silver&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(15) == 0)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">id</span> = <span class="stringliteral">&quot;gacha_coin_gold&quot;</span>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="keywordtype">id</span>, -1, -1);</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;ticket_furniture&quot;</span>)</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_class" href="classTraitTicketFurniture.html">TraitTicketFurniture</a>.<a class="code hl_function" href="classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244">SetZone</a>(zone, thing);</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        base.DropReward(thing);</div>
+<div class="line"><span class="lineno">   90</span>        thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;plat&quot;</span>, -1, -1).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(this.<a class="code hl_function" href="classQuest.html#a2a1c146a6ef577a0040fd40dc442020a">GetRewardPlat</a>(num2));</div>
+<div class="line"><span class="lineno">   91</span>        base.DropReward(thing);</div>
+<div class="line"><span class="lineno">   92</span>        Rand.SetSeed(-1);</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (zone.<a class="code hl_property" href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">IsTown</a> || zone.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            zone.<a class="code hl_function" href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">GetTopZone</a>().<a class="code hl_function" href="classZone.html#ab864eb4a164bf0657c39a99cc3192f83">ModInfluence</a>(1);</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQuestRandom.html#aeeee76be886c6da7347c2f0c465ce751">FameOnComplete</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a391b7a6d75efa53d2426e23201c380ec">ModFame</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(<span class="keyword">this</span>.FameOnComplete));</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03467">Card.cs:3467</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_aab84d4222ba97e33775a9b7f3a2785dd"><div class="ttname"><a href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">EClass.rndHalf</a></div><div class="ttdeci">static int rndHalf(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00198">EClass.cs:198</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a391b7a6d75efa53d2426e23201c380ec"><div class="ttname"><a href="classPlayer.html#a391b7a6d75efa53d2426e23201c380ec">Player.ModFame</a></div><div class="ttdeci">void ModFame(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00868">Player.cs:868</a></div></div>
+<div class="ttc" id="aclassQuestRandom_html_aeeee76be886c6da7347c2f0c465ce751"><div class="ttname"><a href="classQuestRandom.html#aeeee76be886c6da7347c2f0c465ce751">QuestRandom.FameOnComplete</a></div><div class="ttdeci">override int FameOnComplete</div><div class="ttdef"><b>Definition:</b> <a href="QuestRandom_8cs_source.html#l00037">QuestRandom.cs:38</a></div></div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_a14a357f3949714e4cdad890ae074aaa2"><div class="ttname"><a href="classQuest.html#a14a357f3949714e4cdad890ae074aaa2">Quest.SubReward</a></div><div class="ttdeci">SubReward</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00830">Quest.cs:831</a></div></div>
+<div class="ttc" id="aclassQuest_html_a217a870eaef419b26ab35fc5b0805910"><div class="ttname"><a href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">Quest.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00772">Quest.cs:772</a></div></div>
+<div class="ttc" id="aclassQuest_html_a2a1c146a6ef577a0040fd40dc442020a"><div class="ttname"><a href="classQuest.html#a2a1c146a6ef577a0040fd40dc442020a">Quest.GetRewardPlat</a></div><div class="ttdeci">virtual int GetRewardPlat(int money)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00270">Quest.cs:270</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_ae7d129df204b9092499fad5f944c750e"><div class="ttname"><a href="classThingGen.html#ae7d129df204b9092499fad5f944c750e">ThingGen.CreateCurrency</a></div><div class="ttdeci">static Thing CreateCurrency(int a, string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00043">ThingGen.cs:43</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitTicketFurniture_html"><div class="ttname"><a href="classTraitTicketFurniture.html">TraitTicketFurniture</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitTicketFurniture_8cs_source.html#l00004">TraitTicketFurniture.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitTicketFurniture_html_a96306db452cd06ecd5623c3d3e414244"><div class="ttname"><a href="classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244">TraitTicketFurniture.SetZone</a></div><div class="ttdeci">static void SetZone(Zone zone, Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitTicketFurniture_8cs_source.html#l00085">TraitTicketFurniture.cs:85</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02223">Zone.cs:2223</a></div></div>
+<div class="ttc" id="aclassZone_html_a98e18c99b9b4dd93176e660a5c545d74"><div class="ttname"><a href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">Zone.IsTown</a></div><div class="ttdeci">virtual bool IsTown</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00288">Zone.cs:289</a></div></div>
+<div class="ttc" id="aclassZone_html_ab864eb4a164bf0657c39a99cc3192f83"><div class="ttname"><a href="classZone.html#ab864eb4a164bf0657c39a99cc3192f83">Zone.ModInfluence</a></div><div class="ttdeci">void ModInfluence(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03535">Zone.cs:3535</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00043">ThingGen.CreateCurrency()</a>, <a class="el" href="QuestRandom_8cs_source.html#l00038">FameOnComplete</a>, <a class="el" href="Quest_8cs_source.html#l00270">Quest.GetRewardPlat()</a>, <a class="el" href="Zone_8cs_source.html#l02223">Zone.GetTopZone()</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="Zone_8cs_source.html#l00289">Zone.IsTown</a>, <a class="el" href="Player_8cs_source.html#l00868">Player.ModFame()</a>, <a class="el" href="Zone_8cs_source.html#l03535">Zone.ModInfluence()</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00198">EClass.rndHalf()</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l03467">Card.SetNum()</a>, <a class="el" href="TraitTicketFurniture_8cs_source.html#l00085">TraitTicketFurniture.SetZone()</a>, and <a class="el" href="Quest_8cs_source.html#l00772">Quest.uid</a>.</p>
 
 </div>
 </div>
@@ -488,7 +584,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeeee76be886c6da7347c2f0c465ce751" name="aeeee76be886c6da7347c2f0c465ce751"></a>
@@ -512,6 +614,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00037">37</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> 4 + this.difficulty * 2;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestRandom_8cs_source.html#l00053">OnDropReward()</a>.</p>
 
 </div>
 </div>
@@ -536,7 +646,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1b45862340397c921ecb04dd215371fd" name="a1b45862340397c921ecb04dd215371fd"></a>
@@ -560,7 +676,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00029">29</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> -5;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1dc12b77423d3fb0f4d2a59fb626dc9d" name="a1dc12b77423d3fb0f4d2a59fb626dc9d"></a>
@@ -584,7 +706,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00021">21</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> 12;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8644f960c225228d40c475a0eac15ebc" name="a8644f960c225228d40c475a0eac15ebc"></a>
@@ -608,16 +736,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestRandom_8cs_source.html#l00045">45</a> of file <a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> Lang._currency(this.<a class="code hl_variable" href="classQuest.html#a699208e8c562468167a60116cec6fece">rewardMoney</a>, <span class="keyword">true</span>, 0);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassQuest_html_a699208e8c562468167a60116cec6fece"><div class="ttname"><a href="classQuest.html#a699208e8c562468167a60116cec6fece">Quest.rewardMoney</a></div><div class="ttdeci">int rewardMoney</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00790">Quest.cs:790</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestRandom_8cs_source.html">QuestRandom.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestRandom.html">QuestRandom</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

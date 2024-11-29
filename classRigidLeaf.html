@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classRigidLeaf.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -218,6 +238,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00006">6</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.maxTime = UnityEngine.Random.Range(0.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>, 1.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>);</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassRigidLeaf_html_a7ed3bdfe281b508647006e997b573b10"><div class="ttname"><a href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">RigidLeaf.f</a></div><div class="ttdeci">float f</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00057">RigidLeaf.cs:57</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RigidLeaf_8cs_source.html#l00057">f</a>.</p>
 
 </div>
 </div>
@@ -247,6 +273,46 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">RigidUpdate</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00011">11</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        Vector3 position = base.transform.position;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (base.transform.position.y &lt; 3<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            this.power -= Time.fixedDeltaTime * 0.03f;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            this.power = 1<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidLeaf.html#a07620671ba8c7c51cc4b97e58edefeb0">power</a> &lt; 0<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        this.time += this.flip * 0.01f;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidLeaf.html#aace88b621bad193ee99fd88bb9710c15">time</a> &gt; this.<a class="code hl_variable" href="classRigidLeaf.html#af594c89c2d89e150aeed1a9f9fa9a00c">maxTime</a>)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            this.maxTime = UnityEngine.Random.Range(0.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>, 1.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>);</div>
+<div class="line"><span class="lineno">   30</span>            this.time = this.<a class="code hl_variable" href="classRigidLeaf.html#af594c89c2d89e150aeed1a9f9fa9a00c">maxTime</a>;</div>
+<div class="line"><span class="lineno">   31</span>            this.flip = -1<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidLeaf.html#aace88b621bad193ee99fd88bb9710c15">time</a> &lt; 0<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            this.maxTime = UnityEngine.Random.Range(0.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>, 1.5<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>);</div>
+<div class="line"><span class="lineno">   36</span>            this.time = 0<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>;</div>
+<div class="line"><span class="lineno">   37</span>            this.flip = 1<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        this.f = this.time - this.maxTime * 0.5f;</div>
+<div class="line"><span class="lineno">   40</span>        this.v.x = this.f * this.slidePower * this.<a class="code hl_variable" href="classRigidLeaf.html#a07620671ba8c7c51cc4b97e58edefeb0">power</a>;</div>
+<div class="line"><span class="lineno">   41</span>        this.v.y = (10<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a> - Mathf.Clamp(((this.<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a> &gt; 0<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>) ? this.<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a> : (-this.<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>)) * 10<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>, 0f, 10<a class="code hl_variable" href="classRigidLeaf.html#a7ed3bdfe281b508647006e997b573b10">f</a>)) * this.<a class="code hl_variable" href="classRigidLeaf.html#a18648e3a962d24009f4688462039d934">floatPower</a> * this.power;</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.AddForce(this.<a class="code hl_variable" href="classRigidLeaf.html#a44354dce9b0e75c924caf7d80415aeba">v</a>);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassRigidLeaf_html_a07620671ba8c7c51cc4b97e58edefeb0"><div class="ttname"><a href="classRigidLeaf.html#a07620671ba8c7c51cc4b97e58edefeb0">RigidLeaf.power</a></div><div class="ttdeci">float power</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00059">RigidLeaf.cs:59</a></div></div>
+<div class="ttc" id="aclassRigidLeaf_html_a18648e3a962d24009f4688462039d934"><div class="ttname"><a href="classRigidLeaf.html#a18648e3a962d24009f4688462039d934">RigidLeaf.floatPower</a></div><div class="ttdeci">float floatPower</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00045">RigidLeaf.cs:45</a></div></div>
+<div class="ttc" id="aclassRigidLeaf_html_a44354dce9b0e75c924caf7d80415aeba"><div class="ttname"><a href="classRigidLeaf.html#a44354dce9b0e75c924caf7d80415aeba">RigidLeaf.v</a></div><div class="ttdeci">Vector2 v</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00049">RigidLeaf.cs:49</a></div></div>
+<div class="ttc" id="aclassRigidLeaf_html_aace88b621bad193ee99fd88bb9710c15"><div class="ttname"><a href="classRigidLeaf.html#aace88b621bad193ee99fd88bb9710c15">RigidLeaf.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00053">RigidLeaf.cs:53</a></div></div>
+<div class="ttc" id="aclassRigidLeaf_html_af594c89c2d89e150aeed1a9f9fa9a00c"><div class="ttname"><a href="classRigidLeaf.html#af594c89c2d89e150aeed1a9f9fa9a00c">RigidLeaf.maxTime</a></div><div class="ttdeci">float maxTime</div><div class="ttdef"><b>Definition:</b> <a href="RigidLeaf_8cs_source.html#l00055">RigidLeaf.cs:55</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a28c0e5089380e6875b10fd28525585a2"><div class="ttname"><a href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">RigidUpdate.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.cs:30</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RigidLeaf_8cs_source.html#l00057">f</a>, <a class="el" href="RigidLeaf_8cs_source.html#l00045">floatPower</a>, <a class="el" href="RigidLeaf_8cs_source.html#l00055">maxTime</a>, <a class="el" href="RigidLeaf_8cs_source.html#l00059">power</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.rb</a>, <a class="el" href="RigidLeaf_8cs_source.html#l00053">time</a>, and <a class="el" href="RigidLeaf_8cs_source.html#l00049">v</a>.</p>
 
 </div>
 </div>
@@ -272,6 +338,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00057">57</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00006">Awake()</a>, and <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -313,6 +381,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00045">45</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="af594c89c2d89e150aeed1a9f9fa9a00c" name="af594c89c2d89e150aeed1a9f9fa9a00c"></a>
@@ -337,6 +407,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00055">55</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a07620671ba8c7c51cc4b97e58edefeb0" name="a07620671ba8c7c51cc4b97e58edefeb0"></a>
@@ -360,6 +432,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00059">59</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -401,6 +475,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00053">53</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a44354dce9b0e75c924caf7d80415aeba" name="a44354dce9b0e75c924caf7d80415aeba"></a>
@@ -425,15 +501,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RigidLeaf_8cs_source.html#l00049">49</a> of file <a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RigidLeaf_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="RigidLeaf_8cs_source.html">RigidLeaf.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRigidLeaf.html">RigidLeaf</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

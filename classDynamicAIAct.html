@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDynamicAIAct.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -711,7 +731,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00043">43</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        this.lang = _lang;</div>
+<div class="line"><span class="lineno">   46</span>        this.onPerform = _onPerform;</div>
+<div class="line"><span class="lineno">   47</span>        this.closeLayers = _closeLayers;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -742,6 +767,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#ad78fda455786213d477bf3acfd262968">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00038">38</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> Lang.Get(this.<a class="code hl_variable" href="classDynamicAIAct.html#abe6253dbf8c03f75dca015031016095b">lang</a>);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassDynamicAIAct_html_abe6253dbf8c03f75dca015031016095b"><div class="ttname"><a href="classDynamicAIAct.html#abe6253dbf8c03f75dca015031016095b">DynamicAIAct.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00074">DynamicAIAct.cs:74</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DynamicAIAct_8cs_source.html#l00074">lang</a>.</p>
 
 </div>
 </div>
@@ -771,6 +802,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a20e6b5800ce4af521458d369ec4792de">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00050">50</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classDynamicAIAct.html#ac88a1049c7dcad730cd6b5f71688acea">pos</a> != <span class="keyword">null</span> || this.<a class="code hl_variable" href="classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3">wait</a> &gt; 1)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> base.Perform();</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> this.onPerform != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classDynamicAIAct.html#ac8475bddcb450d98cf3eb19b86297546">onPerform</a>();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassDynamicAIAct_html_ab7fbbce1bdf65d99146fcfd8855912f3"><div class="ttname"><a href="classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3">DynamicAIAct.wait</a></div><div class="ttdeci">int wait</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00084">DynamicAIAct.cs:84</a></div></div>
+<div class="ttc" id="aclassDynamicAIAct_html_ac8475bddcb450d98cf3eb19b86297546"><div class="ttname"><a href="classDynamicAIAct.html#ac8475bddcb450d98cf3eb19b86297546">DynamicAIAct.onPerform</a></div><div class="ttdeci">Func&lt; bool &gt; onPerform</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00076">DynamicAIAct.cs:76</a></div></div>
+<div class="ttc" id="aclassDynamicAIAct_html_ac88a1049c7dcad730cd6b5f71688acea"><div class="ttname"><a href="classDynamicAIAct.html#ac88a1049c7dcad730cd6b5f71688acea">DynamicAIAct.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00080">DynamicAIAct.cs:80</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DynamicAIAct_8cs_source.html#l00076">onPerform</a>, <a class="el" href="DynamicAIAct_8cs_source.html#l00080">pos</a>, and <a class="el" href="DynamicAIAct_8cs_source.html#l00084">wait</a>.</p>
 
 </div>
 </div>
@@ -800,6 +843,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00059">59</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classDynamicAIAct.html#ac88a1049c7dcad730cd6b5f71688acea">pos</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            yield <span class="keywordflow">return</span> base.DoGotoInteraction(this.<a class="code hl_variable" href="classDynamicAIAct.html#ac88a1049c7dcad730cd6b5f71688acea">pos</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(this.<a class="code hl_variable" href="classDynamicAIAct.html#ac88a1049c7dcad730cd6b5f71688acea">pos</a>);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        yield <span class="keywordflow">return</span> base.DoWait(this.<a class="code hl_variable" href="classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3">wait</a>);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classDynamicAIAct.html#ac8475bddcb450d98cf3eb19b86297546">onPerform</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            this.<a class="code hl_variable" href="classDynamicAIAct.html#ac8475bddcb450d98cf3eb19b86297546">onPerform</a>();</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassChara_html_adfc4e346a21e435fbd52582af3788692"><div class="ttname"><a href="classChara.html#adfc4e346a21e435fbd52582af3788692">Chara.LookAt</a></div><div class="ttdeci">override void LookAt(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03048">Chara.cs:3048</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l03048">Chara.LookAt()</a>, <a class="el" href="DynamicAIAct_8cs_source.html#l00076">onPerform</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="DynamicAIAct_8cs_source.html#l00080">pos</a>, and <a class="el" href="DynamicAIAct_8cs_source.html#l00084">wait</a>.</p>
 
 </div>
 </div>
@@ -850,6 +910,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00074">74</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DynamicAIAct_8cs_source.html#l00038">GetText()</a>.</p>
+
 </div>
 </div>
 <a id="ac8475bddcb450d98cf3eb19b86297546" name="ac8475bddcb450d98cf3eb19b86297546"></a>
@@ -865,6 +927,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00076">76</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DynamicAIAct_8cs_source.html#l00050">Perform()</a>, and <a class="el" href="DynamicAIAct_8cs_source.html#l00059">Run()</a>.</p>
 
 </div>
 </div>
@@ -882,6 +946,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00080">80</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DynamicAIAct_8cs_source.html#l00050">Perform()</a>, and <a class="el" href="DynamicAIAct_8cs_source.html#l00059">Run()</a>.</p>
+
 </div>
 </div>
 <a id="ab7fbbce1bdf65d99146fcfd8855912f3" name="ab7fbbce1bdf65d99146fcfd8855912f3"></a>
@@ -897,6 +963,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00084">84</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DynamicAIAct_8cs_source.html#l00050">Perform()</a>, and <a class="el" href="DynamicAIAct_8cs_source.html#l00059">Run()</a>.</p>
 
 </div>
 </div>
@@ -922,7 +990,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00006">6</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6d6dc47c7dc02b90f04b110f9e10201" name="ac6d6dc47c7dc02b90f04b110f9e10201"></a>
@@ -946,7 +1020,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00030">30</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDynamicAIAct.html#ae2e030982146cb07bbf26149a8420367">closeLayers</a>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassDynamicAIAct_html_ae2e030982146cb07bbf26149a8420367"><div class="ttname"><a href="classDynamicAIAct.html#ae2e030982146cb07bbf26149a8420367">DynamicAIAct.closeLayers</a></div><div class="ttdeci">bool closeLayers</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00078">DynamicAIAct.cs:78</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d09402443e4c9b4a052d8cbc6816d21" name="a8d09402443e4c9b4a052d8cbc6816d21"></a>
@@ -970,7 +1051,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00022">22</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDynamicAIAct.html#aa5432ca6efc645c3b6f7ca909aed5c2a">cursor</a>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassDynamicAIAct_html_aa5432ca6efc645c3b6f7ca909aed5c2a"><div class="ttname"><a href="classDynamicAIAct.html#aa5432ca6efc645c3b6f7ca909aed5c2a">DynamicAIAct.cursor</a></div><div class="ttdeci">CursorInfo cursor</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAIAct_8cs_source.html#l00082">DynamicAIAct.cs:82</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4696205a1a4e293595b0baa4264f1b6a" name="a4696205a1a4e293595b0baa4264f1b6a"></a>
@@ -994,16 +1082,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicAIAct_8cs_source.html#l00014">14</a> of file <a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> base.PerformDistance;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="DynamicAIAct_8cs_source.html">DynamicAIAct.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDynamicAIAct.html">DynamicAIAct</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

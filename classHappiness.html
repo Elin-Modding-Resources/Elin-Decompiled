@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHappiness.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -218,6 +238,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00088">88</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keyword">using</span> (List&lt;Chara&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (enumerator.Current.memberType == <span class="keyword">this</span>.type)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    num++;</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01689">FactionBranch.cs:1689</a></div></div>
+<div class="ttc" id="aclassHappiness_html_a643ab32bac760219ef3a23f67713ad84"><div class="ttname"><a href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">Happiness.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00125">Happiness.cs:125</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Happiness_8cs_source.html#l00125">branch</a>, and <a class="el" href="FactionBranch_8cs_source.html#l01689">FactionBranch.members</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00057">GetText()</a>.</p>
 
 </div>
 </div>
@@ -245,6 +285,42 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00033">33</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> num = 50;</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0">food</a>.<a class="code hl_variable" href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">value</a> &lt; 0)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            num -= 100;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        num += (this.branch.resources.fun.value - 50) / 4;</div>
+<div class="line"><span class="lineno">   41</span>        num += (this.branch.resources.culture.value - 50) / 4;</div>
+<div class="line"><span class="lineno">   42</span>        num += (this.branch.resources.medicine.value - 50) / 4;</div>
+<div class="line"><span class="lineno">   43</span>        num += (this.branch.resources.safety.value - 50) / 4;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseHomeResource.html">BaseHomeResource</a> baseHomeResource <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#ab73d5050469d309262621f288e366c14">list</a>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> policy <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHappiness.html#a643ab32bac760219ef3a23f67713ad84">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">policies</a>.<a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        num += this.<a class="code hl_variable" href="classHappiness.html#a04906239c3c035780ed0e49dd8fcbd2a">modPolicy</a>;</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassBaseHomeResource_html"><div class="ttname"><a href="classBaseHomeResource.html">BaseHomeResource</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00005">BaseHomeResource.cs:6</a></div></div>
+<div class="ttc" id="aclassBaseHomeResource_html_ab597696a062aed674dccc8c4882d56be"><div class="ttname"><a href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">BaseHomeResource.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00134">BaseHomeResource.cs:134</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ac9fa716fbbf8854874b6ec3bfc640ec3"><div class="ttname"><a href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">FactionBranch.policies</a></div><div class="ttdeci">PolicyManager policies</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01643">FactionBranch.cs:1643</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ae50927e9082d4a32af38b7340c2758a9"><div class="ttname"><a href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">FactionBranch.resources</a></div><div class="ttdeci">HomeResourceManager resources</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01637">FactionBranch.cs:1637</a></div></div>
+<div class="ttc" id="aclassHappiness_html_a04906239c3c035780ed0e49dd8fcbd2a"><div class="ttname"><a href="classHappiness.html#a04906239c3c035780ed0e49dd8fcbd2a">Happiness.modPolicy</a></div><div class="ttdeci">int modPolicy</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00123">Happiness.cs:123</a></div></div>
+<div class="ttc" id="aclassHomeResourceManager_html_a5b08cf3b2a7e3e302fd35b51bab6c7f0"><div class="ttname"><a href="classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0">HomeResourceManager.food</a></div><div class="ttdeci">HomeResource food</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00081">HomeResourceManager.cs:81</a></div></div>
+<div class="ttc" id="aclassHomeResourceManager_html_ab73d5050469d309262621f288e366c14"><div class="ttname"><a href="classHomeResourceManager.html#ab73d5050469d309262621f288e366c14">HomeResourceManager.list</a></div><div class="ttdeci">List&lt; BaseHomeResource &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00126">HomeResourceManager.cs:126</a></div></div>
+<div class="ttc" id="aclassPolicyManager_html_abb8c5915395e73cea689ac06feb94695"><div class="ttname"><a href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">PolicyManager.list</a></div><div class="ttdeci">List&lt; Policy &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00163">PolicyManager.cs:163</a></div></div>
+<div class="ttc" id="aclassPolicy_html"><div class="ttname"><a href="classPolicy.html">Policy</a></div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00005">Policy.2.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Happiness_8cs_source.html#l00125">branch</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00081">HomeResourceManager.food</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00126">HomeResourceManager.list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00163">PolicyManager.list</a>, <a class="el" href="FactionBranch_8cs_source.html#l01689">FactionBranch.members</a>, <a class="el" href="Happiness_8cs_source.html#l00123">modPolicy</a>, <a class="el" href="FactionBranch_8cs_source.html#l01643">FactionBranch.policies</a>, <a class="el" href="FactionBranch_8cs_source.html#l01637">FactionBranch.resources</a>, and <a class="el" href="BaseHomeResource_8cs_source.html#l00134">BaseHomeResource.value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00022">OnAdvanceDay()</a>, and <a class="el" href="Happiness_8cs_source.html#l00104">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -272,6 +348,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00057">57</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classHappiness.html#a28550305ce98535fd6642dfe87e6c623">CountMembers</a>() == 0)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot; - %&quot;</span>.TagColor(FontColor.Passive, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a>.ToString() + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> num = this.value - this.<a class="code hl_variable" href="classHappiness.html#ae30199b38a5f21b09dcb839bec22cd6b">lastValue</a>;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a> &lt;= 30)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.TagColor(FontColor.Bad, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a> &gt;= 70)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.TagColor(FontColor.Good, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">string</span> str = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            str = <span class="stringliteral">&quot;↑&quot;</span>.TagColor(FontColor.Good, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            str = <span class="stringliteral">&quot;↓&quot;</span>.TagColor(FontColor.Bad, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; &quot;</span> + str;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassHappiness_html_a28550305ce98535fd6642dfe87e6c623"><div class="ttname"><a href="classHappiness.html#a28550305ce98535fd6642dfe87e6c623">Happiness.CountMembers</a></div><div class="ttdeci">int CountMembers()</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00088">Happiness.cs:88</a></div></div>
+<div class="ttc" id="aclassHappiness_html_a60c22767370cb4c8b08b309a11fc5022"><div class="ttname"><a href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">Happiness.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00118">Happiness.cs:118</a></div></div>
+<div class="ttc" id="aclassHappiness_html_ae30199b38a5f21b09dcb839bec22cd6b"><div class="ttname"><a href="classHappiness.html#ae30199b38a5f21b09dcb839bec22cd6b">Happiness.lastValue</a></div><div class="ttdeci">int lastValue</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00121">Happiness.cs:121</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Happiness_8cs_source.html#l00088">CountMembers()</a>, <a class="el" href="Happiness_8cs_source.html#l00121">lastValue</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="Happiness_8cs_source.html#l00118">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentHomeReport_8cs_source.html#l00022">ContentHomeReport.RefreshInfo()</a>, and <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -299,6 +412,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00022">22</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        this.lastValue = this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a>;</div>
+<div class="line"><span class="lineno">   25</span>        this.value = (int)Mathf.Lerp((<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a>, (float)this.<a class="code hl_function" href="classHappiness.html#a6a563cb264f6ea2ba5a805b5daac7013">GetTargetValue</a>(), 0.1f);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassHappiness_html_a6a563cb264f6ea2ba5a805b5daac7013"><div class="ttname"><a href="classHappiness.html#a6a563cb264f6ea2ba5a805b5daac7013">Happiness.GetTargetValue</a></div><div class="ttdeci">int GetTargetValue()</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00033">Happiness.cs:33</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Happiness_8cs_source.html#l00033">GetTargetValue()</a>, and <a class="el" href="Happiness_8cs_source.html#l00118">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HappinessManager_8cs_source.html#l00043">HappinessManager.OnSimulateDay()</a>.</p>
 
 </div>
 </div>
@@ -326,6 +448,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00028">28</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        this.modPolicy = 0;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="PolicyManager_8cs_source.html#l00138">PolicyManager.RefreshEffects()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +491,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00016">16</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        this.branch = _branch;</div>
+<div class="line"><span class="lineno">   19</span>        this.type = _type;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2ec3f84102d7d90259f8303585f3d25e" name="a2ec3f84102d7d90259f8303585f3d25e"></a>
@@ -392,6 +523,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00104">104</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        n.Clear();</div>
+<div class="line"><span class="lineno">  107</span>        n.AddHeader(this.<a class="code hl_property" href="classHappiness.html#a8e29e922aa76d7fa8050ddb14e0436d1">Name</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  108</span>        n.Space(0, 1);</div>
+<div class="line"><span class="lineno">  109</span>        n.AddText(<span class="stringliteral">&quot;vTarget&quot;</span>.lang() + this.<a class="code hl_function" href="classHappiness.html#a6a563cb264f6ea2ba5a805b5daac7013">GetTargetValue</a>().ToString(), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">  110</span>        n.AddText(<span class="stringliteral">&quot;vCurrent&quot;</span>.lang() + this.<a class="code hl_variable" href="classHappiness.html#a60c22767370cb4c8b08b309a11fc5022">value</a>.ToString(), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">  111</span>        n.AddText(<span class="stringliteral">&quot;vLast&quot;</span>.lang() + this.<a class="code hl_variable" href="classHappiness.html#ae30199b38a5f21b09dcb839bec22cd6b">lastValue</a>.ToString(), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">  112</span>        n.Space(0, 1);</div>
+<div class="line"><span class="lineno">  113</span>        n.AddText(<span class="stringliteral">&quot;policyHappiness&quot;</span>.lang(this.<a class="code hl_variable" href="classHappiness.html#a04906239c3c035780ed0e49dd8fcbd2a">modPolicy</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">  114</span>        n.Build();</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="ttc" id="aclassHappiness_html_a8e29e922aa76d7fa8050ddb14e0436d1"><div class="ttname"><a href="classHappiness.html#a8e29e922aa76d7fa8050ddb14e0436d1">Happiness.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00008">Happiness.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Happiness_8cs_source.html#l00033">GetTargetValue()</a>, <a class="el" href="Happiness_8cs_source.html#l00121">lastValue</a>, <a class="el" href="Happiness_8cs_source.html#l00123">modPolicy</a>, <a class="el" href="Happiness_8cs_source.html#l00009">Name</a>, and <a class="el" href="Happiness_8cs_source.html#l00118">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentHomeReport_8cs_source.html#l00022">ContentHomeReport.RefreshInfo()</a>, and <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -410,6 +557,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00125">125</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00088">CountMembers()</a>, and <a class="el" href="Happiness_8cs_source.html#l00033">GetTargetValue()</a>.</p>
+
 </div>
 </div>
 <a id="ae30199b38a5f21b09dcb839bec22cd6b" name="ae30199b38a5f21b09dcb839bec22cd6b"></a>
@@ -426,6 +575,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00121">121</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00057">GetText()</a>, and <a class="el" href="Happiness_8cs_source.html#l00104">WriteNote()</a>.</p>
+
 </div>
 </div>
 <a id="a04906239c3c035780ed0e49dd8fcbd2a" name="a04906239c3c035780ed0e49dd8fcbd2a"></a>
@@ -441,6 +592,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00123">123</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00033">GetTargetValue()</a>, and <a class="el" href="Happiness_8cs_source.html#l00104">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -474,6 +627,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00118">118</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00057">GetText()</a>, <a class="el" href="Happiness_8cs_source.html#l00022">OnAdvanceDay()</a>, and <a class="el" href="Happiness_8cs_source.html#l00104">WriteNote()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -498,6 +653,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Happiness_8cs_source.html#l00008">8</a> of file <a class="el" href="Happiness_8cs_source.html">Happiness.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> (<span class="stringliteral">&quot;member&quot;</span> + this.<a class="code hl_variable" href="classHappiness.html#a938b90039a4ed6eeacef0e4a834db296">type</a>.ToString()).lang();</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassHappiness_html_a938b90039a4ed6eeacef0e4a834db296"><div class="ttname"><a href="classHappiness.html#a938b90039a4ed6eeacef0e4a834db296">Happiness.type</a></div><div class="ttdeci">FactionMemberType type</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00127">Happiness.cs:127</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Happiness_8cs_source.html#l00104">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -505,9 +669,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="Happiness_8cs_source.html">Happiness.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHappiness.html">Happiness</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

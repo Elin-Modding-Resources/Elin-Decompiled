@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitStoryBook.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -692,6 +712,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitStoryBook_8cs_source.html#l00050">50</a> of file <a class="el" href="TraitStoryBook_8cs_source.html">TraitStoryBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!Lang.isBuiltin)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> dict[id];</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!dict.ContainsKey(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + Lang.langCode))</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> dict[<span class="keywordtype">id</span> + <span class="stringliteral">&quot;_JP&quot;</span>];</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> dict[<span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + Lang.langCode];</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitStoryBook_8cs_source.html#l00015">OnRead()</a>.</p>
 
 </div>
 </div>
@@ -722,6 +755,55 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a3536e5d336611ddb31db73dd27e15265">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitStoryBook_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitStoryBook_8cs_source.html">TraitStoryBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classTraitTutorialBook.html">TraitTutorialBook</a>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            Tutorial.debugSkip = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        ExcelData excelData = <span class="keyword">new</span> ExcelData();</div>
+<div class="line"><span class="lineno">   22</span>        excelData.path = CorePath.DramaData + this.IdBook + <span class="stringliteral">&quot;.xlsx&quot;</span>;</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!Lang.isBuiltin)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            excelData.path = CorePath.DramaDataLocal + this.IdBook + <span class="stringliteral">&quot;.xlsx&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        excelData.BuildList(<span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><span class="lineno">   28</span>        ExcelData.Sheet sheet = excelData.sheets[<span class="stringliteral">&quot;index&quot;</span>];</div>
+<div class="line"><span class="lineno">   29</span>        List&lt;Dictionary&lt;string, string&gt;&gt; rows = sheet.list;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a05e41d19b0e57ab7a734eb7acb45a00c">allStory</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            rows.ForeachReverse(delegate(Dictionary&lt;string, string&gt; a)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordtype">int</span> num = a[<span class="stringliteral">&quot;id&quot;</span>].ToInt();</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.IsStoryPlayed(num) || num &gt;= 950)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    rows.Remove(a);</div>
+<div class="line"><span class="lineno">   38</span>                }</div>
+<div class="line"><span class="lineno">   39</span>            });</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetSize(450f, -1f).SetList2&lt;Dictionary&lt;string, string&gt;&gt;(rows, (Dictionary&lt;string, string&gt; a) =&gt; <a class="code hl_class" href="classTraitStoryBook.html">TraitStoryBook</a>.&lt;<a class="code hl_function" href="classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8">OnRead</a>&gt;<a class="code hl_function" href="classTraitStoryBook.html#a76b3a13738b1ef786647a41f954cabe3">g__GetText</a>|2_1(a, <span class="stringliteral">&quot;text&quot;</span>), delegate(Dictionary&lt;string, string&gt; a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.PlayStory(this.<a class="code hl_property" href="classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d">IdBook</a>, a[<span class="stringliteral">&quot;id&quot;</span>].ToInt(), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   44</span>        }, delegate(Dictionary&lt;string, string&gt; a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a05e41d19b0e57ab7a734eb7acb45a00c"><div class="ttname"><a href="classCoreDebug.html#a05e41d19b0e57ab7a734eb7acb45a00c">CoreDebug.allStory</a></div><div class="ttdeci">bool allStory</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02252">CoreDebug.cs:2252</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00006">LayerList.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a32d11973d28303248aaf613be2a24040"><div class="ttname"><a href="classPlayer.html#a32d11973d28303248aaf613be2a24040">Player.flags</a></div><div class="ttdeci">Player.Flags flags</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01533">Player.cs:1533</a></div></div>
+<div class="ttc" id="aclassTraitStoryBook_html"><div class="ttname"><a href="classTraitStoryBook.html">TraitStoryBook</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitStoryBook_8cs_source.html#l00005">TraitStoryBook.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitStoryBook_html_a76b3a13738b1ef786647a41f954cabe3"><div class="ttname"><a href="classTraitStoryBook.html#a76b3a13738b1ef786647a41f954cabe3">TraitStoryBook.g__GetText</a></div><div class="ttdeci">static string&lt; OnRead &gt; g__GetText(Dictionary&lt; string, string &gt; dict, string id)</div><div class="ttdef"><b>Definition:</b> <a href="TraitStoryBook_8cs_source.html#l00050">TraitStoryBook.cs:50</a></div></div>
+<div class="ttc" id="aclassTraitStoryBook_html_a82109034aff557b0537cff48cc1ade7d"><div class="ttname"><a href="classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d">TraitStoryBook.IdBook</a></div><div class="ttdeci">virtual string IdBook</div><div class="ttdef"><b>Definition:</b> <a href="TraitStoryBook_8cs_source.html#l00007">TraitStoryBook.cs:8</a></div></div>
+<div class="ttc" id="aclassTraitStoryBook_html_abfc271f7fc85a93c40a6f7fd646dadf8"><div class="ttname"><a href="classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8">TraitStoryBook.OnRead</a></div><div class="ttdeci">override void OnRead(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitStoryBook_8cs_source.html#l00015">TraitStoryBook.cs:15</a></div></div>
+<div class="ttc" id="aclassTraitTutorialBook_html"><div class="ttname"><a href="classTraitTutorialBook.html">TraitTutorialBook</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitTutorialBook_8cs_source.html#l00003">TraitTutorialBook.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreDebug_8cs_source.html#l02252">CoreDebug.allStory</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="Player_8cs_source.html#l01533">Player.flags</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00050">g__GetText()</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00008">IdBook</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00015">OnRead()</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitStoryBook_8cs_source.html#l00015">OnRead()</a>.</p>
 
 </div>
 </div>
@@ -747,6 +829,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitStoryBook_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitStoryBook_8cs_source.html">TraitStoryBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;_main&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitStoryBook_8cs_source.html#l00015">OnRead()</a>.</p>
 
 </div>
 </div>
@@ -754,9 +844,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitStoryBook_8cs_source.html">TraitStoryBook.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitStoryBook.html">TraitStoryBook</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

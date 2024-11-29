@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitScrollRandom.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -709,6 +729,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a17d5cd3ed1d0dcb3497e3414023cc062">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00045">45</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> Lang.TryGet(<span class="stringliteral">&quot;scroll_&quot;</span> + this.<a class="code hl_property" href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">source</a>.alias) ?? <span class="stringliteral">&quot;scroll_&quot;</span>.lang(this.<a class="code hl_property" href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">source</a>.GetName().ToLower(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassTraitScrollRandom_html_a665570b9a89aae769c2366ee4571bf33"><div class="ttname"><a href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">TraitScrollRandom.source</a></div><div class="ttdeci">override SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitScrollRandom_8cs_source.html#l00037">TraitScrollRandom.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitScrollRandom_8cs_source.html#l00038">source</a>.</p>
 
 </div>
 </div>
@@ -739,6 +765,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00050">50</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        this.owner.refVal = <a class="code hl_class" href="classTraitScrollRandom.html">TraitScrollRandom</a>.<a class="code hl_variable" href="classTraitScrollRandom.html#a2a25d812c94df25815c40afa56a64e72">selector</a>.<a class="code hl_function" href="classElementSelecter.html#acd6f8cdd2719a63c93d4ef1462b5e65c">Select</a>(lv);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassElementSelecter_html_acd6f8cdd2719a63c93d4ef1462b5e65c"><div class="ttname"><a href="classElementSelecter.html#acd6f8cdd2719a63c93d4ef1462b5e65c">ElementSelecter.Select</a></div><div class="ttdeci">int Select(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="ElementSelecter_8cs_source.html#l00007">ElementSelecter.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitScrollRandom_html"><div class="ttname"><a href="classTraitScrollRandom.html">TraitScrollRandom</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitScrollRandom_8cs_source.html#l00003">TraitScrollRandom.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitScrollRandom_html_a2a25d812c94df25815c40afa56a64e72"><div class="ttname"><a href="classTraitScrollRandom.html#a2a25d812c94df25815c40afa56a64e72">TraitScrollRandom.selector</a></div><div class="ttdeci">static ElementSelecter selector</div><div class="ttdef"><b>Definition:</b> <a href="TraitScrollRandom_8cs_source.html#l00055">TraitScrollRandom.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ElementSelecter_8cs_source.html#l00007">ElementSelecter.Select()</a>, and <a class="el" href="TraitScrollRandom_8cs_source.html#l00055">selector</a>.</p>
 
 </div>
 </div>
@@ -771,6 +805,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00055">55</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TraitScrollRandom_8cs_source.html#l00050">OnCreate()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -795,7 +831,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">source</a>.aliasRef;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62c3d173f9c602db12758a35833dfeb8" name="a62c3d173f9c602db12758a35833dfeb8"></a>
@@ -819,7 +861,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">source</a>.proc[0].ToEnum(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a08b514b9e11ff796bc1684237c39b766" name="a08b514b9e11ff796bc1684237c39b766"></a>
@@ -843,7 +891,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33">source</a>.proc.TryGet(1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a255d6649635ecb3991ab2016bc0f018e" name="a255d6649635ecb3991ab2016bc0f018e"></a>
@@ -867,7 +921,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> 200;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a665570b9a89aae769c2366ee4571bf33" name="a665570b9a89aae769c2366ee4571bf33"></a>
@@ -891,6 +951,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScrollRandom_8cs_source.html#l00037">37</a> of file <a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>];</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00151">Card.cs:152</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitScrollRandom_8cs_source.html#l00045">GetName()</a>.</p>
 
 </div>
 </div>
@@ -898,9 +971,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitScrollRandom_8cs_source.html">TraitScrollRandom.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitScrollRandom.html">TraitScrollRandom</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

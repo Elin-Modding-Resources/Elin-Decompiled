@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGameUpdater_1_1FastSurfaceUpdater.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classGameUpdater.html">GameUpdater</a></li><li class="navelem"><a class="el" href="classGameUpdater_1_1FastSurfaceUpdater.html">FastSurfaceUpdater</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -224,6 +240,56 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGameUpdater_1_1SurfaceUpdater.html#a09ce1dc89662f6f547629d4d6da23d02">GameUpdater.SurfaceUpdater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00416">416</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>        {</div>
+<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<span class="keyword">this</span>.x, <span class="keyword">this</span>.z).<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">  419</span>            {</div>
+<div class="line"><span class="lineno">  420</span>                this.x = (this.z = 0);</div>
+<div class="line"><span class="lineno">  421</span>            }</div>
+<div class="line"><span class="lineno">  422</span>            base.SetUpdatesPerFrame(base.SizeXZ, 1f);</div>
+<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#a222403ebd6b15b7f2558e8c6cffe350c">updatesPerFrame</a>; i++)</div>
+<div class="line"><span class="lineno">  424</span>            {</div>
+<div class="line"><span class="lineno">  425</span>                this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a7a348f5351774d6cfc30b609021946c5">x</a>, this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a9a87c3af284e81e2031aa5577b29c104">z</a>);</div>
+<div class="line"><span class="lineno">  426</span>                <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  427</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">effect</a> != <span class="keyword">null</span> &amp;&amp; cell.<a class="code hl_variable" href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">effect</a>.<a class="code hl_property" href="classCellEffect.html#a548574827318445ac6fb9e51c09d2093">WillFade</a>)</div>
+<div class="line"><span class="lineno">  428</span>                {</div>
+<div class="line"><span class="lineno">  429</span>                    <a class="code hl_class" href="classCellEffect.html">CellEffect</a> effect = cell.<a class="code hl_variable" href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">effect</a>;</div>
+<div class="line"><span class="lineno">  430</span>                    <span class="keywordtype">int</span> amount = effect.<a class="code hl_property" href="classCellEffect.html#a074221be8d3e7414a28fde7b018dd39e">amount</a>;</div>
+<div class="line"><span class="lineno">  431</span>                    effect.amount = amount - 1;</div>
+<div class="line"><span class="lineno">  432</span>                    <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">effect</a>.<a class="code hl_property" href="classCellEffect.html#a074221be8d3e7414a28fde7b018dd39e">amount</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  433</span>                    {</div>
+<div class="line"><span class="lineno">  434</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#ac5d55bb35f14a266aa8d689b1bdafb3c">SetEffect</a>(this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <span class="keyword">this</span>.pos.z, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  435</span>                    }</div>
+<div class="line"><span class="lineno">  436</span>                }</div>
+<div class="line"><span class="lineno">  437</span>                this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a7a348f5351774d6cfc30b609021946c5">x</a>++;</div>
+<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a7a348f5351774d6cfc30b609021946c5">x</a> &gt;= base.Size)</div>
+<div class="line"><span class="lineno">  439</span>                {</div>
+<div class="line"><span class="lineno">  440</span>                    this.x = 0;</div>
+<div class="line"><span class="lineno">  441</span>                    this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a9a87c3af284e81e2031aa5577b29c104">z</a>++;</div>
+<div class="line"><span class="lineno">  442</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGameUpdater_1_1SurfaceUpdater.html#a9a87c3af284e81e2031aa5577b29c104">z</a> &gt;= base.Size)</div>
+<div class="line"><span class="lineno">  443</span>                    {</div>
+<div class="line"><span class="lineno">  444</span>                        this.z = 0;</div>
+<div class="line"><span class="lineno">  445</span>                    }</div>
+<div class="line"><span class="lineno">  446</span>                }</div>
+<div class="line"><span class="lineno">  447</span>            }</div>
+<div class="line"><span class="lineno">  448</span>        }</div>
+<div class="ttc" id="aclassCellEffect_html"><div class="ttname"><a href="classCellEffect.html">CellEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="CellEffect_8cs_source.html#l00004">CellEffect.cs:5</a></div></div>
+<div class="ttc" id="aclassCellEffect_html_a074221be8d3e7414a28fde7b018dd39e"><div class="ttname"><a href="classCellEffect.html#a074221be8d3e7414a28fde7b018dd39e">CellEffect.amount</a></div><div class="ttdeci">int amount</div><div class="ttdef"><b>Definition:</b> <a href="CellEffect_8cs_source.html#l00018">CellEffect.cs:19</a></div></div>
+<div class="ttc" id="aclassCellEffect_html_a548574827318445ac6fb9e51c09d2093"><div class="ttname"><a href="classCellEffect.html#a548574827318445ac6fb9e51c09d2093">CellEffect.WillFade</a></div><div class="ttdeci">bool WillFade</div><div class="ttdef"><b>Definition:</b> <a href="CellEffect_8cs_source.html#l00179">CellEffect.cs:180</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a22ed66ff6f783eebb7c87e61b976ad31"><div class="ttname"><a href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">Cell.effect</a></div><div class="ttdeci">CellEffect effect</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01876">Cell.cs:1876</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1SurfaceUpdater_html_a7a348f5351774d6cfc30b609021946c5"><div class="ttname"><a href="classGameUpdater_1_1SurfaceUpdater.html#a7a348f5351774d6cfc30b609021946c5">GameUpdater.SurfaceUpdater.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00409">GameUpdater.cs:409</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1SurfaceUpdater_html_a9a87c3af284e81e2031aa5577b29c104"><div class="ttname"><a href="classGameUpdater_1_1SurfaceUpdater.html#a9a87c3af284e81e2031aa5577b29c104">GameUpdater.SurfaceUpdater.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00411">GameUpdater.cs:411</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1Updater_html_a222403ebd6b15b7f2558e8c6cffe350c"><div class="ttname"><a href="classGameUpdater_1_1Updater.html#a222403ebd6b15b7f2558e8c6cffe350c">GameUpdater.Updater.updatesPerFrame</a></div><div class="ttdeci">int updatesPerFrame</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00289">GameUpdater.cs:289</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1Updater_html_ab0c8af5631686412b4966f8e22cf4e0b"><div class="ttname"><a href="classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b">GameUpdater.Updater.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00297">GameUpdater.cs:297</a></div></div>
+<div class="ttc" id="aclassMap_html_ac5d55bb35f14a266aa8d689b1bdafb3c"><div class="ttname"><a href="classMap.html#ac5d55bb35f14a266aa8d689b1bdafb3c">Map.SetEffect</a></div><div class="ttdeci">void SetEffect(int x, int z, CellEffect effect=null)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01474">Map.cs:1474</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="CellEffect_8cs_source.html#l00019">CellEffect.amount</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l01876">Cell.effect</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="GameUpdater_8cs_source.html#l00297">GameUpdater.Updater.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Map_8cs_source.html#l01474">Map.SetEffect()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00289">GameUpdater.Updater.updatesPerFrame</a>, <a class="el" href="CellEffect_8cs_source.html#l00180">CellEffect.WillFade</a>, <a class="el" href="GameUpdater_8cs_source.html#l00409">GameUpdater.SurfaceUpdater.x</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00411">GameUpdater.SurfaceUpdater.z</a>.</p>
 
 </div>
 </div>
@@ -231,9 +297,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGameUpdater.html">GameUpdater</a></li><li class="navelem"><a class="el" href="classGameUpdater_1_1FastSurfaceUpdater.html">FastSurfaceUpdater</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

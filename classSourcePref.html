@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourcePref.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -260,6 +280,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00329">329</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>    {</div>
+<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>.Length &gt;= 25)</div>
+<div class="line"><span class="lineno">  332</span>        {</div>
+<div class="line"><span class="lineno">  333</span>            this.<a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.SetInt(this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22]);</div>
+<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  335</span>        }</div>
+<div class="line"><span class="lineno">  336</span>        this.<a class="code hl_function" href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">Validate</a>();</div>
+<div class="line"><span class="lineno">  337</span>    }</div>
+<div class="ttc" id="aclassSourcePref_html_ac953060b560b13354232d982721b2be7"><div class="ttname"><a href="classSourcePref.html#ac953060b560b13354232d982721b2be7">SourcePref.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00353">SourcePref.cs:353</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_ae297f0f764b20941ca54a04932546153"><div class="ttname"><a href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">SourcePref._bits1</a></div><div class="ttdeci">BitArray32 _bits1</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00355">SourcePref.cs:355</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_afbc57d24dff0f3bc7c9a0b10cbdb6923"><div class="ttname"><a href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">SourcePref.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00344">SourcePref.cs:344</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00355">_bits1</a>, <a class="el" href="SourcePref_8cs_source.html#l00353">ints</a>, and <a class="el" href="SourcePref_8cs_source.html#l00344">Validate()</a>.</p>
 
 </div>
 </div>
@@ -287,6 +320,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00339">339</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
+<div class="line"><span class="lineno">  341</span>        this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22] = this.<a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.ToInt();</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00355">_bits1</a>, and <a class="el" href="SourcePref_8cs_source.html#l00353">ints</a>.</p>
 
 </div>
 </div>
@@ -314,6 +352,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00344">344</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  345</span>    {</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>.Length &lt; 25)</div>
+<div class="line"><span class="lineno">  347</span>        {</div>
+<div class="line"><span class="lineno">  348</span>            Array.Resize&lt;<span class="keywordtype">int</span>&gt;(ref this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>, 25);</div>
+<div class="line"><span class="lineno">  349</span>        }</div>
+<div class="line"><span class="lineno">  350</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00353">ints</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourcePref_8cs_source.html#l00329">OnAfterDeserialize()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -332,6 +380,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00355">355</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourcePref_8cs_source.html#l00329">OnAfterDeserialize()</a>, and <a class="el" href="SourcePref_8cs_source.html#l00339">OnBeforeSerialize()</a>.</p>
+
 </div>
 </div>
 <a id="ac953060b560b13354232d982721b2be7" name="ac953060b560b13354232d982721b2be7"></a>
@@ -347,6 +397,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00353">353</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourcePref_8cs_source.html#l00329">OnAfterDeserialize()</a>, <a class="el" href="SourcePref_8cs_source.html#l00339">OnBeforeSerialize()</a>, and <a class="el" href="SourcePref_8cs_source.html#l00344">Validate()</a>.</p>
 
 </div>
 </div>
@@ -372,6 +424,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00293">293</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  296</span>        {</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>[0];</div>
+<div class="line"><span class="lineno">  298</span>        }</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  300</span>        {</div>
+<div class="line"><span class="lineno">  301</span>            this.<a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>[0] = value;</div>
+<div class="line"><span class="lineno">  302</span>        }</div>
+<div class="line"><span class="lineno">  303</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -396,6 +460,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00257">257</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  258</span>    {</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[18];</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  264</span>        {</div>
+<div class="line"><span class="lineno">  265</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[18] = value;</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00293">CharaRenderer.DrawHeld()</a>, and <a class="el" href="CharaActorPCC_8cs_source.html#l00077">CharaActorPCC.OnRender()</a>.</p>
 
 </div>
 </div>
@@ -420,6 +496,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00269">269</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>    {</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  272</span>        {</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[19];</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[19] = value;</div>
+<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00293">CharaRenderer.DrawHeld()</a>, and <a class="el" href="CharaActorPCC_8cs_source.html#l00077">CharaActorPCC.OnRender()</a>.</p>
 
 </div>
 </div>
@@ -444,6 +532,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00017">17</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1].ToEnum&lt;<a class="code hl_enumeration" href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a>&gt;();</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] = (int)value;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aPrefFlag_8cs_html_ac9c3f3d0eb1ed76dfc3b1896775718d3"><div class="ttname"><a href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a></div><div class="ttdeci">PrefFlag</div><div class="ttdef"><b>Definition:</b> <a href="PrefFlag_8cs_source.html#l00004">PrefFlag.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">SourcePrefInspector.ToggleUsePref()</a>.</p>
 
 </div>
 </div>
@@ -468,6 +569,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00313">313</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  316</span>        {</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">return</span> (this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] &amp; 4) != 0;</div>
+<div class="line"><span class="lineno">  318</span>        }</div>
+<div class="line"><span class="lineno">  319</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00030">SourcePrefInspector.OnValidate()</a>.</p>
 
 </div>
 </div>
@@ -492,6 +601,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00077">77</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[23] * 0.01f;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[23] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00270">CharaRenderer.DrawHat()</a>.</p>
 
 </div>
 </div>
@@ -516,6 +637,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00041">41</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[3] * 0.01f;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[3] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="Cell_8cs_source.html#l01719">Cell.GetSurfaceHeight()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02809">BaseTileMap.GetThingPosition()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -540,6 +673,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00053">53</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[16];</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[16] = value;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -564,6 +709,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00065">65</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[21];</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[21] = value;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -588,6 +745,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00137">137</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[6];</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[6] = value;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -612,6 +781,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00149">149</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[7];</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[7] = value;</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -636,6 +817,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00281">281</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>    {</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  284</span>        {</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[20];</div>
+<div class="line"><span class="lineno">  286</span>        }</div>
+<div class="line"><span class="lineno">  287</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  288</span>        {</div>
+<div class="line"><span class="lineno">  289</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[20] = value;</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -660,6 +853,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00029">29</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[0];</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[0] = value;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00243">GrowSystem.OnRenderTileMap()</a>.</p>
 
 </div>
 </div>
@@ -684,7 +889,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00233">233</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[14];</div>
+<div class="line"><span class="lineno">  238</span>        }</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[14] = value;</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4c8d5d331f3eb807873142078db67e96" name="a4c8d5d331f3eb807873142078db67e96"></a>
@@ -708,7 +923,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00245">245</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  248</span>        {</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[15];</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[15] = value;</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acb18a9b4c30e316819bc6c54693cbe32" name="acb18a9b4c30e316819bc6c54693cbe32"></a>
@@ -732,6 +957,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00209">209</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>    {</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  212</span>        {</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[12];</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[12] = value;</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -756,6 +993,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00221">221</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[13];</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[13] = value;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -780,6 +1029,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00185">185</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[10];</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  192</span>        {</div>
+<div class="line"><span class="lineno">  193</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[10] = value;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -804,6 +1065,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00197">197</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[11];</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  204</span>        {</div>
+<div class="line"><span class="lineno">  205</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[11] = value;</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -828,6 +1101,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00161">161</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[8];</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[8] = value;</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -852,6 +1137,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00173">173</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[9];</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[9] = value;</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MeshPass_8cs_source.html#l00124">MeshPass.AddShadow()</a>.</p>
 
 </div>
 </div>
@@ -876,7 +1173,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00089">89</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[17] * 0.01f;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[17] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e5ffc716c6bf0c52ca762827c4c5ce5" name="a3e5ffc716c6bf0c52ca762827c4c5ce5"></a>
@@ -900,6 +1207,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00321">321</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>    {</div>
+<div class="line"><span class="lineno">  323</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  324</span>        {</div>
+<div class="line"><span class="lineno">  325</span>            <span class="keywordflow">return</span> (this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] &amp; 8) != 0;</div>
+<div class="line"><span class="lineno">  326</span>        }</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01719">Cell.GetSurfaceHeight()</a>.</p>
 
 </div>
 </div>
@@ -924,7 +1239,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00008">8</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            this.<a class="code hl_function" href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">Validate</a>();</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[0];</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a671f07012e399f3f0a210eae4ac114b2" name="a671f07012e399f3f0a210eae4ac114b2"></a>
@@ -948,6 +1270,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00305">305</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  306</span>    {</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  308</span>        {</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">return</span> (this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] &amp; 1) != 0;</div>
+<div class="line"><span class="lineno">  310</span>        }</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRow_8cs_source.html#l00052">CardRow.GetPref()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -972,7 +1302,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00101">101</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[4] * 0.01f;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[4] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9251b5a7136f14fd4a4cf7432a506c11" name="a9251b5a7136f14fd4a4cf7432a506c11"></a>
@@ -996,6 +1336,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00113">113</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[5] * 0.01f;</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[5] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00243">GrowSystem.OnRenderTileMap()</a>.</p>
 
 </div>
 </div>
@@ -1020,6 +1372,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00125">125</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[2] * 0.01f;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            this.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[2] = (int)(value * 100f);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02809">BaseTileMap.GetThingPosition()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00243">GrowSystem.OnRenderTileMap()</a>.</p>
 
 </div>
 </div>
@@ -1027,9 +1391,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourcePref.html">SourcePref</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

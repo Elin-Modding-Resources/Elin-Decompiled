@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTaskDrawWater.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -843,7 +863,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a0fc638accd60819daab652193aad04ca">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00019">19</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefe7c4816ea49b998e2be4750c991319" name="aefe7c4816ea49b998e2be4750c991319"></a>
@@ -872,6 +895,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">Task</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00006">6</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> base.CanProgress() &amp;&amp; this.pos.cell.IsTopWater &amp;&amp; this.pot.owner.c_charges &lt; this.pot.MaxCharge &amp;&amp; this.owner.Tool == this.<a class="code hl_variable" href="classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442">pot</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>;</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassTaskDrawWater_html_a797788de93c5cbeabf1db1b365a3f442"><div class="ttname"><a href="classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442">TaskDrawWater.pot</a></div><div class="ttdeci">TraitToolWaterPot pot</div><div class="ttdef"><b>Definition:</b> <a href="TaskDrawWater_8cs_source.html#l00136">TaskDrawWater.cs:136</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="TaskDrawWater_8cs_source.html#l00136">pot</a>.</p>
 
 </div>
 </div>
@@ -900,6 +930,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00113">113</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_class" href="classSourceFloor_1_1Row.html">SourceFloor.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.alias[<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>];</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a23a13354d2a92300d14684429cc6c76a">HasBridge</a>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            this.pos.cell._bridge = (byte)row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>;</div>
+<div class="line"><span class="lineno">  119</span>            if (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;floor_raw3&quot;</span>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                this.pos.cell._bridgeMat = 45;</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            this.pos.cell._floor = (byte)row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>;</div>
+<div class="line"><span class="lineno">  127</span>            if (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;floor_raw3&quot;</span>)</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                this.pos.cell._floorMat = 45;</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a4adc1043f8ef8e34b1e6af45f88ba3f7">SetLiquid</a>(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <span class="keyword">this</span>.pos.z, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  133</span>        this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">RefreshNeighborTiles</a>();</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassMap_html_a4adc1043f8ef8e34b1e6af45f88ba3f7"><div class="ttname"><a href="classMap.html#a4adc1043f8ef8e34b1e6af45f88ba3f7">Map.SetLiquid</a></div><div class="ttdeci">void SetLiquid(int x, int z, CellEffect effect=null)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01441">Map.cs:1441</a></div></div>
+<div class="ttc" id="aclassPoint_html_a23a13354d2a92300d14684429cc6c76a"><div class="ttname"><a href="classPoint.html#a23a13354d2a92300d14684429cc6c76a">Point.HasBridge</a></div><div class="ttdeci">bool HasBridge</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00339">Point.cs:340</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_abdbc97bd4e9a2e289a39ecbaea3a6aef"><div class="ttname"><a href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">Point.RefreshNeighborTiles</a></div><div class="ttdeci">void RefreshNeighborTiles()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01322">Point.cs:1322</a></div></div>
+<div class="ttc" id="aclassSourceFloor_1_1Row_html"><div class="ttname"><a href="classSourceFloor_1_1Row.html">SourceFloor.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00114">SourceFloor.cs:115</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_af0401efa5aae8bd83979a2a12bad1893"><div class="ttname"><a href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">SourceManager.floors</a></div><div class="ttdeci">SourceFloor floors</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00179">SourceManager.cs:179</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_a14bd72967b54c56f9fc32d26a866fbaa"><div class="ttname"><a href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">TaskPoint.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00180">TaskPoint.cs:180</a></div></div>
+<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00019">TileRow.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="SourceManager_8cs_source.html#l00179">SourceManager.floors</a>, <a class="el" href="Point_8cs_source.html#l00340">Point.HasBridge</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="TileRow_8cs_source.html#l00019">TileRow.id</a>, <a class="el" href="TaskPoint_8cs_source.html#l00180">TaskPoint.pos</a>, <a class="el" href="Point_8cs_source.html#l01322">Point.RefreshNeighborTiles()</a>, <a class="el" href="Map_8cs_source.html#l01441">Map.SetLiquid()</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, and <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskDrawWater_8cs_source.html#l00048">OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -929,6 +996,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTask.html#af88bbfa521b498e59f51714f39ab9d43">Task</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00103">103</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>    {</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a> || <span class="keyword">this</span>.pos.HasObj || <span class="keyword">this</span>.pos.cell.blocked)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
+<div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00657">Cell.cs:658</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00658">Cell.IsTopWater</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00180">TaskPoint.pos</a>.</p>
 
 </div>
 </div>
@@ -959,6 +1038,89 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a855291d13aa3564872b2a42ecd25c83f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00048">48</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        p.textHint = this.<a class="code hl_property" href="classAIAct.html#ac6b22016f0841208f2826276b0a1ac79">Name</a>;</div>
+<div class="line"><span class="lineno">   51</span>        p.maxProgress = 6;</div>
+<div class="line"><span class="lineno">   52</span>        p.onProgressBegin = delegate()</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;drawWater_start&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        };</div>
+<div class="line"><span class="lineno">   59</span>        p.onProgress = delegate(<a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> _p)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = this.pos.cell.HasBridge ? this.pos.cell.matBridge : this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a9ef942696e0364d6b54651927eebdc50">matFloor</a>;</div>
+<div class="line"><span class="lineno">   62</span>            row.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#ac251a6e4baf2ad84c2588f17523a5208">PlayHitEffect</a>(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>);</div>
+<div class="line"><span class="lineno">   63</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(row.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a22834f3fe7c12f43bb9ca45087bbc54d">GetSoundImpact</a>(<span class="keyword">null</span>), 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   64</span>        };</div>
+<div class="line"><span class="lineno">   65</span>        p.onProgressComplete = delegate()</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;mine&quot;</span>).<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>, 0f, <span class="keyword">null</span>, <span class="keyword">null</span>).SetParticleColor(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a3fccac88e48d7ef7007174a9955c9a6c">HasBridge</a> ? <span class="keyword">this</span>.pos.matBridge.GetColor() : <span class="keyword">this</span>.pos.matFloor.GetColor()).Emit(10 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10));</div>
+<div class="line"><span class="lineno">   68</span>            this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#aecc8df7c8ad20e227e49b08778c0aca1">Animate</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Dig, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   69</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;water&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   70</span>            this.<a class="code hl_variable" href="classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442">pot</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a23a13354d2a92300d14684429cc6c76a">HasBridge</a> ? <span class="keyword">this</span>.pos.matBridge : <span class="keyword">this</span>.pos.matFloor);</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordtype">string</span> alias = (this.pos.HasBridge ? this.pos.sourceBridge : this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>).alias;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (!(alias == <span class="stringliteral">&quot;floor_water_shallow&quot;</span>))</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (!(alias == <span class="stringliteral">&quot;floor_water&quot;</span>))</div>
+<div class="line"><span class="lineno">   75</span>                {</div>
+<div class="line"><span class="lineno">   76</span>                    <span class="keywordflow">if</span> (!(alias == <span class="stringliteral">&quot;floor_water_deep&quot;</span>))</div>
+<div class="line"><span class="lineno">   77</span>                    {</div>
+<div class="line"><span class="lineno">   78</span>                        this.&lt;<a class="code hl_function" href="classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f">OnCreateProgress</a>&gt;<a class="code hl_function" href="classTaskDrawWater.html#a57d8d577fc1ffd48fb1aaaa066b8d84d">g__ChangeFloor</a>|11_3(<span class="stringliteral">&quot;floor_raw3&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>                    }</div>
+<div class="line"><span class="lineno">   80</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   81</span>                    {</div>
+<div class="line"><span class="lineno">   82</span>                        this.&lt;<a class="code hl_function" href="classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f">OnCreateProgress</a>&gt;<a class="code hl_function" href="classTaskDrawWater.html#a57d8d577fc1ffd48fb1aaaa066b8d84d">g__ChangeFloor</a>|11_3(<span class="stringliteral">&quot;floor_water&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span>                    }</div>
+<div class="line"><span class="lineno">   84</span>                }</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   86</span>                {</div>
+<div class="line"><span class="lineno">   87</span>                    this.&lt;<a class="code hl_function" href="classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f">OnCreateProgress</a>&gt;<a class="code hl_function" href="classTaskDrawWater.html#a57d8d577fc1ffd48fb1aaaa066b8d84d">g__ChangeFloor</a>|11_3(<span class="stringliteral">&quot;floor_water_shallow&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   91</span>            {</div>
+<div class="line"><span class="lineno">   92</span>                this.&lt;<a class="code hl_function" href="classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f">OnCreateProgress</a>&gt;<a class="code hl_function" href="classTaskDrawWater.html#a57d8d577fc1ffd48fb1aaaa066b8d84d">g__ChangeFloor</a>|11_3(<span class="stringliteral">&quot;floor_water_shallow2&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            this.<a class="code hl_variable" href="classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442">pot</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa898e2009ea962ec5740e49ddef63b92">ModCharge</a>(1, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   95</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ModExp</a>(286, 5, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">   97</span>            {</div>
+<div class="line"><span class="lineno">   98</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>        };</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAIAct_html_ac6b22016f0841208f2826276b0a1ac79"><div class="ttname"><a href="classAIAct.html#ac6b22016f0841208f2826276b0a1ac79">AIAct.Name</a></div><div class="ttdeci">virtual new string Name</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00043">AIAct.cs:44</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a425a963bc60ba8e1b76e86db0a89627f"><div class="ttname"><a href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Card.Tool</a></div><div class="ttdeci">Thing Tool</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02737">Card.cs:2738</a></div></div>
+<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05374">Card.cs:5374</a></div></div>
+<div class="ttc" id="aclassCard_html_aa898e2009ea962ec5740e49ddef63b92"><div class="ttname"><a href="classCard.html#aa898e2009ea962ec5740e49ddef63b92">Card.ModCharge</a></div><div class="ttdeci">void ModCharge(int a, bool destroy=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03781">Card.cs:3781</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassCell_html_a3fccac88e48d7ef7007174a9955c9a6c"><div class="ttname"><a href="classCell.html#a3fccac88e48d7ef7007174a9955c9a6c">Cell.HasBridge</a></div><div class="ttdeci">bool HasBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00624">Cell.cs:625</a></div></div>
+<div class="ttc" id="aclassCell_html_a9ef942696e0364d6b54651927eebdc50"><div class="ttname"><a href="classCell.html#a9ef942696e0364d6b54651927eebdc50">Cell.matFloor</a></div><div class="ttdeci">SourceMaterial.Row matFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01093">Cell.cs:1094</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08248">Chara.cs:8249</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00008">Effect.cs:9</a></div></div>
+<div class="ttc" id="aclassEffect_html_a4b51528582c52d77dc9846b6efa150d5"><div class="ttname"><a href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Effect.Get</a></div><div class="ttdeci">static Effect Get(Effect original)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00010">Effect.cs:10</a></div></div>
+<div class="ttc" id="aclassEffect_html_a7fc23b7447649119c0b7497c4218d792"><div class="ttname"><a href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Effect.Play</a></div><div class="ttdeci">void Play(float delay, Point from, float fixY=0f, Point to=null, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00033">Effect.cs:33</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aa1c3ae499520ab53bda341dd23fa0702"><div class="ttname"><a href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ElementContainer.ModExp</a></div><div class="ttdeci">void ModExp(int ele, int a, bool chain=false)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00295">ElementContainer.cs:295</a></div></div>
+<div class="ttc" id="aclassPoint_html_a9bf5fe32536e022d7e7ee717b1ed088e"><div class="ttname"><a href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">Point.sourceFloor</a></div><div class="ttdeci">SourceFloor.Row sourceFloor</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00082">Point.cs:83</a></div></div>
+<div class="ttc" id="aclassPoint_html_aecc8df7c8ad20e227e49b08778c0aca1"><div class="ttname"><a href="classPoint.html#aecc8df7c8ad20e227e49b08778c0aca1">Point.Animate</a></div><div class="ttdeci">void Animate(AnimeID id, bool animeBlock=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01348">Point.cs:1348</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html"><div class="ttname"><a href="classProgress__Custom.html">Progress_Custom</a></div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00003">Progress_Custom.cs:4</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00136">SourceMaterial.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a22834f3fe7c12f43bb9ca45087bbc54d"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a22834f3fe7c12f43bb9ca45087bbc54d">SourceMaterial.Row.GetSoundImpact</a></div><div class="ttdeci">string GetSoundImpact(RenderRow c=null)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00228">SourceMaterial.cs:228</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_ac251a6e4baf2ad84c2588f17523a5208"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ac251a6e4baf2ad84c2588f17523a5208">SourceMaterial.Row.PlayHitEffect</a></div><div class="ttdeci">void PlayHitEffect(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00189">SourceMaterial.cs:189</a></div></div>
+<div class="ttc" id="aclassStats_html_a2972d0d69579f77f16a038c181357c20"><div class="ttname"><a href="classStats.html#a2972d0d69579f77f16a038c181357c20">Stats.Mod</a></div><div class="ttdeci">virtual void Mod(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00112">Stats.cs:112</a></div></div>
+<div class="ttc" id="aclassTaskDrawWater_html_a57d8d577fc1ffd48fb1aaaa066b8d84d"><div class="ttname"><a href="classTaskDrawWater.html#a57d8d577fc1ffd48fb1aaaa066b8d84d">TaskDrawWater.g__ChangeFloor</a></div><div class="ttdeci">void&lt; OnCreateProgress &gt; g__ChangeFloor(string id)</div><div class="ttdef"><b>Definition:</b> <a href="TaskDrawWater_8cs_source.html#l00113">TaskDrawWater.cs:113</a></div></div>
+<div class="ttc" id="aclassTaskDrawWater_html_a71e1bbf33201820adb710bb7bfef089f"><div class="ttname"><a href="classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f">TaskDrawWater.OnCreateProgress</a></div><div class="ttdeci">override void OnCreateProgress(Progress_Custom p)</div><div class="ttdef"><b>Definition:</b> <a href="TaskDrawWater_8cs_source.html#l00048">TaskDrawWater.cs:48</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l01348">Point.Animate()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l05374">Card.Dye()</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00113">g__ChangeFloor()</a>, <a class="el" href="Effect_8cs_source.html#l00010">Effect.Get()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00228">SourceMaterial.Row.GetSoundImpact()</a>, <a class="el" href="Cell_8cs_source.html#l00625">Cell.HasBridge</a>, <a class="el" href="Point_8cs_source.html#l00340">Point.HasBridge</a>, <a class="el" href="Cell_8cs_source.html#l01094">Cell.matFloor</a>, <a class="el" href="Stats_8cs_source.html#l00112">Stats.Mod()</a>, <a class="el" href="Card_8cs_source.html#l03781">Card.ModCharge()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00295">ElementContainer.ModExp()</a>, <a class="el" href="AIAct_8cs_source.html#l00044">AIAct.Name</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00048">OnCreateProgress()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Effect_8cs_source.html#l00033">Effect.Play()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00189">SourceMaterial.Row.PlayHitEffect()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00180">TaskPoint.pos</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00136">pot</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Point_8cs_source.html#l00083">Point.sourceFloor</a>, <a class="el" href="Chara_8cs_source.html#l08249">Chara.stamina</a>, and <a class="el" href="Card_8cs_source.html#l02738">Card.Tool</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskDrawWater_8cs_source.html#l00048">OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -976,6 +1138,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00136">136</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskDrawWater_8cs_source.html#l00006">CanProgress()</a>, and <a class="el" href="TaskDrawWater_8cs_source.html#l00048">OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1165,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00024">24</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0dd8cdca0caae2bb8f96537c6e1e97ce" name="a0dd8cdca0caae2bb8f96537c6e1e97ce"></a>
@@ -1025,7 +1195,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00040">40</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> CursorSystem.Hand;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae4fda6cd123cdeae035893b81ad78e8b" name="ae4fda6cd123cdeae035893b81ad78e8b"></a>
@@ -1049,7 +1225,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00011">11</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a302d8c4163106040af0c580ec342e79d" name="a302d8c4163106040af0c580ec342e79d"></a>
@@ -1073,16 +1255,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskDrawWater_8cs_source.html#l00032">32</a> of file <a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTaskDrawWater.html#aefe7c4816ea49b998e2be4750c991319">CanProgress</a>();</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassTaskDrawWater_html_aefe7c4816ea49b998e2be4750c991319"><div class="ttname"><a href="classTaskDrawWater.html#aefe7c4816ea49b998e2be4750c991319">TaskDrawWater.CanProgress</a></div><div class="ttdeci">override bool CanProgress()</div><div class="ttdef"><b>Definition:</b> <a href="TaskDrawWater_8cs_source.html#l00006">TaskDrawWater.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TaskDrawWater_8cs_source.html">TaskDrawWater.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTaskDrawWater.html">TaskDrawWater</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

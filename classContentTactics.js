@@ -1,0 +1,27 @@
+var classContentTactics =
+[
+    [ "OnInstantiate", "classContentTactics.html#a32d486eef902f2ff5110d0d13d0d5d32", null ],
+    [ "Refresh", "classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a", null ],
+    [ "ddTactics", "classContentTactics.html#a01a22d87c82b29d92061e1841493d056", null ],
+    [ "toggleAbortOnAllyDead", "classContentTactics.html#aaa23096eeabd8b130704f3fa14efd71c", null ],
+    [ "toggleAbortOnAllyDying", "classContentTactics.html#a93da35d024f714aad7b007d53a801de2", null ],
+    [ "toggleAbortOnItemLoss", "classContentTactics.html#abdb5bd1eb87d66b9546aa5315a7da534", null ],
+    [ "toggleAbortOnKill", "classContentTactics.html#ae9c6bc6ee3e79925656e2dd939714458", null ],
+    [ "toggleAutoEat", "classContentTactics.html#ae519660fa77ba9f744dbeb7e8936dcf9", null ],
+    [ "toggleBCastParty", "classContentTactics.html#afd5cbef2a05ca2ee08741f6db7ea6da5", null ],
+    [ "toggleBDontAutoAttackNeutral", "classContentTactics.html#ace9c69f676bf513f06111b4b3222612a", null ],
+    [ "toggleBDontChangeTarget", "classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763", null ],
+    [ "toggleBDontChase", "classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629", null ],
+    [ "toggleBTurbo", "classContentTactics.html#ad990e39c9e566975391085e10a05b302", null ],
+    [ "toggleBUseFav", "classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c", null ],
+    [ "toggleBUseHotbar", "classContentTactics.html#aebf62c3874e72f780733ce3ffa2bc2f2", null ],
+    [ "toggleBUseInventory", "classContentTactics.html#aa41e8582490a05a12ea72fd618768ee2", null ],
+    [ "toggleDetail", "classContentTactics.html#ac4e0039e8a248a5f82ed6bc1f7b92d53", null ],
+    [ "toggleDontWander", "classContentTactics.html#a03d53418f483f66d64a844f2a02814af", null ],
+    [ "toggleFollowDist", "classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137", null ],
+    [ "toggleOnEnemyDead", "classContentTactics.html#a1840d136e97fbbc6311278364b022523", null ],
+    [ "toggleOnHalfHP", "classContentTactics.html#a7e5761826ec6ed8e7babfc831f339d61", null ],
+    [ "togglePickFish", "classContentTactics.html#aa407bff4cf29709a2544fe7a5a709de2", null ],
+    [ "togglePrefKeepPlaying", "classContentTactics.html#aa702646e2071b1429b117014c99641c0", null ],
+    [ "transDetail", "classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3", null ]
+];

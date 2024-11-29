@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerAdmin.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -198,6 +218,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">int</span> idTab = window.idTab;</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (idTab == 0)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            this.<a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>();</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (idTab != 1)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        this.<a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>();</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassLayerAdmin_html_a1d4df30fad18e310a632436d3d3f3ae4"><div class="ttname"><a href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">LayerAdmin.RefreshPolicy</a></div><div class="ttdeci">void RefreshPolicy()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00024">LayerAdmin.cs:24</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html_a5a20f925ea9f69a0af9efa3739b38686"><div class="ttname"><a href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">LayerAdmin.RefreshResearch</a></div><div class="ttdeci">void RefreshResearch()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00020">LayerAdmin.cs:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAdmin_8cs_source.html#l00024">RefreshPolicy()</a>, and <a class="el" href="LayerAdmin_8cs_source.html#l00020">RefreshResearch()</a>.</p>
 
 </div>
 </div>
@@ -225,6 +262,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00005">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -252,6 +293,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00005">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -259,9 +304,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerAdmin.html">LayerAdmin</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

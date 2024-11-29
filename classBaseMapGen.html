@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBaseMapGen.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -316,6 +336,71 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00024">24</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a>.<a class="code hl_function" href="classBiomeProfile.html#aac345c0f9d08b234dc1e84fe9bcab5ea">Init</a>();</div>
+<div class="line"><span class="lineno">   27</span>        this.bp = _bp;</div>
+<div class="line"><span class="lineno">   28</span>        this.zone = this.<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">zone</a>;</div>
+<div class="line"><span class="lineno">   29</span>        this.zp = this.<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">zoneProfile</a>;</div>
+<div class="line"><span class="lineno">   30</span>        this.map = this.<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">map</a>;</div>
+<div class="line"><span class="lineno">   31</span>        this.OX = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#aea945d32c5ae888ee53f2c5922c942db">offsetX</a>;</div>
+<div class="line"><span class="lineno">   32</span>        this.OZ = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#adced1799f806c748e922ba8c0416dc77">offsetZ</a>;</div>
+<div class="line"><span class="lineno">   33</span>        this.blockHeight = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#a6f3e9311a8ff80d2f6f88f76d52df565">blockHeight</a>;</div>
+<div class="line"><span class="lineno">   34</span>        this.hSetting = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#acc95029310654847c926795775d609d8">height</a>;</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classMapGenVariation.html">MapGenVariation</a> mapGenVariation = this.variation = this.<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">genSetting</a>.variation;</div>
+<div class="line"><span class="lineno">   36</span>        this.layerHeight = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#a979da1f4b9791b47e8afa3692bcd5c06">layerHeight</a>;</div>
+<div class="line"><span class="lineno">   37</span>        this.layerRiver = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#adc5d4352166a8a7a83730aa35460da45">layerRiver</a>;</div>
+<div class="line"><span class="lineno">   38</span>        this.layerStratum = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#a6666364efc7990097eb7c171b8cc7a94">layerStratum</a>;</div>
+<div class="line"><span class="lineno">   39</span>        this.layerBiome = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#aed32543a0e7063f02845d584e289fd47">layerBiome</a>;</div>
+<div class="line"><span class="lineno">   40</span>        this.biomeProfiles = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#aed9ea7bcab36e73d1eface000c4d8907">biomeProfiles</a>;</div>
+<div class="line"><span class="lineno">   41</span>        this.biomeShore = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#ad21f4715811a8e3ebf24dc5b0f3b02ab">biomeShore</a>;</div>
+<div class="line"><span class="lineno">   42</span>        this.biomeWater = mapGenVariation.<a class="code hl_variable" href="classMapGenVariation.html#aefbddb1b9b0fd90166345d8da35d9a0b">biomeWater</a>;</div>
+<div class="line"><span class="lineno">   43</span>        this.biomeSand = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.biomes.Sand;</div>
+<div class="line"><span class="lineno">   44</span>        this.<a class="code hl_function" href="classBaseMapGen.html#aff43e5d002d0597f2f51dd5d2eac61b5">GenerateTerrain</a>();</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#a86b2c9168b8074e8d378fea93455a934">indoor</a>)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            this.map.config.bg = <a class="code hl_enumeration" href="MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcf">MapBG</a>.None;</div>
+<div class="line"><span class="lineno">   48</span>            this.map.config.indoor = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa">idSceneProfile</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.map.config.idSceneProfile = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#a432e39212f2399ae30982fe406303f77">idSceneProfile</a>.IsEmpty(this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#a86b2c9168b8074e8d378fea93455a934">indoor</a> ? <span class="stringliteral">&quot;indoor&quot;</span> : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        this.map.config.bg = this.<a class="code hl_variable" href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">zp</a>.<a class="code hl_variable" href="classZoneProfile.html#a1ade493a25bab3f0e434a8c5319c4684">mapBG</a>;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aMapBG_8cs_html_a35f8d808141b7cd0027802c3c54f9fcf"><div class="ttname"><a href="MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcf">MapBG</a></div><div class="ttdeci">MapBG</div><div class="ttdef"><b>Definition:</b> <a href="MapBG_8cs_source.html#l00003">MapBG.cs:4</a></div></div>
+<div class="ttc" id="aclassBaseMapGen_html_a912ca5a6c98db30e031b53217962b558"><div class="ttname"><a href="classBaseMapGen.html#a912ca5a6c98db30e031b53217962b558">BaseMapGen.zp</a></div><div class="ttdeci">ZoneProfile zp</div><div class="ttdef"><b>Definition:</b> <a href="BaseMapGen_8cs_source.html#l00103">BaseMapGen.cs:103</a></div></div>
+<div class="ttc" id="aclassBaseMapGen_html_a9af30283bea884fbf2a43336dea7a8c9"><div class="ttname"><a href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">BaseMapGen.bp</a></div><div class="ttdeci">ZoneBlueprint bp</div><div class="ttdef"><b>Definition:</b> <a href="BaseMapGen_8cs_source.html#l00100">BaseMapGen.cs:100</a></div></div>
+<div class="ttc" id="aclassBaseMapGen_html_aff43e5d002d0597f2f51dd5d2eac61b5"><div class="ttname"><a href="classBaseMapGen.html#aff43e5d002d0597f2f51dd5d2eac61b5">BaseMapGen.GenerateTerrain</a></div><div class="ttdeci">virtual void GenerateTerrain()</div><div class="ttdef"><b>Definition:</b> <a href="BaseMapGen_8cs_source.html#l00057">BaseMapGen.cs:57</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html_aac345c0f9d08b234dc1e84fe9bcab5ea"><div class="ttname"><a href="classBiomeProfile.html#aac345c0f9d08b234dc1e84fe9bcab5ea">BiomeProfile.Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00112">BiomeProfile.cs:112</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_adf2bff5b09ee53bbc398d000088bf14e"><div class="ttname"><a href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">GenBounds.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00194">GenBounds.cs:194</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a169a81af975ca0dfaefdc183a89ebdfa"><div class="ttname"><a href="classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa">MapConfig.idSceneProfile</a></div><div class="ttdeci">string idSceneProfile</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00031">MapConfig.cs:31</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html"><div class="ttname"><a href="classMapGenVariation.html">MapGenVariation</a></div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00005">MapGenVariation.cs:6</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_a6666364efc7990097eb7c171b8cc7a94"><div class="ttname"><a href="classMapGenVariation.html#a6666364efc7990097eb7c171b8cc7a94">MapGenVariation.layerStratum</a></div><div class="ttdeci">NoiseLayer layerStratum</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00016">MapGenVariation.cs:16</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_a979da1f4b9791b47e8afa3692bcd5c06"><div class="ttname"><a href="classMapGenVariation.html#a979da1f4b9791b47e8afa3692bcd5c06">MapGenVariation.layerHeight</a></div><div class="ttdeci">NoiseLayer layerHeight</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00012">MapGenVariation.cs:12</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_ad21f4715811a8e3ebf24dc5b0f3b02ab"><div class="ttname"><a href="classMapGenVariation.html#ad21f4715811a8e3ebf24dc5b0f3b02ab">MapGenVariation.biomeShore</a></div><div class="ttdeci">BiomeProfile biomeShore</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00022">MapGenVariation.cs:22</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_adc5d4352166a8a7a83730aa35460da45"><div class="ttname"><a href="classMapGenVariation.html#adc5d4352166a8a7a83730aa35460da45">MapGenVariation.layerRiver</a></div><div class="ttdeci">NoiseLayer layerRiver</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00014">MapGenVariation.cs:14</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_aed32543a0e7063f02845d584e289fd47"><div class="ttname"><a href="classMapGenVariation.html#aed32543a0e7063f02845d584e289fd47">MapGenVariation.layerBiome</a></div><div class="ttdeci">NoiseLayer layerBiome</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00018">MapGenVariation.cs:18</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_aed9ea7bcab36e73d1eface000c4d8907"><div class="ttname"><a href="classMapGenVariation.html#aed9ea7bcab36e73d1eface000c4d8907">MapGenVariation.biomeProfiles</a></div><div class="ttdeci">BiomeProfile[] biomeProfiles</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00020">MapGenVariation.cs:20</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html_aefbddb1b9b0fd90166345d8da35d9a0b"><div class="ttname"><a href="classMapGenVariation.html#aefbddb1b9b0fd90166345d8da35d9a0b">MapGenVariation.biomeWater</a></div><div class="ttdeci">BiomeProfile biomeWater</div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00024">MapGenVariation.cs:24</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a07924fae194eda4e1e5676605547eef1"><div class="ttname"><a href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">ZoneBlueprint.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00069">ZoneBlueprint.cs:69</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a0fce92a63ff6b9da8da955beead72cbe"><div class="ttname"><a href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">ZoneBlueprint.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00067">ZoneBlueprint.cs:67</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a5071f0cd6b4337a5993bf1ab222d352b"><div class="ttname"><a href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">ZoneBlueprint.zoneProfile</a></div><div class="ttdeci">ZoneProfile zoneProfile</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00071">ZoneBlueprint.cs:71</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_ac3dc8d5b6a318868945cc4f96b699e59"><div class="ttname"><a href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">ZoneBlueprint.genSetting</a></div><div class="ttdeci">ZoneBlueprint.MapGenSetting genSetting</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00077">ZoneBlueprint.cs:77</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_a1ade493a25bab3f0e434a8c5319c4684"><div class="ttname"><a href="classZoneProfile.html#a1ade493a25bab3f0e434a8c5319c4684">ZoneProfile.mapBG</a></div><div class="ttdeci">MapBG mapBG</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00083">ZoneProfile.cs:83</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_a432e39212f2399ae30982fe406303f77"><div class="ttname"><a href="classZoneProfile.html#a432e39212f2399ae30982fe406303f77">ZoneProfile.idSceneProfile</a></div><div class="ttdeci">string idSceneProfile</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00079">ZoneProfile.cs:79</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_a6f3e9311a8ff80d2f6f88f76d52df565"><div class="ttname"><a href="classZoneProfile.html#a6f3e9311a8ff80d2f6f88f76d52df565">ZoneProfile.blockHeight</a></div><div class="ttdeci">int blockHeight</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00053">ZoneProfile.cs:53</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_a86b2c9168b8074e8d378fea93455a934"><div class="ttname"><a href="classZoneProfile.html#a86b2c9168b8074e8d378fea93455a934">ZoneProfile.indoor</a></div><div class="ttdeci">bool indoor</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00075">ZoneProfile.cs:75</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_acc95029310654847c926795775d609d8"><div class="ttname"><a href="classZoneProfile.html#acc95029310654847c926795775d609d8">ZoneProfile.height</a></div><div class="ttdeci">MapHeight height</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00041">ZoneProfile.cs:41</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_adced1799f806c748e922ba8c0416dc77"><div class="ttname"><a href="classZoneProfile.html#adced1799f806c748e922ba8c0416dc77">ZoneProfile.offsetZ</a></div><div class="ttdeci">int offsetZ</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00051">ZoneProfile.cs:51</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_aea945d32c5ae888ee53f2c5922c942db"><div class="ttname"><a href="classZoneProfile.html#aea945d32c5ae888ee53f2c5922c942db">ZoneProfile.offsetX</a></div><div class="ttdeci">int offsetX</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00049">ZoneProfile.cs:49</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MapGenVariation_8cs_source.html#l00020">MapGenVariation.biomeProfiles</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00022">MapGenVariation.biomeShore</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00024">MapGenVariation.biomeWater</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00053">ZoneProfile.blockHeight</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00100">bp</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00057">GenerateTerrain()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00077">ZoneBlueprint.genSetting</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00041">ZoneProfile.height</a>, <a class="el" href="MapConfig_8cs_source.html#l00031">MapConfig.idSceneProfile</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00079">ZoneProfile.idSceneProfile</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00075">ZoneProfile.indoor</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00112">BiomeProfile.Init()</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00018">MapGenVariation.layerBiome</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00012">MapGenVariation.layerHeight</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00014">MapGenVariation.layerRiver</a>, <a class="el" href="MapGenVariation_8cs_source.html#l00016">MapGenVariation.layerStratum</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">GenBounds.map</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00067">ZoneBlueprint.map</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00083">ZoneProfile.mapBG</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00049">ZoneProfile.offsetX</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00051">ZoneProfile.offsetZ</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00069">ZoneBlueprint.zone</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00071">ZoneBlueprint.zoneProfile</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00103">zp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.GenerateMap()</a>.</p>
 
 </div>
 </div>
@@ -345,6 +430,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classMapGen.html#a29241b1f181a6d42396ebd3309713e7b">MapGen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00057">57</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_function" href="classBaseMapGen.html#a899b515f79186c152f98bb5f1f6cacfe">OnGenerateTerrain</a>();</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassBaseMapGen_html_a899b515f79186c152f98bb5f1f6cacfe"><div class="ttname"><a href="classBaseMapGen.html#a899b515f79186c152f98bb5f1f6cacfe">BaseMapGen.OnGenerateTerrain</a></div><div class="ttdeci">virtual bool OnGenerateTerrain()</div><div class="ttdef"><b>Definition:</b> <a href="BaseMapGen_8cs_source.html#l00062">BaseMapGen.cs:62</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseMapGen_8cs_source.html#l00062">OnGenerateTerrain()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">Generate()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +467,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classMapGen.html#ab2144db777049b1d8d0c1999b8bb8159">MapGen</a>, <a class="el" href="classMapGenDungen.html#afca1acfd25336fe463af041012163be1">MapGenDungen</a>, and <a class="el" href="classMapGenRegion.html#a9da6b8e8bd2c7729d1170c3f4ea9851f">MapGenRegion</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00062">62</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00057">GenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -412,6 +510,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00014">14</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        this.Size = size;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#a879693e06260080afe2e3647d92f30cf">poiMap</a> == <span class="keyword">null</span> || <span class="keyword">this</span>.Size != <a class="code hl_class" href="classPOIMap.html">POIMap</a>.<a class="code hl_variable" href="classPOIMap.html#adcc8a3812e1d0f046a8e5d3bc586ac89">mapSize</a>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            this.map.poiMap = <span class="keyword">new</span> <a class="code hl_class" href="classPOIMap.html">POIMap</a>();</div>
+<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#a879693e06260080afe2e3647d92f30cf">poiMap</a>.<a class="code hl_function" href="classPOIMap.html#adfa981c42d87b20885030d260ab00a82">Init</a>(this.<a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a>, _poiSize);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassGenBounds_html_ad2f542b5fda4df5b85c92f1128d38304"><div class="ttname"><a href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">GenBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00198">GenBounds.cs:198</a></div></div>
+<div class="ttc" id="aclassMap_html_a879693e06260080afe2e3647d92f30cf"><div class="ttname"><a href="classMap.html#a879693e06260080afe2e3647d92f30cf">Map.poiMap</a></div><div class="ttdeci">POIMap poiMap</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02899">Map.cs:2899</a></div></div>
+<div class="ttc" id="aclassPOIMap_html"><div class="ttname"><a href="classPOIMap.html">POIMap</a></div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00003">POIMap.cs:4</a></div></div>
+<div class="ttc" id="aclassPOIMap_html_adcc8a3812e1d0f046a8e5d3bc586ac89"><div class="ttname"><a href="classPOIMap.html#adcc8a3812e1d0f046a8e5d3bc586ac89">POIMap.mapSize</a></div><div class="ttdeci">static int mapSize</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00115">POIMap.cs:115</a></div></div>
+<div class="ttc" id="aclassPOIMap_html_adfa981c42d87b20885030d260ab00a82"><div class="ttname"><a href="classPOIMap.html#adfa981c42d87b20885030d260ab00a82">POIMap.Init</a></div><div class="ttdeci">void Init(int _mapSize, int _cellSize)</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00013">POIMap.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="POIMap_8cs_source.html#l00013">POIMap.Init()</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">GenBounds.map</a>, <a class="el" href="POIMap_8cs_source.html#l00115">POIMap.mapSize</a>, <a class="el" href="Map_8cs_source.html#l02899">Map.poiMap</a>, and <a class="el" href="GenBounds_8cs_source.html#l00198">GenBounds.Size</a>.</p>
 
 </div>
 </div>
@@ -430,6 +543,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00082">82</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a71762d5901baf2a225dc1b307b3bb48b" name="a71762d5901baf2a225dc1b307b3bb48b"></a>
@@ -445,6 +560,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00139">139</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -478,6 +595,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00085">85</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="af664f26241cb2cba751f57c6ec49aa79" name="af664f26241cb2cba751f57c6ec49aa79"></a>
@@ -493,6 +612,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00091">91</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -510,6 +631,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00121">121</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a9af30283bea884fbf2a43336dea7a8c9" name="a9af30283bea884fbf2a43336dea7a8c9"></a>
@@ -525,6 +648,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00100">100</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">Generate()</a>, <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, <a class="el" href="MapGen_8cs_source.html#l00341">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00358">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00370">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -566,6 +691,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00067">67</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="aa1e4cd0d677214d34806c8961fa6cea3" name="aa1e4cd0d677214d34806c8961fa6cea3"></a>
@@ -589,6 +716,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00106">106</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -614,6 +743,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00109">109</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="a1d279b1e1875254b1f63fbe9528a6d1e" name="a1d279b1e1875254b1f63fbe9528a6d1e"></a>
@@ -637,6 +768,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00112">112</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -662,6 +795,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00118">118</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="aa802066b8bc5147c8dfda90c0ababa68" name="aa802066b8bc5147c8dfda90c0ababa68"></a>
@@ -677,6 +812,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00148">148</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00395">MapGen.ModifyHeight()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -710,6 +847,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00079">79</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a8454646312bf6d299605b9fc38712728" name="a8454646312bf6d299605b9fc38712728"></a>
@@ -725,6 +864,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00070">70</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -742,6 +883,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00073">73</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a5c3e5d3eadc56c4ee70e2e3740e499cd" name="a5c3e5d3eadc56c4ee70e2e3740e499cd"></a>
@@ -757,6 +900,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00076">76</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -774,6 +919,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00130">130</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="a919b8f1f58f06bf62c910fcccd17277c" name="a919b8f1f58f06bf62c910fcccd17277c"></a>
@@ -790,6 +937,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00133">133</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="a6ff5c57a11b547673c2d4471419c51e5" name="a6ff5c57a11b547673c2d4471419c51e5"></a>
@@ -805,6 +954,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00124">124</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -830,6 +981,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00097">97</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="afb563cb161ea42873074ea799a4eb0b5" name="afb563cb161ea42873074ea799a4eb0b5"></a>
@@ -846,6 +999,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00142">142</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="ae1532991e9bb9d8bf811cfd385d886ce" name="ae1532991e9bb9d8bf811cfd385d886ce"></a>
@@ -861,6 +1016,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00145">145</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -886,6 +1043,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00136">136</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a2888235d3eb28c08b0522fcdf6f49c89" name="a2888235d3eb28c08b0522fcdf6f49c89"></a>
@@ -910,6 +1069,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00115">115</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a912ca5a6c98db30e031b53217962b558" name="a912ca5a6c98db30e031b53217962b558"></a>
@@ -925,6 +1086,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00103">103</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">Generate()</a>, <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -950,16 +1113,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseMapGen_8cs_source.html#l00006">6</a> of file <a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.biomeProfiles.Length &gt; 3;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BaseMapGen_8cs_source.html">BaseMapGen.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBaseMapGen.html">BaseMapGen</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

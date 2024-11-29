@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestDefenseGame.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -487,7 +507,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuestInstance.html#ab0851714e0444cf013953761907dc014">QuestInstance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00023">23</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneEventDefenseGame.html">ZoneEventDefenseGame</a>();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassZoneEventDefenseGame_html"><div class="ttname"><a href="classZoneEventDefenseGame.html">ZoneEventDefenseGame</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00005">ZoneEventDefenseGame.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa99bffe9473ce269dbab915f55553245" name="aa99bffe9473ce269dbab915f55553245"></a>
@@ -516,7 +540,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuestInstance.html#ae9000f657901528c780313ade8ff5e63">QuestInstance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00028">28</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneInstanceDefense.html">ZoneInstanceDefense</a>();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassZoneInstanceDefense_html"><div class="ttname"><a href="classZoneInstanceDefense.html">ZoneInstanceDefense</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceDefense_8cs_source.html#l00003">ZoneInstanceDefense.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3430704375447d0efde0093a54dacff" name="aa3430704375447d0efde0093a54dacff"></a>
@@ -545,6 +573,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00060">60</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressDefenseGame&quot;</span>.lang(<a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8">lastWave</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclassQuestDefenseGame_html"><div class="ttname"><a href="classQuestDefenseGame.html">QuestDefenseGame</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDefenseGame_8cs_source.html#l00005">QuestDefenseGame.cs:6</a></div></div>
+<div class="ttc" id="aclassQuestDefenseGame_html_a172877297ca8d5a1514cadd9711fccf8"><div class="ttname"><a href="classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8">QuestDefenseGame.lastWave</a></div><div class="ttdeci">static int lastWave</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefenseGame_8cs_source.html#l00065">QuestDefenseGame.cs:65</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestDefenseGame_8cs_source.html#l00065">lastWave</a>.</p>
 
 </div>
 </div>
@@ -574,6 +609,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a1faedf8ae29a705f8899640fdae49360">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00054">54</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        Debug.Log(<span class="stringliteral">&quot;QuestDefenseGame: &quot;</span> + <a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8">lastWave</a>.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660">bonus</a>.ToString());</div>
+<div class="line"><span class="lineno">   57</span>        this.bonusMoney += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(<a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8">lastWave</a> * 400 * (100 + <a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660">bonus</a> * 5) / 100);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aab84d4222ba97e33775a9b7f3a2785dd"><div class="ttname"><a href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">EClass.rndHalf</a></div><div class="ttdeci">static int rndHalf(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00198">EClass.cs:198</a></div></div>
+<div class="ttc" id="aclassQuestDefenseGame_html_ada3b1dd97bafcc67414d14cc09c56660"><div class="ttname"><a href="classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660">QuestDefenseGame.bonus</a></div><div class="ttdeci">static int bonus</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefenseGame_8cs_source.html#l00067">QuestDefenseGame.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestDefenseGame_8cs_source.html#l00067">bonus</a>, <a class="el" href="QuestDefenseGame_8cs_source.html#l00065">lastWave</a>, and <a class="el" href="EClass_8cs_source.html#l00198">EClass.rndHalf()</a>.</p>
 
 </div>
 </div>
@@ -603,6 +647,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a1671b571331d5c1b59720b5a85a5c50c">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00049">49</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        this.thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">CreateFromFilter</a>(<span class="stringliteral">&quot;thing&quot;</span>, 30);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_a281cc475b772addc30ebe918809aaa30"><div class="ttname"><a href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">ThingGen.CreateFromFilter</a></div><div class="ttdeci">static Thing CreateFromFilter(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00069">ThingGen.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00069">ThingGen.CreateFromFilter()</a>.</p>
 
 </div>
 </div>
@@ -629,6 +680,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00067">67</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="QuestDefenseGame_8cs_source.html#l00054">OnBeforeComplete()</a>.</p>
+
 </div>
 </div>
 <a id="a172877297ca8d5a1514cadd9711fccf8" name="a172877297ca8d5a1514cadd9711fccf8"></a>
@@ -652,6 +705,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00065">65</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestDefenseGame_8cs_source.html#l00060">GetTextProgress()</a>, and <a class="el" href="QuestDefenseGame_8cs_source.html#l00054">OnBeforeComplete()</a>.</p>
 
 </div>
 </div>
@@ -693,7 +748,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00041">41</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> (<a class="code hl_class" href="classQuestDefenseGame.html">QuestDefenseGame</a>.<a class="code hl_variable" href="classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8">lastWave</a> * 8 + <span class="keyword">this</span>.difficulty * 10) * (100 + QuestDefenseGame.bonus * 5) / 100;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a551d58179e2ee0b30584c2dac865f912" name="a551d58179e2ee0b30584c2dac865f912"></a>
@@ -717,7 +778,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00007">7</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;instance_arena&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1fb4eb973eb9c406cdd76a6a4a1248fd" name="a1fb4eb973eb9c406cdd76a6a4a1248fd"></a>
@@ -741,7 +808,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00015">15</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216">thing</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02179">Card.cs:2180</a></div></div>
+<div class="ttc" id="aclassQuestDefenseGame_html_a034cd5e16342dd9038d2d7e49429b216"><div class="ttname"><a href="classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216">QuestDefenseGame.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefenseGame_8cs_source.html#l00070">QuestDefenseGame.cs:70</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a77172d202f9b107bdc861f16c229d482" name="a77172d202f9b107bdc861f16c229d482"></a>
@@ -765,16 +840,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDefenseGame_8cs_source.html#l00033">33</a> of file <a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Defense&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestDefenseGame_8cs_source.html">QuestDefenseGame.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestDefenseGame.html">QuestDefenseGame</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

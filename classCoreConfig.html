@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCoreConfig.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -425,7 +445,43 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00473">473</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  474</span>    {</div>
+<div class="line"><span class="lineno">  475</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  476</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea883c20579387e6450fc7f2f15d08614b">ToggleZoom</a>,</div>
+<div class="line"><span class="lineno">  477</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea13bd367ddbe29e0f511377c98d4b2847">ShowInv</a>,</div>
+<div class="line"><span class="lineno">  478</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea75f28d444160e55e65d18efff6a23b2e">ShowChara</a>,</div>
+<div class="line"><span class="lineno">  479</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eac8d77b2594150d93faa2688f89b505cf">ShowAbility</a>,</div>
+<div class="line"><span class="lineno">  480</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea7b4ee420dad838ba10501af15736054a">ToggleBuild</a>,</div>
+<div class="line"><span class="lineno">  481</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea72ae2e345c83bf53833dabcd08dd0865">ShowJournal</a>,</div>
+<div class="line"><span class="lineno">  482</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea3f980704b7b54a2afa4807544fa938df">EmuShift</a>,</div>
+<div class="line"><span class="lineno">  483</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea5d83c89c68a8e08d56b208e0c55f952d">EmuAlt</a>,</div>
+<div class="line"><span class="lineno">  484</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea90d0cdd0a6afeb2fe8c1d1402b5aa57d">AllAction</a>,</div>
+<div class="line"><span class="lineno">  485</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaaae707edb0dc85bf36be27ce8f594967">ToggleNoRoof</a>,</div>
+<div class="line"><span class="lineno">  486</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea05b6207abaa94cd72bfd99d3ba6a3910">OpenAllyInv</a>,</div>
+<div class="line"><span class="lineno">  487</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ead7663fa42334fe2bdff69b245bf44c7e">Talk</a>,</div>
+<div class="line"><span class="lineno">  488</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eacff8c6c6d3caa7fd7522bc779b8a98b2">EmptyHand</a>,</div>
+<div class="line"><span class="lineno">  489</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eabd2b7e5f85a6ea65065c4ebc6d7c95bb">Fire</a>,</div>
+<div class="line"><span class="lineno">  490</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c">SwitchHotbar</a>,</div>
+<div class="line"><span class="lineno">  491</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eae7e52216047c199f16597f96fd32ac66">PropertySearch</a></div>
+<div class="line"><span class="lineno">  492</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea05b6207abaa94cd72bfd99d3ba6a3910"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea05b6207abaa94cd72bfd99d3ba6a3910">CoreConfig.GameFunc.OpenAllyInv</a></div><div class="ttdeci">@ OpenAllyInv</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea13bd367ddbe29e0f511377c98d4b2847"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea13bd367ddbe29e0f511377c98d4b2847">CoreConfig.GameFunc.ShowInv</a></div><div class="ttdeci">@ ShowInv</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea3f980704b7b54a2afa4807544fa938df"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea3f980704b7b54a2afa4807544fa938df">CoreConfig.GameFunc.EmuShift</a></div><div class="ttdeci">@ EmuShift</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea5d83c89c68a8e08d56b208e0c55f952d"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea5d83c89c68a8e08d56b208e0c55f952d">CoreConfig.GameFunc.EmuAlt</a></div><div class="ttdeci">@ EmuAlt</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea6adf97f83acf6453d4a6a4b1070f3754">CoreConfig.GameFunc.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea72ae2e345c83bf53833dabcd08dd0865"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea72ae2e345c83bf53833dabcd08dd0865">CoreConfig.GameFunc.ShowJournal</a></div><div class="ttdeci">@ ShowJournal</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea75f28d444160e55e65d18efff6a23b2e"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea75f28d444160e55e65d18efff6a23b2e">CoreConfig.GameFunc.ShowChara</a></div><div class="ttdeci">@ ShowChara</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea7b4ee420dad838ba10501af15736054a"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea7b4ee420dad838ba10501af15736054a">CoreConfig.GameFunc.ToggleBuild</a></div><div class="ttdeci">@ ToggleBuild</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea883c20579387e6450fc7f2f15d08614b"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea883c20579387e6450fc7f2f15d08614b">CoreConfig.GameFunc.ToggleZoom</a></div><div class="ttdeci">@ ToggleZoom</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ea90d0cdd0a6afeb2fe8c1d1402b5aa57d"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea90d0cdd0a6afeb2fe8c1d1402b5aa57d">CoreConfig.GameFunc.AllAction</a></div><div class="ttdeci">@ AllAction</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c">CoreConfig.GameFunc.SwitchHotbar</a></div><div class="ttdeci">@ SwitchHotbar</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eaaae707edb0dc85bf36be27ce8f594967"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaaae707edb0dc85bf36be27ce8f594967">CoreConfig.GameFunc.ToggleNoRoof</a></div><div class="ttdeci">@ ToggleNoRoof</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eabd2b7e5f85a6ea65065c4ebc6d7c95bb"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eabd2b7e5f85a6ea65065c4ebc6d7c95bb">CoreConfig.GameFunc.Fire</a></div><div class="ttdeci">@ Fire</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eac8d77b2594150d93faa2688f89b505cf"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eac8d77b2594150d93faa2688f89b505cf">CoreConfig.GameFunc.ShowAbility</a></div><div class="ttdeci">@ ShowAbility</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eacff8c6c6d3caa7fd7522bc779b8a98b2"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eacff8c6c6d3caa7fd7522bc779b8a98b2">CoreConfig.GameFunc.EmptyHand</a></div><div class="ttdeci">@ EmptyHand</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0ead7663fa42334fe2bdff69b245bf44c7e"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ead7663fa42334fe2bdff69b245bf44c7e">CoreConfig.GameFunc.Talk</a></div><div class="ttdeci">@ Talk</div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0eae7e52216047c199f16597f96fd32ac66"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eae7e52216047c199f16597f96fd32ac66">CoreConfig.GameFunc.PropertySearch</a></div><div class="ttdeci">@ PropertySearch</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a75830db6af0286d65ccc8fea20b055f8" name="a75830db6af0286d65ccc8fea20b055f8"></a>
@@ -453,7 +509,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00494">494</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  495</span>    {</div>
+<div class="line"><span class="lineno">  496</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  497</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8acb2381f137d917f95042974cff614940">ExitBuildMode</a>,</div>
+<div class="line"><span class="lineno">  498</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a8d2de5368588552fbae54044ac5c7b3d">Rotate</a>,</div>
+<div class="line"><span class="lineno">  499</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a04a81245f8df74ba5581ea7aa164da49">ToggleFreepos</a>,</div>
+<div class="line"><span class="lineno">  500</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a6413a346ffba31b0c47bc09fc8ebca80">SnapFreepos</a>,</div>
+<div class="line"><span class="lineno">  501</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a5d5da0270e832a175ce6d86434654759">ToggleRoof</a>,</div>
+<div class="line"><span class="lineno">  502</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a16c4f05056f7da0c4bc2be553d9c3d74">ToggleSlope</a>,</div>
+<div class="line"><span class="lineno">  503</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a39dcf2499a2b938429a6919337c70a26">ToggleWall</a>,</div>
+<div class="line"><span class="lineno">  504</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a07c2da822df77f4c1e57ba860fc44f42">TogglePicker</a>,</div>
+<div class="line"><span class="lineno">  505</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8af796cb1fd7ad9bc6bbe10827c57f287a">ToggleBuildLight</a></div>
+<div class="line"><span class="lineno">  506</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a04a81245f8df74ba5581ea7aa164da49"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a04a81245f8df74ba5581ea7aa164da49">CoreConfig.GameFuncBuild.ToggleFreepos</a></div><div class="ttdeci">@ ToggleFreepos</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a07c2da822df77f4c1e57ba860fc44f42"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a07c2da822df77f4c1e57ba860fc44f42">CoreConfig.GameFuncBuild.TogglePicker</a></div><div class="ttdeci">@ TogglePicker</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a16c4f05056f7da0c4bc2be553d9c3d74"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a16c4f05056f7da0c4bc2be553d9c3d74">CoreConfig.GameFuncBuild.ToggleSlope</a></div><div class="ttdeci">@ ToggleSlope</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a39dcf2499a2b938429a6919337c70a26"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a39dcf2499a2b938429a6919337c70a26">CoreConfig.GameFuncBuild.ToggleWall</a></div><div class="ttdeci">@ ToggleWall</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a5d5da0270e832a175ce6d86434654759"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a5d5da0270e832a175ce6d86434654759">CoreConfig.GameFuncBuild.ToggleRoof</a></div><div class="ttdeci">@ ToggleRoof</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a6413a346ffba31b0c47bc09fc8ebca80"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a6413a346ffba31b0c47bc09fc8ebca80">CoreConfig.GameFuncBuild.SnapFreepos</a></div><div class="ttdeci">@ SnapFreepos</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8a8d2de5368588552fbae54044ac5c7b3d"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a8d2de5368588552fbae54044ac5c7b3d">CoreConfig.GameFuncBuild.Rotate</a></div><div class="ttdeci">@ Rotate</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8acb2381f137d917f95042974cff614940"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8acb2381f137d917f95042974cff614940">CoreConfig.GameFuncBuild.ExitBuildMode</a></div><div class="ttdeci">@ ExitBuildMode</div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8af796cb1fd7ad9bc6bbe10827c57f287a"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8af796cb1fd7ad9bc6bbe10827c57f287a">CoreConfig.GameFuncBuild.ToggleBuildLight</a></div><div class="ttdeci">@ ToggleBuildLight</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af8cefaa44a42f8eaa135aacb9dfc14be" name="af8cefaa44a42f8eaa135aacb9dfc14be"></a>
@@ -483,7 +560,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00508">508</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  509</span>    {</div>
+<div class="line"><span class="lineno">  510</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  511</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea7a1920d61156abc05a60135aefe8bc67">Default</a>,</div>
+<div class="line"><span class="lineno">  512</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beaf3f6d0343d56ce88ce7958170ed05cb3">Floor</a>,</div>
+<div class="line"><span class="lineno">  513</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beab95a01ffffa8fcdd2a9af961937c097c">Ceil</a>,</div>
+<div class="line"><span class="lineno">  514</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beafedd86b41f9586681e6053d0c36dc714">Hack3</a>,</div>
+<div class="line"><span class="lineno">  515</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea25a29545d24584078a526557a9d287a5">Hack4</a>,</div>
+<div class="line"><span class="lineno">  516</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beab89e2ed4730a28ced4e567f185b2c272">Hack5</a>,</div>
+<div class="line"><span class="lineno">  517</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea2f6caa9cc76317563c5bae67aeeaae42">Hack6</a>,</div>
+<div class="line"><span class="lineno">  518</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea369c68bca7e5d06580259817883a9751">Hack7</a>,</div>
+<div class="line"><span class="lineno">  519</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea7ff8f2a70f78152e15317015409b28eb">Hack8</a>,</div>
+<div class="line"><span class="lineno">  520</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea360c9a474341b502170f5c61b5eac78f">Hack9</a>,</div>
+<div class="line"><span class="lineno">  521</span>        <a class="code hl_enumvalue" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea5174d1309f275ba6f275db3af9eb3e18">Grid</a></div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea25a29545d24584078a526557a9d287a5"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea25a29545d24584078a526557a9d287a5">CoreConfig.ScreenSnapType.Hack4</a></div><div class="ttdeci">@ Hack4</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea2f6caa9cc76317563c5bae67aeeaae42"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea2f6caa9cc76317563c5bae67aeeaae42">CoreConfig.ScreenSnapType.Hack6</a></div><div class="ttdeci">@ Hack6</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea360c9a474341b502170f5c61b5eac78f"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea360c9a474341b502170f5c61b5eac78f">CoreConfig.ScreenSnapType.Hack9</a></div><div class="ttdeci">@ Hack9</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea369c68bca7e5d06580259817883a9751"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea369c68bca7e5d06580259817883a9751">CoreConfig.ScreenSnapType.Hack7</a></div><div class="ttdeci">@ Hack7</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea5174d1309f275ba6f275db3af9eb3e18"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea5174d1309f275ba6f275db3af9eb3e18">CoreConfig.ScreenSnapType.Grid</a></div><div class="ttdeci">@ Grid</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea7a1920d61156abc05a60135aefe8bc67">CoreConfig.ScreenSnapType.Default</a></div><div class="ttdeci">@ Default</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14bea7ff8f2a70f78152e15317015409b28eb"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14bea7ff8f2a70f78152e15317015409b28eb">CoreConfig.ScreenSnapType.Hack8</a></div><div class="ttdeci">@ Hack8</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14beab89e2ed4730a28ced4e567f185b2c272"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beab89e2ed4730a28ced4e567f185b2c272">CoreConfig.ScreenSnapType.Hack5</a></div><div class="ttdeci">@ Hack5</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14beab95a01ffffa8fcdd2a9af961937c097c"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beab95a01ffffa8fcdd2a9af961937c097c">CoreConfig.ScreenSnapType.Ceil</a></div><div class="ttdeci">@ Ceil</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14beaf3f6d0343d56ce88ce7958170ed05cb3"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beaf3f6d0343d56ce88ce7958170ed05cb3">CoreConfig.ScreenSnapType.Floor</a></div><div class="ttdeci">@ Floor</div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14beafedd86b41f9586681e6053d0c36dc714"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beafedd86b41f9586681e6053d0c36dc714">CoreConfig.ScreenSnapType.Hack3</a></div><div class="ttdeci">@ Hack3</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -511,6 +613,68 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00240">240</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCoreConfig.html#a121dae5449f1504e4d748da89c41e02c">ignoreApply</a>)</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span>        EInput.SetKeyMap(this.<a class="code hl_variable" href="classCoreConfig.html#a759b73b591d2e9950841fd78c3c11580">input</a>.keys);</div>
+<div class="line"><span class="lineno">  247</span>        this.<a class="code hl_function" href="classCoreConfig.html#abadc01f5c02a15d89e59295be4841c11">ApplyFPS</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  248</span>        Application.runInBackground = (Application.isEditor || this.<a class="code hl_variable" href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">other</a>.runBackground);</div>
+<div class="line"><span class="lineno">  249</span>        this.<a class="code hl_function" href="classCoreConfig.html#a2096770ec7a6debfc1d91cf9f0479bfe">ApplyVolume</a>();</div>
+<div class="line"><span class="lineno">  250</span>        this.<a class="code hl_function" href="classCoreConfig.html#a47738cb0a4e1272bc474287656b9aabd">ApplyGrading</a>();</div>
+<div class="line"><span class="lineno">  251</span>        this.<a class="code hl_function" href="classCoreConfig.html#aa1cfb4ba8acc6fae946d3bcbae81c112">ApplyHUD</a>();</div>
+<div class="line"><span class="lineno">  252</span>        this.<a class="code hl_function" href="classCoreConfig.html#a6b5ea3267ffc04dfc463738796dbbaa1">ApplyResolution</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  253</span>        Window.openLastTab = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.openLastTab;</div>
+<div class="line"><span class="lineno">  254</span>        Layer.closeOnRightClick = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.rightClickClose;</div>
+<div class="line"><span class="lineno">  255</span>        RenderObject.animeSetting = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.gameSetting.render.anime;</div>
+<div class="line"><span class="lineno">  256</span>        RenderObject.renderSetting = (RenderData.renderSetting = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.gameSetting.render);</div>
+<div class="line"><span class="lineno">  257</span>        TC._setting = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.gameSetting.render.tc;</div>
+<div class="line"><span class="lineno">  258</span>        UIScrollView.sensitivity = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.ScrollSensitivity;</div>
+<div class="line"><span class="lineno">  259</span>        UIContextMenu.closeOnMouseLeave = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.closePopupOnMouseLeave;</div>
+<div class="line"><span class="lineno">  260</span>        EClass.core.canvas.pixelPerfect = this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.pixelperfectUI;</div>
+<div class="line"><span class="lineno">  261</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">RefreshScreenSize</a>();</div>
+<div class="line"><span class="lineno">  262</span>        CharaRenderer._animeFrame = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.anime.animeStep[this.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>.animeFrame];</div>
+<div class="line"><span class="lineno">  263</span>        CharaRenderer._animeFramePCC = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.anime.animeStep[this.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>.animeFramePCC];</div>
+<div class="line"><span class="lineno">  264</span>        CharaRenderer.smoothmove = this.<a class="code hl_variable" href="classCoreConfig.html#ada19926887997a8a3f41c5caa78f8e50">camera</a>.smoothMove;</div>
+<div class="line"><span class="lineno">  265</span>        CharaRenderer._animeFramePC = (this.camera.smoothMove ? 6000 : this.<a class="code hl_variable" href="classCoreConfig.html#ada19926887997a8a3f41c5caa78f8e50">camera</a>.moveframe);</div>
+<div class="line"><span class="lineno">  266</span>        Scene.skipAnime = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  267</span>        QualitySettings.maxQueuedFrames = 0;</div>
+<div class="line"><span class="lineno">  268</span>        PopManager.outlineAlpha = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.outlineAlpha;</div>
+<div class="line"><span class="lineno">  269</span>        Window.animateWindow = this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.animeWindow;</div>
+<div class="line"><span class="lineno">  270</span>        EInput.rightScroll = this.<a class="code hl_variable" href="classCoreConfig.html#a522079b61563fc31f6a78107ac454f09">game</a>.rightScroll;</div>
+<div class="line"><span class="lineno">  271</span>        EInput.buttonScroll = (this.game.rightScroll ? EInput.rightMouse : EInput.middleMouse);</div>
+<div class="line"><span class="lineno">  272</span>        EInput.antiMissClick = 0.1f * (float)this.<a class="code hl_variable" href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">other</a>.antiMissClick;</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keyword">this</span>.<a class="code hl_property" href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#aee3b90332540886a925fde19e8a19bab">bloom</a>.enabled = <span class="keyword">this</span>.graphic.bloom;</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keyword">this</span>.camSupport.beautify.bloom = <span class="keyword">this</span>.test.bloom2;</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keyword">this</span>.camSupport.cam.allowHDR = <span class="keyword">this</span>.graphic.hdr;</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keyword">this</span>.ApplyScale();</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_ad6c40c221707b1b31fdf76bffcc6d1bf"><div class="ttname"><a href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">BaseGameScreen.RefreshScreenSize</a></div><div class="ttdeci">void RefreshScreenSize()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.cs:415</a></div></div>
+<div class="ttc" id="aclassCameraSupport_html_aee3b90332540886a925fde19e8a19bab"><div class="ttname"><a href="classCameraSupport.html#aee3b90332540886a925fde19e8a19bab">CameraSupport.bloom</a></div><div class="ttdeci">BloomOptimized bloom</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00060">CameraSupport.cs:60</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a121dae5449f1504e4d748da89c41e02c"><div class="ttname"><a href="classCoreConfig.html#a121dae5449f1504e4d748da89c41e02c">CoreConfig.ignoreApply</a></div><div class="ttdeci">bool ignoreApply</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00463">CoreConfig.cs:463</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a2096770ec7a6debfc1d91cf9f0479bfe"><div class="ttname"><a href="classCoreConfig.html#a2096770ec7a6debfc1d91cf9f0479bfe">CoreConfig.ApplyVolume</a></div><div class="ttdeci">void ApplyVolume()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00374">CoreConfig.cs:374</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a3473cfb2e2f51c663a6f620302fb2014"><div class="ttname"><a href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">CoreConfig.test</a></div><div class="ttdeci">CoreConfig.Test test</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00454">CoreConfig.cs:454</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a47738cb0a4e1272bc474287656b9aabd"><div class="ttname"><a href="classCoreConfig.html#a47738cb0a4e1272bc474287656b9aabd">CoreConfig.ApplyGrading</a></div><div class="ttdeci">void ApplyGrading()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00334">CoreConfig.cs:334</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a522079b61563fc31f6a78107ac454f09"><div class="ttname"><a href="classCoreConfig.html#a522079b61563fc31f6a78107ac454f09">CoreConfig.game</a></div><div class="ttdeci">new CoreConfig.GameConfig game</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00440">CoreConfig.cs:440</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a6b5ea3267ffc04dfc463738796dbbaa1"><div class="ttname"><a href="classCoreConfig.html#a6b5ea3267ffc04dfc463738796dbbaa1">CoreConfig.ApplyResolution</a></div><div class="ttdeci">void ApplyResolution(bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00279">CoreConfig.cs:279</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a6f74ee91f6b2fab4c75f2283f18bf4f5"><div class="ttname"><a href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">CoreConfig.graphic</a></div><div class="ttdeci">CoreConfig.GraphicSetting graphic</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00438">CoreConfig.cs:438</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a759b73b591d2e9950841fd78c3c11580"><div class="ttname"><a href="classCoreConfig.html#a759b73b591d2e9950841fd78c3c11580">CoreConfig.input</a></div><div class="ttdeci">CoreConfig.InputSetting input</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00446">CoreConfig.cs:446</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a9578c03d34214718e492d54e71a702d7"><div class="ttname"><a href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">CoreConfig.ui</a></div><div class="ttdeci">new CoreConfig.UISetting ui</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00432">CoreConfig.cs:432</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aa1cfb4ba8acc6fae946d3bcbae81c112"><div class="ttname"><a href="classCoreConfig.html#aa1cfb4ba8acc6fae946d3bcbae81c112">CoreConfig.ApplyHUD</a></div><div class="ttdeci">void ApplyHUD()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00313">CoreConfig.cs:313</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aba40d0adec93042a0e69f3d3a074f840"><div class="ttname"><a href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">CoreConfig.other</a></div><div class="ttdeci">CoreConfig.OtherSetting other</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00450">CoreConfig.cs:450</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_abadc01f5c02a15d89e59295be4841c11"><div class="ttname"><a href="classCoreConfig.html#abadc01f5c02a15d89e59295be4841c11">CoreConfig.ApplyFPS</a></div><div class="ttdeci">void ApplyFPS(bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00222">CoreConfig.cs:222</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ada19926887997a8a3f41c5caa78f8e50"><div class="ttname"><a href="classCoreConfig.html#ada19926887997a8a3f41c5caa78f8e50">CoreConfig.camera</a></div><div class="ttdeci">CoreConfig.CameraConfig camera</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00448">CoreConfig.cs:448</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aea095888b36f90337cb9fcd19374ee34"><div class="ttname"><a href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">CoreConfig.camSupport</a></div><div class="ttdeci">CameraSupport camSupport</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00034">CoreConfig.cs:35</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a000b0eb1e81cc120ffacafb5630c8899"><div class="ttname"><a href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">GameSetting.render</a></div><div class="ttdeci">GameSetting.RenderSetting render</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00027">GameSetting.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00222">ApplyFPS()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00334">ApplyGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00313">ApplyHUD()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00279">ApplyResolution()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00374">ApplyVolume()</a>, <a class="el" href="CameraSupport_8cs_source.html#l00060">CameraSupport.bloom</a>, <a class="el" href="CoreConfig_8cs_source.html#l00448">camera</a>, <a class="el" href="CoreConfig_8cs_source.html#l00035">camSupport</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00440">game</a>, <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>, <a class="el" href="CoreConfig_8cs_source.html#l00463">ignoreApply</a>, <a class="el" href="CoreConfig_8cs_source.html#l00446">input</a>, <a class="el" href="CoreConfig_8cs_source.html#l00450">other</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.RefreshScreenSize()</a>, <a class="el" href="GameSetting_8cs_source.html#l00027">GameSetting.render</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, <a class="el" href="CoreConfig_8cs_source.html#l00454">test</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00432">ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00108">OnInit()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00183">OnReset()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -538,6 +702,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00403">403</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  404</span>    {</div>
+<div class="line"><span class="lineno">  405</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ui.skins.SetFonts(this.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontUI, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontChatbox, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontBalloon, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontDialog, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontWidget, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>.fontNews);</div>
+<div class="line"><span class="lineno">  406</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a061ec0d62e97065857d11782a3da0696"><div class="ttname"><a href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">CoreConfig.font</a></div><div class="ttdeci">CoreConfig.FontSetting font</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00436">CoreConfig.cs:436</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00436">font</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00433">LayerConfig.ApplyFont()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00183">OnReset()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00397">OnSetLang()</a>.</p>
 
 </div>
 </div>
@@ -566,6 +738,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00222">222</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted &amp;&amp; !force)</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            QualitySettings.vSyncCount = 0;</div>
+<div class="line"><span class="lineno">  227</span>            Application.targetFrameRate = 60;</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.vsync)</div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>            QualitySettings.vSyncCount = 1;</div>
+<div class="line"><span class="lineno">  233</span>            Application.targetFrameRate = 60;</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>        QualitySettings.vSyncCount = 0;</div>
+<div class="line"><span class="lineno">  237</span>        Application.targetFrameRate = this.<a class="code hl_variable" href="classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2">_framerates</a>[this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.fps];</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_aacfb79ec5c6e9fa278ec39e047ad79f2"><div class="ttname"><a href="classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2">CoreConfig._framerates</a></div><div class="ttdeci">int[] _framerates</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00465">CoreConfig.cs:465</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00465">_framerates</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>.</p>
 
 </div>
 </div>
@@ -593,6 +786,40 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00334">334</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>    {</div>
+<div class="line"><span class="lineno">  336</span>        <a class="code hl_class" href="classPostEffectProfile.html">PostEffectProfile</a> postEffectProfile = this.<a class="code hl_function" href="classCoreConfig.html#a9b27a8baf2a36252cc1ca7914c099a3f">GetPostEffectProfile</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  337</span>        ScreenGrading grading = this.<a class="code hl_property" href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#a4992a16e3f7f0bcfc3ffc0c569314f61">grading</a>;</div>
+<div class="line"><span class="lineno">  338</span>        grading.userSaturation = this.graphic.saturation + postEffectProfile.<a class="code hl_variable" href="classPostEffectProfile.html#a65ade6afcf1ac90c57933afdb1754ef1">Saturation</a>;</div>
+<div class="line"><span class="lineno">  339</span>        grading.userBrightness = this.graphic.brightness + postEffectProfile.<a class="code hl_variable" href="classPostEffectProfile.html#a0ff3354689f0a6e3eec7e5f63e477865">Brightness</a>;</div>
+<div class="line"><span class="lineno">  340</span>        grading.userContrast = this.graphic.contrast + postEffectProfile.<a class="code hl_variable" href="classPostEffectProfile.html#aa98cc596e7c749fb216e3a168c660ddd">Contrast</a>;</div>
+<div class="line"><span class="lineno">  341</span>        this.camSupport.beautify.saturate = this.graphic.vibrance + grading.profile.Vibrance;</div>
+<div class="line"><span class="lineno">  342</span>        this.camSupport.kuwahara.enabled = this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.kuwahara;</div>
+<div class="line"><span class="lineno">  343</span>        this.camSupport.blur.enabled = (this.graphic.blur &gt; 0);</div>
+<div class="line"><span class="lineno">  344</span>        this.camSupport.blur.Amount = 0.01f * (float)this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.blur;</div>
+<div class="line"><span class="lineno">  345</span>        if (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">  346</span>        {</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483">RefreshGrading</a>();</div>
+<div class="line"><span class="lineno">  348</span>        }</div>
+<div class="line"><span class="lineno">  349</span>        this.<a class="code hl_property" href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">camSupport</a>.<a class="code hl_function" href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">  350</span>        this.<a class="code hl_function" href="classCoreConfig.html#a9385fb7851b4a7752d6ce88c8f04ff35">RefreshUIBrightness</a>();</div>
+<div class="line"><span class="lineno">  351</span>        postEffectProfile.<a class="code hl_function" href="classPostEffectProfile.html#a8a6b4420c5c909653cdc659f908c2b45">Apply</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa73b32127f51413e730ef55f1412dc23">cam</a>);</div>
+<div class="line"><span class="lineno">  352</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_abf1d6bcfc2e596bda0f8716f08037483"><div class="ttname"><a href="classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483">BaseGameScreen.RefreshGrading</a></div><div class="ttdeci">void RefreshGrading()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.cs:548</a></div></div>
+<div class="ttc" id="aclassCameraSupport_html_a4960d89790b6001f79a60a3d158d1285"><div class="ttname"><a href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">CameraSupport.OnChangeResolution</a></div><div class="ttdeci">void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00014">CameraSupport.cs:14</a></div></div>
+<div class="ttc" id="aclassCameraSupport_html_a4992a16e3f7f0bcfc3ffc0c569314f61"><div class="ttname"><a href="classCameraSupport.html#a4992a16e3f7f0bcfc3ffc0c569314f61">CameraSupport.grading</a></div><div class="ttdeci">ScreenGrading grading</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00048">CameraSupport.cs:48</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a9385fb7851b4a7752d6ce88c8f04ff35"><div class="ttname"><a href="classCoreConfig.html#a9385fb7851b4a7752d6ce88c8f04ff35">CoreConfig.RefreshUIBrightness</a></div><div class="ttdeci">void RefreshUIBrightness()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00354">CoreConfig.cs:354</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a9b27a8baf2a36252cc1ca7914c099a3f"><div class="ttname"><a href="classCoreConfig.html#a9b27a8baf2a36252cc1ca7914c099a3f">CoreConfig.GetPostEffectProfile</a></div><div class="ttdeci">PostEffectProfile GetPostEffectProfile(bool replaceWorld=false)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00324">CoreConfig.cs:324</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html"><div class="ttname"><a href="classPostEffectProfile.html">PostEffectProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00005">PostEffectProfile.cs:6</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a0ff3354689f0a6e3eec7e5f63e477865"><div class="ttname"><a href="classPostEffectProfile.html#a0ff3354689f0a6e3eec7e5f63e477865">PostEffectProfile.Brightness</a></div><div class="ttdeci">float Brightness</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00044">PostEffectProfile.cs:44</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a65ade6afcf1ac90c57933afdb1754ef1"><div class="ttname"><a href="classPostEffectProfile.html#a65ade6afcf1ac90c57933afdb1754ef1">PostEffectProfile.Saturation</a></div><div class="ttdeci">float Saturation</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00046">PostEffectProfile.cs:46</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a8a6b4420c5c909653cdc659f908c2b45"><div class="ttname"><a href="classPostEffectProfile.html#a8a6b4420c5c909653cdc659f908c2b45">PostEffectProfile.Apply</a></div><div class="ttdeci">void Apply(Camera cam)</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00024">PostEffectProfile.cs:24</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_aa98cc596e7c749fb216e3a168c660ddd"><div class="ttname"><a href="classPostEffectProfile.html#aa98cc596e7c749fb216e3a168c660ddd">PostEffectProfile.Contrast</a></div><div class="ttdeci">float Contrast</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00048">PostEffectProfile.cs:48</a></div></div>
+<div class="ttc" id="aclassScene_html_aa73b32127f51413e730ef55f1412dc23"><div class="ttname"><a href="classScene.html#aa73b32127f51413e730ef55f1412dc23">Scene.cam</a></div><div class="ttdeci">Camera cam</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01009">Scene.cs:1009</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PostEffectProfile_8cs_source.html#l00024">PostEffectProfile.Apply()</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00044">PostEffectProfile.Brightness</a>, <a class="el" href="Scene_8cs_source.html#l01009">Scene.cam</a>, <a class="el" href="CoreConfig_8cs_source.html#l00035">camSupport</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00048">PostEffectProfile.Contrast</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00324">GetPostEffectProfile()</a>, <a class="el" href="CameraSupport_8cs_source.html#l00048">CameraSupport.grading</a>, <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>, <a class="el" href="CameraSupport_8cs_source.html#l00014">CameraSupport.OnChangeResolution()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00354">RefreshUIBrightness()</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00046">PostEffectProfile.Saturation</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -620,6 +847,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00313">313</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>.</p>
 
 </div>
 </div>
@@ -648,6 +879,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00279">279</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>    {</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.fixedResolution)</div>
+<div class="line"><span class="lineno">  282</span>        {</div>
+<div class="line"><span class="lineno">  283</span>            force = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span> (force)</div>
+<div class="line"><span class="lineno">  286</span>        {</div>
+<div class="line"><span class="lineno">  287</span>            Screen.SetResolution(this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.w, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.h, <span class="keyword">this</span>.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.fullScreen);</div>
+<div class="line"><span class="lineno">  288</span>        }</div>
+<div class="line"><span class="lineno">  289</span>        Screen.fullScreen = this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.fullScreen;</div>
+<div class="line"><span class="lineno">  290</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>.</p>
 
 </div>
 </div>
@@ -675,6 +921,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00292">292</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>    {</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keywordtype">float</span> num = (float)this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.scale * 0.05f;</div>
+<div class="line"><span class="lineno">  295</span>        if (this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.autoscale)</div>
+<div class="line"><span class="lineno">  296</span>        {</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordtype">float</span> a = 0.55f;</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordtype">float</span> b = num + 0.05f;</div>
+<div class="line"><span class="lineno">  299</span>            num = 0.01f * (float)Mathf.RoundToInt(Mathf.Lerp(a, b, (<span class="keywordtype">float</span>)Screen.height / 1080f) * 100f);</div>
+<div class="line"><span class="lineno">  300</span>        }</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.secureMinWidth &amp;&amp; Screen.width &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ui.minWidth)</div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordtype">float</span> num2 = (float)Screen.width / (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ui.minWidth;</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">if</span> (num2 &lt; num)</div>
+<div class="line"><span class="lineno">  305</span>            {</div>
+<div class="line"><span class="lineno">  306</span>                num = num2;</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>        Debug.Log(<span class="stringliteral">&quot;#UI ApplyScale:&quot;</span> + num.ToString());</div>
+<div class="line"><span class="lineno">  310</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.canvas.GetComponent&lt;CanvasScaler&gt;().scaleFactor = num;</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00432">ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00217">OnChangeResolution()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -702,6 +971,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00408">408</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>    {</div>
+<div class="line"><span class="lineno">  410</span>        <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.skins.SetMainSkin(this.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>.idSkin);</div>
+<div class="line"><span class="lineno">  411</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ApplySkins();</div>
+<div class="line"><span class="lineno">  412</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
+<div class="ttc" id="aclassCore_html_acfcdec21b8065bc6731db8ac33904feb"><div class="ttname"><a href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">Core.ui</a></div><div class="ttdeci">UI ui</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00737">Core.cs:737</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00454">test</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00183">OnReset()</a>.</p>
 
 </div>
 </div>
@@ -729,6 +1009,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00374">374</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  375</span>    {</div>
+<div class="line"><span class="lineno">  376</span>        this.<a class="code hl_function" href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">SetVolume</a>(<span class="stringliteral">&quot;VolumeMaster&quot;</span>, this.<a class="code hl_variable" href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">sound</a>.volumeMaster);</div>
+<div class="line"><span class="lineno">  377</span>        this.<a class="code hl_function" href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">SetVolume</a>(<span class="stringliteral">&quot;VolumeBGM&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.muteBGM ? 0f : <span class="keyword">this</span>.sound.volumeBGM);</div>
+<div class="line"><span class="lineno">  378</span>        this.<a class="code hl_function" href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">SetVolume</a>(<span class="stringliteral">&quot;VolumeSpatialBGM&quot;</span>, this.<a class="code hl_variable" href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">sound</a>.volumeBGM);</div>
+<div class="line"><span class="lineno">  379</span>        this.<a class="code hl_function" href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">SetVolume</a>(<span class="stringliteral">&quot;VolumeSFX&quot;</span>, this.<a class="code hl_variable" href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">sound</a>.volumeSFX);</div>
+<div class="line"><span class="lineno">  380</span>        this.<a class="code hl_function" href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">SetVolume</a>(<span class="stringliteral">&quot;VolumeAmbience&quot;</span>, this.<a class="code hl_variable" href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">sound</a>.volumeAMB);</div>
+<div class="line"><span class="lineno">  381</span>        this.<a class="code hl_function" href="classCoreConfig.html#a8172aa63ff22de211cdb8c37b3e3fe93">SetBGMInterval</a>();</div>
+<div class="line"><span class="lineno">  382</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a43ca30bd974bb2e2b476c431144aad68"><div class="ttname"><a href="classCoreConfig.html#a43ca30bd974bb2e2b476c431144aad68">CoreConfig.SetVolume</a></div><div class="ttdeci">void SetVolume(string id, float v)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00392">CoreConfig.cs:392</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a8172aa63ff22de211cdb8c37b3e3fe93"><div class="ttname"><a href="classCoreConfig.html#a8172aa63ff22de211cdb8c37b3e3fe93">CoreConfig.SetBGMInterval</a></div><div class="ttdeci">void SetBGMInterval()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00384">CoreConfig.cs:384</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aaf5ecc4ef57e25c510992d73dce77568"><div class="ttname"><a href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">CoreConfig.sound</a></div><div class="ttdeci">CoreConfig.SoundSetting sound</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00434">CoreConfig.cs:434</a></div></div>
+<div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00159">EClass.cs:160</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00384">SetBGMInterval()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00392">SetVolume()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00434">sound</a>, and <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -757,6 +1053,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00317">317</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>    {</div>
+<div class="line"><span class="lineno">  319</span>        this.camSupport.Zoom = a;</div>
+<div class="line"><span class="lineno">  320</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">RefreshScreenSize</a>();</div>
+<div class="line"><span class="lineno">  321</span>        this.<a class="code hl_property" href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">camSupport</a>.<a class="code hl_function" href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00035">camSupport</a>, <a class="el" href="CameraSupport_8cs_source.html#l00014">CameraSupport.OnChangeResolution()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.RefreshScreenSize()</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -784,6 +1087,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00042">42</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> File.Exists(<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a>) &amp;&amp; (!EClass.debug.useNewConfig || !Application.isEditor);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html"><div class="ttname"><a href="classCoreConfig.html">CoreConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00011">CoreConfig.cs:12</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ab58606cb626ed12304fd82020d759d59"><div class="ttname"><a href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">CoreConfig.path</a></div><div class="ttdeci">static string path</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00013">CoreConfig.cs:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00014">path</a>.</p>
 
 </div>
 </div>
@@ -812,6 +1122,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00324">324</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>    {</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>.idPostProfile.IsEmpty(<span class="stringliteral">&quot;None&quot;</span>);</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span> (replaceWorld &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.game.activeZone.IsRegion &amp;&amp; <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != <span class="stringliteral">&quot;None&quot;</span>)</div>
+<div class="line"><span class="lineno">  328</span>        {</div>
+<div class="line"><span class="lineno">  329</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;NFAA&quot;</span>;</div>
+<div class="line"><span class="lineno">  330</span>        }</div>
+<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">return</span> ResourceCache.Load&lt;<a class="code hl_class" href="classPostEffectProfile.html">PostEffectProfile</a>&gt;(<span class="stringliteral">&quot;Scene/Profile/PostEffect/&quot;</span> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  332</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">ApplyGrading()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00085">Init()</a>.</p>
 
 </div>
 </div>
@@ -839,6 +1162,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00118">118</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> ElinEncoder.IsValid(this.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>);</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a497228804eaf78f77ae2054da72f863a"><div class="ttname"><a href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">CoreConfig.rewardCode</a></div><div class="ttdeci">string rewardCode</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00422">CoreConfig.cs:422</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00422">rewardCode</a>.</p>
 
 </div>
 </div>
@@ -866,6 +1195,38 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00085">85</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            Debug.Log(<span class="stringliteral">&quot;Creating new config.&quot;</span>);</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = EClass.core.config = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">   91</span>            coreConfig.<a class="code hl_function" href="classCoreConfig.html#aa6d85dfd1337be8d169f75f081275853">SetLang</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.langCode);</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (!Application.isEditor || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a6522a71cea81720ec4f09688e071bf70">useNewConfig</a>)</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                coreConfig.<a class="code hl_function" href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">Save</a>();</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>            coreConfig.<a class="code hl_function" href="classCoreConfig.html#a9b27a8baf2a36252cc1ca7914c099a3f">GetPostEffectProfile</a>(<span class="keyword">false</span>).<a class="code hl_function" href="classPostEffectProfile.html#a2538bbf7e55c08aa9bad7052a1fb139e">OnChangeProfile</a>();</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                coreConfig.other.showTestOptions = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  100</span>                coreConfig.test.showNumbers = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>                coreConfig.game.waiter = 0;</div>
+<div class="line"><span class="lineno">  102</span>                coreConfig.game.advancedMenu = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.OnInit();</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a4b50f57e52e3de009b937b871de5ea68"><div class="ttname"><a href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">CoreConfig.Save</a></div><div class="ttdeci">void Save()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00209">CoreConfig.cs:209</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aa6d85dfd1337be8d169f75f081275853"><div class="ttname"><a href="classCoreConfig.html#aa6d85dfd1337be8d169f75f081275853">CoreConfig.SetLang</a></div><div class="ttdeci">void SetLang(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00191">CoreConfig.cs:191</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a6522a71cea81720ec4f09688e071bf70"><div class="ttname"><a href="classCoreDebug.html#a6522a71cea81720ec4f09688e071bf70">CoreDebug.useNewConfig</a></div><div class="ttdeci">bool useNewConfig</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02137">CoreDebug.cs:2137</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a591f2b0660e3f89e6697f7e36a8d3612"><div class="ttname"><a href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">GameSetting.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00063">GameSetting.cs:63</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a2538bbf7e55c08aa9bad7052a1fb139e"><div class="ttname"><a href="classPostEffectProfile.html#a2538bbf7e55c08aa9bad7052a1fb139e">PostEffectProfile.OnChangeProfile</a></div><div class="ttdeci">void OnChangeProfile()</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00015">PostEffectProfile.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="CoreConfig_8cs_source.html#l00324">GetPostEffectProfile()</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00015">PostEffectProfile.OnChangeProfile()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00209">Save()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00191">SetLang()</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, and <a class="el" href="CoreDebug_8cs_source.html#l02137">CoreDebug.useNewConfig</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00453">Core.Init()</a>.</p>
 
 </div>
 </div>
@@ -894,6 +1255,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00080">80</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> v.minor &gt;= 22;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00047">TryLoadConfig()</a>.</p>
 
 </div>
 </div>
@@ -921,6 +1287,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00217">217</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        this.<a class="code hl_function" href="classCoreConfig.html#a749b16ee27de7858429001261a3029a8">ApplyScale</a>();</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a749b16ee27de7858429001261a3029a8"><div class="ttname"><a href="classCoreConfig.html#a749b16ee27de7858429001261a3029a8">CoreConfig.ApplyScale</a></div><div class="ttdeci">void ApplyScale()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00292">CoreConfig.cs:292</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00292">ApplyScale()</a>.</p>
 
 </div>
 </div>
@@ -948,6 +1320,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00108">108</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ui.skins.SetMainSkin(this.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>.idSkin);</div>
+<div class="line"><span class="lineno">  111</span>        this.<a class="code hl_function" href="classCoreConfig.html#a684854fbe9a08118f1eb2f17abd54bb9">Apply</a>();</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            this.net.enable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a684854fbe9a08118f1eb2f17abd54bb9"><div class="ttname"><a href="classCoreConfig.html#a684854fbe9a08118f1eb2f17abd54bb9">CoreConfig.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00240">CoreConfig.cs:240</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00454">test</a>.</p>
 
 </div>
 </div>
@@ -975,6 +1358,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00183">183</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.GetPostEffectProfile(<span class="keyword">false</span>).OnChangeProfile();</div>
+<div class="line"><span class="lineno">  186</span>        this.<a class="code hl_function" href="classCoreConfig.html#a684854fbe9a08118f1eb2f17abd54bb9">Apply</a>();</div>
+<div class="line"><span class="lineno">  187</span>        this.<a class="code hl_function" href="classCoreConfig.html#a973ccb3a156fc15e2782bc024a35f7a2">ApplyFont</a>();</div>
+<div class="line"><span class="lineno">  188</span>        this.<a class="code hl_function" href="classCoreConfig.html#a74876a6fd575b9d46dbbbb50e98012c1">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a74876a6fd575b9d46dbbbb50e98012c1"><div class="ttname"><a href="classCoreConfig.html#a74876a6fd575b9d46dbbbb50e98012c1">CoreConfig.ApplySkin</a></div><div class="ttdeci">void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00408">CoreConfig.cs:408</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a973ccb3a156fc15e2782bc024a35f7a2"><div class="ttname"><a href="classCoreConfig.html#a973ccb3a156fc15e2782bc024a35f7a2">CoreConfig.ApplyFont</a></div><div class="ttdeci">void ApplyFont()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00403">CoreConfig.cs:403</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00403">ApplyFont()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00408">ApplySkin()</a>, and <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>.</p>
 
 </div>
 </div>
@@ -1002,6 +1395,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00397">397</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  398</span>    {</div>
+<div class="line"><span class="lineno">  399</span>        SkinManager.Instance.InitFont();</div>
+<div class="line"><span class="lineno">  400</span>        this.<a class="code hl_function" href="classCoreConfig.html#a973ccb3a156fc15e2782bc024a35f7a2">ApplyFont</a>();</div>
+<div class="line"><span class="lineno">  401</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00403">ApplyFont()</a>.</p>
 
 </div>
 </div>
@@ -1029,6 +1428,34 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00354">354</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  355</span>    {</div>
+<div class="line"><span class="lineno">  356</span>        ScreenGrading grading = this.<a class="code hl_property" href="classCoreConfig.html#aea095888b36f90337cb9fcd19374ee34">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#a4992a16e3f7f0bcfc3ffc0c569314f61">grading</a>;</div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordtype">float</span> num = 0f;</div>
+<div class="line"><span class="lineno">  358</span>        <span class="keywordtype">float</span> num2 = 0f;</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.dynamicBrightness &amp;&amp; (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#a9606e862f9f0b724127148efb1111486">IsNight</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a498956a06ce4cd0749fc67d7c6331b2e">indoor</a>))</div>
+<div class="line"><span class="lineno">  362</span>            {</div>
+<div class="line"><span class="lineno">  363</span>                num -= 0.05f * this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.dynamicBrightnessMod;</div>
+<div class="line"><span class="lineno">  364</span>            }</div>
+<div class="line"><span class="lineno">  365</span>        }</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  367</span>        {</div>
+<div class="line"><span class="lineno">  368</span>            num = -0.05f;</div>
+<div class="line"><span class="lineno">  369</span>        }</div>
+<div class="line"><span class="lineno">  370</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIBrightness&quot;</span>, 0.01f * (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.brightness + grading.profile.uiBrightness + num);</div>
+<div class="line"><span class="lineno">  371</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIContrast&quot;</span>, 0.01f * (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>.contrast + grading.profile.uiContrast + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.ui.lightContrast + num2);</div>
+<div class="line"><span class="lineno">  372</span>    }</div>
+<div class="ttc" id="aclassDate_html_a9606e862f9f0b724127148efb1111486"><div class="ttname"><a href="classDate.html#a9606e862f9f0b724127148efb1111486">Date.IsNight</a></div><div class="ttdeci">bool IsNight</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00099">Date.cs:100</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a498956a06ce4cd0749fc67d7c6331b2e"><div class="ttname"><a href="classMapConfig.html#a498956a06ce4cd0749fc67d7c6331b2e">MapConfig.indoor</a></div><div class="ttdeci">bool indoor</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00052">MapConfig.cs:52</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="CoreConfig_8cs_source.html#l00035">camSupport</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="CameraSupport_8cs_source.html#l00048">CameraSupport.grading</a>, <a class="el" href="MapConfig_8cs_source.html#l00052">MapConfig.indoor</a>, <a class="el" href="Date_8cs_source.html#l00100">Date.IsNight</a>, <a class="el" href="CoreConfig_8cs_source.html#l00432">ui</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">ApplyGrading()</a>.</p>
 
 </div>
 </div>
@@ -1056,6 +1483,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00123">123</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.lang;</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">string</span> text2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.rewardCode;</div>
+<div class="line"><span class="lineno">  127</span>        EClass.core.config = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.SetLang(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.OnReset();</div>
+<div class="line"><span class="lineno">  130</span>        EClass.core.config.rewardCode = text2;</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameSetting_8cs_source.html#l00007">GameSetting.ApplyConfig()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1083,6 +1522,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00151">151</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  154</span>        EClass.core.config.game = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a522079b61563fc31f6a78107ac454f09">game</a>;</div>
+<div class="line"><span class="lineno">  155</span>        EClass.core.config.net = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a92546cbff7456b116fa6bcf304a1708c">net</a>;</div>
+<div class="line"><span class="lineno">  156</span>        EClass.core.config.backer = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a1a126d29ca13e7868f5553978d380215">backer</a>;</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a1a126d29ca13e7868f5553978d380215"><div class="ttname"><a href="classCoreConfig.html#a1a126d29ca13e7868f5553978d380215">CoreConfig.backer</a></div><div class="ttdeci">CoreConfig.BackerContentConfig backer</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00444">CoreConfig.cs:444</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a92546cbff7456b116fa6bcf304a1708c"><div class="ttname"><a href="classCoreConfig.html#a92546cbff7456b116fa6bcf304a1708c">CoreConfig.net</a></div><div class="ttdeci">CoreConfig.NetSetting net</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00442">CoreConfig.cs:442</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00444">backer</a>, <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00440">game</a>, <a class="el" href="CoreConfig_8cs_source.html#l00442">net</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1110,6 +1562,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00133">133</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  136</span>        EClass.core.config.ui = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a9578c03d34214718e492d54e71a702d7">ui</a>;</div>
+<div class="line"><span class="lineno">  137</span>        EClass.core.config.font = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a061ec0d62e97065857d11782a3da0696">font</a>;</div>
+<div class="line"><span class="lineno">  138</span>        EClass.core.config.sound = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#aaf5ecc4ef57e25c510992d73dce77568">sound</a>;</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.ApplyFont();</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00436">font</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, <a class="el" href="CoreConfig_8cs_source.html#l00434">sound</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00432">ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1137,6 +1601,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00143">143</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  146</span>        EClass.core.config.graphic = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a6f74ee91f6b2fab4c75f2283f18bf4f5">graphic</a>;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.GetPostEffectProfile(<span class="keyword">false</span>).OnChangeProfile();</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00438">graphic</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1164,6 +1638,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00160">160</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
+<div class="line"><span class="lineno">  162</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  163</span>        EClass.core.config.input = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a759b73b591d2e9950841fd78c3c11580">input</a>;</div>
+<div class="line"><span class="lineno">  164</span>        EClass.core.config.camera = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#ada19926887997a8a3f41c5caa78f8e50">camera</a>;</div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00448">camera</a>, <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00446">input</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1191,6 +1675,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00168">168</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  171</span>        EClass.core.config.fix = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a52ff1c0ab12dc59027cf66e1047b6ff7">fix</a>;</div>
+<div class="line"><span class="lineno">  172</span>        EClass.core.config.other = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">other</a>;</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a52ff1c0ab12dc59027cf66e1047b6ff7"><div class="ttname"><a href="classCoreConfig.html#a52ff1c0ab12dc59027cf66e1047b6ff7">CoreConfig.fix</a></div><div class="ttdeci">CoreConfig.Fix fix</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00452">CoreConfig.cs:452</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00452">fix</a>, <a class="el" href="CoreConfig_8cs_source.html#l00450">other</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1218,6 +1713,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00176">176</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.DeepCopy&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a591f2b0660e3f89e6697f7e36a8d3612">config</a>);</div>
+<div class="line"><span class="lineno">  179</span>        EClass.core.config.test = coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>;</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.Apply();</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameSetting_8cs_source.html#l00063">GameSetting.config</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00454">test</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1245,6 +1749,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00209">209</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>    {</div>
+<div class="line"><span class="lineno">  211</span>        this.version = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.version;</div>
+<div class="line"><span class="lineno">  212</span>        IO.SaveFile(<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a>, <span class="keyword">this</span>, <span class="keyword">false</span>, IO.jsWriteConfig);</div>
+<div class="line"><span class="lineno">  213</span>        IO.SaveFile(CorePath.VersionFile, <span class="keyword">this</span>.version, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  214</span>        Debug.Log(<span class="stringliteral">&quot;Config saved to &quot;</span> + <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a>);</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00014">path</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00085">Init()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00196">TryUpdatePlayedHour()</a>.</p>
 
 </div>
 </div>
@@ -1272,6 +1786,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00384">384</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>    {</div>
+<div class="line"><span class="lineno">  386</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">  387</span>        {</div>
+<div class="line"><span class="lineno">  388</span>            EClass._map.plDay.interval = this.other.bgmInterval * 5f;</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+<div class="line"><span class="lineno">  390</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00374">ApplyVolume()</a>.</p>
 
 </div>
 </div>
@@ -1300,6 +1824,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00191">191</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        this.lang = id;</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00085">Init()</a>.</p>
 
 </div>
 </div>
@@ -1338,6 +1867,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00392">392</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  393</span>    {</div>
+<div class="line"><span class="lineno">  394</span>        SoundManager.current.mixer.SetFloat(<span class="keywordtype">id</span>, Mathf.Log((v &lt; 0.01f) ? 0.01f : v) * 20f);</div>
+<div class="line"><span class="lineno">  395</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00374">ApplyVolume()</a>.</p>
 
 </div>
 </div>
@@ -1365,6 +1899,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00047">47</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!File.Exists(<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a>) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a6522a71cea81720ec4f09688e071bf70">useNewConfig</a> &amp;&amp; Application.isEditor))</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!File.Exists(CorePath.VersionFile))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a> coreConfig = IO.LoadFile&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>&gt;(<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a>, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_function" href="classCoreConfig.html#ab49c8e5a7f25c0ea18621e790263bba7">IsCompatible</a>(coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a1113ec2282b3cf111e282044c3f2cd28">version</a>))</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            Debug.Log(<span class="stringliteral">&quot;Config version is different. deleting:&quot;</span> + coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a1113ec2282b3cf111e282044c3f2cd28">version</a>.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.version.GetText());</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a522079b61563fc31f6a78107ac454f09">game</a>.backupInterval == 0)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            coreConfig.game.numBackup = 5;</div>
+<div class="line"><span class="lineno">   66</span>            coreConfig.game.backupInterval = 8;</div>
+<div class="line"><span class="lineno">   67</span>            coreConfig.game.autoBackup = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a1113ec2282b3cf111e282044c3f2cd28">version</a>.IsBelow(0, 22, 17))</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            coreConfig.game.tutorial = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (coreConfig.<a class="code hl_variable" href="classCoreConfig.html#a1113ec2282b3cf111e282044c3f2cd28">version</a>.IsBelow(0, 22, 24))</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            coreConfig.ui.balloonBG = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> coreConfig;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a1113ec2282b3cf111e282044c3f2cd28"><div class="ttname"><a href="classCoreConfig.html#a1113ec2282b3cf111e282044c3f2cd28">CoreConfig.version</a></div><div class="ttdeci">global::Version version</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00414">CoreConfig.cs:414</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ab49c8e5a7f25c0ea18621e790263bba7"><div class="ttname"><a href="classCoreConfig.html#ab49c8e5a7f25c0ea18621e790263bba7">CoreConfig.IsCompatible</a></div><div class="ttdeci">static bool IsCompatible(global::Version v)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00080">CoreConfig.cs:80</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreConfig_8cs_source.html#l00440">game</a>, <a class="el" href="CoreConfig_8cs_source.html#l00080">IsCompatible()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00014">path</a>, <a class="el" href="CoreDebug_8cs_source.html#l02137">CoreDebug.useNewConfig</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00414">version</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00132">Core.Start()</a>.</p>
 
 </div>
 </div>
@@ -1392,6 +1963,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00196">196</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordtype">int</span> num = (int)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.timeElapsed / 3600.0);</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (num &gt; this.<a class="code hl_variable" href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">maxPlayedHours</a>)</div>
+<div class="line"><span class="lineno">  202</span>            {</div>
+<div class="line"><span class="lineno">  203</span>                this.maxPlayedHours = num;</div>
+<div class="line"><span class="lineno">  204</span>                this.<a class="code hl_function" href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">Save</a>();</div>
+<div class="line"><span class="lineno">  205</span>            }</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a13506ba1492b0a68be989876f12c03fb"><div class="ttname"><a href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">CoreConfig.maxPlayedHours</a></div><div class="ttdeci">int maxPlayedHours</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00424">CoreConfig.cs:424</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af7438d4a0a6aff5152f3122c9fc66d06"><div class="ttname"><a href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">Player.stats</a></div><div class="ttdeci">Player.Stats stats</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01455">Player.cs:1455</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00424">maxPlayedHours</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="CoreConfig_8cs_source.html#l00209">Save()</a>, and <a class="el" href="Player_8cs_source.html#l01455">Player.stats</a>.</p>
 
 </div>
 </div>
@@ -1425,6 +2012,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00465">465</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00222">ApplyFPS()</a>.</p>
+
 </div>
 </div>
 <a id="a1a126d29ca13e7868f5553978d380215" name="a1a126d29ca13e7868f5553978d380215"></a>
@@ -1441,6 +2030,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00444">444</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00151">ResetGame()</a>.</p>
+
 </div>
 </div>
 <a id="ada19926887997a8a3f41c5caa78f8e50" name="ada19926887997a8a3f41c5caa78f8e50"></a>
@@ -1456,6 +2047,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00448">448</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00160">ResetInput()</a>.</p>
 
 </div>
 </div>
@@ -1521,6 +2114,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00420">420</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a52ff1c0ab12dc59027cf66e1047b6ff7" name="a52ff1c0ab12dc59027cf66e1047b6ff7"></a>
@@ -1536,6 +2131,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00452">452</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00168">ResetOther()</a>.</p>
 
 </div>
 </div>
@@ -1553,6 +2150,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00436">436</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00403">ApplyFont()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00133">ResetGeneral()</a>.</p>
+
 </div>
 </div>
 <a id="a522079b61563fc31f6a78107ac454f09" name="a522079b61563fc31f6a78107ac454f09"></a>
@@ -1569,6 +2168,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00440">440</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00151">ResetGame()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00047">TryLoadConfig()</a>.</p>
+
 </div>
 </div>
 <a id="a6f74ee91f6b2fab4c75f2283f18bf4f5" name="a6f74ee91f6b2fab4c75f2283f18bf4f5"></a>
@@ -1584,6 +2185,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00438">438</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00222">ApplyFPS()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00334">ApplyGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00279">ApplyResolution()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00324">GetPostEffectProfile()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00143">ResetGraphics()</a>, and <a class="el" href="Core_8cs_source.html#l00229">Core.Update()</a>.</p>
 
 </div>
 </div>
@@ -1616,6 +2219,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00463">463</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>.</p>
 
 </div>
 </div>
@@ -1665,6 +2270,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00446">446</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00160">ResetInput()</a>.</p>
+
 </div>
 </div>
 <a id="aa1b21097831b581be4b734571e8e296d" name="aa1b21097831b581be4b734571e8e296d"></a>
@@ -1680,6 +2287,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00416">416</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1697,6 +2306,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00424">424</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00196">TryUpdatePlayedHour()</a>.</p>
+
 </div>
 </div>
 <a id="a4b8319aa23826bf4eb1b8fa9e9faaccc" name="a4b8319aa23826bf4eb1b8fa9e9faaccc"></a>
@@ -1712,6 +2323,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00418">418</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1729,6 +2342,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00442">442</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00151">ResetGame()</a>.</p>
+
 </div>
 </div>
 <a id="aba40d0adec93042a0e69f3d3a074f840" name="aba40d0adec93042a0e69f3d3a074f840"></a>
@@ -1744,6 +2359,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00450">450</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="Core_8cs_source.html#l00339">Core.OnApplicationFocus()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00168">ResetOther()</a>, and <a class="el" href="Core_8cs_source.html#l00132">Core.Start()</a>.</p>
 
 </div>
 </div>
@@ -1761,6 +2378,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00422">422</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00118">HasBackerRewardCode()</a>, and <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>.</p>
+
 </div>
 </div>
 <a id="aaf5ecc4ef57e25c510992d73dce77568" name="aaf5ecc4ef57e25c510992d73dce77568"></a>
@@ -1776,6 +2395,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00434">434</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00374">ApplyVolume()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00133">ResetGeneral()</a>.</p>
 
 </div>
 </div>
@@ -1793,6 +2414,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00454">454</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00408">ApplySkin()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00108">OnInit()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00176">ResetTest()</a>.</p>
+
 </div>
 </div>
 <a id="a9578c03d34214718e492d54e71a702d7" name="a9578c03d34214718e492d54e71a702d7"></a>
@@ -1809,6 +2432,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00432">432</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00292">ApplyScale()</a>, <a class="el" href="UI_8cs_source.html#l00293">UI.OnUpdate()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00354">RefreshUIBrightness()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00133">ResetGeneral()</a>.</p>
+
 </div>
 </div>
 <a id="a1113ec2282b3cf111e282044c3f2cd28" name="a1113ec2282b3cf111e282044c3f2cd28"></a>
@@ -1824,6 +2449,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00414">414</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00047">TryLoadConfig()</a>.</p>
 
 </div>
 </div>
@@ -1849,6 +2476,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00034">34</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a4fed7b4258761e1c13852b02ea502564">camSupport</a>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassScene_html_a4fed7b4258761e1c13852b02ea502564"><div class="ttname"><a href="classScene.html#a4fed7b4258761e1c13852b02ea502564">Scene.camSupport</a></div><div class="ttdeci">CameraSupport camSupport</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01013">Scene.cs:1013</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00240">Apply()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00334">ApplyGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00317">ApplyZoom()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00354">RefreshUIBrightness()</a>.</p>
 
 </div>
 </div>
@@ -1873,6 +2509,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00013">13</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> CorePath.ConfigFile;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00042">Exist()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00209">Save()</a>, <a class="el" href="Core_8cs_source.html#l00132">Core.Start()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00047">TryLoadConfig()</a>.</p>
 
 </div>
 </div>
@@ -1897,6 +2541,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00021">21</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00083">HotItemContext.Show()</a>.</p>
 
 </div>
 </div>
@@ -1904,9 +2560,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCoreConfig.html">CoreConfig</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

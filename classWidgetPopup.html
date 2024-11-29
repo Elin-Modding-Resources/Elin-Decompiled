@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetPopup.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -345,7 +365,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00067">67</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        this.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6e072fc725785eb848493393620f171c" name="a6e072fc725785eb848493393620f171c"></a>
@@ -372,6 +395,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00061">61</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.Clear();</div>
+<div class="line"><span class="lineno">   64</span>        base.Close();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassWidgetPopup_html_aa3754f1da990e6d5888ef38255f0e1ca"><div class="ttname"><a href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">WidgetPopup.items</a></div><div class="ttdeci">List&lt; PopupManager.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopup_8cs_source.html#l00015">WidgetPopup.cs:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>.</p>
 
 </div>
 </div>
@@ -399,6 +429,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00051">51</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_function" href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">Show</a>(this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.NextItem(<span class="keyword">this</span>.current));</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassWidgetPopup_html_aaadff30f0465a2417724e1ab95e10204"><div class="ttname"><a href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">WidgetPopup.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopup_8cs_source.html#l00038">WidgetPopup.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
 
 </div>
 </div>
@@ -428,6 +464,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00023">23</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        WidgetPopup.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_property" href="classWidgetPopup.html#ab45cad49b370a9fde50eced2c2771a2c">PM</a>.<a class="code hl_function" href="classPopupManager.html#a0c11d1ab5f6d03e7b834c817eede47ec">Add</a>(<span class="stringliteral">&quot;null&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_function" href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">Show</a>();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassPopupManager_html_a0c11d1ab5f6d03e7b834c817eede47ec"><div class="ttname"><a href="classPopupManager.html#a0c11d1ab5f6d03e7b834c817eede47ec">PopupManager.Add</a></div><div class="ttdeci">void Add(string id)</div><div class="ttdef"><b>Definition:</b> <a href="PopupManager_8cs_source.html#l00016">PopupManager.cs:16</a></div></div>
+<div class="ttc" id="aclassWidgetPopup_html_ab45cad49b370a9fde50eced2c2771a2c"><div class="ttname"><a href="classWidgetPopup.html#ab45cad49b370a9fde50eced2c2771a2c">WidgetPopup.PM</a></div><div class="ttdeci">PopupManager PM</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopup_8cs_source.html#l00007">WidgetPopup.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PopupManager_8cs_source.html#l00016">PopupManager.Add()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00008">PM</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
 
 </div>
 </div>
@@ -456,6 +504,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00033">33</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_function" href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">Show</a>();</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PopupManager_8cs_source.html#l00025">PopupManager.Add()</a>.</p>
 
 </div>
 </div>
@@ -483,6 +538,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00056">56</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_function" href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">Show</a>(this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.PrevItem(<span class="keyword">this</span>.current));</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
 
 </div>
 </div>
@@ -510,7 +570,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00072">72</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaadff30f0465a2417724e1ab95e10204" name="aaadff30f0465a2417724e1ab95e10204"></a>
@@ -537,6 +599,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00038">38</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_function" href="classWidgetPopup.html#aaadff30f0465a2417724e1ab95e10204">Show</a>(this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.LastItem&lt;<a class="code hl_class" href="classPopupManager.html">PopupManager</a>.<a class="code hl_class" href="classPopupManager_1_1Item.html">Item</a>&gt;());</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassPopupManager_1_1Item_html"><div class="ttname"><a href="classPopupManager_1_1Item.html">PopupManager.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="PopupManager_8cs_source.html#l00050">PopupManager.cs:51</a></div></div>
+<div class="ttc" id="aclassPopupManager_html"><div class="ttname"><a href="classPopupManager.html">PopupManager</a></div><div class="ttdef"><b>Definition:</b> <a href="PopupManager_8cs_source.html#l00006">PopupManager.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopup_8cs_source.html#l00051">Next()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00023">OnActivate()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00033">OnAddItem()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00056">Prev()</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
 
 </div>
 </div>
@@ -565,6 +636,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00043">43</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        this.<a class="code hl_variable" href="classWidgetPopup.html#a60ba246529ce0d73927fe0d5591f6264">textMain</a>.SetText(item.<a class="code hl_variable" href="classPopupManager_1_1Item.html#a372309f1fa87269e960a1cc05b33545c">text</a>);</div>
+<div class="line"><span class="lineno">   46</span>        this.textPage.text = (this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.IndexOf(item) + 1).ToString() + <span class="stringliteral">&quot; / &quot;</span> + this.<a class="code hl_property" href="classWidgetPopup.html#aa3754f1da990e6d5888ef38255f0e1ca">items</a>.Count.ToString();</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classWidgetPopup.html#ad5ffdc58512fb221bb295bd745663bfb">layout</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   48</span>        this.current = item;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassPopupManager_1_1Item_html_a372309f1fa87269e960a1cc05b33545c"><div class="ttname"><a href="classPopupManager_1_1Item.html#a372309f1fa87269e960a1cc05b33545c">PopupManager.Item.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="PopupManager_8cs_source.html#l00053">PopupManager.cs:53</a></div></div>
+<div class="ttc" id="aclassWidgetPopup_html_a60ba246529ce0d73927fe0d5591f6264"><div class="ttname"><a href="classWidgetPopup.html#a60ba246529ce0d73927fe0d5591f6264">WidgetPopup.textMain</a></div><div class="ttdeci">UIText textMain</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopup_8cs_source.html#l00080">WidgetPopup.cs:80</a></div></div>
+<div class="ttc" id="aclassWidgetPopup_html_ad5ffdc58512fb221bb295bd745663bfb"><div class="ttname"><a href="classWidgetPopup.html#ad5ffdc58512fb221bb295bd745663bfb">WidgetPopup.layout</a></div><div class="ttdeci">LayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopup_8cs_source.html#l00078">WidgetPopup.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetPopup_8cs_source.html#l00016">items</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00078">layout</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00080">textMain</a>.</p>
 
 </div>
 </div>
@@ -639,6 +721,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00078">78</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetPopup_8cs_source.html#l00043">Show()</a>.</p>
+
 </div>
 </div>
 <a id="a60ba246529ce0d73927fe0d5591f6264" name="a60ba246529ce0d73927fe0d5591f6264"></a>
@@ -654,6 +738,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00080">80</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetPopup_8cs_source.html#l00043">Show()</a>.</p>
 
 </div>
 </div>
@@ -695,6 +781,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00015">15</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classWidgetPopup.html#ab45cad49b370a9fde50eced2c2771a2c">PM</a>.<a class="code hl_variable" href="classPopupManager.html#ad91a750cddcc32a4e04d7f5d0db45ab9">items</a>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassPopupManager_html_ad91a750cddcc32a4e04d7f5d0db45ab9"><div class="ttname"><a href="classPopupManager.html#ad91a750cddcc32a4e04d7f5d0db45ab9">PopupManager.items</a></div><div class="ttdeci">List&lt; PopupManager.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="PopupManager_8cs_source.html#l00048">PopupManager.cs:48</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetPopup_8cs_source.html#l00061">Discard()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00051">Next()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00023">OnActivate()</a>, <a class="el" href="WidgetPopup_8cs_source.html#l00056">Prev()</a>, and <a class="el" href="WidgetPopup_8cs_source.html#l00038">Show()</a>.</p>
 
 </div>
 </div>
@@ -719,6 +814,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetPopup_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#abfe0e143fcc3d42f4bfaaba28e82ca2f">popups</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassPlayer_html_abfe0e143fcc3d42f4bfaaba28e82ca2f"><div class="ttname"><a href="classPlayer.html#abfe0e143fcc3d42f4bfaaba28e82ca2f">Player.popups</a></div><div class="ttdeci">PopupManager popups</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01464">Player.cs:1464</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetPopup_8cs_source.html#l00023">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -726,9 +832,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="WidgetPopup_8cs_source.html">WidgetPopup.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetPopup.html">WidgetPopup</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

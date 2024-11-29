@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitKettle.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -775,6 +795,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a7191e565a13d05d8053f510c98195814">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00077">77</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> !t.noSell &amp;&amp; !t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1229, 1) &amp;&amp; (t.trait is <a class="code hl_class" href="classTraitSeed.html">TraitSeed</a> || t.<a class="code hl_property" href="classCard.html#a0b09633ea67d0f53371157d49f1832af">isCrafted</a>);</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclassCard_html_a0b09633ea67d0f53371157d49f1832af"><div class="ttname"><a href="classCard.html#a0b09633ea67d0f53371157d49f1832af">Card.isCrafted</a></div><div class="ttdeci">bool isCrafted</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00727">Card.cs:728</a></div></div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05325">Card.cs:5325</a></div></div>
+<div class="ttc" id="aclassTraitSeed_html"><div class="ttname"><a href="classTraitSeed.html">TraitSeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSeed_8cs_source.html#l00006">TraitSeed.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05325">Card.HasElement()</a>, and <a class="el" href="Card_8cs_source.html#l00728">Card.isCrafted</a>.</p>
 
 </div>
 </div>
@@ -800,7 +828,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00061">61</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3d81c25abb48955fa7aba166c881c756" name="a3d81c25abb48955fa7aba166c881c756"></a>
@@ -824,7 +858,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitKettle.html#acda06d5de4f53b9c9bba9b36b32091fd">CanJoinParty</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassTraitKettle_html_acda06d5de4f53b9c9bba9b36b32091fd"><div class="ttname"><a href="classTraitKettle.html#acda06d5de4f53b9c9bba9b36b32091fd">TraitKettle.CanJoinParty</a></div><div class="ttdeci">override bool CanJoinParty</div><div class="ttdef"><b>Definition:</b> <a href="TraitKettle_8cs_source.html#l00053">TraitKettle.cs:54</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acda06d5de4f53b9c9bba9b36b32091fd" name="acda06d5de4f53b9c9bba9b36b32091fd"></a>
@@ -848,7 +889,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00053">53</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#aa44ff8125708c05a2616e89fb03fbbed">IsCompleted</a>(<span class="stringliteral">&quot;vernis_gold&quot;</span>) || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_aa44ff8125708c05a2616e89fb03fbbed"><div class="ttname"><a href="classQuestManager.html#aa44ff8125708c05a2616e89fb03fbbed">QuestManager.IsCompleted</a></div><div class="ttdeci">bool IsCompleted(string id)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00209">QuestManager.cs:209</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b8a49fd4831e8c4757bb3aa83b254a1" name="a7b8a49fd4831e8c4757bb3aa83b254a1"></a>
@@ -872,7 +925,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitKettle.html#acda06d5de4f53b9c9bba9b36b32091fd">CanJoinParty</a>)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_enumeration" href="classTrait.html#a8471909c042646f522c65a8333832253">CopyShopType</a>.None;</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_enumeration" href="classTrait.html#a8471909c042646f522c65a8333832253">CopyShopType</a>.Item;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00007">Trait.cs:8</a></div></div>
+<div class="ttc" id="aclassTrait_html_a8471909c042646f522c65a8333832253"><div class="ttname"><a href="classTrait.html#a8471909c042646f522c65a8333832253">Trait.CopyShopType</a></div><div class="ttdeci">CopyShopType</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02874">Trait.cs:2875</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab4c80c01c1125e6111420740696b9d0d" name="ab4c80c01c1125e6111420740696b9d0d"></a>
@@ -896,7 +961,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad576994fdcc3f8ce00187d5e8428dab1" name="ad576994fdcc3f8ce00187d5e8428dab1"></a>
@@ -920,7 +991,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00045">45</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.CopyShop;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aPriceType_8cs_html_a482277e66af02c7d65679d7485095573"><div class="ttname"><a href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a></div><div class="ttdeci">PriceType</div><div class="ttdef"><b>Definition:</b> <a href="PriceType_8cs_source.html#l00003">PriceType.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab28c7087c28817390dd30f8ca9e00178" name="ab28c7087c28817390dd30f8ca9e00178"></a>
@@ -944,7 +1022,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00069">69</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> 30;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a33374215107213d73f52df9ce041331b" name="a33374215107213d73f52df9ce041331b"></a>
@@ -968,16 +1052,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitKettle_8cs_source.html#l00033">33</a> of file <a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitKettle.html#acda06d5de4f53b9c9bba9b36b32091fd">CanJoinParty</a>)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.None;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.Copy;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aShopType_8cs_html_ab5af427a86c75bad7882f32f0b262bbb"><div class="ttname"><a href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a></div><div class="ttdeci">ShopType</div><div class="ttdef"><b>Definition:</b> <a href="ShopType_8cs_source.html#l00003">ShopType.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitKettle_8cs_source.html">TraitKettle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitKettle.html">TraitKettle</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

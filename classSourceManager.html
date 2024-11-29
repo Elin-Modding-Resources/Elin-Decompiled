@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -283,6 +303,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00098">98</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">foreach</span> (SourceData sourceData <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            sourceData.ExportTexts(path, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="ttc" id="aclassSourceManager_html_a3df0957d5e238f9ef52d8707bc4270ef"><div class="ttname"><a href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">SourceManager.list</a></div><div class="ttdeci">List&lt; SourceData &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00225">SourceManager.cs:225</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00225">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00745">ModManager.g__TryAddLang()</a>, and <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +341,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00114">114</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">foreach</span> (SourceData sourceData <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (sourceData is <a class="code hl_class" href="classSourceThingV.html">SourceThingV</a>)</div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                this.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.ImportTexts(sourceData.nameSheet);</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  123</span>            {</div>
+<div class="line"><span class="lineno">  124</span>                sourceData.ImportTexts(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00161">SourceManager.cs:161</a></div></div>
+<div class="ttc" id="aclassSourceThingV_html"><div class="ttname"><a href="classSourceThingV.html">SourceThingV</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00006">SourceThingV.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00225">list</a>, and <a class="el" href="SourceManager_8cs_source.html#l00161">things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00456">CoreDebug.UpdateAlways()</a>.</p>
 
 </div>
 </div>
@@ -337,6 +387,111 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00039">39</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceManager.html#a80752655c2f8c267536edfbee0eface8">initialized</a>)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        this.initialized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   46</span>        this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>.Clear();</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">foreach</span> (FieldInfo fieldInfo <span class="keywordflow">in</span> base.GetType().GetFields())</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (typeof(SourceData).IsAssignableFrom(fieldInfo.FieldType))</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>.Add((SourceData)fieldInfo.GetValue(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.Init();</div>
+<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.Init();</div>
+<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.Init();</div>
+<div class="line"><span class="lineno">   57</span>        this.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.Init();</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_variable" href="classSourceManager.html#a2b65d7893ce9efd2215d725e636018c3">thingV</a>.Init();</div>
+<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_variable" href="classSourceManager.html#a5016191eaf33a8f147b32e5d22f35c95">foods</a>.Init();</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_function" href="classSourceCard.html#a7c1e9df66deadb391d39b6931ed9e3b7">Init</a>();</div>
+<div class="line"><span class="lineno">   61</span>        this.<a class="code hl_variable" href="classSourceManager.html#a6abf3ffa99e1dc0f729165644f814c8d">checks</a>.Init();</div>
+<div class="line"><span class="lineno">   62</span>        this.<a class="code hl_variable" href="classSourceManager.html#a0b2b38fa40a1e13c9a86ffa5dabdfd20">races</a>.Init();</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classSourceManager.html#a6cf700648175051766a0a9526320f771">persons</a>.Init();</div>
+<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.Init();</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.Init();</div>
+<div class="line"><span class="lineno">   66</span>        this.<a class="code hl_variable" href="classSourceManager.html#ae61850f2f6b78c77fccd595362b8b79f">religions</a>.Init();</div>
+<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_variable" href="classSourceManager.html#a0036753bc9e25f95a06c6472e85beaf7">factions</a>.Init();</div>
+<div class="line"><span class="lineno">   68</span>        this.<a class="code hl_variable" href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">jobs</a>.Init();</div>
+<div class="line"><span class="lineno">   69</span>        this.<a class="code hl_variable" href="classSourceManager.html#a4d03dd51ea52717f38ec27f0b434336a">hobbies</a>.Init();</div>
+<div class="line"><span class="lineno">   70</span>        this.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.Init();</div>
+<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.Init();</div>
+<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_variable" href="classSourceManager.html#a6ac0f0432ebde26d5ee9941580db6f1d">cellEffects</a>.Init();</div>
+<div class="line"><span class="lineno">   73</span>        this.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.Init();</div>
+<div class="line"><span class="lineno">   74</span>        this.<a class="code hl_variable" href="classSourceManager.html#a1b9f353d0b633f12de183424bdda2e4f">stats</a>.Init();</div>
+<div class="line"><span class="lineno">   75</span>        this.<a class="code hl_variable" href="classSourceManager.html#aafdb592c819bdbdf0e39eb4f52292afc">areas</a>.Init();</div>
+<div class="line"><span class="lineno">   76</span>        this.<a class="code hl_variable" href="classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe">zones</a>.Init();</div>
+<div class="line"><span class="lineno">   77</span>        this.<a class="code hl_variable" href="classSourceManager.html#ab1a429e06e2a5a823a4cdf21a9a316c8">zoneAffixes</a>.Init();</div>
+<div class="line"><span class="lineno">   78</span>        this.<a class="code hl_variable" href="classSourceManager.html#a26faa5a90a11a3af9cec858a2c8d4416">researches</a>.Init();</div>
+<div class="line"><span class="lineno">   79</span>        this.<a class="code hl_variable" href="classSourceManager.html#a2a219abc46f1e6f4c9cf4e7824140419">homeResources</a>.Init();</div>
+<div class="line"><span class="lineno">   80</span>        this.<a class="code hl_variable" href="classSourceManager.html#a5b0c350b8156f7c462a0648584cd25b2">globalTiles</a>.Init();</div>
+<div class="line"><span class="lineno">   81</span>        this.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.<a class="code hl_function" href="classSourceFloor.html#a0fd6720c7573b9c2c055b3d36540f953">OnAfterInit</a>();</div>
+<div class="line"><span class="lineno">   82</span>        this.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.Init();</div>
+<div class="line"><span class="lineno">   83</span>        this.<a class="code hl_variable" href="classSourceManager.html#ab084035a5bb5fff272e13e8c01b8894c">charaText</a>.Init();</div>
+<div class="line"><span class="lineno">   84</span>        this.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.Init();</div>
+<div class="line"><span class="lineno">   85</span>        this.<a class="code hl_variable" href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">recipes</a>.Init();</div>
+<div class="line"><span class="lineno">   86</span>        this.<a class="code hl_variable" href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">backers</a>.Init();</div>
+<div class="line"><span class="lineno">   87</span>        this.<a class="code hl_variable" href="classSourceManager.html#aef47f5e3413fda019c9745f849d94946">tactics</a>.Init();</div>
+<div class="line"><span class="lineno">   88</span>        this.<a class="code hl_variable" href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">keyItems</a>.Init();</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_class" href="classACT.html">ACT</a>.<a class="code hl_function" href="classACT.html#aca3f2523b3e18567ee9fc6e3dd0149cc">Init</a>();</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_class" href="classTimeTable.html">TimeTable</a>.<a class="code hl_function" href="classTimeTable.html#a3ddc9e9d983fcfe91f683f3d0e860d80">Init</a>();</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_variable" href="classElement.html#a56f3fc84253a4270f8411f92dead623b">ListAttackElements</a>.Clear();</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 910; j &lt; 925; j++)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_variable" href="classElement.html#a56f3fc84253a4270f8411f92dead623b">ListAttackElements</a>.Add(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[j]);</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aclassACT_html"><div class="ttname"><a href="classACT.html">ACT</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00004">ACT.cs:5</a></div></div>
+<div class="ttc" id="aclassACT_html_aca3f2523b3e18567ee9fc6e3dd0149cc"><div class="ttname"><a href="classACT.html#aca3f2523b3e18567ee9fc6e3dd0149cc">ACT.Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00006">ACT.cs:6</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_afaf9020addda94e6bab3a114be10e563"><div class="ttname"><a href="classEMono.html#afaf9020addda94e6bab3a114be10e563">EMono.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00142">EMono.cs:143</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a56f3fc84253a4270f8411f92dead623b"><div class="ttname"><a href="classElement.html#a56f3fc84253a4270f8411f92dead623b">Element.ListAttackElements</a></div><div class="ttdeci">static List&lt; SourceElement.Row &gt; ListAttackElements</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00896">Element.2.cs:896</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a7c1e9df66deadb391d39b6931ed9e3b7"><div class="ttname"><a href="classSourceCard.html#a7c1e9df66deadb391d39b6931ed9e3b7">SourceCard.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00007">SourceCard.cs:7</a></div></div>
+<div class="ttc" id="aclassSourceFloor_html_a0fd6720c7573b9c2c055b3d36540f953"><div class="ttname"><a href="classSourceFloor.html#a0fd6720c7573b9c2c055b3d36540f953">SourceFloor.OnAfterInit</a></div><div class="ttdeci">void OnAfterInit()</div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00099">SourceFloor.cs:99</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0036753bc9e25f95a06c6472e85beaf7"><div class="ttname"><a href="classSourceManager.html#a0036753bc9e25f95a06c6472e85beaf7">SourceManager.factions</a></div><div class="ttdeci">SourceFaction factions</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00185">SourceManager.cs:185</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00173">SourceManager.cs:173</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0b2b38fa40a1e13c9a86ffa5dabdfd20"><div class="ttname"><a href="classSourceManager.html#a0b2b38fa40a1e13c9a86ffa5dabdfd20">SourceManager.races</a></div><div class="ttdeci">SourceRace races</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00169">SourceManager.cs:169</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a1b9f353d0b633f12de183424bdda2e4f"><div class="ttname"><a href="classSourceManager.html#a1b9f353d0b633f12de183424bdda2e4f">SourceManager.stats</a></div><div class="ttdeci">SourceStat stats</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00195">SourceManager.cs:195</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a1c3e4bbd9eedfe0790974b85655a72ff"><div class="ttname"><a href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">SourceManager.keyItems</a></div><div class="ttdeci">SourceKeyItem keyItems</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00221">SourceManager.cs:221</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a26faa5a90a11a3af9cec858a2c8d4416"><div class="ttname"><a href="classSourceManager.html#a26faa5a90a11a3af9cec858a2c8d4416">SourceManager.researches</a></div><div class="ttdeci">SourceResearch researches</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00203">SourceManager.cs:203</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a28d0f359cdf732a837ca40fb36fd5b1e"><div class="ttname"><a href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">SourceManager.calc</a></div><div class="ttdeci">SourceCalc calc</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00165">SourceManager.cs:165</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2a219abc46f1e6f4c9cf4e7824140419"><div class="ttname"><a href="classSourceManager.html#a2a219abc46f1e6f4c9cf4e7824140419">SourceManager.homeResources</a></div><div class="ttdeci">SourceHomeResource homeResources</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00205">SourceManager.cs:205</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00151">SourceManager.cs:151</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2b65d7893ce9efd2215d725e636018c3"><div class="ttname"><a href="classSourceManager.html#a2b65d7893ce9efd2215d725e636018c3">SourceManager.thingV</a></div><div class="ttdeci">SourceThingV thingV</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00211">SourceManager.cs:211</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a38f1a362e2021aef4516d1b34101d179"><div class="ttname"><a href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">SourceManager.objs</a></div><div class="ttdeci">SourceObj objs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00183">SourceManager.cs:183</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a43ee8479482668d85c820a75f4a6f5fe"><div class="ttname"><a href="classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe">SourceManager.zones</a></div><div class="ttdeci">SourceZone zones</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00199">SourceManager.cs:199</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a4d03dd51ea52717f38ec27f0b434336a"><div class="ttname"><a href="classSourceManager.html#a4d03dd51ea52717f38ec27f0b434336a">SourceManager.hobbies</a></div><div class="ttdeci">SourceHobby hobbies</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00191">SourceManager.cs:191</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a5016191eaf33a8f147b32e5d22f35c95"><div class="ttname"><a href="classSourceManager.html#a5016191eaf33a8f147b32e5d22f35c95">SourceManager.foods</a></div><div class="ttdeci">SourceFood foods</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00213">SourceManager.cs:213</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a56b3d59619d0a5a90bf8a31b5791a73c"><div class="ttname"><a href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">SourceManager.spawnLists</a></div><div class="ttdeci">SourceSpawnList spawnLists</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00175">SourceManager.cs:175</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a5b0c350b8156f7c462a0648584cd25b2"><div class="ttname"><a href="classSourceManager.html#a5b0c350b8156f7c462a0648584cd25b2">SourceManager.globalTiles</a></div><div class="ttdeci">SourceGlobalTile globalTiles</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00209">SourceManager.cs:209</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6abf3ffa99e1dc0f729165644f814c8d"><div class="ttname"><a href="classSourceManager.html#a6abf3ffa99e1dc0f729165644f814c8d">SourceManager.checks</a></div><div class="ttdeci">SourceCheck checks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00167">SourceManager.cs:167</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6ac0f0432ebde26d5ee9941580db6f1d"><div class="ttname"><a href="classSourceManager.html#a6ac0f0432ebde26d5ee9941580db6f1d">SourceManager.cellEffects</a></div><div class="ttdeci">SourceCellEffect cellEffects</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00181">SourceManager.cs:181</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6bbe3e57f372109d0661eb0872cf590e"><div class="ttname"><a href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">SourceManager.blocks</a></div><div class="ttdeci">SourceBlock blocks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00177">SourceManager.cs:177</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6cf700648175051766a0a9526320f771"><div class="ttname"><a href="classSourceManager.html#a6cf700648175051766a0a9526320f771">SourceManager.persons</a></div><div class="ttdeci">SourcePerson persons</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00159">SourceManager.cs:159</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a80752655c2f8c267536edfbee0eface8"><div class="ttname"><a href="classSourceManager.html#a80752655c2f8c267536edfbee0eface8">SourceManager.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00227">SourceManager.cs:227</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a9586c01a0b4dbb6b6953c1cca7e3bb47"><div class="ttname"><a href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">SourceManager.recipes</a></div><div class="ttdeci">SourceRecipe recipes</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00215">SourceManager.cs:215</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aafdb592c819bdbdf0e39eb4f52292afc"><div class="ttname"><a href="classSourceManager.html#aafdb592c819bdbdf0e39eb4f52292afc">SourceManager.areas</a></div><div class="ttdeci">SourceArea areas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00197">SourceManager.cs:197</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab084035a5bb5fff272e13e8c01b8894c"><div class="ttname"><a href="classSourceManager.html#ab084035a5bb5fff272e13e8c01b8894c">SourceManager.charaText</a></div><div class="ttdeci">SourceCharaText charaText</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00155">SourceManager.cs:155</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab1a429e06e2a5a823a4cdf21a9a316c8"><div class="ttname"><a href="classSourceManager.html#ab1a429e06e2a5a823a4cdf21a9a316c8">SourceManager.zoneAffixes</a></div><div class="ttdeci">SourceZoneAffix zoneAffixes</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00201">SourceManager.cs:201</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab4cf7dce730d8197f24cb4da0832b5d7"><div class="ttname"><a href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">SourceManager.backers</a></div><div class="ttdeci">SourceBacker backers</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00217">SourceManager.cs:217</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab7c0f6922403dd73dbe0c9d967c1514b"><div class="ttname"><a href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">SourceManager.categories</a></div><div class="ttdeci">SourceCategory categories</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00171">SourceManager.cs:171</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00153">SourceManager.cs:153</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae13e44c82dc0772f87c1ad21b9c653f8"><div class="ttname"><a href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">SourceManager.quests</a></div><div class="ttdeci">SourceQuest quests</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00193">SourceManager.cs:193</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae2456daa44300db5851bb38719d9da90"><div class="ttname"><a href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">SourceManager.jobs</a></div><div class="ttdeci">SourceJob jobs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00189">SourceManager.cs:189</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae61850f2f6b78c77fccd595362b8b79f"><div class="ttname"><a href="classSourceManager.html#ae61850f2f6b78c77fccd595362b8b79f">SourceManager.religions</a></div><div class="ttdeci">SourceReligion religions</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00187">SourceManager.cs:187</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aef47f5e3413fda019c9745f849d94946"><div class="ttname"><a href="classSourceManager.html#aef47f5e3413fda019c9745f849d94946">SourceManager.tactics</a></div><div class="ttdeci">SourceTactics tactics</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00157">SourceManager.cs:157</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_af0401efa5aae8bd83979a2a12bad1893"><div class="ttname"><a href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">SourceManager.floors</a></div><div class="ttdeci">SourceFloor floors</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00179">SourceManager.cs:179</a></div></div>
+<div class="ttc" id="aclassTimeTable_html"><div class="ttname"><a href="classTimeTable.html">TimeTable</a></div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00004">TimeTable.cs:5</a></div></div>
+<div class="ttc" id="aclassTimeTable_html_a3ddc9e9d983fcfe91f683f3d0e860d80"><div class="ttname"><a href="classTimeTable.html#a3ddc9e9d983fcfe91f683f3d0e860d80">TimeTable.Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00006">TimeTable.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00197">areas</a>, <a class="el" href="SourceManager_8cs_source.html#l00217">backers</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">blocks</a>, <a class="el" href="SourceManager_8cs_source.html#l00165">calc</a>, <a class="el" href="SourceManager_8cs_source.html#l00151">cards</a>, <a class="el" href="SourceManager_8cs_source.html#l00171">categories</a>, <a class="el" href="SourceManager_8cs_source.html#l00181">cellEffects</a>, <a class="el" href="SourceManager_8cs_source.html#l00153">charas</a>, <a class="el" href="SourceManager_8cs_source.html#l00155">charaText</a>, <a class="el" href="SourceManager_8cs_source.html#l00167">checks</a>, <a class="el" href="SourceManager_8cs_source.html#l00163">elements</a>, <a class="el" href="SourceManager_8cs_source.html#l00185">factions</a>, <a class="el" href="SourceManager_8cs_source.html#l00179">floors</a>, <a class="el" href="SourceManager_8cs_source.html#l00213">foods</a>, <a class="el" href="SourceManager_8cs_source.html#l00209">globalTiles</a>, <a class="el" href="SourceManager_8cs_source.html#l00191">hobbies</a>, <a class="el" href="SourceManager_8cs_source.html#l00205">homeResources</a>, <a class="el" href="ACT_8cs_source.html#l00006">ACT.Init()</a>, <a class="el" href="SourceCard_8cs_source.html#l00007">SourceCard.Init()</a>, <a class="el" href="TimeTable_8cs_source.html#l00006">TimeTable.Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00227">initialized</a>, <a class="el" href="SourceManager_8cs_source.html#l00189">jobs</a>, <a class="el" href="SourceManager_8cs_source.html#l00221">keyItems</a>, <a class="el" href="SourceManager_8cs_source.html#l00225">list</a>, <a class="el" href="Element_82_8cs_source.html#l00896">Element.ListAttackElements</a>, <a class="el" href="SourceManager_8cs_source.html#l00173">materials</a>, <a class="el" href="SourceManager_8cs_source.html#l00183">objs</a>, <a class="el" href="SourceFloor_8cs_source.html#l00099">SourceFloor.OnAfterInit()</a>, <a class="el" href="SourceManager_8cs_source.html#l00159">persons</a>, <a class="el" href="SourceManager_8cs_source.html#l00193">quests</a>, <a class="el" href="SourceManager_8cs_source.html#l00169">races</a>, <a class="el" href="SourceManager_8cs_source.html#l00215">recipes</a>, <a class="el" href="SourceManager_8cs_source.html#l00187">religions</a>, <a class="el" href="SourceManager_8cs_source.html#l00203">researches</a>, <a class="el" href="EMono_8cs_source.html#l00143">EMono.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00175">spawnLists</a>, <a class="el" href="SourceManager_8cs_source.html#l00195">stats</a>, <a class="el" href="SourceManager_8cs_source.html#l00157">tactics</a>, <a class="el" href="SourceManager_8cs_source.html#l00161">things</a>, <a class="el" href="SourceManager_8cs_source.html#l00211">thingV</a>, <a class="el" href="SourceManager_8cs_source.html#l00201">zoneAffixes</a>, and <a class="el" href="SourceManager_8cs_source.html#l00199">zones</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00745">ModManager.g__TryAddLang()</a>, and <a class="el" href="Core_8cs_source.html#l00154">Core.StartCase()</a>.</p>
 
 </div>
 </div>
@@ -364,6 +519,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00020">20</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">langGeneral</a>.Init();</div>
+<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classSourceManager.html#a6f17f2f7f78304c12502f34044d2c80a">langGame</a>.Init();</div>
+<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_variable" href="classSourceManager.html#ad6d0fa7a52ac870d898f222fee4288de">langList</a>.Init();</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classSourceManager.html#a81b70f5e679b3cc523a598cdfe7fff4f">langNote</a>.Init();</div>
+<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>.Init();</div>
+<div class="line"><span class="lineno">   27</span>        Lang.General = this.<a class="code hl_variable" href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">langGeneral</a>;</div>
+<div class="line"><span class="lineno">   28</span>        Lang.Game = this.<a class="code hl_variable" href="classSourceManager.html#a6f17f2f7f78304c12502f34044d2c80a">langGame</a>;</div>
+<div class="line"><span class="lineno">   29</span>        Lang.List = this.<a class="code hl_variable" href="classSourceManager.html#ad6d0fa7a52ac870d898f222fee4288de">langList</a>;</div>
+<div class="line"><span class="lineno">   30</span>        Lang.Note = this.<a class="code hl_variable" href="classSourceManager.html#a81b70f5e679b3cc523a598cdfe7fff4f">langNote</a>;</div>
+<div class="line"><span class="lineno">   31</span>        WordGen.source = this.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassSourceManager_html_a12963043d0b1a0aa8fe8cd3ae7c45db5"><div class="ttname"><a href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">SourceManager.langGeneral</a></div><div class="ttdeci">LangGeneral langGeneral</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00141">SourceManager.cs:141</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6f17f2f7f78304c12502f34044d2c80a"><div class="ttname"><a href="classSourceManager.html#a6f17f2f7f78304c12502f34044d2c80a">SourceManager.langGame</a></div><div class="ttdeci">LangGame langGame</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00145">SourceManager.cs:145</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a76110f02ea7ac11778eaa98e513f3c17"><div class="ttname"><a href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">SourceManager.langWord</a></div><div class="ttdeci">LangWord langWord</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00147">SourceManager.cs:147</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a81b70f5e679b3cc523a598cdfe7fff4f"><div class="ttname"><a href="classSourceManager.html#a81b70f5e679b3cc523a598cdfe7fff4f">SourceManager.langNote</a></div><div class="ttdeci">LangNote langNote</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00149">SourceManager.cs:149</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ad6d0fa7a52ac870d898f222fee4288de"><div class="ttname"><a href="classSourceManager.html#ad6d0fa7a52ac870d898f222fee4288de">SourceManager.langList</a></div><div class="ttdeci">LangList langList</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00143">SourceManager.cs:143</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00145">langGame</a>, <a class="el" href="SourceManager_8cs_source.html#l00141">langGeneral</a>, <a class="el" href="SourceManager_8cs_source.html#l00143">langList</a>, <a class="el" href="SourceManager_8cs_source.html#l00149">langNote</a>, and <a class="el" href="SourceManager_8cs_source.html#l00147">langWord</a>.</p>
 
 </div>
 </div>
@@ -391,7 +565,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00034">34</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        this._dataGodTalk = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a57a471351f436e88ecc0ec51a07e0e1f" name="a57a471351f436e88ecc0ec51a07e0e1f"></a>
@@ -419,6 +596,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00106">106</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">foreach</span> (SourceData sourceData <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            sourceData.ExportTexts(path, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00225">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00745">ModManager.g__TryAddLang()</a>.</p>
 
 </div>
 </div>
@@ -446,6 +633,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00129">129</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        Log.system = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">foreach</span> (SourceData sourceData <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSourceManager.html#a3df0957d5e238f9ef52d8707bc4270ef">list</a>)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            sourceData.ValidateLang();</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = Lang.setting.dir + <span class="stringliteral">&quot;validation.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">  137</span>        IO.SaveText(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, Log.system);</div>
+<div class="line"><span class="lineno">  138</span>        Util.Run(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00225">list</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
 
 </div>
 </div>
@@ -488,6 +688,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00197">197</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="BuildMenu_8cs_source.html#l00375">BuildMenu.RefreshCategoryArea()</a>.</p>
+
 </div>
 </div>
 <a id="a73edd2d15d9dcaae027163dba5a87be9" name="a73edd2d15d9dcaae027163dba5a87be9"></a>
@@ -503,6 +705,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00219">219</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -520,6 +724,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00217">217</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00010">SerializedCards.Add()</a>, <a class="el" href="Map_8cs_source.html#l01538">Map.AddBackerTree()</a>, <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>, <a class="el" href="Map_8cs_source.html#l01582">Map.ApplyBackerObj()</a>, <a class="el" href="Zone_8cs_source.html#l03710">Zone.ApplyBackerPet()</a>, <a class="el" href="Map_8cs_source.html#l01573">Map.GetBackerObj()</a>, <a class="el" href="Chara_8cs_source.html#l00983">Chara.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l01631">Cell.GetObjName()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01139">CoreDebug.InitDebugCommands()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01966">CoreDebug.LastWish()</a>, <a class="el" href="Zone__Casino_8cs_source.html#l00030">Zone_Casino.OnActivate()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="TraitSpecialLantern_8cs_source.html#l00021">TraitSpecialLantern.OnCreate()</a>, <a class="el" href="ActionMode_8cs_source.html#l00594">ActionMode.RefreshTexts()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00911">CoreConfig.BackerContentConfig.Show()</a>, <a class="el" href="TraitSpecialLantern_8cs_source.html#l00033">TraitSpecialLantern.TrySetAct()</a>, and <a class="el" href="Zone_8cs_source.html#l02622">Zone.TrySpawnFollower()</a>.</p>
+
 </div>
 </div>
 <a id="a6bbe3e57f372109d0661eb0872cf590e" name="a6bbe3e57f372109d0661eb0872cf590e"></a>
@@ -535,6 +741,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00177">177</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00261">BiomeProfile.BaseTile._GetBlock()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00279">BiomeProfile.BaseTile._SetBlock()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00284">BiomeProfile.BaseTile.BlockRows()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="ThingGen_8cs_source.html#l00107">ThingGen.CreateBlock()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="ZoneInspector_8cs_source.html#l00136">ZoneInspector.FillUtil.FillBlock()</a>, <a class="el" href="TaskMine_8cs_source.html#l00143">TaskMine.GetHitResult()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00151">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Map_8cs_source.html#l01650">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01712">Map.MineRamp()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00099">SourceFloor.OnAfterInit()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="Lot_8cs_source.html#l00007">Lot.SetBaseRoom()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00034">LayerEditHouse.SetBoard()</a>.</p>
 
 </div>
 </div>
@@ -552,6 +760,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00165">165</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00083">Dice.Create()</a>, <a class="el" href="ActEffect_8cs_source.html#l00021">ActEffect.DamageEle()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>.</p>
+
 </div>
 </div>
 <a id="a2adcab4aff68d4e38937ed852de5f75c" name="a2adcab4aff68d4e38937ed852de5f75c"></a>
@@ -567,6 +777,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00151">151</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00009">ThingGen._Create()</a>, <a class="el" href="WidgetStockTracker_8cs_source.html#l00020">WidgetStockTracker._Refresh()</a>, <a class="el" href="PartialMap_8cs_source.html#l00055">PartialMap.Apply()</a>, <a class="el" href="UICurrency_8cs_source.html#l00028">UICurrency.Build()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.Craft()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00197">RecipeCard.Craft()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00005">RendererReplacer.CreateFrom()</a>, <a class="el" href="SpawnList_8cs_source.html#l00054">SpawnList.CreateMaster()</a>, <a class="el" href="Recipe_8cs_source.html#l00065">Recipe.DropIngredients()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00512">BiomeProfile.Style.GetIdLight()</a>, <a class="el" href="Recipe_8cs_source.html#l00976">Recipe.Ingredient.GetName()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00075">RecipeSource.GetReqSkill()</a>, <a class="el" href="DNA_8cs_source.html#l00319">DNA.GetText()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00570">ThingContainer.GetThingStack()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00510">TaskHarvest.HarvestThing()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00500">TaskHarvest.HaveHarvestThing()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="CodexManager_8cs_source.html#l00070">CodexManager.ListKills()</a>, <a class="el" href="Card_8cs_source.html#l05053">Card.MakeFoodFrom()</a>, <a class="el" href="Core_8cs_source.html#l00339">Core.OnApplicationFocus()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00087">ResearchPlan.ParseReward()</a>, <a class="el" href="Dialog_8cs_source.html#l00403">Dialog.Recipe()</a>, <a class="el" href="Zone_8cs_source.html#l01351">Zone.RefreshHat()</a>, <a class="el" href="WindowChara_8cs_source.html#l00346">WindowChara.RefreshInfo()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00361">UIRecipeInfo.RefreshList()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00086">SerializedCards.Restore()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00427">ButtonGrid.SetIngredient()</a>, <a class="el" href="ButtonResourceTrack_8cs_source.html#l00014">ButtonResourceTrack.SetProp()</a>, <a class="el" href="RenderRow_8cs_source.html#l00140">RenderRow.SetRenderData()</a>, <a class="el" href="Thing_8cs_source.html#l00136">Thing.SetSource()</a>, <a class="el" href="Zone_8cs_source.html#l02856">Zone.SpawnMob()</a>, <a class="el" href="TraitToolTorch_8cs_source.html#l00055">TraitToolTorch.TrySetHeldAct()</a>, and <a class="el" href="ActEffect_8cs_source.html#l02362">ActEffect.Wish()</a>.</p>
 
 </div>
 </div>
@@ -584,6 +796,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00171">171</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00081">ThingGen.CreateFromCategory()</a>, <a class="el" href="Chara_8cs_source.html#l04525">Chara.EQ_CAT()</a>, <a class="el" href="Recipe_8cs_source.html#l01003">Recipe.Ingredient.g__CatName()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00100">QuestDeliver.GetDeliverCat()</a>, <a class="el" href="Chara_8cs_source.html#l07157">Chara.GetFavCat()</a>, <a class="el" href="Religion_8cs_source.html#l00239">Religion.GetOfferingValue()</a>, <a class="el" href="CardFilter_8cs_source.html#l00022">CardFilter.Init()</a>, <a class="el" href="Props_8cs_source.html#l00056">Props.Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="SourceCategory_8cs_source.html#l00076">SourceCategory.Row.IsChildOf()</a>, <a class="el" href="Props_8cs_source.html#l00262">Props.ListThingStacksInCategory()</a>, <a class="el" href="CardFilter_8cs_source.html#l00046">CardFilter.Pass()</a>, <a class="el" href="TraitBaseContainer_8cs_source.html#l00153">TraitBaseContainer.Prespawn()</a>, <a class="el" href="UIDistribution_8cs_source.html#l00022">UIDistribution.Refresh()</a>, <a class="el" href="LayerResource_8cs_source.html#l00032">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">LayerCraft.RefreshCategory()</a>, <a class="el" href="UIMagicChest_8cs_source.html#l00063">UIMagicChest.RefreshCats()</a>, <a class="el" href="LayerDistribution_8cs_source.html#l00005">LayerDistribution.SetContainer()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00088">QuestDeliver.SetIdThing()</a>, and <a class="el" href="UIInventory_8cs_source.html#l01003">UIInventory.ShowDistribution()</a>.</p>
+
 </div>
 </div>
 <a id="a6ac0f0432ebde26d5ee9941580db6f1d" name="a6ac0f0432ebde26d5ee9941580db6f1d"></a>
@@ -599,6 +813,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00181">181</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, and <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
 
 </div>
 </div>
@@ -616,6 +832,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00153">153</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00040">LayerGachaResult.Draw()</a>, <a class="el" href="SourceCard_8cs_source.html#l00007">SourceCard.Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00018">FoodEffect.IsHumanFlesh()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00031">FoodEffect.IsUndeadFlesh()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01625">CoreDebug.ListChara()</a>, <a class="el" href="QuestTaskHunt_8cs_source.html#l00041">QuestTaskHunt.ListTargets()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00036">TraitFigure.OnSetCardGrid()</a>, <a class="el" href="ZoneEventMusic_8cs_source.html#l00032">ZoneEventMusic.OnVisit()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00025">ContentCodex.RefreshList()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00267">TraitBaseSpellbook.SetName()</a>, <a class="el" href="Chara_8cs_source.html#l01676">Chara.SetSource()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01663">CoreDebug.Spawn()</a>, <a class="el" href="Tactics_8cs_source.html#l00193">Tactics.Tactics()</a>, <a class="el" href="ModUtil_8cs_source.html#l00009">ModUtil.Test()</a>, <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">SourcePrefInspector.ValidatePrefs()</a>, and <a class="el" href="DNA_8cs_source.html#l00326">DNA.WriteNote()</a>.</p>
+
 </div>
 </div>
 <a id="ab084035a5bb5fff272e13e8c01b8894c" name="ab084035a5bb5fff272e13e8c01b8894c"></a>
@@ -631,6 +849,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00155">155</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06194">Chara.GetTopicText()</a>, and <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
 
 </div>
 </div>
@@ -648,6 +868,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00167">167</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
+
 </div>
 </div>
 <a id="a4bf87f219cdfb7f4da20de5e3d14852b" name="a4bf87f219cdfb7f4da20de5e3d14852b"></a>
@@ -663,6 +885,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00207">207</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Hoard_8cs_source.html#l00033">Hoard.Add()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00134">LayerHoard.AddRandom()</a>, <a class="el" href="Hoard_8cs_source.html#l00027">Hoard.AddRandom()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00147">LayerHoard.Generate()</a>, <a class="el" href="Hoard_8cs_source.html#l00089">Hoard.GetActor()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">LayerHoard.OnAfterInit()</a>, and <a class="el" href="LayerCollectible_8cs_source.html#l00024">LayerCollectible.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -680,6 +904,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00163">163</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00468">Element._WriteNote()</a>, <a class="el" href="Chara_8cs_source.html#l08331">Chara.AddCondition()</a>, <a class="el" href="Chara_8cs_source.html#l07756">Chara.AddCooldown()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01096">FactionBranch.AddFeat()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00680">ElementContainer.AddNote()</a>, <a class="el" href="PolicyManager_8cs_source.html#l00017">PolicyManager.AddPolicy()</a>, <a class="el" href="SourceElement_8cs_source.html#l00117">SourceElement.AddRow()</a>, <a class="el" href="DNA_8cs_source.html#l00104">DNA.Apply()</a>, <a class="el" href="DomainManager_8cs_source.html#l00016">DomainManager.Build()</a>, <a class="el" href="CharaAbility_8cs_source.html#l00059">CharaAbility.BuildRandomAbilityList()</a>, <a class="el" href="Element_82_8cs_source.html#l00631">Element.CheckLevelBonus()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00217">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="ACT_8cs_source.html#l00017">ACT.Create()</a>, <a class="el" href="Element_82_8cs_source.html#l00761">Element.Create()</a>, <a class="el" href="TraitAbility_8cs_source.html#l00030">TraitAbility.CreateAct()</a>, <a class="el" href="ThingGen_8cs_source.html#l00157">ThingGen.CreateSpellbook()</a>, <a class="el" href="Player_8cs_source.html#l00557">Player.DreamSpell()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00019">FactionBranch.Evalue()</a>, <a class="el" href="Card_8cs_source.html#l01969">Card.Evalue()</a>, <a class="el" href="RaceBonus_8cs_source.html#l00036">RaceBonus.g__AddText()</a>, <a class="el" href="CharaAbility_8cs_source.html#l00124">CharaAbility.g__ConvertID()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00590">TaskHarvest.g__IsValidTarget()</a>, <a class="el" href="Feat_82_8cs_source.html#l00640">Feat.g__ModPotential()</a>, <a class="el" href="Feat_82_8cs_source.html#l00602">Feat.g__NoteElement()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00248">ElementContainerCard.g__TryLearn()</a>, <a class="el" href="Biography_8cs_source.html#l00331">Biography.Generate()</a>, <a class="el" href="Element_82_8cs_source.html#l00014">Element.Get()</a>, <a class="el" href="Chara_8cs_source.html#l08496">Chara.GetBuffStats()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Core_8cs_source.html#l00662">Core.GetElement()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00292">BaseCondition.GetElementSource()</a>, <a class="el" href="Thing_8cs_source.html#l01924">Thing.GetEnchant()</a>, <a class="el" href="Religion_8cs_source.html#l00024">Religion.GetFeat()</a>, <a class="el" href="Element_82_8cs_source.html#l00780">Element.GetId()</a>, <a class="el" href="SourceElement_8cs_source.html#l00177">SourceElement.Row.GetName()</a>, <a class="el" href="Element_82_8cs_source.html#l00009">Element.GetName()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00546">ElementContainer.GetOrCreateElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00429">Element.GetRandomElement()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00244">BaseTaskHarvest.GetReqEle()</a>, <a class="el" href="Element_82_8cs_source.html#l00680">Element.GetSortVal()</a>, <a class="el" href="Element_82_8cs_source.html#l00019">Element.GetSource()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00233">BaseCondition.GetSpriteColor()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00079">ConBuffStats.GetText()</a>, <a class="el" href="Check_8cs_source.html#l00044">Check.GetText()</a>, <a class="el" href="Religion_8cs_source.html#l00163">Religion.GetTextBenefit()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00244">ElementContainer.Has()</a>, <a class="el" href="Card_8cs_source.html#l05330">Card.HasElement()</a>, <a class="el" href="HotItemAct_8cs_source.html#l00066">HotItemAct.HotItemAct()</a>, <a class="el" href="ACT_8cs_source.html#l00006">ACT.Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="SourceElement_8cs_source.html#l00246">SourceElement.Row.IsEncAppliable()</a>, <a class="el" href="Chara_8cs_source.html#l08857">Chara.ListAvailabeFeats()</a>, <a class="el" href="Zone_8cs_source.html#l03134">Zone.ListLandFeats()</a>, <a class="el" href="Card_8cs_source.html#l05058">Card.MakeFoodFrom()</a>, <a class="el" href="Card_8cs_source.html#l02646">Card.ModExp()</a>, <a class="el" href="Chara_8cs_source.html#l09134">Chara.ModTempElement()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="SourceElement_8cs_source.html#l00091">SourceElement.OnAfterImportData()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00080">SourceThingV.OnAfterImportData()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00859">FactionBranch.OnClaimZone()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="TraitBookSkill_8cs_source.html#l00041">TraitBookSkill.OnCreate()</a>, <a class="el" href="TraitMod_8cs_source.html#l00021">TraitMod.OnCreate()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00039">ElementContainerCard.OnLearn()</a>, <a class="el" href="ElementContainerZone_8cs_source.html#l00005">ElementContainerZone.OnLearn()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00062">ElementContainerCard.OnTrain()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00087">ResearchPlan.ParseReward()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00336">AttackProcess.Perform()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00093">ConBuffStats.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05563">Card.PlayEffect()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00044">FoodEffect.Proc()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00037">CoreDebug.QuickStart()</a>, <a class="el" href="CharaAbility_8cs_source.html#l00014">CharaAbility.Refresh()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00023">WindowCharaMini.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l09091">Chara.RefreshFaithElement()</a>, <a class="el" href="WindowChara_8cs_source.html#l00346">WindowChara.RefreshInfo()</a>, <a class="el" href="WindowChara_8cs_source.html#l00371">WindowChara.RefreshSkill()</a>, <a class="el" href="Card_8cs_source.html#l05315">Card.ResistLvFrom()</a>, <a class="el" href="ElementSelecter_8cs_source.html#l00007">ElementSelecter.Select()</a>, <a class="el" href="Player_8cs_source.html#l00355">Player.SelectDomain()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00384">ElementContainer.SetBase()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01647">CoreDebug.SetElement()</a>, <a class="el" href="Chara_8cs_source.html#l01688">Chara.SetMainElement()</a>, <a class="el" href="TraitAbility_8cs_source.html#l00043">TraitAbility.SetName()</a>, <a class="el" href="TraitAmmoTalisman_8cs_source.html#l00014">TraitAmmoTalisman.SetName()</a>, <a class="el" href="TraitBookSkill_8cs_source.html#l00073">TraitBookSkill.SetName()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">BaseTaskHarvest.SetTarget()</a>, <a class="el" href="Chara_8cs_source.html#l03780">Chara.TryAbsorbRod()</a>, <a class="el" href="Chara_8cs_source.html#l07657">Chara.TryUpgrade()</a>, and <a class="el" href="Thing_8cs_source.html#l00893">Thing.WriteNote()</a>.</p>
+
 </div>
 </div>
 <a id="a0036753bc9e25f95a06c6472e85beaf7" name="a0036753bc9e25f95a06c6472e85beaf7"></a>
@@ -695,6 +921,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00185">185</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RankedZone_8cs_source.html#l00023">RankedZone.GetFactionName()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="FactionManager_8cs_source.html#l00019">FactionManager.OnCreateGame()</a>.</p>
 
 </div>
 </div>
@@ -712,6 +940,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00179">179</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00233">BiomeProfile.BaseTile._GetFloor()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00251">BiomeProfile.BaseTile._SetFloor()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="ThingGen_8cs_source.html#l00114">ThingGen.CreateFloor()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="ZoneInspector_8cs_source.html#l00127">ZoneInspector.FillUtil.FillFloor()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00256">BiomeProfile.BaseTile.FloorRows()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00113">TaskDrawWater.g__ChangeFloor()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00111">TaskPourWater.g__ChangeFloor()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Map_8cs_source.html#l01729">Map.MineFloor()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00020">MapGenRegion.OnGenerateTerrain()</a>, and <a class="el" href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.RefreshBlockList()</a>.</p>
+
 </div>
 </div>
 <a id="a5016191eaf33a8f147b32e5d22f35c95" name="a5016191eaf33a8f147b32e5d22f35c95"></a>
@@ -727,6 +957,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00213">213</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">SourcePrefInspector.ValidatePrefs()</a>.</p>
 
 </div>
 </div>
@@ -744,6 +976,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00209">209</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EloMap_8cs_source.html#l00258">EloMap.GetSources()</a>, <a class="el" href="EloMap_8cs_source.html#l00191">EloMap.GetTileInfo()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="MapGenRegion_8cs_source.html#l00020">MapGenRegion.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a4d03dd51ea52717f38ec27f0b434336a" name="a4d03dd51ea52717f38ec27f0b434336a"></a>
@@ -759,6 +993,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00191">191</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="Chara_8cs_source.html#l08124">Chara.RerollHobby()</a>.</p>
 
 </div>
 </div>
@@ -776,6 +1012,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00205">205</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
+
 </div>
 </div>
 <a id="a80752655c2f8c267536edfbee0eface8" name="a80752655c2f8c267536edfbee0eface8"></a>
@@ -791,6 +1029,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00227">227</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
 
 </div>
 </div>
@@ -808,6 +1048,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00189">189</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00044">UICharaMaker.BuildRaces()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01850">CoreDebug.ChangeJob()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00078">ContentCodex.RefreshInfo()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>.</p>
+
 </div>
 </div>
 <a id="a1c3e4bbd9eedfe0790974b85655a72ff" name="a1c3e4bbd9eedfe0790974b85655a72ff"></a>
@@ -823,6 +1065,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00221">221</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00929">Player.CountKeyItem()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Player_8cs_source.html#l00903">Player.ModKeyItem()</a>, and <a class="el" href="ContentKeyItem_8cs_source.html#l00007">ContentKeyItem.OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -840,6 +1084,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00145">145</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00020">InitLang()</a>, and <a class="el" href="FactionBranch_8cs_source.html#l01476">FactionBranch.Log()</a>.</p>
+
 </div>
 </div>
 <a id="a12963043d0b1a0aa8fe8cd3ae7c45db5" name="a12963043d0b1a0aa8fe8cd3ae7c45db5"></a>
@@ -855,6 +1101,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00141">141</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00020">InitLang()</a>.</p>
 
 </div>
 </div>
@@ -872,6 +1120,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00143">143</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00020">InitLang()</a>.</p>
+
 </div>
 </div>
 <a id="a81b70f5e679b3cc523a598cdfe7fff4f" name="a81b70f5e679b3cc523a598cdfe7fff4f"></a>
@@ -888,6 +1138,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00149">149</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00020">InitLang()</a>.</p>
+
 </div>
 </div>
 <a id="a76110f02ea7ac11778eaa98e513f3c17" name="a76110f02ea7ac11778eaa98e513f3c17"></a>
@@ -903,6 +1155,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00147">147</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00020">InitLang()</a>, and <a class="el" href="Biography_8cs_source.html#l00455">Biography.StrBio()</a>.</p>
 
 </div>
 </div>
@@ -928,6 +1182,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00225">225</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00098">ExportSourceTexts()</a>, <a class="el" href="SourceManager_8cs_source.html#l00114">ImportSourceTexts()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00106">UpdateSourceTexts()</a>, and <a class="el" href="SourceManager_8cs_source.html#l00129">ValidateLang()</a>.</p>
+
 </div>
 </div>
 <a id="a0488b5ccfe4ed945c3f13e3d40e12bd3" name="a0488b5ccfe4ed945c3f13e3d40e12bd3"></a>
@@ -943,6 +1199,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00173">173</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00289">BiomeProfile.BaseTile._GetMat()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00311">BiomeProfile.BaseTile._SetMat()</a>, <a class="el" href="Recipe_8cs_source.html#l00545">Recipe.Build()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00542">RecipeCard.Build()</a>, <a class="el" href="Card_8cs_source.html#l03086">Card.ChangeMaterial()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.Craft()</a>, <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00064">ThingGen.Create()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="Card_8cs_source.html#l05374">Card.Dye()</a>, <a class="el" href="Card_8cs_source.html#l05369">Card.DyeRandom()</a>, <a class="el" href="Props_8cs_source.html#l00330">Props.Find()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00527">ThingContainer.Find()</a>, <a class="el" href="Recipe_8cs_source.html#l00389">Recipe.GetColorMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00368">Recipe.GetMainMaterial()</a>, <a class="el" href="TraitShrine_8cs_source.html#l00165">TraitShrine.GetMaterial()</a>, <a class="el" href="Card_8cs_source.html#l05425">Card.GetRandomColor()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00062">TraitBoat.GetWaterMat()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00316">BiomeProfile.BaseTile.MatRows()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00040">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="GrowSystemBerry_8cs_source.html#l00013">GrowSystemBerry.OnMineObj()</a>, <a class="el" href="GrowSystemFlower_8cs_source.html#l00018">GrowSystemFlower.OnMineObj()</a>, <a class="el" href="GrowSystemHerb_8cs_source.html#l00018">GrowSystemHerb.OnMineObj()</a>, <a class="el" href="GrowSystemPlant_8cs_source.html#l00045">GrowSystemPlant.OnMineObj()</a>, <a class="el" href="GrowSystemWeed_8cs_source.html#l00034">GrowSystemWeed.OnMineObj()</a>, <a class="el" href="TraitGachaBall_8cs_source.html#l00013">TraitGachaBall.OnUse()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00153">DramaOutcome.QuestCraft_Drop1()</a>, <a class="el" href="Lot_8cs_source.html#l00140">Lot.RefreshData()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00086">SerializedCards.Restore()</a>, <a class="el" href="Lot_8cs_source.html#l00007">Lot.SetBaseRoom()</a>, <a class="el" href="RenderRow_8cs_source.html#l00140">RenderRow.SetRenderData()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00380">CoreDebug.SetStartStockpile()</a>, <a class="el" href="Card_8cs_source.html#l04933">Card.TryMakeRandomItem()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02382">CoreDebug.MatColorTest.Update()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -960,6 +1218,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00183">183</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00205">BiomeProfile.BaseTile._GetObj()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00223">BiomeProfile.BaseTile._SetObj()</a>, <a class="el" href="TraitSeed_8cs_source.html#l00175">TraitSeed.ApplySeed()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="ThingGen_8cs_source.html#l00122">ThingGen.CreateObj()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="TraitSeed_8cs_source.html#l00170">TraitSeed.MakeSeed()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00228">BiomeProfile.BaseTile.ObjRows()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00034">LayerEditHouse.SetBoard()</a>, <a class="el" href="Map_8cs_source.html#l01502">Map.SetObj()</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">SourcePrefInspector.ValidatePrefs()</a>.</p>
+
 </div>
 </div>
 <a id="a6cf700648175051766a0a9526320f771" name="a6cf700648175051766a0a9526320f771"></a>
@@ -975,6 +1235,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00159">159</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00023">DramaSequence.GetActor()</a>, and <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>.</p>
 
 </div>
 </div>
@@ -992,6 +1254,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00193">193</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00008">Quest.Create()</a>, <a class="el" href="QuestSequence_8cs_source.html#l00021">QuestSequence.GetTitle()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="ContentQuest_8cs_source.html#l00007">ContentQuest.OnSwitchContent()</a>.</p>
+
 </div>
 </div>
 <a id="a0b2b38fa40a1e13c9a86ffa5dabdfd20" name="a0b2b38fa40a1e13c9a86ffa5dabdfd20"></a>
@@ -1007,6 +1271,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00169">169</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00044">UICharaMaker.BuildRaces()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01802">CoreDebug.ChangeRace()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00018">FoodEffect.IsHumanFlesh()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00031">FoodEffect.IsUndeadFlesh()</a>, <a class="el" href="QuestTaskHunt_8cs_source.html#l00111">QuestTaskHunt.OnGetDetail()</a>, <a class="el" href="QuestTaskHunt_8cs_source.html#l00054">QuestTaskHunt.OnInit()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00078">ContentCodex.RefreshInfo()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, and <a class="el" href="SlaverData_8cs_source.html#l00007">SlaverData.TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -1024,6 +1290,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00215">215</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00308">TraitCrafter.GetSource()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00165">TraitCrafter.IsCraftIngredient()</a>.</p>
+
 </div>
 </div>
 <a id="ae61850f2f6b78c77fccd595362b8b79f" name="ae61850f2f6b78c77fccd595362b8b79f"></a>
@@ -1039,6 +1307,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00187">187</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Trait_8cs_source.html#l01027">Trait.OfferProcess()</a>, and <a class="el" href="Chara_8cs_source.html#l09091">Chara.RefreshFaithElement()</a>.</p>
 
 </div>
 </div>
@@ -1056,6 +1326,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00203">203</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00041">ResearchManager.IsListBarter()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00125">ResearchManager.ShowNewPlans()</a>, and <a class="el" href="ResearchManager_8cs_source.html#l00026">ResearchManager.TryAddPlans()</a>.</p>
+
 </div>
 </div>
 <a id="a56b3d59619d0a5a90bf8a31b5791a73c" name="a56b3d59619d0a5a90bf8a31b5791a73c"></a>
@@ -1071,6 +1343,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00175">175</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00321">BiomeProfile.BaseTile._GetSpawnList()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00335">BiomeProfile.BaseTile._SetSpawnList()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00340">BiomeProfile.BaseTile._SpawnList()</a>, <a class="el" href="CardInspector_8cs_source.html#l00147">CardInspector._SpawnList()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="TraitBaseContainer_8cs_source.html#l00153">TraitBaseContainer.Prespawn()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00028">SpawnList.SpawnList()</a>.</p>
 
 </div>
 </div>
@@ -1088,6 +1362,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00195">195</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseCondition_8cs_source.html#l00510">BaseCondition._WriteNote()</a>, <a class="el" href="BaseStats_8cs_source.html#l00138">BaseStats._WriteNote()</a>, <a class="el" href="Condition_8cs_source.html#l00029">Condition.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>.</p>
+
 </div>
 </div>
 <a id="aef47f5e3413fda019c9745f849d94946" name="aef47f5e3413fda019c9745f849d94946"></a>
@@ -1103,6 +1379,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00157">157</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06074">Chara.GetHoverText2()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Tactics_8cs_source.html#l00193">Tactics.Tactics()</a>, and <a class="el" href="DNA_8cs_source.html#l00326">DNA.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -1120,6 +1398,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00161">161</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00181">BiomeProfile.BaseTile._GetThing()</a>, <a class="el" href="SourceAsset_8cs_source.html#l00055">SourceAsset._LoadPrefs()</a>, <a class="el" href="SourceAsset_8cs_source.html#l00024">SourceAsset._SavePrefs()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00195">BiomeProfile.BaseTile._SetThing()</a>, <a class="el" href="SourceCard_8cs_source.html#l00025">SourceCard.AddRow()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, <a class="el" href="Biography_8cs_source.html#l00331">Biography.Generate()</a>, <a class="el" href="Chara_8cs_source.html#l07137">Chara.GetFavFood()</a>, <a class="el" href="InvOwner_8cs_source.html#l01268">InvOwner.GetTextDetail()</a>, <a class="el" href="InvOwnerDraglet_8cs_source.html#l00167">InvOwnerDraglet.GetTextDetail()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00127">QuestCraft.GetTextProgress()</a>, <a class="el" href="SourceManager_8cs_source.html#l00114">ImportSourceTexts()</a>, <a class="el" href="SourceCard_8cs_source.html#l00007">SourceCard.Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00084">UIDragGridInfo.InitFuel()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01636">CoreDebug.ListThing()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00080">SourceThingV.OnAfterImportData()</a>, <a class="el" href="AIWork__Lumberjack_8cs_source.html#l00029">AIWork_Lumberjack.OnCreateProgress()</a>, <a class="el" href="Zone__TestRoom_8cs_source.html#l00006">Zone_TestRoom.OnGenerateMap()</a>, <a class="el" href="TraitBaseContainer_8cs_source.html#l00153">TraitBaseContainer.Prespawn()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>, <a class="el" href="QuestSupplySpecific_8cs_source.html#l00045">QuestSupplySpecific.SetIdThing()</a>, <a class="el" href="Thing_8cs_source.html#l00136">Thing.SetSource()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00380">CoreDebug.SetStartStockpile()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01663">CoreDebug.Spawn()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00200">BiomeProfile.BaseTile.ThingRows()</a>, <a class="el" href="TraitPaintBoard_8cs_source.html#l00022">TraitPaintBoard.TrySetAct()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00072">SourceThingV.ValidatePref()</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">SourcePrefInspector.ValidatePrefs()</a>.</p>
+
 </div>
 </div>
 <a id="a2b65d7893ce9efd2215d725e636018c3" name="a2b65d7893ce9efd2215d725e636018c3"></a>
@@ -1135,6 +1415,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00211">211</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">SourcePrefInspector.ValidatePrefs()</a>.</p>
 
 </div>
 </div>
@@ -1152,6 +1434,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00201">201</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, <a class="el" href="Zone_8cs_source.html#l00850">Zone.OnAfterCreate()</a>, <a class="el" href="Zone__Field_8cs_source.html#l00157">Zone_Field.OnGenerateMap()</a>, and <a class="el" href="TraitScrollMap_8cs_source.html#l00051">TraitScrollMap.SetName()</a>.</p>
+
 </div>
 </div>
 <a id="a43ee8479482668d85c820a75f4a6f5fe" name="a43ee8479482668d85c820a75f4a6f5fe"></a>
@@ -1167,6 +1451,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00199">199</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpatialGen_8cs_source.html#l00018">SpatialGen.Create()</a>, <a class="el" href="SpatialGen_8cs_source.html#l00005">SpatialGen.CreateRecursive()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00306">TraitNewZone.CreateZone()</a>, <a class="el" href="Region_8cs_source.html#l00191">Region.GetRandomSiteSource()</a>, <a class="el" href="SourceManager_8cs_source.html#l00039">Init()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00020">CoreDebug.ZoneIDs()</a>.</p>
 
 </div>
 </div>
@@ -1192,6 +1478,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceManager_8cs_source.html#l00007">7</a> of file <a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            ExcelData result;</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> ((result = this.<a class="code hl_variable" href="classSourceManager.html#a79c33d8b216b3a0e846ad4fa2f4fe4a2">_dataGodTalk</a>) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                result = (this._dataGodTalk = <span class="keyword">new</span> ExcelData(Lang.setting.dir + <span class="stringliteral">&quot;Data/god_talk.xlsx&quot;</span>, 3));</div>
+<div class="line"><span class="lineno">   15</span>            }</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassSourceManager_html_a79c33d8b216b3a0e846ad4fa2f4fe4a2"><div class="ttname"><a href="classSourceManager.html#a79c33d8b216b3a0e846ad4fa2f4fe4a2">SourceManager._dataGodTalk</a></div><div class="ttdeci">ExcelData _dataGodTalk</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00223">SourceManager.cs:223</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00234">Religion.GetGodTalk()</a>.</p>
 
 </div>
 </div>
@@ -1199,9 +1499,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="SourceManager_8cs_source.html">SourceManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceManager.html">SourceManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

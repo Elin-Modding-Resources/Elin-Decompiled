@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classContentKeyItem.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -135,6 +155,49 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00007">7</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        this.list.sortMode = UIList.SortMode.ByValue;</div>
+<div class="line"><span class="lineno">   10</span>        BaseList baseList = this.<a class="code hl_variable" href="classContentKeyItem.html#a58e2cb84429dc87234e755e70b5209cd">list</a>;</div>
+<div class="line"><span class="lineno">   11</span>        UIList.Callback&lt;<a class="code hl_class" href="classSourceKeyItem.html">SourceKeyItem</a>.<a class="code hl_class" href="classSourceKeyItem_1_1Row.html">Row</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classSourceKeyItem.html">SourceKeyItem</a>.<a class="code hl_class" href="classSourceKeyItem_1_1Row.html">Row</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt;();</div>
+<div class="line"><span class="lineno">   12</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classSourceKeyItem.html">SourceKeyItem</a>.<a class="code hl_class" href="classSourceKeyItem_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            b.<a class="code hl_function" href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">SetSound</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   15</span>            b.button1.mainText.SetText(a.GetName());</div>
+<div class="line"><span class="lineno">   16</span>            b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">CountKeyItem</a>(a.id).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, 260, FontColor.Default, TextAnchor.MiddleRight);</div>
+<div class="line"><span class="lineno">   17</span>        };</div>
+<div class="line"><span class="lineno">   18</span>        callback.onClick = delegate(<a class="code hl_class" href="classSourceKeyItem.html">SourceKeyItem</a>.<a class="code hl_class" href="classSourceKeyItem_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_function" href="classContentKeyItem.html#a6e76fed108bd46ba2dc927ea3424f49d">SelectItem</a>(a);</div>
+<div class="line"><span class="lineno">   21</span>        };</div>
+<div class="line"><span class="lineno">   22</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#af78e76b4ba2ceadc15a47c0e37c0f8ce">keyItems</a>.Keys)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">CountKeyItem</a>(num) &gt; 0)</div>
+<div class="line"><span class="lineno">   27</span>                {</div>
+<div class="line"><span class="lineno">   28</span>                    this.<a class="code hl_variable" href="classContentKeyItem.html#a58e2cb84429dc87234e755e70b5209cd">list</a>.Add(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">keyItems</a>.map[num]);</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>        };</div>
+<div class="line"><span class="lineno">   32</span>        baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_variable" href="classContentKeyItem.html#a58e2cb84429dc87234e755e70b5209cd">list</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_function" href="classContentKeyItem.html#a6e76fed108bd46ba2dc927ea3424f49d">SelectItem</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">keyItems</a>.rows[0]);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassContentKeyItem_html_a58e2cb84429dc87234e755e70b5209cd"><div class="ttname"><a href="classContentKeyItem.html#a58e2cb84429dc87234e755e70b5209cd">ContentKeyItem.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ContentKeyItem_8cs_source.html#l00052">ContentKeyItem.cs:52</a></div></div>
+<div class="ttc" id="aclassContentKeyItem_html_a6e76fed108bd46ba2dc927ea3424f49d"><div class="ttname"><a href="classContentKeyItem.html#a6e76fed108bd46ba2dc927ea3424f49d">ContentKeyItem.SelectItem</a></div><div class="ttdeci">void SelectItem(SourceKeyItem.Row q)</div><div class="ttdef"><b>Definition:</b> <a href="ContentKeyItem_8cs_source.html#l00037">ContentKeyItem.cs:37</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a748c7f1e5bc9cc5a1ca90419a368d028"><div class="ttname"><a href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">ItemGeneral.SetSound</a></div><div class="ttdeci">void SetSound(SoundData data=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00136">ItemGeneral.cs:136</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_ae2b8778fd74445f36964a7224550426a"><div class="ttname"><a href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">ItemGeneral.SetSubText</a></div><div class="ttdeci">UIButton SetSubText(string lang, int x, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.cs:113</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a86096c60374f45759ca5fe756b3a1fda"><div class="ttname"><a href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">Player.CountKeyItem</a></div><div class="ttdeci">int CountKeyItem(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00929">Player.cs:929</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af78e76b4ba2ceadc15a47c0e37c0f8ce"><div class="ttname"><a href="classPlayer.html#af78e76b4ba2ceadc15a47c0e37c0f8ce">Player.keyItems</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; keyItems</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01557">Player.cs:1557</a></div></div>
+<div class="ttc" id="aclassSourceKeyItem_1_1Row_html"><div class="ttname"><a href="classSourceKeyItem_1_1Row.html">SourceKeyItem.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceKeyItem_8cs_source.html#l00024">SourceKeyItem.cs:25</a></div></div>
+<div class="ttc" id="aclassSourceKeyItem_html"><div class="ttname"><a href="classSourceKeyItem.html">SourceKeyItem</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceKeyItem_8cs_source.html#l00003">SourceKeyItem.cs:4</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a1c3e4bbd9eedfe0790974b85655a72ff"><div class="ttname"><a href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">SourceManager.keyItems</a></div><div class="ttdeci">SourceKeyItem keyItems</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00221">SourceManager.cs:221</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00929">Player.CountKeyItem()</a>, <a class="el" href="Player_8cs_source.html#l01557">Player.keyItems</a>, <a class="el" href="SourceManager_8cs_source.html#l00221">SourceManager.keyItems</a>, <a class="el" href="ContentKeyItem_8cs_source.html#l00052">list</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="ContentKeyItem_8cs_source.html#l00037">SelectItem()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00136">ItemGeneral.SetSound()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.SetSubText()</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -163,6 +226,27 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00037">37</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_variable" href="classContentKeyItem.html#a568d2dda979538492fe6b6df1ef8aa27">textTitle</a>.SetText(q.GetName());</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">string</span> detail = q.GetDetail();</div>
+<div class="line"><span class="lineno">   41</span>        this.<a class="code hl_variable" href="classContentKeyItem.html#a798eccc7a358947e47feade89ba7d320">textDetail</a>.SetText(detail);</div>
+<div class="line"><span class="lineno">   42</span>        Sprite sprite = Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Image/KeyItem/&quot;</span> + q.<a class="code hl_variable" href="classSourceKeyItem_1_1Row.html#a501502bd1907c6820ace250afe31ca5e">alias</a>);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (sprite)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            this.imageItem.sprite = sprite;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classContentKeyItem.html#a23ab0aca0a69280cba09380924df2754">imageItem</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classContentKeyItem.html#a23ab0aca0a69280cba09380924df2754">imageItem</a>.SetActive(sprite);</div>
+<div class="line"><span class="lineno">   49</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassContentKeyItem_html_a23ab0aca0a69280cba09380924df2754"><div class="ttname"><a href="classContentKeyItem.html#a23ab0aca0a69280cba09380924df2754">ContentKeyItem.imageItem</a></div><div class="ttdeci">Image imageItem</div><div class="ttdef"><b>Definition:</b> <a href="ContentKeyItem_8cs_source.html#l00060">ContentKeyItem.cs:60</a></div></div>
+<div class="ttc" id="aclassContentKeyItem_html_a568d2dda979538492fe6b6df1ef8aa27"><div class="ttname"><a href="classContentKeyItem.html#a568d2dda979538492fe6b6df1ef8aa27">ContentKeyItem.textTitle</a></div><div class="ttdeci">UIText textTitle</div><div class="ttdef"><b>Definition:</b> <a href="ContentKeyItem_8cs_source.html#l00056">ContentKeyItem.cs:56</a></div></div>
+<div class="ttc" id="aclassContentKeyItem_html_a798eccc7a358947e47feade89ba7d320"><div class="ttname"><a href="classContentKeyItem.html#a798eccc7a358947e47feade89ba7d320">ContentKeyItem.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentKeyItem_8cs_source.html#l00058">ContentKeyItem.cs:58</a></div></div>
+<div class="ttc" id="aclassSourceKeyItem_1_1Row_html_a501502bd1907c6820ace250afe31ca5e"><div class="ttname"><a href="classSourceKeyItem_1_1Row.html#a501502bd1907c6820ace250afe31ca5e">SourceKeyItem.Row.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="SourceKeyItem_8cs_source.html#l00044">SourceKeyItem.cs:44</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ContentKeyItem_8cs_source.html#l00060">imageItem</a>, <a class="el" href="ContentKeyItem_8cs_source.html#l00058">textDetail</a>, and <a class="el" href="ContentKeyItem_8cs_source.html#l00056">textTitle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -181,6 +265,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00060">60</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00037">SelectItem()</a>.</p>
+
 </div>
 </div>
 <a id="a58e2cb84429dc87234e755e70b5209cd" name="a58e2cb84429dc87234e755e70b5209cd"></a>
@@ -196,6 +282,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00052">52</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -229,6 +317,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00058">58</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00037">SelectItem()</a>.</p>
+
 </div>
 </div>
 <a id="a568d2dda979538492fe6b6df1ef8aa27" name="a568d2dda979538492fe6b6df1ef8aa27"></a>
@@ -245,15 +335,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentKeyItem_8cs_source.html#l00056">56</a> of file <a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00037">SelectItem()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ContentKeyItem_8cs_source.html">ContentKeyItem.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classContentKeyItem.html">ContentKeyItem</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

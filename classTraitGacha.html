@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitGacha.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -668,7 +688,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00067">67</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_enumvalue" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9">Junk</a>,</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_enumvalue" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5">Plant</a>,</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_enumvalue" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623">Furniture</a></div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassTraitGacha_html_ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5"><div class="ttname"><a href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5">TraitGacha.GachaType.Plant</a></div><div class="ttdeci">@ Plant</div></div>
+<div class="ttc" id="aclassTraitGacha_html_ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9"><div class="ttname"><a href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9">TraitGacha.GachaType.Junk</a></div><div class="ttdeci">@ Junk</div></div>
+<div class="ttc" id="aclassTraitGacha_html_ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623"><div class="ttname"><a href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623">TraitGacha.GachaType.Furniture</a></div><div class="ttdeci">@ Furniture</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -696,6 +724,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;gacha_coin&quot;</span>;</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_enumeration" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d">TraitGacha.GachaType</a> <a class="code hl_property" href="classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c">type</a> = this.<a class="code hl_property" href="classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c">type</a>;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (type != <a class="code hl_class" href="classTraitGacha.html">TraitGacha</a>.<a class="code hl_enumeration" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d">GachaType</a>.Plant)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c">type</a> == <a class="code hl_class" href="classTraitGacha.html">TraitGacha</a>.<a class="code hl_enumeration" href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d">GachaType</a>.Furniture)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;_gold&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;_silver&quot;</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassTraitGacha_html"><div class="ttname"><a href="classTraitGacha.html">TraitGacha</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGacha_8cs_source.html#l00003">TraitGacha.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitGacha_html_a8fd2534d8534271f280a1cdc90c7b09c"><div class="ttname"><a href="classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c">TraitGacha.type</a></div><div class="ttdeci">TraitGacha.GachaType type</div><div class="ttdef"><b>Definition:</b> <a href="TraitGacha_8cs_source.html#l00005">TraitGacha.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitGacha_html_ad6cc7b55650ec00db6111990cdd82f9d"><div class="ttname"><a href="classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d">TraitGacha.GachaType</a></div><div class="ttdeci">GachaType</div><div class="ttdef"><b>Definition:</b> <a href="TraitGacha_8cs_source.html#l00067">TraitGacha.cs:68</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="TraitGacha_8cs_source.html#l00006">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwnerGacha_8cs_source.html#l00017">InvOwnerGacha.ShouldShowGuide()</a>.</p>
 
 </div>
 </div>
@@ -724,6 +776,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00060">60</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;gachaBall&quot;</span>, -1, -1).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num);</div>
+<div class="line"><span class="lineno">   63</span>        thing.refVal = (int)this.<a class="code hl_property" href="classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c">type</a>;</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">DropReward</a>(thing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03467">Card.cs:3467</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ac75d9ea1e3654304fd72f8161838e071"><div class="ttname"><a href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">Player.DropReward</a></div><div class="ttdeci">Thing DropReward(Thing t, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01287">Player.cs:1287</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="Player_8cs_source.html#l01287">Player.DropReward()</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l03467">Card.SetNum()</a>, and <a class="el" href="TraitGacha_8cs_source.html#l00006">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwnerGacha_8cs_source.html#l00038">InvOwnerGacha._OnProcess()</a>.</p>
 
 </div>
 </div>
@@ -754,6 +822,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;gacha&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_function" href="classLayerDragGrid.html#a3959a3be93a5f1e36e6282e5ec078566">CreateGacha</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   57</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html"><div class="ttname"><a href="classLayerDragGrid.html">LayerDragGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00006">LayerDragGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_a3959a3be93a5f1e36e6282e5ec078566"><div class="ttname"><a href="classLayerDragGrid.html#a3959a3be93a5f1e36e6282e5ec078566">LayerDragGrid.CreateGacha</a></div><div class="ttdeci">static LayerDragGrid CreateGacha(TraitGacha gacha)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00376">LayerDragGrid.cs:376</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDragGrid_8cs_source.html#l00376">LayerDragGrid.CreateGacha()</a>, <a class="el" href="Card_8cs_source.html#l00476">Card.isOn</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -779,7 +865,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00039">39</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2dc893f597a04a16f6bd9c1efb9b20e0" name="a2dc893f597a04a16f6bd9c1efb9b20e0"></a>
@@ -803,7 +895,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8fd2534d8534271f280a1cdc90c7b09c" name="a8fd2534d8534271f280a1cdc90c7b09c"></a>
@@ -827,6 +925,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGacha_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> base.GetParam(1, <span class="keyword">null</span>).ToEnum(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitGacha_8cs_source.html#l00013">GetIdCoin()</a>, and <a class="el" href="TraitGacha_8cs_source.html#l00060">PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -834,9 +940,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitGacha_8cs_source.html">TraitGacha.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitGacha.html">TraitGacha</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

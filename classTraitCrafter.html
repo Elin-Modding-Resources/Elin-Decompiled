@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitCrafter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -759,7 +779,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00568">568</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  569</span>    {</div>
+<div class="line"><span class="lineno">  570</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67">Default</a>,</div>
+<div class="line"><span class="lineno">  571</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3">Microwave</a>,</div>
+<div class="line"><span class="lineno">  572</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0">Pot</a></div>
+<div class="line"><span class="lineno">  573</span>    }</div>
+<div class="ttc" id="aclassTraitCrafter_html_af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3"><div class="ttname"><a href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3">TraitCrafter.AnimeType.Microwave</a></div><div class="ttdeci">@ Microwave</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67">TraitCrafter.AnimeType.Default</a></div><div class="ttdeci">@ Default</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0"><div class="ttname"><a href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0">TraitCrafter.AnimeType.Pot</a></div><div class="ttdeci">@ Pot</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1ee82645e2183ef8e687068242a34dcb" name="a1ee82645e2183ef8e687068242a34dcb"></a>
@@ -787,7 +815,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00554">554</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  555</span>    {</div>
+<div class="line"><span class="lineno">  556</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  557</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67">Food</a>,</div>
+<div class="line"><span class="lineno">  558</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a">Resource</a>,</div>
+<div class="line"><span class="lineno">  559</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39">Dye</a>,</div>
+<div class="line"><span class="lineno">  560</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5">Butcher</a>,</div>
+<div class="line"><span class="lineno">  561</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8">Grind</a>,</div>
+<div class="line"><span class="lineno">  562</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0">Sculpture</a>,</div>
+<div class="line"><span class="lineno">  563</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b">Talisman</a>,</div>
+<div class="line"><span class="lineno">  564</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba">Scratch</a>,</div>
+<div class="line"><span class="lineno">  565</span>        <a class="code hl_enumvalue" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7">Incubator</a></div>
+<div class="line"><span class="lineno">  566</span>    }</div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67">TraitCrafter.MixType.Food</a></div><div class="ttdeci">@ Food</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8">TraitCrafter.MixType.Grind</a></div><div class="ttdeci">@ Grind</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39">TraitCrafter.MixType.Dye</a></div><div class="ttdeci">@ Dye</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b">TraitCrafter.MixType.Talisman</a></div><div class="ttdeci">@ Talisman</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754">TraitCrafter.MixType.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0">TraitCrafter.MixType.Sculpture</a></div><div class="ttdeci">@ Sculpture</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5">TraitCrafter.MixType.Butcher</a></div><div class="ttdeci">@ Butcher</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba">TraitCrafter.MixType.Scratch</a></div><div class="ttdeci">@ Scratch</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a">TraitCrafter.MixType.Resource</a></div><div class="ttdeci">@ Resource</div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7">TraitCrafter.MixType.Incubator</a></div><div class="ttdeci">@ Incubator</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -818,6 +868,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00515">515</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  516</span>    {</div>
+<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f">CanUseFromInventory</a>;</div>
+<div class="line"><span class="lineno">  518</span>    }</div>
+<div class="ttc" id="aclassTraitCrafter_html_ac154e3baf3f8b1994e6bae094ad0401f"><div class="ttname"><a href="classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f">TraitCrafter.CanUseFromInventory</a></div><div class="ttdeci">virtual bool CanUseFromInventory</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00088">TraitCrafter.cs:89</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitCrafter_8cs_source.html#l00089">CanUseFromInventory</a>.</p>
 
 </div>
 </div>
@@ -846,6 +902,196 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00350">350</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>    {</div>
+<div class="line"><span class="lineno">  352</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0];</div>
+<div class="line"><span class="lineno">  353</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing2 = (this.numIng &gt; 1) ? ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[1] : <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  354</span>        <a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> source = <span class="keyword">this</span>.GetSource(ai);</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (source == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  356</span>        {</div>
+<div class="line"><span class="lineno">  357</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  358</span>        }</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a8850e5a148ca9bdc4c096716fe903379">knownCraft</a>.Contains(source.id))</div>
+<div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            SE.Play(<span class="stringliteral">&quot;idea&quot;</span>);</div>
+<div class="line"><span class="lineno">  362</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;newKnownCraft&quot;</span>);</div>
+<div class="line"><span class="lineno">  363</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a8850e5a148ca9bdc4c096716fe903379">knownCraft</a>.Add(source.id);</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_variable" href="classLayerDragGrid.html#ab5df05e823cc47b6dbe353bd7719fb81">Instance</a>)</div>
+<div class="line"><span class="lineno">  365</span>            {</div>
+<div class="line"><span class="lineno">  366</span>                <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_variable" href="classLayerDragGrid.html#ab5df05e823cc47b6dbe353bd7719fb81">Instance</a>.<a class="code hl_variable" href="classLayerDragGrid.html#a4032732849ccbb4cd4923b0410a2a062">info</a>.<a class="code hl_function" href="classUIDragGridInfo.html#a4f700d2ded28996a81a76b9b3a4b667c">Refresh</a>();</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>        }</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = source.thing;</div>
+<div class="line"><span class="lineno">  370</span>        <a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">TraitCrafter.MixType</a> mixType = source.type.ToEnum(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  371</span>        <span class="keywordtype">int</span> num = source.num.Calc(0, 0, 0);</div>
+<div class="line"><span class="lineno">  372</span>        <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;&gt;c__DisplayClass49_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  373</span>        CS$&lt;&gt;8__locals1.t = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">switch</span> (mixType)</div>
+<div class="line"><span class="lineno">  375</span>        {</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Food:</div>
+<div class="line"><span class="lineno">  377</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_function" href="classCraftUtil.html#a0ade345f7f981e8204470e8164f9388c">MixIngredients</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>, <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_enumeration" href="classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7">MixType</a>.General, 0, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Resource:</div>
+<div class="line"><span class="lineno">  380</span>        {</div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordtype">string</span>[] array = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Split(<span class="charliteral">&#39;%&#39;</span>, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno">  382</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_function" href="classCraftUtil.html#a0ade345f7f981e8204470e8164f9388c">MixIngredients</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(array[0], (array.Length &gt; 1) ? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[array[1]].id : thing.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.id, -1), ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>, <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_enumeration" href="classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7">MixType</a>.General, 999, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>).<a class="code hl_class" href="classThing.html">Thing</a>;</div>
+<div class="line"><span class="lineno">  383</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  384</span>        }</div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Dye:</div>
+<div class="line"><span class="lineno">  386</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, thing2.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.id, -1);</div>
+<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Butcher:</div>
+<div class="line"><span class="lineno">  389</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_class" href="classSpawnListThing.html">SpawnListThing</a>.<a class="code hl_function" href="classSpawnListThing.html#acd56126d7e0516394006424ae69cfad8">Get</a>(<span class="stringliteral">&quot;butcher&quot;</span>, (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> a) =&gt; a.Category.id == <span class="stringliteral">&quot;bodyparts&quot;</span>).Select(-1, -1).<a class="code hl_variable" href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">id</a>;</div>
+<div class="line"><span class="lineno">  390</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, -1, -1);</div>
+<div class="line"><span class="lineno">  391</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Grind:</div>
+<div class="line"><span class="lineno">  393</span>            <span class="keywordflow">if</span> (source.tag.Contains(<span class="stringliteral">&quot;rust&quot;</span>))</div>
+<div class="line"><span class="lineno">  394</span>            {</div>
+<div class="line"><span class="lineno">  395</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;polish&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[1], <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  396</span>                ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[1].ModEncLv(1);</div>
+<div class="line"><span class="lineno">  397</span>                ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0].ModNum(-1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  398</span>            }</div>
+<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">if</span> (source.tag.Contains(<span class="stringliteral">&quot;mod_eject&quot;</span>))</div>
+<div class="line"><span class="lineno">  400</span>            {</div>
+<div class="line"><span class="lineno">  401</span>                ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[1].EjectSockets();</div>
+<div class="line"><span class="lineno">  402</span>                ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0].ModNum(-1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  403</span>            }</div>
+<div class="line"><span class="lineno">  404</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Sculpture:</div>
+<div class="line"><span class="lineno">  406</span>        {</div>
+<div class="line"><span class="lineno">  407</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, -1, -1);</div>
+<div class="line"><span class="lineno">  408</span>            List&lt;CardRow&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a113356c73c16220747128536b8d9394d">codex</a>.<a class="code hl_function" href="classCodexManager.html#a4bf09472d891b02212fac9ffa739a0bd">ListKills</a>();</div>
+<div class="line"><span class="lineno">  409</span>            list.Add(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<span class="stringliteral">&quot;putty&quot;</span>]);</div>
+<div class="line"><span class="lineno">  410</span>            list.Add(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<span class="stringliteral">&quot;snail&quot;</span>]);</div>
+<div class="line"><span class="lineno">  411</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = list.RandomItemWeighted((<a class="code hl_class" href="classCardRow.html">CardRow</a> a) =&gt; (float)Mathf.Max(50 - a.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>, 1));</div>
+<div class="line"><span class="lineno">  412</span>            CS$&lt;&gt;8__locals1.t.c_idRefCard = cardRow.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>;</div>
+<div class="line"><span class="lineno">  413</span>            CS$&lt;&gt;8__locals1.t.ChangeMaterial(thing.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>);</div>
+<div class="line"><span class="lineno">  414</span>            CS$&lt;&gt;8__locals1.t.SetEncLv(Mathf.Min(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(Mathf.Max(5 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(258) - cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>, 1))), 12));</div>
+<div class="line"><span class="lineno">  415</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_function" href="classCraftUtil.html#a0ade345f7f981e8204470e8164f9388c">MixIngredients</a>(CS$&lt;&gt;8__locals1.t, ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>, <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_enumeration" href="classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7">MixType</a>.General, 999, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>).<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
+<div class="line"><span class="lineno">  416</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  417</span>        }</div>
+<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Talisman:</div>
+<div class="line"><span class="lineno">  419</span>        {</div>
+<div class="line"><span class="lineno">  420</span>            <span class="keywordtype">int</span> num2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1418);</div>
+<div class="line"><span class="lineno">  421</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing3 = ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[1];</div>
+<div class="line"><span class="lineno">  422</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> source2 = (thing3.trait as <a class="code hl_class" href="classTraitSpellbook.html">TraitSpellbook</a>).source;</div>
+<div class="line"><span class="lineno">  423</span>            <span class="keywordtype">int</span> num3 = thing3.c_charges * source2.charge * (100 + num2 * 50) / 500 + 1;</div>
+<div class="line"><span class="lineno">  424</span>            <span class="keywordtype">int</span> num4 = 100;</div>
+<div class="line"><span class="lineno">  425</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing4 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;talisman&quot;</span>, -1, -1).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num3);</div>
+<div class="line"><span class="lineno">  426</span>            thing4.refVal = source2.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>;</div>
+<div class="line"><span class="lineno">  427</span>            thing4.encLV = num4 * (100 + num2 * 10) / 100;</div>
+<div class="line"><span class="lineno">  428</span>            thing.ammoData = thing4;</div>
+<div class="line"><span class="lineno">  429</span>            thing.c_ammo = num3;</div>
+<div class="line"><span class="lineno">  430</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;talisman&quot;</span>, thing, thing4, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  431</span>            thing3.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
+<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  433</span>        }</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Scratch:</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;&gt;c__DisplayClass49_1 CS$&lt;&gt;8__locals2;</div>
+<div class="line"><span class="lineno">  437</span>            CS$&lt;&gt;8__locals2.claimed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  438</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(20, <span class="stringliteral">&quot;medal&quot;</span>, <span class="stringliteral">&quot;save&quot;</span>, <span class="keyword">false</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  439</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(10, <span class="stringliteral">&quot;plat&quot;</span>, <span class="stringliteral">&quot;save&quot;</span>, <span class="keyword">false</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  440</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(10, <span class="stringliteral">&quot;furniture&quot;</span>, <span class="stringliteral">&quot;nice&quot;</span>, <span class="keyword">true</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  441</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(4, <span class="stringliteral">&quot;plamo_box&quot;</span>, <span class="stringliteral">&quot;nice&quot;</span>, <span class="keyword">false</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  442</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(4, <span class="stringliteral">&quot;food&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">false</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  443</span>            <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.&lt;<a class="code hl_function" href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">Craft</a>&gt;<a class="code hl_function" href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">g__Prize</a>|49_2(1, <span class="stringliteral">&quot;casino_coin&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">false</span>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  445</span>        }</div>
+<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">MixType</a>.Incubator:</div>
+<div class="line"><span class="lineno">  447</span>            <a class="code hl_class" href="classTraitFoodEggFertilized.html">TraitFoodEggFertilized</a>.<a class="code hl_function" href="classTraitFoodEggFertilized.html#a30deffbc67fef64568d97ccfe62691ad">Incubate</a>(ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0], <span class="keyword">this</span>.owner.pos, <span class="keyword">this</span>.owner);</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  450</span>            CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, -1, -1);</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;gene&quot;</span>)</div>
+<div class="line"><span class="lineno">  452</span>            {</div>
+<div class="line"><span class="lineno">  453</span>                <span class="keywordflow">if</span> (ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0].c_DNA != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  454</span>                {</div>
+<div class="line"><span class="lineno">  455</span>                    CS$&lt;&gt;8__locals1.t.<a class="code hl_function" href="classCard.html#a19e66c4b67a3d4cb2d8b6d6af91fd015">MakeRefFrom</a>(ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0].c_idRefCard);</div>
+<div class="line"><span class="lineno">  456</span>                    CS$&lt;&gt;8__locals1.t.c_DNA = ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[0].c_DNA;</div>
+<div class="line"><span class="lineno">  457</span>                    CS$&lt;&gt;8__locals1.t.c_DNA.GenerateWithGene(<a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_enumeration" href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">Type</a>.Inferior, CS$&lt;&gt;8__locals1.t, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  458</span>                }</div>
+<div class="line"><span class="lineno">  459</span>            }</div>
+<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  461</span>            {</div>
+<div class="line"><span class="lineno">  462</span>                CS$&lt;&gt;8__locals1.t = <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_function" href="classCraftUtil.html#a0ade345f7f981e8204470e8164f9388c">MixIngredients</a>(CS$&lt;&gt;8__locals1.t, ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>, <a class="code hl_class" href="classCraftUtil.html">CraftUtil</a>.<a class="code hl_enumeration" href="classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7">MixType</a>.General, 999, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>).<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
+<div class="line"><span class="lineno">  463</span>            }</div>
+<div class="line"><span class="lineno">  464</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  465</span>        }</div>
+<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.t != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  467</span>        {</div>
+<div class="line"><span class="lineno">  468</span>            <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.t.HasElement(1229, 1))</div>
+<div class="line"><span class="lineno">  469</span>            {</div>
+<div class="line"><span class="lineno">  470</span>                num = 1;</div>
+<div class="line"><span class="lineno">  471</span>            }</div>
+<div class="line"><span class="lineno">  472</span>            <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.t.HasElement(704, 1))</div>
+<div class="line"><span class="lineno">  473</span>            {</div>
+<div class="line"><span class="lineno">  474</span>                num = 1;</div>
+<div class="line"><span class="lineno">  475</span>            }</div>
+<div class="line"><span class="lineno">  476</span>            <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.t.HasElement(703, 1))</div>
+<div class="line"><span class="lineno">  477</span>            {</div>
+<div class="line"><span class="lineno">  478</span>                num = 1;</div>
+<div class="line"><span class="lineno">  479</span>            }</div>
+<div class="line"><span class="lineno">  480</span>            CS$&lt;&gt;8__locals1.t.<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num);</div>
+<div class="line"><span class="lineno">  481</span>        }</div>
+<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">return</span> CS$&lt;&gt;8__locals1.t;</div>
+<div class="line"><span class="lineno">  483</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassAI__UseCrafter_html_a8977c11c44eef948782726852e8dcae0"><div class="ttname"><a href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">AI_UseCrafter.ings</a></div><div class="ttdeci">List&lt; Thing &gt; ings</div><div class="ttdef"><b>Definition:</b> <a href="AI__UseCrafter_8cs_source.html#l00333">AI_UseCrafter.cs:333</a></div></div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
+<div class="ttc" id="aclassCard_html_a19e66c4b67a3d4cb2d8b6d6af91fd015"><div class="ttname"><a href="classCard.html#a19e66c4b67a3d4cb2d8b6d6af91fd015">Card.MakeRefFrom</a></div><div class="ttdeci">void MakeRefFrom(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05206">Card.cs:5206</a></div></div>
+<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01943">Card.cs:1944</a></div></div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03467">Card.cs:3467</a></div></div>
+<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04652">Card.cs:4652</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02003">Card.cs:2004</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01964">Card.cs:1964</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassCodexManager_html_a4bf09472d891b02212fac9ffa739a0bd"><div class="ttname"><a href="classCodexManager.html#a4bf09472d891b02212fac9ffa739a0bd">CodexManager.ListKills</a></div><div class="ttdeci">List&lt; CardRow &gt; ListKills()</div><div class="ttdef"><b>Definition:</b> <a href="CodexManager_8cs_source.html#l00070">CodexManager.cs:70</a></div></div>
+<div class="ttc" id="aclassCraftUtil_html"><div class="ttname"><a href="classCraftUtil.html">CraftUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="CraftUtil_8cs_source.html#l00007">CraftUtil.cs:8</a></div></div>
+<div class="ttc" id="aclassCraftUtil_html_a0ade345f7f981e8204470e8164f9388c"><div class="ttname"><a href="classCraftUtil.html#a0ade345f7f981e8204470e8164f9388c">CraftUtil.MixIngredients</a></div><div class="ttdeci">static Thing MixIngredients(string idProduct, List&lt; Thing &gt; ings, CraftUtil.MixType type, int idMat=0, Chara crafter=null)</div><div class="ttdef"><b>Definition:</b> <a href="CraftUtil_8cs_source.html#l00114">CraftUtil.cs:114</a></div></div>
+<div class="ttc" id="aclassCraftUtil_html_ad61247f9b2fbb0b889b8399bcb9947b7"><div class="ttname"><a href="classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7">CraftUtil.MixType</a></div><div class="ttdeci">MixType</div><div class="ttdef"><b>Definition:</b> <a href="CraftUtil_8cs_source.html#l00286">CraftUtil.cs:287</a></div></div>
+<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
+<div class="ttc" id="aclassDNA_html_a6c24861a5030f44db8c5093699cbbf35"><div class="ttname"><a href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">DNA.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00623">DNA.cs:624</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html"><div class="ttname"><a href="classLayerDragGrid.html">LayerDragGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00006">LayerDragGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_a4032732849ccbb4cd4923b0410a2a062"><div class="ttname"><a href="classLayerDragGrid.html#a4032732849ccbb4cd4923b0410a2a062">LayerDragGrid.info</a></div><div class="ttdeci">UIDragGridInfo info</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00516">LayerDragGrid.cs:516</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_ab5df05e823cc47b6dbe353bd7719fb81"><div class="ttname"><a href="classLayerDragGrid.html#ab5df05e823cc47b6dbe353bd7719fb81">LayerDragGrid.Instance</a></div><div class="ttdeci">static LayerDragGrid Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00488">LayerDragGrid.cs:488</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a113356c73c16220747128536b8d9394d"><div class="ttname"><a href="classPlayer.html#a113356c73c16220747128536b8d9394d">Player.codex</a></div><div class="ttdeci">CodexManager codex</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01554">Player.cs:1554</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a8850e5a148ca9bdc4c096716fe903379"><div class="ttname"><a href="classPlayer.html#a8850e5a148ca9bdc4c096716fe903379">Player.knownCraft</a></div><div class="ttdeci">HashSet&lt; int &gt; knownCraft</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01515">Player.cs:1515</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aed3ac25d06114085ec605995cd3d9171"><div class="ttname"><a href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">RenderRow.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00451">RenderRow.cs:451</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00066">SourceCard.cs:66</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00273">SourceElement.cs:273</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00173">SourceManager.cs:173</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00151">SourceManager.cs:151</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html"><div class="ttname"><a href="classSourceRecipe_1_1Row.html">SourceRecipe.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00029">SourceRecipe.cs:30</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_html"><div class="ttname"><a href="classSourceRecipe.html">SourceRecipe</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00003">SourceRecipe.cs:4</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00099">SourceThing.cs:100</a></div></div>
+<div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
+<div class="ttc" id="aclassSpawnListThing_html"><div class="ttname"><a href="classSpawnListThing.html">SpawnListThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SpawnListThing_8cs_source.html#l00003">SpawnListThing.cs:4</a></div></div>
+<div class="ttc" id="aclassSpawnListThing_html_acd56126d7e0516394006424ae69cfad8"><div class="ttname"><a href="classSpawnListThing.html#acd56126d7e0516394006424ae69cfad8">SpawnListThing.Get</a></div><div class="ttdeci">static SpawnList Get(string id, Func&lt; SourceThing.Row, bool &gt; func)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnListThing_8cs_source.html#l00005">SpawnListThing.cs:5</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a49eef52cc21bf519f3664f7fe5f39b38"><div class="ttname"><a href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">SpawnList.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00186">SpawnList.cs:186</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html"><div class="ttname"><a href="classTraitCrafter.html">TraitCrafter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00006">TraitCrafter.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1ee82645e2183ef8e687068242a34dcb"><div class="ttname"><a href="classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb">TraitCrafter.MixType</a></div><div class="ttdeci">MixType</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00554">TraitCrafter.cs:555</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a51952e5af7ec7a07e2faccdefbf2d8de"><div class="ttname"><a href="classTraitCrafter.html#a51952e5af7ec7a07e2faccdefbf2d8de">TraitCrafter.g__Prize</a></div><div class="ttdeci">static void&lt; Craft &gt; g__Prize(int chance, string s, string col, bool cat, ref TraitCrafter.&lt;&gt;c__DisplayClass49_0 A_4, ref TraitCrafter.&lt;&gt;c__DisplayClass49_1 A_5)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00540">TraitCrafter.cs:540</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_af9afaebb39339754b960e6de9e0a4613"><div class="ttname"><a href="classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613">TraitCrafter.Craft</a></div><div class="ttdeci">virtual Thing Craft(AI_UseCrafter ai)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.cs:350</a></div></div>
+<div class="ttc" id="aclassTraitFoodEggFertilized_html"><div class="ttname"><a href="classTraitFoodEggFertilized.html">TraitFoodEggFertilized</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFoodEggFertilized_8cs_source.html#l00003">TraitFoodEggFertilized.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitFoodEggFertilized_html_a30deffbc67fef64568d97ccfe62691ad"><div class="ttname"><a href="classTraitFoodEggFertilized.html#a30deffbc67fef64568d97ccfe62691ad">TraitFoodEggFertilized.Incubate</a></div><div class="ttdeci">static Chara Incubate(Thing egg, Point pos, Card incubator=null)</div><div class="ttdef"><b>Definition:</b> <a href="TraitFoodEggFertilized_8cs_source.html#l00013">TraitFoodEggFertilized.cs:13</a></div></div>
+<div class="ttc" id="aclassTraitSpellbook_html"><div class="ttname"><a href="classTraitSpellbook.html">TraitSpellbook</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpellbook_8cs_source.html#l00003">TraitSpellbook.cs:4</a></div></div>
+<div class="ttc" id="aclassUIDragGridInfo_html_a4f700d2ded28996a81a76b9b3a4b667c"><div class="ttname"><a href="classUIDragGridInfo.html#a4f700d2ded28996a81a76b9b3a4b667c">UIDragGridInfo.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UIDragGridInfo_8cs_source.html#l00015">UIDragGridInfo.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00151">SourceManager.cards</a>, <a class="el" href="Player_8cs_source.html#l01554">Player.codex</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00350">Craft()</a>, <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="Card_8cs_source.html#l04652">Card.Destroy()</a>, <a class="el" href="Card_8cs_source.html#l01964">Card.Evalue()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00540">g__Prize()</a>, <a class="el" href="SpawnListThing_8cs_source.html#l00005">SpawnListThing.Get()</a>, <a class="el" href="CardRow_8cs_source.html#l00123">CardRow.id</a>, <a class="el" href="SourceElement_8cs_source.html#l00273">SourceElement.Row.id</a>, <a class="el" href="SpawnList_8cs_source.html#l00186">SpawnList.id</a>, <a class="el" href="TraitFoodEggFertilized_8cs_source.html#l00013">TraitFoodEggFertilized.Incubate()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00516">LayerDragGrid.info</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00333">AI_UseCrafter.ings</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00488">LayerDragGrid.Instance</a>, <a class="el" href="Player_8cs_source.html#l01515">Player.knownCraft</a>, <a class="el" href="CodexManager_8cs_source.html#l00070">CodexManager.ListKills()</a>, <a class="el" href="RenderRow_8cs_source.html#l00451">RenderRow.LV</a>, <a class="el" href="Card_8cs_source.html#l05206">Card.MakeRefFrom()</a>, <a class="el" href="SourceCard_8cs_source.html#l00066">SourceCard.map</a>, <a class="el" href="Card_8cs_source.html#l01944">Card.material</a>, <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>, <a class="el" href="CraftUtil_8cs_source.html#l00114">CraftUtil.MixIngredients()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00015">UIDragGridInfo.Refresh()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l03467">Card.SetNum()</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00350">Craft()</a>.</p>
 
 </div>
 </div>
@@ -908,6 +1154,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00540">540</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  541</span>    {</div>
+<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">if</span> (A_5.claimed || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chance) != 0)</div>
+<div class="line"><span class="lineno">  543</span>        {</div>
+<div class="line"><span class="lineno">  544</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  545</span>        }</div>
+<div class="line"><span class="lineno">  546</span>        A_4.t = (cat ? <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">CreateFromCategory</a>(s, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>) : <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(s, -1, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>));</div>
+<div class="line"><span class="lineno">  547</span>        A_5.claimed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">if</span> (col != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  549</span>        {</div>
+<div class="line"><span class="lineno">  550</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">SetColor</a>(col);</div>
+<div class="line"><span class="lineno">  551</span>        }</div>
+<div class="line"><span class="lineno">  552</span>    }</div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00331">Card.cs:332</a></div></div>
+<div class="ttc" id="aclassMsg_html_afb750c35eea77e527ebbe43d7fb085ef"><div class="ttname"><a href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">Msg.SetColor</a></div><div class="ttdeci">static void SetColor()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00031">Msg.cs:31</a></div></div>
+<div class="ttc" id="aclassThingGen_html_ac4a7ef4a68508b96961ea565b80be7d8"><div class="ttname"><a href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">ThingGen.CreateFromCategory</a></div><div class="ttdeci">static Thing CreateFromCategory(string idCat, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00081">ThingGen.cs:81</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00081">ThingGen.CreateFromCategory()</a>, <a class="el" href="Card_8cs_source.html#l00332">Card.LV</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="Msg_8cs_source.html#l00031">Msg.SetColor()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00350">Craft()</a>.</p>
 
 </div>
 </div>
@@ -938,6 +1203,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e">TraitFactory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00303">303</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>    {</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTraitCrafter.html#a5bf09cf827d15c82a16de6b7279e69ad">GetSource</a>(ai).sp;</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+<div class="ttc" id="aclassTraitCrafter_html_a5bf09cf827d15c82a16de6b7279e69ad"><div class="ttname"><a href="classTraitCrafter.html#a5bf09cf827d15c82a16de6b7279e69ad">TraitCrafter.GetSource</a></div><div class="ttdeci">SourceRecipe.Row GetSource(AI_UseCrafter ai)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00308">TraitCrafter.cs:308</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitCrafter_8cs_source.html#l00308">GetSource()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -978,6 +1251,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461">TraitFactory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00293">293</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordtype">int</span> a = 1;</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordtype">int</span> num = this.<a class="code hl_function" href="classTraitCrafter.html#a5bf09cf827d15c82a16de6b7279e69ad">GetSource</a>(ai).time * 100;</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordtype">int</span> num2 = 80;</div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
+<div class="line"><span class="lineno">  299</span>        <a class="code hl_class" href="classRecipe.html">Recipe</a> recipe = ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a78b3b1991cf08c23435fd571ecd89af1">recipe</a>;</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">return</span> Mathf.Max(a, num / (num2 + <a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(<span class="keyword">this</span>.IDReqEle((recipe != <span class="keyword">null</span>) ? recipe.<a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a> : <span class="keyword">null</span>)) * 5));</div>
+<div class="line"><span class="lineno">  301</span>    }</div>
+<div class="ttc" id="aclassAI__UseCrafter_html_a78b3b1991cf08c23435fd571ecd89af1"><div class="ttname"><a href="classAI__UseCrafter.html#a78b3b1991cf08c23435fd571ecd89af1">AI_UseCrafter.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="AI__UseCrafter_8cs_source.html#l00329">AI_UseCrafter.cs:329</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00008">Recipe.cs:9</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a64cba6b9b821d7650e1974b045f095b6"><div class="ttname"><a href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">Recipe.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00083">Recipe.cs:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01964">Card.Evalue()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00308">GetSource()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00329">AI_UseCrafter.recipe</a>, and <a class="el" href="Recipe_8cs_source.html#l00084">Recipe.source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1006,6 +1295,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00279">279</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>    {</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordtype">int</span> num = r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a18a88297fed6668c56fe0603a3ba1fc3">id</a>;</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordtype">string</span>[] ing = r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a226321823e43efab91e03152ad8a1998">ing1</a>;</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ing.Length; i++)</div>
+<div class="line"><span class="lineno">  284</span>        {</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (ing[i].<a class="code hl_function" href="classTrait.html#a2c3194e6082d54219d469ab26bc27ee7">Contains</a>(<span class="charliteral">&#39;@&#39;</span>))</div>
+<div class="line"><span class="lineno">  286</span>            {</div>
+<div class="line"><span class="lineno">  287</span>                num -= 10000;</div>
+<div class="line"><span class="lineno">  288</span>            }</div>
+<div class="line"><span class="lineno">  289</span>        }</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_a18a88297fed6668c56fe0603a3ba1fc3"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#a18a88297fed6668c56fe0603a3ba1fc3">SourceRecipe.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00047">SourceRecipe.cs:47</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_a226321823e43efab91e03152ad8a1998"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#a226321823e43efab91e03152ad8a1998">SourceRecipe.Row.ing1</a></div><div class="ttdeci">string[] ing1</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00061">SourceRecipe.cs:61</a></div></div>
+<div class="ttc" id="aclassTrait_html_a2c3194e6082d54219d469ab26bc27ee7"><div class="ttname"><a href="classTrait.html#a2c3194e6082d54219d469ab26bc27ee7">Trait.Contains</a></div><div class="ttdeci">virtual bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00055">Trait.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00055">Trait.Contains()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00308">GetSource()</a>.</p>
 
 </div>
 </div>
@@ -1034,6 +1342,39 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00308">308</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>    {</div>
+<div class="line"><span class="lineno">  310</span>        List&lt;<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a>&gt; list = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a>&gt;();</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">recipes</a>.rows)</div>
+<div class="line"><span class="lineno">  312</span>        {</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">if</span> (row.factory == <span class="keyword">this</span>.IdSource)</div>
+<div class="line"><span class="lineno">  314</span>            {</div>
+<div class="line"><span class="lineno">  315</span>                list.Add(row);</div>
+<div class="line"><span class="lineno">  316</span>            }</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_property" href="classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755">numIng</a>; i++)</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">recipes</a>.rows)</div>
+<div class="line"><span class="lineno">  321</span>            {</div>
+<div class="line"><span class="lineno">  322</span>                <span class="keywordflow">if</span> (i &gt;= ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>.Count || !<span class="keyword">this</span>.IsIngredient(i, row2, ai.<a class="code hl_variable" href="classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0">ings</a>[i]))</div>
+<div class="line"><span class="lineno">  323</span>                {</div>
+<div class="line"><span class="lineno">  324</span>                    list.Remove(row2);</div>
+<div class="line"><span class="lineno">  325</span>                }</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">  329</span>        {</div>
+<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span>        list.Sort((<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> a, <a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> b) =&gt; this.<a class="code hl_function" href="classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325">GetSortVal</a>(a) - this.<a class="code hl_function" href="classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325">GetSortVal</a>(b));</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">return</span> list[0];</div>
+<div class="line"><span class="lineno">  334</span>    }</div>
+<div class="ttc" id="aclassSourceManager_html_a9586c01a0b4dbb6b6953c1cca7e3bb47"><div class="ttname"><a href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">SourceManager.recipes</a></div><div class="ttdeci">SourceRecipe recipes</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00215">SourceManager.cs:215</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_aa7ba1ba047159bd7dec7c9cedfafd755"><div class="ttname"><a href="classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755">TraitCrafter.numIng</a></div><div class="ttdeci">virtual int numIng</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00024">TraitCrafter.cs:25</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_ab1f95cc464045f6811c479bad31d2325"><div class="ttname"><a href="classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325">TraitCrafter.GetSortVal</a></div><div class="ttdeci">int GetSortVal(SourceRecipe.Row r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00279">TraitCrafter.cs:279</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitCrafter_8cs_source.html#l00279">GetSortVal()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00333">AI_UseCrafter.ings</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00025">numIng</a>, <a class="el" href="SourceManager_8cs_source.html#l00215">SourceManager.recipes</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00303">GetCostSp()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00293">GetDuration()</a>.</p>
 
 </div>
 </div>
@@ -1064,6 +1405,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">TraitCauldron</a>, <a class="el" href="classTraitDyeMaker.html#a8f1c8a8510376215242a105f7a53982c">TraitDyeMaker</a>, and <a class="el" href="classTraitSelfFactory.html#a7286b109cc525b39fad876445a9eb246">TraitSelfFactory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00160">160</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> base.GetParam(1, <span class="keyword">null</span>) ?? <span class="stringliteral">&quot;handicraft&quot;</span>;</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1102,6 +1448,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00165">165</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceRecipe.html">SourceRecipe</a>.<a class="code hl_class" href="classSourceRecipe_1_1Row.html">Row</a> r in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a9586c01a0b4dbb6b6953c1cca7e3bb47">recipes</a>.rows)</div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (idx == 1)</div>
+<div class="line"><span class="lineno">  170</span>            {</div>
+<div class="line"><span class="lineno">  171</span>                <a class="code hl_class" href="classCard.html">Card</a> card = <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_variable" href="classLayerDragGrid.html#ab5df05e823cc47b6dbe353bd7719fb81">Instance</a>.<a class="code hl_variable" href="classLayerDragGrid.html#a9602a9ccea8e02b387dc484274c27141">buttons</a>[0].Card;</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b">IsIngredient</a>(0, r, card) || (card == c &amp;&amp; card.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &lt; 2))</div>
+<div class="line"><span class="lineno">  173</span>                {</div>
+<div class="line"><span class="lineno">  174</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  175</span>                }</div>
+<div class="line"><span class="lineno">  176</span>            }</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b">IsIngredient</a>(idx, r, c))</div>
+<div class="line"><span class="lineno">  178</span>            {</div>
+<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  180</span>            }</div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_a9602a9ccea8e02b387dc484274c27141"><div class="ttname"><a href="classLayerDragGrid.html#a9602a9ccea8e02b387dc484274c27141">LayerDragGrid.buttons</a></div><div class="ttdeci">List&lt; ButtonGrid &gt; buttons</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00500">LayerDragGrid.cs:500</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_aa97f9ea9f9bdcba7b7c1402d10ef8b4b"><div class="ttname"><a href="classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b">TraitCrafter.IsIngredient</a></div><div class="ttdeci">bool IsIngredient(int idx, SourceRecipe.Row r, Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00185">TraitCrafter.cs:185</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDragGrid_8cs_source.html#l00500">LayerDragGrid.buttons</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00488">LayerDragGrid.Instance</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00185">IsIngredient()</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="SourceManager_8cs_source.html#l00215">SourceManager.recipes</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwnerCraft_8cs_source.html#l00049">InvOwnerCraft.ShouldShowGuide()</a>.</p>
 
 </div>
 </div>
@@ -1146,6 +1517,114 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00185">185</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#ace07518907720391f03d6eb68d5da4af">factory</a> != <span class="keyword">this</span>.IdSource || c == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> &amp;&amp; <span class="keyword">this</span>.ShouldConsumeIng(r, idx))</div>
+<div class="line"><span class="lineno">  192</span>        {</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordtype">string</span>[] array = (idx == 0) ? r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a226321823e43efab91e03152ad8a1998">ing1</a> : r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#ad8a9667a12a837075b46ca8c6968d5ab">ing2</a>;</div>
+<div class="line"><span class="lineno">  196</span>        if (r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#abfbf027f510164d21c5ab34f843572c3">type</a>.ToEnum(<span class="keyword">true</span>) == TraitCrafter.MixType.Grind &amp;&amp; idx == 1)</div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a54ba531b45ec04376988e5b16bc2dec6">tag</a>.Contains(<span class="stringliteral">&quot;rust&quot;</span>) &amp;&amp; c.encLV &gt;= 0)</div>
+<div class="line"><span class="lineno">  199</span>            {</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a54ba531b45ec04376988e5b16bc2dec6">tag</a>.Contains(<span class="stringliteral">&quot;mod_eject&quot;</span>))</div>
+<div class="line"><span class="lineno">  203</span>            {</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  205</span>                {</div>
+<div class="line"><span class="lineno">  206</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  207</span>                }</div>
+<div class="line"><span class="lineno">  208</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  209</span>                <span class="keyword">using</span> (List&lt;int&gt;.Enumerator enumerator = c.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  210</span>                {</div>
+<div class="line"><span class="lineno">  211</span>                    <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  212</span>                    {</div>
+<div class="line"><span class="lineno">  213</span>                        <span class="keywordflow">if</span> (enumerator.Current != 0)</div>
+<div class="line"><span class="lineno">  214</span>                        {</div>
+<div class="line"><span class="lineno">  215</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  216</span>                        }</div>
+<div class="line"><span class="lineno">  217</span>                    }</div>
+<div class="line"><span class="lineno">  218</span>                }</div>
+<div class="line"><span class="lineno">  219</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  222</span>                }</div>
+<div class="line"><span class="lineno">  223</span>            }</div>
+<div class="line"><span class="lineno">  224</span>        }</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (r.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a54ba531b45ec04376988e5b16bc2dec6">tag</a>.Contains(<span class="stringliteral">&quot;noCarbone&quot;</span>) &amp;&amp; c.material.alias == <span class="stringliteral">&quot;carbone&quot;</span>)</div>
+<div class="line"><span class="lineno">  228</span>            {</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  230</span>            }</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.StartsWith(<span class="charliteral">&#39;#&#39;</span>))</div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keywordtype">string</span> text2 = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Replace(<span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(text2) &amp;&amp; this.<a class="code hl_function" href="classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b">IsIngredient</a>(text2, c))</div>
+<div class="line"><span class="lineno">  235</span>                {</div>
+<div class="line"><span class="lineno">  236</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  237</span>                }</div>
+<div class="line"><span class="lineno">  238</span>            }</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  240</span>            {</div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordtype">string</span>[] array3 = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Split(<span class="charliteral">&#39;@&#39;</span>, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> (array3.Length &gt; 1)</div>
+<div class="line"><span class="lineno">  243</span>                {</div>
+<div class="line"><span class="lineno">  244</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> != array3[0] &amp;&amp; c.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a> != array3[0])</div>
+<div class="line"><span class="lineno">  245</span>                    {</div>
+<div class="line"><span class="lineno">  246</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  247</span>                    }</div>
+<div class="line"><span class="lineno">  248</span>                    <a class="code hl_class" href="classSourceChara_1_1Row.html">SourceChara.Row</a> row = c.refCard as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>;</div>
+<div class="line"><span class="lineno">  249</span>                    <span class="keywordflow">if</span> (row != <span class="keyword">null</span> &amp;&amp; row.<a class="code hl_property" href="classSourceChara_1_1Row.html#a608904857a5ba665d54ae72d13d2795b">race_row</a>.tag.Contains(array3[1]))</div>
+<div class="line"><span class="lineno">  250</span>                    {</div>
+<div class="line"><span class="lineno">  251</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  252</span>                    }</div>
+<div class="line"><span class="lineno">  253</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.tag.Contains(array3[1]))</div>
+<div class="line"><span class="lineno">  254</span>                    {</div>
+<div class="line"><span class="lineno">  255</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  256</span>                    }</div>
+<div class="line"><span class="lineno">  257</span>                }</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  259</span>                {</div>
+<div class="line"><span class="lineno">  260</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;any&quot;</span> &amp;&amp; !c.<a class="code hl_property" href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">IsUnique</a> &amp;&amp; !c.<a class="code hl_property" href="classCard.html#a187cb70b7ee0bbdf2167ff1cbfeecfea">IsImportant</a> &amp;&amp; !c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">CanOnlyCarry</a>)</div>
+<div class="line"><span class="lineno">  261</span>                    {</div>
+<div class="line"><span class="lineno">  262</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  263</span>                    }</div>
+<div class="line"><span class="lineno">  264</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> || c.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a> == <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">  265</span>                    {</div>
+<div class="line"><span class="lineno">  266</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  267</span>                    }</div>
+<div class="line"><span class="lineno">  268</span>                }</div>
+<div class="line"><span class="lineno">  269</span>            }</div>
+<div class="line"><span class="lineno">  270</span>        }</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  272</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a898f4f59778bd1120e31aa5768ec4f3d"><div class="ttname"><a href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">CardRow._origin</a></div><div class="ttdeci">string _origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00131">CardRow.cs:131</a></div></div>
+<div class="ttc" id="aclassCard_html_a187cb70b7ee0bbdf2167ff1cbfeecfea"><div class="ttname"><a href="classCard.html#a187cb70b7ee0bbdf2167ff1cbfeecfea">Card.IsImportant</a></div><div class="ttdeci">bool IsImportant</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02083">Card.cs:2084</a></div></div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassCard_html_a273e02936a4fd9011e84fdef0bd1189d"><div class="ttname"><a href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">Card.IsUnique</a></div><div class="ttdeci">bool IsUnique</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02067">Card.cs:2068</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassCard_html_aab7876b07bbc37cc23c4bcf8c94dc6e6"><div class="ttname"><a href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">Card.c_isImportant</a></div><div class="ttdeci">bool c_isImportant</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00932">Card.cs:933</a></div></div>
+<div class="ttc" id="aclassCard_html_ad9d564e3ce51804be4c393b6d0534168"><div class="ttname"><a href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">Card.sourceCard</a></div><div class="ttdeci">virtual CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02147">Card.cs:2148</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1dbde98a747856add8519bb4e7cc688"><div class="ttname"><a href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">Card.category</a></div><div class="ttdeci">SourceCategory.Row category</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01930">Card.cs:1931</a></div></div>
+<div class="ttc" id="aclassCard_html_af10b07d1dd2e8ac8d687663d7a0a383e"><div class="ttname"><a href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">Card.sockets</a></div><div class="ttdeci">List&lt; int &gt; sockets</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07292">Card.cs:7292</a></div></div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00110">SourceChara.cs:111</a></div></div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html_a608904857a5ba665d54ae72d13d2795b"><div class="ttname"><a href="classSourceChara_1_1Row.html#a608904857a5ba665d54ae72d13d2795b">SourceChara.Row.race_row</a></div><div class="ttdeci">SourceRace.Row race_row</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00128">SourceChara.cs:129</a></div></div>
+<div class="ttc" id="aclassSourceChara_html"><div class="ttname"><a href="classSourceChara.html">SourceChara</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00004">SourceChara.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_a54ba531b45ec04376988e5b16bc2dec6"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#a54ba531b45ec04376988e5b16bc2dec6">SourceRecipe.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00067">SourceRecipe.cs:67</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_abfbf027f510164d21c5ab34f843572c3"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#abfbf027f510164d21c5ab34f843572c3">SourceRecipe.Row.type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00051">SourceRecipe.cs:51</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_ace07518907720391f03d6eb68d5da4af"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#ace07518907720391f03d6eb68d5da4af">SourceRecipe.Row.factory</a></div><div class="ttdeci">string factory</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00049">SourceRecipe.cs:49</a></div></div>
+<div class="ttc" id="aclassSourceRecipe_1_1Row_html_ad8a9667a12a837075b46ca8c6968d5ab"><div class="ttname"><a href="classSourceRecipe_1_1Row.html#ad8a9667a12a837075b46ca8c6968d5ab">SourceRecipe.Row.ing2</a></div><div class="ttdeci">string[] ing2</div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00063">SourceRecipe.cs:63</a></div></div>
+<div class="ttc" id="aclassTrait_html_af59d1d8c9919b6620eab8ceba3956cca"><div class="ttname"><a href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">Trait.CanOnlyCarry</a></div><div class="ttdeci">virtual bool CanOnlyCarry</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00622">Trait.cs:623</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00933">Card.c_isImportant</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00185">IsIngredient()</a>, <a class="el" href="SourceChara_8cs_source.html#l00129">SourceChara.Row.race_row</a>, <a class="el" href="Card_8cs_source.html#l07292">Card.sockets</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00165">IsCraftIngredient()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00185">IsIngredient()</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1665,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitToolTalisman.html#a99b1fe0f9fcd870334b8d43fc7d4d29e">TraitToolTalisman</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00274">274</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  275</span>    {</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a824ce8e058c0eb2b1de4bfbb0cb7f787" name="a824ce8e058c0eb2b1de4bfbb0cb7f787"></a>
@@ -1216,6 +1698,32 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00520">520</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  521</span>    {</div>
+<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
+<div class="line"><span class="lineno">  523</span>        {</div>
+<div class="line"><span class="lineno">  524</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
+<div class="line"><span class="lineno">  525</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_function" href="classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c">ListSources</a>(thing, <span class="keyword">null</span>).Count &gt; 0)</div>
+<div class="line"><span class="lineno">  526</span>            {</div>
+<div class="line"><span class="lineno">  527</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>&gt;().SetFactory(thing);</div>
+<div class="line"><span class="lineno">  528</span>            }</div>
+<div class="line"><span class="lineno">  529</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  530</span>            {</div>
+<div class="line"><span class="lineno">  531</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noRecipes&quot;</span>);</div>
+<div class="line"><span class="lineno">  532</span>            }</div>
+<div class="line"><span class="lineno">  533</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  534</span>        }</div>
+<div class="line"><span class="lineno">  535</span>        <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_function" href="classLayerDragGrid.html#af510c4804d6e05ba552a4bb849ae5098">CreateCraft</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  536</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  537</span>    }</div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html"><div class="ttname"><a href="classLayerCraft.html">LayerCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00007">LayerCraft.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_af510c4804d6e05ba552a4bb849ae5098"><div class="ttname"><a href="classLayerDragGrid.html#af510c4804d6e05ba552a4bb849ae5098">LayerDragGrid.CreateCraft</a></div><div class="ttdeci">static LayerDragGrid CreateCraft(TraitCrafter crafter)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00359">LayerDragGrid.cs:359</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01536">Player.cs:1536</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_abd07df26289fd4e84fce5baddddd953c"><div class="ttname"><a href="classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c">RecipeManager.ListSources</a></div><div class="ttdeci">List&lt; RecipeSource &gt; ListSources(Thing factory, List&lt; RecipeSource &gt; newRecipes=null)</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00128">RecipeManager.cs:128</a></div></div>
+<div class="ttc" id="aclassTrait_html_a06590eefdc1c4a805265acbe621db669"><div class="ttname"><a href="classTrait.html#a06590eefdc1c4a805265acbe621db669">Trait.IsFactory</a></div><div class="ttdeci">virtual bool IsFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00314">Trait.cs:315</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDragGrid_8cs_source.html#l00359">LayerDragGrid.CreateCraft()</a>, <a class="el" href="Trait_8cs_source.html#l00315">Trait.IsFactory</a>, <a class="el" href="RecipeManager_8cs_source.html#l00128">RecipeManager.ListSources()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01536">Player.recipes</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -1256,6 +1764,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitBarrelMaker.html#a4f5a157f88e21caf1204543b7cfffada">TraitBarrelMaker</a>, and <a class="el" href="classTraitToolTalisman.html#adf76fbbdf82cce4f21bfefa434cac57f">TraitToolTalisman</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00336">336</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
+<div class="line"><span class="lineno">  339</span>        {</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  341</span>        }</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">if</span> (item == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  343</span>        {</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  345</span>        }</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = item.<a class="code hl_variable" href="classSourceRecipe_1_1Row.html#a18a88297fed6668c56fe0603a3ba1fc3">id</a>;</div>
+<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> - 47 &gt; 1 || index == 0;</div>
+<div class="line"><span class="lineno">  348</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00315">Trait.IsFactory</a>.</p>
 
 </div>
 </div>
@@ -1286,6 +1808,41 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00485">485</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  486</span>    {</div>
+<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
+<div class="line"><span class="lineno">  488</span>        {</div>
+<div class="line"><span class="lineno">  489</span>            <a class="code hl_class" href="classThing.html">Thing</a> _t = this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
+<div class="line"><span class="lineno">  490</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;craft&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  491</span>            {</div>
+<div class="line"><span class="lineno">  492</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_function" href="classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c">ListSources</a>(_t, <span class="keyword">null</span>).Count &gt; 0)</div>
+<div class="line"><span class="lineno">  493</span>                {</div>
+<div class="line"><span class="lineno">  494</span>                    EClass.ui.AddLayer&lt;LayerCraft&gt;().SetFactory(_t);</div>
+<div class="line"><span class="lineno">  495</span>                }</div>
+<div class="line"><span class="lineno">  496</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  497</span>                {</div>
+<div class="line"><span class="lineno">  498</span>                    Msg.Say(<span class="stringliteral">&quot;noRecipes&quot;</span>);</div>
+<div class="line"><span class="lineno">  499</span>                }</div>
+<div class="line"><span class="lineno">  500</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  501</span>            }, _t, CursorSystem.Craft, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  502</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  503</span>        }</div>
+<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classTraitIncubator.html">TraitIncubator</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">  505</span>        {</div>
+<div class="line"><span class="lineno">  506</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  507</span>        }</div>
+<div class="line"><span class="lineno">  508</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(this.<a class="code hl_property" href="classTraitCrafter.html#a2bfa7dc079102a56add5f4cbb0116d4d">CrafterTitle</a>, delegate()</div>
+<div class="line"><span class="lineno">  509</span>        {</div>
+<div class="line"><span class="lineno">  510</span>            <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_function" href="classLayerDragGrid.html#af510c4804d6e05ba552a4bb849ae5098">CreateCraft</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  511</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  512</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a2bfa7dc079102a56add5f4cbb0116d4d"><div class="ttname"><a href="classTraitCrafter.html#a2bfa7dc079102a56add5f4cbb0116d4d">TraitCrafter.CrafterTitle</a></div><div class="ttdeci">virtual string CrafterTitle</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00112">TraitCrafter.cs:113</a></div></div>
+<div class="ttc" id="aclassTraitIncubator_html"><div class="ttname"><a href="classTraitIncubator.html">TraitIncubator</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitIncubator_8cs_source.html#l00003">TraitIncubator.cs:4</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00113">CrafterTitle</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00359">LayerDragGrid.CreateCraft()</a>, <a class="el" href="Trait_8cs_source.html#l00315">Trait.IsFactory</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="RecipeManager_8cs_source.html#l00128">RecipeManager.ListSources()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01536">Player.recipes</a>, <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -1311,6 +1868,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00040">40</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>.<a class="code hl_enumeration" href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4">AnimeType</a>.Default;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassTraitCrafter_html_af394d353e91fdaf6eab129c8c30cbdd4"><div class="ttname"><a href="classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4">TraitCrafter.AnimeType</a></div><div class="ttdeci">AnimeType</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00568">TraitCrafter.cs:569</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1335,6 +1901,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00128">128</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00051">AI_UseCrafter.OnEnd()</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1933,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00120">120</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> base.IsRequireFuel;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac154e3baf3f8b1994e6bae094ad0401f" name="ac154e3baf3f8b1994e6bae094ad0401f"></a>
@@ -1383,6 +1963,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00088">88</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00515">CanUse()</a>.</p>
 
 </div>
 </div>
@@ -1407,6 +1995,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00144">144</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +2027,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00152">152</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2bfa7dc079102a56add5f4cbb0116d4d" name="a2bfa7dc079102a56add5f4cbb0116d4d"></a>
@@ -1455,6 +2057,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00112">112</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00485">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +2089,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00096">96</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0cfef072d447d5f9a07041212b9cc92b" name="a0cfef072d447d5f9a07041212b9cc92b"></a>
@@ -1503,6 +2119,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00016">16</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.none;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00003">Emo.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00029">AI_UseCrafter.OnStart()</a>.</p>
 
 </div>
 </div>
@@ -1527,6 +2152,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00048">48</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.HitObj;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1551,6 +2185,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00104">104</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00051">AI_UseCrafter.OnEnd()</a>, and <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1575,7 +2217,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00064">64</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1dce63c1a7164229467ea19e49e69db6" name="a1dce63c1a7164229467ea19e49e69db6"></a>
@@ -1599,6 +2247,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00056">56</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +2279,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00032">32</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a00a4f55aa47e40330a21fb5ed94c044c" name="a00a4f55aa47e40330a21fb5ed94c044c"></a>
@@ -1647,6 +2309,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00136">136</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -1671,7 +2341,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00080">80</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa7ba1ba047159bd7dec7c9cedfafd755" name="aa7ba1ba047159bd7dec7c9cedfafd755"></a>
@@ -1695,6 +2371,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00024">24</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00308">GetSource()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00246">LayerDragGrid.GetTargets()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00020">UIDragGridInfo.Init()</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +2403,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a083bc856ce80c79e18c912e99d1a40ca" name="a083bc856ce80c79e18c912e99d1a40ca"></a>
@@ -1743,16 +2433,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCrafter_8cs_source.html#l00072">72</a> of file <a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitCrafter_8cs_source.html">TraitCrafter.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitCrafter.html">TraitCrafter</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

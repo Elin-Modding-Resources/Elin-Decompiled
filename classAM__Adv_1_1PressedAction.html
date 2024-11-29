@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Adv_1_1PressedAction.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classAM__Adv.html">AM_Adv</a></li><li class="navelem"><a class="el" href="classAM__Adv_1_1PressedAction.html">PressedAction</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -154,7 +170,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01328">1328</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1329</span>        {</div>
+<div class="line"><span class="lineno"> 1330</span>            this.button = _button;</div>
+<div class="line"><span class="lineno"> 1331</span>            this.action = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1332</span>            this.plan = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1333</span>            this.timer = 0f;</div>
+<div class="line"><span class="lineno"> 1334</span>            this.axis = Vector2.zero;</div>
+<div class="line"><span class="lineno"> 1335</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab07d8cc51061c1b138ecea57c5bccfa4" name="ab07d8cc51061c1b138ecea57c5bccfa4"></a>
@@ -182,7 +205,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01319">1319</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1320</span>        {</div>
+<div class="line"><span class="lineno"> 1321</span>            this.button = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1322</span>            this.action = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1323</span>            this.plan = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1324</span>            this.timer = 0f;</div>
+<div class="line"><span class="lineno"> 1325</span>            this.axis = _axis;</div>
+<div class="line"><span class="lineno"> 1326</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab1eebc79ad9a18a5501eaf7208ef4e2d" name="ab1eebc79ad9a18a5501eaf7208ef4e2d"></a>
@@ -209,6 +239,17 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01363">1363</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1364</span>        {</div>
+<div class="line"><span class="lineno"> 1365</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a7b9cd76b12dd862883c3087fe5f789cd">button</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1366</span>            {</div>
+<div class="line"><span class="lineno"> 1367</span>                <span class="keywordflow">return</span> this.button.down || this.button.pressing || this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a7b9cd76b12dd862883c3087fe5f789cd">button</a>.clicked;</div>
+<div class="line"><span class="lineno"> 1368</span>            }</div>
+<div class="line"><span class="lineno"> 1369</span>            <span class="keywordflow">return</span> this.axis != Vector2.zero &amp;&amp; EInput.axis == this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a41e5063cf83562c7de4182671f610160">axis</a>;</div>
+<div class="line"><span class="lineno"> 1370</span>        }</div>
+<div class="ttc" id="aclassAM__Adv_1_1PressedAction_html_a41e5063cf83562c7de4182671f610160"><div class="ttname"><a href="classAM__Adv_1_1PressedAction.html#a41e5063cf83562c7de4182671f610160">AM_Adv.PressedAction.axis</a></div><div class="ttdeci">Vector2 axis</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l01396">AM_Adv.cs:1396</a></div></div>
+<div class="ttc" id="aclassAM__Adv_1_1PressedAction_html_a7b9cd76b12dd862883c3087fe5f789cd"><div class="ttname"><a href="classAM__Adv_1_1PressedAction.html#a7b9cd76b12dd862883c3087fe5f789cd">AM_Adv.PressedAction.button</a></div><div class="ttdeci">ButtonState button</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l01372">AM_Adv.cs:1372</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Adv_8cs_source.html#l01396">AM_Adv.PressedAction.axis</a>, and <a class="el" href="AM__Adv_8cs_source.html#l01372">AM_Adv.PressedAction.button</a>.</p>
 
 </div>
 </div>
@@ -259,7 +300,18 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01337">1337</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1338</span>        {</div>
+<div class="line"><span class="lineno"> 1339</span>            this.plan = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1340</span>            this.action = _action;</div>
+<div class="line"><span class="lineno"> 1341</span>            this.canTurbo = _canTurbo;</div>
+<div class="line"><span class="lineno"> 1342</span>            this.willEndTurn = _willEndTurn;</div>
+<div class="line"><span class="lineno"> 1343</span>            this.waitForTurn = _waitForTurn;</div>
+<div class="line"><span class="lineno"> 1344</span>            this.hideRightInfo = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1345</span>            this.repeat = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1346</span>            this.ignoreCount = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1347</span>            this.act = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1348</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a94eb61b2a6a9bea0d243597e313fddda" name="a94eb61b2a6a9bea0d243597e313fddda"></a>
@@ -287,6 +339,25 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01350">1350</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1351</span>        {</div>
+<div class="line"><span class="lineno"> 1352</span>            this.plan = _plan;</div>
+<div class="line"><span class="lineno"> 1353</span>            this.action = this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">plan</a>.<a class="code hl_function" href="classActPlan.html#a8ebe666bc4613ae2e4782fcbb01a4755">GetAction</a>();</div>
+<div class="line"><span class="lineno"> 1354</span>            this.canTurbo = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1355</span>            this.willEndTurn = this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">plan</a>.<a class="code hl_property" href="classActPlan.html#ad35632373c102a0aa80dc7c3d0644b03">WillEndTurn</a>;</div>
+<div class="line"><span class="lineno"> 1356</span>            this.waitForTurn = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1357</span>            this.hideRightInfo = this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">plan</a>.<a class="code hl_property" href="classActPlan.html#a1385640e49c558d152465e995369ff72">HideRightInfo</a>;</div>
+<div class="line"><span class="lineno"> 1358</span>            this.repeat = this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">plan</a>.<a class="code hl_property" href="classActPlan.html#aff600ffd26aa4a7f2ccc98d99f9d3116">canRepeat</a>;</div>
+<div class="line"><span class="lineno"> 1359</span>            this.ignoreCount = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1360</span>            this.act = ((this.plan.list.Count == 1) ? this.<a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">plan</a>.<a class="code hl_variable" href="classActPlan.html#a4e55180044599ebb89f73015f090348b">list</a>[0].act : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno"> 1361</span>        }</div>
+<div class="ttc" id="aclassAM__Adv_1_1PressedAction_html_a48ed45bd010f1635ecd82dda4b6e5027"><div class="ttname"><a href="classAM__Adv_1_1PressedAction.html#a48ed45bd010f1635ecd82dda4b6e5027">AM_Adv.PressedAction.plan</a></div><div class="ttdeci">ActPlan plan</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l01390">AM_Adv.cs:1390</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a1385640e49c558d152465e995369ff72"><div class="ttname"><a href="classActPlan.html#a1385640e49c558d152465e995369ff72">ActPlan.HideRightInfo</a></div><div class="ttdeci">bool HideRightInfo</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00086">ActPlan.cs:87</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a4e55180044599ebb89f73015f090348b"><div class="ttname"><a href="classActPlan.html#a4e55180044599ebb89f73015f090348b">ActPlan.list</a></div><div class="ttdeci">ActPlan.List list</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00811">ActPlan.cs:811</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a8ebe666bc4613ae2e4782fcbb01a4755"><div class="ttname"><a href="classActPlan.html#a8ebe666bc4613ae2e4782fcbb01a4755">ActPlan.GetAction</a></div><div class="ttdeci">Func&lt; bool &gt; GetAction()</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00118">ActPlan.cs:118</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ad35632373c102a0aa80dc7c3d0644b03"><div class="ttname"><a href="classActPlan.html#ad35632373c102a0aa80dc7c3d0644b03">ActPlan.WillEndTurn</a></div><div class="ttdeci">bool WillEndTurn</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00078">ActPlan.cs:79</a></div></div>
+<div class="ttc" id="aclassActPlan_html_aff600ffd26aa4a7f2ccc98d99f9d3116"><div class="ttname"><a href="classActPlan.html#aff600ffd26aa4a7f2ccc98d99f9d3116">ActPlan.canRepeat</a></div><div class="ttdeci">bool canRepeat</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00033">ActPlan.cs:34</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00034">ActPlan.canRepeat</a>, <a class="el" href="ActPlan_8cs_source.html#l00118">ActPlan.GetAction()</a>, <a class="el" href="ActPlan_8cs_source.html#l00087">ActPlan.HideRightInfo</a>, <a class="el" href="ActPlan_8cs_source.html#l00811">ActPlan.list</a>, <a class="el" href="AM__Adv_8cs_source.html#l01390">AM_Adv.PressedAction.plan</a>, and <a class="el" href="ActPlan_8cs_source.html#l00079">ActPlan.WillEndTurn</a>.</p>
 
 </div>
 </div>
@@ -337,6 +408,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01396">1396</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01363">AM_Adv.PressedAction.IsPressing()</a>.</p>
+
 </div>
 </div>
 <a id="a7b9cd76b12dd862883c3087fe5f789cd" name="a7b9cd76b12dd862883c3087fe5f789cd"></a>
@@ -352,6 +425,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01372">1372</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01363">AM_Adv.PressedAction.IsPressing()</a>.</p>
 
 </div>
 </div>
@@ -432,6 +507,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Adv_8cs_source.html#l01390">1390</a> of file <a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01350">AM_Adv.PressedAction.SetPlan()</a>.</p>
 
 </div>
 </div>
@@ -519,9 +596,13 @@ Public Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="AM__Adv_8cs_source.html">AM_Adv.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Adv.html">AM_Adv</a></li><li class="navelem"><a class="el" href="classAM__Adv_1_1PressedAction.html">PressedAction</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

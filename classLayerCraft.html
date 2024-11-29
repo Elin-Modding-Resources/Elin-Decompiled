@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerCraft.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -333,6 +353,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classLayerBaseCraft.html#aad15f29ad8d18a635850430273856724">LayerBaseCraft</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00014">14</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        this.<a class="code hl_function" href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">RefreshRecipe</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a2a52b0c6cd98b916bd48035fd63839b8"><div class="ttname"><a href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">LayerCraft.RefreshRecipe</a></div><div class="ttdeci">void RefreshRecipe(bool first)</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00350">LayerCraft.cs:350</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
 
 </div>
 </div>
@@ -363,6 +389,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classLayerBaseCraft.html#a020317c464fb627571bab14c9d12af57">LayerBaseCraft</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00157">157</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">ingredients</a>[index].req * this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Num;</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a9308769a6be0d255b40cb0ad84b50d9a"><div class="ttname"><a href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">LayerCraft.inputNum</a></div><div class="ttdeci">UIInputText inputNum</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00500">LayerCraft.cs:500</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_ab2bd4dd921bf9244839e02cc31eb341c"><div class="ttname"><a href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">LayerCraft.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00492">LayerCraft.cs:492</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6c7bf4b0a53e229bea7bd21af75e0f61"><div class="ttname"><a href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">Recipe.ingredients</a></div><div class="ttdeci">List&lt; Recipe.Ingredient &gt; ingredients</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00892">Recipe.cs:892</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00892">Recipe.ingredients</a>, <a class="el" href="LayerCraft_8cs_source.html#l00500">inputNum</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>.</p>
 
 </div>
 </div>
@@ -392,6 +426,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classLayerBaseCraft.html#a91c6c8390b911a8d13bb5bdf54a8ed86">LayerBaseCraft</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00144">144</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        List&lt;Thing&gt; <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a> = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> ingredient in <span class="keyword">this</span>.recipe.ingredients)</div>
+<div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (!ingredient.optional || (ingredient.thing != <span class="keyword">null</span> &amp;&amp; !ingredient.thing.isDestroyed))</div>
+<div class="line"><span class="lineno">  150</span>            {</div>
+<div class="line"><span class="lineno">  151</span>                <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Add(ingredient.thing);</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a809491b0edebcdcf9ec5b030ae5c1b2c"><div class="ttname"><a href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">LayerCraft.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00480">LayerCraft.cs:480</a></div></div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html"><div class="ttname"><a href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00921">Recipe.cs:922</a></div></div>
+<div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00008">Recipe.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00480">list</a>.</p>
 
 </div>
 </div>
@@ -420,7 +470,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00019">19</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad723cf2cfbb9e274cf64d8298fd456e3" name="ad723cf2cfbb9e274cf64d8298fd456e3"></a>
@@ -447,7 +500,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00464">464</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  465</span>    {</div>
+<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  467</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9203c385514e02f2cf0838eb5f5e39ee" name="a9203c385514e02f2cf0838eb5f5e39ee"></a>
@@ -474,6 +530,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        this.info1.searchMode = <a class="code hl_enumeration" href="StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128">StockSearchMode</a>.AroundPC;</div>
+<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_variable" href="classUIRecipeInfo.html#a5e371098e8bb23cd6d4ccdf107187e3b">ddList</a>.<a class="code hl_variable" href="classDropdownGrid.html#afe4a27d584f52d15e1ac8e22f5fdf4a8">pivot</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>        LayerCraft.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aStockSearchMode_8cs_html_a7fdea07efaba9992c7d1fbb0549aa128"><div class="ttname"><a href="StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128">StockSearchMode</a></div><div class="ttdeci">StockSearchMode</div><div class="ttdef"><b>Definition:</b> <a href="StockSearchMode_8cs_source.html#l00003">StockSearchMode.cs:4</a></div></div>
+<div class="ttc" id="aclassDropdownGrid_html_afe4a27d584f52d15e1ac8e22f5fdf4a8"><div class="ttname"><a href="classDropdownGrid.html#afe4a27d584f52d15e1ac8e22f5fdf4a8">DropdownGrid.pivot</a></div><div class="ttdeci">RectTransform pivot</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00345">DropdownGrid.cs:345</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_ae89673d3dff1b17e1966a74b83e55a8c"><div class="ttname"><a href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">LayerCraft.info1</a></div><div class="ttdeci">UIRecipeInfo info1</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00482">LayerCraft.cs:482</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_a5e371098e8bb23cd6d4ccdf107187e3b"><div class="ttname"><a href="classUIRecipeInfo.html#a5e371098e8bb23cd6d4ccdf107187e3b">UIRecipeInfo.ddList</a></div><div class="ttdeci">DropdownGrid ddList</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00511">UIRecipeInfo.cs:511</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIRecipeInfo_8cs_source.html#l00511">UIRecipeInfo.ddList</a>, <a class="el" href="LayerCraft_8cs_source.html#l00482">info1</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00345">DropdownGrid.pivot</a>.</p>
 
 </div>
 </div>
@@ -501,6 +568,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00345">345</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  346</span>    {</div>
+<div class="line"><span class="lineno">  347</span>        this.<a class="code hl_function" href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">RefreshRecipe</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  348</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00197">DropdownGrid.Activate()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00427">ButtonGrid.SetIngredient()</a>.</p>
 
 </div>
 </div>
@@ -528,6 +602,84 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00083">83</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        Dictionary&lt;Thing, int&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;Thing, int&gt;();</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> ingredient in <span class="keyword">this</span>.recipe.ingredients)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (ingredient.thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (!dictionary.ContainsKey(ingredient.thing))</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    dictionary.Add(ingredient.thing, 0);</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>                Dictionary&lt;Thing, int&gt; dictionary2 = dictionary;</div>
+<div class="line"><span class="lineno">   95</span>                <a class="code hl_class" href="classThing.html">Thing</a> thing = ingredient.thing;</div>
+<div class="line"><span class="lineno">   96</span>                dictionary2[thing] += ingredient.req * this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Num;</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;Thing, int&gt; keyValuePair <span class="keywordflow">in</span> dictionary)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (keyValuePair.Key.Num &lt; keyValuePair.Value)</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                SE.Beep();</div>
+<div class="line"><span class="lineno">  104</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;craftDupError&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Num == 0)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing2 = this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>;</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a> traitCrafter = ((thing2 != <span class="keyword">null</span>) ? thing2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> : <span class="keyword">null</span>) as <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (traitCrafter == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            traitCrafter = <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a>;</div>
+<div class="line"><span class="lineno">  118</span>            traitCrafter.owner = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        (traitCrafter as <a class="code hl_class" href="classTraitFactory.html">TraitFactory</a>).<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a> = this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>;</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>;</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;workbench&quot;</span>))</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;axe&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;hammer&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;pickaxe&quot;</span>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                this.pickaxeCrafted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            this.workbenchCrafted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__UseCrafter.html">AI_UseCrafter</a></div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            crafter = traitCrafter,</div>
+<div class="line"><span class="lineno">  136</span>            layer = <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a> = this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>,</div>
+<div class="line"><span class="lineno">  138</span>            num = this.inputNum.Num</div>
+<div class="line"><span class="lineno">  139</span>        });</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_function" href="classAM__Adv.html#ae0aea04a669179d8289ad8a923bc4ba3">SetTurbo</a>(-1);</div>
+<div class="line"><span class="lineno">  141</span>        base.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="ttc" id="aclassAI__UseCrafter_html"><div class="ttname"><a href="classAI__UseCrafter.html">AI_UseCrafter</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__UseCrafter_8cs_source.html#l00006">AI_UseCrafter.cs:7</a></div></div>
+<div class="ttc" id="aclassAM__Adv_html_ae0aea04a669179d8289ad8a923bc4ba3"><div class="ttname"><a href="classAM__Adv.html#ae0aea04a669179d8289ad8a923bc4ba3">AM_Adv.SetTurbo</a></div><div class="ttdeci">void SetTurbo(int mtp=-1)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l00888">AM_Adv.cs:888</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01699">ActionMode.cs:1699</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07915">Chara.cs:7915</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_ad26c25208ddb5134b0976d46d8d55ea4"><div class="ttname"><a href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">LayerCraft.factory</a></div><div class="ttdeci">Thing factory</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00488">LayerCraft.cs:488</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a040c3f5e15fef1caad347e061707d507"><div class="ttname"><a href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">Recipe.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00889">Recipe.cs:889</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html"><div class="ttname"><a href="classTraitCrafter.html">TraitCrafter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00006">TraitCrafter.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitFactory_html"><div class="ttname"><a href="classTraitFactory.html">TraitFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFactory_8cs_source.html#l00004">TraitFactory.cs:5</a></div></div>
+<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00007">Trait.cs:8</a></div></div>
+<div class="ttc" id="aclassTrait_html_ae5d380383c7a829f15b19a5df441de4e"><div class="ttname"><a href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">Trait.SelfFactory</a></div><div class="ttdeci">static TraitSelfFactory SelfFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02860">Trait.cs:2860</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l01699">ActionMode.Adv</a>, <a class="el" href="LayerCraft_8cs_source.html#l00488">factory</a>, <a class="el" href="Recipe_8cs_source.html#l00889">Recipe.id</a>, <a class="el" href="LayerCraft_8cs_source.html#l00500">inputNum</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Trait_8cs_source.html#l02860">Trait.SelfFactory</a>, <a class="el" href="Chara_8cs_source.html#l07915">Chara.SetAI()</a>, <a class="el" href="AM__Adv_8cs_source.html#l00888">AM_Adv.SetTurbo()</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -555,6 +707,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00473">473</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  474</span>    {</div>
+<div class="line"><span class="lineno">  475</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInfo.html">LayerInfo</a>&gt;().Set(this.<a class="code hl_variable" href="classLayerCraft.html#a2a3aa4fdbe5228691221c7dd03f13d69">product</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  476</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a2a3aa4fdbe5228691221c7dd03f13d69"><div class="ttname"><a href="classLayerCraft.html#a2a3aa4fdbe5228691221c7dd03f13d69">LayerCraft.product</a></div><div class="ttdeci">Thing product</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00490">LayerCraft.cs:490</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00004">LayerInfo.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00490">product</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -582,6 +742,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00167">167</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>    {</div>
+<div class="line"><span class="lineno">  169</span>        base.CancelInvoke(<span class="stringliteral">&quot;WaitUntilIdle&quot;</span>);</div>
+<div class="line"><span class="lineno">  170</span>        EInput.haltInput = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  171</span>        TweenUtil.Tween(this.<a class="code hl_variable" href="classLayerCraft.html#aa789257447344bd6cd45922ea1b37685">waitComplete</a>, <span class="keyword">null</span>, delegate()</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            EInput.haltInput = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  174</span>            base.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">foreach</span> (Window window <span class="keywordflow">in</span> this.windows)</div>
+<div class="line"><span class="lineno">  176</span>            {</div>
+<div class="line"><span class="lineno">  177</span>                window.SetInteractable(<span class="keyword">true</span>, 0.5f);</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
+<div class="line"><span class="lineno">  179</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Redraw();</div>
+<div class="line"><span class="lineno">  180</span>            this.<a class="code hl_function" href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">RefreshRecipe</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  181</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a3772d67653eaf06f4fae2e97a36ea595">windowList</a>.groupTab.RefreshButtons();</div>
+<div class="line"><span class="lineno">  182</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>&gt;((<a class="code hl_class" href="classRecipe.html">Recipe</a> r) =&gt; this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a> == r.id, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  183</span>        });</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a3772d67653eaf06f4fae2e97a36ea595"><div class="ttname"><a href="classLayerCraft.html#a3772d67653eaf06f4fae2e97a36ea595">LayerCraft.windowList</a></div><div class="ttdeci">Window windowList</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00506">LayerCraft.cs:506</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_aa789257447344bd6cd45922ea1b37685"><div class="ttname"><a href="classLayerCraft.html#aa789257447344bd6cd45922ea1b37685">LayerCraft.waitComplete</a></div><div class="ttdeci">float waitComplete</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00530">LayerCraft.cs:530</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00889">Recipe.id</a>, <a class="el" href="LayerCraft_8cs_source.html#l00480">list</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00530">waitComplete</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00506">windowList</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00162">OnEndCraft()</a>, and <a class="el" href="TaskCraft_8cs_source.html#l00067">TaskCraft.Run()</a>.</p>
 
 </div>
 </div>
@@ -611,6 +794,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classLayerBaseCraft.html#ab20259293fce03ad9226bbf17663c7f7">LayerBaseCraft</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00162">162</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        this.<a class="code hl_function" href="classLayerCraft.html#a46e3c623937f96603a6748a952e0799c">OnCompleteCraft</a>();</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a46e3c623937f96603a6748a952e0799c"><div class="ttname"><a href="classLayerCraft.html#a46e3c623937f96603a6748a952e0799c">LayerCraft.OnCompleteCraft</a></div><div class="ttdeci">void OnCompleteCraft()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00167">LayerCraft.cs:167</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>.</p>
 
 </div>
 </div>
@@ -638,6 +829,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#afe73c417929f679c82736bbeab3ecbc7">workbenchCrafted</a>)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_class" href="classTutorial.html">Tutorial</a>.<a class="code hl_function" href="classTutorial.html#aad010e98af70d4cafa738f43205e4887">Play</a>(<span class="stringliteral">&quot;middle_click&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#a6cbfe72fb77ede0b4fc5670284a1c131">pickaxeCrafted</a>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classTutorial.html">Tutorial</a>.<a class="code hl_function" href="classTutorial.html#aad010e98af70d4cafa738f43205e4887">Play</a>(<span class="stringliteral">&quot;hardness&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">string</span> key = (this.factory == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;hand&quot;</span> : this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">lastRecipes</a>[key] = <span class="keyword">this</span>.recipe.id;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a6cbfe72fb77ede0b4fc5670284a1c131"><div class="ttname"><a href="classLayerCraft.html#a6cbfe72fb77ede0b4fc5670284a1c131">LayerCraft.pickaxeCrafted</a></div><div class="ttdeci">bool pickaxeCrafted</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00510">LayerCraft.cs:510</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_afe73c417929f679c82736bbeab3ecbc7"><div class="ttname"><a href="classLayerCraft.html#afe73c417929f679c82736bbeab3ecbc7">LayerCraft.workbenchCrafted</a></div><div class="ttdeci">bool workbenchCrafted</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00512">LayerCraft.cs:512</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a103cf0b4ff61eb6e494d0ff29f013138"><div class="ttname"><a href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">Player.lastRecipes</a></div><div class="ttdeci">Dictionary&lt; string, string &gt; lastRecipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01488">Player.cs:1488</a></div></div>
+<div class="ttc" id="aclassTutorial_html"><div class="ttname"><a href="classTutorial.html">Tutorial</a></div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00003">Tutorial.cs:4</a></div></div>
+<div class="ttc" id="aclassTutorial_html_aad010e98af70d4cafa738f43205e4887"><div class="ttname"><a href="classTutorial.html#aad010e98af70d4cafa738f43205e4887">Tutorial.Play</a></div><div class="ttdeci">static void Play(string idStep)</div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00005">Tutorial.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00488">factory</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Player_8cs_source.html#l01488">Player.lastRecipes</a>, <a class="el" href="LayerCraft_8cs_source.html#l00510">pickaxeCrafted</a>, <a class="el" href="Tutorial_8cs_source.html#l00005">Tutorial.Play()</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00512">workbenchCrafted</a>.</p>
 
 </div>
 </div>
@@ -676,6 +888,147 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00229">229</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
+<div class="line"><span class="lineno">  231</span>        Dictionary&lt;string, int&gt; cats = <span class="keyword">new</span> Dictionary&lt;string, int&gt;();</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_class" href="classRecipeManager.html">RecipeManager</a>.<a class="code hl_function" href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">BuildList</a>();</div>
+<div class="line"><span class="lineno">  233</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>;</div>
+<div class="line"><span class="lineno">  234</span>        UIList.Callback&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">  235</span>        callback.onClick = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>            this.recipe = a;</div>
+<div class="line"><span class="lineno">  238</span>            SE.Play(<span class="stringliteral">&quot;click_recipe&quot;</span>);</div>
+<div class="line"><span class="lineno">  239</span>            this.<a class="code hl_function" href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">RefreshRecipe</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  240</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703">hoveredRecipes</a>.Add(a.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>);</div>
+<div class="line"><span class="lineno">  241</span>            b.<a class="code hl_function" href="classButtonGrid.html#aebe9fce30903447b0168bdca6e03c64c">Dettach</a>(<span class="stringliteral">&quot;recipe_new&quot;</span>);</div>
+<div class="line"><span class="lineno">  242</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(a, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  243</span>        };</div>
+<div class="line"><span class="lineno">  244</span>        callback.onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">  245</span>        {</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (a.<a class="code hl_variable" href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">ingredients</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  247</span>            {</div>
+<div class="line"><span class="lineno">  248</span>                a.<a class="code hl_function" href="classRecipe.html#ae2285d835843bdb3db9d9a8565a922d4">BuildIngredientList</a>();</div>
+<div class="line"><span class="lineno">  249</span>            }</div>
+<div class="line"><span class="lineno">  250</span>            b.<a class="code hl_function" href="classButtonGrid.html#a2d49c6082902294b551497a7cbdf3192">SetCraftRecipe</a>(a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>.<a class="code hl_enumeration" href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">Mode</a>.Recipe, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703">hoveredRecipes</a>.Contains(a.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>))</div>
+<div class="line"><span class="lineno">  252</span>            {</div>
+<div class="line"><span class="lineno">  253</span>                b.<a class="code hl_function" href="classButtonGrid.html#ad835d226c20efefa4c9ab4f23a2e9d5d">Attach</a>(<span class="stringliteral">&quot;recipe_new&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  254</span>            }</div>
+<div class="line"><span class="lineno">  255</span>        };</div>
+<div class="line"><span class="lineno">  256</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  257</span>        {</div>
+<div class="line"><span class="lineno">  258</span>            this.<a class="code hl_variable" href="classLayerCraft.html#aa51f4f67676e60472314c6fd3d9d6fee">newRecipes</a>.Clear();</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> recipeSource <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_function" href="classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c">ListSources</a>(<span class="keyword">this</span>.factory, <span class="keyword">this</span>.newRecipes))</div>
+<div class="line"><span class="lineno">  260</span>            {</div>
+<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">if</span> (cat == <span class="stringliteral">&quot;all&quot;</span> || recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(cat))</div>
+<div class="line"><span class="lineno">  262</span>                {</div>
+<div class="line"><span class="lineno">  263</span>                    <a class="code hl_class" href="classRecipe.html">Recipe</a> o2 = <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_function" href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Create</a>(recipeSource, -1, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  264</span>                    this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Add(o2);</div>
+<div class="line"><span class="lineno">  265</span>                }</div>
+<div class="line"><span class="lineno">  266</span>                <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> row = recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.GetSecondRoot();</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a> != <span class="stringliteral">&quot;lightsource&quot;</span> &amp;&amp; row.<a class="code hl_function" href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">IsChildOf</a>(<span class="stringliteral">&quot;armor&quot;</span>))</div>
+<div class="line"><span class="lineno">  268</span>                {</div>
+<div class="line"><span class="lineno">  269</span>                    row = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[<span class="stringliteral">&quot;armor&quot;</span>];</div>
+<div class="line"><span class="lineno">  270</span>                }</div>
+<div class="line"><span class="lineno">  271</span>                Dictionary&lt;string, int&gt; cats;</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (!cats.ContainsKey(row.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a>))</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    cats.Add(row.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a>, 1);</div>
+<div class="line"><span class="lineno">  275</span>                }</div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  277</span>                {</div>
+<div class="line"><span class="lineno">  278</span>                    cats = cats;</div>
+<div class="line"><span class="lineno">  279</span>                    <span class="keywordtype">string</span> <span class="keywordtype">id</span> = row.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a>;</div>
+<div class="line"><span class="lineno">  280</span>                    <span class="keywordtype">int</span> num = cats[id];</div>
+<div class="line"><span class="lineno">  281</span>                    cats[id] = num + 1;</div>
+<div class="line"><span class="lineno">  282</span>                }</div>
+<div class="line"><span class="lineno">  283</span>            }</div>
+<div class="line"><span class="lineno">  284</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.objects.Sort((<span class="keywordtype">object</span> a, <span class="keywordtype">object</span> b) =&gt; (b as <a class="code hl_class" href="classRecipe.html">Recipe</a>).GetSortVal() - (a as <a class="code hl_class" href="classRecipe.html">Recipe</a>).GetSortVal());</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordtype">int</span> count = this.<a class="code hl_variable" href="classLayerCraft.html#aa51f4f67676e60472314c6fd3d9d6fee">newRecipes</a>.Count;</div>
+<div class="line"><span class="lineno">  286</span>        };</div>
+<div class="line"><span class="lineno">  287</span>        callback.onSort = ((<a class="code hl_class" href="classRecipe.html">Recipe</a> a, UIList.SortMode m) =&gt; a.<a class="code hl_function" href="classRecipe.html#a69fbb91fe1d63d180871e4d94aa6cbfc">GetSortVal</a>());</div>
+<div class="line"><span class="lineno">  288</span>        baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">  289</span>        this.list.sortMode = UIList.SortMode.ByLevel;</div>
+<div class="line"><span class="lineno">  290</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.List();</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> (cats.Count &gt; 1 &amp;&amp; !<span class="keyword">this</span>.tabBuilt)</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a3772d67653eaf06f4fae2e97a36ea595">windowList</a>.AddTab(<span class="stringliteral">&quot;all&quot;</span>, <span class="keyword">null</span>, delegate</div>
+<div class="line"><span class="lineno">  294</span>            {</div>
+<div class="line"><span class="lineno">  295</span>                this.<a class="code hl_function" href="classLayerCraft.html#ae9a1775c6edda550edfc250018b49217">RefreshCategory</a>(<span class="stringliteral">&quot;all&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  296</span>            }, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keyword">using</span> (Dictionary&lt;string, int&gt;.Enumerator enumerator = cats.GetEnumerator())</div>
+<div class="line"><span class="lineno">  298</span>            {</div>
+<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  300</span>                {</div>
+<div class="line"><span class="lineno">  301</span>                    KeyValuePair&lt;string, int&gt; c = enumerator.Current;</div>
+<div class="line"><span class="lineno">  302</span>                    this.<a class="code hl_variable" href="classLayerCraft.html#a3772d67653eaf06f4fae2e97a36ea595">windowList</a>.AddTab(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[c.Key].GetName() + <span class="stringliteral">&quot;(&quot;</span> + c.Value.ToString() + <span class="stringliteral">&quot;)&quot;</span>, <span class="keyword">null</span>, delegate</div>
+<div class="line"><span class="lineno">  303</span>                    {</div>
+<div class="line"><span class="lineno">  304</span>                        this.<a class="code hl_function" href="classLayerCraft.html#ae9a1775c6edda550edfc250018b49217">RefreshCategory</a>(c.Key, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  305</span>                    }, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  306</span>                }</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span>            this.tabBuilt = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  309</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a3772d67653eaf06f4fae2e97a36ea595">windowList</a>.BuildTabs(0);</div>
+<div class="line"><span class="lineno">  310</span>        }</div>
+<div class="line"><span class="lineno">  311</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll(0);</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordtype">object</span> o = this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows[0].objects[0];</div>
+<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  316</span>            {</div>
+<div class="line"><span class="lineno">  317</span>                <span class="keywordtype">string</span> key = (this.factory == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;hand&quot;</span> : this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
+<div class="line"><span class="lineno">  318</span>                if (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">lastRecipes</a>.ContainsKey(key))</div>
+<div class="line"><span class="lineno">  319</span>                {</div>
+<div class="line"><span class="lineno">  320</span>                    <span class="keywordtype">string</span> b2 = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">lastRecipes</a>[key];</div>
+<div class="line"><span class="lineno">  321</span>                    <span class="keywordflow">foreach</span> (<span class="keywordtype">object</span> obj <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.objects)</div>
+<div class="line"><span class="lineno">  322</span>                    {</div>
+<div class="line"><span class="lineno">  323</span>                        <span class="keywordflow">if</span> ((obj as <a class="code hl_class" href="classRecipe.html">Recipe</a>).id == b2)</div>
+<div class="line"><span class="lineno">  324</span>                        {</div>
+<div class="line"><span class="lineno">  325</span>                            o = obj;</div>
+<div class="line"><span class="lineno">  326</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  327</span>                        }</div>
+<div class="line"><span class="lineno">  328</span>                    }</div>
+<div class="line"><span class="lineno">  329</span>                }</div>
+<div class="line"><span class="lineno">  330</span>                this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll(o);</div>
+<div class="line"><span class="lineno">  331</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o, <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  332</span>                {</div>
+<div class="line"><span class="lineno">  333</span>                    this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll(0);</div>
+<div class="line"><span class="lineno">  334</span>                    this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows[0].objects[0], <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  335</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  336</span>                }</div>
+<div class="line"><span class="lineno">  337</span>            }</div>
+<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  339</span>            {</div>
+<div class="line"><span class="lineno">  340</span>                this.<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  341</span>            }</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a2d49c6082902294b551497a7cbdf3192"><div class="ttname"><a href="classButtonGrid.html#a2d49c6082902294b551497a7cbdf3192">ButtonGrid.SetCraftRecipe</a></div><div class="ttdeci">void SetCraftRecipe(Recipe r, ButtonGrid.Mode mode, bool tooltip=false)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00580">ButtonGrid.cs:580</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a7c813d5ada0a86d8447be38224802048"><div class="ttname"><a href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">ButtonGrid.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00791">ButtonGrid.cs:792</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_ad835d226c20efefa4c9ab4f23a2e9d5d"><div class="ttname"><a href="classButtonGrid.html#ad835d226c20efefa4c9ab4f23a2e9d5d">ButtonGrid.Attach</a></div><div class="ttdeci">Transform Attach(string id, bool rightAttach=true)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00051">ButtonGrid.cs:51</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_aebe9fce30903447b0168bdca6e03c64c"><div class="ttname"><a href="classButtonGrid.html#aebe9fce30903447b0168bdca6e03c64c">ButtonGrid.Dettach</a></div><div class="ttdeci">void Dettach(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00066">ButtonGrid.cs:66</a></div></div>
+<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00126">ELayer.cs:127</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_aa51f4f67676e60472314c6fd3d9d6fee"><div class="ttname"><a href="classLayerCraft.html#aa51f4f67676e60472314c6fd3d9d6fee">LayerCraft.newRecipes</a></div><div class="ttdeci">List&lt; RecipeSource &gt; newRecipes</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00504">LayerCraft.cs:504</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_ae9a1775c6edda550edfc250018b49217"><div class="ttname"><a href="classLayerCraft.html#ae9a1775c6edda550edfc250018b49217">LayerCraft.RefreshCategory</a></div><div class="ttdeci">void RefreshCategory(string cat, bool first=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00229">LayerCraft.cs:229</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01536">Player.cs:1536</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html"><div class="ttname"><a href="classRecipeManager.html">RecipeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00006">RecipeManager.cs:7</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a08cedf9e6be21bde401f263ff203412f"><div class="ttname"><a href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">RecipeManager.BuildList</a></div><div class="ttdeci">static void BuildList()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00008">RecipeManager.cs:8</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_abd07df26289fd4e84fce5baddddd953c"><div class="ttname"><a href="classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c">RecipeManager.ListSources</a></div><div class="ttdeci">List&lt; RecipeSource &gt; ListSources(Thing factory, List&lt; RecipeSource &gt; newRecipes=null)</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00128">RecipeManager.cs:128</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_adf9713bb1d8455c8ec7d69d50daa5703"><div class="ttname"><a href="classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703">RecipeManager.hoveredRecipes</a></div><div class="ttdeci">HashSet&lt; string &gt; hoveredRecipes</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00310">RecipeManager.cs:310</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00004">RecipeSource.cs:5</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a2b57efc5ee24c77c9c4ee3d3b578a37d"><div class="ttname"><a href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">RecipeSource.row</a></div><div class="ttdeci">RenderRow row</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00193">RecipeSource.cs:193</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a69fbb91fe1d63d180871e4d94aa6cbfc"><div class="ttname"><a href="classRecipe.html#a69fbb91fe1d63d180871e4d94aa6cbfc">Recipe.GetSortVal</a></div><div class="ttdeci">int GetSortVal()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00880">Recipe.cs:880</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a968929b2cbb9d440eeb72b7cd95a5c6c"><div class="ttname"><a href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Recipe.Create</a></div><div class="ttdeci">static Recipe Create(RecipeSource _source, int idMat=-1, Thing ing=null)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00025">Recipe.cs:25</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ae2285d835843bdb3db9d9a8565a922d4"><div class="ttname"><a href="classRecipe.html#ae2285d835843bdb3db9d9a8565a922d4">Recipe.BuildIngredientList</a></div><div class="ttdeci">virtual void BuildIngredientList()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00425">Recipe.cs:425</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a40de73dfca78c824bfd191752a2cb532"><div class="ttname"><a href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">RenderRow.Category</a></div><div class="ttdeci">SourceCategory.Row Category</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00094">RenderRow.cs:95</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00058">SourceCategory.cs:59</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a7a1e4cd547823f8b3227ba4a574d3c8a"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">SourceCategory.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00137">SourceCategory.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a9fa12e7fd725535437b9fdc34f375ee0"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">SourceCategory.Row.IsChildOf</a></div><div class="ttdeci">bool IsChildOf(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00076">SourceCategory.cs:76</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab7c0f6922403dd73dbe0c9d967c1514b"><div class="ttname"><a href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">SourceManager.categories</a></div><div class="ttdeci">SourceCategory categories</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00171">SourceManager.cs:171</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00051">ButtonGrid.Attach()</a>, <a class="el" href="Recipe_8cs_source.html#l00425">Recipe.BuildIngredientList()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="SourceManager_8cs_source.html#l00171">SourceManager.categories</a>, <a class="el" href="RenderRow_8cs_source.html#l00095">RenderRow.Category</a>, <a class="el" href="Recipe_8cs_source.html#l00025">Recipe.Create()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00066">ButtonGrid.Dettach()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00488">factory</a>, <a class="el" href="Recipe_8cs_source.html#l00880">Recipe.GetSortVal()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00310">RecipeManager.hoveredRecipes</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Recipe_8cs_source.html#l00889">Recipe.id</a>, <a class="el" href="SourceCategory_8cs_source.html#l00137">SourceCategory.Row.id</a>, <a class="el" href="Recipe_8cs_source.html#l00892">Recipe.ingredients</a>, <a class="el" href="SourceCategory_8cs_source.html#l00076">SourceCategory.Row.IsChildOf()</a>, <a class="el" href="Player_8cs_source.html#l01488">Player.lastRecipes</a>, <a class="el" href="LayerCraft_8cs_source.html#l00480">list</a>, <a class="el" href="RecipeManager_8cs_source.html#l00128">RecipeManager.ListSources()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00504">newRecipes</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01536">Player.recipes</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00193">RecipeSource.row</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00580">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00506">windowList</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>.</p>
 
 </div>
 </div>
@@ -705,6 +1058,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classLayerBaseCraft.html#aa718aec6c7a34156ba660e7cb110fd77">LayerBaseCraft</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        this.<a class="code hl_function" href="classLayerCraft.html#a2a52b0c6cd98b916bd48035fd63839b8">RefreshRecipe</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
 
 </div>
 </div>
@@ -732,6 +1090,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00215">215</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = InputModuleEX.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (buttonGrid &amp;&amp; buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#ae1efc796e8fdab364af625d4550919c2">recipe</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  219</span>        {</div>
+<div class="line"><span class="lineno">  220</span>            buttonGrid = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (buttonGrid == this.<a class="code hl_variable" href="classLayerCraft.html#a28f974f0e2cc915fc90efd1fe87d57d4">lastB</a>)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        this.lastB = buttonGrid;</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html_ae1efc796e8fdab364af625d4550919c2"><div class="ttname"><a href="classButtonGrid.html#ae1efc796e8fdab364af625d4550919c2">ButtonGrid.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00774">ButtonGrid.cs:774</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a28f974f0e2cc915fc90efd1fe87d57d4"><div class="ttname"><a href="classLayerCraft.html#a28f974f0e2cc915fc90efd1fe87d57d4">LayerCraft.lastB</a></div><div class="ttdeci">ButtonGrid lastB</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00536">LayerCraft.cs:536</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00536">lastB</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00774">ButtonGrid.recipe</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00195">Update()</a>.</p>
 
 </div>
 </div>
@@ -759,6 +1135,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00412">412</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  413</span>    {</div>
+<div class="line"><span class="lineno">  414</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.SetMinMax(1, this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_function" href="classRecipe.html#a28da28557b2edc52979be0b8f061bcfb">GetMaxCount</a>());</div>
+<div class="line"><span class="lineno">  415</span>        this.inputNum.onValueChanged = delegate(<span class="keywordtype">int</span> n)</div>
+<div class="line"><span class="lineno">  416</span>        {</div>
+<div class="line"><span class="lineno">  417</span>            this.<a class="code hl_function" href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">RefreshProduct</a>();</div>
+<div class="line"><span class="lineno">  418</span>        };</div>
+<div class="line"><span class="lineno">  419</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Validate();</div>
+<div class="line"><span class="lineno">  420</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a2c6414e8cab7664c6aef5a050e70fff1"><div class="ttname"><a href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">LayerCraft.RefreshProduct</a></div><div class="ttdeci">void RefreshProduct()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00422">LayerCraft.cs:422</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a28da28557b2edc52979be0b8f061bcfb"><div class="ttname"><a href="classRecipe.html#a28da28557b2edc52979be0b8f061bcfb">Recipe.GetMaxCount</a></div><div class="ttdeci">int GetMaxCount()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00849">Recipe.cs:849</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00849">Recipe.GetMaxCount()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00500">inputNum</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>.</p>
 
 </div>
 </div>
@@ -786,6 +1176,73 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00422">422</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>    {</div>
+<div class="line"><span class="lineno">  424</span>        this.<a class="code hl_function" href="classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3">RefreshInputNum</a>();</div>
+<div class="line"><span class="lineno">  425</span>        ELayer.screen.tileSelector.summary.countValid = this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Num;</div>
+<div class="line"><span class="lineno">  426</span>        ELayer.screen.tileSelector.summary.factory = this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>;</div>
+<div class="line"><span class="lineno">  427</span>        this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_function" href="classUIRecipeInfo.html#a38e921e32080632e36597f26563d9061">RefreshBalance</a>();</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  429</span>        {</div>
+<div class="line"><span class="lineno">  430</span>            this.textFuel.text = <span class="stringliteral">&quot;craftFuel&quot;</span>.lang(((<span class="keywordtype">int</span>)((<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>.<a class="code hl_property" href="classCard.html#aedc5cea1616f2efa676ef172a05330b1">c_charges</a> / (<span class="keywordtype">float</span>)<span class="keyword">this</span>.factory.trait.MaxFuel * 100f)).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  431</span>            this.buttonAutoRefuel.mainText.text = (this.factory.autoRefuel ? <span class="stringliteral">&quot;On&quot;</span> : <span class="stringliteral">&quot;Off&quot;</span>);</div>
+<div class="line"><span class="lineno">  432</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a482931175ce8c4d8c18ed2a2260eb495">buttonAutoRefuel</a>.icon.SetAlpha(this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>.<a class="code hl_property" href="classCard.html#a7583d4ea997429506cb6f518f838938c">autoRefuel</a> ? 1f : 0.4f);</div>
+<div class="line"><span class="lineno">  433</span>        }</div>
+<div class="line"><span class="lineno">  434</span>        this.<a class="code hl_function" href="classLayerCraft.html#a1ee8ebd49165cd1d649db679a19b3e39">RefreshQuality</a>();</div>
+<div class="line"><span class="lineno">  435</span>        List&lt;Thing&gt; <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a> = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">  436</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> ingredient in <span class="keyword">this</span>.recipe.ingredients)</div>
+<div class="line"><span class="lineno">  437</span>        {</div>
+<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">if</span> (ingredient.thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  439</span>            {</div>
+<div class="line"><span class="lineno">  440</span>                <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Add(ingredient.thing);</div>
+<div class="line"><span class="lineno">  441</span>            }</div>
+<div class="line"><span class="lineno">  442</span>        }</div>
+<div class="line"><span class="lineno">  443</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_function" href="classRecipe.html#ac02871547f61b1b6ac605f8e32030463">Craft</a>(<a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal, <span class="keyword">false</span>, <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>, <span class="keyword">null</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  444</span>        thing.<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(this.<a class="code hl_variable" href="classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a">inputNum</a>.Num);</div>
+<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  446</span>        {</div>
+<div class="line"><span class="lineno">  447</span>            thing.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a>.Clear();</div>
+<div class="line"><span class="lineno">  448</span>        }</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">IsEquipmentOrRanged</a>)</div>
+<div class="line"><span class="lineno">  450</span>        {</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> thing.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values.ToList&lt;<a class="code hl_class" href="classElement.html">Element</a>&gt;())</div>
+<div class="line"><span class="lineno">  452</span>            {</div>
+<div class="line"><span class="lineno">  453</span>                <span class="keywordflow">if</span> (!element.<a class="code hl_property" href="classElement.html#abd6a3bc2c79d7216263bb29e11675271">IsTrait</a>)</div>
+<div class="line"><span class="lineno">  454</span>                {</div>
+<div class="line"><span class="lineno">  455</span>                    thing.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acdeb6a7f24425aecfdde5d5ce0fc4f1b">Remove</a>(element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">  456</span>                }</div>
+<div class="line"><span class="lineno">  457</span>            }</div>
+<div class="line"><span class="lineno">  458</span>        }</div>
+<div class="line"><span class="lineno">  459</span>        this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_variable" href="classUIRecipeInfo.html#a589c707569c553fe1b1b7798a8600ff2">buttonProduct</a>.<a class="code hl_function" href="classButtonGrid.html#afd8e7d136370a3321758ec44dbbc6ae5">SetCard</a>(thing, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>.<a class="code hl_enumeration" href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">Mode</a>.Default, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  460</span>        thing.<a class="code hl_function" href="classThing.html#a14ac31cb1836b47b57a0b58402828d39">WriteNote</a>(this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_variable" href="classUIRecipeInfo.html#a370bb29939131e25f84d308028659b9e">note</a>, <span class="keyword">null</span>, <a class="code hl_interface" href="interfaceIInspect.html">IInspect</a>.<a class="code hl_enumeration" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">NoteMode</a>.Product, <span class="keyword">this</span>.recipe);</div>
+<div class="line"><span class="lineno">  461</span>        this.product = thing;</div>
+<div class="line"><span class="lineno">  462</span>    }</div>
+<div class="ttc" id="aBlessedState_8cs_html_aa145ad1e6170ce299d75ff3b3bee93e8"><div class="ttname"><a href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a></div><div class="ttdeci">BlessedState</div><div class="ttdef"><b>Definition:</b> <a href="BlessedState_8cs_source.html#l00003">BlessedState.cs:4</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_afd8e7d136370a3321758ec44dbbc6ae5"><div class="ttname"><a href="classButtonGrid.html#afd8e7d136370a3321758ec44dbbc6ae5">ButtonGrid.SetCard</a></div><div class="ttdeci">void SetCard(Card c, ButtonGrid.Mode mode=ButtonGrid.Mode.Default, Action&lt; UINote &gt; onWriteNote=null)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00185">ButtonGrid.cs:185</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03467">Card.cs:3467</a></div></div>
+<div class="ttc" id="aclassCard_html_a7583d4ea997429506cb6f518f838938c"><div class="ttname"><a href="classCard.html#a7583d4ea997429506cb6f518f838938c">Card.autoRefuel</a></div><div class="ttdeci">bool autoRefuel</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00559">Card.cs:560</a></div></div>
+<div class="ttc" id="aclassCard_html_a8f074386edfb55a8db4bf6ad31f49c22"><div class="ttname"><a href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">Card.IsEquipmentOrRanged</a></div><div class="ttdeci">bool IsEquipmentOrRanged</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02322">Card.cs:2323</a></div></div>
+<div class="ttc" id="aclassCard_html_aedc5cea1616f2efa676ef172a05330b1"><div class="ttname"><a href="classCard.html#aedc5cea1616f2efa676ef172a05330b1">Card.c_charges</a></div><div class="ttdeci">int c_charges</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01135">Card.cs:1136</a></div></div>
+<div class="ttc" id="aclassCard_html_af10b07d1dd2e8ac8d687663d7a0a383e"><div class="ttname"><a href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">Card.sockets</a></div><div class="ttdeci">List&lt; int &gt; sockets</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07292">Card.cs:7292</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00887">ElementContainer.cs:887</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_acdeb6a7f24425aecfdde5d5ce0fc4f1b"><div class="ttname"><a href="classElementContainer.html#acdeb6a7f24425aecfdde5d5ce0fc4f1b">ElementContainer.Remove</a></div><div class="ttdeci">void Remove(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00421">ElementContainer.cs:421</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_abd6a3bc2c79d7216263bb29e11675271"><div class="ttname"><a href="classElement.html#abd6a3bc2c79d7216263bb29e11675271">Element.IsTrait</a></div><div class="ttdeci">bool IsTrait</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00306">Element.2.cs:307</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a007fa3faf304a13cad5250ab57f282a3"><div class="ttname"><a href="classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3">LayerCraft.RefreshInputNum</a></div><div class="ttdeci">void RefreshInputNum()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00412">LayerCraft.cs:412</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a1ee8ebd49165cd1d649db679a19b3e39"><div class="ttname"><a href="classLayerCraft.html#a1ee8ebd49165cd1d649db679a19b3e39">LayerCraft.RefreshQuality</a></div><div class="ttdeci">void RefreshQuality()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00469">LayerCraft.cs:469</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a482931175ce8c4d8c18ed2a2260eb495"><div class="ttname"><a href="classLayerCraft.html#a482931175ce8c4d8c18ed2a2260eb495">LayerCraft.buttonAutoRefuel</a></div><div class="ttdeci">UIButton buttonAutoRefuel</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00516">LayerCraft.cs:516</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ac02871547f61b1b6ac605f8e32030463"><div class="ttname"><a href="classRecipe.html#ac02871547f61b1b6ac605f8e32030463">Recipe.Craft</a></div><div class="ttdeci">virtual Thing Craft(BlessedState blessed, bool sound=false, List&lt; Thing &gt; ings=null, TraitCrafter crafter=null, bool model=false)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00461">Recipe.cs:461</a></div></div>
+<div class="ttc" id="aclassThing_html_a14ac31cb1836b47b57a0b58402828d39"><div class="ttname"><a href="classThing.html#a14ac31cb1836b47b57a0b58402828d39">Thing.WriteNote</a></div><div class="ttdeci">override void WriteNote(UINote n, Action&lt; UINote &gt; onWriteNote=null, IInspect.NoteMode mode=IInspect.NoteMode.Default, Recipe recipe=null)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00893">Thing.cs:893</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_a370bb29939131e25f84d308028659b9e"><div class="ttname"><a href="classUIRecipeInfo.html#a370bb29939131e25f84d308028659b9e">UIRecipeInfo.note</a></div><div class="ttdeci">UINote note</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00493">UIRecipeInfo.cs:493</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_a38e921e32080632e36597f26563d9061"><div class="ttname"><a href="classUIRecipeInfo.html#a38e921e32080632e36597f26563d9061">UIRecipeInfo.RefreshBalance</a></div><div class="ttdeci">void RefreshBalance()</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00118">UIRecipeInfo.cs:118</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_a589c707569c553fe1b1b7798a8600ff2"><div class="ttname"><a href="classUIRecipeInfo.html#a589c707569c553fe1b1b7798a8600ff2">UIRecipeInfo.buttonProduct</a></div><div class="ttdeci">ButtonGrid buttonProduct</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00515">UIRecipeInfo.cs:515</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html"><div class="ttname"><a href="interfaceIInspect.html">IInspect</a></div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00004">IInspect.cs:5</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">IInspect.NoteMode</a></div><div class="ttdeci">NoteMode</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00018">IInspect.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00560">Card.autoRefuel</a>, <a class="el" href="LayerCraft_8cs_source.html#l00516">buttonAutoRefuel</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00515">UIRecipeInfo.buttonProduct</a>, <a class="el" href="Card_8cs_source.html#l01136">Card.c_charges</a>, <a class="el" href="Recipe_8cs_source.html#l00461">Recipe.Craft()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00887">ElementContainer.dict</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="LayerCraft_8cs_source.html#l00488">factory</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="LayerCraft_8cs_source.html#l00482">info1</a>, <a class="el" href="LayerCraft_8cs_source.html#l00500">inputNum</a>, <a class="el" href="Card_8cs_source.html#l02323">Card.IsEquipmentOrRanged</a>, <a class="el" href="Element_82_8cs_source.html#l00307">Element.IsTrait</a>, <a class="el" href="LayerCraft_8cs_source.html#l00480">list</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00493">UIRecipeInfo.note</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00118">UIRecipeInfo.RefreshBalance()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00412">RefreshInputNum()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00469">RefreshQuality()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00421">ElementContainer.Remove()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00185">ButtonGrid.SetCard()</a>, <a class="el" href="Card_8cs_source.html#l03467">Card.SetNum()</a>, <a class="el" href="Card_8cs_source.html#l07292">Card.sockets</a>, and <a class="el" href="Thing_8cs_source.html#l00893">Thing.WriteNote()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00412">RefreshInputNum()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00285">DropdownGrid.TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -813,6 +1270,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00469">469</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  470</span>    {</div>
+<div class="line"><span class="lineno">  471</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>.</p>
 
 </div>
 </div>
@@ -841,6 +1302,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00350">350</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>    {</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> ingredient in <span class="keyword">this</span>.recipe.ingredients)</div>
+<div class="line"><span class="lineno">  353</span>        {</div>
+<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_variable" href="classUIRecipeInfo.html#adfb3de2c7d6f8b2182fcb1043e7eb96e">recipe</a> != <span class="keyword">this</span>.recipe || (!ingredient.optional &amp;&amp; (ingredient.thing == <span class="keyword">null</span> || ingredient.thing.isDestroyed)))</div>
+<div class="line"><span class="lineno">  355</span>            {</div>
+<div class="line"><span class="lineno">  356</span>                ingredient.SetThing(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  357</span>            }</div>
+<div class="line"><span class="lineno">  358</span>        }</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a770dc865e6fd0e0b592aa47b971d62d4">toggleCraftTo</a>.SetToggle(<span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  362</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a4386b51227db7b5df134e1ad958542b1">toggleRepeat</a>.SetToggle(<span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  363</span>            this.inputNum.Num = 1;</div>
+<div class="line"><span class="lineno">  364</span>            this.info1.recipe = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  365</span>        }</div>
+<div class="line"><span class="lineno">  366</span>        this.info1.factory = this.<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>;</div>
+<div class="line"><span class="lineno">  367</span>        this.<a class="code hl_variable" href="classLayerCraft.html#ae89673d3dff1b17e1966a74b83e55a8c">info1</a>.<a class="code hl_function" href="classUIRecipeInfo.html#a49fe811770ac7ecba6848d5cb7593774">SetRecipe</a>(this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>);</div>
+<div class="line"><span class="lineno">  368</span>        this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>.<a class="code hl_function" href="classRecipe.html#ab7f17efd21d15719d981bf94113edd46">OnChangeIngredient</a>();</div>
+<div class="line"><span class="lineno">  369</span>        this.<a class="code hl_function" href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">RefreshProduct</a>();</div>
+<div class="line"><span class="lineno">  370</span>        this.<a class="code hl_function" href="classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b">RefreshTrackButton</a>();</div>
+<div class="line"><span class="lineno">  371</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a4386b51227db7b5df134e1ad958542b1"><div class="ttname"><a href="classLayerCraft.html#a4386b51227db7b5df134e1ad958542b1">LayerCraft.toggleRepeat</a></div><div class="ttdeci">UIButton toggleRepeat</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00494">LayerCraft.cs:494</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a5a28595a37cd8246266cacb2db8dfa2b"><div class="ttname"><a href="classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b">LayerCraft.RefreshTrackButton</a></div><div class="ttdeci">void RefreshTrackButton()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00373">LayerCraft.cs:373</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a770dc865e6fd0e0b592aa47b971d62d4"><div class="ttname"><a href="classLayerCraft.html#a770dc865e6fd0e0b592aa47b971d62d4">LayerCraft.toggleCraftTo</a></div><div class="ttdeci">UIButton toggleCraftTo</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00496">LayerCraft.cs:496</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ab7f17efd21d15719d981bf94113edd46"><div class="ttname"><a href="classRecipe.html#ab7f17efd21d15719d981bf94113edd46">Recipe.OnChangeIngredient</a></div><div class="ttdeci">virtual void OnChangeIngredient()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00449">Recipe.cs:449</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_a49fe811770ac7ecba6848d5cb7593774"><div class="ttname"><a href="classUIRecipeInfo.html#a49fe811770ac7ecba6848d5cb7593774">UIRecipeInfo.SetRecipe</a></div><div class="ttdeci">void SetRecipe(Recipe r)</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00064">UIRecipeInfo.cs:64</a></div></div>
+<div class="ttc" id="aclassUIRecipeInfo_html_adfb3de2c7d6f8b2182fcb1043e7eb96e"><div class="ttname"><a href="classUIRecipeInfo.html#adfb3de2c7d6f8b2182fcb1043e7eb96e">UIRecipeInfo.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00481">UIRecipeInfo.cs:481</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00488">factory</a>, <a class="el" href="LayerCraft_8cs_source.html#l00482">info1</a>, <a class="el" href="Recipe_8cs_source.html#l00449">Recipe.OnChangeIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00481">UIRecipeInfo.recipe</a>, <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00373">RefreshTrackButton()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00064">UIRecipeInfo.SetRecipe()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00496">toggleCraftTo</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00494">toggleRepeat</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00014">ClearButtons()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00345">OnChangeIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00009">RefreshCurrentGrid()</a>.</p>
 
 </div>
 </div>
@@ -868,6 +1360,63 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00373">373</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  374</span>    {</div>
+<div class="line"><span class="lineno">  375</span>        <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a> quest = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classQuest.html">Quest</a> quest2 <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>)</div>
+<div class="line"><span class="lineno">  377</span>        {</div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">if</span> (quest2 is <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a>)</div>
+<div class="line"><span class="lineno">  379</span>            {</div>
+<div class="line"><span class="lineno">  380</span>                quest = (quest2 as <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a>);</div>
+<div class="line"><span class="lineno">  381</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  382</span>            }</div>
+<div class="line"><span class="lineno">  383</span>        }</div>
+<div class="line"><span class="lineno">  384</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a478ffc295f925fd77bc903176adaba54">buttonTrack</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>            <span class="keywordflow">if</span> (quest != <span class="keyword">null</span> &amp;&amp; quest.<a class="code hl_variable" href="classQuestTrackCraft.html#a125d77fdfa1c785c67ac91e239b80b96">idRecipe</a> == <span class="keyword">this</span>.recipe.id)</div>
+<div class="line"><span class="lineno">  387</span>            {</div>
+<div class="line"><span class="lineno">  388</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#a88f3254faeb7458eea94753c61a98862">Remove</a>(quest);</div>
+<div class="line"><span class="lineno">  389</span>            }</div>
+<div class="line"><span class="lineno">  390</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  391</span>            {</div>
+<div class="line"><span class="lineno">  392</span>                <span class="keywordflow">if</span> (quest != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  393</span>                {</div>
+<div class="line"><span class="lineno">  394</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#a88f3254faeb7458eea94753c61a98862">Remove</a>(quest);</div>
+<div class="line"><span class="lineno">  395</span>                }</div>
+<div class="line"><span class="lineno">  396</span>                <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a> questTrackCraft = <a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_function" href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Create</a>(<span class="stringliteral">&quot;track_craft&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>) as <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a>;</div>
+<div class="line"><span class="lineno">  397</span>                questTrackCraft.<a class="code hl_function" href="classQuestTrackCraft.html#a8773f3458204c82174afe4ca8417c08f">SetRecipe</a>(this.<a class="code hl_variable" href="classLayerCraft.html#ab2bd4dd921bf9244839e02cc31eb341c">recipe</a>);</div>
+<div class="line"><span class="lineno">  398</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">Start</a>(questTrackCraft);</div>
+<div class="line"><span class="lineno">  399</span>            }</div>
+<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>)</div>
+<div class="line"><span class="lineno">  401</span>            {</div>
+<div class="line"><span class="lineno">  402</span>                ELayer.player.questTracker = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  403</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.ActivateWidget(<span class="stringliteral">&quot;QuestTracker&quot;</span>);</div>
+<div class="line"><span class="lineno">  404</span>                <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a>.<a class="code hl_function" href="classWidgetHotbar.html#ae77868c1a95513518ea6e2746857005f">RefreshButtons</a>();</div>
+<div class="line"><span class="lineno">  405</span>            }</div>
+<div class="line"><span class="lineno">  406</span>            <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>.<a class="code hl_function" href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">Refresh</a>();</div>
+<div class="line"><span class="lineno">  407</span>            this.<a class="code hl_function" href="classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b">RefreshTrackButton</a>();</div>
+<div class="line"><span class="lineno">  408</span>        });</div>
+<div class="line"><span class="lineno">  409</span>        this.<a class="code hl_variable" href="classLayerCraft.html#a478ffc295f925fd77bc903176adaba54">buttonTrack</a>.icon.SetActive(quest != <span class="keyword">null</span> &amp;&amp; quest.<a class="code hl_variable" href="classQuestTrackCraft.html#a125d77fdfa1c785c67ac91e239b80b96">idRecipe</a> == <span class="keyword">this</span>.recipe.id);</div>
+<div class="line"><span class="lineno">  410</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00014">ELayer.cs:15</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a478ffc295f925fd77bc903176adaba54"><div class="ttname"><a href="classLayerCraft.html#a478ffc295f925fd77bc903176adaba54">LayerCraft.buttonTrack</a></div><div class="ttdeci">UIButton buttonTrack</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00498">LayerCraft.cs:498</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00327">QuestManager.cs:327</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a88f3254faeb7458eea94753c61a98862"><div class="ttname"><a href="classQuestManager.html#a88f3254faeb7458eea94753c61a98862">QuestManager.Remove</a></div><div class="ttdeci">void Remove(Quest q)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00063">QuestManager.cs:63</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_abcb5c423e6aa6418f34a2b81bdfbd40e"><div class="ttname"><a href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">QuestManager.Start</a></div><div class="ttdeci">Quest Start(string id, string idGlobalChara)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00037">QuestManager.cs:37</a></div></div>
+<div class="ttc" id="aclassQuestTrackCraft_html"><div class="ttname"><a href="classQuestTrackCraft.html">QuestTrackCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestTrackCraft_8cs_source.html#l00005">QuestTrackCraft.cs:6</a></div></div>
+<div class="ttc" id="aclassQuestTrackCraft_html_a125d77fdfa1c785c67ac91e239b80b96"><div class="ttname"><a href="classQuestTrackCraft.html#a125d77fdfa1c785c67ac91e239b80b96">QuestTrackCraft.idRecipe</a></div><div class="ttdeci">string idRecipe</div><div class="ttdef"><b>Definition:</b> <a href="QuestTrackCraft_8cs_source.html#l00082">QuestTrackCraft.cs:82</a></div></div>
+<div class="ttc" id="aclassQuestTrackCraft_html_a8773f3458204c82174afe4ca8417c08f"><div class="ttname"><a href="classQuestTrackCraft.html#a8773f3458204c82174afe4ca8417c08f">QuestTrackCraft.SetRecipe</a></div><div class="ttdeci">void SetRecipe(Recipe r)</div><div class="ttdef"><b>Definition:</b> <a href="QuestTrackCraft_8cs_source.html#l00025">QuestTrackCraft.cs:25</a></div></div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00008">Quest.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html"><div class="ttname"><a href="classWidgetHotbar.html">WidgetHotbar</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00009">WidgetHotbar.cs:10</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_ae77868c1a95513518ea6e2746857005f"><div class="ttname"><a href="classWidgetHotbar.html#ae77868c1a95513518ea6e2746857005f">WidgetHotbar.RefreshButtons</a></div><div class="ttdeci">static void RefreshButtons()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00448">WidgetHotbar.cs:448</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00005">WidgetQuestTracker.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a4342d71955ad4c1dac6c898f2e686435"><div class="ttname"><a href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">WidgetQuestTracker.Instance</a></div><div class="ttdeci">static WidgetQuestTracker Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.cs:101</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a8fcd018e87e7f0867b5de29bd048cea5"><div class="ttname"><a href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">WidgetQuestTracker.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.cs:23</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00498">buttonTrack</a>, <a class="el" href="Quest_8cs_source.html#l00008">Quest.Create()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.Instance</a>, <a class="el" href="QuestManager_8cs_source.html#l00327">QuestManager.list</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="LayerCraft_8cs_source.html#l00492">recipe</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.Refresh()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00448">WidgetHotbar.RefreshButtons()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00373">RefreshTrackButton()</a>, <a class="el" href="QuestManager_8cs_source.html#l00063">QuestManager.Remove()</a>, <a class="el" href="QuestTrackCraft_8cs_source.html#l00025">QuestTrackCraft.SetRecipe()</a>, <a class="el" href="QuestManager_8cs_source.html#l00037">QuestManager.Start()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00068">ItemQuestTracker.OnClickClose()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00373">RefreshTrackButton()</a>.</p>
 
 </div>
 </div>
@@ -896,6 +1445,52 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00045">45</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        this.factory = t;</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_function" href="classLayerCraft.html#ae9a1775c6edda550edfc250018b49217">RefreshCategory</a>(<span class="stringliteral">&quot;all&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">bool</span> flag = t != <span class="keyword">null</span> &amp;&amp; t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a694ffdbe1c5b08dabbbf5d80b53e741f">IsRequireFuel</a>;</div>
+<div class="line"><span class="lineno">   50</span>        this.<a class="code hl_variable" href="classLayerCraft.html#aaf41729050ee8332debd012164f37d4b">transFuel</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            Action &lt;&gt;9__2;</div>
+<div class="line"><span class="lineno">   54</span>            this.<a class="code hl_variable" href="classLayerCraft.html#ad3cbc6109f18dad594ff51268cc95d65">buttonRefuel</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">foreach</span> (Window window <span class="keywordflow">in</span> this.windows)</div>
+<div class="line"><span class="lineno">   57</span>                {</div>
+<div class="line"><span class="lineno">   58</span>                    window.SetInteractable(<span class="keyword">false</span>, 0f);</div>
+<div class="line"><span class="lineno">   59</span>                }</div>
+<div class="line"><span class="lineno">   60</span>                Layer layer = <a class="code hl_class" href="classLayerDragGrid.html">LayerDragGrid</a>.<a class="code hl_function" href="classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7">Create</a>(<span class="keyword">new</span> <a class="code hl_class" href="classInvOwnerRefuel.html">InvOwnerRefuel</a>(t, <span class="keyword">null</span>, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.None), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   61</span>                Action onKill;</div>
+<div class="line"><span class="lineno">   62</span>                if ((onKill = &lt;&gt;9__2) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    onKill = (&lt;&gt;9__2 = delegate()</div>
+<div class="line"><span class="lineno">   65</span>                    {</div>
+<div class="line"><span class="lineno">   66</span>                        <span class="keywordflow">if</span> (!this.isDestroyed)</div>
+<div class="line"><span class="lineno">   67</span>                        {</div>
+<div class="line"><span class="lineno">   68</span>                            this.<a class="code hl_function" href="classLayerCraft.html#a2a3ee83411db6755954535afa4611f26">OnEndCraft</a>();</div>
+<div class="line"><span class="lineno">   69</span>                        }</div>
+<div class="line"><span class="lineno">   70</span>                    });</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>                layer.SetOnKill(onKill);</div>
+<div class="line"><span class="lineno">   73</span>            });</div>
+<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a482931175ce8c4d8c18ed2a2260eb495">buttonAutoRefuel</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                SE.Click();</div>
+<div class="line"><span class="lineno">   77</span>                t.autoRefuel = !t.<a class="code hl_property" href="classCard.html#a7583d4ea997429506cb6f518f838938c">autoRefuel</a>;</div>
+<div class="line"><span class="lineno">   78</span>                this.<a class="code hl_function" href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">RefreshProduct</a>();</div>
+<div class="line"><span class="lineno">   79</span>            });</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+<div class="ttc" id="aclassInvOwnerRefuel_html"><div class="ttname"><a href="classInvOwnerRefuel.html">InvOwnerRefuel</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerRefuel_8cs_source.html#l00003">InvOwnerRefuel.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a2a3ee83411db6755954535afa4611f26"><div class="ttname"><a href="classLayerCraft.html#a2a3ee83411db6755954535afa4611f26">LayerCraft.OnEndCraft</a></div><div class="ttdeci">override void OnEndCraft()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00162">LayerCraft.cs:162</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_aaf41729050ee8332debd012164f37d4b"><div class="ttname"><a href="classLayerCraft.html#aaf41729050ee8332debd012164f37d4b">LayerCraft.transFuel</a></div><div class="ttdeci">Transform transFuel</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00518">LayerCraft.cs:518</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_ad3cbc6109f18dad594ff51268cc95d65"><div class="ttname"><a href="classLayerCraft.html#ad3cbc6109f18dad594ff51268cc95d65">LayerCraft.buttonRefuel</a></div><div class="ttdeci">UIButton buttonRefuel</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00514">LayerCraft.cs:514</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html"><div class="ttname"><a href="classLayerDragGrid.html">LayerDragGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00006">LayerDragGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerDragGrid_html_a797f5abd479b75ac4335c151ee4ff8a7"><div class="ttname"><a href="classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7">LayerDragGrid.Create</a></div><div class="ttdeci">static LayerDragGrid Create(InvOwnerDraglet owner, bool refuelFromLayerDragGrid=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDragGrid_8cs_source.html#l00324">LayerDragGrid.cs:324</a></div></div>
+<div class="ttc" id="aclassTrait_html_a694ffdbe1c5b08dabbbf5d80b53e741f"><div class="ttname"><a href="classTrait.html#a694ffdbe1c5b08dabbbf5d80b53e741f">Trait.IsRequireFuel</a></div><div class="ttdeci">bool IsRequireFuel</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01455">Trait.cs:1456</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00560">Card.autoRefuel</a>, <a class="el" href="LayerCraft_8cs_source.html#l00516">buttonAutoRefuel</a>, <a class="el" href="LayerCraft_8cs_source.html#l00514">buttonRefuel</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00324">LayerDragGrid.Create()</a>, <a class="el" href="Trait_8cs_source.html#l01456">Trait.IsRequireFuel</a>, <a class="el" href="LayerCraft_8cs_source.html#l00162">OnEndCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00518">transFuel</a>.</p>
 
 </div>
 </div>
@@ -923,6 +1518,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00195">195</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">float</span> axis = Input.GetAxis(<span class="stringliteral">&quot;Mouse ScrollWheel&quot;</span>);</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (Input.GetMouseButton(0))</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            this.wcount = 2;</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (axis != 0f)</div>
+<div class="line"><span class="lineno">  203</span>        {</div>
+<div class="line"><span class="lineno">  204</span>            this.wcount = 2;</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerCraft.html#a271092b019c1fb6bf2b2b665c8a7d590">wcount</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            this.<a class="code hl_variable" href="classLayerCraft.html#a271092b019c1fb6bf2b2b665c8a7d590">wcount</a>--;</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>        this.<a class="code hl_function" href="classLayerCraft.html#a38e0a36932f700dfb2f1f10103d7ec7f">RefreshInfo</a>();</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="ttc" id="aclassLayerCraft_html_a271092b019c1fb6bf2b2b665c8a7d590"><div class="ttname"><a href="classLayerCraft.html#a271092b019c1fb6bf2b2b665c8a7d590">LayerCraft.wcount</a></div><div class="ttdeci">int wcount</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00534">LayerCraft.cs:534</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a38e0a36932f700dfb2f1f10103d7ec7f"><div class="ttname"><a href="classLayerCraft.html#a38e0a36932f700dfb2f1f10103d7ec7f">LayerCraft.RefreshInfo</a></div><div class="ttdeci">void RefreshInfo()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00215">LayerCraft.cs:215</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerCraft_8cs_source.html#l00215">RefreshInfo()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00534">wcount</a>.</p>
 
 </div>
 </div>
@@ -950,6 +1567,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00186">186</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>    {</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">IsActive</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#ac3a94b99896802674865cfd6e4109e80">HasNoGoal</a>)</div>
+<div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            base.CancelInvoke();</div>
+<div class="line"><span class="lineno">  191</span>            this.Close();</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="ttc" id="aclassActionMode_html_aa93beefaa4b319252e06c7314fb7789f"><div class="ttname"><a href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">ActionMode.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00076">ActionMode.cs:77</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a94b99896802674865cfd6e4109e80"><div class="ttname"><a href="classChara.html#ac3a94b99896802674865cfd6e4109e80">Chara.HasNoGoal</a></div><div class="ttdeci">bool HasNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00840">Chara.cs:841</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l01699">ActionMode.Adv</a>, <a class="el" href="Chara_8cs_source.html#l00841">Chara.HasNoGoal</a>, <a class="el" href="ActionMode_8cs_source.html#l00077">ActionMode.IsActive</a>, and <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>.</p>
 
 </div>
 </div>
@@ -968,6 +1596,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00516">516</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>.</p>
+
 </div>
 </div>
 <a id="ad3cbc6109f18dad594ff51268cc95d65" name="ad3cbc6109f18dad594ff51268cc95d65"></a>
@@ -983,6 +1613,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00514">514</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>.</p>
 
 </div>
 </div>
@@ -1000,6 +1632,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00498">498</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00373">RefreshTrackButton()</a>.</p>
+
 </div>
 </div>
 <a id="ad26c25208ddb5134b0976d46d8d55ea4" name="ad26c25208ddb5134b0976d46d8d55ea4"></a>
@@ -1015,6 +1649,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00488">488</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00083">OnClickCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00031">OnKill()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
 
 </div>
 </div>
@@ -1064,6 +1700,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00482">482</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00024">OnAfterInit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
+
 </div>
 </div>
 <a id="af59eb0c0779bfd775bf4c4c227b28f01" name="af59eb0c0779bfd775bf4c4c227b28f01"></a>
@@ -1096,6 +1734,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00500">500</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00157">GetReqIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00083">OnClickCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00412">RefreshInputNum()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>.</p>
+
 </div>
 </div>
 <a id="a12e4d944e822dfcfdc7c12313dc8417f" name="a12e4d944e822dfcfdc7c12313dc8417f"></a>
@@ -1120,6 +1760,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00478">478</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00197">DropdownGrid.Activate()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00616">GameUpdater.ThingUpdater.FixedUpdate()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00068">ItemQuestTracker.OnClickClose()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00427">ButtonGrid.SetIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00285">DropdownGrid.TrySelect()</a>, and <a class="el" href="Thing_8cs_source.html#l00893">Thing.WriteNote()</a>.</p>
+
 </div>
 </div>
 <a id="a28f974f0e2cc915fc90efd1fe87d57d4" name="a28f974f0e2cc915fc90efd1fe87d57d4"></a>
@@ -1136,6 +1778,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00536">536</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00215">RefreshInfo()</a>.</p>
+
 </div>
 </div>
 <a id="a809491b0edebcdcf9ec5b030ae5c1b2c" name="a809491b0edebcdcf9ec5b030ae5c1b2c"></a>
@@ -1151,6 +1795,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00480">480</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00144">GetTargets()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>.</p>
 
 </div>
 </div>
@@ -1184,6 +1830,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00504">504</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>.</p>
+
 </div>
 </div>
 <a id="a6cbfe72fb77ede0b4fc5670284a1c131" name="a6cbfe72fb77ede0b4fc5670284a1c131"></a>
@@ -1207,6 +1855,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00510">510</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00031">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -1240,6 +1890,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00490">490</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00473">OnClickExamine()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="ab5e07c48629867a9702a48ca6ab944c7" name="ab5e07c48629867a9702a48ca6ab944c7"></a>
@@ -1271,6 +1923,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00492">492</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00157">GetReqIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00083">OnClickCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00412">RefreshInputNum()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00422">RefreshProduct()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00373">RefreshTrackButton()</a>.</p>
 
 </div>
 </div>
@@ -1376,6 +2030,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00496">496</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
+
 </div>
 </div>
 <a id="a4386b51227db7b5df134e1ad958542b1" name="a4386b51227db7b5df134e1ad958542b1"></a>
@@ -1391,6 +2047,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00494">494</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00350">RefreshRecipe()</a>.</p>
 
 </div>
 </div>
@@ -1408,6 +2066,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00518">518</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00045">SetFactory()</a>.</p>
+
 </div>
 </div>
 <a id="aa789257447344bd6cd45922ea1b37685" name="aa789257447344bd6cd45922ea1b37685"></a>
@@ -1423,6 +2083,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00530">530</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>.</p>
 
 </div>
 </div>
@@ -1448,6 +2110,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00534">534</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00195">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a3772d67653eaf06f4fae2e97a36ea595" name="a3772d67653eaf06f4fae2e97a36ea595"></a>
@@ -1463,6 +2127,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00506">506</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00167">OnCompleteCraft()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00229">RefreshCategory()</a>.</p>
 
 </div>
 </div>
@@ -1488,15 +2154,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerCraft_8cs_source.html#l00512">512</a> of file <a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00031">OnKill()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerCraft_8cs_source.html">LayerCraft.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerCraft.html">LayerCraft</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

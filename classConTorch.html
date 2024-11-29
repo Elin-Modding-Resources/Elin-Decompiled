@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classConTorch.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -441,6 +461,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCondition.html#a015b13a793a19cc841bd0aa0240b49da">Condition</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ConTorch_8cs_source.html#l00018">18</a> of file <a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (radius &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">pcLights</a>.torch.radius)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            radius = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">pcLights</a>.torch.radius;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">float</span> num = 0.01f * EClass.Colors.pcLights.torch.color.a * 256f;</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseCondition.html#a442deea97e0f5dd17b09429b2a96d047">power</a> &lt; num)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_property" href="classBaseCondition.html#a442deea97e0f5dd17b09429b2a96d047">power</a> = num;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_a442deea97e0f5dd17b09429b2a96d047"><div class="ttname"><a href="classBaseCondition.html#a442deea97e0f5dd17b09429b2a96d047">BaseCondition.power</a></div><div class="ttdeci">int power</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00020">BaseCondition.cs:21</a></div></div>
+<div class="ttc" id="aclassColorProfile_html_ad794ca5f8619b29104babd2086e47717"><div class="ttname"><a href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">ColorProfile.pcLights</a></div><div class="ttdeci">ColorProfile.PCLights pcLights</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00084">ColorProfile.cs:84</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a0803a3f94e106e7d65031cb5c9f23ebe"><div class="ttname"><a href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">EClass.Colors</a></div><div class="ttdeci">static ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00127">EClass.cs:128</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, <a class="el" href="ColorProfile_8cs_source.html#l00084">ColorProfile.pcLights</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00021">BaseCondition.power</a>.</p>
 
 </div>
 </div>
@@ -471,6 +508,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCondition.html#a9ea3c0a24f956bfe6b953fcfa6141aa7">Condition</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ConTorch_8cs_source.html#l00031">31</a> of file <a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        fov.r += (byte)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">pcLights</a>.torch.color.r * 16f);</div>
+<div class="line"><span class="lineno">   34</span>        fov.g += (byte)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">pcLights</a>.torch.color.g * 16f);</div>
+<div class="line"><span class="lineno">   35</span>        fov.b += (byte)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ad794ca5f8619b29104babd2086e47717">pcLights</a>.torch.color.b * 16f);</div>
+<div class="line"><span class="lineno">   36</span>        fov.r += 4;</div>
+<div class="line"><span class="lineno">   37</span>        fov.g += 3;</div>
+<div class="line"><span class="lineno">   38</span>        fov.b += 2;</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00084">ColorProfile.pcLights</a>.</p>
 
 </div>
 </div>
@@ -500,6 +547,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">BaseCondition</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ConTorch_8cs_source.html#l00041">41</a> of file <a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        this.<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a7e5b0731b914744e0e7063b19afe5938">RecalculateFOV</a>();</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">currentHotItem</a>.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a>;</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_class" href="classTraitToolTorch.html">TraitToolTorch</a> traitToolTorch = ((thing != <span class="keyword">null</span>) ? thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> : <span class="keyword">null</span>) as <a class="code hl_class" href="classTraitToolTorch.html">TraitToolTorch</a>;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (traitToolTorch != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            traitToolTorch.<a class="code hl_function" href="classTraitToolTorch.html#ab5053d615ebf7c39f0aa6eb4667cd935">RefreshRenderer</a>();</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00557">BaseCondition.cs:557</a></div></div>
+<div class="ttc" id="aclassCard_html_a7e5b0731b914744e0e7063b19afe5938"><div class="ttname"><a href="classCard.html#a7e5b0731b914744e0e7063b19afe5938">Card.RecalculateFOV</a></div><div class="ttdeci">void RecalculateFOV()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05729">Card.cs:5729</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassHotItem_html_af7819bb69ba852812357b84aca4ed137"><div class="ttname"><a href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">HotItem.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="HotItem_8cs_source.html#l00081">HotItem.cs:82</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ab5b3e5e408eccafc485520970da759f2"><div class="ttname"><a href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">Player.currentHotItem</a></div><div class="ttdeci">HotItem currentHotItem</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01539">Player.cs:1539</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitToolTorch_html"><div class="ttname"><a href="classTraitToolTorch.html">TraitToolTorch</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitToolTorch_8cs_source.html#l00003">TraitToolTorch.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitToolTorch_html_ab5053d615ebf7c39f0aa6eb4667cd935"><div class="ttname"><a href="classTraitToolTorch.html#ab5053d615ebf7c39f0aa6eb4667cd935">TraitToolTorch.RefreshRenderer</a></div><div class="ttdeci">override void RefreshRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="TraitToolTorch_8cs_source.html#l00018">TraitToolTorch.cs:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01539">Player.currentHotItem</a>, <a class="el" href="BaseCondition_8cs_source.html#l00557">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l05729">Card.RecalculateFOV()</a>, <a class="el" href="TraitToolTorch_8cs_source.html#l00018">TraitToolTorch.RefreshRenderer()</a>, <a class="el" href="HotItem_8cs_source.html#l00082">HotItem.Thing</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -529,6 +596,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03">BaseCondition</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ConTorch_8cs_source.html#l00013">13</a> of file <a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        this.<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a7e5b0731b914744e0e7063b19afe5938">RecalculateFOV</a>();</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00557">BaseCondition.owner</a>, and <a class="el" href="Card_8cs_source.html#l05729">Card.RecalculateFOV()</a>.</p>
 
 </div>
 </div>
@@ -554,16 +626,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ConTorch_8cs_source.html#l00005">5</a> of file <a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ActTorch&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ConTorch_8cs_source.html">ConTorch.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classConTorch.html">ConTorch</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAttbMain.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -378,7 +398,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34">Element</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AttbMain_8cs_source.html#l00033">33</a> of file <a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a465ebd185ab893747dd40dcfcfc3e584" name="a465ebd185ab893747dd40dcfcfc3e584"></a>
@@ -407,6 +430,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classElement.html#a1053d168a082abeb846bc292994a01e0">Element</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AttbMain_8cs_source.html#l00038">38</a> of file <a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = this.<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = this.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>;</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> - 70 &gt; 1)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != 79)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                chara.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            chara.<a class="code hl_function" href="classCard.html#a84191d98263a3defe53d9ee3ebed5241">SetDirtyWeight</a>();</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassCard_html_a84191d98263a3defe53d9ee3ebed5241"><div class="ttname"><a href="classCard.html#a84191d98263a3defe53d9ee3ebed5241">Card.SetDirtyWeight</a></div><div class="ttdeci">void SetDirtyWeight()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01876">Card.cs:1876</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01505">Chara.cs:1505</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_addf95d9ae04f1109456cc8c2d962d287"><div class="ttname"><a href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">ElementContainer.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00020">ElementContainer.cs:21</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00892">Element.2.cs:892</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ElementContainer_8cs_source.html#l00021">ElementContainer.Chara</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="Element_82_8cs_source.html#l00892">Element.owner</a>, <a class="el" href="Chara_8cs_source.html#l01505">Chara.SetDirtySpeed()</a>, and <a class="el" href="Card_8cs_source.html#l01876">Card.SetDirtyWeight()</a>.</p>
 
 </div>
 </div>
@@ -432,7 +483,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AttbMain_8cs_source.html#l00005">5</a> of file <a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a821624e4c43b6671d53b803eb927889e" name="a821624e4c43b6671d53b803eb927889e"></a>
@@ -456,7 +513,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AttbMain_8cs_source.html#l00013">13</a> of file <a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (this.<span class="keywordtype">id</span> != 79 || this.<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   18</span>            {</div>
+<div class="line"><span class="lineno">   19</span>                <span class="keywordflow">return</span> base.DisplayValue;</div>
+<div class="line"><span class="lineno">   20</span>            }</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_property" href="classChara.html#a351fab8896aac687c2a893fd4afe02fd">Speed</a>;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassChara_html_a351fab8896aac687c2a893fd4afe02fd"><div class="ttname"><a href="classChara.html#a351fab8896aac687c2a893fd4afe02fd">Chara.Speed</a></div><div class="ttdeci">int Speed</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01493">Chara.cs:1494</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a90c7834f8c3ba03b517abc4108099776" name="a90c7834f8c3ba03b517abc4108099776"></a>
@@ -480,16 +548,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AttbMain_8cs_source.html#l00025">25</a> of file <a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> 80;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AttbMain_8cs_source.html">AttbMain.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAttbMain.html">AttbMain</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitScroll.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -689,6 +709,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitScrollStatic.html#a9e01940fa32300d27a385f9c23872960">TraitScrollStatic</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> c.IsPC &amp;&amp; !c.isBlind &amp;&amp; (!EClass._zone.IsUserZone || !this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>);</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassCard_html_a26108155cef3dd565735e6d8e3bc6322"><div class="ttname"><a href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">Card.isNPCProperty</a></div><div class="ttdeci">bool isNPCProperty</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00487">Card.cs:488</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00488">Card.isNPCProperty</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -718,6 +745,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ae871dd13fc2fdff306261be34b481058">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassTraitScroll_html_ac7d1b953cfcde5d9ae85396795ad3d2d"><div class="ttname"><a href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">TraitScroll.source</a></div><div class="ttdeci">virtual SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitScroll_8cs_source.html#l00006">TraitScroll.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitScroll_8cs_source.html#l00007">source</a>.</p>
 
 </div>
 </div>
@@ -747,6 +780,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a465361d0239bbdd1358d35046e4e6c87">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00052">52</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.value != 0)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(this.<a class="code hl_property" href="classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2">MTPValue</a> * (<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.value, 1f);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> base.GetValue();</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassTraitScroll_html_afd7a0040e801c53bac9e70d29fd078e2"><div class="ttname"><a href="classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2">TraitScroll.MTPValue</a></div><div class="ttdeci">virtual float MTPValue</div><div class="ttdef"><b>Definition:</b> <a href="TraitScroll_8cs_source.html#l00031">TraitScroll.cs:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitScroll_8cs_source.html#l00032">MTPValue</a>, and <a class="el" href="TraitScroll_8cs_source.html#l00007">source</a>.</p>
 
 </div>
 </div>
@@ -772,7 +815,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a> == <span class="keyword">null</span> || this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.aliasParent.IsEmpty())</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">return</span> 76;</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[this.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.aliasParent].id;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afd7a0040e801c53bac9e70d29fd078e2" name="afd7a0040e801c53bac9e70d29fd078e2"></a>
@@ -796,6 +852,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> 1f;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitScroll_8cs_source.html#l00052">GetValue()</a>.</p>
 
 </div>
 </div>
@@ -820,6 +884,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="TraitScroll_8cs_source.html#l00014">GetRefElement()</a>, <a class="el" href="TraitScroll_8cs_source.html#l00052">GetValue()</a>, <a class="el" href="TraitToolTalisman_8cs_source.html#l00082">TraitToolTalisman.IsIngredient()</a>, and <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>.</p>
 
 </div>
 </div>
@@ -844,16 +916,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitScroll_8cs_source.html#l00039">39</a> of file <a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitScroll_8cs_source.html">TraitScroll.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitScroll.html">TraitScroll</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

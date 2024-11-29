@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerTitle.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -285,6 +305,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00143">143</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>.<a class="code hl_variable" href="classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1">actor</a>)</div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            UnityEngine.Object.DestroyImmediate(<a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>.<a class="code hl_variable" href="classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1">actor</a>.gameObject);</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html"><div class="ttname"><a href="classLayerTitle.html">LayerTitle</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00005">LayerTitle.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_ab5926caead0fd5d9f966a68f4ffc09d1"><div class="ttname"><a href="classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1">LayerTitle.actor</a></div><div class="ttdeci">static EmbarkActor actor</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00155">LayerTitle.cs:155</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00155">actor</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditBio_8cs_source.html#l00054">LayerEditBio.g__Start()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="Game_8cs_source.html#l00449">Game.StartNewGame()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00040">DramaOutcome.StartNewGame2()</a>.</p>
 
 </div>
 </div>
@@ -312,7 +344,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00138">138</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        this.textIntro.text = IO.LoadText(CorePath.CorePackage.TextData + <span class="stringliteral">&quot;intro.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf2f0d7bae6d928181aa9b634daf21f0" name="aaf2f0d7bae6d928181aa9b634daf21f0"></a>
@@ -339,7 +374,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00044">44</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        this.imageBG.transform.localScale = <span class="keyword">new</span> Vector3(Mathf.Max(1f, 1.7777778f / ((<span class="keywordtype">float</span>)Screen.width / (<span class="keywordtype">float</span>)Screen.height)), 1f, 1f);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac32cf599066d535f06325a7005699bcb" name="ac32cf599066d535f06325a7005699bcb"></a>
@@ -366,6 +404,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00078">78</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(<span class="stringliteral">&quot;LayerAbout&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -393,6 +438,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00073">73</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(<span class="stringliteral">&quot;LayerAnnounce&quot;</span>);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -420,6 +470,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00058">58</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerConfig.html">LayerConfig</a>&gt;();</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassLayerConfig_html"><div class="ttname"><a href="classLayerConfig.html">LayerConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerConfig_8cs_source.html#l00008">LayerConfig.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -447,6 +503,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00049">49</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() is <a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>))</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerLoadGame.html">LayerLoadGame</a>&gt;().<a class="code hl_function" href="classELayer.html#a2086db7728c43bd44b1b9c8361e566fc">Init</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a2086db7728c43bd44b1b9c8361e566fc"><div class="ttname"><a href="classELayer.html#a2086db7728c43bd44b1b9c8361e566fc">ELayer.Init</a></div><div class="ttdeci">sealed override void Init()</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00192">ELayer.cs:192</a></div></div>
+<div class="ttc" id="aclassLayerLoadGame_html"><div class="ttname"><a href="classLayerLoadGame.html">LayerLoadGame</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerLoadGame_8cs_source.html#l00007">LayerLoadGame.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00192">ELayer.Init()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -474,6 +541,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00068">68</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerCredit.html">LayerCredit</a>&gt;();</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassLayerCredit_html"><div class="ttname"><a href="classLayerCredit.html">LayerCredit</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCredit_8cs_source.html#l00003">LayerCredit.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -501,6 +574,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00088">88</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (Application.isEditor)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>.<a class="code hl_variable" href="classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1">actor</a>)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                UnityEngine.Object.DestroyImmediate(<a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>.<a class="code hl_variable" href="classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1">actor</a>.gameObject);</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>&gt;();</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.Quit();</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00155">actor</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -528,6 +617,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00083">83</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleFeedback();</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -555,6 +649,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00063">63</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerMod.html">LayerMod</a>&gt;();</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassLayerMod_html"><div class="ttname"><a href="classLayerMod.html">LayerMod</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00005">LayerMod.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -582,6 +682,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00034">34</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() is <a class="code hl_class" href="classLayerTitle.html">LayerTitle</a>))</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        this.embark = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerEditBio.html">LayerEditBio</a>&gt;();</div>
+<div class="line"><span class="lineno">   41</span>        SoundManager.current.PlayBGM(this.<a class="code hl_property" href="classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f">CurrentTitle</a>.bgm, 0f, 0f);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassLayerEditBio_html"><div class="ttname"><a href="classLayerEditBio.html">LayerEditBio</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerEditBio_8cs_source.html#l00007">LayerEditBio.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_a0da2353de5f7bed6bea271e845f68d3f"><div class="ttname"><a href="classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f">LayerTitle.CurrentTitle</a></div><div class="ttdeci">LayerTitle.TitleType CurrentTitle</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00007">LayerTitle.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00008">CurrentTitle</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -609,6 +721,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        LayerTitle.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   18</span>        this.textVersion.text = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.version.GetText() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>        this.textIntro.text = IO.LoadText(CorePath.CorePackage.TextData + <span class="stringliteral">&quot;intro.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.SetLight(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   21</span>        this.titleActor = Util.Instantiate&lt;Transform&gt;(this.<a class="code hl_variable" href="classLayerTitle.html#af04ccf4e3ee61260bda8840d54f06aa0">titleActor</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_function" href="classLayerTitle.html#a462d5b1c76f51b2c66071b8eff13d7c0">Refresh</a>();</div>
+<div class="line"><span class="lineno">   23</span>        SoundManager.current.PlayBGM(this.<a class="code hl_property" href="classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f">CurrentTitle</a>.bgmTitle, 0f, 0f);</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html_a462d5b1c76f51b2c66071b8eff13d7c0"><div class="ttname"><a href="classLayerTitle.html#a462d5b1c76f51b2c66071b8eff13d7c0">LayerTitle.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00026">LayerTitle.cs:26</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_af04ccf4e3ee61260bda8840d54f06aa0"><div class="ttname"><a href="classLayerTitle.html#af04ccf4e3ee61260bda8840d54f06aa0">LayerTitle.titleActor</a></div><div class="ttdeci">Transform titleActor</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00173">LayerTitle.cs:173</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerTitle_8cs_source.html#l00008">CurrentTitle</a>, <a class="el" href="LayerTitle_8cs_source.html#l00026">Refresh()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00173">titleActor</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -636,6 +761,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00103">103</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>    {</div>
+<div class="line"><span class="lineno">  105</span>        UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classLayerTitle.html#af04ccf4e3ee61260bda8840d54f06aa0">titleActor</a>.gameObject);</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerTitle.html#aab8288dccaee695c2b7d019295c9efd8">embark</a>)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer(this.<a class="code hl_variable" href="classLayerTitle.html#aab8288dccaee695c2b7d019295c9efd8">embark</a>);</div>
+<div class="line"><span class="lineno">  109</span>            UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classLayerTitle.html#aab8288dccaee695c2b7d019295c9efd8">embark</a>);</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.SetLight(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html_aab8288dccaee695c2b7d019295c9efd8"><div class="ttname"><a href="classLayerTitle.html#aab8288dccaee695c2b7d019295c9efd8">LayerTitle.embark</a></div><div class="ttdeci">LayerEditBio embark</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00157">LayerTitle.cs:157</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00157">embark</a>, <a class="el" href="LayerTitle_8cs_source.html#l00173">titleActor</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -663,6 +800,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00026">26</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        this.<a class="code hl_variable" href="classLayerTitle.html#af04ccf4e3ee61260bda8840d54f06aa0">titleActor</a>.GetComponentInChildren&lt;SpriteRenderer&gt;().sprite = this.<a class="code hl_property" href="classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f">CurrentTitle</a>.bg;</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">this</span>.<a class="code hl_variable" href="classLayerTitle.html#a4b621f50cf529c9d4d91b0d7b4cdacdf">uiLight</a>.color = <span class="keyword">this</span>.CurrentTitle.light;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">this</span>.imageFog.color = <span class="keyword">this</span>.CurrentTitle.fog;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">this</span>.OnChangeResolution();</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html_a4b621f50cf529c9d4d91b0d7b4cdacdf"><div class="ttname"><a href="classLayerTitle.html#a4b621f50cf529c9d4d91b0d7b4cdacdf">LayerTitle.uiLight</a></div><div class="ttdeci">Image uiLight</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00175">LayerTitle.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00008">CurrentTitle</a>, <a class="el" href="LayerTitle_8cs_source.html#l00173">titleActor</a>, and <a class="el" href="LayerTitle_8cs_source.html#l00175">uiLight</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00015">OnInit()</a>, and <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
 
 </div>
 </div>
@@ -690,6 +838,34 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00114">114</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_class" href="classLayerEditBio.html">LayerEditBio</a> layer = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerEditBio.html">LayerEditBio</a>&gt;(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (!layer &amp;&amp; SoundManager.current.currentBGM.id != <span class="keyword">this</span>.CurrentTitle.bgmTitle.name)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e">toggle</a>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                this.altTitle = !this.<a class="code hl_variable" href="classLayerTitle.html#a69b5286b5dd2413a246db6f48c62ad81">altTitle</a>;</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>            SoundManager.current.PlayBGM(this.<a class="code hl_property" href="classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f">CurrentTitle</a>.bgmTitle, 0f, 0f);</div>
+<div class="line"><span class="lineno">  124</span>            this.<a class="code hl_function" href="classLayerTitle.html#a462d5b1c76f51b2c66071b8eff13d7c0">Refresh</a>();</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> num = Mathf.Clamp(this.<a class="code hl_variable" href="classLayerTitle.html#a375eac8e2d9cf348052ed5e0c7a0112c">cgBook</a>.alpha + Time.smoothDeltaTime * <span class="keyword">this</span>.speed * (<span class="keywordtype">float</span>)(layer ? -1 : 1), 0f, 1f);</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerTitle.html#a375eac8e2d9cf348052ed5e0c7a0112c">cgBook</a>.alpha != num)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            this.cgBook.alpha = num;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerTitle.html#a3fefd56a71301e18d7e0d21d81db6111">cgBG</a>.alpha != num)</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            this.cgBG.alpha = num;</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        this.ray.enabled = (num == 1f);</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html_a375eac8e2d9cf348052ed5e0c7a0112c"><div class="ttname"><a href="classLayerTitle.html#a375eac8e2d9cf348052ed5e0c7a0112c">LayerTitle.cgBook</a></div><div class="ttdeci">CanvasGroup cgBook</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00165">LayerTitle.cs:165</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_a3fefd56a71301e18d7e0d21d81db6111"><div class="ttname"><a href="classLayerTitle.html#a3fefd56a71301e18d7e0d21d81db6111">LayerTitle.cgBG</a></div><div class="ttdeci">CanvasGroup cgBG</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00167">LayerTitle.cs:167</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_a69b5286b5dd2413a246db6f48c62ad81"><div class="ttname"><a href="classLayerTitle.html#a69b5286b5dd2413a246db6f48c62ad81">LayerTitle.altTitle</a></div><div class="ttdeci">bool altTitle</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00183">LayerTitle.cs:183</a></div></div>
+<div class="ttc" id="aclassLayerTitle_html_a97a98cb92c6b1f6ddbdf9821ec0d5f5e"><div class="ttname"><a href="classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e">LayerTitle.toggle</a></div><div class="ttdeci">bool toggle</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00181">LayerTitle.cs:181</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerTitle_8cs_source.html#l00183">altTitle</a>, <a class="el" href="LayerTitle_8cs_source.html#l00167">cgBG</a>, <a class="el" href="LayerTitle_8cs_source.html#l00165">cgBook</a>, <a class="el" href="LayerTitle_8cs_source.html#l00008">CurrentTitle</a>, <a class="el" href="LayerTitle_8cs_source.html#l00026">Refresh()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00181">toggle</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -716,6 +892,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00155">155</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00143">KillActor()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00009">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00024">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00088">OnClickExit()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00031">DramaOutcome.StartNewGame()</a>, <a class="el" href="Game_8cs_source.html#l00449">Game.StartNewGame()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00040">DramaOutcome.StartNewGame2()</a>.</p>
+
 </div>
 </div>
 <a id="a69b5286b5dd2413a246db6f48c62ad81" name="a69b5286b5dd2413a246db6f48c62ad81"></a>
@@ -731,6 +909,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00183">183</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
 
 </div>
 </div>
@@ -748,6 +928,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00167">167</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a375eac8e2d9cf348052ed5e0c7a0112c" name="a375eac8e2d9cf348052ed5e0c7a0112c"></a>
@@ -764,6 +946,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00165">165</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
+
 </div>
 </div>
 <a id="aab8288dccaee695c2b7d019295c9efd8" name="aab8288dccaee695c2b7d019295c9efd8"></a>
@@ -779,6 +963,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00157">157</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00103">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -916,6 +1102,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00173">173</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00015">OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00103">OnKill()</a>, and <a class="el" href="LayerTitle_8cs_source.html#l00026">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a97a98cb92c6b1f6ddbdf9821ec0d5f5e" name="a97a98cb92c6b1f6ddbdf9821ec0d5f5e"></a>
@@ -931,6 +1119,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00181">181</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
 
 </div>
 </div>
@@ -980,6 +1170,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00175">175</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00026">Refresh()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -1004,6 +1196,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerTitle_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classLayerTitle.html#ad96c4c89c4ace6609e8eca7508d057f9">types</a>[this.altTitle ? 1 : 0];</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassLayerTitle_html_ad96c4c89c4ace6609e8eca7508d057f9"><div class="ttname"><a href="classLayerTitle.html#ad96c4c89c4ace6609e8eca7508d057f9">LayerTitle.types</a></div><div class="ttdeci">LayerTitle.TitleType[] types</div><div class="ttdef"><b>Definition:</b> <a href="LayerTitle_8cs_source.html#l00151">LayerTitle.cs:151</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00034">OnClickStart()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00015">OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00026">Refresh()</a>, and <a class="el" href="LayerTitle_8cs_source.html#l00114">Update()</a>.</p>
 
 </div>
 </div>
@@ -1011,9 +1212,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="LayerTitle_8cs_source.html">LayerTitle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerTitle.html">LayerTitle</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

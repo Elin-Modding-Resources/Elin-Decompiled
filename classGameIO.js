@@ -1,0 +1,26 @@
+var classGameIO =
+[
+    [ "ClearTemp", "classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5", null ],
+    [ "DeleteEmptyGameFolders", "classGameIO.html#a9853a34749e8ff6c2d32785b84c41d26", null ],
+    [ "DeleteGame", "classGameIO.html#a1f8ae083ef5af0cbe850d847837faa70", null ],
+    [ "FileExist", "classGameIO.html#a27aa24b123d30d3e619d12a06fdcf8ac", null ],
+    [ "GetGameList", "classGameIO.html#ae74458c2df2444d74127d927a4af828f", null ],
+    [ "GetNewId", "classGameIO.html#a33c393c075f356bdad0d427c1924e0ff", null ],
+    [ "LoadFile< T >", "classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d", null ],
+    [ "LoadGame", "classGameIO.html#a92a5d9cd5c2a8978e95777109c36413a", null ],
+    [ "MakeBackup", "classGameIO.html#afe3f94aea9b1a5099d199bc6f7fe44fa", null ],
+    [ "MakeDirectories", "classGameIO.html#a5a32d937302452461eb4f738f58a2cee", null ],
+    [ "ResetTemp", "classGameIO.html#aef1620f3b5ef554fe1f19364ae46f71d", null ],
+    [ "SaveFile", "classGameIO.html#a01833daf0214d812ec629467fa441202", null ],
+    [ "SaveGame", "classGameIO.html#a5422e6cfccdb3834126b407f625294b7", null ],
+    [ "UpdateGameIndex", "classGameIO.html#a4fb7c20872f155827f9b2ada4b215202", null ],
+    [ "formatting", "classGameIO.html#a59fefb2d671a202312d30e9d1ba03140", null ],
+    [ "jsReadGame", "classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8", null ],
+    [ "jsWriteGame", "classGameIO.html#a472e51294a31ce7706182f850aabaa5e", null ],
+    [ "compressSave", "classGameIO.html#a1d658b737ddb54b05671416aa1321217", null ],
+    [ "NumBackup", "classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d", null ],
+    [ "pathBackup", "classGameIO.html#a3b6ca166437e1f0b3eddb69766c503c4", null ],
+    [ "pathCurrentSave", "classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f", null ],
+    [ "pathSaveRoot", "classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5", null ],
+    [ "pathTemp", "classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b", null ]
+];

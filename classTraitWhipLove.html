@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitWhipLove.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -674,6 +694,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitWhipLove_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitWhipLove_8cs_source.html">TraitWhipLove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        this.owner.c_charges = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(7) + 3;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
 
 </div>
 </div>
@@ -704,6 +731,66 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitWhipLove_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitWhipLove_8cs_source.html">TraitWhipLove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>(<span class="keyword">false</span>).ForEach(delegate(<a class="code hl_class" href="classCard.html">Card</a> a)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_class" href="classChara.html">Chara</a> c = a.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>;</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (c == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            List&lt;Hobby&gt; list = c.<a class="code hl_function" href="classChara.html#aa9c12fff82a04d21ef2fe2bf769c8b3c">ListWorks</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   29</span>            List&lt;Hobby&gt; list2 = c.<a class="code hl_function" href="classChara.html#a8eeb3d71a9ef2293dd43a8025082d29e">ListHobbies</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classActPlan.html#a94c625121e2dd85d04edfcf19a1277dc">IsSelfOrNeighbor</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(a) &amp;&amp; c.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> != <span class="keyword">null</span> &amp;&amp; list.Count &gt; 0 &amp;&amp; list2.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                p.TrySetAct(<span class="stringliteral">&quot;actWhip&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   33</span>                {</div>
+<div class="line"><span class="lineno">   34</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_whip&quot;</span>, c, this.owner, null, null);</div>
+<div class="line"><span class="lineno">   35</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_scope2&quot;</span>, c, null, null);</div>
+<div class="line"><span class="lineno">   36</span>                    c.Talk(<span class="stringliteral">&quot;pervert2&quot;</span>, null, null, false);</div>
+<div class="line"><span class="lineno">   37</span>                    EClass.pc.PlaySound(<span class="stringliteral">&quot;whip&quot;</span>, 1f, true);</div>
+<div class="line"><span class="lineno">   38</span>                    c.PlayAnime(AnimeID.Shiver, false);</div>
+<div class="line"><span class="lineno">   39</span>                    c.OnInsulted();</div>
+<div class="line"><span class="lineno">   40</span>                    if (this is TraitWhipInterest)</div>
+<div class="line"><span class="lineno">   41</span>                    {</div>
+<div class="line"><span class="lineno">   42</span>                        c.bio.idInterest = EClass.rnd(Enum.GetNames(typeof(Interest)).Length);</div>
+<div class="line"><span class="lineno">   43</span>                        c.SetRandomTone();</div>
+<div class="line"><span class="lineno">   44</span>                        c.SetRandomTalk();</div>
+<div class="line"><span class="lineno">   45</span>                        EClass.pc.Say(<span class="stringliteral">&quot;use_whip4&quot;</span>, c, null, null);</div>
+<div class="line"><span class="lineno">   46</span>                    }</div>
+<div class="line"><span class="lineno">   47</span>                    else</div>
+<div class="line"><span class="lineno">   48</span>                    {</div>
+<div class="line"><span class="lineno">   49</span>                        c.RerollHobby(true);</div>
+<div class="line"><span class="lineno">   50</span>                        Hobby hobby = c.ListWorks(false)[0];</div>
+<div class="line"><span class="lineno">   51</span>                        Hobby hobby2 = c.ListHobbies(false)[0];</div>
+<div class="line"><span class="lineno">   52</span>                        EClass.pc.Say(<span class="stringliteral">&quot;use_whip2&quot;</span>, c, hobby.Name, hobby2.Name);</div>
+<div class="line"><span class="lineno">   53</span>                        c.RefreshWorkElements(c.homeBranch.elements);</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                    this.owner.ModCharge(-1, false);</div>
+<div class="line"><span class="lineno">   56</span>                    if (this.owner.c_charges &lt;= 0)</div>
+<div class="line"><span class="lineno">   57</span>                    {</div>
+<div class="line"><span class="lineno">   58</span>                        EClass.pc.Say(<span class="stringliteral">&quot;spellbookCrumble&quot;</span>, this.owner, null, null);</div>
+<div class="line"><span class="lineno">   59</span>                        this.owner.Destroy();</div>
+<div class="line"><span class="lineno">   60</span>                    }</div>
+<div class="line"><span class="lineno">   61</span>                    return false;</div>
+<div class="line"><span class="lineno">   62</span>                }, c, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        });</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00797">ActPlan.cs:797</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a94c625121e2dd85d04edfcf19a1277dc"><div class="ttname"><a href="classActPlan.html#a94c625121e2dd85d04edfcf19a1277dc">ActPlan.IsSelfOrNeighbor</a></div><div class="ttdeci">bool IsSelfOrNeighbor</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00017">ActPlan.cs:18</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00556">Chara.cs:557</a></div></div>
+<div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00714">Chara.cs:714</a></div></div>
+<div class="ttc" id="aclassChara_html_a8eeb3d71a9ef2293dd43a8025082d29e"><div class="ttname"><a href="classChara.html#a8eeb3d71a9ef2293dd43a8025082d29e">Chara.ListHobbies</a></div><div class="ttdeci">List&lt; Hobby &gt; ListHobbies(bool useMemberType=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07990">Chara.cs:7990</a></div></div>
+<div class="ttc" id="aclassChara_html_aa9c12fff82a04d21ef2fe2bf769c8b3c"><div class="ttname"><a href="classChara.html#aa9c12fff82a04d21ef2fe2bf769c8b3c">Chara.ListWorks</a></div><div class="ttdeci">List&lt; Hobby &gt; ListWorks(bool useMemberType=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07963">Chara.cs:7963</a></div></div>
+<div class="ttc" id="aclassChara_html_ad5985ee50790374ee8bc017ffa5c3da8"><div class="ttname"><a href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">Chara.homeBranch</a></div><div class="ttdeci">FactionBranch homeBranch</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00917">Chara.cs:918</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassPoint_html_a256787e4a6e7438db25289f56e618463"><div class="ttname"><a href="classPoint.html#a256787e4a6e7438db25289f56e618463">Point.ListCards</a></div><div class="ttdeci">List&lt; Card &gt; ListCards(bool includeMasked=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01112">Point.cs:1112</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00714">Chara.CanSee()</a>, <a class="el" href="Card_8cs_source.html#l02016">Card.Chara</a>, <a class="el" href="Chara_8cs_source.html#l00918">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00557">Chara.IsPCFaction</a>, <a class="el" href="ActPlan_8cs_source.html#l00018">ActPlan.IsSelfOrNeighbor</a>, <a class="el" href="Point_8cs_source.html#l01112">Point.ListCards()</a>, <a class="el" href="Chara_8cs_source.html#l07990">Chara.ListHobbies()</a>, <a class="el" href="Chara_8cs_source.html#l07963">Chara.ListWorks()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, and <a class="el" href="ActPlan_8cs_source.html#l00797">ActPlan.pos</a>.</p>
 
 </div>
 </div>
@@ -729,16 +816,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitWhipLove_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitWhipLove_8cs_source.html">TraitWhipLove.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitWhipLove_8cs_source.html">TraitWhipLove.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitWhipLove.html">TraitWhipLove</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

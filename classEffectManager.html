@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classEffectManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -195,6 +215,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00006">6</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>.Add(e);</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassEffectManager_html_ae6de3323bdb74af958a58a41e822d8a4"><div class="ttname"><a href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">EffectManager.list</a></div><div class="ttdeci">List&lt; Effect &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="EffectManager_8cs_source.html#l00033">EffectManager.cs:33</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00033">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00112">Effect.Activate()</a>.</p>
 
 </div>
 </div>
@@ -222,6 +250,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00016">16</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>.Count - 1; i &gt;= 0; i--)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>[i].Kill();</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00033">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00217">Scene.Clear()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00144">BaseGameScreen.Draw()</a>.</p>
 
 </div>
 </div>
@@ -250,6 +288,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00011">11</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>.Remove(e);</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00033">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00171">Effect.Kill()</a>.</p>
 
 </div>
 </div>
@@ -277,6 +322,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00024">24</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>.Count - 1; i &gt;= 0; i--)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4">list</a>[i].OnUpdate();</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00033">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00144">BaseGameScreen.Draw()</a>.</p>
 
 </div>
 </div>
@@ -294,6 +349,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00037">37</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00015">Effect.Get()</a>, <a class="el" href="Effect_8cs_source.html#l00020">Effect.Get&lt; T &gt;()</a>, and <a class="el" href="Effect_8cs_source.html#l00171">Effect.Kill()</a>.</p>
 
 </div>
 </div>
@@ -319,6 +376,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00035">35</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00217">Scene.Clear()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00144">BaseGameScreen.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="ae6de3323bdb74af958a58a41e822d8a4" name="ae6de3323bdb74af958a58a41e822d8a4"></a>
@@ -335,15 +394,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EffectManager_8cs_source.html#l00033">33</a> of file <a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EffectManager_8cs_source.html#l00006">Add()</a>, <a class="el" href="EffectManager_8cs_source.html#l00016">KillAll()</a>, <a class="el" href="EffectManager_8cs_source.html#l00011">Remove()</a>, and <a class="el" href="EffectManager_8cs_source.html#l00024">UpdateEffects()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="EffectManager_8cs_source.html">EffectManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classEffectManager.html">EffectManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

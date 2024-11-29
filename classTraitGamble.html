@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitGamble.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -686,6 +706,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628">TraitSlotMachine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00069">69</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> this.owner.IsInstalled &amp;&amp; (this.Electricity &lt;= 0 || this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>);</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00476">Card.isOn</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitGamble_8cs_source.html#l00029">IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -726,6 +755,61 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aea1c46b47612fab453627904323922c1">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (dist &gt; 1)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65">CanUse</a>(c))</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6">idSound</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(this.<a class="code hl_property" href="classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6">idSound</a>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950">idTalk</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            EClass.player.forceTalk = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   46</span>            c.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(this.<a class="code hl_property" href="classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950">idTalk</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec">idMsg</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(this.<a class="code hl_property" href="classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec">idMsg</a>, c, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordtype">int</span> a = (1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10)) * (flag ? 1 : -1);</div>
+<div class="line"><span class="lineno">   56</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(a, <span class="stringliteral">&quot;money&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (flag &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20) == 0)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(1, <span class="stringliteral">&quot;casino_coin&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.happy, 0f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00003">Emo.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06060">Card.cs:6060</a></div></div>
+<div class="ttc" id="aclassCard_html_a9381cbefabfa31e73a65c0046c3256d9"><div class="ttname"><a href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">Card.ShowEmo</a></div><div class="ttdeci">void ShowEmo(Emo _emo=Emo.none, float duration=0f, bool skipSame=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05482">Card.cs:5482</a></div></div>
+<div class="ttc" id="aclassCard_html_a96f39d6bde48b6e50faef3539a3b46c5"><div class="ttname"><a href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">Card.ModCurrency</a></div><div class="ttdeci">void ModCurrency(int a, string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03792">Card.cs:3792</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassTraitGamble_html_a27e68a9871ec72c0a534f2d5c5461950"><div class="ttname"><a href="classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950">TraitGamble.idTalk</a></div><div class="ttdeci">virtual string idTalk</div><div class="ttdef"><b>Definition:</b> <a href="TraitGamble_8cs_source.html#l00021">TraitGamble.cs:22</a></div></div>
+<div class="ttc" id="aclassTraitGamble_html_a6aeb957f18a603d9f09b23c5ed1fb2ec"><div class="ttname"><a href="classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec">TraitGamble.idMsg</a></div><div class="ttdeci">virtual string idMsg</div><div class="ttdef"><b>Definition:</b> <a href="TraitGamble_8cs_source.html#l00005">TraitGamble.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitGamble_html_abd2ca5ba5edde04b8f272b48475998a6"><div class="ttname"><a href="classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6">TraitGamble.idSound</a></div><div class="ttdeci">virtual string idSound</div><div class="ttdef"><b>Definition:</b> <a href="TraitGamble_8cs_source.html#l00013">TraitGamble.cs:14</a></div></div>
+<div class="ttc" id="aclassTraitGamble_html_ac3e2d3c5207f76802bd45515b0ed4d65"><div class="ttname"><a href="classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65">TraitGamble.CanUse</a></div><div class="ttdeci">override bool CanUse(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitGamble_8cs_source.html#l00069">TraitGamble.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitGamble_8cs_source.html#l00069">CanUse()</a>, <a class="el" href="TraitGamble_8cs_source.html#l00006">idMsg</a>, <a class="el" href="TraitGamble_8cs_source.html#l00014">idSound</a>, <a class="el" href="TraitGamble_8cs_source.html#l00022">idTalk</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l03792">Card.ModCurrency()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l05482">Card.ShowEmo()</a>, and <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitGamble_8cs_source.html#l00074">OnUse()</a>.</p>
 
 </div>
 </div>
@@ -758,6 +842,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756">TraitSlotMachine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00074">74</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d">IdleUse</a>(c, 0);</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassTraitGamble_html_a866837dcdc624afd4f6866cf9bb2601d"><div class="ttname"><a href="classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d">TraitGamble.IdleUse</a></div><div class="ttdeci">override bool IdleUse(Chara c, int dist)</div><div class="ttdef"><b>Definition:</b> <a href="TraitGamble_8cs_source.html#l00029">TraitGamble.cs:29</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitGamble_8cs_source.html#l00029">IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -783,6 +873,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitGamble_8cs_source.html#l00029">IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -807,6 +905,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec">idMsg</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitGamble_8cs_source.html#l00029">IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -831,6 +937,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGamble_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitGamble_8cs_source.html#l00029">IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -838,9 +952,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitGamble_8cs_source.html">TraitGamble.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitGamble.html">TraitGamble</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

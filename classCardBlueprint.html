@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCardBlueprint.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -162,6 +182,20 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00005">5</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCardBlueprint.html">CardBlueprint</a></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <a class="code hl_variable" href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">rarity</a> = <a class="code hl_variable" href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">rarity</a>,</div>
+<div class="line"><span class="lineno">   10</span>            <a class="code hl_variable" href="classCardBlueprint.html#a63ef7b435ebc07ba29e026fcc17bda77">lv</a> = <a class="code hl_variable" href="classCardBlueprint.html#a63ef7b435ebc07ba29e026fcc17bda77">lv</a></div>
+<div class="line"><span class="lineno">   11</span>        };</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassCardBlueprint_html"><div class="ttname"><a href="classCardBlueprint.html">CardBlueprint</a></div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00003">CardBlueprint.cs:4</a></div></div>
+<div class="ttc" id="aclassCardBlueprint_html_a63ef7b435ebc07ba29e026fcc17bda77"><div class="ttname"><a href="classCardBlueprint.html#a63ef7b435ebc07ba29e026fcc17bda77">CardBlueprint.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00036">CardBlueprint.cs:36</a></div></div>
+<div class="ttc" id="aclassCardBlueprint_html_aae9006f10bc122eeeb61657b748762dc"><div class="ttname"><a href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">CardBlueprint.rarity</a></div><div class="ttdeci">Rarity rarity</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00046">CardBlueprint.cs:46</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardBlueprint_8cs_source.html#l00036">lv</a>, and <a class="el" href="CardBlueprint_8cs_source.html#l00046">rarity</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00577">Game.AddAdventurers()</a>.</p>
 
 </div>
 </div>
@@ -190,6 +224,11 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00014">14</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        CardBlueprint.current = _bp;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00577">Game.AddAdventurers()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00197">RecipeCard.Craft()</a>, <a class="el" href="ThingGen_8cs_source.html#l00368">ThingGen.g__SetRarity()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00510">TaskHarvest.HarvestThing()</a>, <a class="el" href="ActEffect_8cs_source.html#l00369">ActEffect.ProcAt()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00037">CoreDebug.QuickStart()</a>, <a class="el" href="Chara_8cs_source.html#l04472">Chara.SetEQQuality()</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00019">SetNormalRarity()</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00028">SetRarity()</a>, <a class="el" href="Card_8cs_source.html#l04692">Card.SpawnLoot()</a>, <a class="el" href="Zone_8cs_source.html#l02856">Zone.SpawnMob()</a>, and <a class="el" href="Zone_8cs_source.html#l02770">Zone.TryGenerateBigDaddy()</a>.</p>
 
 </div>
 </div>
@@ -218,6 +257,20 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00019">19</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classCardBlueprint.html">CardBlueprint</a>.<a class="code hl_function" href="classCardBlueprint.html#a18b60d165d8c871b70de666860c7489f">Set</a>(<span class="keyword">new</span> <a class="code hl_class" href="classCardBlueprint.html">CardBlueprint</a></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_variable" href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">rarity</a> = <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Normal,</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classCardBlueprint.html#a6a72edcc32f89f8786201ce4fe73d3eb">fixedMat</a> = <a class="code hl_variable" href="classCardBlueprint.html#a6a72edcc32f89f8786201ce4fe73d3eb">fixedMat</a></div>
+<div class="line"><span class="lineno">   25</span>        });</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a></div><div class="ttdeci">Rarity</div><div class="ttdef"><b>Definition:</b> <a href="Rarity_8cs_source.html#l00003">Rarity.cs:4</a></div></div>
+<div class="ttc" id="aclassCardBlueprint_html_a18b60d165d8c871b70de666860c7489f"><div class="ttname"><a href="classCardBlueprint.html#a18b60d165d8c871b70de666860c7489f">CardBlueprint.Set</a></div><div class="ttdeci">static void Set(CardBlueprint _bp)</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00014">CardBlueprint.cs:14</a></div></div>
+<div class="ttc" id="aclassCardBlueprint_html_a6a72edcc32f89f8786201ce4fe73d3eb"><div class="ttname"><a href="classCardBlueprint.html#a6a72edcc32f89f8786201ce4fe73d3eb">CardBlueprint.fixedMat</a></div><div class="ttdeci">bool fixedMat</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00050">CardBlueprint.cs:50</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardBlueprint_8cs_source.html#l00050">fixedMat</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00046">rarity</a>, and <a class="el" href="CardBlueprint_8cs_source.html#l00014">Set()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02804">Trait.g__Add()</a>, <a class="el" href="InvOwner_8cs_source.html#l00282">InvOwner.Init()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00158">DramaOutcome.QuestDefense_0()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -246,6 +299,16 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00028">28</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classCardBlueprint.html">CardBlueprint</a>.<a class="code hl_function" href="classCardBlueprint.html#a18b60d165d8c871b70de666860c7489f">Set</a>(<span class="keyword">new</span> <a class="code hl_class" href="classCardBlueprint.html">CardBlueprint</a></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">rarity</a> = q</div>
+<div class="line"><span class="lineno">   33</span>        });</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardBlueprint_8cs_source.html#l00046">rarity</a>, and <a class="el" href="CardBlueprint_8cs_source.html#l00014">Set()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, and <a class="el" href="ActEffect_8cs_source.html#l02362">ActEffect.Wish()</a>.</p>
 
 </div>
 </div>
@@ -272,6 +335,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00058">58</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>.</p>
+
 </div>
 </div>
 <a id="ae751097c93b90fdb6ed66e444c731365" name="ae751097c93b90fdb6ed66e444c731365"></a>
@@ -287,6 +352,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00048">48</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00152">Thing.OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -313,10 +380,11 @@ Static Public Attributes</h2></td></tr>
 <div class="line">    {</div>
 <div class="line">        <a class="code hl_variable" href="classCardBlueprint.html#a924bbc6ea71658b7418fef929a8388e0">tryLevelMatTier</a> = <span class="keyword">true</span></div>
 <div class="line">    }</div>
-<div class="ttc" id="aclassCardBlueprint_html"><div class="ttname"><a href="classCardBlueprint.html">CardBlueprint</a></div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00003">CardBlueprint.cs:4</a></div></div>
 <div class="ttc" id="aclassCardBlueprint_html_a924bbc6ea71658b7418fef929a8388e0"><div class="ttname"><a href="classCardBlueprint.html#a924bbc6ea71658b7418fef929a8388e0">CardBlueprint.tryLevelMatTier</a></div><div class="ttdeci">bool tryLevelMatTier</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00052">CardBlueprint.cs:52</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00060">60</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l04472">Chara.SetEQQuality()</a>.</p>
 
 </div>
 </div>
@@ -341,6 +409,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00056">56</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>.</p>
 
 </div>
 </div>
@@ -367,9 +437,10 @@ Static Public Attributes</h2></td></tr>
 <div class="line">    {</div>
 <div class="line">        <a class="code hl_variable" href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">rarity</a> = Rarity.Legendary</div>
 <div class="line">    }</div>
-<div class="ttc" id="aclassCardBlueprint_html_aae9006f10bc122eeeb61657b748762dc"><div class="ttname"><a href="classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc">CardBlueprint.rarity</a></div><div class="ttdeci">Rarity rarity</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00046">CardBlueprint.cs:46</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00065">65</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00037">CoreDebug.QuickStart()</a>.</p>
 
 </div>
 </div>
@@ -387,6 +458,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00050">50</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>, and <a class="el" href="CardBlueprint_8cs_source.html#l00019">SetNormalRarity()</a>.</p>
+
 </div>
 </div>
 <a id="a39278374ff1a44bf3aa68889bbfd4ef9" name="a39278374ff1a44bf3aa68889bbfd4ef9"></a>
@@ -402,6 +475,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00054">54</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>.</p>
 
 </div>
 </div>
@@ -419,6 +494,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00044">44</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>.</p>
+
 </div>
 </div>
 <a id="a5392f064be403cde895740d58db4c916" name="a5392f064be403cde895740d58db4c916"></a>
@@ -434,6 +511,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00042">42</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01135">Chara.OnBeforeCreate()</a>.</p>
 
 </div>
 </div>
@@ -451,6 +530,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00040">40</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01135">Chara.OnBeforeCreate()</a>.</p>
+
 </div>
 </div>
 <a id="a63ef7b435ebc07ba29e026fcc17bda77" name="a63ef7b435ebc07ba29e026fcc17bda77"></a>
@@ -466,6 +547,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00036">36</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CardBlueprint_8cs_source.html#l00005">Chara()</a>, <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>, and <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -483,6 +566,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00038">38</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00152">Thing.OnCreate()</a>.</p>
+
 </div>
 </div>
 <a id="aae9006f10bc122eeeb61657b748762dc" name="aae9006f10bc122eeeb61657b748762dc"></a>
@@ -498,6 +583,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CardBlueprint_8cs_source.html#l00046">46</a> of file <a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CardBlueprint_8cs_source.html#l00005">Chara()</a>, <a class="el" href="Card_8cs_source.html#l02813">Card.Create()</a>, <a class="el" href="Thing_8cs_source.html#l00152">Thing.OnCreate()</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00019">SetNormalRarity()</a>, and <a class="el" href="CardBlueprint_8cs_source.html#l00028">SetRarity()</a>.</p>
 
 </div>
 </div>
@@ -521,9 +608,13 @@ Static Public Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="CardBlueprint_8cs_source.html">CardBlueprint.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCardBlueprint.html">CardBlueprint</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

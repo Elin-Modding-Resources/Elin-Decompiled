@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCellDetail.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -152,6 +172,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00034">34</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count == 1)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Remove(t);</div>
+<div class="line"><span class="lineno">   41</span>        this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Insert(0, t);</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">while</span> (num &lt; this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count - 1 &amp;&amp; <span class="keyword">this</span>.things[num].IsInstalled)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            t.stackOrder = num;</div>
+<div class="line"><span class="lineno">   46</span>            num++;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassCellDetail_html_a9a165bd9e433245e9357e517e7f13591"><div class="ttname"><a href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">CellDetail.things</a></div><div class="ttdeci">List&lt; Thing &gt; things</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00078">CellDetail.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CellDetail_8cs_source.html#l00078">things</a>.</p>
 
 </div>
 </div>
@@ -180,6 +217,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00050">50</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count == 1)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">while</span> (num2 &lt; this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count - 1 &amp;&amp; <span class="keyword">this</span>.things[num2].IsInstalled)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            num = num2 + 1;</div>
+<div class="line"><span class="lineno">   61</span>            num2++;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (num &gt;= this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            num--;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Remove(t);</div>
+<div class="line"><span class="lineno">   68</span>        this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Insert(num, t);</div>
+<div class="line"><span class="lineno">   69</span>        t.stackOrder = num;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CellDetail_8cs_source.html#l00078">things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03596">Card.SetPlaceState()</a>.</p>
 
 </div>
 </div>
@@ -207,6 +268,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00014">14</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classCellDetail.html">CellDetail</a>.<a class="code hl_variable" href="classCellDetail.html#ab93b5481ef7204ceef9a07869875d84e">cache</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classCellDetail.html">CellDetail</a>.<a class="code hl_variable" href="classCellDetail.html#ab93b5481ef7204ceef9a07869875d84e">cache</a>.Pop();</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classCellDetail.html">CellDetail</a>.<a class="code hl_variable" href="classCellDetail.html#a0c83e039148f9e11becc2db189d7da99">count</a>++;</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCellDetail.html">CellDetail</a>();</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassCellDetail_html"><div class="ttname"><a href="classCellDetail.html">CellDetail</a></div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00004">CellDetail.cs:5</a></div></div>
+<div class="ttc" id="aclassCellDetail_html_a0c83e039148f9e11becc2db189d7da99"><div class="ttname"><a href="classCellDetail.html#a0c83e039148f9e11becc2db189d7da99">CellDetail.count</a></div><div class="ttdeci">static int count</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00072">CellDetail.cs:72</a></div></div>
+<div class="ttc" id="aclassCellDetail_html_ab93b5481ef7204ceef9a07869875d84e"><div class="ttname"><a href="classCellDetail.html#ab93b5481ef7204ceef9a07869875d84e">CellDetail.cache</a></div><div class="ttdeci">static Stack&lt; CellDetail &gt; cache</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00076">CellDetail.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CellDetail_8cs_source.html#l00076">cache</a>, and <a class="el" href="CellDetail_8cs_source.html#l00072">count</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01560">Cell.GetOrCreateDetail()</a>.</p>
 
 </div>
 </div>
@@ -234,6 +310,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00024">24</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>.Count &gt; 0 || <span class="keyword">this</span>.charas.Count &gt; 0 || <span class="keyword">this</span>.area != <span class="keyword">null</span> || <span class="keyword">this</span>.footmark != <span class="keyword">null</span> || <span class="keyword">this</span>.designation != <span class="keyword">null</span> || <span class="keyword">this</span>.anime != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classCellDetail.html">CellDetail</a>.<a class="code hl_variable" href="classCellDetail.html#ab93b5481ef7204ceef9a07869875d84e">cache</a>.Push(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CellDetail_8cs_source.html#l00076">cache</a>, and <a class="el" href="CellDetail_8cs_source.html#l00078">things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01569">Cell.TryDespawnDetail()</a>.</p>
 
 </div>
 </div>
@@ -252,6 +340,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00088">88</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Point_8cs_source.html#l01348">Point.Animate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00082">CharaRenderer.UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="ad422ba0bf60318811c6963551e2b3015" name="ad422ba0bf60318811c6963551e2b3015"></a>
@@ -267,6 +357,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00082">82</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Area_8cs_source.html#l00041">Area.AddPoint()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="PointTarget_8cs_source.html#l00019">PointTarget.Update()</a>.</p>
 
 </div>
 </div>
@@ -292,6 +384,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00076">76</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CellDetail_8cs_source.html#l00014">Spawn()</a>, <a class="el" href="CellDetail_8cs_source.html#l00024">TryDespawn()</a>, and <a class="el" href="WidgetDebug_8cs_source.html#l00047">WidgetDebug.UpdateText()</a>.</p>
+
 </div>
 </div>
 <a id="ac04d3d1c5fdcfbed4dded9d827273161" name="ac04d3d1c5fdcfbed4dded9d827273161"></a>
@@ -307,6 +401,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00080">80</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01577">Cell.AddCard()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="Point_8cs_source.html#l01171">Point.FindChara()</a>, <a class="el" href="Point_8cs_source.html#l00403">Point.FirstVisibleChara()</a>, <a class="el" href="Chara_8cs_source.html#l02060">Chara.IsEnemyOnPath()</a>, <a class="el" href="Point_8cs_source.html#l01112">Point.ListCards()</a>, <a class="el" href="Point_8cs_source.html#l01217">Point.ListCharas()</a>, <a class="el" href="Map_8cs_source.html#l02342">Map.ListCharasInCircle()</a>, <a class="el" href="Point_8cs_source.html#l01246">Point.ListCharasInNeighbor()</a>, <a class="el" href="Point_8cs_source.html#l01400">Point.ListInspectorTargets()</a>, <a class="el" href="Point_8cs_source.html#l01136">Point.ListVisibleCards()</a>, <a class="el" href="Point_8cs_source.html#l01230">Point.ListVisibleCharas()</a>, <a class="el" href="Point_8cs_source.html#l00893">Point.ListWitnesses()</a>, <a class="el" href="Cell_8cs_source.html#l01593">Cell.RemoveCard()</a>, <a class="el" href="PointTarget_8cs_source.html#l00019">PointTarget.Update()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -332,6 +428,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00072">72</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CellDetail_8cs_source.html#l00014">Spawn()</a>, and <a class="el" href="WidgetDebug_8cs_source.html#l00047">WidgetDebug.UpdateText()</a>.</p>
+
 </div>
 </div>
 <a id="a7b07584d994ec50ed5f78d809c2edd2a" name="a7b07584d994ec50ed5f78d809c2edd2a"></a>
@@ -348,6 +446,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00086">86</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="AM__Build_8cs_source.html#l00087">AM_Build.HitResultOnDesignation()</a>, <a class="el" href="Point_8cs_source.html#l01400">Point.ListInspectorTargets()</a>, <a class="el" href="DesignationList_8cs_source.html#l00013">DesignationList&lt; T &gt;.OnAdd()</a>, <a class="el" href="AM__Build_8cs_source.html#l00333">AM_Build.OnProcessTiles()</a>, <a class="el" href="InspectGroupBlock_8cs_source.html#l00013">InspectGroupBlock.OnSetActions()</a>, <a class="el" href="InspectGroupObj_8cs_source.html#l00013">InspectGroupObj.OnSetActions()</a>, <a class="el" href="DesignationList_8cs_source.html#l00033">DesignationList&lt; T &gt;.Remove()</a>, and <a class="el" href="PointTarget_8cs_source.html#l00019">PointTarget.Update()</a>.</p>
+
 </div>
 </div>
 <a id="aebf1abf83379c9cedc79252fceeada67" name="aebf1abf83379c9cedc79252fceeada67"></a>
@@ -363,6 +463,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00084">84</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00019">GameDate.AdvanceMin()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="Map_8cs_source.html#l02073">Map.SetFoormark()</a>.</p>
 
 </div>
 </div>
@@ -404,6 +506,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00078">78</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01577">Cell.AddCard()</a>, <a class="el" href="Cell_8cs_source.html#l00741">Cell.CanSuffocate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="Point_8cs_source.html#l01186">Point.FindThing&lt; T &gt;()</a>, <a class="el" href="Cell_8cs_source.html#l01719">Cell.GetSurfaceHeight()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02809">BaseTileMap.GetThingPosition()</a>, <a class="el" href="Cell_8cs_source.html#l01747">Cell.HasZoneStairs()</a>, <a class="el" href="Point_8cs_source.html#l01112">Point.ListCards()</a>, <a class="el" href="Point_8cs_source.html#l01400">Point.ListInspectorTargets()</a>, <a class="el" href="Point_8cs_source.html#l01201">Point.ListThings&lt; T &gt;()</a>, <a class="el" href="Point_8cs_source.html#l01136">Point.ListVisibleCards()</a>, <a class="el" href="CellDetail_8cs_source.html#l00034">MoveThingToBottom()</a>, <a class="el" href="CellDetail_8cs_source.html#l00050">MoveThingToTop()</a>, <a class="el" href="Cell_8cs_source.html#l01202">Cell.Refresh()</a>, <a class="el" href="Cell_8cs_source.html#l01593">Cell.RemoveCard()</a>, <a class="el" href="Cell_8cs_source.html#l01520">Cell.RotateAll()</a>, <a class="el" href="RecipeUpdater_8cs_source.html#l00043">RecipeUpdater.RunRecipe()</a>, <a class="el" href="ActWait_8cs_source.html#l00057">ActWait.Search()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00118">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="Map_8cs_source.html#l01051">Map.TryAddRoom()</a>, <a class="el" href="Zone_8cs_source.html#l02444">Zone.TryAddThing()</a>, <a class="el" href="CellDetail_8cs_source.html#l00024">TryDespawn()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00906">AI_Idle.TryPerformIdleUse()</a>, <a class="el" href="PointTarget_8cs_source.html#l00019">PointTarget.Update()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -428,16 +532,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CellDetail_8cs_source.html#l00006">6</a> of file <a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCellDetail.html">CellDetail</a>();</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="CellDetail_8cs_source.html">CellDetail.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCellDetail.html">CellDetail</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

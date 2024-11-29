@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitDrinkMilkMother.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -708,6 +728,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ad7f13252240393095d363004b6e89347">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitDrinkMilkMother_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitDrinkMilkMother_8cs_source.html">TraitDrinkMilkMother.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1232) &gt; 0)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a>.baby;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a>.none;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a></div><div class="ttdeci">Emo2</div><div class="ttdef"><b>Definition:</b> <a href="Emo2_8cs_source.html#l00003">Emo2.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01964">Card.cs:1964</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01964">Card.Evalue()</a>.</p>
 
 </div>
 </div>
@@ -738,6 +769,112 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTraitDrink.html#ac9316effb1a1788edbd7f22da1483e31">TraitDrink</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitDrinkMilkMother_8cs_source.html#l00024">24</a> of file <a class="el" href="TraitDrinkMilkMother_8cs_source.html">TraitDrinkMilkMother.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1232) &gt; 0)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            c.<a class="code hl_function" href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">SetFeat</a>(1232, c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1232) - 1, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">int</span> uidNext = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a10084b1059eed3027c558c4cbf0afd70">uidNext</a>;</div>
+<div class="line"><span class="lineno">   30</span>            EClass.game.cards.uidNext = 1;</div>
+<div class="line"><span class="lineno">   31</span>            Rand.SetSeed(1);</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classCharaGen.html">CharaGen</a>.<a class="code hl_function" href="classCharaGen.html#aea54439a71ae1fe0a07d3ee4d3084b15">Create</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">c_idRefCard</a>, -1);</div>
+<div class="line"><span class="lineno">   33</span>            chara.<a class="code hl_function" href="classCard.html#a58f06539b1340f90f343bdab15828ad2">SetLv</a>(Mathf.Clamp(5 + <span class="keyword">this</span>.owner.encLV * 5, 1, 20 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(237)));</div>
+<div class="line"><span class="lineno">   34</span>            Rand.SetSeed(-1);</div>
+<div class="line"><span class="lineno">   35</span>            EClass.game.cards.uidNext = uidNext;</div>
+<div class="line"><span class="lineno">   36</span>            Debug.Log(chara.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> + <span class="stringliteral">&quot;/&quot;</span> + chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>.ToString());</div>
+<div class="line"><span class="lineno">   37</span>            List&lt;Element&gt; list = chara.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec">ListBestAttributes</a>();</div>
+<div class="line"><span class="lineno">   38</span>            List&lt;Element&gt; list2 = chara.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319">ListBestSkills</a>();</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">int</span> num = 100;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <a class="code hl_class" href="classElement.html">Element</a> element2 = c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordtype">int</span> num3 = element.ValueWithoutLink * (element2.Potential - element2.<a class="code hl_variable" href="classElement.html#a53a1082def2834d27d06184d57048c93">vTempPotential</a>) / num / 2;</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (num3 &gt; 0)</div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    num2 += num3;</div>
+<div class="line"><span class="lineno">   48</span>                    Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   49</span>                    {</div>
+<div class="line"><span class="lineno">   50</span>                        element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias,</div>
+<div class="line"><span class="lineno">   51</span>                        <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   52</span>                        num3.ToString(),</div>
+<div class="line"><span class="lineno">   53</span>                        <span class="stringliteral">&quot; org:&quot;</span>,</div>
+<div class="line"><span class="lineno">   54</span>                        element.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a>.ToString()</div>
+<div class="line"><span class="lineno">   55</span>                    }));</div>
+<div class="line"><span class="lineno">   56</span>                    c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, num3);</div>
+<div class="line"><span class="lineno">   57</span>                }</div>
+<div class="line"><span class="lineno">   58</span>                num += 50;</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            num = 100;</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element3 <span class="keywordflow">in</span> list2)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <a class="code hl_class" href="classElement.html">Element</a> element4 = c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(element3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (element4 != <span class="keyword">null</span> &amp;&amp; element4.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a> != 0)</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordtype">int</span> num4 = element3.ValueWithoutLink * (element4.Potential - element4.<a class="code hl_variable" href="classElement.html#a53a1082def2834d27d06184d57048c93">vTempPotential</a>) / num / 2;</div>
+<div class="line"><span class="lineno">   67</span>                    <span class="keywordflow">if</span> (num4 &gt; 0)</div>
+<div class="line"><span class="lineno">   68</span>                    {</div>
+<div class="line"><span class="lineno">   69</span>                        Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   70</span>                        {</div>
+<div class="line"><span class="lineno">   71</span>                            element3.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias,</div>
+<div class="line"><span class="lineno">   72</span>                            <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   73</span>                            num4.ToString(),</div>
+<div class="line"><span class="lineno">   74</span>                            <span class="stringliteral">&quot; org:&quot;</span>,</div>
+<div class="line"><span class="lineno">   75</span>                            element3.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a>.ToString()</div>
+<div class="line"><span class="lineno">   76</span>                        }));</div>
+<div class="line"><span class="lineno">   77</span>                        c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(element3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, num4);</div>
+<div class="line"><span class="lineno">   78</span>                    }</div>
+<div class="line"><span class="lineno">   79</span>                    num += 50;</div>
+<div class="line"><span class="lineno">   80</span>                }</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            c.feat += this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1232) == 0)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;grow_adult&quot;</span>, c, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   86</span>                c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;mutation&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   87</span>                c.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;mutation&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;grow_baby&quot;</span>, c, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   92</span>                c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ding_potential&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            c.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;buff&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(237, 100);</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        base.OnDrink(c);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassCardManager_html_a10084b1059eed3027c558c4cbf0afd70"><div class="ttname"><a href="classCardManager.html#a10084b1059eed3027c558c4cbf0afd70">CardManager.uidNext</a></div><div class="ttdeci">int uidNext</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00068">CardManager.cs:68</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a58f06539b1340f90f343bdab15828ad2"><div class="ttname"><a href="classCard.html#a58f06539b1340f90f343bdab15828ad2">Card.SetLv</a></div><div class="ttdeci">Card SetLv(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02987">Card.cs:2987</a></div></div>
+<div class="ttc" id="aclassCard_html_a9c3b6d0fb8ee414aecdd21c21153204b"><div class="ttname"><a href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">Card.encLV</a></div><div class="ttdeci">int encLV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00271">Card.cs:272</a></div></div>
+<div class="ttc" id="aclassCard_html_aa4f63069a839c4050b4d56de4e7918c4"><div class="ttname"><a href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">Card.PlayEffect</a></div><div class="ttdeci">unsafe Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05554">Card.cs:5554</a></div></div>
+<div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02646">Card.cs:2646</a></div></div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00331">Card.cs:332</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassCard_html_afc37a942e92e75a2582c8f35db05dc27"><div class="ttname"><a href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">Card.c_idRefCard</a></div><div class="ttdeci">string c_idRefCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01543">Card.cs:1544</a></div></div>
+<div class="ttc" id="aclassCharaGen_html"><div class="ttname"><a href="classCharaGen.html">CharaGen</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaGen_8cs_source.html#l00003">CharaGen.cs:4</a></div></div>
+<div class="ttc" id="aclassCharaGen_html_aea54439a71ae1fe0a07d3ee4d3084b15"><div class="ttname"><a href="classCharaGen.html#aea54439a71ae1fe0a07d3ee4d3084b15">CharaGen.Create</a></div><div class="ttdeci">static Chara Create(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="CharaGen_8cs_source.html#l00021">CharaGen.cs:21</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a4163c6c48f0cfe608e24a7f317988f1f"><div class="ttname"><a href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">Chara.SetFeat</a></div><div class="ttdeci">void SetFeat(int id, int value=1, bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08874">Chara.cs:8874</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aa35ecf8180a3beb037151361a5b03511"><div class="ttname"><a href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ElementContainer.ModBase</a></div><div class="ttdeci">Element ModBase(int ele, int v)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00435">ElementContainer.cs:435</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aae6af3f16e4db24da44b8d8184ada319"><div class="ttname"><a href="classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319">ElementContainer.ListBestSkills</a></div><div class="ttdeci">List&lt; Element &gt; ListBestSkills()</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00625">ElementContainer.cs:625</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_ac62364ea18c1b7d47a5a843035470bec"><div class="ttname"><a href="classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec">ElementContainer.ListBestAttributes</a></div><div class="ttdeci">List&lt; Element &gt; ListBestAttributes()</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00618">ElementContainer.cs:618</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a1360f9020059a1c35402e1b66e8dfee4"><div class="ttname"><a href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">Element.ValueWithoutLink</a></div><div class="ttdeci">int ValueWithoutLink</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00061">Element.2.cs:62</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassElement_html_a53a1082def2834d27d06184d57048c93"><div class="ttname"><a href="classElement.html#a53a1082def2834d27d06184d57048c93">Element.vTempPotential</a></div><div class="ttdeci">int vTempPotential</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00884">Element.2.cs:884</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01544">Card.c_idRefCard</a>, <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="CharaGen_8cs_source.html#l00021">CharaGen.Create()</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l00272">Card.encLV</a>, <a class="el" href="Card_8cs_source.html#l01964">Card.Evalue()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="ElementContainer_8cs_source.html#l00618">ElementContainer.ListBestAttributes()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00625">ElementContainer.ListBestSkills()</a>, <a class="el" href="Card_8cs_source.html#l00332">Card.LV</a>, <a class="el" href="ElementContainer_8cs_source.html#l00435">ElementContainer.ModBase()</a>, <a class="el" href="Card_8cs_source.html#l02646">Card.ModExp()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05554">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l08874">Chara.SetFeat()</a>, <a class="el" href="Card_8cs_source.html#l02987">Card.SetLv()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="CardManager_8cs_source.html#l00068">CardManager.uidNext</a>, <a class="el" href="Element_82_8cs_source.html#l00062">Element.ValueWithoutLink</a>, and <a class="el" href="Element_82_8cs_source.html#l00884">Element.vTempPotential</a>.</p>
 
 </div>
 </div>
@@ -763,16 +900,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitDrinkMilkMother_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitDrinkMilkMother_8cs_source.html">TraitDrinkMilkMother.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitDrinkMilkMother_8cs_source.html">TraitDrinkMilkMother.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitDrinkMilkMother.html">TraitDrinkMilkMother</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

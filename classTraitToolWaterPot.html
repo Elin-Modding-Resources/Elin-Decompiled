@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitToolWaterPot.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -675,6 +695,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitToolWaterPot_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitToolWaterPot_8cs_source.html">TraitToolWaterPot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>(<span class="stringliteral">&quot;void&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05374">Card.cs:5374</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05374">Card.Dye()</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -705,6 +732,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aed664cfcbe19bd9b7cb288461852ad46">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitToolWaterPot_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitToolWaterPot_8cs_source.html">TraitToolWaterPot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a4ddecad46d2106bafaf9fb132b7ab73f">c_dyeMat</a> != 0)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            s = <span class="stringliteral">&quot;_of&quot;</span>.lang(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a3ac3391a64b0a37408b1cbebc16e71df">DyeMat</a>.GetName(), s, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassCard_html_a3ac3391a64b0a37408b1cbebc16e71df"><div class="ttname"><a href="classCard.html#a3ac3391a64b0a37408b1cbebc16e71df">Card.DyeMat</a></div><div class="ttdeci">SourceMaterial.Row DyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01755">Card.cs:1756</a></div></div>
+<div class="ttc" id="aclassCard_html_a4ddecad46d2106bafaf9fb132b7ab73f"><div class="ttname"><a href="classCard.html#a4ddecad46d2106bafaf9fb132b7ab73f">Card.c_dyeMat</a></div><div class="ttdeci">int c_dyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01063">Card.cs:1064</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01064">Card.c_dyeMat</a>, <a class="el" href="Card_8cs_source.html#l01756">Card.DyeMat</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -730,7 +767,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolWaterPot_8cs_source.html#l00018">18</a> of file <a class="el" href="TraitToolWaterPot_8cs_source.html">TraitToolWaterPot.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a99af700fd2dd72219f3753ce5a29ceed" name="a99af700fd2dd72219f3753ce5a29ceed"></a>
@@ -754,6 +797,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolWaterPot_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitToolWaterPot_8cs_source.html">TraitToolWaterPot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 20 + this.owner.material.hardness * 2;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00306">HotItemHeld.TrySetToolAct()</a>.</p>
 
 </div>
 </div>
@@ -761,9 +812,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitToolWaterPot_8cs_source.html">TraitToolWaterPot.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitToolWaterPot.html">TraitToolWaterPot</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

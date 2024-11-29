@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceJob.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -125,7 +145,34 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceJob_1_1Row.html">SourceJob.Row</a></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">   11</span>            name_JP = SourceData.GetString(1),</div>
+<div class="line"><span class="lineno">   12</span>            name = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   13</span>            playable = SourceData.GetInt(3),</div>
+<div class="line"><span class="lineno">   14</span>            STR = SourceData.GetInt(4),</div>
+<div class="line"><span class="lineno">   15</span>            END = SourceData.GetInt(5),</div>
+<div class="line"><span class="lineno">   16</span>            DEX = SourceData.GetInt(6),</div>
+<div class="line"><span class="lineno">   17</span>            PER = SourceData.GetInt(7),</div>
+<div class="line"><span class="lineno">   18</span>            LER = SourceData.GetInt(8),</div>
+<div class="line"><span class="lineno">   19</span>            WIL = SourceData.GetInt(9),</div>
+<div class="line"><span class="lineno">   20</span>            MAG = SourceData.GetInt(10),</div>
+<div class="line"><span class="lineno">   21</span>            CHA = SourceData.GetInt(11),</div>
+<div class="line"><span class="lineno">   22</span>            SPD = SourceData.GetInt(12),</div>
+<div class="line"><span class="lineno">   23</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(14, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   24</span>            weapon = SourceData.GetStringArray(15),</div>
+<div class="line"><span class="lineno">   25</span>            equip = SourceData.GetString(16),</div>
+<div class="line"><span class="lineno">   26</span>            domain = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(17, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   27</span>            detail_JP = SourceData.GetString(18),</div>
+<div class="line"><span class="lineno">   28</span>            detail = SourceData.GetString(19)</div>
+<div class="line"><span class="lineno">   29</span>        };</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00645">Core.cs:645</a></div></div>
+<div class="ttc" id="aclassSourceJob_1_1Row_html"><div class="ttname"><a href="classSourceJob_1_1Row.html">SourceJob.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceJob_8cs_source.html#l00055">SourceJob.cs:56</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afbe3722e6f4118a9c953c004859539d1" name="afbe3722e6f4118a9c953c004859539d1"></a>
@@ -152,6 +199,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00037">37</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> row in <span class="keyword">this</span>.rows)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            Dictionary&lt;int, int&gt; dictionary = row.elementMap = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">GetElementMap</a>(row.elements);</div>
+<div class="line"><span class="lineno">   42</span>            dictionary[70] = row.STR;</div>
+<div class="line"><span class="lineno">   43</span>            dictionary[71] = row.END;</div>
+<div class="line"><span class="lineno">   44</span>            dictionary[72] = row.DEX;</div>
+<div class="line"><span class="lineno">   45</span>            dictionary[73] = row.PER;</div>
+<div class="line"><span class="lineno">   46</span>            dictionary[74] = row.LER;</div>
+<div class="line"><span class="lineno">   47</span>            dictionary[75] = row.WIL;</div>
+<div class="line"><span class="lineno">   48</span>            dictionary[76] = row.MAG;</div>
+<div class="line"><span class="lineno">   49</span>            dictionary[77] = row.CHA;</div>
+<div class="line"><span class="lineno">   50</span>            dictionary[79] = row.SPD;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a7a35d5e595e6d1c73365f84fa7c37cc0"><div class="ttname"><a href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">Element.GetElementMap</a></div><div class="ttdeci">static Dictionary&lt; int, int &gt; GetElementMap(int[] list)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00404">Element.2.cs:404</a></div></div>
+<div class="ttc" id="aclassSourceJob_html"><div class="ttname"><a href="classSourceJob.html">SourceJob</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceJob_8cs_source.html#l00004">SourceJob.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00404">Element.GetElementMap()</a>.</p>
 
 </div>
 </div>
@@ -180,16 +247,24 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00032">32</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        this.map[r.<a class="code hl_variable" href="classSourceJob_1_1Row.html#abe015f10b8c2cc32b9c16e76df617eef">id</a>] = r;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassSourceJob_1_1Row_html_abe015f10b8c2cc32b9c16e76df617eef"><div class="ttname"><a href="classSourceJob_1_1Row.html#abe015f10b8c2cc32b9c16e76df617eef">SourceJob.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceJob_8cs_source.html#l00081">SourceJob.cs:81</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceJob.html">SourceJob</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

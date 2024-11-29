@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classInt3.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -133,7 +153,9 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00041">41</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7999a3f6f599f75199221bff863f43b" name="ab7999a3f6f599f75199221bff863f43b"></a>
@@ -177,6 +199,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00045">45</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_function" href="classInt3.html#a5678165276bd214d0b121c64dabd5529">Set</a>(_x, _y, _z);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassInt3_html_a5678165276bd214d0b121c64dabd5529"><div class="ttname"><a href="classInt3.html#a5678165276bd214d0b121c64dabd5529">Int3.Set</a></div><div class="ttdeci">void Set(int _x, int _y, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Int3_8cs_source.html#l00055">Int3.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Int3_8cs_source.html#l00055">Set()</a>.</p>
 
 </div>
 </div>
@@ -221,6 +249,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00050">50</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_function" href="classInt3.html#a5678165276bd214d0b121c64dabd5529">Set</a>(_x, _y, _z);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Int3_8cs_source.html#l00055">Set()</a>.</p>
 
 </div>
 </div>
@@ -266,6 +299,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00062">62</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[0] = (int)_x;</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[1] = (int)_y;</div>
+<div class="line"><span class="lineno">   66</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[2] = (int)_z;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassInt3_html_a11c334ae27b281ea32a8c54eca06e226"><div class="ttname"><a href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">Int3.i</a></div><div class="ttdeci">int[] i</div><div class="ttdef"><b>Definition:</b> <a href="Int3_8cs_source.html#l00069">Int3.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Int3_8cs_source.html#l00069">i</a>.</p>
 
 </div>
 </div>
@@ -310,6 +351,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00055">55</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[0] = _x;</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[1] = _y;</div>
+<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[2] = _z;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Int3_8cs_source.html#l00069">i</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Int3_8cs_source.html#l00045">Int3()</a>.</p>
 
 </div>
 </div>
@@ -327,6 +377,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00069">69</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Int3_8cs_source.html#l00055">Set()</a>.</p>
 
 </div>
 </div>
@@ -352,6 +404,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00005">5</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[0];</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[0] = value;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00604">BaseGameScreen.Focus()</a>.</p>
 
 </div>
 </div>
@@ -376,6 +440,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00017">17</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[1];</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[1] = value;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00604">BaseGameScreen.Focus()</a>.</p>
 
 </div>
 </div>
@@ -400,6 +476,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Int3_8cs_source.html#l00029">29</a> of file <a class="el" href="Int3_8cs_source.html">Int3.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[2];</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.<a class="code hl_variable" href="classInt3.html#a11c334ae27b281ea32a8c54eca06e226">i</a>[2] = value;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00604">BaseGameScreen.Focus()</a>.</p>
 
 </div>
 </div>
@@ -407,9 +495,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="Int3_8cs_source.html">Int3.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classInt3.html">Int3</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

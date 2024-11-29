@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTwoDLaserPack_1_1LineBasedLaser.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceTwoDLaserPack.html">TwoDLaserPack</a></li><li class="navelem"><a class="el" href="classTwoDLaserPack_1_1LineBasedLaser.html">LineBasedLaser</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -211,6 +227,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00021">21</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            this.hitSparkEmission = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c">hitSparkParticleSystem</a>.emission;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_adf2f8345db94eb4f90c5a67c2e7ac51c"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c">TwoDLaserPack.LineBasedLaser.hitSparkParticleSystem</a></div><div class="ttdeci">ParticleSystem hitSparkParticleSystem</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00208">LineBasedLaser.cs:208</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00208">TwoDLaserPack.LineBasedLaser.hitSparkParticleSystem</a>.</p>
 
 </div>
 </div>
@@ -249,6 +271,21 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00092">92</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            this.waitingForTriggerTime = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (this.<a class="code hl_event" href="classTwoDLaserPack_1_1LineBasedLaser.html#a4ce72d62db9d505aa988bdeb8a326eb6">OnLaserHitTriggered</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                this.<a class="code hl_event" href="classTwoDLaserPack_1_1LineBasedLaser.html#a4ce72d62db9d505aa988bdeb8a326eb6">OnLaserHitTriggered</a>(hit);</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(triggerInterval);</div>
+<div class="line"><span class="lineno">  100</span>            this.waitingForTriggerTime = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>            yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a4ce72d62db9d505aa988bdeb8a326eb6"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a4ce72d62db9d505aa988bdeb8a326eb6">TwoDLaserPack.LineBasedLaser.OnLaserHitTriggered</a></div><div class="ttdeci">LineBasedLaser.LaserHitTriggerHandler OnLaserHitTriggered</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00009">LineBasedLaser.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00009">TwoDLaserPack.LineBasedLaser.OnLaserHitTriggered</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +331,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00035">35</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d176050c08c5635142bcb6349b24b11" name="a8d176050c08c5635142bcb6349b24b11"></a>
@@ -321,6 +360,17 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00026">26</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.gameObjectCached = base.gameObject;</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetVertexCount(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7">laserArcSegments</a>);</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a1d5d2cdcc89564bb83789307b851baa7"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7">TwoDLaserPack.LineBasedLaser.laserArcSegments</a></div><div class="ttdeci">int laserArcSegments</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00198">LineBasedLaser.cs:198</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a844909125da7c530c430b9c2c808f021"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a></div><div class="ttdeci">LineRenderer laserLineRendererArc</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00194">LineBasedLaser.cs:194</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00198">TwoDLaserPack.LineBasedLaser.laserArcSegments</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00194">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a>.</p>
 
 </div>
 </div>
@@ -359,6 +409,25 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00177">177</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>        {</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7">laserArcSegments</a>; i++)</div>
+<div class="line"><span class="lineno">  180</span>            {</div>
+<div class="line"><span class="lineno">  181</span>                <span class="keywordtype">float</span> y = Mathf.Clamp(Mathf.Sin((<span class="keywordtype">float</span>)i + Time.time * UnityEngine.Random.Range(0.5f, 1.3f)), <span class="keyword">this</span>.laserArcMaxYDown, <span class="keyword">this</span>.laserArcMaxYUp);</div>
+<div class="line"><span class="lineno">  182</span>                Vector2 v = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)i * 1.2f, y);</div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">if</span> (useHitPoint &amp;&amp; i == this.laserArcSegments - 1)</div>
+<div class="line"><span class="lineno">  184</span>                {</div>
+<div class="line"><span class="lineno">  185</span>                    this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetPosition(i, <span class="keyword">new</span> Vector2(distancePoint, 0f));</div>
+<div class="line"><span class="lineno">  186</span>                }</div>
+<div class="line"><span class="lineno">  187</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  188</span>                {</div>
+<div class="line"><span class="lineno">  189</span>                    this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetPosition(i, v);</div>
+<div class="line"><span class="lineno">  190</span>                }</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00198">TwoDLaserPack.LineBasedLaser.laserArcSegments</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00194">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
 
 </div>
 </div>
@@ -387,6 +456,40 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00118">118</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordtype">float</span> num = Vector2.Distance(hit.point, <span class="keyword">this</span>.laserLineRenderer.transform.position);</div>
+<div class="line"><span class="lineno">  121</span>            this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70">laserLineRenderer</a>.SetPosition(1, <span class="keyword">new</span> Vector2(num, 0f));</div>
+<div class="line"><span class="lineno">  122</span>            this.laserTextureXScale = this.startLaserTextureXScale * num;</div>
+<div class="line"><span class="lineno">  123</span>            this.laserLineRenderer.material.mainTextureScale = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f">laserTextureXScale</a>, 1f);</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d">useArc</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    this.laserLineRendererArc.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordtype">int</span> vertexCount = Mathf.Abs((<span class="keywordtype">int</span>)num);</div>
+<div class="line"><span class="lineno">  131</span>                this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetVertexCount(vertexCount);</div>
+<div class="line"><span class="lineno">  132</span>                this.laserArcSegments = vertexCount;</div>
+<div class="line"><span class="lineno">  133</span>                this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286">SetLaserArcVertices</a>(num, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                this.laserLineRendererArc.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c">hitSparkParticleSystem</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                this.hitSparkParticleSystem.transform.position = hit.point;</div>
+<div class="line"><span class="lineno">  142</span>                this.hitSparkEmission.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a0926ddea7fc1f2d60ed2530d9fcf7e4d"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d">TwoDLaserPack.LineBasedLaser.useArc</a></div><div class="ttdeci">bool useArc</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00230">LineBasedLaser.cs:230</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_aa840fac1dd8bd5775d1b2e95cc7cfb8f"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f">TwoDLaserPack.LineBasedLaser.laserTextureXScale</a></div><div class="ttdeci">float laserTextureXScale</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00238">LineBasedLaser.cs:238</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ab52544ca33f66e98cafe5d03d8f2df70"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70">TwoDLaserPack.LineBasedLaser.laserLineRenderer</a></div><div class="ttdeci">LineRenderer laserLineRenderer</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00196">LineBasedLaser.cs:196</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ac14fb00d8e542f511522ea115387a286"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286">TwoDLaserPack.LineBasedLaser.SetLaserArcVertices</a></div><div class="ttdeci">void SetLaserArcVertices(float distancePoint, bool useHitPoint)</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00177">LineBasedLaser.cs:177</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00208">TwoDLaserPack.LineBasedLaser.hitSparkParticleSystem</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00196">TwoDLaserPack.LineBasedLaser.laserLineRenderer</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00194">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00238">TwoDLaserPack.LineBasedLaser.laserTextureXScale</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00177">TwoDLaserPack.LineBasedLaser.SetLaserArcVertices()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00230">TwoDLaserPack.LineBasedLaser.useArc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -415,6 +518,20 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00104">104</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            this.laserActive = enabledStatus;</div>
+<div class="line"><span class="lineno">  107</span>            this.laserLineRenderer.enabled = enabledStatus;</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                this.laserLineRendererArc.enabled = enabledStatus;</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c">hitSparkParticleSystem</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                this.hitSparkEmission.enabled = enabledStatus;</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00208">TwoDLaserPack.LineBasedLaser.hitSparkParticleSystem</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00194">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a>.</p>
 
 </div>
 </div>
@@ -442,6 +559,40 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00146">146</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70">laserLineRenderer</a>.SetPosition(1, <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7">laserArcSegments</a>, 0f));</div>
+<div class="line"><span class="lineno">  149</span>            this.laserTextureXScale = this.startLaserTextureXScale * (float)this.laserArcSegments;</div>
+<div class="line"><span class="lineno">  150</span>            this.laserLineRenderer.material.mainTextureScale = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f">laserTextureXScale</a>, 1f);</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d">useArc</a>)</div>
+<div class="line"><span class="lineno">  152</span>            {</div>
+<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  154</span>                {</div>
+<div class="line"><span class="lineno">  155</span>                    this.laserLineRendererArc.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  156</span>                }</div>
+<div class="line"><span class="lineno">  157</span>                this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetVertexCount(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff">startLaserSegmentLength</a>);</div>
+<div class="line"><span class="lineno">  158</span>                this.laserArcSegments = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff">startLaserSegmentLength</a>;</div>
+<div class="line"><span class="lineno">  159</span>                this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286">SetLaserArcVertices</a>(0f, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    this.laserLineRendererArc.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  166</span>                }</div>
+<div class="line"><span class="lineno">  167</span>                this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021">laserLineRendererArc</a>.SetVertexCount(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff">startLaserSegmentLength</a>);</div>
+<div class="line"><span class="lineno">  168</span>                this.laserArcSegments = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff">startLaserSegmentLength</a>;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c">hitSparkParticleSystem</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                this.hitSparkEmission.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  173</span>                this.hitSparkParticleSystem.transform.position = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)this.laserArcSegments, base.transform.position.y);</div>
+<div class="line"><span class="lineno">  174</span>            }</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ad8aafe5b1642b7610bfcc2db0df7f9ff"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff">TwoDLaserPack.LineBasedLaser.startLaserSegmentLength</a></div><div class="ttdeci">int startLaserSegmentLength</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00242">LineBasedLaser.cs:242</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00208">TwoDLaserPack.LineBasedLaser.hitSparkParticleSystem</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00198">TwoDLaserPack.LineBasedLaser.laserArcSegments</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00196">TwoDLaserPack.LineBasedLaser.laserLineRenderer</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00194">TwoDLaserPack.LineBasedLaser.laserLineRendererArc</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00238">TwoDLaserPack.LineBasedLaser.laserTextureXScale</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00177">TwoDLaserPack.LineBasedLaser.SetLaserArcVertices()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00242">TwoDLaserPack.LineBasedLaser.startLaserSegmentLength</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00230">TwoDLaserPack.LineBasedLaser.useArc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -469,6 +620,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00011">11</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            this.startLaserTextureXScale = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70">laserLineRenderer</a>.material.mainTextureScale.x;</div>
+<div class="line"><span class="lineno">   14</span>            this.startLaserSegmentLength = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7">laserArcSegments</a>;</div>
+<div class="line"><span class="lineno">   15</span>            this.laserLineRenderer.sortingLayerName = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1ea8840dd370b7fa04b9cb817b1741c8">sortLayer</a>;</div>
+<div class="line"><span class="lineno">   16</span>            this.laserLineRenderer.sortingOrder = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a720fb0a1784a15645b3e77efc9598330">sortOrder</a>;</div>
+<div class="line"><span class="lineno">   17</span>            this.laserLineRendererArc.sortingLayerName = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a1ea8840dd370b7fa04b9cb817b1741c8">sortLayer</a>;</div>
+<div class="line"><span class="lineno">   18</span>            this.laserLineRendererArc.sortingOrder = this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a720fb0a1784a15645b3e77efc9598330">sortOrder</a>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a1ea8840dd370b7fa04b9cb817b1741c8"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a1ea8840dd370b7fa04b9cb817b1741c8">TwoDLaserPack.LineBasedLaser.sortLayer</a></div><div class="ttdeci">string sortLayer</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00226">LineBasedLaser.cs:226</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a720fb0a1784a15645b3e77efc9598330"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a720fb0a1784a15645b3e77efc9598330">TwoDLaserPack.LineBasedLaser.sortOrder</a></div><div class="ttdeci">int sortOrder</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00228">LineBasedLaser.cs:228</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00198">TwoDLaserPack.LineBasedLaser.laserArcSegments</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00196">TwoDLaserPack.LineBasedLaser.laserLineRenderer</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00226">TwoDLaserPack.LineBasedLaser.sortLayer</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00228">TwoDLaserPack.LineBasedLaser.sortOrder</a>.</p>
 
 </div>
 </div>
@@ -496,6 +659,73 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00039">39</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a77bfc745f4860f765f3ea173f1566e9c">gameObjectCached</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a35e7be9768153b841847b258c8ea7174">laserActive</a>)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                this.laserLineRenderer.material.mainTextureOffset = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ac4ad369585782f0ecae9eac897ca3da7">laserTextureOffset</a>, 0f);</div>
+<div class="line"><span class="lineno">   44</span>                this.laserTextureOffset -= Time.deltaTime * this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869">laserTexOffsetSpeed</a>;</div>
+<div class="line"><span class="lineno">   45</span>                RaycastHit2D raycastHit2D;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a2a712607246f623104e30eff6222f53a">laserRotationEnabled</a> &amp;&amp; this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a4919990d33459f76a445effa0ae3e7a3">targetGo</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    Vector3 vector = this.targetGo.transform.position - this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a77bfc745f4860f765f3ea173f1566e9c">gameObjectCached</a>.transform.position;</div>
+<div class="line"><span class="lineno">   49</span>                    this.laserAngle = Mathf.Atan2(vector.y, vector.x);</div>
+<div class="line"><span class="lineno">   50</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a7d0f3430efd983f6587838fb6dca79d3">laserAngle</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">   51</span>                    {</div>
+<div class="line"><span class="lineno">   52</span>                        this.laserAngle = 6.2831855f + this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a7d0f3430efd983f6587838fb6dca79d3">laserAngle</a>;</div>
+<div class="line"><span class="lineno">   53</span>                    }</div>
+<div class="line"><span class="lineno">   54</span>                    <span class="keywordtype">float</span> angle = this.laserAngle * 57.29578f;</div>
+<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a8ca8e25b35adfb7d46e65e2c3afc7a55">lerpLaserRotation</a>)</div>
+<div class="line"><span class="lineno">   56</span>                    {</div>
+<div class="line"><span class="lineno">   57</span>                        base.transform.rotation = Quaternion.Slerp(base.transform.rotation, Quaternion.AngleAxis(angle, base.transform.forward), Time.deltaTime * <span class="keyword">this</span>.turningRate);</div>
+<div class="line"><span class="lineno">   58</span>                        Vector3 v = base.transform.rotation * Vector3.right;</div>
+<div class="line"><span class="lineno">   59</span>                        raycastHit2D = Physics2D.Raycast(base.transform.position, v, <span class="keyword">this</span>.maxLaserRaycastDistance, <span class="keyword">this</span>.mask);</div>
+<div class="line"><span class="lineno">   60</span>                    }</div>
+<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   62</span>                    {</div>
+<div class="line"><span class="lineno">   63</span>                        base.transform.rotation = Quaternion.AngleAxis(angle, base.transform.forward);</div>
+<div class="line"><span class="lineno">   64</span>                        raycastHit2D = Physics2D.Raycast(base.transform.position, vector, <span class="keyword">this</span>.maxLaserRaycastDistance, <span class="keyword">this</span>.mask);</div>
+<div class="line"><span class="lineno">   65</span>                    }</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   68</span>                {</div>
+<div class="line"><span class="lineno">   69</span>                    raycastHit2D = Physics2D.Raycast(base.transform.position, base.transform.right, <span class="keyword">this</span>.maxLaserRaycastDistance, <span class="keyword">this</span>.mask);</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ac89749270158f78eab9768e7ff9d9fe3">ignoreCollisions</a>)</div>
+<div class="line"><span class="lineno">   72</span>                {</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">if</span> (!(raycastHit2D.collider != <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">   74</span>                    {</div>
+<div class="line"><span class="lineno">   75</span>                        this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#a5d3bd2e88565c6f17cc4504185f19a71">SetLaserToDefaultLength</a>();</div>
+<div class="line"><span class="lineno">   76</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    }</div>
+<div class="line"><span class="lineno">   78</span>                    this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#aa0dbe66bdb5cae641922809c28d072a0">SetLaserEndToTargetLocation</a>(raycastHit2D);</div>
+<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb">waitingForTriggerTime</a>)</div>
+<div class="line"><span class="lineno">   80</span>                    {</div>
+<div class="line"><span class="lineno">   81</span>                        base.StartCoroutine(this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2">HitTrigger</a>(this.<a class="code hl_variable" href="classTwoDLaserPack_1_1LineBasedLaser.html#a50e4df87e8d4c893096b43a731d09730">collisionTriggerInterval</a>, raycastHit2D));</div>
+<div class="line"><span class="lineno">   82</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   83</span>                    }</div>
+<div class="line"><span class="lineno">   84</span>                }</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   86</span>                {</div>
+<div class="line"><span class="lineno">   87</span>                    this.<a class="code hl_function" href="classTwoDLaserPack_1_1LineBasedLaser.html#a5d3bd2e88565c6f17cc4504185f19a71">SetLaserToDefaultLength</a>();</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a2a712607246f623104e30eff6222f53a"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a2a712607246f623104e30eff6222f53a">TwoDLaserPack.LineBasedLaser.laserRotationEnabled</a></div><div class="ttdeci">bool laserRotationEnabled</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00216">LineBasedLaser.cs:216</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a35e7be9768153b841847b258c8ea7174"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a35e7be9768153b841847b258c8ea7174">TwoDLaserPack.LineBasedLaser.laserActive</a></div><div class="ttdeci">bool laserActive</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00200">LineBasedLaser.cs:200</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a4919990d33459f76a445effa0ae3e7a3"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a4919990d33459f76a445effa0ae3e7a3">TwoDLaserPack.LineBasedLaser.targetGo</a></div><div class="ttdeci">GameObject targetGo</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00204">LineBasedLaser.cs:204</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a50e4df87e8d4c893096b43a731d09730"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a50e4df87e8d4c893096b43a731d09730">TwoDLaserPack.LineBasedLaser.collisionTriggerInterval</a></div><div class="ttdeci">float collisionTriggerInterval</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00222">LineBasedLaser.cs:222</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a5d3bd2e88565c6f17cc4504185f19a71"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a5d3bd2e88565c6f17cc4504185f19a71">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength</a></div><div class="ttdeci">void SetLaserToDefaultLength()</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00146">LineBasedLaser.cs:146</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a77bfc745f4860f765f3ea173f1566e9c"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a77bfc745f4860f765f3ea173f1566e9c">TwoDLaserPack.LineBasedLaser.gameObjectCached</a></div><div class="ttdeci">GameObject gameObjectCached</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00232">LineBasedLaser.cs:232</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a7d0f3430efd983f6587838fb6dca79d3"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a7d0f3430efd983f6587838fb6dca79d3">TwoDLaserPack.LineBasedLaser.laserAngle</a></div><div class="ttdeci">float laserAngle</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00234">LineBasedLaser.cs:234</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a8ca8e25b35adfb7d46e65e2c3afc7a55"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a8ca8e25b35adfb7d46e65e2c3afc7a55">TwoDLaserPack.LineBasedLaser.lerpLaserRotation</a></div><div class="ttdeci">bool lerpLaserRotation</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00218">LineBasedLaser.cs:218</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_a9aa6e926e0215c2e4781de9f0132d869"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869">TwoDLaserPack.LineBasedLaser.laserTexOffsetSpeed</a></div><div class="ttdeci">float laserTexOffsetSpeed</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00206">LineBasedLaser.cs:206</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_aa0dbe66bdb5cae641922809c28d072a0"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#aa0dbe66bdb5cae641922809c28d072a0">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation</a></div><div class="ttdeci">void SetLaserEndToTargetLocation(RaycastHit2D hit)</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00118">LineBasedLaser.cs:118</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ac3efda8af21fab8966157acf5b0380b2"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2">TwoDLaserPack.LineBasedLaser.HitTrigger</a></div><div class="ttdeci">IEnumerator HitTrigger(float triggerInterval, RaycastHit2D hit)</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00092">LineBasedLaser.cs:92</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ac4ad369585782f0ecae9eac897ca3da7"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ac4ad369585782f0ecae9eac897ca3da7">TwoDLaserPack.LineBasedLaser.laserTextureOffset</a></div><div class="ttdeci">float laserTextureOffset</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00236">LineBasedLaser.cs:236</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ac89749270158f78eab9768e7ff9d9fe3"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ac89749270158f78eab9768e7ff9d9fe3">TwoDLaserPack.LineBasedLaser.ignoreCollisions</a></div><div class="ttdeci">bool ignoreCollisions</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00202">LineBasedLaser.cs:202</a></div></div>
+<div class="ttc" id="aclassTwoDLaserPack_1_1LineBasedLaser_html_ae51187baa12c8470029eaa9d6e476bcb"><div class="ttname"><a href="classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb">TwoDLaserPack.LineBasedLaser.waitingForTriggerTime</a></div><div class="ttdeci">bool waitingForTriggerTime</div><div class="ttdef"><b>Definition:</b> <a href="LineBasedLaser_8cs_source.html#l00244">LineBasedLaser.cs:244</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LineBasedLaser_8cs_source.html#l00222">TwoDLaserPack.LineBasedLaser.collisionTriggerInterval</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00232">TwoDLaserPack.LineBasedLaser.gameObjectCached</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00092">TwoDLaserPack.LineBasedLaser.HitTrigger()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00202">TwoDLaserPack.LineBasedLaser.ignoreCollisions</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00200">TwoDLaserPack.LineBasedLaser.laserActive</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00234">TwoDLaserPack.LineBasedLaser.laserAngle</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00216">TwoDLaserPack.LineBasedLaser.laserRotationEnabled</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00206">TwoDLaserPack.LineBasedLaser.laserTexOffsetSpeed</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00236">TwoDLaserPack.LineBasedLaser.laserTextureOffset</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00218">TwoDLaserPack.LineBasedLaser.lerpLaserRotation</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00204">TwoDLaserPack.LineBasedLaser.targetGo</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00244">TwoDLaserPack.LineBasedLaser.waitingForTriggerTime</a>.</p>
 
 </div>
 </div>
@@ -513,6 +743,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00222">222</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -537,6 +769,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00232">232</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -578,6 +812,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00208">208</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00021">TwoDLaserPack.LineBasedLaser.Awake()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00104">TwoDLaserPack.LineBasedLaser.SetLaserState()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
+
 </div>
 </div>
 <a id="ac89749270158f78eab9768e7ff9d9fe3" name="ac89749270158f78eab9768e7ff9d9fe3"></a>
@@ -594,6 +830,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00202">202</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a35e7be9768153b841847b258c8ea7174" name="a35e7be9768153b841847b258c8ea7174"></a>
@@ -609,6 +847,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00200">200</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -633,6 +873,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00234">234</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -682,6 +924,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00198">198</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00026">TwoDLaserPack.LineBasedLaser.OnEnable()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00177">TwoDLaserPack.LineBasedLaser.SetLaserArcVertices()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00011">TwoDLaserPack.LineBasedLaser.Start()</a>.</p>
+
 </div>
 </div>
 <a id="ab52544ca33f66e98cafe5d03d8f2df70" name="ab52544ca33f66e98cafe5d03d8f2df70"></a>
@@ -697,6 +941,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00196">196</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00011">TwoDLaserPack.LineBasedLaser.Start()</a>.</p>
 
 </div>
 </div>
@@ -714,6 +960,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00194">194</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00026">TwoDLaserPack.LineBasedLaser.OnEnable()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00177">TwoDLaserPack.LineBasedLaser.SetLaserArcVertices()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, <a class="el" href="LineBasedLaser_8cs_source.html#l00104">TwoDLaserPack.LineBasedLaser.SetLaserState()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
+
 </div>
 </div>
 <a id="a2a712607246f623104e30eff6222f53a" name="a2a712607246f623104e30eff6222f53a"></a>
@@ -730,6 +978,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00216">216</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a9aa6e926e0215c2e4781de9f0132d869" name="a9aa6e926e0215c2e4781de9f0132d869"></a>
@@ -745,6 +995,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00206">206</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -770,6 +1022,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00236">236</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
+
 </div>
 </div>
 <a id="aa840fac1dd8bd5775d1b2e95cc7cfb8f" name="aa840fac1dd8bd5775d1b2e95cc7cfb8f"></a>
@@ -794,6 +1048,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00238">238</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
+
 </div>
 </div>
 <a id="a8ca8e25b35adfb7d46e65e2c3afc7a55" name="a8ca8e25b35adfb7d46e65e2c3afc7a55"></a>
@@ -809,6 +1065,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00218">218</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
 
 </div>
 </div>
@@ -858,6 +1116,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00226">226</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00011">TwoDLaserPack.LineBasedLaser.Start()</a>.</p>
+
 </div>
 </div>
 <a id="a720fb0a1784a15645b3e77efc9598330" name="a720fb0a1784a15645b3e77efc9598330"></a>
@@ -873,6 +1133,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00228">228</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00011">TwoDLaserPack.LineBasedLaser.Start()</a>.</p>
 
 </div>
 </div>
@@ -897,6 +1159,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00242">242</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
 
 </div>
 </div>
@@ -938,6 +1202,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00204">204</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a910959e3d11641d1ecc0187e386e2470" name="a910959e3d11641d1ecc0187e386e2470"></a>
@@ -970,6 +1236,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00230">230</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00118">TwoDLaserPack.LineBasedLaser.SetLaserEndToTargetLocation()</a>, and <a class="el" href="LineBasedLaser_8cs_source.html#l00146">TwoDLaserPack.LineBasedLaser.SetLaserToDefaultLength()</a>.</p>
+
 </div>
 </div>
 <a id="ae51187baa12c8470029eaa9d6e476bcb" name="ae51187baa12c8470029eaa9d6e476bcb"></a>
@@ -994,6 +1262,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00244">244</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00039">TwoDLaserPack.LineBasedLaser.Update()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
@@ -1011,15 +1281,21 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LineBasedLaser_8cs_source.html#l00009">9</a> of file <a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LineBasedLaser_8cs_source.html#l00092">TwoDLaserPack.LineBasedLaser.HitTrigger()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/TwoDLaserPack/<a class="el" href="LineBasedLaser_8cs_source.html">LineBasedLaser.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceTwoDLaserPack.html">TwoDLaserPack</a></li><li class="navelem"><a class="el" href="classTwoDLaserPack_1_1LineBasedLaser.html">LineBasedLaser</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

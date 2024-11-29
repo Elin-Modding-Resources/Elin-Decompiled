@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__TendAnimal.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -710,6 +730,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d">AI_Fuck</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__TendAnimal_8cs_source.html#l00013">13</a> of file <a class="el" href="AI__TendAnimal_8cs_source.html">AI_TendAnimal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> this.target != <span class="keyword">null</span> &amp;&amp; !this.target.isDead &amp;&amp; this.<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">CanBeTamed</a>;</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassAI__Fuck_html_ac1aa5b5f48572cad2673101e29e8d360"><div class="ttname"><a href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">AI_Fuck.target</a></div><div class="ttdeci">Chara target</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00296">AI_Fuck.cs:296</a></div></div>
+<div class="ttc" id="aclassChara_html_a16699a6f035a4c14d4c846f48be7b850"><div class="ttname"><a href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">Chara.trait</a></div><div class="ttdeci">new TraitChara trait</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00360">Chara.cs:361</a></div></div>
+<div class="ttc" id="aclassTraitChara_html_a44f05aa73755a6598345089f4317a0fb"><div class="ttname"><a href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">TraitChara.CanBeTamed</a></div><div class="ttdeci">virtual bool CanBeTamed</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00238">TraitChara.cs:239</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitChara_8cs_source.html#l00239">TraitChara.CanBeTamed</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00296">AI_Fuck.target</a>, and <a class="el" href="Chara_8cs_source.html#l00361">Chara.trait</a>.</p>
 
 </div>
 </div>
@@ -735,16 +763,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__TendAnimal_8cs_source.html#l00005">5</a> of file <a class="el" href="AI__TendAnimal_8cs_source.html">AI_TendAnimal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classAI__Fuck.html">AI_Fuck</a>.<a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassAI__Fuck_html"><div class="ttname"><a href="classAI__Fuck.html">AI_Fuck</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00006">AI_Fuck.cs:7</a></div></div>
+<div class="ttc" id="aclassAI__Fuck_html_ada3bbaf792c5bd31716f8fc5263b0073"><div class="ttname"><a href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">AI_Fuck.FuckType</a></div><div class="ttdeci">FuckType</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00308">AI_Fuck.cs:309</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__TendAnimal_8cs_source.html">AI_TendAnimal.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__TendAnimal.html">AI_TendAnimal</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

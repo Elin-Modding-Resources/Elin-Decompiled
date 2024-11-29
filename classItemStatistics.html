@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classItemStatistics.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -201,6 +221,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemStatistics_8cs_source.html#l00018">18</a> of file <a class="el" href="ItemStatistics_8cs_source.html">ItemStatistics.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> a.ToFormat() + <span class="stringliteral">&quot; (&quot;</span> + b.ToFormat() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ItemStatistics_8cs_source.html#l00006">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -229,6 +254,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemStatistics_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemStatistics_8cs_source.html">ItemStatistics.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classFactionBranch_1_1Statistics.html">FactionBranch.Statistics</a> lastStatistics = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a99ab0613714ca8821c355c8078252a50">lastStatistics</a>;</div>
+<div class="line"><span class="lineno">    9</span>        this.textVisitor.text = stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#aa09f5187e9c5ec092e0f210b0591d7bc">visitor</a>.ToString() + <span class="stringliteral">&quot; (&quot;</span> + lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#aa09f5187e9c5ec092e0f210b0591d7bc">visitor</a>.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        this.textInn.text = <a class="code hl_class" href="classItemStatistics.html">ItemStatistics</a>.&lt;<a class="code hl_function" href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">Refresh</a>&gt;<a class="code hl_function" href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">g__F</a>|6_0(stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a6906cfb5377d932f82c25fd54e0e719d">inn</a>, lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a6906cfb5377d932f82c25fd54e0e719d">inn</a>);</div>
+<div class="line"><span class="lineno">   11</span>        this.textTourism.text = <a class="code hl_class" href="classItemStatistics.html">ItemStatistics</a>.&lt;<a class="code hl_function" href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">Refresh</a>&gt;<a class="code hl_function" href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">g__F</a>|6_0(stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a481a3d819c60ac2657a88e41e6b7f883">tourism</a>, lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a481a3d819c60ac2657a88e41e6b7f883">tourism</a>);</div>
+<div class="line"><span class="lineno">   12</span>        this.textShip.text = <a class="code hl_class" href="classItemStatistics.html">ItemStatistics</a>.&lt;<a class="code hl_function" href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">Refresh</a>&gt;<a class="code hl_function" href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">g__F</a>|6_0(stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#aae03a01d2aaccb6497cd390d8dbe035c">ship</a>, lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#aae03a01d2aaccb6497cd390d8dbe035c">ship</a>);</div>
+<div class="line"><span class="lineno">   13</span>        this.textShop.text = <a class="code hl_class" href="classItemStatistics.html">ItemStatistics</a>.&lt;<a class="code hl_function" href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">Refresh</a>&gt;<a class="code hl_function" href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">g__F</a>|6_0(stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a411501e6fcd5c839e8e58e9c3c36c91d">shop</a>, lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a411501e6fcd5c839e8e58e9c3c36c91d">shop</a>);</div>
+<div class="line"><span class="lineno">   14</span>        this.textTax.text = <a class="code hl_class" href="classItemStatistics.html">ItemStatistics</a>.&lt;<a class="code hl_function" href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">Refresh</a>&gt;<a class="code hl_function" href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">g__F</a>|6_0(stat.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a506c4b5e7166b706436cad3e8011fd54">tax</a>, lastStatistics.<a class="code hl_variable" href="classFactionBranch_1_1Statistics.html#a506c4b5e7166b706436cad3e8011fd54">tax</a>);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_acc403af024c59c21b98bd5d85f9fd794"><div class="ttname"><a href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">EMono.Branch</a></div><div class="ttdeci">static FactionBranch Branch</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00062">EMono.cs:63</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html">FactionBranch.Statistics</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01691">FactionBranch.cs:1692</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_a411501e6fcd5c839e8e58e9c3c36c91d"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#a411501e6fcd5c839e8e58e9c3c36c91d">FactionBranch.Statistics.shop</a></div><div class="ttdeci">int shop</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01703">FactionBranch.cs:1703</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_a481a3d819c60ac2657a88e41e6b7f883"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#a481a3d819c60ac2657a88e41e6b7f883">FactionBranch.Statistics.tourism</a></div><div class="ttdeci">int tourism</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01700">FactionBranch.cs:1700</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_a506c4b5e7166b706436cad3e8011fd54"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#a506c4b5e7166b706436cad3e8011fd54">FactionBranch.Statistics.tax</a></div><div class="ttdeci">int tax</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01712">FactionBranch.cs:1712</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_a6906cfb5377d932f82c25fd54e0e719d"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#a6906cfb5377d932f82c25fd54e0e719d">FactionBranch.Statistics.inn</a></div><div class="ttdeci">int inn</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01697">FactionBranch.cs:1697</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_aa09f5187e9c5ec092e0f210b0591d7bc"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#aa09f5187e9c5ec092e0f210b0591d7bc">FactionBranch.Statistics.visitor</a></div><div class="ttdeci">int visitor</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01709">FactionBranch.cs:1709</a></div></div>
+<div class="ttc" id="aclassFactionBranch_1_1Statistics_html_aae03a01d2aaccb6497cd390d8dbe035c"><div class="ttname"><a href="classFactionBranch_1_1Statistics.html#aae03a01d2aaccb6497cd390d8dbe035c">FactionBranch.Statistics.ship</a></div><div class="ttdeci">int ship</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01694">FactionBranch.cs:1694</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a99ab0613714ca8821c355c8078252a50"><div class="ttname"><a href="classFactionBranch.html#a99ab0613714ca8821c355c8078252a50">FactionBranch.lastStatistics</a></div><div class="ttdeci">FactionBranch.Statistics lastStatistics</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01679">FactionBranch.cs:1679</a></div></div>
+<div class="ttc" id="aclassItemStatistics_html"><div class="ttname"><a href="classItemStatistics.html">ItemStatistics</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemStatistics_8cs_source.html#l00004">ItemStatistics.cs:5</a></div></div>
+<div class="ttc" id="aclassItemStatistics_html_a4918d70ad2cefea2c12947303def917d"><div class="ttname"><a href="classItemStatistics.html#a4918d70ad2cefea2c12947303def917d">ItemStatistics.g__F</a></div><div class="ttdeci">static string&lt; Refresh &gt; g__F(int a, int b)</div><div class="ttdef"><b>Definition:</b> <a href="ItemStatistics_8cs_source.html#l00018">ItemStatistics.cs:18</a></div></div>
+<div class="ttc" id="aclassItemStatistics_html_af4dfd5b12c40c4aff24ebf6fe784e247"><div class="ttname"><a href="classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247">ItemStatistics.Refresh</a></div><div class="ttdeci">void Refresh(FactionBranch.Statistics stat)</div><div class="ttdef"><b>Definition:</b> <a href="ItemStatistics_8cs_source.html#l00006">ItemStatistics.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00063">EMono.Branch</a>, <a class="el" href="ItemStatistics_8cs_source.html#l00018">g__F()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01697">FactionBranch.Statistics.inn</a>, <a class="el" href="FactionBranch_8cs_source.html#l01679">FactionBranch.lastStatistics</a>, <a class="el" href="ItemStatistics_8cs_source.html#l00006">Refresh()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01694">FactionBranch.Statistics.ship</a>, <a class="el" href="FactionBranch_8cs_source.html#l01703">FactionBranch.Statistics.shop</a>, <a class="el" href="FactionBranch_8cs_source.html#l01712">FactionBranch.Statistics.tax</a>, <a class="el" href="FactionBranch_8cs_source.html#l01700">FactionBranch.Statistics.tourism</a>, and <a class="el" href="FactionBranch_8cs_source.html#l01709">FactionBranch.Statistics.visitor</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentHomeLog_8cs_source.html#l00005">ContentHomeLog.OnSwitchContent()</a>, and <a class="el" href="ItemStatistics_8cs_source.html#l00006">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -333,9 +384,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="ItemStatistics_8cs_source.html">ItemStatistics.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classItemStatistics.html">ItemStatistics</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

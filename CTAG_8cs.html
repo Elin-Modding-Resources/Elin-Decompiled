@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('CTAG_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -175,13 +191,83 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="CTAG_8cs_source.html#l00003">3</a> of file <a class="el" href="CTAG_8cs_source.html">CTAG.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a48818f3da3d36ad762480b319b56f588">important</a>,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab05a7e25161dffbc7c99d0aedee97127">repeatSwing</a>,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3dac9b722adaf90c5f99d4113b923d59">nonHold</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a29f49eaaa4f1f37afe0c7120f5f81736">nonPick</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5a026bf976c51ba22c2a2b2cffbf02f2">canMelee</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2">boss</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">currency</a>,</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab3946e51e062bd6563060381599a16ea">randomName</a>,</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a47ae4a22bab18405ffcb232a3a020b3f">noDrop</a>,</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a662f707d5491e9bce8238a6c0be92190">hidden</a>,</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a382dcad9b76f9fd19985185e6ebcbba1">wilds</a>,</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516">neg</a>,</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ae0597c15d721776e8a797581b4cd4e30">replica</a>,</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>,</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3ee94730c4c78551270eb9fa6d87f7b6">rareSeed</a>,</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e">gift</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a77d5c72c578b34aab3f8a2708911db50">ignoreUse</a>,</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a92acbd31c3abd8c925bfa9be7eaac5e2">throwWeapon</a>,</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8b75fa19e543432aaf8aeec16cc9a439">throwWeaponEnemy</a>,</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1f0a31fb0555455e7d964326155ebf47">notHumanMeat</a>,</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07adc12ce328ae3ab712a15b998f2a83ec7">noRandomProduct</a>,</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0">suicide</a>,</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aec894178b32d61b7b0fc75fb83d6f4f1">kamikaze</a>,</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aafb833c425ac5fb8951cec17de3c30a9">randomSkin</a>,</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a00779b0362864204c40db86e03f19dbe">noPortrait</a>,</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af674ecc8a03f8e24ea9ed65b91ea5a70">randomPortrait</a>,</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a189da6cb1934f77daeb02c6da2955bc6">rareResource</a>,</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a02a954aad29fc4f3eb2dff2334b4226a">tourism</a>,</div>
+<div class="line"><span class="lineno">   33</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8c5f255675413ffbcbb70eb771f197b6">staticSkin</a>,</div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5871505b4532db9d9b2c203c12f90df9">godArtifact</a>,</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193">noWish</a>,</div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a09bd0c57208f68dcb3d008f06dbf9fc3">dish_bonus</a></div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a00779b0362864204c40db86e03f19dbe"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a00779b0362864204c40db86e03f19dbe">CTAG.noPortrait</a></div><div class="ttdeci">@ noPortrait</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a02a954aad29fc4f3eb2dff2334b4226a"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a02a954aad29fc4f3eb2dff2334b4226a">CTAG.tourism</a></div><div class="ttdeci">@ tourism</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a09bd0c57208f68dcb3d008f06dbf9fc3"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a09bd0c57208f68dcb3d008f06dbf9fc3">CTAG.dish_bonus</a></div><div class="ttdeci">@ dish_bonus</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a189da6cb1934f77daeb02c6da2955bc6"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a189da6cb1934f77daeb02c6da2955bc6">CTAG.rareResource</a></div><div class="ttdeci">@ rareResource</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">CTAG.currency</a></div><div class="ttdeci">@ currency</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a1f0a31fb0555455e7d964326155ebf47"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1f0a31fb0555455e7d964326155ebf47">CTAG.notHumanMeat</a></div><div class="ttdeci">@ notHumanMeat</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a29f49eaaa4f1f37afe0c7120f5f81736"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a29f49eaaa4f1f37afe0c7120f5f81736">CTAG.nonPick</a></div><div class="ttdeci">@ nonPick</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a382dcad9b76f9fd19985185e6ebcbba1"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a382dcad9b76f9fd19985185e6ebcbba1">CTAG.wilds</a></div><div class="ttdeci">@ wilds</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a3dac9b722adaf90c5f99d4113b923d59"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3dac9b722adaf90c5f99d4113b923d59">CTAG.nonHold</a></div><div class="ttdeci">@ nonHold</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a3ee94730c4c78551270eb9fa6d87f7b6"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3ee94730c4c78551270eb9fa6d87f7b6">CTAG.rareSeed</a></div><div class="ttdeci">@ rareSeed</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a47ae4a22bab18405ffcb232a3a020b3f"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a47ae4a22bab18405ffcb232a3a020b3f">CTAG.noDrop</a></div><div class="ttdeci">@ noDrop</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a48818f3da3d36ad762480b319b56f588"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a48818f3da3d36ad762480b319b56f588">CTAG.important</a></div><div class="ttdeci">@ important</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a5871505b4532db9d9b2c203c12f90df9"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5871505b4532db9d9b2c203c12f90df9">CTAG.godArtifact</a></div><div class="ttdeci">@ godArtifact</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a5a026bf976c51ba22c2a2b2cffbf02f2"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5a026bf976c51ba22c2a2b2cffbf02f2">CTAG.canMelee</a></div><div class="ttdeci">@ canMelee</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a662f707d5491e9bce8238a6c0be92190"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a662f707d5491e9bce8238a6c0be92190">CTAG.hidden</a></div><div class="ttdeci">@ hidden</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0">CTAG.suicide</a></div><div class="ttdeci">@ suicide</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a77d5c72c578b34aab3f8a2708911db50"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a77d5c72c578b34aab3f8a2708911db50">CTAG.ignoreUse</a></div><div class="ttdeci">@ ignoreUse</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193">CTAG.noWish</a></div><div class="ttdeci">@ noWish</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a8b75fa19e543432aaf8aeec16cc9a439"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8b75fa19e543432aaf8aeec16cc9a439">CTAG.throwWeaponEnemy</a></div><div class="ttdeci">@ throwWeaponEnemy</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a8c5f255675413ffbcbb70eb771f197b6"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8c5f255675413ffbcbb70eb771f197b6">CTAG.staticSkin</a></div><div class="ttdeci">@ staticSkin</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a92acbd31c3abd8c925bfa9be7eaac5e2"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a92acbd31c3abd8c925bfa9be7eaac5e2">CTAG.throwWeapon</a></div><div class="ttdeci">@ throwWeapon</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e">CTAG.gift</a></div><div class="ttdeci">@ gift</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07aafb833c425ac5fb8951cec17de3c30a9"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aafb833c425ac5fb8951cec17de3c30a9">CTAG.randomSkin</a></div><div class="ttdeci">@ randomSkin</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07ab05a7e25161dffbc7c99d0aedee97127"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab05a7e25161dffbc7c99d0aedee97127">CTAG.repeatSwing</a></div><div class="ttdeci">@ repeatSwing</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07ab3946e51e062bd6563060381599a16ea"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab3946e51e062bd6563060381599a16ea">CTAG.randomName</a></div><div class="ttdeci">@ randomName</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2">CTAG.boss</a></div><div class="ttdeci">@ boss</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07adc12ce328ae3ab712a15b998f2a83ec7"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07adc12ce328ae3ab712a15b998f2a83ec7">CTAG.noRandomProduct</a></div><div class="ttdeci">@ noRandomProduct</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07ae0597c15d721776e8a797581b4cd4e30"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ae0597c15d721776e8a797581b4cd4e30">CTAG.replica</a></div><div class="ttdeci">@ replica</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07aec894178b32d61b7b0fc75fb83d6f4f1"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aec894178b32d61b7b0fc75fb83d6f4f1">CTAG.kamikaze</a></div><div class="ttdeci">@ kamikaze</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516">CTAG.neg</a></div><div class="ttdeci">@ neg</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07af674ecc8a03f8e24ea9ed65b91ea5a70"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af674ecc8a03f8e24ea9ed65b91ea5a70">CTAG.randomPortrait</a></div><div class="ttdeci">@ randomPortrait</div></div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">CTAG.seed</a></div><div class="ttdeci">@ seed</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="CTAG_8cs.html">CTAG.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

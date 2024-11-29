@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitMoongate.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -669,6 +689,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMoongate_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span> !EClass._zone.IsInstance &amp;&amp; EClass._zone.dateExpire == 0 &amp;&amp; !EClass._zone.IsRegion &amp;&amp; this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>;</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -697,6 +724,47 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMoongate_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">burden</a>.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>() == 4)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;returnOverweight&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        Debug.Log(<span class="stringliteral">&quot;loading:&quot;</span> + m.<a class="code hl_variable" href="classMapMetaData.html#a27cfe03048cc7df21c5ec510f029b92b">name</a> + <span class="stringliteral">&quot;/&quot;</span> + m.<a class="code hl_variable" href="classMapMetaData.html#a487062e25a4fe17177a6d9bb32a57bcf">path</a>);</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_class" href="classZone__User.html">Zone_User</a> zone_User = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>&lt;<a class="code hl_class" href="classZone__User.html">Zone_User</a>&gt;((<a class="code hl_class" href="classZone__User.html">Zone_User</a> z) =&gt; z.idUser == m.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (zone_User == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            zone_User = (<a class="code hl_class" href="classSpatialGen.html">SpatialGen</a>.<a class="code hl_function" href="classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64">Create</a>(<span class="stringliteral">&quot;user&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_property" href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">region</a>, <span class="keyword">true</span>, -99999, -99999, 0) as <a class="code hl_class" href="classZone__User.html">Zone_User</a>);</div>
+<div class="line"><span class="lineno">   41</span>            zone_User.path = m.<a class="code hl_variable" href="classMapMetaData.html#a487062e25a4fe17177a6d9bb32a57bcf">path</a>;</div>
+<div class="line"><span class="lineno">   42</span>            zone_User.idUser = m.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>;</div>
+<div class="line"><span class="lineno">   43</span>            zone_User.dateExpire = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(1);</div>
+<div class="line"><span class="lineno">   44</span>            zone_User.name = m.<a class="code hl_variable" href="classMapMetaData.html#a27cfe03048cc7df21c5ec510f029b92b">name</a>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        Debug.Log(zone_User);</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_function" href="classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984">MoveZone</a>(zone_User);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassChara_html_aa093de9e35002a53b74b4fd6e0aa25e6"><div class="ttname"><a href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">Chara.burden</a></div><div class="ttdeci">Stats burden</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08240">Chara.cs:8241</a></div></div>
+<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00324">Date.cs:324</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
+<div class="ttc" id="aclassMapMetaData_html_a27cfe03048cc7df21c5ec510f029b92b"><div class="ttname"><a href="classMapMetaData.html#a27cfe03048cc7df21c5ec510f029b92b">MapMetaData.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00012">MapMetaData.cs:12</a></div></div>
+<div class="ttc" id="aclassMapMetaData_html_a487062e25a4fe17177a6d9bb32a57bcf"><div class="ttname"><a href="classMapMetaData.html#a487062e25a4fe17177a6d9bb32a57bcf">MapMetaData.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00026">MapMetaData.cs:26</a></div></div>
+<div class="ttc" id="aclassMapMetaData_html_a6aa1e30fc883ee8d4cf526ac40709762"><div class="ttname"><a href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">MapMetaData.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00015">MapMetaData.cs:15</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassSpatialGen_html"><div class="ttname"><a href="classSpatialGen.html">SpatialGen</a></div><div class="ttdef"><b>Definition:</b> <a href="SpatialGen_8cs_source.html#l00003">SpatialGen.cs:4</a></div></div>
+<div class="ttc" id="aclassSpatialGen_html_a1f71ec7993040f0b0ac2de45d7b4ed64"><div class="ttname"><a href="classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64">SpatialGen.Create</a></div><div class="ttdeci">static Spatial Create(string id, Spatial parent, bool register, int x=-99999, int y=-99999, int icon=0)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialGen_8cs_source.html#l00018">SpatialGen.cs:18</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00046">SpatialManager.cs:46</a></div></div>
+<div class="ttc" id="aclassStats_html_a45b380a6cf18d7b29e4a8d46048e4df4"><div class="ttname"><a href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">Stats.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00093">Stats.cs:93</a></div></div>
+<div class="ttc" id="aclassTraitMoongate_html_a4a517aab4bd4dc0df5f124fb8e81c984"><div class="ttname"><a href="classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984">TraitMoongate.MoveZone</a></div><div class="ttdeci">void MoveZone(Zone zone)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00050">TraitMoongate.cs:50</a></div></div>
+<div class="ttc" id="aclassWorld_html_a31947e2885f2ac2ff3ff882bff4e2f60"><div class="ttname"><a href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">World.region</a></div><div class="ttdeci">Region region</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00006">World.cs:7</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+<div class="ttc" id="aclassZone__User_html"><div class="ttname"><a href="classZone__User.html">Zone_User</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__User_8cs_source.html#l00005">Zone_User.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08241">Chara.burden</a>, <a class="el" href="SpatialGen_8cs_source.html#l00018">SpatialGen.Create()</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="SpatialManager_8cs_source.html#l00046">SpatialManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Stats_8cs_source.html#l00093">Stats.GetPhase()</a>, <a class="el" href="Date_8cs_source.html#l00324">Date.GetRaw()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00015">MapMetaData.id</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00050">MoveZone()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00012">MapMetaData.name</a>, <a class="el" href="MapMetaData_8cs_source.html#l00026">MapMetaData.path</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="World_8cs_source.html#l00007">World.region</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
 
 </div>
 </div>
@@ -725,6 +793,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMoongate_8cs_source.html#l00050">50</a> of file <a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        zone.instance = <span class="keyword">new</span> <a class="code hl_class" href="classZoneInsstanceMoongate.html">ZoneInsstanceMoongate</a></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            uidZone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>,</div>
+<div class="line"><span class="lineno">   55</span>            x = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>,</div>
+<div class="line"><span class="lineno">   56</span>            z = EClass.pc.pos.z</div>
+<div class="line"><span class="lineno">   57</span>        };</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">MoveZone</a>(zone, <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Moongate);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassChara_html_afd491cf74f5f62c8e67b99f9e3b0202f"><div class="ttname"><a href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">Chara.MoveZone</a></div><div class="ttdeci">void MoveZone(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02829">Chara.cs:2829</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a3d32786bb1d24d70693a1a132e44b4e1"><div class="ttname"><a href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">Spatial.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00050">Spatial.cs:51</a></div></div>
+<div class="ttc" id="aclassZoneInsstanceMoongate_html"><div class="ttname"><a href="classZoneInsstanceMoongate.html">ZoneInsstanceMoongate</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInsstanceMoongate_8cs_source.html#l00003">ZoneInsstanceMoongate.cs:4</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html"><div class="ttname"><a href="classZoneTransition.html">ZoneTransition</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00004">ZoneTransition.cs:5</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html_a42f31e47f43496abebff8ed4c4d16d46"><div class="ttname"><a href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">ZoneTransition.EnterState</a></div><div class="ttdeci">EnterState</div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00048">ZoneTransition.cs:49</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Chara_8cs_source.html#l02829">Chara.MoveZone()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Spatial_8cs_source.html#l00051">Spatial.uid</a>, and <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00029">LoadMap()</a>.</p>
 
 </div>
 </div>
@@ -757,6 +846,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitMoongateEx.html#abb1c819810acbb4a69aa3e67a450763d">TraitMoongateEx</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMoongate_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#ad26170ee5338fa0989fd762309066cd6">StartAsync</a>(<span class="stringliteral">&quot;Loading&quot;</span>, this.<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassLayerProgress_html"><div class="ttname"><a href="classLayerProgress.html">LayerProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00010">LayerProgress.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_ad26170ee5338fa0989fd762309066cd6"><div class="ttname"><a href="classLayerProgress.html#ad26170ee5338fa0989fd762309066cd6">LayerProgress.StartAsync</a></div><div class="ttdeci">static LayerProgress StartAsync(string text, UniTask&lt; bool &gt; task, Action onCancel=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00060">LayerProgress.cs:60</a></div></div>
+<div class="ttc" id="aclassTraitMoongate_html_a3a6d98083758ac9f1b5f77aa9a0ef1a8"><div class="ttname"><a href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">TraitMoongate.UseMoongate</a></div><div class="ttdeci">UniTask&lt; bool &gt; UseMoongate()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00019">TraitMoongate.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00060">LayerProgress.StartAsync()</a>, and <a class="el" href="TraitMoongate_8cs_source.html#l00019">UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -784,6 +882,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMoongate_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classTraitMoongate.html">TraitMoongate</a>.&lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__3 &lt;UseMoongate&gt;d__;</div>
+<div class="line"><span class="lineno">   22</span>        &lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__.&lt;&gt;t__builder = AsyncUniTaskMethodBuilder&lt;bool&gt;.Create();</div>
+<div class="line"><span class="lineno">   23</span>        &lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   24</span>        &lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__.&lt;&gt;1__state = -1;</div>
+<div class="line"><span class="lineno">   25</span>        &lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__.&lt;&gt;t__builder.Start&lt;<a class="code hl_class" href="classTraitMoongate.html">TraitMoongate</a>.&lt;<a class="code hl_function" href="classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8">UseMoongate</a>&gt;d__3&gt;(ref &lt;UseMoongate&gt;d__);</div>
+<div class="line"><span class="lineno">   26</span>        return &lt;UseMoongate&gt;d__.&lt;&gt;t__builder.Task;</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassTraitMoongate_html"><div class="ttname"><a href="classTraitMoongate.html">TraitMoongate</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00006">TraitMoongate.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitMoongate_8cs_source.html#l00019">UseMoongate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00013">OnUse()</a>, and <a class="el" href="TraitMoongate_8cs_source.html#l00019">UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +919,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitMoongate_8cs_source.html">TraitMoongate.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitMoongate.html">TraitMoongate</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

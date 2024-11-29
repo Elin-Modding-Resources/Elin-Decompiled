@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structAlgorithms_1_1PathFinderNode.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceAlgorithms.html">Algorithms</a></li><li class="navelem"><a class="el" href="structAlgorithms_1_1PathFinderNode.html">PathFinderNode</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -127,6 +143,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinderNode_8cs_source.html#l00013">13</a> of file <a class="el" href="PathFinderNode_8cs_source.html">PathFinderNode.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="aaf258b6ea22dae2eed81c84d6e507275" name="aaf258b6ea22dae2eed81c84d6e507275"></a>
@@ -142,6 +160,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinderNode_8cs_source.html#l00015">15</a> of file <a class="el" href="PathFinderNode_8cs_source.html">PathFinderNode.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -159,6 +179,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinderNode_8cs_source.html#l00009">9</a> of file <a class="el" href="PathFinderNode_8cs_source.html">PathFinderNode.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, <a class="el" href="PathManager_8cs_source.html#l00065">PathManager._GetFirstStep()</a>, <a class="el" href="Spatial_8cs_source.html#l00804">Spatial.Dist()</a>, <a class="el" href="PathFinder_8cs_source.html#l00028">Algorithms.PathFinder.FindPath()</a>, <a class="el" href="Zone__Dungeon_8cs_source.html#l00219">Zone_Dungeon.g__TryPlaceRail()</a>, <a class="el" href="AI__Goto_8cs_source.html#l00083">AI_Goto.TryGoTo()</a>, <a class="el" href="Chara_8cs_source.html#l02180">Chara.TryMoveTowards()</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00117">GameUpdater.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a9d142733e5e490432c66cb30a26b9f1a" name="a9d142733e5e490432c66cb30a26b9f1a"></a>
@@ -175,15 +197,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinderNode_8cs_source.html#l00011">11</a> of file <a class="el" href="PathFinderNode_8cs_source.html">PathFinderNode.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, <a class="el" href="PathManager_8cs_source.html#l00065">PathManager._GetFirstStep()</a>, <a class="el" href="Spatial_8cs_source.html#l00804">Spatial.Dist()</a>, <a class="el" href="PathFinder_8cs_source.html#l00028">Algorithms.PathFinder.FindPath()</a>, <a class="el" href="Zone__Dungeon_8cs_source.html#l00219">Zone_Dungeon.g__TryPlaceRail()</a>, <a class="el" href="AI__Goto_8cs_source.html#l00083">AI_Goto.TryGoTo()</a>, <a class="el" href="Chara_8cs_source.html#l02180">Chara.TryMoveTowards()</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00117">GameUpdater.Update()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>Elin/Algorithms/<a class="el" href="PathFinderNode_8cs_source.html">PathFinderNode.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceAlgorithms.html">Algorithms</a></li><li class="navelem"><a class="el" href="structAlgorithms_1_1PathFinderNode.html">PathFinderNode</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

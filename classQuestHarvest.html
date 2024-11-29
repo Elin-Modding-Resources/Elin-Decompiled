@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestHarvest.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -484,7 +504,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuestInstance.html#ab0851714e0444cf013953761907dc014">QuestInstance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00062">62</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneEventHarvest.html">ZoneEventHarvest</a>();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassZoneEventHarvest_html"><div class="ttname"><a href="classZoneEventHarvest.html">ZoneEventHarvest</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventHarvest_8cs_source.html#l00006">ZoneEventHarvest.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41150d3a50df7d0a0708349a3b4fb657" name="a41150d3a50df7d0a0708349a3b4fb657"></a>
@@ -513,7 +537,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00067">67</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressHarvest&quot;</span>.lang(Lang._weight(<span class="keyword">this</span>.weightDelivered, <span class="keyword">true</span>, 0), Lang._weight(<span class="keyword">this</span>.destWeight, <span class="keyword">true</span>, 0), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af018998b81716a58b35a69d69945e75a" name="af018998b81716a58b35a69d69945e75a"></a>
@@ -542,7 +569,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a1faedf8ae29a705f8899640fdae49360">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00078">78</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        this.bonusMoney += this.weightDelivered * 4 / 1000;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5e3a7e6be03d4b55c907a9d4f765ee57" name="a5e3a7e6be03d4b55c907a9d4f765ee57"></a>
@@ -571,6 +601,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a1671b571331d5c1b59720b5a85a5c50c">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00072">72</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        this.destWeight = this.difficulty * 30 * 1000;</div>
+<div class="line"><span class="lineno">   75</span>        this.destWeight += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(this.<a class="code hl_variable" href="classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25">destWeight</a> / 5) / 100 * 100;</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassQuestHarvest_html_a2c661585ee315c7787252d68adfb1f25"><div class="ttname"><a href="classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25">QuestHarvest.destWeight</a></div><div class="ttdeci">int destWeight</div><div class="ttdef"><b>Definition:</b> <a href="QuestHarvest_8cs_source.html#l00087">QuestHarvest.cs:87</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestHarvest_8cs_source.html#l00087">destWeight</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
 
 </div>
 </div>
@@ -589,6 +628,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00087">87</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="QuestHarvest_8cs_source.html#l00072">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a6429f7b182933ee08852e9918d5058e4" name="a6429f7b182933ee08852e9918d5058e4"></a>
@@ -604,6 +645,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00084">84</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneEventHarvest_8cs_source.html#l00094">ZoneEventHarvest.OnReachTimeLimit()</a>.</p>
 
 </div>
 </div>
@@ -629,7 +672,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00054">54</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a98be07e45b0d59d67666f283a2d3955c" name="a98be07e45b0d59d67666f283a2d3955c"></a>
@@ -653,7 +702,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_enumeration" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>.Farm;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_ae59aa23495624702ceda9305dd62f16f"><div class="ttname"><a href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a></div><div class="ttdeci">DifficultyType</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00818">Quest.cs:819</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a224c8f00f4286d2b99be71cacef1c87e" name="a224c8f00f4286d2b99be71cacef1c87e"></a>
@@ -677,7 +734,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00038">38</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a621512234cba5cbc6a958dcc60f9ccf7" name="a621512234cba5cbc6a958dcc60f9ccf7"></a>
@@ -701,7 +764,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;instance_harvest&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a05156c1d257dbf02f2db6310ca409753" name="a05156c1d257dbf02f2db6310ca409753"></a>
@@ -725,7 +794,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00046">46</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a817d2550ab88174eb18cbbcaea9b04d8" name="a817d2550ab88174eb18cbbcaea9b04d8"></a>
@@ -749,7 +824,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00030">30</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> Lang._weight(this.<a class="code hl_variable" href="classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25">destWeight</a>, <span class="keyword">true</span>, 0);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a680ac521d4a5ebf9ff65f1f28f1934aa" name="a680ac521d4a5ebf9ff65f1f28f1934aa"></a>
@@ -773,16 +854,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestHarvest_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Harvest&quot;</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestHarvest_8cs_source.html">QuestHarvest.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestHarvest.html">QuestHarvest</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

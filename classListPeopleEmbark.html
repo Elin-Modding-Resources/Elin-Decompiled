@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classListPeopleEmbark.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -307,6 +327,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleEmbark_8cs_source.html#l00012">12</a> of file <a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        this.<a class="code hl_variable" href="classListPeopleEmbark.html#a74ad34c72d8266eafeeb249037d9923b">charas</a>.Remove(c);</div>
+<div class="line"><span class="lineno">   15</span>        (this.other as <a class="code hl_class" href="classListPeopleEmbark.html">ListPeopleEmbark</a>).<a class="code hl_variable" href="classListPeopleEmbark.html#a74ad34c72d8266eafeeb249037d9923b">charas</a>.Add(c);</div>
+<div class="line"><span class="lineno">   16</span>        base.MoveToOther(c);</div>
+<div class="line"><span class="lineno">   17</span>        base.Main.OnRefreshMenu();</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassListPeopleEmbark_html"><div class="ttname"><a href="classListPeopleEmbark.html">ListPeopleEmbark</a></div><div class="ttdef"><b>Definition:</b> <a href="ListPeopleEmbark_8cs_source.html#l00005">ListPeopleEmbark.cs:6</a></div></div>
+<div class="ttc" id="aclassListPeopleEmbark_html_a74ad34c72d8266eafeeb249037d9923b"><div class="ttname"><a href="classListPeopleEmbark.html#a74ad34c72d8266eafeeb249037d9923b">ListPeopleEmbark.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="ListPeopleEmbark_8cs_source.html#l00037">ListPeopleEmbark.cs:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListPeopleEmbark_8cs_source.html#l00037">charas</a>.</p>
 
 </div>
 </div>
@@ -345,6 +375,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleEmbark_8cs_source.html#l00007">7</a> of file <a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        i.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(c.<a class="code hl_function" href="classChara.html#aa8c9b9cb5ccf732e690de360dce680db">GetActionText</a>(), 240, FontColor.Default, TextAnchor.MiddleLeft);</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aclassChara_html_aa8c9b9cb5ccf732e690de360dce680db"><div class="ttname"><a href="classChara.html#aa8c9b9cb5ccf732e690de360dce680db">Chara.GetActionText</a></div><div class="ttdeci">string GetActionText()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06510">Chara.cs:6510</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_ae2b8778fd74445f36964a7224550426a"><div class="ttname"><a href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">ItemGeneral.SetSubText</a></div><div class="ttdeci">UIButton SetSubText(string lang, int x, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.cs:113</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06510">Chara.GetActionText()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.SetSubText()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +411,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseListPeople.html#afc038432765b66f1704235908bb7ae95">BaseListPeople</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleEmbark_8cs_source.html#l00020">20</a> of file <a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> o <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classListPeopleEmbark.html#a74ad34c72d8266eafeeb249037d9923b">charas</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Add(o);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a6ef8dac39202125ddd488be32c34dd20"><div class="ttname"><a href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">ListOwner&lt; Chara, ItemGeneral &gt;::list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00097">ListOwner.2.cs:97</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListPeopleEmbark_8cs_source.html#l00037">charas</a>, and <a class="el" href="ListOwner_82_8cs_source.html#l00097">ListOwner&lt; Chara, ItemGeneral &gt;.list</a>.</p>
 
 </div>
 </div>
@@ -403,6 +450,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseListPeople.html#a656bcd4023daaa7bbeeebfd4a0901ec8">BaseListPeople</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleEmbark_8cs_source.html#l00028">28</a> of file <a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classListOwner.html#ab42835ae58c46bf205bd18fa09bd5518">main</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        this.button.interactable = (this.charas.Count &gt; 0 &amp;&amp; (this.other as <a class="code hl_class" href="classListPeopleEmbark.html">ListPeopleEmbark</a>).<a class="code hl_variable" href="classListPeopleEmbark.html#a74ad34c72d8266eafeeb249037d9923b">charas</a>.Count &gt; 0);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassListOwner_html_ab42835ae58c46bf205bd18fa09bd5518"><div class="ttname"><a href="classListOwner.html#ab42835ae58c46bf205bd18fa09bd5518">ListOwner&lt; Chara, ItemGeneral &gt;::main</a></div><div class="ttdeci">bool main</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00105">ListOwner.2.cs:105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListPeopleEmbark_8cs_source.html#l00037">charas</a>, and <a class="el" href="ListOwner_82_8cs_source.html#l00105">ListOwner&lt; Chara, ItemGeneral &gt;.main</a>.</p>
 
 </div>
 </div>
@@ -437,15 +494,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleEmbark_8cs_source.html#l00037">37</a> of file <a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ListPeopleEmbark_8cs_source.html#l00012">OnClick()</a>, <a class="el" href="ListPeopleEmbark_8cs_source.html#l00020">OnList()</a>, and <a class="el" href="ListPeopleEmbark_8cs_source.html#l00028">OnRefreshMenu()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ListPeopleEmbark_8cs_source.html">ListPeopleEmbark.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classListPeopleEmbark.html">ListPeopleEmbark</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

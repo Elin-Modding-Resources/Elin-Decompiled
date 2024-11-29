@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classRaceBonus.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -388,6 +408,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RaceBonus_8cs_source.html#l00036">36</a> of file <a class="el" href="RaceBonus_8cs_source.html">RaceBonus.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> num = A_1.owner.Card.Evalue(e);</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            A_1.n.AddTopic(<span class="stringliteral">&quot;TopicLeft&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[e].GetName(), num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RaceBonus_8cs_source.html#l00020">OnWriteNote()</a>.</p>
 
 </div>
 </div>
@@ -418,7 +452,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classElement.html#a4c736532f2dbff4037fee4dfba0be948">Element</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RaceBonus_8cs_source.html#l00007">7</a> of file <a class="el" href="RaceBonus_8cs_source.html">RaceBonus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> SpriteSheet.Get(<span class="stringliteral">&quot;Media/Graphics/Icon/Element/icon_elements&quot;</span>, <span class="stringliteral">&quot;ele_Feat&quot;</span>);</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae2f672d7fb76ca041e5c8c461477ef09" name="ae2f672d7fb76ca041e5c8c461477ef09"></a>
@@ -458,6 +495,27 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classElement.html#ac3aae5718b0149440a67667ea51dec2b">Element</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RaceBonus_8cs_source.html#l00020">20</a> of file <a class="el" href="RaceBonus_8cs_source.html">RaceBonus.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;&gt;c__DisplayClass3_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">   23</span>        CS$&lt;&gt;8__locals1.owner = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>;</div>
+<div class="line"><span class="lineno">   24</span>        CS$&lt;&gt;8__locals1.n = n;</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(60, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(61, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(79, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(65, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(64, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(55, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(56, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_class" href="classRaceBonus.html">RaceBonus</a>.&lt;<a class="code hl_function" href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">OnWriteNote</a>&gt;<a class="code hl_function" href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">g__AddText</a>|3_0(57, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00892">Element.2.cs:892</a></div></div>
+<div class="ttc" id="aclassRaceBonus_html"><div class="ttname"><a href="classRaceBonus.html">RaceBonus</a></div><div class="ttdef"><b>Definition:</b> <a href="RaceBonus_8cs_source.html#l00005">RaceBonus.cs:6</a></div></div>
+<div class="ttc" id="aclassRaceBonus_html_a602787a3808f731e0f38382d0ba3368a"><div class="ttname"><a href="classRaceBonus.html#a602787a3808f731e0f38382d0ba3368a">RaceBonus.g__AddText</a></div><div class="ttdeci">static void&lt; OnWriteNote &gt; g__AddText(int e, ref RaceBonus.&lt;&gt;c__DisplayClass3_0 A_1)</div><div class="ttdef"><b>Definition:</b> <a href="RaceBonus_8cs_source.html#l00036">RaceBonus.cs:36</a></div></div>
+<div class="ttc" id="aclassRaceBonus_html_ae2f672d7fb76ca041e5c8c461477ef09"><div class="ttname"><a href="classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09">RaceBonus.OnWriteNote</a></div><div class="ttdeci">override void OnWriteNote(UINote n, ElementContainer owner)</div><div class="ttdef"><b>Definition:</b> <a href="RaceBonus_8cs_source.html#l00020">RaceBonus.cs:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RaceBonus_8cs_source.html#l00036">g__AddText()</a>, <a class="el" href="RaceBonus_8cs_source.html#l00020">OnWriteNote()</a>, and <a class="el" href="Element_82_8cs_source.html#l00892">Element.owner</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RaceBonus_8cs_source.html#l00020">OnWriteNote()</a>.</p>
 
 </div>
 </div>
@@ -483,16 +541,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RaceBonus_8cs_source.html#l00012">12</a> of file <a class="el" href="RaceBonus_8cs_source.html">RaceBonus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="RaceBonus_8cs_source.html">RaceBonus.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRaceBonus.html">RaceBonus</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

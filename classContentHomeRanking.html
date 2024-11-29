@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classContentHomeRanking.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -129,6 +149,12 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentHomeRanking_8cs_source.html#l00007">7</a> of file <a class="el" href="ContentHomeRanking_8cs_source.html">ContentHomeRanking.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        this.<a class="code hl_function" href="classContentHomeRanking.html#a2e71c461de77e1ac20eaf54bb9e35047">Refresh</a>();</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aclassContentHomeRanking_html_a2e71c461de77e1ac20eaf54bb9e35047"><div class="ttname"><a href="classContentHomeRanking.html#a2e71c461de77e1ac20eaf54bb9e35047">ContentHomeRanking.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="ContentHomeRanking_8cs_source.html#l00012">ContentHomeRanking.cs:12</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -156,6 +182,71 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">12</a> of file <a class="el" href="ContentHomeRanking_8cs_source.html">ContentHomeRanking.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        List&lt;RankedZone&gt; ranks = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_variable" href="classSpatialManager.html#aaa6986de4b3221579f8db1c145f4c0f7">ranks</a>.<a class="code hl_function" href="classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d">GetList</a>();</div>
+<div class="line"><span class="lineno">   15</span>        UIDynamicList list = this.<a class="code hl_variable" href="classContentHomeRanking.html#a3cff8157d4431c9185b738f9c1f4034b">listRanking</a>;</div>
+<div class="line"><span class="lineno">   16</span>        list.Clear();</div>
+<div class="line"><span class="lineno">   17</span>        BaseList list2 = list;</div>
+<div class="line"><span class="lineno">   18</span>        UIList.Callback&lt;<a class="code hl_class" href="classRankedZone.html">RankedZone</a>, UIItem&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classRankedZone.html">RankedZone</a>, UIItem&gt;();</div>
+<div class="line"><span class="lineno">   19</span>        callback.onClick = delegate(<a class="code hl_class" href="classRankedZone.html">RankedZone</a> a, UIItem b)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>        };</div>
+<div class="line"><span class="lineno">   22</span>        callback.onRedraw = delegate(<a class="code hl_class" href="classRankedZone.html">RankedZone</a> a, UIItem b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            b.text1.text = ((a.z.visitCount &gt; 0) ? a.<a class="code hl_property" href="classRankedZone.html#a36f64a25e78ed426219474558fb361cf">Name</a> : <span class="stringliteral">&quot;?????&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>            b.text2.text = <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;{0:#,0}&quot;</span>, a.<a class="code hl_property" href="classRankedZone.html#abc23a020cbc55143362876c8cf0879f7">Value</a>);</div>
+<div class="line"><span class="lineno">   26</span>            b.text3.text = (a.<a class="code hl_variable" href="classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500">rank</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>            b.text4.text = a.<a class="code hl_function" href="classRankedZone.html#adc83bdc4fc2e417493620369d67ec2ce">GetFactionName</a>();</div>
+<div class="line"><span class="lineno">   28</span>            b.image1.sprite = (a.<a class="code hl_function" href="classRankedZone.html#a95d27a1e31b864b09d02760ece22aeac">GetSprite</a>() ?? b.image1.sprite);</div>
+<div class="line"><span class="lineno">   29</span>            b.image1.SetNativeSize();</div>
+<div class="line"><span class="lineno">   30</span>            b.text3.color = this.<a class="code hl_variable" href="classContentHomeRanking.html#ab350cbc9ee84cdb79f1cc977768bd828">colors</a>[(a.rank &lt;= 3) ? 0 : ((a.<a class="code hl_variable" href="classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500">rank</a> &lt;= 10) ? 1 : ((a.rank &lt;= 100) ? 2 : 3))];</div>
+<div class="line"><span class="lineno">   31</span>            b.image2.SetActive(a.<a class="code hl_variable" href="classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63">z</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>);</div>
+<div class="line"><span class="lineno">   32</span>        };</div>
+<div class="line"><span class="lineno">   33</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRankedZone.html">RankedZone</a> o <span class="keywordflow">in</span> ranks)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                list.Add(o);</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        };</div>
+<div class="line"><span class="lineno">   40</span>        callback.onRefresh = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   41</span>        list2.callbacks = callback;</div>
+<div class="line"><span class="lineno">   42</span>        list.List();</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRankedZone.html">RankedZone</a> rankedZone <span class="keywordflow">in</span> ranks)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63">z</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                num = list.objects.IndexOf(rankedZone);</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            list.dsv.scrollByItemIndex(num);</div>
+<div class="line"><span class="lineno">   54</span>            list.Refresh();</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassContentHomeRanking_html_a3cff8157d4431c9185b738f9c1f4034b"><div class="ttname"><a href="classContentHomeRanking.html#a3cff8157d4431c9185b738f9c1f4034b">ContentHomeRanking.listRanking</a></div><div class="ttdeci">UIDynamicList listRanking</div><div class="ttdef"><b>Definition:</b> <a href="ContentHomeRanking_8cs_source.html#l00059">ContentHomeRanking.cs:59</a></div></div>
+<div class="ttc" id="aclassContentHomeRanking_html_ab350cbc9ee84cdb79f1cc977768bd828"><div class="ttname"><a href="classContentHomeRanking.html#ab350cbc9ee84cdb79f1cc977768bd828">ContentHomeRanking.colors</a></div><div class="ttdeci">Color[] colors</div><div class="ttdef"><b>Definition:</b> <a href="ContentHomeRanking_8cs_source.html#l00061">ContentHomeRanking.cs:61</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
+<div class="ttc" id="aclassRankedZoneManager_html_aff220cdd1f7b50f1c6f8e28d0bce976d"><div class="ttname"><a href="classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d">RankedZoneManager.GetList</a></div><div class="ttdeci">List&lt; RankedZone &gt; GetList()</div><div class="ttdef"><b>Definition:</b> <a href="RankedZoneManager_8cs_source.html#l00040">RankedZoneManager.cs:40</a></div></div>
+<div class="ttc" id="aclassRankedZone_html"><div class="ttname"><a href="classRankedZone.html">RankedZone</a></div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00005">RankedZone.cs:6</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_a36f64a25e78ed426219474558fb361cf"><div class="ttname"><a href="classRankedZone.html#a36f64a25e78ed426219474558fb361cf">RankedZone.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00015">RankedZone.cs:16</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_a95d27a1e31b864b09d02760ece22aeac"><div class="ttname"><a href="classRankedZone.html#a95d27a1e31b864b09d02760ece22aeac">RankedZone.GetSprite</a></div><div class="ttdeci">Sprite GetSprite()</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00036">RankedZone.cs:36</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_ab40e314009b6ea7d7ee01e8938f10500"><div class="ttname"><a href="classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500">RankedZone.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00043">RankedZone.cs:43</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_abc23a020cbc55143362876c8cf0879f7"><div class="ttname"><a href="classRankedZone.html#abc23a020cbc55143362876c8cf0879f7">RankedZone.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00007">RankedZone.cs:8</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_ad926bf010c857b7145d4ff96df8f9b63"><div class="ttname"><a href="classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63">RankedZone.z</a></div><div class="ttdeci">Zone z</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00041">RankedZone.cs:41</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_adc83bdc4fc2e417493620369d67ec2ce"><div class="ttname"><a href="classRankedZone.html#adc83bdc4fc2e417493620369d67ec2ce">RankedZone.GetFactionName</a></div><div class="ttdeci">string GetFactionName()</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00023">RankedZone.cs:23</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_aaa6986de4b3221579f8db1c145f4c0f7"><div class="ttname"><a href="classSpatialManager.html#aaa6986de4b3221579f8db1c145f4c0f7">SpatialManager.ranks</a></div><div class="ttdeci">RankedZoneManager ranks</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00103">SpatialManager.cs:103</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="ContentHomeRanking_8cs_source.html#l00061">colors</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="RankedZone_8cs_source.html#l00023">RankedZone.GetFactionName()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00040">RankedZoneManager.GetList()</a>, <a class="el" href="RankedZone_8cs_source.html#l00036">RankedZone.GetSprite()</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="ContentHomeRanking_8cs_source.html#l00059">listRanking</a>, <a class="el" href="RankedZone_8cs_source.html#l00016">RankedZone.Name</a>, <a class="el" href="RankedZone_8cs_source.html#l00043">RankedZone.rank</a>, <a class="el" href="SpatialManager_8cs_source.html#l00103">SpatialManager.ranks</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, <a class="el" href="RankedZone_8cs_source.html#l00008">RankedZone.Value</a>, and <a class="el" href="RankedZone_8cs_source.html#l00041">RankedZone.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentHomeRanking_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -174,6 +265,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentHomeRanking_8cs_source.html#l00061">61</a> of file <a class="el" href="ContentHomeRanking_8cs_source.html">ContentHomeRanking.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a3cff8157d4431c9185b738f9c1f4034b" name="a3cff8157d4431c9185b738f9c1f4034b"></a>
@@ -190,15 +283,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentHomeRanking_8cs_source.html#l00059">59</a> of file <a class="el" href="ContentHomeRanking_8cs_source.html">ContentHomeRanking.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">Refresh()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ContentHomeRanking_8cs_source.html">ContentHomeRanking.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classContentHomeRanking.html">ContentHomeRanking</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

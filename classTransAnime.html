@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTransAnime.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -137,6 +157,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00006">6</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#a4e098891208ecc1977e934739ca8be41">randomFlipX</a> &amp;&amp; Rand.rnd(2) == 0)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            this.flipX = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ae864ec4ac7e176a868d059645abcf852">randomDelay</a> != 0f)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            this.timer -= UnityEngine.Random.Range(0f, this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ae864ec4ac7e176a868d059645abcf852">randomDelay</a>);</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassTransAnimeData_html_a4e098891208ecc1977e934739ca8be41"><div class="ttname"><a href="classTransAnimeData.html#a4e098891208ecc1977e934739ca8be41">TransAnimeData.randomFlipX</a></div><div class="ttdeci">bool randomFlipX</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00076">TransAnimeData.cs:76</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_ae864ec4ac7e176a868d059645abcf852"><div class="ttname"><a href="classTransAnimeData.html#ae864ec4ac7e176a868d059645abcf852">TransAnimeData.randomDelay</a></div><div class="ttdeci">float randomDelay</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00066">TransAnimeData.cs:66</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a0fcc9477fcf56a735600121d0fef2557"><div class="ttname"><a href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">TransAnime.data</a></div><div class="ttdeci">TransAnimeData data</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00078">TransAnime.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TransAnime_8cs_source.html#l00078">data</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00066">TransAnimeData.randomDelay</a>, and <a class="el" href="TransAnimeData_8cs_source.html#l00076">TransAnimeData.randomFlipX</a>.</p>
 
 </div>
 </div>
@@ -164,6 +200,78 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00019">19</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        this.timer += <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">gameDelta</a>;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a7e7cd0c85295eefdb77efd75eb58db22">timer</a> &gt; this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#aa720b0635966caa9b268bd10efb30a90">interval</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            this.timer -= this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#aa720b0635966caa9b268bd10efb30a90">interval</a>;</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_variable" href="classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d">frame</a>++;</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d">frame</a> &gt;= this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_property" href="classTransAnimeData.html#a849622a1402f9af368e0c70cfea861a9">TotalFrame</a>)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ac8afce20b382f64684dd185683299400">loop</a>)</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0501e3d28290eaa351f4662232a81bbf">point</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classTransAnime.html#a0501e3d28290eaa351f4662232a81bbf">point</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a8ae6e83a67061ee373662062596013c9">detail</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   31</span>                    {</div>
+<div class="line"><span class="lineno">   32</span>                        this.point.cell.detail.anime = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   33</span>                        this.<a class="code hl_variable" href="classTransAnime.html#a0501e3d28290eaa351f4662232a81bbf">point</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#aaec0e820ba6e46d01bc487745c580177">TryDespawnDetail</a>();</div>
+<div class="line"><span class="lineno">   34</span>                    }</div>
+<div class="line"><span class="lineno">   35</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0b1ab2bd6602127d6a7c8caadf74001e">renderer</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   36</span>                    {</div>
+<div class="line"><span class="lineno">   37</span>                        this.renderer.anime = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   38</span>                    }</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   40</span>                }</div>
+<div class="line"><span class="lineno">   41</span>                this.frame = 0;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d">frame</a> &gt;= this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#a529c1eeaf1430ab68aa938b22b6462a4">vectors</a>.Length)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            this.frame = this.data.vectors.Length - 1;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        this.v = this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#a529c1eeaf1430ab68aa938b22b6462a4">vectors</a>[this.<a class="code hl_variable" href="classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d">frame</a>];</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ace6b59c70084d142d0ef9b18da033cdd">randomMtp</a> != 0f)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            this.v *= UnityEngine.Random.Range(1f - this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ace6b59c70084d142d0ef9b18da033cdd">randomMtp</a>, 1f + <span class="keyword">this</span>.data.randomMtp);</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a6606f1cffb35baca6dfc4bca8b21ef9e">flipX</a>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            this.v.x = this.v.x * -1f;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0fcc9477fcf56a735600121d0fef2557">data</a>.<a class="code hl_variable" href="classTransAnimeData.html#ac33fcc847580605554b86b8a9e8ddb4c">directional</a>)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            this.v.y = this.dest.y * this.<a class="code hl_variable" href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">v</a>.x;</div>
+<div class="line"><span class="lineno">   60</span>            this.v.x = this.dest.x * this.<a class="code hl_variable" href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">v</a>.x;</div>
+<div class="line"><span class="lineno">   61</span>            this.v.z = 0f;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTransAnime.html#a0b1ab2bd6602127d6a7c8caadf74001e">renderer</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            RenderObject.currentParam.x += this.<a class="code hl_variable" href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">v</a>.x;</div>
+<div class="line"><span class="lineno">   66</span>            RenderObject.currentParam.y += this.<a class="code hl_variable" href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">v</a>.y;</div>
+<div class="line"><span class="lineno">   67</span>            RenderObject.currentParam.z += this.<a class="code hl_variable" href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">v</a>.z;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassCell_html_a8ae6e83a67061ee373662062596013c9"><div class="ttname"><a href="classCell.html#a8ae6e83a67061ee373662062596013c9">Cell.detail</a></div><div class="ttdeci">CellDetail detail</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01874">Cell.cs:1874</a></div></div>
+<div class="ttc" id="aclassCell_html_aaec0e820ba6e46d01bc487745c580177"><div class="ttname"><a href="classCell.html#aaec0e820ba6e46d01bc487745c580177">Cell.TryDespawnDetail</a></div><div class="ttdeci">void TryDespawnDetail()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01569">Cell.cs:1569</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRenderObject_html"><div class="ttname"><a href="classRenderObject.html">RenderObject</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00005">RenderObject.cs:6</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a505fb1d614f9379a31d0e77f1296e268"><div class="ttname"><a href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">RenderObject.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00035">RenderObject.cs:35</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_a529c1eeaf1430ab68aa938b22b6462a4"><div class="ttname"><a href="classTransAnimeData.html#a529c1eeaf1430ab68aa938b22b6462a4">TransAnimeData.vectors</a></div><div class="ttdeci">Vector3[] vectors</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00080">TransAnimeData.cs:80</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_a849622a1402f9af368e0c70cfea861a9"><div class="ttname"><a href="classTransAnimeData.html#a849622a1402f9af368e0c70cfea861a9">TransAnimeData.TotalFrame</a></div><div class="ttdeci">int TotalFrame</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00006">TransAnimeData.cs:7</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_aa720b0635966caa9b268bd10efb30a90"><div class="ttname"><a href="classTransAnimeData.html#aa720b0635966caa9b268bd10efb30a90">TransAnimeData.interval</a></div><div class="ttdeci">float interval</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00060">TransAnimeData.cs:60</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_ac33fcc847580605554b86b8a9e8ddb4c"><div class="ttname"><a href="classTransAnimeData.html#ac33fcc847580605554b86b8a9e8ddb4c">TransAnimeData.directional</a></div><div class="ttdeci">bool directional</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00072">TransAnimeData.cs:72</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_ac8afce20b382f64684dd185683299400"><div class="ttname"><a href="classTransAnimeData.html#ac8afce20b382f64684dd185683299400">TransAnimeData.loop</a></div><div class="ttdeci">bool loop</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00068">TransAnimeData.cs:68</a></div></div>
+<div class="ttc" id="aclassTransAnimeData_html_ace6b59c70084d142d0ef9b18da033cdd"><div class="ttname"><a href="classTransAnimeData.html#ace6b59c70084d142d0ef9b18da033cdd">TransAnimeData.randomMtp</a></div><div class="ttdeci">float randomMtp</div><div class="ttdef"><b>Definition:</b> <a href="TransAnimeData_8cs_source.html#l00064">TransAnimeData.cs:64</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a0501e3d28290eaa351f4662232a81bbf"><div class="ttname"><a href="classTransAnime.html#a0501e3d28290eaa351f4662232a81bbf">TransAnime.point</a></div><div class="ttdeci">Point point</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00074">TransAnime.cs:74</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a0b1ab2bd6602127d6a7c8caadf74001e"><div class="ttname"><a href="classTransAnime.html#a0b1ab2bd6602127d6a7c8caadf74001e">TransAnime.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00076">TransAnime.cs:76</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a328885c138faee502b107ef7ef5ddcb8"><div class="ttname"><a href="classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8">TransAnime.v</a></div><div class="ttdeci">Vector3 v</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00072">TransAnime.cs:72</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a548c4715b6b74b300b95ac62f62b0b0d"><div class="ttname"><a href="classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d">TransAnime.frame</a></div><div class="ttdeci">int frame</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00080">TransAnime.cs:80</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a6606f1cffb35baca6dfc4bca8b21ef9e"><div class="ttname"><a href="classTransAnime.html#a6606f1cffb35baca6dfc4bca8b21ef9e">TransAnime.flipX</a></div><div class="ttdeci">bool flipX</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00090">TransAnime.cs:90</a></div></div>
+<div class="ttc" id="aclassTransAnime_html_a7e7cd0c85295eefdb77efd75eb58db22"><div class="ttname"><a href="classTransAnime.html#a7e7cd0c85295eefdb77efd75eb58db22">TransAnime.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="TransAnime_8cs_source.html#l00084">TransAnime.cs:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="TransAnime_8cs_source.html#l00078">data</a>, <a class="el" href="Cell_8cs_source.html#l01874">Cell.detail</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00072">TransAnimeData.directional</a>, <a class="el" href="TransAnime_8cs_source.html#l00090">flipX</a>, <a class="el" href="TransAnime_8cs_source.html#l00080">frame</a>, <a class="el" href="RenderObject_8cs_source.html#l00035">RenderObject.gameDelta</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00060">TransAnimeData.interval</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00068">TransAnimeData.loop</a>, <a class="el" href="TransAnime_8cs_source.html#l00074">point</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00064">TransAnimeData.randomMtp</a>, <a class="el" href="TransAnime_8cs_source.html#l00076">renderer</a>, <a class="el" href="TransAnime_8cs_source.html#l00084">timer</a>, <a class="el" href="TransAnimeData_8cs_source.html#l00007">TransAnimeData.TotalFrame</a>, <a class="el" href="Cell_8cs_source.html#l01569">Cell.TryDespawnDetail()</a>, <a class="el" href="TransAnime_8cs_source.html#l00072">v</a>, and <a class="el" href="TransAnimeData_8cs_source.html#l00080">TransAnimeData.vectors</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>, and <a class="el" href="EffectIRenderer_8cs_source.html#l00048">EffectIRenderer.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -182,6 +290,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00088">88</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="a0fcc9477fcf56a735600121d0fef2557" name="a0fcc9477fcf56a735600121d0fef2557"></a>
@@ -197,6 +307,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00078">78</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TransAnime_8cs_source.html#l00006">Init()</a>, and <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
 
 </div>
 </div>
@@ -246,6 +358,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00090">90</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a548c4715b6b74b300b95ac62f62b0b0d" name="a548c4715b6b74b300b95ac62f62b0b0d"></a>
@@ -261,6 +375,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00080">80</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
 
 </div>
 </div>
@@ -278,6 +394,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00074">74</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a0b1ab2bd6602127d6a7c8caadf74001e" name="a0b1ab2bd6602127d6a7c8caadf74001e"></a>
@@ -293,6 +411,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00076">76</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, and <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
 
 </div>
 </div>
@@ -326,6 +446,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00084">84</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a328885c138faee502b107ef7ef5ddcb8" name="a328885c138faee502b107ef7ef5ddcb8"></a>
@@ -342,15 +464,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TransAnime_8cs_source.html#l00072">72</a> of file <a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00048">EffectIRenderer.OnUpdate()</a>, and <a class="el" href="TransAnime_8cs_source.html#l00019">Update()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TransAnime_8cs_source.html">TransAnime.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTransAnime.html">TransAnime</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

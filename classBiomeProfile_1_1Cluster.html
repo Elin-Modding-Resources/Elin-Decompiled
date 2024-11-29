@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBiomeProfile_1_1Cluster.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1Cluster.html">Cluster</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -151,7 +167,19 @@ Public Attributes</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00671">671</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  672</span>        {</div>
+<div class="line"><span class="lineno">  673</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a09870720ca8134284e4e305ac6ce5f19">Scatter</a>,</div>
+<div class="line"><span class="lineno">  674</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a0a47a558edc72d9ae62ab8600e394287">ScatterExterior</a>,</div>
+<div class="line"><span class="lineno">  675</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221acc5dee8270b9bb7ee0f4599074327de0">ScatterInterior</a>,</div>
+<div class="line"><span class="lineno">  676</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a00f12a365973274b71e35373d3dbef48">ScatterNonObstacle</a>,</div>
+<div class="line"><span class="lineno">  677</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a17fc61094c6e09fe184cd7fec5653467">ByWall</a> = 10</div>
+<div class="line"><span class="lineno">  678</span>        }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html_a33d4ca5fa523cf84043ef45cdd170221a00f12a365973274b71e35373d3dbef48"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a00f12a365973274b71e35373d3dbef48">BiomeProfile.Cluster.Type.ScatterNonObstacle</a></div><div class="ttdeci">@ ScatterNonObstacle</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html_a33d4ca5fa523cf84043ef45cdd170221a09870720ca8134284e4e305ac6ce5f19"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a09870720ca8134284e4e305ac6ce5f19">BiomeProfile.Cluster.Type.Scatter</a></div><div class="ttdeci">@ Scatter</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html_a33d4ca5fa523cf84043ef45cdd170221a0a47a558edc72d9ae62ab8600e394287"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a0a47a558edc72d9ae62ab8600e394287">BiomeProfile.Cluster.Type.ScatterExterior</a></div><div class="ttdeci">@ ScatterExterior</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html_a33d4ca5fa523cf84043ef45cdd170221a17fc61094c6e09fe184cd7fec5653467"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221a17fc61094c6e09fe184cd7fec5653467">BiomeProfile.Cluster.Type.ByWall</a></div><div class="ttdeci">@ ByWall</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html_a33d4ca5fa523cf84043ef45cdd170221acc5dee8270b9bb7ee0f4599074327de0"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html#a33d4ca5fa523cf84043ef45cdd170221acc5dee8270b9bb7ee0f4599074327de0">BiomeProfile.Cluster.Type.ScatterInterior</a></div><div class="ttdeci">@ ScatterInterior</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -182,7 +210,10 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classBiomeProfile_1_1ClusterObj.html#a67df0c8d3ed7aaa815284a9a1da49fcc">BiomeProfile.ClusterObj</a>, and <a class="el" href="classBiomeProfile_1_1ClusterThing.html#adce3e64ee8d8190ffb98451415440444">BiomeProfile.ClusterThing</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00662">662</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  663</span>        {</div>
+<div class="line"><span class="lineno">  664</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  665</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -222,9 +253,13 @@ Public Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1Cluster.html">Cluster</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

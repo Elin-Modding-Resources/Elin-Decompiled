@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classZoneInspector.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -216,7 +236,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00053">53</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        ZoneInspector.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab87617ba0a24aceb8e5bdd8d6d153aac" name="ab87617ba0a24aceb8e5bdd8d6d153aac"></a>
@@ -243,6 +266,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00095">95</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_function" href="classZone.html#ad18ee11f00945b841b72e41c814ed1c8">Export</a>();</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassZone_html_ad18ee11f00945b841b72e41c814ed1c8"><div class="ttname"><a href="classZone.html#ad18ee11f00945b841b72e41c814ed1c8">Zone.Export</a></div><div class="ttdeci">void Export(string path, PartialMap partial=null, bool usermap=false)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03196">Zone.cs:3196</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, and <a class="el" href="Zone_8cs_source.html#l03196">Zone.Export()</a>.</p>
 
 </div>
 </div>
@@ -270,6 +301,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00100">100</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (Application.isPlaying)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            this.<a class="code hl_function" href="classZoneInspector.html#a24aabcfa468d02566bfd23d87673f622">RefreshScreen</a>();</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="aclassZoneInspector_html_a24aabcfa468d02566bfd23d87673f622"><div class="ttname"><a href="classZoneInspector.html#a24aabcfa468d02566bfd23d87673f622">ZoneInspector.RefreshScreen</a></div><div class="ttdeci">void RefreshScreen()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInspector_8cs_source.html#l00063">ZoneInspector.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneInspector_8cs_source.html#l00063">RefreshScreen()</a>.</p>
 
 </div>
 </div>
@@ -297,6 +337,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00058">58</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_function" href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">RefreshAllTiles</a>();</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassEMono_html_af8f5537c2acc423bdbc584f2e2a73629"><div class="ttname"><a href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">EMono._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00046">EMono.cs:47</a></div></div>
+<div class="ttc" id="aclassMap_html_aee8120d9016faadc762f0b80bf0ef1e8"><div class="ttname"><a href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">Map.RefreshAllTiles</a></div><div class="ttdeci">void RefreshAllTiles()</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02160">Map.cs:2160</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, and <a class="el" href="Map_8cs_source.html#l02160">Map.RefreshAllTiles()</a>.</p>
 
 </div>
 </div>
@@ -324,6 +371,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00063">63</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        EMono.scene.profile = <a class="code hl_class" href="classSceneProfile.html">SceneProfile</a>.<a class="code hl_function" href="classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f">Load</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa">idSceneProfile</a>.IsEmpty(<span class="stringliteral">&quot;default&quot;</span>));</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#af82cf97ba2fe08a296b02707b5960733">Deactivate</a>();</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a5f749649788c9447c06e5d841afba8b1">zone</a> is <a class="code hl_class" href="classRegion.html">Region</a>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a523aa13b7ad5ce26689ef36539482b8e">Region</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#a3228fcda3d3c22cd5ba2817465fa816c">SetZoom</a>(0.5f);</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">RefreshScreenSize</a>();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a523aa13b7ad5ce26689ef36539482b8e"><div class="ttname"><a href="classActionMode.html#a523aa13b7ad5ce26689ef36539482b8e">ActionMode.Region</a></div><div class="ttdeci">static AM_Region Region</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01701">ActionMode.cs:1701</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00516">ActionMode.cs:516</a></div></div>
+<div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01699">ActionMode.cs:1699</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a3228fcda3d3c22cd5ba2817465fa816c"><div class="ttname"><a href="classBaseGameScreen.html#a3228fcda3d3c22cd5ba2817465fa816c">BaseGameScreen.SetZoom</a></div><div class="ttdeci">void SetZoom(float z)</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00716">BaseGameScreen.cs:716</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_ad6c40c221707b1b31fdf76bffcc6d1bf"><div class="ttname"><a href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">BaseGameScreen.RefreshScreenSize</a></div><div class="ttdeci">void RefreshScreenSize()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.cs:415</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_af82cf97ba2fe08a296b02707b5960733"><div class="ttname"><a href="classBaseGameScreen.html#af82cf97ba2fe08a296b02707b5960733">BaseGameScreen.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00125">BaseGameScreen.cs:125</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d9695d19ece56b37cf342a28c0426e0"><div class="ttname"><a href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">EMono.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00094">EMono.cs:95</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a169a81af975ca0dfaefdc183a89ebdfa"><div class="ttname"><a href="classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa">MapConfig.idSceneProfile</a></div><div class="ttdeci">string idSceneProfile</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00031">MapConfig.cs:31</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a5f749649788c9447c06e5d841afba8b1"><div class="ttname"><a href="classPlayer.html#a5f749649788c9447c06e5d841afba8b1">Player.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01521">Player.cs:1521</a></div></div>
+<div class="ttc" id="aclassRegion_html"><div class="ttname"><a href="classRegion.html">Region</a></div><div class="ttdef"><b>Definition:</b> <a href="Region_8cs_source.html#l00007">Region.cs:8</a></div></div>
+<div class="ttc" id="aclassSceneProfile_html"><div class="ttname"><a href="classSceneProfile.html">SceneProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="SceneProfile_8cs_source.html#l00005">SceneProfile.cs:6</a></div></div>
+<div class="ttc" id="aclassSceneProfile_html_a6778ce7f52f41aa2534081a411457f3f"><div class="ttname"><a href="classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f">SceneProfile.Load</a></div><div class="ttdeci">static SceneProfile Load(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SceneProfile_8cs_source.html#l00007">SceneProfile.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>, <a class="el" href="ActionMode_8cs_source.html#l01699">ActionMode.Adv</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00125">BaseGameScreen.Deactivate()</a>, <a class="el" href="MapConfig_8cs_source.html#l00031">MapConfig.idSceneProfile</a>, <a class="el" href="SceneProfile_8cs_source.html#l00007">SceneProfile.Load()</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.RefreshScreenSize()</a>, <a class="el" href="ActionMode_8cs_source.html#l01701">ActionMode.Region</a>, <a class="el" href="EMono_8cs_source.html#l00095">EMono.screen</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00716">BaseGameScreen.SetZoom()</a>, and <a class="el" href="Player_8cs_source.html#l01521">Player.zone</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneInspector_8cs_source.html#l00100">OnValidate()</a>.</p>
 
 </div>
 </div>
@@ -351,6 +436,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00083">83</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#a5858488cfbd50ec11fd2cf81d9615eee">things</a>)</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            thing.isPlayerCreation = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            chara.isPlayerCreation = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassMap_html_a5858488cfbd50ec11fd2cf81d9615eee"><div class="ttname"><a href="classMap.html#a5858488cfbd50ec11fd2cf81d9615eee">Map.things</a></div><div class="ttdeci">List&lt; Thing &gt; things</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02854">Map.cs:2854</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, and <a class="el" href="Map_8cs_source.html#l02854">Map.things</a>.</p>
 
 </div>
 </div>
@@ -449,7 +550,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00036">36</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classZone.html">Zone</a> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a> = this.<a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (zone == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            this.zone.map.bounds = value;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassZoneInspector_html_a74dee19eb6150d35b9b91c075533b87d"><div class="ttname"><a href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">ZoneInspector.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInspector_8cs_source.html#l00114">ZoneInspector.cs:114</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<div class="ttc" id="aclassZone_html_afa0007971eaad96b106d4004690b5ed7"><div class="ttname"><a href="classZone.html#afa0007971eaad96b106d4004690b5ed7">Zone.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03875">Zone.cs:3875</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa2c96a0689b23f4f7da58bb35f082397" name="aa2c96a0689b23f4f7da58bb35f082397"></a>
@@ -473,7 +593,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <a class="code hl_class" href="classZone.html">Zone</a> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a> = this.<a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>;</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (zone == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>.<a class="code hl_property" href="classZone.html#a317357b241607c3081a72a0f5a9372fa">idExport</a>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassZone_html_a317357b241607c3081a72a0f5a9372fa"><div class="ttname"><a href="classZone.html#a317357b241607c3081a72a0f5a9372fa">Zone.idExport</a></div><div class="ttdeci">virtual string idExport</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00160">Zone.cs:161</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2a109f4e39685b9fa7e790d332b091b5" name="a2a109f4e39685b9fa7e790d332b091b5"></a>
@@ -497,16 +629,35 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneInspector_8cs_source.html#l00019">19</a> of file <a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_class" href="classZone.html">Zone</a> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a> = this.<a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>;</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (zone == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classZoneInspector.html#a74dee19eb6150d35b9b91c075533b87d">zone</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            this.zone.map.config = value;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ZoneInspector_8cs_source.html">ZoneInspector.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classZoneInspector.html">ZoneInspector</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

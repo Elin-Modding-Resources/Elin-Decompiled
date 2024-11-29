@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBaseCard.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -228,6 +248,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00027">27</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(<span class="keywordtype">id</span>, this.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(<span class="keywordtype">id</span>, <span class="keyword">null</span>) + value);</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00017">BaseCard.cs:17</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00032">BaseCard.cs:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00017">GetInt()</a>, and <a class="el" href="BaseCard_8cs_source.html#l00032">SetInt()</a>.</p>
 
 </div>
 </div>
@@ -256,6 +283,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(<span class="keywordtype">id</span>, <span class="keyword">null</span>) != 0;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00017">GetInt()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitAltar_8cs_source.html#l00242">TraitAltar._OnOffer()</a>, and <a class="el" href="ZoneEventHarvest_8cs_source.html#l00104">ZoneEventHarvest.OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -294,6 +328,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00017">17</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">int</span> result;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a">mapInt</a>.TryGetValue(<span class="keywordtype">id</span>, out result))</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> defaultInt.GetValueOrDefault();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_a02f7c5bcefd7e68419c8b24725e74a6a"><div class="ttname"><a href="classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a">BaseCard.mapInt</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; mapInt</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00121">BaseCard.cs:121</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00121">mapInt</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="BaseCard_8cs_source.html#l00027">AddInt()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="ZonePreEnterBoutWin_8cs_source.html#l00006">ZonePreEnterBoutWin.Execute()</a>, <a class="el" href="BaseCard_8cs_source.html#l00007">GetBool()</a>, <a class="el" href="TraitScrollMapTreasure_8cs_source.html#l00054">TraitScrollMapTreasure.GetDest()</a>, <a class="el" href="Trait_8cs_source.html#l01955">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00217">BaseListPeople.OnClick()</a>, <a class="el" href="TraitScrollMap_8cs_source.html#l00068">TraitScrollMap.OnRead()</a>, <a class="el" href="InvOwnerDeliver_8cs_source.html#l00052">InvOwnerDeliver.PayBill()</a>, <a class="el" href="TCOrbitChara_8cs_source.html#l00037">TCOrbitChara.RefreshAll()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00146">LayerQuestBoard.RefreshRanking()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00331">DramaOutcome.revive_pet()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00047">AI_Steal.Run()</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, <a class="el" href="AIWork_8cs_source.html#l00066">AIWork.SetDestination()</a>, <a class="el" href="TraitScrollMap_8cs_source.html#l00051">TraitScrollMap.SetName()</a>, <a class="el" href="GameDate_8cs_source.html#l00340">GameDate.ShipPackages()</a>, and <a class="el" href="TraitSwitch_8cs_source.html#l00098">TraitSwitch.TryDisarmTrap()</a>.</p>
 
 </div>
 </div>
@@ -322,6 +369,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00068">68</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">object</span> obj;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>.TryGetValue(<span class="keywordtype">id</span>, out obj) &amp;&amp; obj is T)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span> (T)((object)obj);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_a875acd35d35f82036ba15a5f82bcdc3b"><div class="ttname"><a href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">BaseCard.mapObj</a></div><div class="ttdeci">Dictionary&lt; int, object &gt; mapObj</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00118">BaseCard.cs:118</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00118">mapObj</a>.</p>
 
 </div>
 </div>
@@ -360,6 +422,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00045">45</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordtype">string</span> result;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">mapStr</a>.TryGetValue(<span class="keywordtype">id</span>, out result))</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> defaultStr;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_af33c8b51ab8e6ae895c10e05c462f201"><div class="ttname"><a href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">BaseCard.mapStr</a></div><div class="ttdeci">Dictionary&lt; int, string &gt; mapStr</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00124">BaseCard.cs:124</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00124">mapStr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitBlueprint_8cs_source.html#l00006">TraitBlueprint.CanStackTo()</a>, <a class="el" href="TraitBook_8cs_source.html#l00041">TraitBook.CanStackTo()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00062">TraitRecipe.CanStackTo()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00306">TraitNewZone.CreateZone()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, <a class="el" href="WindowChara_8cs_source.html#l00069">WindowChara.SetPortraitBG()</a>, <a class="el" href="WindowChara_8cs_source.html#l00081">WindowChara.SetPortraitFrame()</a>, and <a class="el" href="AI__Shopping_8cs_source.html#l00094">AI_Shopping.TryRestock()</a>.</p>
 
 </div>
 </div>
@@ -398,6 +473,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00012">12</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        this.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(<span class="keywordtype">id</span>, enable ? 1 : 0);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00032">SetInt()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00042">Party.AddMemeber()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00205">DramaOutcome.chara_hired()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00216">DramaOutcome.chara_hired_ticket()</a>.</p>
 
 </div>
 </div>
@@ -436,6 +518,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00032">32</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (value == 0)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a">mapInt</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                this.<a class="code hl_variable" href="classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a">mapInt</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a">mapInt</a>[id] = value;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00121">mapInt</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="BaseCard_8cs_source.html#l00027">AddInt()</a>, <a class="el" href="Faction_82_8cs_source.html#l00189">Faction.AddReserve()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00093">LayerEditPCC.Apply()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="ZonePreEnterBoutWin_8cs_source.html#l00006">ZonePreEnterBoutWin.Execute()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00285">DramaOutcome.fiama_pet()</a>, <a class="el" href="Trait_8cs_source.html#l02819">Trait.g__NoRestock()</a>, <a class="el" href="TraitScrollMapTreasure_8cs_source.html#l00054">TraitScrollMapTreasure.GetDest()</a>, <a class="el" href="Faction_82_8cs_source.html#l00234">Faction.OnAdvanceMonth()</a>, <a class="el" href="TraitWell_8cs_source.html#l00079">TraitWell.OnBlend()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00217">BaseListPeople.OnClick()</a>, <a class="el" href="QuestIntroInspector_8cs_source.html#l00005">QuestIntroInspector.OnComplete()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00093">QuestVernis.OnComplete()</a>, <a class="el" href="Player_8cs_source.html#l00154">Player.OnCreateGame()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00155">ShopTransaction.OnEndTransaction()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="InvOwner_8cs_source.html#l01477">InvOwner.Transaction.Process()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00047">AI_Steal.Run()</a>, <a class="el" href="BaseCard_8cs_source.html#l00012">SetBool()</a>, <a class="el" href="GameDate_8cs_source.html#l00340">GameDate.ShipPackages()</a>, and <a class="el" href="TraitSwitch_8cs_source.html#l00098">TraitSwitch.TryDisarmTrap()</a>.</p>
 
 </div>
 </div>
@@ -474,6 +571,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00082">82</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            this.mapObj = <span class="keyword">new</span> Dictionary&lt;int, object&gt;();</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (o == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   91</span>            {</div>
+<div class="line"><span class="lineno">   92</span>                this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>[id] = o;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00118">mapObj</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ListPeopleBuySlave_8cs_source.html#l00026">ListPeopleBuySlave.OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -512,6 +628,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00099">99</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            this.mapObj = <span class="keyword">new</span> Dictionary&lt;int, object&gt;();</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (o == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">mapStr</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        this.<a class="code hl_variable" href="classBaseCard.html#a875acd35d35f82036ba15a5f82bcdc3b">mapObj</a>[id] = o;</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> (T)((object)o);</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00118">mapObj</a>, and <a class="el" href="BaseCard_8cs_source.html#l00124">mapStr</a>.</p>
 
 </div>
 </div>
@@ -550,6 +684,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00055">55</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (value.IsEmpty())</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">mapStr</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                this.<a class="code hl_variable" href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">mapStr</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classBaseCard.html#af33c8b51ab8e6ae895c10e05c462f201">mapStr</a>[id] = value;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00124">mapStr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>, <a class="el" href="AI__Shopping_8cs_source.html#l00153">AI_Shopping.Buy()</a>, <a class="el" href="ThingGen_8cs_source.html#l00150">ThingGen.CreateRecipe()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="TraitBook_8cs_source.html#l00046">TraitBook.OnCreate()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00045">TraitRecipe.OnCreate()</a>, <a class="el" href="TraitBook_8cs_source.html#l00059">TraitBook.OnImportMap()</a>, <a class="el" href="TraitRadio_8cs_source.html#l00030">TraitRadio.OnUse()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00086">SerializedCards.Restore()</a>, <a class="el" href="WindowChara_8cs_source.html#l00069">WindowChara.SetPortraitBG()</a>, <a class="el" href="WindowChara_8cs_source.html#l00081">WindowChara.SetPortraitFrame()</a>, and <a class="el" href="GameDate_8cs_source.html#l00385">GameDate.ShipLetter()</a>.</p>
 
 </div>
 </div>
@@ -568,6 +717,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00121">121</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03416">Card.Duplicate()</a>, <a class="el" href="BaseCard_8cs_source.html#l00017">GetInt()</a>, and <a class="el" href="BaseCard_8cs_source.html#l00032">SetInt()</a>.</p>
+
 </div>
 </div>
 <a id="a875acd35d35f82036ba15a5f82bcdc3b" name="a875acd35d35f82036ba15a5f82bcdc3b"></a>
@@ -583,6 +734,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00118">118</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseCard_8cs_source.html#l00068">GetObj&lt; T &gt;()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00086">SerializedCards.Restore()</a>, <a class="el" href="BaseCard_8cs_source.html#l00082">SetObj()</a>, and <a class="el" href="BaseCard_8cs_source.html#l00099">SetObj&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -600,15 +753,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseCard_8cs_source.html#l00124">124</a> of file <a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03416">Card.Duplicate()</a>, <a class="el" href="BaseCard_8cs_source.html#l00045">GetStr()</a>, <a class="el" href="BaseCard_8cs_source.html#l00099">SetObj&lt; T &gt;()</a>, and <a class="el" href="BaseCard_8cs_source.html#l00055">SetStr()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BaseCard_8cs_source.html">BaseCard.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBaseCard.html">BaseCard</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

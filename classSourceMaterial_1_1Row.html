@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceMaterial_1_1Row.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classSourceMaterial.html">SourceMaterial</a></li><li class="navelem"><a class="el" href="classSourceMaterial_1_1Row.html">Row</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -262,6 +278,36 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00172">172</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#abc21b12f9cf84282b1558346475b9c1c">decal</a> == 0)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a1157f01db73e85fd317f0fc91476199f">IsSnowTile</a> &amp;&amp; <span class="keyword">this</span> != <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_variable" href="classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12">sourceSnow</a>)</div>
+<div class="line"><span class="lineno">  179</span>            {</div>
+<div class="line"><span class="lineno">  180</span>                <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_variable" href="classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12">sourceSnow</a>.AddBlood(p, a);</div>
+<div class="line"><span class="lineno">  181</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  182</span>            }</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a; i++)</div>
+<div class="line"><span class="lineno">  184</span>            {</div>
+<div class="line"><span class="lineno">  185</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#ae479fd7114c777116eb393b72695f6cb">AddDecal</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0) ? 0 : (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1)), p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> + ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0) ? 0 : (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1)), <span class="keyword">this</span>.decal, 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  186</span>            }</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="ttc" id="aclassCell_html_a1157f01db73e85fd317f0fc91476199f"><div class="ttname"><a href="classCell.html#a1157f01db73e85fd317f0fc91476199f">Cell.IsSnowTile</a></div><div class="ttdeci">bool IsSnowTile</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00725">Cell.cs:726</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMATERIAL_html"><div class="ttname"><a href="classMATERIAL.html">MATERIAL</a></div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00006">MATERIAL.cs:7</a></div></div>
+<div class="ttc" id="aclassMATERIAL_html_a82479c0abf6ef6fe4a1417edf7777b12"><div class="ttname"><a href="classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12">MATERIAL.sourceSnow</a></div><div class="ttdeci">static SourceMaterial.Row sourceSnow</div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00114">MATERIAL.cs:114</a></div></div>
+<div class="ttc" id="aclassMap_html_ae479fd7114c777116eb393b72695f6cb"><div class="ttname"><a href="classMap.html#ae479fd7114c777116eb393b72695f6cb">Map.AddDecal</a></div><div class="ttdeci">void AddDecal(int x, int z, int id, int amount=1, bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02037">Map.cs:2037</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_abc21b12f9cf84282b1558346475b9c1c"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#abc21b12f9cf84282b1558346475b9c1c">SourceMaterial.Row.decal</a></div><div class="ttdeci">int decal</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00389">SourceMaterial.cs:389</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02037">Map.AddDecal()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00389">SourceMaterial.Row.decal</a>, <a class="el" href="Cell_8cs_source.html#l00726">Cell.IsSnowTile</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="MATERIAL_8cs_source.html#l00114">MATERIAL.sourceSnow</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l01801">Map.DestroyObj()</a>, <a class="el" href="Map_8cs_source.html#l01650">Map.MineBlock()</a>, <a class="el" href="TaskDig_8cs_source.html#l00078">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskPlow_8cs_source.html#l00039">TaskPlow.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -300,6 +346,128 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00237">237</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  238</span>        {</div>
+<div class="line"><span class="lineno">  239</span>            <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>.&lt;&gt;c__DisplayClass52_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  240</span>            CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  241</span>            CS$&lt;&gt;8__locals1.num = num;</div>
+<div class="line"><span class="lineno">  242</span>            CS$&lt;&gt;8__locals1.container = container;</div>
+<div class="line"><span class="lineno">  243</span>            <a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a16e0b64aeb4fa2a4762c16694c211c32">CreateRawMaterial</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a>.ModNum(CS$&lt;&gt;8__locals1.num, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  245</span>            CS$&lt;&gt;8__locals1.container.AddThing(<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a>, <span class="keyword">true</span>, -1, -1);</div>
+<div class="line"><span class="lineno">  246</span>            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;dye&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a>;</div>
+<div class="line"><span class="lineno">  248</span>            uint num2 = &lt;PrivateImplementationDetails&gt;.ComputeStringHash(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">if</span> (num2 &lt;= 1167392201U)</div>
+<div class="line"><span class="lineno">  250</span>            {</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">if</span> (num2 &lt;= 270655681U)</div>
+<div class="line"><span class="lineno">  252</span>                {</div>
+<div class="line"><span class="lineno">  253</span>                    <span class="keywordflow">if</span> (num2 != 174734082U)</div>
+<div class="line"><span class="lineno">  254</span>                    {</div>
+<div class="line"><span class="lineno">  255</span>                        <span class="keywordflow">if</span> (num2 == 270655681U)</div>
+<div class="line"><span class="lineno">  256</span>                        {</div>
+<div class="line"><span class="lineno">  257</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;fiber&quot;</span>)</div>
+<div class="line"><span class="lineno">  258</span>                            {</div>
+<div class="line"><span class="lineno">  259</span>                                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;thread&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  260</span>                                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;texture&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  261</span>                                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;string&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  262</span>                            }</div>
+<div class="line"><span class="lineno">  263</span>                        }</div>
+<div class="line"><span class="lineno">  264</span>                    }</div>
+<div class="line"><span class="lineno">  265</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;soil&quot;</span>)</div>
+<div class="line"><span class="lineno">  266</span>                    {</div>
+<div class="line"><span class="lineno">  267</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;glass&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  268</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;clay&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  269</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;brick&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  270</span>                    }</div>
+<div class="line"><span class="lineno">  271</span>                }</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 != 862676408U)</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    <span class="keywordflow">if</span> (num2 != 974867124U)</div>
+<div class="line"><span class="lineno">  275</span>                    {</div>
+<div class="line"><span class="lineno">  276</span>                        <span class="keywordflow">if</span> (num2 == 1167392201U)</div>
+<div class="line"><span class="lineno">  277</span>                        {</div>
+<div class="line"><span class="lineno">  278</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;crystal&quot;</span>)</div>
+<div class="line"><span class="lineno">  279</span>                            {</div>
+<div class="line"><span class="lineno">  280</span>                                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;glass&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  281</span>                                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;gem&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  282</span>                            }</div>
+<div class="line"><span class="lineno">  283</span>                        }</div>
+<div class="line"><span class="lineno">  284</span>                    }</div>
+<div class="line"><span class="lineno">  285</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;rock&quot;</span>)</div>
+<div class="line"><span class="lineno">  286</span>                    {</div>
+<div class="line"><span class="lineno">  287</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;rock&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  288</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;pebble&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  289</span>                        this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;cutstone&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  290</span>                    }</div>
+<div class="line"><span class="lineno">  291</span>                }</div>
+<div class="line"><span class="lineno">  292</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;skin&quot;</span>)</div>
+<div class="line"><span class="lineno">  293</span>                {</div>
+<div class="line"><span class="lineno">  294</span>                    this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;texture&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  295</span>                }</div>
+<div class="line"><span class="lineno">  296</span>            }</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 &lt;= 1527558748U)</div>
+<div class="line"><span class="lineno">  298</span>            {</div>
+<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">if</span> (num2 != 1237752336U)</div>
+<div class="line"><span class="lineno">  300</span>                {</div>
+<div class="line"><span class="lineno">  301</span>                    <span class="keywordflow">if</span> (num2 == 1527558748U)</div>
+<div class="line"><span class="lineno">  302</span>                    {</div>
+<div class="line"><span class="lineno">  303</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;gem&quot;</span>)</div>
+<div class="line"><span class="lineno">  304</span>                        {</div>
+<div class="line"><span class="lineno">  305</span>                            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;cutstone&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  306</span>                            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;ingot&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  307</span>                            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;gem&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  308</span>                        }</div>
+<div class="line"><span class="lineno">  309</span>                    }</div>
+<div class="line"><span class="lineno">  310</span>                }</div>
+<div class="line"><span class="lineno">  311</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;water&quot;</span>))</div>
+<div class="line"><span class="lineno">  312</span>                {</div>
+<div class="line"><span class="lineno">  313</span>                }</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 != 2226448744U)</div>
+<div class="line"><span class="lineno">  316</span>            {</div>
+<div class="line"><span class="lineno">  317</span>                <span class="keywordflow">if</span> (num2 != 2585652531U)</div>
+<div class="line"><span class="lineno">  318</span>                {</div>
+<div class="line"><span class="lineno">  319</span>                    <span class="keywordflow">if</span> (num2 == 3683705231U)</div>
+<div class="line"><span class="lineno">  320</span>                    {</div>
+<div class="line"><span class="lineno">  321</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;bone&quot;</span>)</div>
+<div class="line"><span class="lineno">  322</span>                        {</div>
+<div class="line"><span class="lineno">  323</span>                            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;glass&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  324</span>                            this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;stick&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  325</span>                        }</div>
+<div class="line"><span class="lineno">  326</span>                    }</div>
+<div class="line"><span class="lineno">  327</span>                }</div>
+<div class="line"><span class="lineno">  328</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;ore&quot;</span>)</div>
+<div class="line"><span class="lineno">  329</span>                {</div>
+<div class="line"><span class="lineno">  330</span>                    this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;cutstone&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  331</span>                    this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;ingot&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  332</span>                }</div>
+<div class="line"><span class="lineno">  333</span>            }</div>
+<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;wood&quot;</span>)</div>
+<div class="line"><span class="lineno">  335</span>            {</div>
+<div class="line"><span class="lineno">  336</span>                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;plank&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  337</span>                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;stick&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  338</span>                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(<span class="stringliteral">&quot;bark&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text2 <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a34b79428784804d9abb24ffcfeaae014">goods</a>)</div>
+<div class="line"><span class="lineno">  341</span>            {</div>
+<div class="line"><span class="lineno">  342</span>                this.&lt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">CreateByProduct</a>&gt;<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">g__C</a>|52_0(text2, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  343</span>            }</div>
+<div class="line"><span class="lineno">  344</span>        }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00136">SourceMaterial.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a1bd0b27861dbf3e42f4e5a0fa4eb8612"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612">SourceMaterial.Row.CreateByProduct</a></div><div class="ttdeci">void CreateByProduct(Thing container, int num)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.cs:237</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a1f8dc3ef122e2c3251616a671d09e243"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">SourceMaterial.Row.category</a></div><div class="ttdeci">string category</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00379">SourceMaterial.cs:379</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a34b79428784804d9abb24ffcfeaae014"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a34b79428784804d9abb24ffcfeaae014">SourceMaterial.Row.goods</a></div><div class="ttdeci">string[] goods</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00385">SourceMaterial.cs:385</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a7c78dd0d06a2d5d2c03bad19672b5099"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099">SourceMaterial.Row.g__C</a></div><div class="ttdeci">void&lt; CreateByProduct &gt; g__C(string _id, ref SourceMaterial.Row.&lt;&gt;c__DisplayClass52_0 A_2)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00363">SourceMaterial.cs:363</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_af2ff8d0a4c621fd281ce5e8cad04ddff"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">SourceMaterial.Row.thing</a></div><div class="ttdeci">string thing</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00383">SourceMaterial.cs:383</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_html"><div class="ttname"><a href="classSourceMaterial.html">SourceMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00006">SourceMaterial.cs:7</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_a16e0b64aeb4fa2a4762c16694c211c32"><div class="ttname"><a href="classThingGen.html#a16e0b64aeb4fa2a4762c16694c211c32">ThingGen.CreateRawMaterial</a></div><div class="ttdeci">static Thing CreateRawMaterial(SourceMaterial.Row m)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00074">ThingGen.cs:74</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00379">SourceMaterial.Row.category</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>, <a class="el" href="ThingGen_8cs_source.html#l00074">ThingGen.CreateRawMaterial()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00363">SourceMaterial.Row.g__C()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00385">SourceMaterial.Row.goods</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00383">SourceMaterial.Row.thing</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>.</p>
 
 </div>
 </div>
@@ -338,6 +506,18 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00363">363</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>        {</div>
+<div class="line"><span class="lineno">  365</span>            <a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(_id, -1, -1);</div>
+<div class="line"><span class="lineno">  366</span>            <a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a>.ChangeMaterial(this.<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  367</span>            thing.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(A_2.num, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  368</span>            A_2.container.AddThing(<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af2ff8d0a4c621fd281ce5e8cad04ddff">thing</a>, <span class="keyword">true</span>, -1, -1);</div>
+<div class="line"><span class="lineno">  369</span>        }</div>
+<div class="ttc" id="aclassCard_html_ae8e34c12f7fdaf3c6b3a50e27e4e3090"><div class="ttname"><a href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">Card.ModNum</a></div><div class="ttdeci">void ModNum(int a, bool notify=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03487">Card.cs:3487</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="Card_8cs_source.html#l03487">Card.ModNum()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00383">SourceMaterial.Row.thing</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>.</p>
 
 </div>
 </div>
@@ -365,6 +545,18 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00194">194</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a8da627870e23785b524c9bb9e7cf6c06">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ae7780e500700a2e92b5e3baf71ffb584">matColors</a>[this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">alias</a>].main;</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="ttc" id="aclassColorProfile_html_ae7780e500700a2e92b5e3baf71ffb584"><div class="ttname"><a href="classColorProfile.html#ae7780e500700a2e92b5e3baf71ffb584">ColorProfile.matColors</a></div><div class="ttdeci">UD_String_MatData matColors</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00070">ColorProfile.cs:70</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
+<div class="ttc" id="aclassCore_html_a8da627870e23785b524c9bb9e7cf6c06"><div class="ttname"><a href="classCore.html#a8da627870e23785b524c9bb9e7cf6c06">Core.Colors</a></div><div class="ttdeci">ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00727">Core.cs:727</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a28c5f8719fb3c00b9bf1a2c131008c5e"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">SourceMaterial.Row.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00373">SourceMaterial.cs:373</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00373">SourceMaterial.Row.alias</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">UIMapPreview._RefreshPoint()</a>, <a class="el" href="Map_8cs_source.html#l01650">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01729">Map.MineFloor()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00189">SourceMaterial.Row.PlayHitEffect()</a>.</p>
 
 </div>
 </div>
@@ -393,6 +585,16 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00219">219</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a> == <span class="stringliteral">&quot;wood&quot;</span>)</div>
+<div class="line"><span class="lineno">  222</span>            {</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;build_progress&quot;</span>;</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a15b77a4369bc49b75280e5852be38ab1">TryGetSound</a>(<span class="stringliteral">&quot;craft&quot;</span>, c);</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a15b77a4369bc49b75280e5852be38ab1"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a15b77a4369bc49b75280e5852be38ab1">SourceMaterial.Row.TryGetSound</a></div><div class="ttdeci">string TryGetSound(string suffx, RenderRow c=null)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00199">SourceMaterial.cs:199</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00379">SourceMaterial.Row.category</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00199">SourceMaterial.Row.TryGetSound()</a>.</p>
 
 </div>
 </div>
@@ -421,6 +623,13 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00209">209</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>        {</div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a15b77a4369bc49b75280e5852be38ab1">TryGetSound</a>(<span class="stringliteral">&quot;dead&quot;</span>, c);</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00199">SourceMaterial.Row.TryGetSound()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l01801">Map.DestroyObj()</a>, <a class="el" href="Map_8cs_source.html#l01650">Map.MineBlock()</a>, and <a class="el" href="Map_8cs_source.html#l01729">Map.MineFloor()</a>.</p>
 
 </div>
 </div>
@@ -449,6 +658,11 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00214">214</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a15b77a4369bc49b75280e5852be38ab1">TryGetSound</a>(<span class="stringliteral">&quot;drop&quot;</span>, c);</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00199">SourceMaterial.Row.TryGetSound()</a>.</p>
 
 </div>
 </div>
@@ -477,6 +691,19 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00228">228</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>        {</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">if</span> (c != <span class="keyword">null</span> &amp;&amp; !c.<a class="code hl_variable" href="classRenderRow.html#a44672df92527f716bfe43b01009678ed">idSound</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  231</span>            {</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Material/&quot;</span> + c.<a class="code hl_variable" href="classRenderRow.html#a44672df92527f716bfe43b01009678ed">idSound</a>;</div>
+<div class="line"><span class="lineno">  233</span>            }</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Material/&quot;</span> + this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a5545d1aa334776db40bfc4ebbe09386d">idSound</a>;</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="ttc" id="aclassRenderRow_html_a44672df92527f716bfe43b01009678ed"><div class="ttname"><a href="classRenderRow.html#a44672df92527f716bfe43b01009678ed">RenderRow.idSound</a></div><div class="ttdeci">string idSound</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00477">RenderRow.cs:477</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a5545d1aa334776db40bfc4ebbe09386d"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a5545d1aa334776db40bfc4ebbe09386d">SourceMaterial.Row.idSound</a></div><div class="ttdeci">string idSound</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00403">SourceMaterial.cs:403</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00403">SourceMaterial.Row.idSound</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00078">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00048">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00039">TaskPlow.OnCreateProgress()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00199">SourceMaterial.Row.TryGetSound()</a>.</p>
 
 </div>
 </div>
@@ -504,6 +731,15 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00160">160</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            MatColors matColors = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a8da627870e23785b524c9bb9e7cf6c06">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#ae7780e500700a2e92b5e3baf71ffb584">matColors</a>.TryGetValue(this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">alias</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  163</span>            this.matColor = matColors.main;</div>
+<div class="line"><span class="lineno">  164</span>            this.altColor = matColors.alt;</div>
+<div class="line"><span class="lineno">  165</span>            this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#ab6b6404711d8f6eb56cb2f6a1f027ed7">SetTiles</a>();</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_ab6b6404711d8f6eb56cb2f6a1f027ed7"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ab6b6404711d8f6eb56cb2f6a1f027ed7">SourceMaterial.Row.SetTiles</a></div><div class="ttdeci">void SetTiles()</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00168">SourceMaterial.cs:168</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00373">SourceMaterial.Row.alias</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00168">SourceMaterial.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -532,6 +768,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00154">154</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            base.OnImportData(data);</div>
+<div class="line"><span class="lineno">  157</span>            this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#ab6b6404711d8f6eb56cb2f6a1f027ed7">SetTiles</a>();</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00168">SourceMaterial.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -560,6 +802,17 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00189">189</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;mine2&quot;</span>).<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(p, 0f, <span class="keyword">null</span>, <span class="keyword">null</span>).SetParticleColor(this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a43acca098bfe9ac49218b25ecc38ece7">GetColor</a>()).Emit(2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4));</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00008">Effect.cs:9</a></div></div>
+<div class="ttc" id="aclassEffect_html_a4b51528582c52d77dc9846b6efa150d5"><div class="ttname"><a href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Effect.Get</a></div><div class="ttdeci">static Effect Get(Effect original)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00010">Effect.cs:10</a></div></div>
+<div class="ttc" id="aclassEffect_html_a7fc23b7447649119c0b7497c4218d792"><div class="ttname"><a href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Effect.Play</a></div><div class="ttdeci">void Play(float delay, Point from, float fixY=0f, Point to=null, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00033">Effect.cs:33</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a43acca098bfe9ac49218b25ecc38ece7"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a43acca098bfe9ac49218b25ecc38ece7">SourceMaterial.Row.GetColor</a></div><div class="ttdeci">Color GetColor()</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00194">SourceMaterial.cs:194</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Effect_8cs_source.html#l00010">Effect.Get()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00194">SourceMaterial.Row.GetColor()</a>, <a class="el" href="Effect_8cs_source.html#l00033">Effect.Play()</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00078">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00048">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskPlow_8cs_source.html#l00039">TaskPlow.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -587,6 +840,10 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00168">168</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00160">SourceMaterial.Row.Init()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00154">SourceMaterial.Row.OnImportData()</a>.</p>
 
 </div>
 </div>
@@ -625,6 +882,20 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00199">199</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordtype">string</span> soundImpact = this.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a22834f3fe7c12f43bb9ca45087bbc54d">GetSoundImpact</a>(c);</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.Exist(soundImpact + <span class="stringliteral">&quot;_&quot;</span> + suffx))</div>
+<div class="line"><span class="lineno">  203</span>            {</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">return</span> soundImpact + <span class="stringliteral">&quot;_&quot;</span> + suffx;</div>
+<div class="line"><span class="lineno">  205</span>            }</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">return</span> soundImpact;</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00159">EClass.cs:160</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a22834f3fe7c12f43bb9ca45087bbc54d"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a22834f3fe7c12f43bb9ca45087bbc54d">SourceMaterial.Row.GetSoundImpact</a></div><div class="ttdeci">string GetSoundImpact(RenderRow c=null)</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00228">SourceMaterial.cs:228</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00228">SourceMaterial.Row.GetSoundImpact()</a>, and <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00219">SourceMaterial.Row.GetSoundCraft()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00209">SourceMaterial.Row.GetSoundDead()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00214">SourceMaterial.Row.GetSoundDrop()</a>.</p>
 
 </div>
 </div>
@@ -642,6 +913,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00373">373</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00289">BiomeProfile.BaseTile._GetMat()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="Card_8cs_source.html#l05369">Card.DyeRandom()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00194">SourceMaterial.Row.GetColor()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00160">SourceMaterial.Row.Init()</a>, <a class="el" href="Map_8cs_source.html#l01729">Map.MineFloor()</a>, and <a class="el" href="Map_8cs_source.html#l01815">Map.MineObj()</a>.</p>
 
 </div>
 </div>
@@ -755,6 +1028,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00379">379</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00219">SourceMaterial.Row.GetSoundCraft()</a>.</p>
+
 </div>
 </div>
 <a id="a6fdcddc1ab066fa3ce27a71e2b72eb47" name="a6fdcddc1ab066fa3ce27a71e2b72eb47"></a>
@@ -786,6 +1061,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00389">389</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00172">SourceMaterial.Row.AddBlood()</a>.</p>
 
 </div>
 </div>
@@ -834,6 +1111,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00395">395</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -947,6 +1226,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00433">433</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00308">Thing.ApplyMaterial()</a>.</p>
+
 </div>
 </div>
 <a id="a34b79428784804d9abb24ffcfeaae014" name="a34b79428784804d9abb24ffcfeaae014"></a>
@@ -962,6 +1243,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00385">385</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>.</p>
 
 </div>
 </div>
@@ -1011,6 +1294,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00407">407</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">BaseTaskHarvest.SetTarget()</a>.</p>
+
 </div>
 </div>
 <a id="af25f7aab4d97ca55b5ee305f82ccf6c8" name="af25f7aab4d97ca55b5ee305f82ccf6c8"></a>
@@ -1026,6 +1311,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00371">371</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00289">BiomeProfile.BaseTile._GetMat()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00033">TraitBoat.OnRemovedFromZone()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">BaseTaskHarvest.SetTarget()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1103,6 +1390,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00403">403</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00228">SourceMaterial.Row.GetSoundImpact()</a>.</p>
+
 </div>
 </div>
 <a id="ac134d6a3e626a2e05695b105aa708ee4" name="ac134d6a3e626a2e05695b105aa708ee4"></a>
@@ -1118,6 +1407,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00440">440</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">Lot.SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -1166,6 +1457,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00375">375</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00289">BiomeProfile.BaseTile._GetMat()</a>.</p>
 
 </div>
 </div>
@@ -1247,6 +1540,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00405">405</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>.</p>
+
 </div>
 </div>
 <a id="ad552d3abbad0e3b100a02bc0528e2824" name="ad552d3abbad0e3b100a02bc0528e2824"></a>
@@ -1263,6 +1558,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00381">381</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">BaseTaskHarvest.SetTarget()</a>.</p>
+
 </div>
 </div>
 <a id="af2ff8d0a4c621fd281ce5e8cad04ddff" name="af2ff8d0a4c621fd281ce5e8cad04ddff"></a>
@@ -1278,6 +1575,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00383">383</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceMaterial_8cs_source.html#l00237">SourceMaterial.Row.CreateByProduct()</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00363">SourceMaterial.Row.g__C()</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1650,13 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00146">146</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  149</span>            {</div>
+<div class="line"><span class="lineno">  150</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">alias</a>;</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae0be5c777ad1dacd50b07e40ee97a408" name="ae0be5c777ad1dacd50b07e40ee97a408"></a>
@@ -1375,7 +1680,13 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00138">138</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aea161288071b05abe007f80fb84e61aa" name="aea161288071b05abe007f80fb84e61aa"></a>
@@ -1399,7 +1710,14 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00354">354</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  355</span>        {</div>
+<div class="line"><span class="lineno">  356</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  357</span>            {</div>
+<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a19d2b98dfc33bcab47d1f58e4fc61f7c">IDAxe</a>.Contains(this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a>);</div>
+<div class="line"><span class="lineno">  359</span>            }</div>
+<div class="line"><span class="lineno">  360</span>        }</div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a19d2b98dfc33bcab47d1f58e4fc61f7c"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a19d2b98dfc33bcab47d1f58e4fc61f7c">SourceMaterial.Row.IDAxe</a></div><div class="ttdeci">static string[] IDAxe</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00456">SourceMaterial.cs:456</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a345acf9e3ddea954f21140e6708b09cd" name="a345acf9e3ddea954f21140e6708b09cd"></a>
@@ -1423,16 +1741,27 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceMaterial_8cs_source.html#l00346">346</a> of file <a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  347</span>        {</div>
+<div class="line"><span class="lineno">  348</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  349</span>            {</div>
+<div class="line"><span class="lineno">  350</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a293a8c8a6089017570d96082c8d9ce87">IDPick</a>.Contains(this.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a>);</div>
+<div class="line"><span class="lineno">  351</span>            }</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a293a8c8a6089017570d96082c8d9ce87"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a293a8c8a6089017570d96082c8d9ce87">SourceMaterial.Row.IDPick</a></div><div class="ttdeci">static string[] IDPick</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00447">SourceMaterial.cs:447</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceMaterial_8cs_source.html">SourceMaterial.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceMaterial.html">SourceMaterial</a></li><li class="navelem"><a class="el" href="classSourceMaterial_1_1Row.html">Row</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

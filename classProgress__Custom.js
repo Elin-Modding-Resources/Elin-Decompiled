@@ -1,0 +1,26 @@
+var classProgress__Custom =
+[
+    [ "CanProgress", "classProgress__Custom.html#a0019507f4da1250617c0f0438c193128", null ],
+    [ "OnBeforeProgress", "classProgress__Custom.html#add0b16d9a33e4363218787f2feac5dbd", null ],
+    [ "OnProgress", "classProgress__Custom.html#aedc59b5a2896cf3d39aff938a560cc8d", null ],
+    [ "OnProgressBegin", "classProgress__Custom.html#a16119402328d6696e6ff010770ce965f", null ],
+    [ "OnProgressComplete", "classProgress__Custom.html#abb91540bcd2e141adfac3f12deb616e4", null ],
+    [ "SetDuration", "classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06", null ],
+    [ "cancelWhenDamaged", "classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80", null ],
+    [ "cancelWhenMoved", "classProgress__Custom.html#a3c760e3ba21fa9197cdf9d2fd7ce356a", null ],
+    [ "canProgress", "classProgress__Custom.html#a7cbce0f1f0ad095f3572f85d7b8d2bf7", null ],
+    [ "interval", "classProgress__Custom.html#a81605ce5217048c822f8c6cc4ab57786", null ],
+    [ "maxProgress", "classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c", null ],
+    [ "onBeforeProgress", "classProgress__Custom.html#a7a85c3cadef1d2b86ac09a176d0c0e12", null ],
+    [ "onProgress", "classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61", null ],
+    [ "onProgressBegin", "classProgress__Custom.html#a0def6c44c654e86e3704aa9162dcde3c", null ],
+    [ "onProgressComplete", "classProgress__Custom.html#ab14a578203b73bc6b663719d20a0c6ff", null ],
+    [ "showProgress", "classProgress__Custom.html#aa61ffcb9fe2c5f8515bd21b0fc21bb3c", null ],
+    [ "textHint", "classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c", null ],
+    [ "CancelWhenDamaged", "classProgress__Custom.html#adb05d0785a44a816430ebd5087b8edee", null ],
+    [ "CancelWhenMoved", "classProgress__Custom.html#a22adbd51efeff474c1a98cddbdf01547", null ],
+    [ "Interval", "classProgress__Custom.html#affec2c3e525ac2a72ff5aa25433567d1", null ],
+    [ "MaxProgress", "classProgress__Custom.html#a21a9bbd98677b5fa23b08ee95d9e94dd", null ],
+    [ "ShowProgress", "classProgress__Custom.html#a03ad598f3fc07d37861ae540a86beac0", null ],
+    [ "TextHint", "classProgress__Custom.html#ad6ab018f7d99048bd93b8318418cfc14", null ]
+];

@@ -1,0 +1,25 @@
+var classSourceBacker_1_1Row =
+[
+    [ "chara", "classSourceBacker_1_1Row.html#a933f36431aa8e512b81c093f957c16e6", null ],
+    [ "deity", "classSourceBacker_1_1Row.html#a6247320b4ce824c5a05f233c06f44f7b", null ],
+    [ "done", "classSourceBacker_1_1Row.html#a91c6663bafa918e1830f4efc415926ba", null ],
+    [ "gender", "classSourceBacker_1_1Row.html#a12306cbddae0d25a685cc1f3fa07978c", null ],
+    [ "id", "classSourceBacker_1_1Row.html#ae84e82f57e12ceb845403c5ad3646ed9", null ],
+    [ "isStatic", "classSourceBacker_1_1Row.html#ac04691ab1e20b9ea57f2981310394626", null ],
+    [ "lang", "classSourceBacker_1_1Row.html#adf8a2785d3bbfb2b9c176d8bee108c23", null ],
+    [ "loc", "classSourceBacker_1_1Row.html#a5b32baf54db4c1fe95df32a07caf5eb0", null ],
+    [ "loot", "classSourceBacker_1_1Row.html#a46008ae65690fdecc5138c345ceb2395", null ],
+    [ "name", "classSourceBacker_1_1Row.html#adf9e199291c3c8df8ee41580885cc917", null ],
+    [ "name_L", "classSourceBacker_1_1Row.html#a6f95b069584b7d3ab321b90d72c65a43", null ],
+    [ "original", "classSourceBacker_1_1Row.html#a98bccadbe2ed99396cfc2f1a1b67c1cc", null ],
+    [ "skin", "classSourceBacker_1_1Row.html#a1c9d0c0c1c6e9a613c5a269e9afe75f3", null ],
+    [ "text", "classSourceBacker_1_1Row.html#afba67e93bf7ef871df51e42608763e8b", null ],
+    [ "text_L", "classSourceBacker_1_1Row.html#a289277a1b499f33c2838d23f8bf0c705", null ],
+    [ "tree", "classSourceBacker_1_1Row.html#aee9820143df9c11cfd70a8921b9036c7", null ],
+    [ "type", "classSourceBacker_1_1Row.html#abf56fc6b676f2505f1ba20e97e95464d", null ],
+    [ "valid", "classSourceBacker_1_1Row.html#a57840ee1a145426e28207bb123df49f6", null ],
+    [ "GetAlias", "classSourceBacker_1_1Row.html#a3543871b863520665740a0cc58d320b0", null ],
+    [ "Name", "classSourceBacker_1_1Row.html#a02612a48f4b2fefa94fdfcb5b4ad1cd7", null ],
+    [ "Text", "classSourceBacker_1_1Row.html#ab8c4b9ecc8ee2c70ec783fcd76ded477", null ],
+    [ "UseAlias", "classSourceBacker_1_1Row.html#a2503a49807f97fb04fc190d7132a65ec", null ]
+];

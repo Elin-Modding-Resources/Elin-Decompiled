@@ -10,7 +10,8 @@ var indexSectionsWithContent =
   7: "abcdefghilmnoprstvwz",
   8: "abcdefghijklmnopqrstuvwyz",
   9: "_abcdefghijklmnopqrstuvwxyz",
-  10: "o"
+  10: "o",
+  11: "e"
 };
 
 var indexSectionNames =
@@ -25,7 +26,8 @@ var indexSectionNames =
   7: "enums",
   8: "enumvalues",
   9: "properties",
-  10: "events"
+  10: "events",
+  11: "pages"
 };
 
 var indexSectionLabels =
@@ -40,6 +42,7 @@ var indexSectionLabels =
   7: "Enumerations",
   8: "Enumerator",
   9: "Properties",
-  10: "Events"
+  10: "Events",
+  11: "Pages"
 };
 

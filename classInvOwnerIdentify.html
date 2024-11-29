@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classInvOwnerIdentify.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -439,7 +459,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00054">54</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                              : base(<span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money)</div>
+<div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -470,6 +494,30 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwnerDraglet.html#a3d60e9b55ed8812c443d98ae1432af98">InvOwnerDraglet</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00039">39</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">Proc</a>(this.<a class="code hl_variable" href="classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7">superior</a> ? <a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.GreaterIdentify : <a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.Identify, 100, <span class="keyword">this</span>.state, t.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>(), t, <span class="keywordflow">default</span>(<a class="code hl_struct" href="structActRef.html">ActRef</a>));</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>().<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    UIButton.TryShowTip(<span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   49</span>                });</div>
+<div class="line"><span class="lineno">   50</span>            });</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aEffectId_8cs_html_a984565599b06a35ad0709a8177b7ec02"><div class="ttname"><a href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a></div><div class="ttdeci">EffectId</div><div class="ttdef"><b>Definition:</b> <a href="EffectId_8cs_source.html#l00003">EffectId.cs:4</a></div></div>
+<div class="ttc" id="aclassActEffect_html"><div class="ttname"><a href="classActEffect.html">ActEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00006">ActEffect.cs:7</a></div></div>
+<div class="ttc" id="aclassActEffect_html_aa11e7453203f08185bc4d9db277254a7"><div class="ttname"><a href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">ActEffect.Proc</a></div><div class="ttdeci">static void Proc(EffectId id, Card cc, Card tc=null, int power=100, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00816">ActEffect.cs:816</a></div></div>
+<div class="ttc" id="aclassCard_html_aafbb34c9bea4b056ef8c3e8981604870"><div class="ttname"><a href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">Card.IsPC</a></div><div class="ttdeci">virtual bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02210">Card.cs:2211</a></div></div>
+<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03401">Card.cs:3401</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassInvOwnerEffect_html_a5cd4bffb9091082643c8c77c4d11dbd7"><div class="ttname"><a href="classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7">InvOwnerEffect.superior</a></div><div class="ttdeci">bool superior</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerEffect_8cs_source.html#l00013">InvOwnerEffect.cs:13</a></div></div>
+<div class="ttc" id="astructActRef_html"><div class="ttname"><a href="structActRef.html">ActRef</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRef_8cs_source.html#l00003">ActRef.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Card_8cs_source.html#l03401">Card.GetRootCard()</a>, <a class="el" href="Card_8cs_source.html#l02211">Card.IsPC</a>, <a class="el" href="ActEffect_8cs_source.html#l00816">ActEffect.Proc()</a>, and <a class="el" href="InvOwnerEffect_8cs_source.html#l00013">InvOwnerEffect.superior</a>.</p>
 
 </div>
 </div>
@@ -499,6 +547,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#a7917dde3d02e4143295e23afb5c8dc9d">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00029">29</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ac776e0530919124a87091f5e0886108d">CreateScroll</a>(this.<a class="code hl_variable" href="classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7">superior</a> ? 8232 : 8230, 1);</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_ac776e0530919124a87091f5e0886108d"><div class="ttname"><a href="classThingGen.html#ac776e0530919124a87091f5e0886108d">ThingGen.CreateScroll</a></div><div class="ttdeci">static Thing CreateScroll(int ele, int num=1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00169">ThingGen.cs:169</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00169">ThingGen.CreateScroll()</a>, and <a class="el" href="InvOwnerEffect_8cs_source.html#l00013">InvOwnerEffect.superior</a>.</p>
 
 </div>
 </div>
@@ -529,6 +584,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#aed54b09e84cc86b06b74bb6e7c82ab95">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00034">34</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> !t.<a class="code hl_property" href="classCard.html#aeb6ca5c2f62e5a584b732552ed160599">IsIdentified</a>;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassCard_html_aeb6ca5c2f62e5a584b732552ed160599"><div class="ttname"><a href="classCard.html#aeb6ca5c2f62e5a584b732552ed160599">Card.IsIdentified</a></div><div class="ttdeci">bool IsIdentified</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02684">Card.cs:2685</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02685">Card.IsIdentified</a>.</p>
 
 </div>
 </div>
@@ -554,7 +615,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00005">5</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a58f9a75f0b24bc0896ffec89caa05c42" name="a58f9a75f0b24bc0896ffec89caa05c42"></a>
@@ -578,7 +645,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00013">13</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;invIdentify&quot;</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abb0df1a04a94c123fc28770aaf4bb291" name="abb0df1a04a94c123fc28770aaf4bb291"></a>
@@ -602,16 +675,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerIdentify_8cs_source.html#l00021">21</a> of file <a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;identify_what&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="InvOwnerIdentify_8cs_source.html">InvOwnerIdentify.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classInvOwnerIdentify.html">InvOwnerIdentify</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

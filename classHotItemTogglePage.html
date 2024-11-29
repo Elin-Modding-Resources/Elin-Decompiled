@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemTogglePage.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -195,6 +215,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotItem.html#a70fde84034309bd884c98d694fc58444">HotItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemTogglePage_8cs_source.html#l00029">29</a> of file <a class="el" href="HotItemTogglePage_8cs_source.html">HotItemTogglePage.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!b)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   37</span>        b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a505816f2977057a8b9f8c9c212975033">SwitchPage</a>();</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassButtonHotItem_html_a0a9f69e1f6138f2b98430160c036148e"><div class="ttname"><a href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">ButtonHotItem.widget</a></div><div class="ttdeci">WidgetHotbar widget</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.cs:128</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a505816f2977057a8b9f8c9c212975033"><div class="ttname"><a href="classWidgetHotbar.html#a505816f2977057a8b9f8c9c212975033">WidgetHotbar.SwitchPage</a></div><div class="ttdeci">void SwitchPage()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00179">WidgetHotbar.cs:179</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetHotbar_8cs_source.html#l00179">WidgetHotbar.SwitchPage()</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.widget</a>.</p>
 
 </div>
 </div>
@@ -220,7 +253,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemTogglePage_8cs_source.html#l00005">5</a> of file <a class="el" href="HotItemTogglePage_8cs_source.html">HotItemTogglePage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;s_page&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8831d2c5d15c624151f68e66c60b05e3" name="a8831d2c5d15c624151f68e66c60b05e3"></a>
@@ -244,7 +283,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemTogglePage_8cs_source.html#l00021">21</a> of file <a class="el" href="HotItemTogglePage_8cs_source.html">HotItemTogglePage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_page&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a256c62723022c255be04e4379bd7882a" name="a256c62723022c255be04e4379bd7882a"></a>
@@ -268,16 +313,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemTogglePage_8cs_source.html#l00013">13</a> of file <a class="el" href="HotItemTogglePage_8cs_source.html">HotItemTogglePage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemTogglePage_8cs_source.html">HotItemTogglePage.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemTogglePage.html">HotItemTogglePage</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

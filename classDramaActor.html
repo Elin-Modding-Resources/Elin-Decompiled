@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDramaActor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -207,6 +227,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00235">235</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_class" href="classReligion.html">Religion</a> currentReligion = <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#a7a3918a5f00f96e8ca8dbe1060190e3f">currentReligion</a>;</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> (currentReligion != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            stringBuilder.Replace(<span class="stringliteral">&quot;#god_name&quot;</span>, currentReligion.<a class="code hl_property" href="classReligion.html#a0e19eeccc662ba4eab5ce7fbd47a67f5">Name</a>);</div>
+<div class="line"><span class="lineno">  242</span>            stringBuilder.Replace(<span class="stringliteral">&quot;#god_desc&quot;</span>, currentReligion.<a class="code hl_property" href="classReligion.html#a465a8e33b695fa1cae3ff2fc4149faf6">source</a>.GetDetail());</div>
+<div class="line"><span class="lineno">  243</span>            stringBuilder.Replace(<span class="stringliteral">&quot;#god_benefit&quot;</span>, currentReligion.<a class="code hl_function" href="classReligion.html#a2879222c42fb02b12f1028dfc5f0df7a">GetTextBenefit</a>());</div>
+<div class="line"><span class="lineno">  244</span>            stringBuilder.Replace(<span class="stringliteral">&quot;#godtalk_worship&quot;</span>, currentReligion.<a class="code hl_function" href="classReligion.html#a3660c094a3499a71f47913645d74271a">GetGodTalk</a>(<span class="stringliteral">&quot;worship&quot;</span>));</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">  247</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a7a3918a5f00f96e8ca8dbe1060190e3f"><div class="ttname"><a href="classLayerDrama.html#a7a3918a5f00f96e8ca8dbe1060190e3f">LayerDrama.currentReligion</a></div><div class="ttdeci">static Religion currentReligion</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00100">LayerDrama.cs:100</a></div></div>
+<div class="ttc" id="aclassReligion_html"><div class="ttname"><a href="classReligion.html">Religion</a></div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00006">Religion.cs:7</a></div></div>
+<div class="ttc" id="aclassReligion_html_a0e19eeccc662ba4eab5ce7fbd47a67f5"><div class="ttname"><a href="classReligion.html#a0e19eeccc662ba4eab5ce7fbd47a67f5">Religion.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00029">Religion.cs:30</a></div></div>
+<div class="ttc" id="aclassReligion_html_a2879222c42fb02b12f1028dfc5f0df7a"><div class="ttname"><a href="classReligion.html#a2879222c42fb02b12f1028dfc5f0df7a">Religion.GetTextBenefit</a></div><div class="ttdeci">string GetTextBenefit()</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00163">Religion.cs:163</a></div></div>
+<div class="ttc" id="aclassReligion_html_a3660c094a3499a71f47913645d74271a"><div class="ttname"><a href="classReligion.html#a3660c094a3499a71f47913645d74271a">Religion.GetGodTalk</a></div><div class="ttdeci">string GetGodTalk(string suffix)</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00234">Religion.cs:234</a></div></div>
+<div class="ttc" id="aclassReligion_html_a465a8e33b695fa1cae3ff2fc4149faf6"><div class="ttname"><a href="classReligion.html#a465a8e33b695fa1cae3ff2fc4149faf6">Religion.source</a></div><div class="ttdeci">SourceReligion.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00037">Religion.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00100">LayerDrama.currentReligion</a>, <a class="el" href="Religion_8cs_source.html#l00234">Religion.GetGodTalk()</a>, <a class="el" href="Religion_8cs_source.html#l00163">Religion.GetTextBenefit()</a>, <a class="el" href="Religion_8cs_source.html#l00030">Religion.Name</a>, <a class="el" href="Religion_8cs_source.html#l00038">Religion.source</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00129">SetChoice()</a>, and <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
 
 </div>
 </div>
@@ -251,6 +295,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00016">16</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        this.sequence = _sequence;</div>
+<div class="line"><span class="lineno">   19</span>        this.id = _id;</div>
+<div class="line"><span class="lineno">   20</span>        this.owner = _owner;</div>
+<div class="line"><span class="lineno">   21</span>        base.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00052">DramaSequence.AddActor()</a>.</p>
 
 </div>
 </div>
@@ -289,6 +341,143 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00129">129</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        item.index = index;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (!item.<a class="code hl_variable" href="classDramaChoice.html#a0a5d8f192034275e6bc5c37c6297034b">IF</a>.IsEmpty() &amp;&amp; !<a class="code hl_class" href="classDramaOutcome.html">DramaOutcome</a>.<a class="code hl_function" href="classDramaOutcome.html#a3a25bfc553772da30a604395c4f7644b">If</a>(item, <span class="keyword">this</span>.owner.chara))</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29">activeCondition</a> != <span class="keyword">null</span> &amp;&amp; !item.<a class="code hl_variable" href="classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29">activeCondition</a>())</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        DramaOutcome.idJump = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = item.<a class="code hl_variable" href="classDramaChoice.html#af2083afc25f717cdaedfa08ccf27a3fb">text</a>.TrimEnd(Environment.NewLine.ToCharArray());</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_function" href="classDramaActor.html#a5d4dbaf0ff42734e0a0661535b425af2">ConvertAdv</a>(text);</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_class" href="classGameLang.html">GameLang</a>.<a class="code hl_function" href="classGameLang.html#a3e58d5fcdd3b345d8af675fe08cfa90a">ConvertDrama</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>);</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classDramaChoice.html#aee8f4e17f47a8f6a02a9ac152d6dc28b">check</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a45c6f601d342957a061988f460601015">logDice</a>)</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; (&quot;</span> + item.<a class="code hl_variable" href="classDramaChoice.html#aee8f4e17f47a8f6a02a9ac152d6dc28b">check</a>.<a class="code hl_function" href="classCheck.html#a6aa8ca9f5c20e7b5bf449deafcdaf3bb">GetText</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>, <span class="keyword">this</span>.owner.chara, <span class="keyword">true</span>) + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_class" href="classCheck.html">Check</a> check = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordtype">string</span> idJump = item.<a class="code hl_variable" href="classDramaChoice.html#aa14e9374a58a58d96784414d23307974">idJump</a>;</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordtype">string</span> idAction = item.<a class="code hl_variable" href="classDramaChoice.html#a053d2c1b53296e41e2a0e493b10663c6">idAction</a>;</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">object</span>[] PARAMS = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordtype">int</span>? affinity = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (!item.<a class="code hl_variable" href="classDramaChoice.html#a9b2f3063ad8dd65f7ad737954160e8ba">CHECK</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordtype">string</span>[] array = item.<a class="code hl_variable" href="classDramaChoice.html#a9b2f3063ad8dd65f7ad737954160e8ba">CHECK</a>.Split(<span class="charliteral">&#39;/&#39;</span>, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordtype">string</span> a = array[0];</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (!(a == <span class="stringliteral">&quot;check&quot;</span>))</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span> (!(a == <span class="stringliteral">&quot;affinity&quot;</span>))</div>
+<div class="line"><span class="lineno">  160</span>                {</div>
+<div class="line"><span class="lineno">  161</span>                }</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  164</span>            {</div>
+<div class="line"><span class="lineno">  165</span>                check = <a class="code hl_class" href="classCheck.html">Check</a>.<a class="code hl_function" href="classCheck.html#a8d6ef3ef7f370006f237df1e13f67636">Get</a>(array[1], 1f);</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        UIButton uibutton = this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_function" href="classDialogDrama.html#ac712d9c73eb36f4187c733f883919428">AddChoice</a>(item, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, delegate</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            this.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  171</span>            DramaChoice.lastChoice = item;</div>
+<div class="line"><span class="lineno">  172</span>            <a class="code hl_class" href="classCheck.html">Check</a> check = check;</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (affinity != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  174</span>            {</div>
+<div class="line"><span class="lineno">  175</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  177</span>                {</div>
+<div class="line"><span class="lineno">  178</span>                    idJump = idJump.Split(<span class="charliteral">&#39;/&#39;</span>, StringSplitOptions.None)[0];</div>
+<div class="line"><span class="lineno">  179</span>                }</div>
+<div class="line"><span class="lineno">  180</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  181</span>                {</div>
+<div class="line"><span class="lineno">  182</span>                    idJump = idJump.Split(<span class="charliteral">&#39;/&#39;</span>, StringSplitOptions.None)[1];</div>
+<div class="line"><span class="lineno">  183</span>                }</div>
+<div class="line"><span class="lineno">  184</span>                PARAMS = <span class="keyword">new</span> <span class="keywordtype">object</span>[]</div>
+<div class="line"><span class="lineno">  185</span>                {</div>
+<div class="line"><span class="lineno">  186</span>                    flag</div>
+<div class="line"><span class="lineno">  187</span>                };</div>
+<div class="line"><span class="lineno">  188</span>            }</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (!idAction.IsEmpty())</div>
+<div class="line"><span class="lineno">  190</span>            {</div>
+<div class="line"><span class="lineno">  191</span>                typeof(DramaOutcome).GetMethod(this.sequence.id + <span class="stringliteral">&quot;_&quot;</span> + idAction).Invoke(this.sequence.manager.outcome, PARAMS);</div>
+<div class="line"><span class="lineno">  192</span>                if (DramaOutcome.idJump != null)</div>
+<div class="line"><span class="lineno">  193</span>                {</div>
+<div class="line"><span class="lineno">  194</span>                    this.sequence.Play(DramaOutcome.idJump);</div>
+<div class="line"><span class="lineno">  195</span>                    return;</div>
+<div class="line"><span class="lineno">  196</span>                }</div>
+<div class="line"><span class="lineno">  197</span>            }</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classDramaChoice.html#aa7d3313adfb18b7b0b7d7442a98763e5">onClick</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  199</span>            {</div>
+<div class="line"><span class="lineno">  200</span>                item.onClick();</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keyword">this</span>.sequence.tempEvents.Clear();</div>
+<div class="line"><span class="lineno">  203</span>            if (item.<a class="code hl_variable" href="classDramaChoice.html#a3d0f02fbfcd6840baf979a94f9caaf07">onJump</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                item.onJump();</div>
+<div class="line"><span class="lineno">  206</span>                return;</div>
+<div class="line"><span class="lineno">  207</span>            }</div>
+<div class="line"><span class="lineno">  208</span>            if (idJump.IsEmpty())</div>
+<div class="line"><span class="lineno">  209</span>            {</div>
+<div class="line"><span class="lineno">  210</span>                this.sequence.PlayNext();</div>
+<div class="line"><span class="lineno">  211</span>                return;</div>
+<div class="line"><span class="lineno">  212</span>            }</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keyword">this</span>.sequence.Play(idJump);</div>
+<div class="line"><span class="lineno">  214</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (uibutton.subText)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            uibutton.subText.SetText(this.<a class="code hl_variable" href="classDramaActor.html#a77fee054b0e38d653178e752b6095c3d">choiceIdx</a>.ToString() + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (!item.<a class="code hl_variable" href="classDramaChoice.html#a7886c95adc949e6d05f0ccce4c1671ff">sound</a>)</div>
+<div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            uibutton.soundClick = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  222</span>        }</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classDramaChoice.html#ac015a421346a6075fd2170f1aa0a5061">onTooltip</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            uibutton.SetTooltip(item.<a class="code hl_variable" href="classDramaChoice.html#ac015a421346a6075fd2170f1aa0a5061">onTooltip</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classDramaChoice.html#adb6df2c4f0f5c0f4af81e4ff5aba613b">forceHighlight</a>)</div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            uibutton.DoHighlightTransition(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  230</span>            item.forceHighlight = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  231</span>        }</div>
+<div class="line"><span class="lineno">  232</span>        this.<a class="code hl_variable" href="classDramaActor.html#a77fee054b0e38d653178e752b6095c3d">choiceIdx</a>++;</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+<div class="ttc" id="aclassCheck_html"><div class="ttname"><a href="classCheck.html">Check</a></div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00004">Check.cs:5</a></div></div>
+<div class="ttc" id="aclassCheck_html_a6aa8ca9f5c20e7b5bf449deafcdaf3bb"><div class="ttname"><a href="classCheck.html#a6aa8ca9f5c20e7b5bf449deafcdaf3bb">Check.GetText</a></div><div class="ttdeci">string GetText(Chara p, Card tg, bool inDialog=false)</div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00044">Check.cs:44</a></div></div>
+<div class="ttc" id="aclassCheck_html_a8d6ef3ef7f370006f237df1e13f67636"><div class="ttname"><a href="classCheck.html#a8d6ef3ef7f370006f237df1e13f67636">Check.Get</a></div><div class="ttdeci">static Check Get(string id, float dcMod=1f)</div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00006">Check.cs:6</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a45c6f601d342957a061988f460601015"><div class="ttname"><a href="classCoreDebug.html#a45c6f601d342957a061988f460601015">CoreDebug.logDice</a></div><div class="ttdeci">bool logDice</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02262">CoreDebug.cs:2262</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_ac712d9c73eb36f4187c733f883919428"><div class="ttname"><a href="classDialogDrama.html#ac712d9c73eb36f4187c733f883919428">DialogDrama.AddChoice</a></div><div class="ttdeci">virtual UIButton AddChoice(DramaChoice choice, string text, Action func=null, bool deactivateOnChoice=true)</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00014">DialogDrama.cs:14</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_a25c70fa77968081351464ccbf1490501"><div class="ttname"><a href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">DramaActor.owner</a></div><div class="ttdeci">Person owner</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00253">DramaActor.cs:253</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_a5d4dbaf0ff42734e0a0661535b425af2"><div class="ttname"><a href="classDramaActor.html#a5d4dbaf0ff42734e0a0661535b425af2">DramaActor.ConvertAdv</a></div><div class="ttdeci">string ConvertAdv(string text)</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00235">DramaActor.cs:235</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_a77fee054b0e38d653178e752b6095c3d"><div class="ttname"><a href="classDramaActor.html#a77fee054b0e38d653178e752b6095c3d">DramaActor.choiceIdx</a></div><div class="ttdeci">int choiceIdx</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00257">DramaActor.cs:257</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_a9c625b5c1651cc0b7315c81e38cfc14b"><div class="ttname"><a href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">DramaActor.dialog</a></div><div class="ttdeci">DialogDrama dialog</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00008">DramaActor.cs:9</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a053d2c1b53296e41e2a0e493b10663c6"><div class="ttname"><a href="classDramaChoice.html#a053d2c1b53296e41e2a0e493b10663c6">DramaChoice.idAction</a></div><div class="ttdeci">string idAction</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00046">DramaChoice.cs:46</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a0a5d8f192034275e6bc5c37c6297034b"><div class="ttname"><a href="classDramaChoice.html#a0a5d8f192034275e6bc5c37c6297034b">DramaChoice.IF</a></div><div class="ttdeci">string IF</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00050">DramaChoice.cs:50</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a3d0f02fbfcd6840baf979a94f9caaf07"><div class="ttname"><a href="classDramaChoice.html#a3d0f02fbfcd6840baf979a94f9caaf07">DramaChoice.onJump</a></div><div class="ttdeci">Action onJump</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00058">DramaChoice.cs:58</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a4a5208e5c480f24f9c1887b9b26f6c29"><div class="ttname"><a href="classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29">DramaChoice.activeCondition</a></div><div class="ttdeci">Func&lt; bool &gt; activeCondition</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00062">DramaChoice.cs:62</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a7886c95adc949e6d05f0ccce4c1671ff"><div class="ttname"><a href="classDramaChoice.html#a7886c95adc949e6d05f0ccce4c1671ff">DramaChoice.sound</a></div><div class="ttdeci">bool sound</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00052">DramaChoice.cs:52</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_a9b2f3063ad8dd65f7ad737954160e8ba"><div class="ttname"><a href="classDramaChoice.html#a9b2f3063ad8dd65f7ad737954160e8ba">DramaChoice.CHECK</a></div><div class="ttdeci">string CHECK</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00048">DramaChoice.cs:48</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_aa14e9374a58a58d96784414d23307974"><div class="ttname"><a href="classDramaChoice.html#aa14e9374a58a58d96784414d23307974">DramaChoice.idJump</a></div><div class="ttdeci">string idJump</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00044">DramaChoice.cs:44</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_aa7d3313adfb18b7b0b7d7442a98763e5"><div class="ttname"><a href="classDramaChoice.html#aa7d3313adfb18b7b0b7d7442a98763e5">DramaChoice.onClick</a></div><div class="ttdeci">Action onClick</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00056">DramaChoice.cs:56</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_ac015a421346a6075fd2170f1aa0a5061"><div class="ttname"><a href="classDramaChoice.html#ac015a421346a6075fd2170f1aa0a5061">DramaChoice.onTooltip</a></div><div class="ttdeci">Action&lt; UITooltip &gt; onTooltip</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00060">DramaChoice.cs:60</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_adb6df2c4f0f5c0f4af81e4ff5aba613b"><div class="ttname"><a href="classDramaChoice.html#adb6df2c4f0f5c0f4af81e4ff5aba613b">DramaChoice.forceHighlight</a></div><div class="ttdeci">bool forceHighlight</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00054">DramaChoice.cs:54</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_aee8f4e17f47a8f6a02a9ac152d6dc28b"><div class="ttname"><a href="classDramaChoice.html#aee8f4e17f47a8f6a02a9ac152d6dc28b">DramaChoice.check</a></div><div class="ttdeci">Check check</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00064">DramaChoice.cs:64</a></div></div>
+<div class="ttc" id="aclassDramaChoice_html_af2083afc25f717cdaedfa08ccf27a3fb"><div class="ttname"><a href="classDramaChoice.html#af2083afc25f717cdaedfa08ccf27a3fb">DramaChoice.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00042">DramaChoice.cs:42</a></div></div>
+<div class="ttc" id="aclassDramaOutcome_html"><div class="ttname"><a href="classDramaOutcome.html">DramaOutcome</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaOutcome_8cs_source.html#l00005">DramaOutcome.cs:6</a></div></div>
+<div class="ttc" id="aclassDramaOutcome_html_a3a25bfc553772da30a604395c4f7644b"><div class="ttname"><a href="classDramaOutcome.html#a3a25bfc553772da30a604395c4f7644b">DramaOutcome.If</a></div><div class="ttdeci">static bool If(DramaChoice item, Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="DramaOutcome_8cs_source.html#l00389">DramaOutcome.cs:389</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00158">EMono.cs:159</a></div></div>
+<div class="ttc" id="aclassGameLang_html"><div class="ttname"><a href="classGameLang.html">GameLang</a></div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00004">GameLang.cs:5</a></div></div>
+<div class="ttc" id="aclassGameLang_html_a3e58d5fcdd3b345d8af675fe08cfa90a"><div class="ttname"><a href="classGameLang.html#a3e58d5fcdd3b345d8af675fe08cfa90a">GameLang.ConvertDrama</a></div><div class="ttdeci">static string ConvertDrama(string text, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00006">GameLang.cs:6</a></div></div>
+<div class="ttc" id="aclassPerson_html_af1c76454a0f955a04399ee141036afae"><div class="ttname"><a href="classPerson.html#af1c76454a0f955a04399ee141036afae">Person.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00016">Person.cs:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaChoice_8cs_source.html#l00062">DramaChoice.activeCondition</a>, <a class="el" href="DialogDrama_8cs_source.html#l00014">DialogDrama.AddChoice()</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.chara</a>, <a class="el" href="DramaChoice_8cs_source.html#l00048">DramaChoice.CHECK</a>, <a class="el" href="DramaChoice_8cs_source.html#l00064">DramaChoice.check</a>, <a class="el" href="DramaActor_8cs_source.html#l00235">ConvertAdv()</a>, <a class="el" href="GameLang_8cs_source.html#l00006">GameLang.ConvertDrama()</a>, <a class="el" href="EMono_8cs_source.html#l00159">EMono.debug</a>, <a class="el" href="DramaActor_8cs_source.html#l00009">dialog</a>, <a class="el" href="Check_8cs_source.html#l00006">Check.Get()</a>, <a class="el" href="Check_8cs_source.html#l00044">Check.GetText()</a>, <a class="el" href="DramaChoice_8cs_source.html#l00046">DramaChoice.idAction</a>, <a class="el" href="DramaChoice_8cs_source.html#l00044">DramaChoice.idJump</a>, <a class="el" href="DramaChoice_8cs_source.html#l00050">DramaChoice.IF</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00389">DramaOutcome.If()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02262">CoreDebug.logDice</a>, <a class="el" href="DramaChoice_8cs_source.html#l00056">DramaChoice.onClick</a>, <a class="el" href="DramaChoice_8cs_source.html#l00058">DramaChoice.onJump</a>, <a class="el" href="DramaActor_8cs_source.html#l00253">owner</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="DramaChoice_8cs_source.html#l00042">DramaChoice.text</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
 
 </div>
 </div>
@@ -339,6 +528,148 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00024">24</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>;</div>
+<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>        this.dialog.textName.text = (unknown ? <span class="stringliteral">&quot;???&quot;</span> : this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>.<a class="code hl_function" href="classPerson.html#a43ad509fac5282ff21fed7db98ccc0b7">GetDramaTitle</a>());</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a43ce0389cee024f06b48215748fe7d7e">portrait</a>)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            this.dialog.portrait.enableFull = this.<a class="code hl_variable" href="classDramaActor.html#af4d105a979cecc1d374e44c2ab702466">sequence</a>.<a class="code hl_variable" href="classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc">fullPortrait</a>;</div>
+<div class="line"><span class="lineno">   32</span>            this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a43ce0389cee024f06b48215748fe7d7e">portrait</a>.<a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_function" href="classDramaActor.html#a5d4dbaf0ff42734e0a0661535b425af2">ConvertAdv</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_class" href="classGameLang.html">GameLang</a>.<a class="code hl_function" href="classGameLang.html#a3e58d5fcdd3b345d8af675fe08cfa90a">ConvertDrama</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classDramaActor.html#a25c70fa77968081351464ccbf1490501">owner</a>.<a class="code hl_property" href="classPerson.html#aaf9ce7bca058cff80f3c5ab63d9f596f">HumanSpeak</a>)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.StartsWith(<span class="stringliteral">&quot;(&quot;</span>))</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;(&quot;</span> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Replace(<span class="stringliteral">&quot;。)&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">string</span> a = chara.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!(a == <span class="stringliteral">&quot;adv_gaki&quot;</span>))</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;corgon&quot;</span>)</div>
+<div class="line"><span class="lineno">   50</span>                {</div>
+<div class="line"><span class="lineno">   51</span>                    <a class="code hl_class" href="classBackerContent.html">BackerContent</a>.<a class="code hl_function" href="classBackerContent.html#adb4589fe67922e1808baabbcb718c8c1">GakiConvert</a>(ref <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="stringliteral">&quot;mokyu&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>                }</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <a class="code hl_class" href="classBackerContent.html">BackerContent</a>.<a class="code hl_function" href="classBackerContent.html#adb4589fe67922e1808baabbcb718c8c1">GakiConvert</a>(ref <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="stringliteral">&quot;zako&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a31e5ba1309d89d3155bba6ee80181873">goAffinity</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd">layoutInterest</a>.SetActive(chara != <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   62</span>            this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a08c506ae2934732e3b6fe9ca2b95b768">textNoInterest</a>.SetActive(chara == <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordtype">bool</span> flag = chara != <span class="keyword">null</span> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3">ShowAdvRank</a>;</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a715290465a3ecaf583b11ec25c164aa3">transFav</a>)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a715290465a3ecaf583b11ec25c164aa3">transFav</a>.SetActive(chara != <span class="keyword">null</span> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a3cb9c7459dee043d270b7649b69a3cb9">knowFav</a>);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a70be68a7fbd5e5cc1b650c2ca6980dac">transRank</a>)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a70be68a7fbd5e5cc1b650c2ca6980dac">transRank</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   72</span>                {</div>
+<div class="line"><span class="lineno">   73</span>                    this.dialog.textRank.text = <span class="stringliteral">&quot;factionRank2&quot;</span>.lang() + <span class="stringliteral">&quot; &quot;</span> + chara.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_function" href="classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab">GetAdvRankText</a>();</div>
+<div class="line"><span class="lineno">   74</span>                }</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                this.dialog.textAffinity.text = ((chara.c_bossType != <a class="code hl_enumeration" href="BossType_8cs.html#af75f53750ffcde869545d08348fb7f96">BossType</a>.none) ? <span class="stringliteral">&quot; - &quot;</span> : (chara.<a class="code hl_property" href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">affinity</a>.<a class="code hl_property" href="classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf">Name</a> + <span class="stringliteral">&quot;(&quot;</span> + chara.<a class="code hl_property" href="classChara.html#a110c5af79377c4017ce791e66d77a1aa">_affinity</a>.ToString() + <span class="stringliteral">&quot;)&quot;</span>));</div>
+<div class="line"><span class="lineno">   79</span>                this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd">layoutInterest</a>.DestroyChildren(<span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordtype">int</span> num = chara.interest / 10 + 1;</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a4a5ccf556c708b20bd1891f2deb4b151">interest</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">   82</span>                {</div>
+<div class="line"><span class="lineno">   83</span>                    num = 0;</div>
+<div class="line"><span class="lineno">   84</span>                }</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">if</span> (num &gt; 10)</div>
+<div class="line"><span class="lineno">   86</span>                {</div>
+<div class="line"><span class="lineno">   87</span>                    num = 10;</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">   90</span>                {</div>
+<div class="line"><span class="lineno">   91</span>                    Util.Instantiate&lt;Transform&gt;(this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a215422963f7d49aac3a5af2d6752bc73">moldInterest</a>, this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd">layoutInterest</a>);</div>
+<div class="line"><span class="lineno">   92</span>                }</div>
+<div class="line"><span class="lineno">   93</span>                this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd">layoutInterest</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   94</span>                this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a08c506ae2934732e3b6fe9ca2b95b768">textNoInterest</a>.SetActive(num &lt;= 0);</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#aa34c86d3f6839399e2bd3542a3118641">textFav</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a3cb9c7459dee043d270b7649b69a3cb9">knowFav</a>)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    this.dialog.textFav.text = chara.<a class="code hl_function" href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">GetFavCat</a>().GetName().ToTitleCase(<span class="keyword">false</span>) + Environment.NewLine + chara.<a class="code hl_function" href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">GetFavFood</a>().GetName().ToTitleCase(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                this.dialog.textAffinity.text = <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span>                this.dialog.textNoInterest.text = <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Replace(<span class="stringliteral">&quot;((&quot;</span>, <span class="stringliteral">&quot;(&quot;</span>).Replace(<span class="stringliteral">&quot;))&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>).Replace(<span class="stringliteral">&quot;（（&quot;</span>, <span class="stringliteral">&quot;（&quot;</span>).Replace(<span class="stringliteral">&quot;））&quot;</span>, <span class="stringliteral">&quot;）&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#af309fb1641c8af3a503dd3e65cedb3cc">glitch</a>)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            this.dialog.glitch.enabled = <a class="code hl_class" href="classDramaActor.html">DramaActor</a>.<a class="code hl_variable" href="classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9">useGlitch</a>;</div>
+<div class="line"><span class="lineno">  110</span>            DramaActor.useGlitch = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_function" href="classDialogDrama.html#a3183dc545f7a5341a3afa4241db22733">SetText</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.ToTitleCase(<span class="keyword">false</span>), center);</div>
+<div class="line"><span class="lineno">  113</span>        this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_function" href="classDialogDrama.html#a2541343dd4332be9999a81a0a7e0a67d">ClearChoice</a>();</div>
+<div class="line"><span class="lineno">  114</span>        this.choiceIdx = 1;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; choices.Count; j++)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            this.<a class="code hl_function" href="classDramaActor.html#a1546558468e3ad3f579138fcfd1f8e2e">SetChoice</a>(choices[j], j);</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a8ccafc99ea3ae2582e5f21e5b3b4055c">transChoices</a>.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  120</span>        this.<a class="code hl_property" href="classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b">dialog</a>.<a class="code hl_variable" href="classDialogDrama.html#a09f89bac0f3ac21dbfeebfa385557a9b">iconNext</a>.SetActive(this.<a class="code hl_variable" href="classDramaActor.html#a77fee054b0e38d653178e752b6095c3d">choiceIdx</a> == 1);</div>
+<div class="line"><span class="lineno">  121</span>        UIButton.TryHihlight();</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(<span class="keyword">new</span> Action(UIButton.TryHihlight));</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(<span class="keyword">new</span> Action(UIButton.TryHihlight));</div>
+<div class="line"><span class="lineno">  126</span>        });</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aBossType_8cs_html_af75f53750ffcde869545d08348fb7f96"><div class="ttname"><a href="BossType_8cs.html#af75f53750ffcde869545d08348fb7f96">BossType</a></div><div class="ttdeci">BossType</div><div class="ttdef"><b>Definition:</b> <a href="BossType_8cs_source.html#l00003">BossType.cs:4</a></div></div>
+<div class="ttc" id="aclassAffinity_html_a16ef025808ce3a1594b2ef11b8db9daf"><div class="ttname"><a href="classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf">Affinity.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Affinity_8cs_source.html#l00016">Affinity.cs:17</a></div></div>
+<div class="ttc" id="aclassBackerContent_html"><div class="ttname"><a href="classBackerContent.html">BackerContent</a></div><div class="ttdef"><b>Definition:</b> <a href="BackerContent_8cs_source.html#l00003">BackerContent.cs:4</a></div></div>
+<div class="ttc" id="aclassBackerContent_html_adb4589fe67922e1808baabbcb718c8c1"><div class="ttname"><a href="classBackerContent.html#adb4589fe67922e1808baabbcb718c8c1">BackerContent.GakiConvert</a></div><div class="ttdeci">static void GakiConvert(ref string text, string idLang=&quot;zako&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="BackerContent_8cs_source.html#l00010">BackerContent.cs:10</a></div></div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a02021f3aeb3887fcfd7a56028cd6d594"><div class="ttname"><a href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">Chara.GetFavCat</a></div><div class="ttdeci">SourceCategory.Row GetFavCat()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07157">Chara.cs:7157</a></div></div>
+<div class="ttc" id="aclassChara_html_a110c5af79377c4017ce791e66d77a1aa"><div class="ttname"><a href="classChara.html#a110c5af79377c4017ce791e66d77a1aa">Chara._affinity</a></div><div class="ttdeci">int _affinity</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00104">Chara.cs:105</a></div></div>
+<div class="ttc" id="aclassChara_html_a16699a6f035a4c14d4c846f48be7b850"><div class="ttname"><a href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">Chara.trait</a></div><div class="ttdeci">new TraitChara trait</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00360">Chara.cs:361</a></div></div>
+<div class="ttc" id="aclassChara_html_a3cb9c7459dee043d270b7649b69a3cb9"><div class="ttname"><a href="classChara.html#a3cb9c7459dee043d270b7649b69a3cb9">Chara.knowFav</a></div><div class="ttdeci">bool knowFav</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00220">Chara.cs:221</a></div></div>
+<div class="ttc" id="aclassChara_html_a4a5ccf556c708b20bd1891f2deb4b151"><div class="ttname"><a href="classChara.html#a4a5ccf556c708b20bd1891f2deb4b151">Chara.interest</a></div><div class="ttdeci">int interest</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00124">Chara.cs:125</a></div></div>
+<div class="ttc" id="aclassChara_html_aa3b0ecc9125aaa9069f9073fd76698c5"><div class="ttname"><a href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">Chara.GetFavFood</a></div><div class="ttdeci">SourceThing.Row GetFavFood()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07137">Chara.cs:7137</a></div></div>
+<div class="ttc" id="aclassChara_html_abdf36cb2a3aa876f9d93cfc0f7b79e61"><div class="ttname"><a href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">Chara.affinity</a></div><div class="ttdeci">Affinity affinity</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00116">Chara.cs:117</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a08c506ae2934732e3b6fe9ca2b95b768"><div class="ttname"><a href="classDialogDrama.html#a08c506ae2934732e3b6fe9ca2b95b768">DialogDrama.textNoInterest</a></div><div class="ttdeci">Text textNoInterest</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00072">DialogDrama.cs:72</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a09f89bac0f3ac21dbfeebfa385557a9b"><div class="ttname"><a href="classDialogDrama.html#a09f89bac0f3ac21dbfeebfa385557a9b">DialogDrama.iconNext</a></div><div class="ttdeci">GameObject iconNext</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00094">DialogDrama.cs:94</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a215422963f7d49aac3a5af2d6752bc73"><div class="ttname"><a href="classDialogDrama.html#a215422963f7d49aac3a5af2d6752bc73">DialogDrama.moldInterest</a></div><div class="ttdeci">Transform moldInterest</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00102">DialogDrama.cs:102</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a2541343dd4332be9999a81a0a7e0a67d"><div class="ttname"><a href="classDialogDrama.html#a2541343dd4332be9999a81a0a7e0a67d">DialogDrama.ClearChoice</a></div><div class="ttdeci">void ClearChoice()</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00038">DialogDrama.cs:38</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a3183dc545f7a5341a3afa4241db22733"><div class="ttname"><a href="classDialogDrama.html#a3183dc545f7a5341a3afa4241db22733">DialogDrama.SetText</a></div><div class="ttdeci">virtual void SetText(string detail=&quot;&quot;, bool center=false)</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00044">DialogDrama.cs:44</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a31e5ba1309d89d3155bba6ee80181873"><div class="ttname"><a href="classDialogDrama.html#a31e5ba1309d89d3155bba6ee80181873">DialogDrama.goAffinity</a></div><div class="ttdeci">GameObject goAffinity</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00096">DialogDrama.cs:96</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a43ce0389cee024f06b48215748fe7d7e"><div class="ttname"><a href="classDialogDrama.html#a43ce0389cee024f06b48215748fe7d7e">DialogDrama.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00098">DialogDrama.cs:98</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a67489687adaefee01146e2c0fcf441cd"><div class="ttname"><a href="classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd">DialogDrama.layoutInterest</a></div><div class="ttdeci">LayoutGroup layoutInterest</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00100">DialogDrama.cs:100</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a70be68a7fbd5e5cc1b650c2ca6980dac"><div class="ttname"><a href="classDialogDrama.html#a70be68a7fbd5e5cc1b650c2ca6980dac">DialogDrama.transRank</a></div><div class="ttdeci">GameObject transRank</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00084">DialogDrama.cs:84</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a715290465a3ecaf583b11ec25c164aa3"><div class="ttname"><a href="classDialogDrama.html#a715290465a3ecaf583b11ec25c164aa3">DialogDrama.transFav</a></div><div class="ttdeci">GameObject transFav</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00082">DialogDrama.cs:82</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_a8ccafc99ea3ae2582e5f21e5b3b4055c"><div class="ttname"><a href="classDialogDrama.html#a8ccafc99ea3ae2582e5f21e5b3b4055c">DialogDrama.transChoices</a></div><div class="ttdeci">Transform transChoices</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00090">DialogDrama.cs:90</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_aa34c86d3f6839399e2bd3542a3118641"><div class="ttname"><a href="classDialogDrama.html#aa34c86d3f6839399e2bd3542a3118641">DialogDrama.textFav</a></div><div class="ttdeci">Text textFav</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00074">DialogDrama.cs:74</a></div></div>
+<div class="ttc" id="aclassDialogDrama_html_af309fb1641c8af3a503dd3e65cedb3cc"><div class="ttname"><a href="classDialogDrama.html#af309fb1641c8af3a503dd3e65cedb3cc">DialogDrama.glitch</a></div><div class="ttdeci">Glitch glitch</div><div class="ttdef"><b>Definition:</b> <a href="DialogDrama_8cs_source.html#l00106">DialogDrama.cs:106</a></div></div>
+<div class="ttc" id="aclassDramaActor_html"><div class="ttname"><a href="classDramaActor.html">DramaActor</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00006">DramaActor.cs:7</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_a1546558468e3ad3f579138fcfd1f8e2e"><div class="ttname"><a href="classDramaActor.html#a1546558468e3ad3f579138fcfd1f8e2e">DramaActor.SetChoice</a></div><div class="ttdeci">void SetChoice(DramaChoice item, int index)</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00129">DramaActor.cs:129</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_ad8d294303a2b2b25327ed8fcb0a61af9"><div class="ttname"><a href="classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9">DramaActor.useGlitch</a></div><div class="ttdeci">static bool useGlitch</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00249">DramaActor.cs:249</a></div></div>
+<div class="ttc" id="aclassDramaActor_html_af4d105a979cecc1d374e44c2ab702466"><div class="ttname"><a href="classDramaActor.html#af4d105a979cecc1d374e44c2ab702466">DramaActor.sequence</a></div><div class="ttdeci">DramaSequence sequence</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00255">DramaActor.cs:255</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_ab4da3e0eb4757986c1c690d43a3170dc"><div class="ttname"><a href="classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc">DramaSequence.fullPortrait</a></div><div class="ttdeci">bool fullPortrait</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00196">DramaSequence.cs:196</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassPerson_html_a43ad509fac5282ff21fed7db98ccc0b7"><div class="ttname"><a href="classPerson.html#a43ad509fac5282ff21fed7db98ccc0b7">Person.GetDramaTitle</a></div><div class="ttdeci">string GetDramaTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00135">Person.cs:135</a></div></div>
+<div class="ttc" id="aclassPerson_html_aaf9ce7bca058cff80f3c5ab63d9f596f"><div class="ttname"><a href="classPerson.html#aaf9ce7bca058cff80f3c5ab63d9f596f">Person.HumanSpeak</a></div><div class="ttdeci">bool HumanSpeak</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00032">Person.cs:33</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a268f060ca5eb021c65521c3fd12b06fc"><div class="ttname"><a href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">Portrait.SetPerson</a></div><div class="ttdeci">void SetPerson(Person p)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00081">Portrait.cs:81</a></div></div>
+<div class="ttc" id="aclassTraitChara_html_aa8acc03026142a26aa61aca0e8d060ab"><div class="ttname"><a href="classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab">TraitChara.GetAdvRankText</a></div><div class="ttdeci">string GetAdvRankText()</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00332">TraitChara.cs:332</a></div></div>
+<div class="ttc" id="aclassTraitChara_html_af7fa7f221aa381be2ee34dd822ef25d3"><div class="ttname"><a href="classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3">TraitChara.ShowAdvRank</a></div><div class="ttdeci">virtual bool ShowAdvRank</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00206">TraitChara.cs:207</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00105">Chara._affinity</a>, <a class="el" href="Chara_8cs_source.html#l00117">Chara.affinity</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.chara</a>, <a class="el" href="DramaActor_8cs_source.html#l00257">choiceIdx</a>, <a class="el" href="DialogDrama_8cs_source.html#l00038">DialogDrama.ClearChoice()</a>, <a class="el" href="DramaActor_8cs_source.html#l00235">ConvertAdv()</a>, <a class="el" href="GameLang_8cs_source.html#l00006">GameLang.ConvertDrama()</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="DramaActor_8cs_source.html#l00009">dialog</a>, <a class="el" href="DramaSequence_8cs_source.html#l00196">DramaSequence.fullPortrait</a>, <a class="el" href="BackerContent_8cs_source.html#l00010">BackerContent.GakiConvert()</a>, <a class="el" href="TraitChara_8cs_source.html#l00332">TraitChara.GetAdvRankText()</a>, <a class="el" href="Person_8cs_source.html#l00135">Person.GetDramaTitle()</a>, <a class="el" href="Chara_8cs_source.html#l07157">Chara.GetFavCat()</a>, <a class="el" href="Chara_8cs_source.html#l07137">Chara.GetFavFood()</a>, <a class="el" href="DialogDrama_8cs_source.html#l00106">DialogDrama.glitch</a>, <a class="el" href="DialogDrama_8cs_source.html#l00096">DialogDrama.goAffinity</a>, <a class="el" href="Person_8cs_source.html#l00033">Person.HumanSpeak</a>, <a class="el" href="DialogDrama_8cs_source.html#l00094">DialogDrama.iconNext</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Chara_8cs_source.html#l00125">Chara.interest</a>, <a class="el" href="Chara_8cs_source.html#l00221">Chara.knowFav</a>, <a class="el" href="DialogDrama_8cs_source.html#l00100">DialogDrama.layoutInterest</a>, <a class="el" href="DialogDrama_8cs_source.html#l00102">DialogDrama.moldInterest</a>, <a class="el" href="Affinity_8cs_source.html#l00017">Affinity.Name</a>, <a class="el" href="DramaActor_8cs_source.html#l00253">owner</a>, <a class="el" href="DialogDrama_8cs_source.html#l00098">DialogDrama.portrait</a>, <a class="el" href="DramaActor_8cs_source.html#l00255">sequence</a>, <a class="el" href="DramaActor_8cs_source.html#l00129">SetChoice()</a>, <a class="el" href="Portrait_8cs_source.html#l00081">Portrait.SetPerson()</a>, <a class="el" href="DialogDrama_8cs_source.html#l00044">DialogDrama.SetText()</a>, <a class="el" href="TraitChara_8cs_source.html#l00207">TraitChara.ShowAdvRank</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="DialogDrama_8cs_source.html#l00074">DialogDrama.textFav</a>, <a class="el" href="DialogDrama_8cs_source.html#l00072">DialogDrama.textNoInterest</a>, <a class="el" href="Chara_8cs_source.html#l00361">Chara.trait</a>, <a class="el" href="DialogDrama_8cs_source.html#l00090">DialogDrama.transChoices</a>, <a class="el" href="DialogDrama_8cs_source.html#l00082">DialogDrama.transFav</a>, <a class="el" href="DialogDrama_8cs_source.html#l00084">DialogDrama.transRank</a>, and <a class="el" href="DramaActor_8cs_source.html#l00249">useGlitch</a>.</p>
 
 </div>
 </div>
@@ -364,6 +695,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00257">257</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
 
 </div>
 </div>
@@ -397,6 +730,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00253">253</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00129">SetChoice()</a>, and <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
+
 </div>
 </div>
 <a id="af4d105a979cecc1d374e44c2ab702466" name="af4d105a979cecc1d374e44c2ab702466"></a>
@@ -412,6 +747,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00255">255</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
 
 </div>
 </div>
@@ -437,6 +774,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00249">249</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -461,6 +800,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DramaActor_8cs_source.html#l00008">8</a> of file <a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDramaActor.html#af4d105a979cecc1d374e44c2ab702466">sequence</a>.<a class="code hl_property" href="classDramaSequence.html#ad0a8d5bb13ec7fd65f0e2faa9e511cd7">dialog</a>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassDramaSequence_html_ad0a8d5bb13ec7fd65f0e2faa9e511cd7"><div class="ttname"><a href="classDramaSequence.html#ad0a8d5bb13ec7fd65f0e2faa9e511cd7">DramaSequence.dialog</a></div><div class="ttdeci">DialogDrama dialog</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00007">DramaSequence.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00129">SetChoice()</a>, and <a class="el" href="DramaActor_8cs_source.html#l00024">Talk()</a>.</p>
 
 </div>
 </div>
@@ -468,9 +816,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="DramaActor_8cs_source.html">DramaActor.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDramaActor.html">DramaActor</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

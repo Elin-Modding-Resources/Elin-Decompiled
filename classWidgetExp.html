@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetExp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -335,6 +355,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00025">25</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        this.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   28</span>        this.<a class="code hl_function" href="classWidgetExp.html#a2cd66507aad63450736df34272f8f502">Refresh</a>();</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassWidgetExp_html_a2cd66507aad63450736df34272f8f502"><div class="ttname"><a href="classWidgetExp.html#a2cd66507aad63450736df34272f8f502">WidgetExp.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetExp_8cs_source.html#l00046">WidgetExp.cs:46</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetExp_8cs_source.html#l00046">Refresh()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetExp_8cs_source.html#l00019">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +393,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetExp.html">WidgetExp</a>.<a class="code hl_class" href="classWidgetExp_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassWidgetExp_1_1Extra_html"><div class="ttname"><a href="classWidgetExp_1_1Extra.html">WidgetExp.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetExp_8cs_source.html#l00064">WidgetExp.cs:65</a></div></div>
+<div class="ttc" id="aclassWidgetExp_html"><div class="ttname"><a href="classWidgetExp.html">WidgetExp</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetExp_8cs_source.html#l00004">WidgetExp.cs:5</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d32c2328b50bd94f3bd164ce73830f0" name="a8d32c2328b50bd94f3bd164ce73830f0"></a>
@@ -393,6 +427,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00019">19</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_function" href="classWidgetExp.html#a7684151ba05013a67783da116df7e800">Build</a>();</div>
+<div class="line"><span class="lineno">   22</span>        base.InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassWidgetExp_html_a7684151ba05013a67783da116df7e800"><div class="ttname"><a href="classWidgetExp.html#a7684151ba05013a67783da116df7e800">WidgetExp.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetExp_8cs_source.html#l00025">WidgetExp.cs:25</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetExp_8cs_source.html#l00025">Build()</a>.</p>
 
 </div>
 </div>
@@ -420,6 +461,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00031">31</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.BlockInput)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_class" href="classLayerChara.html">LayerChara</a> layerChara = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerChara.html">LayerChara</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (layerChara)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            layerChara.<a class="code hl_function" href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">SetChara</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>).windows[0].SwitchContent(2);</div>
+<div class="line"><span class="lineno">   42</span>            layerChara.<a class="code hl_variable" href="classLayerChara.html#a756d9de6f937621249d42f612cbb8414">windowChara</a>.<a class="code hl_function" href="classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f">ToggleFeatMode</a>();</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassLayerChara_html"><div class="ttname"><a href="classLayerChara.html">LayerChara</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00003">LayerChara.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerChara_html_a2a490d43095c16f39501945d9879e97d"><div class="ttname"><a href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">LayerChara.SetChara</a></div><div class="ttdeci">LayerChara SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00013">LayerChara.cs:13</a></div></div>
+<div class="ttc" id="aclassLayerChara_html_a756d9de6f937621249d42f612cbb8414"><div class="ttname"><a href="classLayerChara.html#a756d9de6f937621249d42f612cbb8414">LayerChara.windowChara</a></div><div class="ttdeci">WindowChara windowChara</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00030">LayerChara.cs:30</a></div></div>
+<div class="ttc" id="aclassWindowChara_html_a4bfe7ba6d0dc8b0476e5c31f8002460f"><div class="ttname"><a href="classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f">WindowChara.ToggleFeatMode</a></div><div class="ttdeci">void ToggleFeatMode()</div><div class="ttdef"><b>Definition:</b> <a href="WindowChara_8cs_source.html#l00093">WindowChara.cs:93</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="LayerChara_8cs_source.html#l00013">LayerChara.SetChara()</a>, <a class="el" href="WindowChara_8cs_source.html#l00093">WindowChara.ToggleFeatMode()</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>, and <a class="el" href="LayerChara_8cs_source.html#l00030">LayerChara.windowChara</a>.</p>
 
 </div>
 </div>
@@ -447,6 +510,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00046">46</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classWidgetExp.html#a9803cbce7a55b3c712c64ddd5cea7ee1">goLv</a>.SetActive(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#aaabe588d200fe23532b8960fe684bbaf">feat</a> &gt; 0);</div>
+<div class="line"><span class="lineno">   49</span>        this.textLv.text = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#aaabe588d200fe23532b8960fe684bbaf">feat</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   50</span>        this.itemExp.text1.text = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#aa333f796c2341dc5267c3a42dd2bda79">exp</a>.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#a366c734b302c21925fdfa25e7eb0cc8e">ExpToNext</a>.ToString();</div>
+<div class="line"><span class="lineno">   51</span>        this.itemExp.image1.fillAmount = (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#aa333f796c2341dc5267c3a42dd2bda79">exp</a> / (<span class="keywordtype">float</span>)EMono.pc.ExpToNext + 0.01f;</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassCard_html_a366c734b302c21925fdfa25e7eb0cc8e"><div class="ttname"><a href="classCard.html#a366c734b302c21925fdfa25e7eb0cc8e">Card.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01827">Card.cs:1828</a></div></div>
+<div class="ttc" id="aclassCard_html_aa333f796c2341dc5267c3a42dd2bda79"><div class="ttname"><a href="classCard.html#aa333f796c2341dc5267c3a42dd2bda79">Card.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00343">Card.cs:344</a></div></div>
+<div class="ttc" id="aclassCard_html_aaabe588d200fe23532b8960fe684bbaf"><div class="ttname"><a href="classCard.html#aaabe588d200fe23532b8960fe684bbaf">Card.feat</a></div><div class="ttdeci">int feat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00319">Card.cs:320</a></div></div>
+<div class="ttc" id="aclassWidgetExp_html_a9803cbce7a55b3c712c64ddd5cea7ee1"><div class="ttname"><a href="classWidgetExp.html#a9803cbce7a55b3c712c64ddd5cea7ee1">WidgetExp.goLv</a></div><div class="ttdeci">GameObject goLv</div><div class="ttdef"><b>Definition:</b> <a href="WidgetExp_8cs_source.html#l00054">WidgetExp.cs:54</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00344">Card.exp</a>, <a class="el" href="Card_8cs_source.html#l01828">Card.ExpToNext</a>, <a class="el" href="Card_8cs_source.html#l00320">Card.feat</a>, <a class="el" href="WidgetExp_8cs_source.html#l00054">goLv</a>, and <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetExp_8cs_source.html#l00025">Build()</a>.</p>
 
 </div>
 </div>
@@ -464,6 +541,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00054">54</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetExp_8cs_source.html#l00046">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -553,16 +632,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetExp_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetExp.html">WidgetExp</a>.<a class="code hl_class" href="classWidgetExp_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetExp_8cs_source.html">WidgetExp.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetExp.html">WidgetExp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

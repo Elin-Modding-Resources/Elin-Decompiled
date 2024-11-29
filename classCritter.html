@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCritter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -248,6 +268,80 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00062">62</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a> biomeProfile = cell.sourceFloor.biome ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.biomes.Plain;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (biomeProfile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a>)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) == 0)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterFish.html">CritterFish</a>();</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (biomeProfile.<a class="code hl_variable" href="classBiomeProfile.html#ae22257229b8d8461c5cbb94c898cb907">id</a> == <a class="code hl_enumeration" href="BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5a">BiomeID</a>.Snow)</div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) == 0)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterFrog.html">CritterFrog</a>();</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) == 0)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterFrogSmall.html">CritterFrogSmall</a>();</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) == 0)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterCancer.html">CritterCancer</a>();</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) == 0)</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterCancerSmall.html">CritterCancerSmall</a>();</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) == 0)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterRat.html">CritterRat</a>();</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) == 0)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterRatSmall.html">CritterRatSmall</a>();</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) == 0)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterRoach.html">CritterRoach</a>();</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) == 0)</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterRoachSmall.html">CritterRoachSmall</a>();</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classCritterRandom.html">CritterRandom</a>();</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aBiomeID_8cs_html_aa75ddb94ecf17a52a3d06d148a327d5a"><div class="ttname"><a href="BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5a">BiomeID</a></div><div class="ttdeci">BiomeID</div><div class="ttdef"><b>Definition:</b> <a href="BiomeID_8cs_source.html#l00003">BiomeID.cs:4</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html_ae22257229b8d8461c5cbb94c898cb907"><div class="ttname"><a href="classBiomeProfile.html#ae22257229b8d8461c5cbb94c898cb907">BiomeProfile.id</a></div><div class="ttdeci">BiomeID id</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00136">BiomeProfile.cs:136</a></div></div>
+<div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00657">Cell.cs:658</a></div></div>
+<div class="ttc" id="aclassCritterCancerSmall_html"><div class="ttname"><a href="classCritterCancerSmall.html">CritterCancerSmall</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterCancerSmall_8cs_source.html#l00003">CritterCancerSmall.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterCancer_html"><div class="ttname"><a href="classCritterCancer.html">CritterCancer</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterCancer_8cs_source.html#l00003">CritterCancer.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterFish_html"><div class="ttname"><a href="classCritterFish.html">CritterFish</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterFish_8cs_source.html#l00003">CritterFish.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterFrogSmall_html"><div class="ttname"><a href="classCritterFrogSmall.html">CritterFrogSmall</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterFrogSmall_8cs_source.html#l00003">CritterFrogSmall.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterFrog_html"><div class="ttname"><a href="classCritterFrog.html">CritterFrog</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterFrog_8cs_source.html#l00003">CritterFrog.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterRandom_html"><div class="ttname"><a href="classCritterRandom.html">CritterRandom</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterRandom_8cs_source.html#l00003">CritterRandom.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterRatSmall_html"><div class="ttname"><a href="classCritterRatSmall.html">CritterRatSmall</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterRatSmall_8cs_source.html#l00003">CritterRatSmall.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterRat_html"><div class="ttname"><a href="classCritterRat.html">CritterRat</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterRat_8cs_source.html#l00003">CritterRat.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterRoachSmall_html"><div class="ttname"><a href="classCritterRoachSmall.html">CritterRoachSmall</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterRoachSmall_8cs_source.html#l00003">CritterRoachSmall.cs:4</a></div></div>
+<div class="ttc" id="aclassCritterRoach_html"><div class="ttname"><a href="classCritterRoach.html">CritterRoach</a></div><div class="ttdef"><b>Definition:</b> <a href="CritterRoach_8cs_source.html#l00003">CritterRoach.cs:4</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00136">BiomeProfile.id</a>, <a class="el" href="Cell_8cs_source.html#l00658">Cell.IsTopWater</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
 
 </div>
 </div>
@@ -276,6 +370,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00119">119</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        cell.critter = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id == 68)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            cell.critter = <span class="keyword">new</span> <a class="code hl_class" href="classCritterFish.html">CritterFish</a>();</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01182">Cell.cs:1183</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01183">Cell.sourceObj</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PartialMap_8cs_source.html#l00055">PartialMap.Apply()</a>, <a class="el" href="Map_8cs_source.html#l00503">Map.Load()</a>, <a class="el" href="Map_8cs_source.html#l00928">Map.SetFloor()</a>, and <a class="el" href="Map_8cs_source.html#l01507">Map.SetObj()</a>.</p>
 
 </div>
 </div>
@@ -303,6 +409,72 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00128">128</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> gameDelta = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">gameDelta</a>;</div>
+<div class="line"><span class="lineno">  131</span>        this.animeTimer -= gameDelta * this.speed * 100f;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#a3cd366663bab2cfb07a56c235aaf4b41">animeTimer</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            this.<a class="code hl_variable" href="classCritter.html#a4beeac43238d45cea4a60dea5dc8e0ed">index</a>++;</div>
+<div class="line"><span class="lineno">  135</span>            this.animeTimer = 2f;</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#ad3d72b2862a86e9317fc63b8bf65b2f5">dir</a>.x != 0f || <span class="keyword">this</span>.dir.y != 0f)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            this.tile = this.<a class="code hl_property" href="classCritter.html#aa11def344402821c2d16d6897e7e7beb">AnimeTile</a>;</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            this.tile = this.<a class="code hl_property" href="classCritter.html#a46b227246bd777c2803f069312121082">IdleTile</a>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        this.dirTimer -= gameDelta;</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#ac3605fed8670687303dd9d2fc7fcb291">dirTimer</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            this.dirTimer = (float)(this.<a class="code hl_property" href="classCritter.html#a6581c75289581bd9b3d786bc9df49bb9">Interval</a> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<span class="keyword">this</span>.Interval) / 2);</div>
+<div class="line"><span class="lineno">  149</span>            this.dir.x = (float)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1);</div>
+<div class="line"><span class="lineno">  150</span>            this.dir.y = (float)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1);</div>
+<div class="line"><span class="lineno">  151</span>            this.speed = 0.01f * (float)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20) + 1) * this.<a class="code hl_property" href="classCritter.html#aeacdff2ea201dcdff4b586ba5550d74a">BaseSpeed</a>;</div>
+<div class="line"><span class="lineno">  152</span>            this.reverse = (this.dir.x &gt; 0f);</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        this.x += this.dir.x * gameDelta * this.<a class="code hl_variable" href="classCritter.html#a02fef82650948bcc282c913bc8a0a84a">speed</a>;</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#acf821a5bdbb9e66a6aadde78b2eeb4c4">x</a> &gt; 0.12f)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            this.x = 0.12f;</div>
+<div class="line"><span class="lineno">  158</span>            this.dir.x = 0f;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#acf821a5bdbb9e66a6aadde78b2eeb4c4">x</a> &lt; -0.12f)</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            this.x = -0.12f;</div>
+<div class="line"><span class="lineno">  163</span>            this.dir.x = 0f;</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="line"><span class="lineno">  165</span>        this.y += this.dir.y * gameDelta * this.<a class="code hl_variable" href="classCritter.html#a02fef82650948bcc282c913bc8a0a84a">speed</a>;</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#aeae5ace79461599defcfafcc45248105">y</a> &gt; 0.12f)</div>
+<div class="line"><span class="lineno">  167</span>        {</div>
+<div class="line"><span class="lineno">  168</span>            this.y = 0.12f;</div>
+<div class="line"><span class="lineno">  169</span>            this.dir.y = 0f;</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCritter.html#aeae5ace79461599defcfafcc45248105">y</a> &lt; -0.12f)</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            this.y = -0.12f;</div>
+<div class="line"><span class="lineno">  175</span>            this.dir.y = 0f;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a8661ed62f17a60ae1169ed07c0b56812"><div class="ttname"><a href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">Core.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00697">Core.cs:697</a></div></div>
+<div class="ttc" id="aclassCritter_html_a02fef82650948bcc282c913bc8a0a84a"><div class="ttname"><a href="classCritter.html#a02fef82650948bcc282c913bc8a0a84a">Critter.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00195">Critter.cs:195</a></div></div>
+<div class="ttc" id="aclassCritter_html_a3cd366663bab2cfb07a56c235aaf4b41"><div class="ttname"><a href="classCritter.html#a3cd366663bab2cfb07a56c235aaf4b41">Critter.animeTimer</a></div><div class="ttdeci">float animeTimer</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00193">Critter.cs:193</a></div></div>
+<div class="ttc" id="aclassCritter_html_a46b227246bd777c2803f069312121082"><div class="ttname"><a href="classCritter.html#a46b227246bd777c2803f069312121082">Critter.IdleTile</a></div><div class="ttdeci">virtual int IdleTile</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00030">Critter.cs:31</a></div></div>
+<div class="ttc" id="aclassCritter_html_a4beeac43238d45cea4a60dea5dc8e0ed"><div class="ttname"><a href="classCritter.html#a4beeac43238d45cea4a60dea5dc8e0ed">Critter.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00183">Critter.cs:183</a></div></div>
+<div class="ttc" id="aclassCritter_html_a6581c75289581bd9b3d786bc9df49bb9"><div class="ttname"><a href="classCritter.html#a6581c75289581bd9b3d786bc9df49bb9">Critter.Interval</a></div><div class="ttdeci">virtual int Interval</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00046">Critter.cs:47</a></div></div>
+<div class="ttc" id="aclassCritter_html_aa11def344402821c2d16d6897e7e7beb"><div class="ttname"><a href="classCritter.html#aa11def344402821c2d16d6897e7e7beb">Critter.AnimeTile</a></div><div class="ttdeci">virtual int AnimeTile</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00022">Critter.cs:23</a></div></div>
+<div class="ttc" id="aclassCritter_html_ac3605fed8670687303dd9d2fc7fcb291"><div class="ttname"><a href="classCritter.html#ac3605fed8670687303dd9d2fc7fcb291">Critter.dirTimer</a></div><div class="ttdeci">float dirTimer</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00191">Critter.cs:191</a></div></div>
+<div class="ttc" id="aclassCritter_html_acf821a5bdbb9e66a6aadde78b2eeb4c4"><div class="ttname"><a href="classCritter.html#acf821a5bdbb9e66a6aadde78b2eeb4c4">Critter.x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00187">Critter.cs:187</a></div></div>
+<div class="ttc" id="aclassCritter_html_ad3d72b2862a86e9317fc63b8bf65b2f5"><div class="ttname"><a href="classCritter.html#ad3d72b2862a86e9317fc63b8bf65b2f5">Critter.dir</a></div><div class="ttdeci">Vector2 dir</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00185">Critter.cs:185</a></div></div>
+<div class="ttc" id="aclassCritter_html_aeacdff2ea201dcdff4b586ba5550d74a"><div class="ttname"><a href="classCritter.html#aeacdff2ea201dcdff4b586ba5550d74a">Critter.BaseSpeed</a></div><div class="ttdeci">virtual float BaseSpeed</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00054">Critter.cs:55</a></div></div>
+<div class="ttc" id="aclassCritter_html_aeae5ace79461599defcfafcc45248105"><div class="ttname"><a href="classCritter.html#aeae5ace79461599defcfafcc45248105">Critter.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00189">Critter.cs:189</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Critter_8cs_source.html#l00023">AnimeTile</a>, <a class="el" href="Critter_8cs_source.html#l00193">animeTimer</a>, <a class="el" href="Critter_8cs_source.html#l00055">BaseSpeed</a>, <a class="el" href="Critter_8cs_source.html#l00185">dir</a>, <a class="el" href="Critter_8cs_source.html#l00191">dirTimer</a>, <a class="el" href="Critter_8cs_source.html#l00031">IdleTile</a>, <a class="el" href="Critter_8cs_source.html#l00183">index</a>, <a class="el" href="Critter_8cs_source.html#l00047">Interval</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Critter_8cs_source.html#l00195">speed</a>, <a class="el" href="Critter_8cs_source.html#l00187">x</a>, and <a class="el" href="Critter_8cs_source.html#l00189">y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -321,6 +493,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00193">193</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
+
 </div>
 </div>
 <a id="ad3d72b2862a86e9317fc63b8bf65b2f5" name="ad3d72b2862a86e9317fc63b8bf65b2f5"></a>
@@ -336,6 +510,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00185">185</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +529,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00191">191</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a4beeac43238d45cea4a60dea5dc8e0ed" name="a4beeac43238d45cea4a60dea5dc8e0ed"></a>
@@ -368,6 +546,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00183">183</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -409,6 +589,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00197">197</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="a02fef82650948bcc282c913bc8a0a84a" name="a02fef82650948bcc282c913bc8a0a84a"></a>
@@ -424,6 +606,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00195">195</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -441,6 +625,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00181">181</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="acf821a5bdbb9e66a6aadde78b2eeb4c4" name="acf821a5bdbb9e66a6aadde78b2eeb4c4"></a>
@@ -457,6 +643,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00187">187</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
+
 </div>
 </div>
 <a id="aeae5ace79461599defcfafcc45248105" name="aeae5ace79461599defcfafcc45248105"></a>
@@ -472,6 +660,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00189">189</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -497,6 +687,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00022">22</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classCritter.html#a6a590d2b1030cc2e7736a3c01186516c">animeTiles</a>[this.index % this.<a class="code hl_property" href="classCritter.html#a6a590d2b1030cc2e7736a3c01186516c">animeTiles</a>.Length];</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassCritter_html_a6a590d2b1030cc2e7736a3c01186516c"><div class="ttname"><a href="classCritter.html#a6a590d2b1030cc2e7736a3c01186516c">Critter.animeTiles</a></div><div class="ttdeci">virtual int[] animeTiles</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00006">Critter.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +720,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00006">6</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeacdff2ea201dcdff4b586ba5550d74a" name="aeacdff2ea201dcdff4b586ba5550d74a"></a>
@@ -545,6 +750,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00054">54</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> 1f;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -569,6 +782,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00030">30</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classCritter.html#a29844e10674c84fcda0d04b775922e78">idleTiles</a>[this.index % this.<a class="code hl_property" href="classCritter.html#a29844e10674c84fcda0d04b775922e78">idleTiles</a>.Length];</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassCritter_html_a29844e10674c84fcda0d04b775922e78"><div class="ttname"><a href="classCritter.html#a29844e10674c84fcda0d04b775922e78">Critter.idleTiles</a></div><div class="ttdeci">virtual int[] idleTiles</div><div class="ttdef"><b>Definition:</b> <a href="Critter_8cs_source.html#l00014">Critter.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -593,7 +815,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00014">14</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6581c75289581bd9b3d786bc9df49bb9" name="a6581c75289581bd9b3d786bc9df49bb9"></a>
@@ -617,6 +845,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00046">46</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Critter_8cs_source.html#l00128">Update()</a>.</p>
 
 </div>
 </div>
@@ -641,6 +877,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Critter_8cs_source.html#l00038">38</a> of file <a class="el" href="Critter_8cs_source.html">Critter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -648,9 +892,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="Critter_8cs_source.html">Critter.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCritter.html">Critter</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

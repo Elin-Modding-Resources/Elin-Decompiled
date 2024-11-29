@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitNote.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -658,6 +678,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (base.GetParam(1, <span class="keyword">null</span>) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            this.owner.c_note = base.GetParam(1, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitNote_8cs_source.html#l00013">OnImportMap()</a>.</p>
 
 </div>
 </div>
@@ -687,6 +715,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a01114b762877593444f784e64c4421de">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        this.<a class="code hl_function" href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">OnCreate</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>);</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassTraitNote_html_ae64a3732578342315cb31685ec9c6d27"><div class="ttname"><a href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">TraitNote.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitNote_8cs_source.html#l00005">TraitNote.cs:5</a></div></div>
+<div class="ttc" id="aclassZone_html_ac539719d05a3d41d2d23d60d2df22aff"><div class="ttname"><a href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">Zone.DangerLv</a></div><div class="ttdeci">override int DangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00026">Zone.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00027">Zone.DangerLv</a>, and <a class="el" href="TraitNote_8cs_source.html#l00005">OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -717,6 +754,32 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00018">18</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">altAction</a>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWrite&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">InputName</a>(<span class="stringliteral">&quot;dialogWriteNote&quot;</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">c_note</a>, delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">   25</span>                {</div>
+<div class="line"><span class="lineno">   26</span>                    <span class="keywordflow">if</span> (!cancel)</div>
+<div class="line"><span class="lineno">   27</span>                    {</div>
+<div class="line"><span class="lineno">   28</span>                        this.owner.c_note = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">   29</span>                    }</div>
+<div class="line"><span class="lineno">   30</span>                }, <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_enumeration" href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">InputType</a>.Default);</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span>            }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a2d3f21e64f56c3eb51f0283aecb2916b"><div class="ttname"><a href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">ActPlan.altAction</a></div><div class="ttdeci">bool altAction</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00803">ActPlan.cs:803</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassCard_html_a17e901e98e4c975eaebdc821caead9c4"><div class="ttname"><a href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">Card.c_note</a></div><div class="ttdeci">string c_note</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01567">Card.cs:1568</a></div></div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a9d8fe2e80662df6a6c323599b5eb1257"><div class="ttname"><a href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">Dialog.InputName</a></div><div class="ttdeci">static Dialog InputName(string langDetail, string text, Action&lt; bool, string &gt; onClose, Dialog.InputType inputType=Dialog.InputType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00469">Dialog.cs:469</a></div></div>
+<div class="ttc" id="aclassDialog_html_aaf9f0f8f050b7944063f51a1b9cf878a"><div class="ttname"><a href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">Dialog.InputType</a></div><div class="ttdeci">InputType</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00538">Dialog.cs:539</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00803">ActPlan.altAction</a>, <a class="el" href="Card_8cs_source.html#l01568">Card.c_note</a>, <a class="el" href="Dialog_8cs_source.html#l00469">Dialog.InputName()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -724,9 +787,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitNote.html">TraitNote</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCoreConfig_1_1InputSetting.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classCoreConfig.html">CoreConfig</a></li><li class="navelem"><a class="el" href="classCoreConfig_1_1InputSetting.html">InputSetting</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -223,6 +239,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00699">699</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a8839d6d3a8caf36ace4500ebfea994bc" name="a8839d6d3a8caf36ace4500ebfea994bc"></a>
@@ -238,6 +256,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00701">701</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -255,6 +275,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00703">703</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a55241eebba704af2dcc10201333530b4" name="a55241eebba704af2dcc10201333530b4"></a>
@@ -270,6 +292,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00705">705</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -287,6 +311,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00707">707</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a219f39d66df0845f065b3b6efbc8348f" name="a219f39d66df0845f065b3b6efbc8348f"></a>
@@ -302,6 +328,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00709">709</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -367,6 +395,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00687">687</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="ad374f92dcbf6f044fa6769f97c1cdd8d" name="ad374f92dcbf6f044fa6769f97c1cdd8d"></a>
@@ -382,6 +412,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00689">689</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -399,6 +431,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00691">691</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a65f9618fbecb36931e00be54bb63aa03" name="a65f9618fbecb36931e00be54bb63aa03"></a>
@@ -414,6 +448,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00693">693</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -431,6 +467,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00695">695</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="af49ec832106b2db113c0ba13d26e4043" name="af49ec832106b2db113c0ba13d26e4043"></a>
@@ -446,6 +484,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00697">697</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -469,9 +509,13 @@ Public Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCoreConfig.html">CoreConfig</a></li><li class="navelem"><a class="el" href="classCoreConfig_1_1InputSetting.html">InputSetting</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

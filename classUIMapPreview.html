@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classUIMapPreview.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -267,6 +287,164 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00128">128</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (x &gt;= <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> || z &gt;= <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classUIMapPreview.html#a4ea51ed27509bbd1e775dc0e4452c101">cells</a>[x, z];</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">int</span> num = x;</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> num2 = z;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a64eea28c804aa94ec804c12592ada60b">limitBounds</a>)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            num = x - EMono._map.bounds.x + this.<a class="code hl_variable" href="classUIMapPreview.html#a1f7a813e7f7f8ad1089f3d9c97d139e1">offsetX</a>;</div>
+<div class="line"><span class="lineno">  140</span>            num2 = z - EMono._map.bounds.z + this.<a class="code hl_variable" href="classUIMapPreview.html#a86dd62573a3494d1ca68a4e152e60ac4">offsetZ</a>;</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordtype">int</span> num3 = num2 * this.Size + num;</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (num3 &gt;= this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>.Length || num3 &lt; 0)</div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a0a051a2147a493845a7cae0058f08233">monoColor</a>)</div>
+<div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (!cell.<a class="code hl_property" href="classCell.html#aa55b3cf7326278e948d64157821f54bf">isSeen</a>)</div>
+<div class="line"><span class="lineno">  150</span>            {</div>
+<div class="line"><span class="lineno">  151</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6">colorSurround</a>;</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#ac104dff1d7d021561642722594ea027c">isSurrounded</a>)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6">colorSurround</a>;</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a>)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#ace81626dcc8fe2f23429a89975ddbb98">colorWater</a>;</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a4b21622bb88a1f10f8ac21b9f87b90e7">colorEdge</a>;</div>
+<div class="line"><span class="lineno">  164</span>            }</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a49517e0c1f0866ab2cc121d0f3e5f8d4">colorDefault</a>;</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!cell.<a class="code hl_property" href="classCell.html#aa55b3cf7326278e948d64157821f54bf">isSeen</a>)</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6">colorSurround</a>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_function" href="classCell.html#ae8a16b25aa3d31acbf637a2786bb8464">HasZoneStairs</a>(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a7db78c2ad173dec3fe695e7e639bdd4a">colorStairs</a>;</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#ac104dff1d7d021561642722594ea027c">isSurrounded</a>)</div>
+<div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = this.<a class="code hl_variable" href="classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6">colorSurround</a>;</div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = cell.<a class="code hl_property" href="classCell.html#a1459cf95d4dc91f85486299805f6b9f2">matBlock</a>.GetColor();</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = (cell.bridgeHeight != 0) ? cell.<a class="code hl_property" href="classCell.html#a497fe1417352832c8c66c452a58e815c">matBridge</a> : cell.<a class="code hl_property" href="classCell.html#a9ef942696e0364d6b54651927eebdc50">matFloor</a>;</div>
+<div class="line"><span class="lineno">  189</span>            if (!Application.isEditor &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a> &amp;&amp; cell.<a class="code hl_property" href="classCell.html#a1157f01db73e85fd317f0fc91476199f">IsSnowTile</a>)</div>
+<div class="line"><span class="lineno">  190</span>            {</div>
+<div class="line"><span class="lineno">  191</span>                row = <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_variable" href="classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12">sourceSnow</a>;</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = cell.IsSky ? this.colorSky : row.<a class="code hl_function" href="classSourceMaterial_1_1Row.html#a43acca098bfe9ac49218b25ecc38ece7">GetColor</a>();</div>
+<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">if</span> (color.r &gt; <span class="keyword">this</span>.maxColor)</div>
+<div class="line"><span class="lineno">  195</span>            {</div>
+<div class="line"><span class="lineno">  196</span>                color.r = this.<a class="code hl_variable" href="classUIMapPreview.html#a1a64de89bb356f106a8350d23c550cbe">maxColor</a>;</div>
+<div class="line"><span class="lineno">  197</span>            }</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (color.r &lt; <span class="keyword">this</span>.minColor)</div>
+<div class="line"><span class="lineno">  199</span>            {</div>
+<div class="line"><span class="lineno">  200</span>                color.r = this.<a class="code hl_variable" href="classUIMapPreview.html#af964fa60b97b106e47daf28e14e1b9b1">minColor</a>;</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (color.g &gt; <span class="keyword">this</span>.maxColor)</div>
+<div class="line"><span class="lineno">  203</span>            {</div>
+<div class="line"><span class="lineno">  204</span>                color.g = this.<a class="code hl_variable" href="classUIMapPreview.html#a1a64de89bb356f106a8350d23c550cbe">maxColor</a>;</div>
+<div class="line"><span class="lineno">  205</span>            }</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (color.g &lt; <span class="keyword">this</span>.minColor)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                color.g = this.<a class="code hl_variable" href="classUIMapPreview.html#af964fa60b97b106e47daf28e14e1b9b1">minColor</a>;</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (color.b &gt; <span class="keyword">this</span>.maxColor)</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                color.b = this.<a class="code hl_variable" href="classUIMapPreview.html#a1a64de89bb356f106a8350d23c550cbe">maxColor</a>;</div>
+<div class="line"><span class="lineno">  213</span>            }</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (color.b &lt; <span class="keyword">this</span>.minColor)</div>
+<div class="line"><span class="lineno">  215</span>            {</div>
+<div class="line"><span class="lineno">  216</span>                color.b = this.<a class="code hl_variable" href="classUIMapPreview.html#af964fa60b97b106e47daf28e14e1b9b1">minColor</a>;</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] = color;</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aa55b3cf7326278e948d64157821f54bf">isSeen</a>)</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  223</span>            {</div>
+<div class="line"><span class="lineno">  224</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] *= 0.4f;</div>
+<div class="line"><span class="lineno">  225</span>            }</div>
+<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  227</span>            {</div>
+<div class="line"><span class="lineno">  228</span>                this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3] *= 0.9f;</div>
+<div class="line"><span class="lineno">  229</span>            }</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#ae74b552157129862aebbd33a43fc3e4c">Contains</a>(x, z))</div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3].a = this.<a class="code hl_variable" href="classUIMapPreview.html#ae487a0c3735c4865b5d7ab60137cd88d">voidAlpha</a>;</div>
+<div class="line"><span class="lineno">  234</span>        }</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3].a = 1f;</div>
+<div class="line"><span class="lineno">  238</span>        }</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> (!apply)</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.SetPixel(num, num2, this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[num3]);</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassCell_html_a1157f01db73e85fd317f0fc91476199f"><div class="ttname"><a href="classCell.html#a1157f01db73e85fd317f0fc91476199f">Cell.IsSnowTile</a></div><div class="ttdeci">bool IsSnowTile</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00725">Cell.cs:726</a></div></div>
+<div class="ttc" id="aclassCell_html_a1459cf95d4dc91f85486299805f6b9f2"><div class="ttname"><a href="classCell.html#a1459cf95d4dc91f85486299805f6b9f2">Cell.matBlock</a></div><div class="ttdeci">SourceMaterial.Row matBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01085">Cell.cs:1086</a></div></div>
+<div class="ttc" id="aclassCell_html_a1c9c4cee0dcd497d8af3378d29214943"><div class="ttname"><a href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">Cell.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00592">Cell.cs:593</a></div></div>
+<div class="ttc" id="aclassCell_html_a497fe1417352832c8c66c452a58e815c"><div class="ttname"><a href="classCell.html#a497fe1417352832c8c66c452a58e815c">Cell.matBridge</a></div><div class="ttdeci">SourceMaterial.Row matBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01101">Cell.cs:1102</a></div></div>
+<div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00657">Cell.cs:658</a></div></div>
+<div class="ttc" id="aclassCell_html_a9ef942696e0364d6b54651927eebdc50"><div class="ttname"><a href="classCell.html#a9ef942696e0364d6b54651927eebdc50">Cell.matFloor</a></div><div class="ttdeci">SourceMaterial.Row matFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01093">Cell.cs:1094</a></div></div>
+<div class="ttc" id="aclassCell_html_aa55b3cf7326278e948d64157821f54bf"><div class="ttname"><a href="classCell.html#aa55b3cf7326278e948d64157821f54bf">Cell.isSeen</a></div><div class="ttdeci">bool isSeen</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00224">Cell.cs:225</a></div></div>
+<div class="ttc" id="aclassCell_html_ac104dff1d7d021561642722594ea027c"><div class="ttname"><a href="classCell.html#ac104dff1d7d021561642722594ea027c">Cell.isSurrounded</a></div><div class="ttdeci">bool isSurrounded</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00176">Cell.cs:177</a></div></div>
+<div class="ttc" id="aclassCell_html_ae8a16b25aa3d31acbf637a2786bb8464"><div class="ttname"><a href="classCell.html#ae8a16b25aa3d31acbf637a2786bb8464">Cell.HasZoneStairs</a></div><div class="ttdeci">bool HasZoneStairs(bool includeLocked=true)</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01747">Cell.cs:1747</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f5537c2acc423bdbc584f2e2a73629"><div class="ttname"><a href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">EMono._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00046">EMono.cs:47</a></div></div>
+<div class="ttc" id="aclassMATERIAL_html"><div class="ttname"><a href="classMATERIAL.html">MATERIAL</a></div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00006">MATERIAL.cs:7</a></div></div>
+<div class="ttc" id="aclassMATERIAL_html_a82479c0abf6ef6fe4a1417edf7777b12"><div class="ttname"><a href="classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12">MATERIAL.sourceSnow</a></div><div class="ttdeci">static SourceMaterial.Row sourceSnow</div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00114">MATERIAL.cs:114</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_ae74b552157129862aebbd33a43fc3e4c"><div class="ttname"><a href="classMapBounds.html#ae74b552157129862aebbd33a43fc3e4c">MapBounds.Contains</a></div><div class="ttdeci">bool Contains(int dx, int dz)</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00047">MapBounds.cs:47</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00136">SourceMaterial.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a43acca098bfe9ac49218b25ecc38ece7"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a43acca098bfe9ac49218b25ecc38ece7">SourceMaterial.Row.GetColor</a></div><div class="ttdeci">Color GetColor()</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00194">SourceMaterial.cs:194</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a0a051a2147a493845a7cae0058f08233"><div class="ttname"><a href="classUIMapPreview.html#a0a051a2147a493845a7cae0058f08233">UIMapPreview.monoColor</a></div><div class="ttdeci">bool monoColor</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00287">UIMapPreview.cs:287</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a19f3813cf2df96ad10ef3ef85f7abfd6"><div class="ttname"><a href="classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6">UIMapPreview.colorSurround</a></div><div class="ttdeci">Color colorSurround</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00250">UIMapPreview.cs:250</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a1a64de89bb356f106a8350d23c550cbe"><div class="ttname"><a href="classUIMapPreview.html#a1a64de89bb356f106a8350d23c550cbe">UIMapPreview.maxColor</a></div><div class="ttdeci">float maxColor</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00299">UIMapPreview.cs:299</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a1f7a813e7f7f8ad1089f3d9c97d139e1"><div class="ttname"><a href="classUIMapPreview.html#a1f7a813e7f7f8ad1089f3d9c97d139e1">UIMapPreview.offsetX</a></div><div class="ttdeci">int offsetX</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00278">UIMapPreview.cs:278</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a49517e0c1f0866ab2cc121d0f3e5f8d4"><div class="ttname"><a href="classUIMapPreview.html#a49517e0c1f0866ab2cc121d0f3e5f8d4">UIMapPreview.colorDefault</a></div><div class="ttdeci">Color colorDefault</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00246">UIMapPreview.cs:246</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a4b21622bb88a1f10f8ac21b9f87b90e7"><div class="ttname"><a href="classUIMapPreview.html#a4b21622bb88a1f10f8ac21b9f87b90e7">UIMapPreview.colorEdge</a></div><div class="ttdeci">Color colorEdge</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00252">UIMapPreview.cs:252</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a4ea51ed27509bbd1e775dc0e4452c101"><div class="ttname"><a href="classUIMapPreview.html#a4ea51ed27509bbd1e775dc0e4452c101">UIMapPreview.cells</a></div><div class="ttdeci">Cell[,] cells</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00272">UIMapPreview.cs:272</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a64eea28c804aa94ec804c12592ada60b"><div class="ttname"><a href="classUIMapPreview.html#a64eea28c804aa94ec804c12592ada60b">UIMapPreview.limitBounds</a></div><div class="ttdeci">bool limitBounds</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00291">UIMapPreview.cs:291</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a7db78c2ad173dec3fe695e7e639bdd4a"><div class="ttname"><a href="classUIMapPreview.html#a7db78c2ad173dec3fe695e7e639bdd4a">UIMapPreview.colorStairs</a></div><div class="ttdeci">Color colorStairs</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00258">UIMapPreview.cs:258</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a86dd62573a3494d1ca68a4e152e60ac4"><div class="ttname"><a href="classUIMapPreview.html#a86dd62573a3494d1ca68a4e152e60ac4">UIMapPreview.offsetZ</a></div><div class="ttdeci">int offsetZ</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00281">UIMapPreview.cs:281</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_acc5d3fdcc1a65c740f85c22ccd2ca95b"><div class="ttname"><a href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">UIMapPreview.px</a></div><div class="ttdeci">Color[] px</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00270">UIMapPreview.cs:270</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_ace81626dcc8fe2f23429a89975ddbb98"><div class="ttname"><a href="classUIMapPreview.html#ace81626dcc8fe2f23429a89975ddbb98">UIMapPreview.colorWater</a></div><div class="ttdeci">Color colorWater</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00248">UIMapPreview.cs:248</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_ae487a0c3735c4865b5d7ab60137cd88d"><div class="ttname"><a href="classUIMapPreview.html#ae487a0c3735c4865b5d7ab60137cd88d">UIMapPreview.voidAlpha</a></div><div class="ttdeci">float voidAlpha</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00295">UIMapPreview.cs:295</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_af8f59ab8fc052fa7738dd584ca906c6c"><div class="ttname"><a href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">UIMapPreview.tex</a></div><div class="ttdeci">Texture2D tex</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00268">UIMapPreview.cs:268</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_af964fa60b97b106e47daf28e14e1b9b1"><div class="ttname"><a href="classUIMapPreview.html#af964fa60b97b106e47daf28e14e1b9b1">UIMapPreview.minColor</a></div><div class="ttdeci">float minColor</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00297">UIMapPreview.cs:297</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00272">cells</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00246">colorDefault</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00252">colorEdge</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00258">colorStairs</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00250">colorSurround</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00248">colorWater</a>, <a class="el" href="MapBounds_8cs_source.html#l00047">MapBounds.Contains()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00194">SourceMaterial.Row.GetColor()</a>, <a class="el" href="Cell_8cs_source.html#l00593">Cell.HasBlock</a>, <a class="el" href="Cell_8cs_source.html#l01747">Cell.HasZoneStairs()</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="Cell_8cs_source.html#l00225">Cell.isSeen</a>, <a class="el" href="Cell_8cs_source.html#l00726">Cell.IsSnowTile</a>, <a class="el" href="Cell_8cs_source.html#l00177">Cell.isSurrounded</a>, <a class="el" href="Cell_8cs_source.html#l00658">Cell.IsTopWater</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00291">limitBounds</a>, <a class="el" href="Cell_8cs_source.html#l01086">Cell.matBlock</a>, <a class="el" href="Cell_8cs_source.html#l01102">Cell.matBridge</a>, <a class="el" href="Cell_8cs_source.html#l01094">Cell.matFloor</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00299">maxColor</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00297">minColor</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00287">monoColor</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00278">offsetX</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00281">offsetZ</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00270">px</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="MATERIAL_8cs_source.html#l00114">MATERIAL.sourceSnow</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00268">tex</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00295">voidAlpha</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00113">UpdateMap()</a>.</p>
 
 </div>
 </div>
@@ -294,6 +472,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00009">9</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a475cb3858e9488f7361c9fff64c68633">image</a>)</div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            this.texDefault = this.<a class="code hl_variable" href="classUIMapPreview.html#a475cb3858e9488f7361c9fff64c68633">image</a>.texture;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassUIMapPreview_html_a475cb3858e9488f7361c9fff64c68633"><div class="ttname"><a href="classUIMapPreview.html#a475cb3858e9488f7361c9fff64c68633">UIMapPreview.image</a></div><div class="ttdeci">RawImage image</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00262">UIMapPreview.cs:262</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMapPreview_8cs_source.html#l00262">image</a>.</p>
 
 </div>
 </div>
@@ -321,6 +508,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00044">44</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.done)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            this.<a class="code hl_function" href="classUIMapPreview.html#a3fa5d55de1fd112440f15f728d69d5ba">SetMap</a>(this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.bp.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>);</div>
+<div class="line"><span class="lineno">   49</span>            base.CancelInvoke();</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassUIMapPreview_html_a3fa5d55de1fd112440f15f728d69d5ba"><div class="ttname"><a href="classUIMapPreview.html#a3fa5d55de1fd112440f15f728d69d5ba">UIMapPreview.SetMap</a></div><div class="ttdeci">void SetMap(Map _map)</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00053">UIMapPreview.cs:53</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_abfe6085536ef68cabcb3e060abc55f7b"><div class="ttname"><a href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">UIMapPreview.thread</a></div><div class="ttdeci">UIMapPreview.GenThread thread</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00293">UIMapPreview.cs:293</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_ae7db75f2e3d1502d7dd837aa672f39b1"><div class="ttname"><a href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">UIMapPreview.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00285">UIMapPreview.cs:285</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMapPreview_8cs_source.html#l00285">map</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00293">thread</a>.</p>
 
 </div>
 </div>
@@ -349,6 +548,41 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00017">17</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.thread = <span class="keyword">new</span> <a class="code hl_class" href="classUIMapPreview.html">UIMapPreview</a>.<a class="code hl_class" href="classUIMapPreview_1_1GenThread.html">GenThread</a>();</div>
+<div class="line"><span class="lineno">   22</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.Init();</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.done)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>            this.image.texture = this.<a class="code hl_variable" href="classUIMapPreview.html#a5240f9e0daa64c5a3450a25107e9b9cb">texDefault</a>;</div>
+<div class="line"><span class="lineno">   31</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.Reset();</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        this.thread.bp.genSetting = bp.<a class="code hl_variable" href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">genSetting</a>;</div>
+<div class="line"><span class="lineno">   34</span>        this.thread.bp.zoneProfile = bp.<a class="code hl_variable" href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">zoneProfile</a>;</div>
+<div class="line"><span class="lineno">   35</span>        this.thread.bp.genSetting.seed = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(20000);</div>
+<div class="line"><span class="lineno">   36</span>        ThreadPool.QueueUserWorkItem(delegate(<span class="keywordtype">object</span> a)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#abfe6085536ef68cabcb3e060abc55f7b">thread</a>.Start();</div>
+<div class="line"><span class="lineno">   39</span>        });</div>
+<div class="line"><span class="lineno">   40</span>        base.CancelInvoke();</div>
+<div class="line"><span class="lineno">   41</span>        base.InvokeRepeating(<span class="stringliteral">&quot;CheckThread&quot;</span>, 0f, 0.1f);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a790dff7e193a284b2be7a187110677bf"><div class="ttname"><a href="classEMono.html#a790dff7e193a284b2be7a187110677bf">EMono.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00166">EMono.cs:166</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_1_1GenThread_html"><div class="ttname"><a href="classUIMapPreview_1_1GenThread.html">UIMapPreview.GenThread</a></div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00301">UIMapPreview.cs:302</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html"><div class="ttname"><a href="classUIMapPreview.html">UIMapPreview</a></div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00007">UIMapPreview.cs:8</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a5240f9e0daa64c5a3450a25107e9b9cb"><div class="ttname"><a href="classUIMapPreview.html#a5240f9e0daa64c5a3450a25107e9b9cb">UIMapPreview.texDefault</a></div><div class="ttdeci">Texture texDefault</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00266">UIMapPreview.cs:266</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a5071f0cd6b4337a5993bf1ab222d352b"><div class="ttname"><a href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">ZoneBlueprint.zoneProfile</a></div><div class="ttdeci">ZoneProfile zoneProfile</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00071">ZoneBlueprint.cs:71</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_ac3dc8d5b6a318868945cc4f96b699e59"><div class="ttname"><a href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">ZoneBlueprint.genSetting</a></div><div class="ttdeci">ZoneBlueprint.MapGenSetting genSetting</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00077">ZoneBlueprint.cs:77</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneBlueprint_8cs_source.html#l00077">ZoneBlueprint.genSetting</a>, <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00266">texDefault</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00293">thread</a>, and <a class="el" href="ZoneBlueprint_8cs_source.html#l00071">ZoneBlueprint.zoneProfile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEmbark_8cs_source.html#l00126">LayerEmbark.RerollPreviewMap()</a>.</p>
 
 </div>
 </div>
@@ -377,6 +611,76 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00053">53</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        this.map = <a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            this.image.texture = this.<a class="code hl_variable" href="classUIMapPreview.html#a5240f9e0daa64c5a3450a25107e9b9cb">texDefault</a>;</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        this.cells = this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">int</span> num = this.limitBounds ? ((this.map.bounds.Width &gt; this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>) ? this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a> : <span class="keyword">this</span>.map.bounds.Height) : this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>;</div>
+<div class="line"><span class="lineno">   63</span>        this.Size = num;</div>
+<div class="line"><span class="lineno">   64</span>        this.offsetX = ((this.map.bounds.Width &gt; this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>) ? 0 : ((num - <a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a>) / 2));</div>
+<div class="line"><span class="lineno">   65</span>        this.offsetZ = ((this.map.bounds.Width &gt; this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>) ? ((num - <a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>) / 2) : 0);</div>
+<div class="line"><span class="lineno">   66</span>        this.px = <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>[this.Size * this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>];</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        this.tex = <span class="keyword">new</span> Texture2D(this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>, this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            filterMode = this.<a class="code hl_variable" href="classUIMapPreview.html#a1b4fb243f75eee19cfafe60bd0e5fcc2">filter</a>,</div>
+<div class="line"><span class="lineno">   74</span>            wrapMode = TextureWrapMode.Clamp</div>
+<div class="line"><span class="lineno">   75</span>        };</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.Size * this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>; i++)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>[i].a = this.<a class="code hl_variable" href="classUIMapPreview.html#ae487a0c3735c4865b5d7ab60137cd88d">voidAlpha</a>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.SetPixels(this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>);</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a64eea28c804aa94ec804c12592ada60b">limitBounds</a>)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>; j++)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a>; k++)</div>
+<div class="line"><span class="lineno">   86</span>                {</div>
+<div class="line"><span class="lineno">   87</span>                    this.<a class="code hl_function" href="classUIMapPreview.html#a2e66326c7cd010077b6700d575128b39">_RefreshPoint</a>(this.<a class="code hl_variable" href="classUIMapPreview.html#ae7db75f2e3d1502d7dd837aa672f39b1">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_variable" href="classMapBounds.html#a9a8b831368b2ec4671f8db8eef221ef3">x</a> + k, <span class="keyword">this</span>.map.bounds.z + j, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>; l++)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; this.<a class="code hl_variable" href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">Size</a>; m++)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    this.<a class="code hl_function" href="classUIMapPreview.html#a2e66326c7cd010077b6700d575128b39">_RefreshPoint</a>(m, l, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.SetPixels(this.<a class="code hl_variable" href="classUIMapPreview.html#acc5d3fdcc1a65c740f85c22ccd2ca95b">px</a>);</div>
+<div class="line"><span class="lineno">  102</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.Apply();</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a75156eab446f98f632d6e147e6139be4">matMap</a>)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            this.<a class="code hl_variable" href="classUIMapPreview.html#a75156eab446f98f632d6e147e6139be4">matMap</a>.SetTexture(<span class="stringliteral">&quot;_MainTex&quot;</span>, this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>);</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMapPreview.html#a475cb3858e9488f7361c9fff64c68633">image</a>)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            this.image.texture = this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>;</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="ttc" id="aclassMapBounds_html_a99534a5f7331b6dae01f07e565accad7"><div class="ttname"><a href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">MapBounds.Width</a></div><div class="ttdeci">int Width</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00023">MapBounds.cs:24</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a9a8b831368b2ec4671f8db8eef221ef3"><div class="ttname"><a href="classMapBounds.html#a9a8b831368b2ec4671f8db8eef221ef3">MapBounds.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00316">MapBounds.cs:316</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_ad8c28f1465f8f95e69ba0f6e40abfd84"><div class="ttname"><a href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">MapBounds.Height</a></div><div class="ttdeci">int Height</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00031">MapBounds.cs:32</a></div></div>
+<div class="ttc" id="aclassMap_html_aa1a8a360aeea7dda2537485e30fea299"><div class="ttname"><a href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">Map.cells</a></div><div class="ttdeci">Cell[,] cells</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02887">Map.cs:2887</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a1b4fb243f75eee19cfafe60bd0e5fcc2"><div class="ttname"><a href="classUIMapPreview.html#a1b4fb243f75eee19cfafe60bd0e5fcc2">UIMapPreview.filter</a></div><div class="ttdeci">FilterMode filter</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00283">UIMapPreview.cs:283</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a2e66326c7cd010077b6700d575128b39"><div class="ttname"><a href="classUIMapPreview.html#a2e66326c7cd010077b6700d575128b39">UIMapPreview._RefreshPoint</a></div><div class="ttdeci">void _RefreshPoint(int x, int z, bool apply=true)</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00128">UIMapPreview.cs:128</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a6cb5422acb828114e0040d1b0fa3aaf2"><div class="ttname"><a href="classUIMapPreview.html#a6cb5422acb828114e0040d1b0fa3aaf2">UIMapPreview.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00275">UIMapPreview.cs:275</a></div></div>
+<div class="ttc" id="aclassUIMapPreview_html_a75156eab446f98f632d6e147e6139be4"><div class="ttname"><a href="classUIMapPreview.html#a75156eab446f98f632d6e147e6139be4">UIMapPreview.matMap</a></div><div class="ttdeci">Material matMap</div><div class="ttdef"><b>Definition:</b> <a href="UIMapPreview_8cs_source.html#l00260">UIMapPreview.cs:260</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00283">filter</a>, <a class="el" href="MapBounds_8cs_source.html#l00032">MapBounds.Height</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00262">image</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00291">limitBounds</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00285">map</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00260">matMap</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00270">px</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00275">Size</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00268">tex</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00266">texDefault</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00295">voidAlpha</a>, <a class="el" href="MapBounds_8cs_source.html#l00024">MapBounds.Width</a>, and <a class="el" href="MapBounds_8cs_source.html#l00316">MapBounds.x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00044">CheckThread()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00045">WidgetMinimap.OnActivate()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00024">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00152">LayerEmbark.OnClickPreview()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00084">WidgetMinimap.OnMoveZone()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00149">WidgetMinimap.OnSetContextMenu()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00090">WidgetMinimap.Reload()</a>, and <a class="el" href="WidgetMinimap_8cs_source.html#l00076">WidgetMinimap.UpdateMap()</a>.</p>
 
 </div>
 </div>
@@ -415,6 +719,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00113">113</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>        this.<a class="code hl_function" href="classUIMapPreview.html#a2e66326c7cd010077b6700d575128b39">_RefreshPoint</a>(x, z, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  116</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.Apply();</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00268">tex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMinimap_8cs_source.html#l00059">WidgetMinimap.UpdateMap()</a>.</p>
 
 </div>
 </div>
@@ -443,6 +755,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00119">119</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCell.html">Cell</a> cell <span class="keywordflow">in</span> newPoints)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            this.<a class="code hl_function" href="classUIMapPreview.html#a2e66326c7cd010077b6700d575128b39">_RefreshPoint</a>((<span class="keywordtype">int</span>)cell.<a class="code hl_variable" href="classCell.html#acac94c713ce0339a4942f640e64bc15e">x</a>, (<span class="keywordtype">int</span>)cell.<a class="code hl_variable" href="classCell.html#a991b9b8ae50a8f3e29f76e7d448a2bd8">z</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        this.<a class="code hl_variable" href="classUIMapPreview.html#af8f59ab8fc052fa7738dd584ca906c6c">tex</a>.Apply();</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassCell_html_a991b9b8ae50a8f3e29f76e7d448a2bd8"><div class="ttname"><a href="classCell.html#a991b9b8ae50a8f3e29f76e7d448a2bd8">Cell.z</a></div><div class="ttdeci">byte z</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01840">Cell.cs:1840</a></div></div>
+<div class="ttc" id="aclassCell_html_acac94c713ce0339a4942f640e64bc15e"><div class="ttname"><a href="classCell.html#acac94c713ce0339a4942f640e64bc15e">Cell.x</a></div><div class="ttdeci">byte x</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01838">Cell.cs:1838</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00268">tex</a>, <a class="el" href="Cell_8cs_source.html#l01838">Cell.x</a>, and <a class="el" href="Cell_8cs_source.html#l01840">Cell.z</a>.</p>
 
 </div>
 </div>
@@ -460,6 +783,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00264">264</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEmbark_8cs_source.html#l00126">LayerEmbark.RerollPreviewMap()</a>.</p>
 
 </div>
 </div>
@@ -485,6 +810,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00272">272</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
+
 </div>
 </div>
 <a id="a49517e0c1f0866ab2cc121d0f3e5f8d4" name="a49517e0c1f0866ab2cc121d0f3e5f8d4"></a>
@@ -501,6 +828,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00246">246</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
+
 </div>
 </div>
 <a id="a4b21622bb88a1f10f8ac21b9f87b90e7" name="a4b21622bb88a1f10f8ac21b9f87b90e7"></a>
@@ -516,6 +845,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00252">252</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
 
 </div>
 </div>
@@ -565,6 +896,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00258">258</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
+
 </div>
 </div>
 <a id="a19f3813cf2df96ad10ef3ef85f7abfd6" name="a19f3813cf2df96ad10ef3ef85f7abfd6"></a>
@@ -581,6 +914,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00250">250</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
+
 </div>
 </div>
 <a id="ace81626dcc8fe2f23429a89975ddbb98" name="ace81626dcc8fe2f23429a89975ddbb98"></a>
@@ -596,6 +931,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00248">248</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
 
 </div>
 </div>
@@ -629,6 +966,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00283">283</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <a id="a475cb3858e9488f7361c9fff64c68633" name="a475cb3858e9488f7361c9fff64c68633"></a>
@@ -644,6 +983,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00262">262</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00009">Awake()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
 
 </div>
 </div>
@@ -661,6 +1002,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00291">291</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00225">WidgetMinimap.EmitParticle()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00095">WidgetMinimap.OnPointerDown()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00190">WidgetMinimap.OnUpdate()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <a id="ae7db75f2e3d1502d7dd837aa672f39b1" name="ae7db75f2e3d1502d7dd837aa672f39b1"></a>
@@ -676,6 +1019,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00285">285</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00044">CheckThread()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00152">LayerEmbark.OnClickPreview()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00090">WidgetMinimap.Reload()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>, and <a class="el" href="WidgetMinimap_8cs_source.html#l00059">WidgetMinimap.UpdateMap()</a>.</p>
 
 </div>
 </div>
@@ -693,6 +1038,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00260">260</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMinimap_8cs_source.html#l00183">WidgetMinimap.RefreshStyle()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <a id="a1a64de89bb356f106a8350d23c550cbe" name="a1a64de89bb356f106a8350d23c550cbe"></a>
@@ -708,6 +1055,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00299">299</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
 
 </div>
 </div>
@@ -725,6 +1074,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00297">297</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
+
 </div>
 </div>
 <a id="a0a051a2147a493845a7cae0058f08233" name="a0a051a2147a493845a7cae0058f08233"></a>
@@ -740,6 +1091,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00287">287</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>.</p>
 
 </div>
 </div>
@@ -757,6 +1110,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00278">278</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00225">WidgetMinimap.EmitParticle()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00095">WidgetMinimap.OnPointerDown()</a>, and <a class="el" href="WidgetMinimap_8cs_source.html#l00190">WidgetMinimap.OnUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a86dd62573a3494d1ca68a4e152e60ac4" name="a86dd62573a3494d1ca68a4e152e60ac4"></a>
@@ -772,6 +1127,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00281">281</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00225">WidgetMinimap.EmitParticle()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00095">WidgetMinimap.OnPointerDown()</a>, and <a class="el" href="WidgetMinimap_8cs_source.html#l00190">WidgetMinimap.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -797,6 +1154,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00270">270</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <a id="a6cb5422acb828114e0040d1b0fa3aaf2" name="a6cb5422acb828114e0040d1b0fa3aaf2"></a>
@@ -812,6 +1171,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00275">275</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
 
 </div>
 </div>
@@ -837,6 +1198,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00268">268</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00113">UpdateMap()</a>.</p>
+
 </div>
 </div>
 <a id="a5240f9e0daa64c5a3450a25107e9b9cb" name="a5240f9e0daa64c5a3450a25107e9b9cb"></a>
@@ -861,6 +1224,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00266">266</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00017">GenerateMap()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <a id="abfe6085536ef68cabcb3e060abc55f7b" name="abfe6085536ef68cabcb3e060abc55f7b"></a>
@@ -876,6 +1241,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00293">293</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00044">CheckThread()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00017">GenerateMap()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00152">LayerEmbark.OnClickPreview()</a>, and <a class="el" href="LayerEmbark_8cs_source.html#l00126">LayerEmbark.RerollPreviewMap()</a>.</p>
 
 </div>
 </div>
@@ -893,15 +1260,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMapPreview_8cs_source.html#l00295">295</a> of file <a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMapPreview_8cs_source.html#l00128">_RefreshPoint()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00053">SetMap()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="UIMapPreview_8cs_source.html">UIMapPreview.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUIMapPreview.html">UIMapPreview</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

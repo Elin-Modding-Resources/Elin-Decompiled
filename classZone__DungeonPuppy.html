@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classZone__DungeonPuppy.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -932,6 +952,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classZone.html#a6d06cd1e48021af090614339fe84a318">Zone</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00076">76</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (base.visitCount == 0)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_class" href="classTutorial.html">Tutorial</a>.<a class="code hl_function" href="classTutorial.html#aa538aa010806489d96924e8005aec0c2">Reserve</a>(<span class="stringliteral">&quot;eq&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassTutorial_html"><div class="ttname"><a href="classTutorial.html">Tutorial</a></div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00003">Tutorial.cs:4</a></div></div>
+<div class="ttc" id="aclassTutorial_html_aa538aa010806489d96924e8005aec0c2"><div class="ttname"><a href="classTutorial.html#aa538aa010806489d96924e8005aec0c2">Tutorial.Reserve</a></div><div class="ttdeci">static void Reserve(string idStep, Action onBeforePlay=null)</div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00058">Tutorial.cs:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Tutorial_8cs_source.html#l00058">Tutorial.Reserve()</a>.</p>
 
 </div>
 </div>
@@ -961,6 +991,40 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classZone__Dungeon.html#aa330befb029e0ea57124519eb57930d4">Zone_Dungeon</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00061">61</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (base.lv &lt;= <span class="keyword">this</span>.LvPoppy)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classQuest.html">Quest</a> quest = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12">Get</a>(<span class="stringliteral">&quot;puppy&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (quest != <span class="keyword">null</span> &amp;&amp; quest.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> == 0)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(<span class="stringliteral">&quot;poppy&quot;</span>) ?? <a class="code hl_class" href="classCharaGen.html">CharaGen</a>.<a class="code hl_function" href="classCharaGen.html#aea54439a71ae1fe0a07d3ee4d3084b15">Create</a>(<span class="stringliteral">&quot;poppy&quot;</span>, -1);</div>
+<div class="line"><span class="lineno">   69</span>                chara.<a class="code hl_function" href="classCard.html#a6727ef21c329efd8f0d4293910887883">AddEditorTag</a>(<a class="code hl_enumeration" href="EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245">EditorTag</a>.Invulnerable);</div>
+<div class="line"><span class="lineno">   70</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(chara, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a3c47a24819f283a47a0adc97bf180a08">GetRandomSpawnPos</a>());</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        base.OnGenerateMap();</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aEditorTag_8cs_html_a7b3cfa89f51b26ee271d8a6a9e909245"><div class="ttname"><a href="EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245">EditorTag</a></div><div class="ttdeci">EditorTag</div><div class="ttdef"><b>Definition:</b> <a href="EditorTag_8cs_source.html#l00003">EditorTag.cs:4</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a3f0a4c97447028f99e19fbdd321a87d6"><div class="ttname"><a href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">CardManager.Find</a></div><div class="ttdeci">Chara Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00052">CardManager.cs:52</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a6d6d588d3c038e8919951bccaa2263d6"><div class="ttname"><a href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">CardManager.globalCharas</a></div><div class="ttdeci">CardManager.GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00065">CardManager.cs:65</a></div></div>
+<div class="ttc" id="aclassCard_html_a6727ef21c329efd8f0d4293910887883"><div class="ttname"><a href="classCard.html#a6727ef21c329efd8f0d4293910887883">Card.AddEditorTag</a></div><div class="ttdeci">void AddEditorTag(EditorTag tag)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01985">Card.cs:1985</a></div></div>
+<div class="ttc" id="aclassCharaGen_html"><div class="ttname"><a href="classCharaGen.html">CharaGen</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaGen_8cs_source.html#l00003">CharaGen.cs:4</a></div></div>
+<div class="ttc" id="aclassCharaGen_html_aea54439a71ae1fe0a07d3ee4d3084b15"><div class="ttname"><a href="classCharaGen.html#aea54439a71ae1fe0a07d3ee4d3084b15">CharaGen.Create</a></div><div class="ttdeci">static Chara Create(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="CharaGen_8cs_source.html#l00021">CharaGen.cs:21</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a3c47a24819f283a47a0adc97bf180a08"><div class="ttname"><a href="classMapBounds.html#a3c47a24819f283a47a0adc97bf180a08">MapBounds.GetRandomSpawnPos</a></div><div class="ttdeci">Point GetRandomSpawnPos()</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00209">MapBounds.cs:209</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_ae95a50210b18f1576e03bc0faffd3e12"><div class="ttname"><a href="classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12">QuestManager.Get</a></div><div class="ttdeci">Quest Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00173">QuestManager.cs:173</a></div></div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00778">Quest.cs:778</a></div></div>
+<div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02262">Zone.cs:2262</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l02262">Zone.AddCard()</a>, <a class="el" href="Card_8cs_source.html#l01985">Card.AddEditorTag()</a>, <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="CharaGen_8cs_source.html#l00021">CharaGen.Create()</a>, <a class="el" href="CardManager_8cs_source.html#l00052">CardManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00173">QuestManager.Get()</a>, <a class="el" href="MapBounds_8cs_source.html#l00209">MapBounds.GetRandomSpawnPos()</a>, <a class="el" href="CardManager_8cs_source.html#l00065">CardManager.globalCharas</a>, <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>, and <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>.</p>
 
 </div>
 </div>
@@ -986,7 +1050,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00037">37</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1ed697ebe760443e366b9f9d71037d6a" name="a1ed697ebe760443e366b9f9d71037d6a"></a>
@@ -1010,7 +1080,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00053">53</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a95954f529bd850dc242226bccff09d1e" name="a95954f529bd850dc242226bccff09d1e"></a>
@@ -1034,7 +1110,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00029">29</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> base.lv &lt;= this.<a class="code hl_property" href="classZone__DungeonPuppy.html#a8a27d73305e75d974abe5fd0570c7800">LvPoppy</a>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassZone__DungeonPuppy_html_a8a27d73305e75d974abe5fd0570c7800"><div class="ttname"><a href="classZone__DungeonPuppy.html#a8a27d73305e75d974abe5fd0570c7800">Zone_DungeonPuppy.LvPoppy</a></div><div class="ttdeci">int LvPoppy</div><div class="ttdef"><b>Definition:</b> <a href="Zone__DungeonPuppy_8cs_source.html#l00013">Zone_DungeonPuppy.cs:14</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a27d73305e75d974abe5fd0570c7800" name="a8a27d73305e75d974abe5fd0570c7800"></a>
@@ -1058,7 +1141,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00013">13</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> -2;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acae87348092e615f4ecaaefebbb05dd0" name="acae87348092e615f4ecaaefebbb05dd0"></a>
@@ -1082,7 +1171,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00021">21</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a041856244399bc371a619b389124be15" name="a041856244399bc371a619b389124be15"></a>
@@ -1106,7 +1201,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00045">45</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae97fe7dd03f1580594412aa13c533caf" name="ae97fe7dd03f1580594412aa13c533caf"></a>
@@ -1130,16 +1231,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00005">5</a> of file <a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Zone__DungeonPuppy_8cs_source.html">Zone_DungeonPuppy.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classZone__DungeonPuppy.html">Zone_DungeonPuppy</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

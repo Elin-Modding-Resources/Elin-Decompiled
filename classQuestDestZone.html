@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestDestZone.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -486,6 +506,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00071">71</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        this.uidDest = z.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>;</div>
+<div class="line"><span class="lineno">   74</span>        this.uidTarget = target;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="ttc" id="aclassSpatial_html_a3d32786bb1d24d70693a1a132e44b4e1"><div class="ttname"><a href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">Spatial.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00050">Spatial.cs:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00051">Spatial.uid</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00008">Quest.Create()</a>.</p>
 
 </div>
 </div>
@@ -504,6 +533,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00078">78</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">ContentQuest.SelectQuest()</a>.</p>
+
 </div>
 </div>
 <a id="a7020485ece1446f85ce13cbaca879673" name="a7020485ece1446f85ce13cbaca879673"></a>
@@ -519,6 +550,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00081">81</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00194">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00251">QuestDeliver.GetTextProgress()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00185">QuestDeliver.IsDeliverTarget()</a>, and <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">ItemQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -544,6 +577,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQuestDestZone.html#a95cd2d4de1d2eaeb9953b51dd0b732c4">IsDeliver</a> &amp;&amp; this.<a class="code hl_property" href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">DestZone</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88">FindChara</a>(this.<a class="code hl_variable" href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">uidTarget</a>);</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">if</span> (chara != <span class="keyword">null</span> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88">FindChara</a>(this.<a class="code hl_variable" href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">uidTarget</a>);</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> base.chara;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:452</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_a7020485ece1446f85ce13cbaca879673"><div class="ttname"><a href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">QuestDestZone.uidTarget</a></div><div class="ttdeci">int uidTarget</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00081">QuestDestZone.cs:81</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_a95cd2d4de1d2eaeb9953b51dd0b732c4"><div class="ttname"><a href="classQuestDestZone.html#a95cd2d4de1d2eaeb9953b51dd0b732c4">QuestDestZone.IsDeliver</a></div><div class="ttdeci">virtual bool IsDeliver</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00006">QuestDestZone.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_af47591d2f0c501395a52ab0ca16940d3"><div class="ttname"><a href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">QuestDestZone.DestZone</a></div><div class="ttdeci">Zone DestZone</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00014">QuestDestZone.cs:15</a></div></div>
+<div class="ttc" id="aclassQuest_html_a7d65a4a00b2267ae5e44527dabb37643"><div class="ttname"><a href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">Quest.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00064">Quest.cs:65</a></div></div>
+<div class="ttc" id="aclassZone_html_aaa7ff2c0ede4f0bc48a3fbd22bae1b88"><div class="ttname"><a href="classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88">Zone.FindChara</a></div><div class="ttdeci">Chara FindChara(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03105">Zone.cs:3105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">ContentQuest.SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -568,6 +626,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classRefZone.html">RefZone</a>.<a class="code hl_function" href="classRefZone.html#aaf0d05a43f9376a02d936e9027291675">Get</a>(this.<a class="code hl_variable" href="classQuestDestZone.html#aa7b5277c2fe67533cfeb3b5a19be5229">uidDest</a>);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassQuestDestZone_html_aa7b5277c2fe67533cfeb3b5a19be5229"><div class="ttname"><a href="classQuestDestZone.html#aa7b5277c2fe67533cfeb3b5a19be5229">QuestDestZone.uidDest</a></div><div class="ttdeci">int uidDest</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00078">QuestDestZone.cs:78</a></div></div>
+<div class="ttc" id="aclassRefZone_html"><div class="ttname"><a href="classRefZone.html">RefZone</a></div><div class="ttdef"><b>Definition:</b> <a href="RefZone_8cs_source.html#l00003">RefZone.cs:4</a></div></div>
+<div class="ttc" id="aclassRefZone_html_aaf0d05a43f9376a02d936e9027291675"><div class="ttname"><a href="classRefZone.html#aaf0d05a43f9376a02d936e9027291675">RefZone.Get</a></div><div class="ttdeci">static Zone Get(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="RefZone_8cs_source.html#l00005">RefZone.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">ItemQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -592,6 +661,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00194">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="Quest_8cs_source.html#l00008">Quest.Create()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00251">QuestDeliver.GetTextProgress()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00185">QuestDeliver.IsDeliverTarget()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00150">QuestDeliver.ListDestThing()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00262">QuestDeliver.OnEnterZone()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00115">QuestDeliver.OnStart()</a>, and <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">ItemQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -616,7 +693,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00038">38</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">DestZone</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">return</span> this.<a class="code hl_property" href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">DestZone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classZone.html">Zone</a> clientZone = base.ClientZone;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> ((clientZone != <span class="keyword">null</span>) ? clientZone.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a> : <span class="keyword">null</span>) ?? <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a71dd0ea3288f998438388ad16790c43c" name="a71dd0ea3288f998438388ad16790c43c"></a>
@@ -640,16 +730,39 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestDestZone_8cs_source.html#l00051">51</a> of file <a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordtype">string</span> result;</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">uidTarget</a> != 0)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> ((result = this.<a class="code hl_property" href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">DestZone</a>.<a class="code hl_variable" href="classZone.html#a0f9bbf3e45710f1a2697d10505618200">dictCitizen</a>.TryGetValue(<span class="keyword">this</span>.uidTarget, <span class="keyword">null</span>)) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   59</span>                {</div>
+<div class="line"><span class="lineno">   60</span>                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>                }</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                result = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassZone_html_a0f9bbf3e45710f1a2697d10505618200"><div class="ttname"><a href="classZone.html#a0f9bbf3e45710f1a2697d10505618200">Zone.dictCitizen</a></div><div class="ttdeci">Dictionary&lt; int, string &gt; dictCitizen</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03867">Zone.cs:3867</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestDestZone_8cs_source.html">QuestDestZone.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestDestZone.html">QuestDestZone</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

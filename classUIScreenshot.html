@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classUIScreenshot.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -229,6 +249,79 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00020">20</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_class" href="classUIScreenshot.html">UIScreenshot</a>.&lt;&gt;c__DisplayClass8_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classUIScreenshot.html">UIScreenshot</a>.&lt;&gt;c__DisplayClass8_0();</div>
+<div class="line"><span class="lineno">   23</span>        CS$&lt;&gt;8__locals1.dir = dir;</div>
+<div class="line"><span class="lineno">   24</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   25</span>        CS$&lt;&gt;8__locals1.isUpdate = isUpdate;</div>
+<div class="line"><span class="lineno">   26</span>        CS$&lt;&gt;8__locals1.partial = partial;</div>
+<div class="line"><span class="lineno">   27</span>        CS$&lt;&gt;8__locals1.onSave = onSave;</div>
+<div class="line"><span class="lineno">   28</span>        this.inputName.text = (MapPiece.IsEditor ? CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classUIScreenshot.html#a4f5f17aac559b9aa978a0dbe533aac50">Activate</a>&gt;g__GetUniqueName|0(<span class="stringliteral">&quot;&quot;</span>) : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>);</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.isUpdate)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            this.inputName.text = (MapPiece.IsEditor ? CS$&lt;&gt;8__locals1.partial.ID : CS$&lt;&gt;8__locals1.partial.name);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_variable" href="classUIScreenshot.html#a21932ddd939418014a67aeddbf5306d8">buttonSave</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            CS$&lt;&gt;8__locals1.&lt;&gt;4__this.isDeactivating = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   36</span>            SE.Play(<span class="stringliteral">&quot;camera&quot;</span>);</div>
+<div class="line"><span class="lineno">   37</span>            CS$&lt;&gt;8__locals1.&lt;&gt;4__this.GetComponent&lt;CanvasGroup&gt;().alpha = 0f;</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = CS$&lt;&gt;8__locals1.dir.FullName + <span class="stringliteral">&quot;/&quot;</span> + (MapPiece.IsEditor ? CS$&lt;&gt;8__locals1.&lt;&gt;4__this.inputName.text.IsEmpty(<span class="stringliteral">&quot;new&quot;</span>) : base.&lt;<a class="code hl_function" href="classUIScreenshot.html#a4f5f17aac559b9aa978a0dbe533aac50">Activate</a>&gt;g__GetUniqueName|0(<span class="stringliteral">&quot;user&quot;</span>)) + <span class="stringliteral">&quot;.mp&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.isUpdate)</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classMapPiece.html">MapPiece</a>.<a class="code hl_property" href="classMapPiece.html#ad43674a5a6ee5faf40bbf3989b3f67cf">IsEditor</a>)</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    <a class="code hl_class" href="classPartialMap.html">PartialMap</a>.<a class="code hl_function" href="classPartialMap.html#a1173e0965cd39f7a26c8fa2c9c1a1346">Delete</a>(CS$&lt;&gt;8__locals1.partial.path);</div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = CS$&lt;&gt;8__locals1.partial.path;</div>
+<div class="line"><span class="lineno">   48</span>                }</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            CS$&lt;&gt;8__locals1.partial.name = CS$&lt;&gt;8__locals1.&lt;&gt;4__this.inputName.text.IsEmpty(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>);</div>
+<div class="line"><span class="lineno">   51</span>            CS$&lt;&gt;8__locals1.partial.path = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">   52</span>            File.Copy(<a class="code hl_class" href="classPartialMap.html">PartialMap</a>.<a class="code hl_property" href="classPartialMap.html#a9417cee171afb5587ac2a4d5d8285dfe">PathTemp</a>, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">string</span> path = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordtype">string</span> name = CS$&lt;&gt;8__locals1.partial.name;</div>
+<div class="line"><span class="lineno">   55</span>            Action onSave2;</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> ((onSave2 = CS$&lt;&gt;8__locals1.&lt;&gt;9__2) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                onSave2 = (CS$&lt;&gt;8__locals1.&lt;&gt;9__2 = delegate()</div>
+<div class="line"><span class="lineno">   59</span>                {</div>
+<div class="line"><span class="lineno">   60</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classPartialMapMenu.html">PartialMapMenu</a>.<a class="code hl_variable" href="classPartialMapMenu.html#ace98f37bc471667785d45f1f76e2f5ff">Instance</a>)</div>
+<div class="line"><span class="lineno">   61</span>                    {</div>
+<div class="line"><span class="lineno">   62</span>                        <a class="code hl_class" href="classPartialMapMenu.html">PartialMapMenu</a>.<a class="code hl_variable" href="classPartialMapMenu.html#ace98f37bc471667785d45f1f76e2f5ff">Instance</a>.<a class="code hl_function" href="classPartialMapMenu.html#a1d4a07eb1b2386282f18685c282cd8c1">Refresh</a>();</div>
+<div class="line"><span class="lineno">   63</span>                    }</div>
+<div class="line"><span class="lineno">   64</span>                    CS$&lt;&gt;8__locals1.&lt;&gt;4__this.Deactivate();</div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.onSave != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>                    {</div>
+<div class="line"><span class="lineno">   67</span>                        CS$&lt;&gt;8__locals1.onSave(CS$&lt;&gt;8__locals1.partial);</div>
+<div class="line"><span class="lineno">   68</span>                    }</div>
+<div class="line"><span class="lineno">   69</span>                });</div>
+<div class="line"><span class="lineno">   70</span>            }</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_class" href="classUIScreenshot.html">UIScreenshot</a>.<a class="code hl_function" href="classUIScreenshot.html#aaa94fe620aededef122ca63b95e1dd93">SavePreview</a>(path, name, onSave2);</div>
+<div class="line"><span class="lineno">   72</span>        });</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassMapPiece_html"><div class="ttname"><a href="classMapPiece.html">MapPiece</a></div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00006">MapPiece.cs:7</a></div></div>
+<div class="ttc" id="aclassMapPiece_html_ad43674a5a6ee5faf40bbf3989b3f67cf"><div class="ttname"><a href="classMapPiece.html#ad43674a5a6ee5faf40bbf3989b3f67cf">MapPiece.IsEditor</a></div><div class="ttdeci">static bool IsEditor</div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00021">MapPiece.cs:22</a></div></div>
+<div class="ttc" id="aclassPartialMapMenu_html"><div class="ttname"><a href="classPartialMapMenu.html">PartialMapMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="PartialMapMenu_8cs_source.html#l00007">PartialMapMenu.cs:8</a></div></div>
+<div class="ttc" id="aclassPartialMapMenu_html_a1d4a07eb1b2386282f18685c282cd8c1"><div class="ttname"><a href="classPartialMapMenu.html#a1d4a07eb1b2386282f18685c282cd8c1">PartialMapMenu.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="PartialMapMenu_8cs_source.html#l00115">PartialMapMenu.cs:115</a></div></div>
+<div class="ttc" id="aclassPartialMapMenu_html_ace98f37bc471667785d45f1f76e2f5ff"><div class="ttname"><a href="classPartialMapMenu.html#ace98f37bc471667785d45f1f76e2f5ff">PartialMapMenu.Instance</a></div><div class="ttdeci">static PartialMapMenu Instance</div><div class="ttdef"><b>Definition:</b> <a href="PartialMapMenu_8cs_source.html#l00247">PartialMapMenu.cs:247</a></div></div>
+<div class="ttc" id="aclassPartialMap_html"><div class="ttname"><a href="classPartialMap.html">PartialMap</a></div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00009">PartialMap.cs:10</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a1173e0965cd39f7a26c8fa2c9c1a1346"><div class="ttname"><a href="classPartialMap.html#a1173e0965cd39f7a26c8fa2c9c1a1346">PartialMap.Delete</a></div><div class="ttdeci">static void Delete(string path)</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00440">PartialMap.cs:440</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a9417cee171afb5587ac2a4d5d8285dfe"><div class="ttname"><a href="classPartialMap.html#a9417cee171afb5587ac2a4d5d8285dfe">PartialMap.PathTemp</a></div><div class="ttdeci">static string PathTemp</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00011">PartialMap.cs:12</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
+<div class="ttc" id="aclassUIScreenshot_html"><div class="ttname"><a href="classUIScreenshot.html">UIScreenshot</a></div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00007">UIScreenshot.cs:8</a></div></div>
+<div class="ttc" id="aclassUIScreenshot_html_a21932ddd939418014a67aeddbf5306d8"><div class="ttname"><a href="classUIScreenshot.html#a21932ddd939418014a67aeddbf5306d8">UIScreenshot.buttonSave</a></div><div class="ttdeci">UIButton buttonSave</div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00149">UIScreenshot.cs:149</a></div></div>
+<div class="ttc" id="aclassUIScreenshot_html_a4f5f17aac559b9aa978a0dbe533aac50"><div class="ttname"><a href="classUIScreenshot.html#a4f5f17aac559b9aa978a0dbe533aac50">UIScreenshot.Activate</a></div><div class="ttdeci">void Activate(PartialMap partial, DirectoryInfo dir, Action&lt; PartialMap &gt; onSave=null, bool isUpdate=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00020">UIScreenshot.cs:20</a></div></div>
+<div class="ttc" id="aclassUIScreenshot_html_aaa94fe620aededef122ca63b95e1dd93"><div class="ttname"><a href="classUIScreenshot.html#aaa94fe620aededef122ca63b95e1dd93">UIScreenshot.SavePreview</a></div><div class="ttdeci">static void SavePreview(string path, string name, Action onSave)</div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00088">UIScreenshot.cs:88</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="UIScreenshot_8cs_source.html#l00020">Activate()</a>, <a class="el" href="UIScreenshot_8cs_source.html#l00149">buttonSave</a>, <a class="el" href="PartialMap_8cs_source.html#l00440">PartialMap.Delete()</a>, <a class="el" href="PartialMapMenu_8cs_source.html#l00247">PartialMapMenu.Instance</a>, <a class="el" href="MapPiece_8cs_source.html#l00022">MapPiece.IsEditor</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="PartialMap_8cs_source.html#l00012">PartialMap.PathTemp</a>, <a class="el" href="PartialMapMenu_8cs_source.html#l00115">PartialMapMenu.Refresh()</a>, <a class="el" href="UIScreenshot_8cs_source.html#l00088">SavePreview()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIScreenshot_8cs_source.html#l00020">Activate()</a>, <a class="el" href="AM__Copy_8cs_source.html#l00120">AM_Copy.OnAfterProcessTiles()</a>, and <a class="el" href="AM__Copy_8cs_source.html#l00283">AM_Copy.RefreshMenu()</a>.</p>
 
 </div>
 </div>
@@ -256,6 +349,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00014">14</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        UIScreenshot.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.Hide(0f);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -283,6 +383,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00009">9</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> Util.Instantiate&lt;<a class="code hl_class" href="classUIScreenshot.html">UIScreenshot</a>&gt;(<span class="stringliteral">&quot;UI/Util/UIScreenshot&quot;</span>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>);</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Copy_8cs_source.html#l00120">AM_Copy.OnAfterProcessTiles()</a>, and <a class="el" href="AM__Copy_8cs_source.html#l00283">AM_Copy.RefreshMenu()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +417,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00136">136</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        UnityEngine.Object.Destroy(base.gameObject);</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.Show(0f);</div>
+<div class="line"><span class="lineno">  140</span>        EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIScreenshot_8cs_source.html#l00075">Update()</a>.</p>
 
 </div>
 </div>
@@ -354,6 +470,57 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00088">88</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        Action &lt;&gt;9__1;</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            List&lt;Action&gt; actionsNextFrame = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame;</div>
+<div class="line"><span class="lineno">   94</span>            Action item;</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> ((item = &lt;&gt;9__1) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                item = (&lt;&gt;9__1 = delegate()</div>
+<div class="line"><span class="lineno">   98</span>                {</div>
+<div class="line"><span class="lineno">   99</span>                    Texture2D texture2D = ScreenCapture.CaptureScreenshotAsTexture();</div>
+<div class="line"><span class="lineno">  100</span>                    texture2D.filterMode = FilterMode.Point;</div>
+<div class="line"><span class="lineno">  101</span>                    <span class="keywordtype">int</span> num = 300;</div>
+<div class="line"><span class="lineno">  102</span>                    <span class="keywordtype">int</span> num2 = 200;</div>
+<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">float</span> num3 = (float)num / (<span class="keywordtype">float</span>)Screen.width;</div>
+<div class="line"><span class="lineno">  104</span>                    <span class="keywordtype">float</span> num4 = (float)num2 / (<span class="keywordtype">float</span>)Screen.height;</div>
+<div class="line"><span class="lineno">  105</span>                    Vector2 scale = <span class="keyword">new</span> Vector2(num3, num4);</div>
+<div class="line"><span class="lineno">  106</span>                    Vector2 offset = <span class="keyword">new</span> Vector2((1f - num3) * 0.5f, (1f - num4) * 0.5f);</div>
+<div class="line"><span class="lineno">  107</span>                    RenderTexture renderTexture = <span class="keyword">new</span> RenderTexture(num, num2, 0);</div>
+<div class="line"><span class="lineno">  108</span>                    renderTexture.filterMode = FilterMode.Point;</div>
+<div class="line"><span class="lineno">  109</span>                    renderTexture.Create();</div>
+<div class="line"><span class="lineno">  110</span>                    RenderTexture active = RenderTexture.active;</div>
+<div class="line"><span class="lineno">  111</span>                    RenderTexture.active = renderTexture;</div>
+<div class="line"><span class="lineno">  112</span>                    Graphics.Blit(texture2D, renderTexture, scale, offset);</div>
+<div class="line"><span class="lineno">  113</span>                    Texture2D texture2D2 = <span class="keyword">new</span> Texture2D(num, num2, texture2D.format, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  114</span>                    texture2D2.filterMode = FilterMode.Point;</div>
+<div class="line"><span class="lineno">  115</span>                    texture2D2.ReadPixels(<span class="keyword">new</span> Rect(0f, 0f, (<span class="keywordtype">float</span>)num, (<span class="keywordtype">float</span>)num2), 0, 0);</div>
+<div class="line"><span class="lineno">  116</span>                    texture2D2.Apply();</div>
+<div class="line"><span class="lineno">  117</span>                    RenderTexture.active = active;</div>
+<div class="line"><span class="lineno">  118</span>                    renderTexture.Release();</div>
+<div class="line"><span class="lineno">  119</span>                    File.WriteAllBytes(path.GetFullFileNameWithoutExtension() + <span class="stringliteral">&quot;.jpg&quot;</span>, texture2D2.EncodeToJPG());</div>
+<div class="line"><span class="lineno">  120</span>                    File.WriteAllText(path.GetFullFileNameWithoutExtension() + <span class="stringliteral">&quot;.txt&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  121</span>                    UnityEngine.Object.Destroy(texture2D2);</div>
+<div class="line"><span class="lineno">  122</span>                    UnityEngine.Object.Destroy(texture2D);</div>
+<div class="line"><span class="lineno">  123</span>                    UnityEngine.Object.Destroy(renderTexture);</div>
+<div class="line"><span class="lineno">  124</span>                    Action onSave2 = onSave;</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (onSave2 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  126</span>                    {</div>
+<div class="line"><span class="lineno">  127</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  128</span>                    }</div>
+<div class="line"><span class="lineno">  129</span>                    onSave2();</div>
+<div class="line"><span class="lineno">  130</span>                });</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>            actionsNextFrame.Add(item);</div>
+<div class="line"><span class="lineno">  133</span>        });</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIScreenshot_8cs_source.html#l00020">Activate()</a>.</p>
 
 </div>
 </div>
@@ -381,6 +548,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00075">75</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIScreenshot.html#ab39b4fa902ef98ebae2ae621b222f1ba">isDeactivating</a>)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (EInput.rightMouse.clicked || Input.GetKeyDown(KeyCode.Escape))</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            this.<a class="code hl_function" href="classUIScreenshot.html#a32f58cffda2ee7ac21ccd0a78c539543">Deactivate</a>();</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aclassUIScreenshot_html_a32f58cffda2ee7ac21ccd0a78c539543"><div class="ttname"><a href="classUIScreenshot.html#a32f58cffda2ee7ac21ccd0a78c539543">UIScreenshot.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00136">UIScreenshot.cs:136</a></div></div>
+<div class="ttc" id="aclassUIScreenshot_html_ab39b4fa902ef98ebae2ae621b222f1ba"><div class="ttname"><a href="classUIScreenshot.html#ab39b4fa902ef98ebae2ae621b222f1ba">UIScreenshot.isDeactivating</a></div><div class="ttdeci">bool isDeactivating</div><div class="ttdef"><b>Definition:</b> <a href="UIScreenshot_8cs_source.html#l00153">UIScreenshot.cs:153</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIScreenshot_8cs_source.html#l00136">Deactivate()</a>, and <a class="el" href="UIScreenshot_8cs_source.html#l00153">isDeactivating</a>.</p>
 
 </div>
 </div>
@@ -414,6 +596,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00149">149</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIScreenshot_8cs_source.html#l00020">Activate()</a>.</p>
 
 </div>
 </div>
@@ -471,6 +655,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00143">143</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Copy_8cs_source.html#l00238">AM_Copy.OnCancel()</a>, and <a class="el" href="AM__Copy_8cs_source.html#l00183">AM_Copy.OnRenderTile()</a>.</p>
+
 </div>
 </div>
 <a id="ab39b4fa902ef98ebae2ae621b222f1ba" name="ab39b4fa902ef98ebae2ae621b222f1ba"></a>
@@ -487,15 +673,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIScreenshot_8cs_source.html#l00153">153</a> of file <a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIScreenshot_8cs_source.html#l00075">Update()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="UIScreenshot_8cs_source.html">UIScreenshot.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUIScreenshot.html">UIScreenshot</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

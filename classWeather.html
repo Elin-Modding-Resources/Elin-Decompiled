@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWeather.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -271,7 +291,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00304">304</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  305</span>    {</div>
+<div class="line"><span class="lineno">  306</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca5999b8900bb8b90cfa1af137d355ff14">Fine</a>,</div>
+<div class="line"><span class="lineno">  307</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cae3a1a93fc29abede6c0f3ceade99fdc0">Cloudy</a>,</div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cade4eda51f409f7799a728d8725b340cd">Rain</a>,</div>
+<div class="line"><span class="lineno">  309</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca9add2d084f84f8e471818d2adec279c8">RainHeavy</a>,</div>
+<div class="line"><span class="lineno">  310</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cab46d3c8ee8032551c011745d587705cc">Snow</a>,</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca8c1c2236f7f6ab45382ff459c7074c5e">SnowHeavy</a>,</div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca53a66ec79bb08ab8d00fdd17fa68a705">Ether</a>,</div>
+<div class="line"><span class="lineno">  313</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca1eb55c879a22c44874101b5d2bdf1b2e">Blossom</a>,</div>
+<div class="line"><span class="lineno">  314</span>        <a class="code hl_enumvalue" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca6adf97f83acf6453d4a6a4b1070f3754">None</a></div>
+<div class="line"><span class="lineno">  315</span>    }</div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca1eb55c879a22c44874101b5d2bdf1b2e"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca1eb55c879a22c44874101b5d2bdf1b2e">Weather.Condition.Blossom</a></div><div class="ttdeci">@ Blossom</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca53a66ec79bb08ab8d00fdd17fa68a705"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca53a66ec79bb08ab8d00fdd17fa68a705">Weather.Condition.Ether</a></div><div class="ttdeci">@ Ether</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca5999b8900bb8b90cfa1af137d355ff14"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca5999b8900bb8b90cfa1af137d355ff14">Weather.Condition.Fine</a></div><div class="ttdeci">@ Fine</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca6adf97f83acf6453d4a6a4b1070f3754">Weather.Condition.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca8c1c2236f7f6ab45382ff459c7074c5e"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca8c1c2236f7f6ab45382ff459c7074c5e">Weather.Condition.SnowHeavy</a></div><div class="ttdeci">@ SnowHeavy</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1ca9add2d084f84f8e471818d2adec279c8"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca9add2d084f84f8e471818d2adec279c8">Weather.Condition.RainHeavy</a></div><div class="ttdeci">@ RainHeavy</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1cab46d3c8ee8032551c011745d587705cc"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cab46d3c8ee8032551c011745d587705cc">Weather.Condition.Snow</a></div><div class="ttdeci">@ Snow</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1cade4eda51f409f7799a728d8725b340cd"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cade4eda51f409f7799a728d8725b340cd">Weather.Condition.Rain</a></div><div class="ttdeci">@ Rain</div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1cae3a1a93fc29abede6c0f3ceade99fdc0"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cae3a1a93fc29abede6c0f3ceade99fdc0">Weather.Condition.Cloudy</a></div><div class="ttdeci">@ Cloudy</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -310,6 +350,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00126">126</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a> forecast = <span class="keyword">new</span> <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1Forecast.html">Forecast</a>();</div>
+<div class="line"><span class="lineno">  129</span>        forecast.condition = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) != 0) ? <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Fine : <span class="keyword">this</span>.season.GetRandomWeather(date, current));</div>
+<div class="line"><span class="lineno">  130</span>        forecast.duration = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(24) + 10;</div>
+<div class="line"><span class="lineno">  131</span>        date.<a class="code hl_function" href="classDate.html#a09e4ba50673e8a1d7ec123c7e72eb15c">AddHour</a>(forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">duration</a>);</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> forecast;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="ttc" id="aclassDate_html_a09e4ba50673e8a1d7ec123c7e72eb15c"><div class="ttname"><a href="classDate.html#a09e4ba50673e8a1d7ec123c7e72eb15c">Date.AddHour</a></div><div class="ttdeci">void AddHour(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00188">Date.cs:188</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassWeather_1_1Forecast_html"><div class="ttname"><a href="classWeather_1_1Forecast.html">Weather.Forecast</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00297">Weather.cs:298</a></div></div>
+<div class="ttc" id="aclassWeather_1_1Forecast_html_af87563a2e640378bc7911c7025912f5e"><div class="ttname"><a href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">Weather.Forecast.duration</a></div><div class="ttdeci">int duration</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00299">Weather.cs:299</a></div></div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00006">Weather.cs:7</a></div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1c"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a></div><div class="ttdeci">Condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00304">Weather.cs:305</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00188">Date.AddHour()</a>, <a class="el" href="Weather_8cs_source.html#l00299">Weather.Forecast.duration</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00181">RefreshForecasts()</a>.</p>
 
 </div>
 </div>
@@ -337,6 +395,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00076">76</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classWeather.html#a582b23aedead1d505d4820f2da713b19">GetName</a>(this.<a class="code hl_property" href="classWeather.html#a990cf2ab91b952f36cdaccd7c74f209d">CurrentCondition</a>);</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aclassWeather_html_a582b23aedead1d505d4820f2da713b19"><div class="ttname"><a href="classWeather.html#a582b23aedead1d505d4820f2da713b19">Weather.GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00076">Weather.cs:76</a></div></div>
+<div class="ttc" id="aclassWeather_html_a990cf2ab91b952f36cdaccd7c74f209d"><div class="ttname"><a href="classWeather.html#a990cf2ab91b952f36cdaccd7c74f209d">Weather.CurrentCondition</a></div><div class="ttdeci">Weather.Condition CurrentCondition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00008">Weather.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00009">CurrentCondition</a>, and <a class="el" href="Weather_8cs_source.html#l00076">GetName()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00028">WidgetDate._Refresh()</a>, and <a class="el" href="Weather_8cs_source.html#l00076">GetName()</a>.</p>
 
 </div>
 </div>
@@ -365,7 +432,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00081">81</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> (<span class="stringliteral">&quot;weather&quot;</span> + condition.ToString()).lang();</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0fb2dd540f7f17249b3b15d237273b9a" name="a0fb2dd540f7f17249b3b15d237273b9a"></a>
@@ -392,6 +462,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00205">205</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWeather.html#a990cf2ab91b952f36cdaccd7c74f209d">CurrentCondition</a> == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain || <span class="keyword">this</span>.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span> 0L;</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">return</span> (<span class="keywordtype">long</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#ac289e146f71d2c1f760f259e90ae9bd3">GetElapsedMins</a>(this.<a class="code hl_variable" href="classWeather.html#a4771e4ce588fd850c3c4c8e2bc856a7c">lastRain</a>);</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="ttc" id="aclassDate_html_ac289e146f71d2c1f760f259e90ae9bd3"><div class="ttname"><a href="classDate.html#ac289e146f71d2c1f760f259e90ae9bd3">Date.GetElapsedMins</a></div><div class="ttdeci">int GetElapsedMins(int rawDate)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00349">Date.cs:349</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassWeather_html_a4771e4ce588fd850c3c4c8e2bc856a7c"><div class="ttname"><a href="classWeather.html#a4771e4ce588fd850c3c4c8e2bc856a7c">Weather.lastRain</a></div><div class="ttdeci">int lastRain</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00291">Weather.cs:291</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00009">CurrentCondition</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00349">Date.GetElapsedMins()</a>, <a class="el" href="Weather_8cs_source.html#l00291">lastRain</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
 
 </div>
 </div>
@@ -419,6 +502,66 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00135">135</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>        this.<a class="code hl_function" href="classWeather.html#a985c778b3a4fa762fb08e5396ef0027b">RefreshForecasts</a>();</div>
+<div class="line"><span class="lineno">  138</span>        List&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a>&gt; list = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a>&gt;();</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_class" href="classDate.html">Date</a> date = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a44dd24f490b71fbe885031ce99ba7d25">Copy</a>();</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classWeather_1_1WeatherForecast.html">Weather.WeatherForecast</a> weatherForecast = <span class="keyword">new</span> <a class="code hl_class" href="classWeather_1_1WeatherForecast.html">Weather.WeatherForecast</a></div>
+<div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            date = date.<a class="code hl_function" href="classDate.html#a44dd24f490b71fbe885031ce99ba7d25">Copy</a>()</div>
+<div class="line"><span class="lineno">  143</span>        };</div>
+<div class="line"><span class="lineno">  144</span>        list.Add(weatherForecast);</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a> forecast = <span class="keyword">new</span> <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a></div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            condition = this.<a class="code hl_variable" href="classWeather.html#a7cab7324281ec19986c04af7210dd152">_currentCondition</a>,</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_variable" href="classWeather.html#a97eff2801de1f17568269c4d7a6cdfed">duration</a> = this.duration</div>
+<div class="line"><span class="lineno">  149</span>        };</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordtype">int</span> num = forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">duration</a>;</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10000; i++)</div>
+<div class="line"><span class="lineno">  153</span>        {</div>
+<div class="line"><span class="lineno">  154</span>            num--;</div>
+<div class="line"><span class="lineno">  155</span>            weatherForecast.<a class="code hl_function" href="classWeather_1_1WeatherForecast.html#acb762b0e06f110b32345369e82b2242b">Add</a>(forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#a9944ac83c21d6c06cd53bfb42e9cd603">condition</a>, 1);</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                num2++;</div>
+<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>.Count &lt;= num2)</div>
+<div class="line"><span class="lineno">  160</span>                {</div>
+<div class="line"><span class="lineno">  161</span>                    list.Remove(weatherForecast);</div>
+<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  163</span>                }</div>
+<div class="line"><span class="lineno">  164</span>                forecast = this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>[num2];</div>
+<div class="line"><span class="lineno">  165</span>                num = forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">duration</a>;</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="line"><span class="lineno">  167</span>            date.<a class="code hl_function" href="classDate.html#a09e4ba50673e8a1d7ec123c7e72eb15c">AddHour</a>(1);</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (date.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> != weatherForecast.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a491a8bf7feb30d0dba889836e1dac856">date</a>.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>)</div>
+<div class="line"><span class="lineno">  169</span>            {</div>
+<div class="line"><span class="lineno">  170</span>                weatherForecast.<a class="code hl_function" href="classWeather_1_1WeatherForecast.html#a8b16440b4fb38220fede8f91fabcfc01">Finish</a>();</div>
+<div class="line"><span class="lineno">  171</span>                weatherForecast = <span class="keyword">new</span> <a class="code hl_class" href="classWeather_1_1WeatherForecast.html">Weather.WeatherForecast</a></div>
+<div class="line"><span class="lineno">  172</span>                {</div>
+<div class="line"><span class="lineno">  173</span>                    date = date.<a class="code hl_function" href="classDate.html#a44dd24f490b71fbe885031ce99ba7d25">Copy</a>()</div>
+<div class="line"><span class="lineno">  174</span>                };</div>
+<div class="line"><span class="lineno">  175</span>                list.Add(weatherForecast);</div>
+<div class="line"><span class="lineno">  176</span>            }</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
+<div class="ttc" id="aclassDate_html_a44dd24f490b71fbe885031ce99ba7d25"><div class="ttname"><a href="classDate.html#a44dd24f490b71fbe885031ce99ba7d25">Date.Copy</a></div><div class="ttdeci">Date Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00078">Date.cs:78</a></div></div>
+<div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00030">Date.cs:31</a></div></div>
+<div class="ttc" id="aclassWeather_1_1Forecast_html_a9944ac83c21d6c06cd53bfb42e9cd603"><div class="ttname"><a href="classWeather_1_1Forecast.html#a9944ac83c21d6c06cd53bfb42e9cd603">Weather.Forecast.condition</a></div><div class="ttdeci">Weather.Condition condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00301">Weather.cs:301</a></div></div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html">Weather.WeatherForecast</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00317">Weather.cs:318</a></div></div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html_a491a8bf7feb30d0dba889836e1dac856"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html#a491a8bf7feb30d0dba889836e1dac856">Weather.WeatherForecast.date</a></div><div class="ttdeci">Date date</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00346">Weather.cs:346</a></div></div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html_a8b16440b4fb38220fede8f91fabcfc01"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html#a8b16440b4fb38220fede8f91fabcfc01">Weather.WeatherForecast.Finish</a></div><div class="ttdeci">void Finish()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00330">Weather.cs:330</a></div></div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html_acb762b0e06f110b32345369e82b2242b"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html#acb762b0e06f110b32345369e82b2242b">Weather.WeatherForecast.Add</a></div><div class="ttdeci">void Add(Weather.Condition con, int h)</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00319">Weather.cs:319</a></div></div>
+<div class="ttc" id="aclassWeather_html_a51252e00ac2aa880e13456adb85d2d7c"><div class="ttname"><a href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">Weather.forecasts</a></div><div class="ttdeci">List&lt; Weather.Forecast &gt; forecasts</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00294">Weather.cs:294</a></div></div>
+<div class="ttc" id="aclassWeather_html_a7cab7324281ec19986c04af7210dd152"><div class="ttname"><a href="classWeather.html#a7cab7324281ec19986c04af7210dd152">Weather._currentCondition</a></div><div class="ttdeci">Weather.Condition _currentCondition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00285">Weather.cs:285</a></div></div>
+<div class="ttc" id="aclassWeather_html_a97eff2801de1f17568269c4d7a6cdfed"><div class="ttname"><a href="classWeather.html#a97eff2801de1f17568269c4d7a6cdfed">Weather.duration</a></div><div class="ttdeci">int duration</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00288">Weather.cs:288</a></div></div>
+<div class="ttc" id="aclassWeather_html_a985c778b3a4fa762fb08e5396ef0027b"><div class="ttname"><a href="classWeather.html#a985c778b3a4fa762fb08e5396ef0027b">Weather.RefreshForecasts</a></div><div class="ttdeci">void RefreshForecasts()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00181">Weather.cs:181</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00285">_currentCondition</a>, <a class="el" href="Weather_8cs_source.html#l00319">Weather.WeatherForecast.Add()</a>, <a class="el" href="Date_8cs_source.html#l00188">Date.AddHour()</a>, <a class="el" href="Weather_8cs_source.html#l00301">Weather.Forecast.condition</a>, <a class="el" href="Date_8cs_source.html#l00078">Date.Copy()</a>, <a class="el" href="Weather_8cs_source.html#l00346">Weather.WeatherForecast.date</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00031">Date.day</a>, <a class="el" href="Weather_8cs_source.html#l00288">duration</a>, <a class="el" href="Weather_8cs_source.html#l00299">Weather.Forecast.duration</a>, <a class="el" href="Weather_8cs_source.html#l00330">Weather.WeatherForecast.Finish()</a>, <a class="el" href="Weather_8cs_source.html#l00294">forecasts</a>, <a class="el" href="Weather_8cs_source.html#l00181">RefreshForecasts()</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00110">LayerNewspaper.RefreshWeather()</a>.</p>
 
 </div>
 </div>
@@ -446,6 +589,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00117">117</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        this.<a class="code hl_variable" href="classWeather.html#a97eff2801de1f17568269c4d7a6cdfed">duration</a>--;</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather.html#a97eff2801de1f17568269c4d7a6cdfed">duration</a> &lt; 0)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            this.<a class="code hl_function" href="classWeather.html#a0e537278203f713dfab9ace506ab3b57">SetConditionFromForecast</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassWeather_html_a0e537278203f713dfab9ace506ab3b57"><div class="ttname"><a href="classWeather.html#a0e537278203f713dfab9ace506ab3b57">Weather.SetConditionFromForecast</a></div><div class="ttdeci">void SetConditionFromForecast(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00219">Weather.cs:219</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00288">duration</a>, and <a class="el" href="Weather_8cs_source.html#l00219">SetConditionFromForecast()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>.</p>
 
 </div>
 </div>
@@ -473,6 +628,33 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00181">181</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>.Count &lt; 10)</div>
+<div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            <a class="code hl_class" href="classDate.html">Date</a> date = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a44dd24f490b71fbe885031ce99ba7d25">Copy</a>();</div>
+<div class="line"><span class="lineno">  186</span>            <a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a> current = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Fine;</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>.Count &gt; i)</div>
+<div class="line"><span class="lineno">  190</span>                {</div>
+<div class="line"><span class="lineno">  191</span>                    <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a> forecast = this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>[i];</div>
+<div class="line"><span class="lineno">  192</span>                    date.<a class="code hl_function" href="classDate.html#a09e4ba50673e8a1d7ec123c7e72eb15c">AddHour</a>(forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">duration</a>);</div>
+<div class="line"><span class="lineno">  193</span>                    current = forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#a9944ac83c21d6c06cd53bfb42e9cd603">condition</a>;</div>
+<div class="line"><span class="lineno">  194</span>                }</div>
+<div class="line"><span class="lineno">  195</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  196</span>                {</div>
+<div class="line"><span class="lineno">  197</span>                    <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a> forecast2 = this.<a class="code hl_function" href="classWeather.html#a49b9414aaffd0fa4a1d334bbb35bf70f">GetForecast</a>(date, current);</div>
+<div class="line"><span class="lineno">  198</span>                    this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>.Add(forecast2);</div>
+<div class="line"><span class="lineno">  199</span>                    current = forecast2.<a class="code hl_variable" href="classWeather_1_1Forecast.html#a9944ac83c21d6c06cd53bfb42e9cd603">condition</a>;</div>
+<div class="line"><span class="lineno">  200</span>                }</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="ttc" id="aclassWeather_html_a49b9414aaffd0fa4a1d334bbb35bf70f"><div class="ttname"><a href="classWeather.html#a49b9414aaffd0fa4a1d334bbb35bf70f">Weather.GetForecast</a></div><div class="ttdeci">Weather.Forecast GetForecast(Date date, Weather.Condition current)</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00126">Weather.cs:126</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00188">Date.AddHour()</a>, <a class="el" href="Weather_8cs_source.html#l00301">Weather.Forecast.condition</a>, <a class="el" href="Date_8cs_source.html#l00078">Date.Copy()</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Weather_8cs_source.html#l00299">Weather.Forecast.duration</a>, <a class="el" href="Weather_8cs_source.html#l00294">forecasts</a>, <a class="el" href="Weather_8cs_source.html#l00126">GetForecast()</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">GetWeatherForecast()</a>, and <a class="el" href="Weather_8cs_source.html#l00219">SetConditionFromForecast()</a>.</p>
 
 </div>
 </div>
@@ -500,6 +682,61 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00086">86</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#a00e94677803a80e4495ca0fb9e44d36f">IsIndoor</a>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a912861f4177ce608d6f35cb47e2d3139">IsSnowCovered</a>;</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classRegion.html">Region</a>)</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_class" href="classEloMap.html">EloMap</a> elomap = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a636c0f359588fb403c3460f84bcf45af">elomapActor</a>.<a class="code hl_variable" href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">elomap</a>;</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_class" href="classEloMap_1_1TileInfo.html">EloMap.TileInfo</a> tileInfo = elomap.<a class="code hl_function" href="classEloMap.html#ac4c3a23407de484644fcca9bc4e8daf9">GetTileInfo</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + elomap.<a class="code hl_variable" href="classEloMap.html#a38d288255611bf0adbc16d80b75ccea6">minX</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> + elomap.<a class="code hl_variable" href="classEloMap.html#a5128da2cbdc72b87f38febb03f4b252f">minY</a>);</div>
+<div class="line"><span class="lineno">   97</span>            flag = (tileInfo != <span class="keyword">null</span> &amp;&amp; tileInfo.<a class="code hl_property" href="classEloMap_1_1TileInfo.html#a41ce1734947c5a382dad8aab2297b31b">IsSnow</a>);</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#aeaf04aebdd166cbd40d45cbe4aa1de68">season</a>.<a class="code hl_property" href="classSeason.html#abc82df0e0dce55ca5520c23edd9bfea5">isWinter</a>)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWeather.html#a97d9fab3fa6f89d89f30dcb7b7aa2f66">IsSnowing</a>)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  106</span>            {</div>
+<div class="line"><span class="lineno">  107</span>                this._currentCondition = ((this._currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Snow) ? <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain : <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy);</div>
+<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">IsRaining</a> &amp;&amp; flag)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            this._currentCondition = ((this._currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain) ? <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Snow : <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.SnowHeavy);</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEloMapActor_html_aebdccd457884172c1be9c544509e57e2"><div class="ttname"><a href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">EloMapActor.elomap</a></div><div class="ttdeci">EloMap elomap</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00097">EloMapActor.cs:97</a></div></div>
+<div class="ttc" id="aclassEloMap_1_1TileInfo_html"><div class="ttname"><a href="classEloMap_1_1TileInfo.html">EloMap.TileInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00463">EloMap.cs:464</a></div></div>
+<div class="ttc" id="aclassEloMap_1_1TileInfo_html_a41ce1734947c5a382dad8aab2297b31b"><div class="ttname"><a href="classEloMap_1_1TileInfo.html#a41ce1734947c5a382dad8aab2297b31b">EloMap.TileInfo.IsSnow</a></div><div class="ttdeci">bool IsSnow</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00465">EloMap.cs:466</a></div></div>
+<div class="ttc" id="aclassEloMap_html"><div class="ttname"><a href="classEloMap.html">EloMap</a></div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00008">EloMap.cs:9</a></div></div>
+<div class="ttc" id="aclassEloMap_html_a38d288255611bf0adbc16d80b75ccea6"><div class="ttname"><a href="classEloMap.html#a38d288255611bf0adbc16d80b75ccea6">EloMap.minX</a></div><div class="ttdeci">int minX</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00434">EloMap.cs:434</a></div></div>
+<div class="ttc" id="aclassEloMap_html_a5128da2cbdc72b87f38febb03f4b252f"><div class="ttname"><a href="classEloMap.html#a5128da2cbdc72b87f38febb03f4b252f">EloMap.minY</a></div><div class="ttdeci">int minY</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00436">EloMap.cs:436</a></div></div>
+<div class="ttc" id="aclassEloMap_html_ac4c3a23407de484644fcca9bc4e8daf9"><div class="ttname"><a href="classEloMap.html#ac4c3a23407de484644fcca9bc4e8daf9">EloMap.GetTileInfo</a></div><div class="ttdeci">EloMap.TileInfo GetTileInfo(int gx, int gy)</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00191">EloMap.cs:191</a></div></div>
+<div class="ttc" id="aclassMap_html_a00e94677803a80e4495ca0fb9e44d36f"><div class="ttname"><a href="classMap.html#a00e94677803a80e4495ca0fb9e44d36f">Map.IsIndoor</a></div><div class="ttdeci">bool IsIndoor</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00067">Map.cs:68</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassRegion_html"><div class="ttname"><a href="classRegion.html">Region</a></div><div class="ttdef"><b>Definition:</b> <a href="Region_8cs_source.html#l00007">Region.cs:8</a></div></div>
+<div class="ttc" id="aclassScene_html_a636c0f359588fb403c3460f84bcf45af"><div class="ttname"><a href="classScene.html#a636c0f359588fb403c3460f84bcf45af">Scene.elomapActor</a></div><div class="ttdeci">EloMapActor elomapActor</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01069">Scene.cs:1069</a></div></div>
+<div class="ttc" id="aclassSeason_html_abc82df0e0dce55ca5520c23edd9bfea5"><div class="ttname"><a href="classSeason.html#abc82df0e0dce55ca5520c23edd9bfea5">Season.isWinter</a></div><div class="ttdeci">bool isWinter</div><div class="ttdef"><b>Definition:</b> <a href="Season_8cs_source.html#l00039">Season.cs:40</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a912861f4177ce608d6f35cb47e2d3139"><div class="ttname"><a href="classSpatial.html#a912861f4177ce608d6f35cb47e2d3139">Spatial.IsSnowCovered</a></div><div class="ttdeci">virtual bool IsSnowCovered</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00593">Spatial.cs:594</a></div></div>
+<div class="ttc" id="aclassWeather_html_a97d9fab3fa6f89d89f30dcb7b7aa2f66"><div class="ttname"><a href="classWeather.html#a97d9fab3fa6f89d89f30dcb7b7aa2f66">Weather.IsSnowing</a></div><div class="ttdeci">bool IsSnowing</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00052">Weather.cs:53</a></div></div>
+<div class="ttc" id="aclassWeather_html_ac7c213524434980d30b9ef9d3e975364"><div class="ttname"><a href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">Weather.IsRaining</a></div><div class="ttdeci">bool IsRaining</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00044">Weather.cs:45</a></div></div>
+<div class="ttc" id="aclassWorld_html_aeaf04aebdd166cbd40d45cbe4aa1de68"><div class="ttname"><a href="classWorld.html#aeaf04aebdd166cbd40d45cbe4aa1de68">World.season</a></div><div class="ttdeci">Season season</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00066">World.cs:66</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="EloMapActor_8cs_source.html#l00097">EloMapActor.elomap</a>, <a class="el" href="Scene_8cs_source.html#l01069">Scene.elomapActor</a>, <a class="el" href="EloMap_8cs_source.html#l00191">EloMap.GetTileInfo()</a>, <a class="el" href="Map_8cs_source.html#l00068">Map.IsIndoor</a>, <a class="el" href="Weather_8cs_source.html#l00045">IsRaining</a>, <a class="el" href="EloMap_8cs_source.html#l00466">EloMap.TileInfo.IsSnow</a>, <a class="el" href="Spatial_8cs_source.html#l00594">Spatial.IsSnowCovered</a>, <a class="el" href="Weather_8cs_source.html#l00053">IsSnowing</a>, <a class="el" href="Season_8cs_source.html#l00040">Season.isWinter</a>, <a class="el" href="EloMap_8cs_source.html#l00434">EloMap.minX</a>, <a class="el" href="EloMap_8cs_source.html#l00436">EloMap.minY</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="World_8cs_source.html#l00066">World.season</a>, <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00050">Scene.Init()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>, and <a class="el" href="Weather_8cs_source.html#l00227">SetCondition()</a>.</p>
 
 </div>
 </div>
@@ -544,6 +781,74 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00227">227</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>    {</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (condition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Fine)</div>
+<div class="line"><span class="lineno">  230</span>        {</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1558, 1) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) == 0)</div>
+<div class="line"><span class="lineno">  234</span>                {</div>
+<div class="line"><span class="lineno">  235</span>                    condition = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain;</div>
+<div class="line"><span class="lineno">  236</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;drawRain&quot;</span>, chara, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  238</span>                }</div>
+<div class="line"><span class="lineno">  239</span>            }</div>
+<div class="line"><span class="lineno">  240</span>        }</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#aeaf04aebdd166cbd40d45cbe4aa1de68">season</a>.<a class="code hl_property" href="classSeason.html#abc82df0e0dce55ca5520c23edd9bfea5">isWinter</a>)</div>
+<div class="line"><span class="lineno">  242</span>        {</div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">if</span> (condition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain)</div>
+<div class="line"><span class="lineno">  244</span>            {</div>
+<div class="line"><span class="lineno">  245</span>                condition = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Snow;</div>
+<div class="line"><span class="lineno">  246</span>            }</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (condition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy)</div>
+<div class="line"><span class="lineno">  248</span>            {</div>
+<div class="line"><span class="lineno">  249</span>                condition = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.SnowHeavy;</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a39b7de8edf5bbd3fc579aa743dcdc3d8">IsSnowZone</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#a00e94677803a80e4495ca0fb9e44d36f">IsIndoor</a>)</div>
+<div class="line"><span class="lineno">  253</span>        {</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> (condition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Snow)</div>
+<div class="line"><span class="lineno">  255</span>            {</div>
+<div class="line"><span class="lineno">  256</span>                condition = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain;</div>
+<div class="line"><span class="lineno">  257</span>            }</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (condition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.SnowHeavy)</div>
+<div class="line"><span class="lineno">  259</span>            {</div>
+<div class="line"><span class="lineno">  260</span>                condition = <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy;</div>
+<div class="line"><span class="lineno">  261</span>            }</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather.html#a7cab7324281ec19986c04af7210dd152">_currentCondition</a> == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Rain || <span class="keyword">this</span>._currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy)</div>
+<div class="line"><span class="lineno">  264</span>        {</div>
+<div class="line"><span class="lineno">  265</span>            this.lastRain = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(0);</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>        this.duration = _duration;</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (condition == this.<a class="code hl_variable" href="classWeather.html#a7cab7324281ec19986c04af7210dd152">_currentCondition</a>)</div>
+<div class="line"><span class="lineno">  269</span>        {</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  271</span>        }</div>
+<div class="line"><span class="lineno">  272</span>        this._currentCondition = condition;</div>
+<div class="line"><span class="lineno">  273</span>        this.<a class="code hl_function" href="classWeather.html#ae2240bac78f6818cb0fb76a3fa2412f7">RefreshWeather</a>();</div>
+<div class="line"><span class="lineno">  274</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;weather_&quot;</span> + condition.ToString());</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">IsRaining</a>)</div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a9b47abf38034016578e7ccd403928cd1">RainWater</a>();</div>
+<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  279</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.screen.RefreshSky();</div>
+<div class="line"><span class="lineno">  280</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05325">Card.cs:5325</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09362">Chara.cs:9362</a></div></div>
+<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00324">Date.cs:324</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00008">Party.cs:9</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a39b7de8edf5bbd3fc579aa743dcdc3d8"><div class="ttname"><a href="classSpatial.html#a39b7de8edf5bbd3fc579aa743dcdc3d8">Spatial.IsSnowZone</a></div><div class="ttdeci">virtual bool IsSnowZone</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00585">Spatial.cs:586</a></div></div>
+<div class="ttc" id="aclassWeather_html_ae2240bac78f6818cb0fb76a3fa2412f7"><div class="ttname"><a href="classWeather.html#ae2240bac78f6818cb0fb76a3fa2412f7">Weather.RefreshWeather</a></div><div class="ttdeci">void RefreshWeather()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00086">Weather.cs:86</a></div></div>
+<div class="ttc" id="aclassZone_html_a9b47abf38034016578e7ccd403928cd1"><div class="ttname"><a href="classZone.html#a9b47abf38034016578e7ccd403928cd1">Zone.RainWater</a></div><div class="ttdeci">void RainWater()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03420">Zone.cs:3420</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00285">_currentCondition</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00324">Date.GetRaw()</a>, <a class="el" href="Card_8cs_source.html#l05325">Card.HasElement()</a>, <a class="el" href="Map_8cs_source.html#l00068">Map.IsIndoor</a>, <a class="el" href="Weather_8cs_source.html#l00045">IsRaining</a>, <a class="el" href="Spatial_8cs_source.html#l00586">Spatial.IsSnowZone</a>, <a class="el" href="Season_8cs_source.html#l00040">Season.isWinter</a>, <a class="el" href="Party_8cs_source.html#l00009">Party.members</a>, <a class="el" href="Chara_8cs_source.html#l09362">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Zone_8cs_source.html#l03420">Zone.RainWater()</a>, <a class="el" href="Weather_8cs_source.html#l00086">RefreshWeather()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="World_8cs_source.html#l00066">World.season</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="World_8cs_source.html#l00047">World.ModEther()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00013">WidgetArtTool.OnActivate()</a>, <a class="el" href="Weather_8cs_source.html#l00219">SetConditionFromForecast()</a>, <a class="el" href="Weather_8cs_source.html#l00214">SetRandomCondition()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -572,6 +877,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00219">219</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>    {</div>
+<div class="line"><span class="lineno">  221</span>        this.<a class="code hl_function" href="classWeather.html#a985c778b3a4fa762fb08e5396ef0027b">RefreshForecasts</a>();</div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_class" href="classWeather_1_1Forecast.html">Weather.Forecast</a> forecast = this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>[0];</div>
+<div class="line"><span class="lineno">  223</span>        this.<a class="code hl_function" href="classWeather.html#ac5fad12ed585c2b202bad70845964d93">SetCondition</a>(forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#a9944ac83c21d6c06cd53bfb42e9cd603">condition</a>, forecast.<a class="code hl_variable" href="classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e">duration</a>, silent);</div>
+<div class="line"><span class="lineno">  224</span>        this.<a class="code hl_variable" href="classWeather.html#a51252e00ac2aa880e13456adb85d2d7c">forecasts</a>.RemoveAt(0);</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
+<div class="ttc" id="aclassWeather_html_ac5fad12ed585c2b202bad70845964d93"><div class="ttname"><a href="classWeather.html#ac5fad12ed585c2b202bad70845964d93">Weather.SetCondition</a></div><div class="ttdeci">void SetCondition(Weather.Condition condition, int _duration=20, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00227">Weather.cs:227</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00301">Weather.Forecast.condition</a>, <a class="el" href="Weather_8cs_source.html#l00299">Weather.Forecast.duration</a>, <a class="el" href="Weather_8cs_source.html#l00294">forecasts</a>, <a class="el" href="Weather_8cs_source.html#l00181">RefreshForecasts()</a>, and <a class="el" href="Weather_8cs_source.html#l00227">SetCondition()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00117">OnChangeHour()</a>.</p>
 
 </div>
 </div>
@@ -599,6 +915,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00214">214</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>    {</div>
+<div class="line"><span class="lineno">  216</span>        this.<a class="code hl_function" href="classWeather.html#ac5fad12ed585c2b202bad70845964d93">SetCondition</a>(Util.RandomEnum&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>&gt;(), 20, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00227">SetCondition()</a>.</p>
 
 </div>
 </div>
@@ -617,6 +938,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00285">285</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">GetWeatherForecast()</a>, and <a class="el" href="Weather_8cs_source.html#l00227">SetCondition()</a>.</p>
+
 </div>
 </div>
 <a id="a97eff2801de1f17568269c4d7a6cdfed" name="a97eff2801de1f17568269c4d7a6cdfed"></a>
@@ -632,6 +955,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00288">288</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">GetWeatherForecast()</a>, and <a class="el" href="Weather_8cs_source.html#l00117">OnChangeHour()</a>.</p>
 
 </div>
 </div>
@@ -649,6 +974,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00294">294</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">GetWeatherForecast()</a>, <a class="el" href="Weather_8cs_source.html#l00181">RefreshForecasts()</a>, and <a class="el" href="Weather_8cs_source.html#l00219">SetConditionFromForecast()</a>.</p>
+
 </div>
 </div>
 <a id="a4771e4ce588fd850c3c4c8e2bc856a7c" name="a4771e4ce588fd850c3c4c8e2bc856a7c"></a>
@@ -664,6 +991,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00291">291</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00205">GetTimeSinceLastRain()</a>.</p>
 
 </div>
 </div>
@@ -713,6 +1042,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00008">8</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a53d0b1f71bc0aa424e84f1641c73eafe">fixedCondition</a> == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.None)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWeather.html#a7cab7324281ec19986c04af7210dd152">_currentCondition</a>;</div>
+<div class="line"><span class="lineno">   15</span>            }</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a53d0b1f71bc0aa424e84f1641c73eafe">fixedCondition</a>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassMapConfig_html_a53d0b1f71bc0aa424e84f1641c73eafe"><div class="ttname"><a href="classMapConfig.html#a53d0b1f71bc0aa424e84f1641c73eafe">MapConfig.fixedCondition</a></div><div class="ttdeci">Weather.Condition fixedCondition</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00070">MapConfig.cs:70</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="Weather_8cs_source.html#l00076">GetName()</a>, <a class="el" href="Weather_8cs_source.html#l00205">GetTimeSinceLastRain()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00013">WidgetArtTool.OnActivate()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00415">BaseGameScreen.RefreshScreenSize()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>, and <a class="el" href="Chara_8cs_source.html#l03193">Chara.TickConditions()</a>.</p>
 
 </div>
 </div>
@@ -737,6 +1080,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00060">60</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> this.CurrentCondition == Weather.Condition.Blossom || (this.IsFineOrCloudy &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#ae2c68e5dd334ef66f6b8c3cd5f0f63c5">blossom</a>);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassMapConfig_html_ae2c68e5dd334ef66f6b8c3cd5f0f63c5"><div class="ttname"><a href="classMapConfig.html#ae2c68e5dd334ef66f6b8c3cd5f0f63c5">MapConfig.blossom</a></div><div class="ttdeci">bool blossom</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00064">MapConfig.cs:64</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>.</p>
 
 </div>
 </div>
@@ -761,6 +1113,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00068">68</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> this.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Ether;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, and <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>.</p>
 
 </div>
 </div>
@@ -785,7 +1145,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00036">36</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> this.CurrentCondition == Weather.Condition.Fine || this.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Cloudy;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acc230548bdd1ee8b02913f0fe3b29f87" name="acc230548bdd1ee8b02913f0fe3b29f87"></a>
@@ -809,6 +1175,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00028">28</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> this.CurrentCondition == Weather.Condition.Rain || this.CurrentCondition == Weather.Condition.RainHeavy || this.CurrentCondition == Weather.Condition.Snow || this.CurrentCondition == Weather.Condition.SnowHeavy || this.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Ether;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitGenerator_8cs_source.html#l00042">TraitGenerator.OnSimulateHour()</a>.</p>
 
 </div>
 </div>
@@ -833,6 +1207,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00044">44</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> this.CurrentCondition == Weather.Condition.Rain || this.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00340">GameUpdater.SurfaceUpdater.FixedUpdate()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>, <a class="el" href="Weather_8cs_source.html#l00086">RefreshWeather()</a>, <a class="el" href="Weather_8cs_source.html#l00227">SetCondition()</a>, <a class="el" href="Chara_8cs_source.html#l03193">Chara.TickConditions()</a>, <a class="el" href="Trait_8cs_source.html#l01488">Trait.TryToggle()</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00020">GameUpdater.Update100ms()</a>.</p>
 
 </div>
 </div>
@@ -857,6 +1239,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00052">52</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> this.CurrentCondition == Weather.Condition.Snow || this.CurrentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.SnowHeavy;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00086">RefreshWeather()</a>.</p>
 
 </div>
 </div>
@@ -881,16 +1271,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00020">20</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#aeaf04aebdd166cbd40d45cbe4aa1de68">season</a>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Weather_8cs_source.html">Weather.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWeather.html">Weather</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerHelp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -227,6 +247,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        UIBook.Mode mode = this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.mode;</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (mode == UIBook.Mode.Announce)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.Show(<span class="stringliteral">&quot;version&quot;</span> + (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.version.demo ? <span class="stringliteral">&quot;_demo&quot;</span> : <span class="stringliteral">&quot;&quot;</span>), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (mode != UIBook.Mode.About)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.Show(<span class="stringliteral">&quot;about_EA&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_a9bddce009399d2e6080dd2329d2b6761"><div class="ttname"><a href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">LayerHelp.book</a></div><div class="ttdeci">UIBook book</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00060">LayerHelp.cs:60</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerHelp_8cs_source.html#l00060">book</a>, and <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>.</p>
 
 </div>
 </div>
@@ -254,6 +292,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00047">47</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.mode == UIBook.Mode.Help)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            LayerHelp.lastIdFile = this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.idFile;</div>
+<div class="line"><span class="lineno">   52</span>            LayerHelp.lastIdTopic = this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.idTopic;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerHelp_8cs_source.html#l00060">book</a>.</p>
 
 </div>
 </div>
@@ -281,6 +328,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00037">37</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.inputSearch &amp;&amp; <span class="keyword">this</span>.book.transSearchResult.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            this.book.showSearchResult = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        base.OnRightClick();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerHelp_8cs_source.html#l00060">book</a>.</p>
 
 </div>
 </div>
@@ -319,6 +376,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a> layerHelp = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (layerHelp != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            layerHelp.<a class="code hl_variable" href="classLayerHelp.html#a9bddce009399d2e6080dd2329d2b6761">book</a>.Show(idFile, idTopic, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html"><div class="ttname"><a href="classLayerHelp.html">LayerHelp</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00003">LayerHelp.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerHelp_8cs_source.html#l00060">book</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="StickyTutorial_8cs_source.html#l00021">StickyTutorial.OnClick()</a>, <a class="el" href="StickyWelcome_8cs_source.html#l00053">StickyWelcome.OnClick()</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00035">HotItemLayer.OnClick()</a>, <a class="el" href="LayerCredit_8cs_source.html#l00005">LayerCredit.OnClickCredit()</a>, <a class="el" href="ContentGallery_8cs_source.html#l00056">ContentGallery.OnClickHelp()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00048">LayerEditBio.OnClickHelp()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, <a class="el" href="AM__BaseGameMode_8cs_source.html#l00065">AM_BaseGameMode.OnUpdateInput()</a>, <a class="el" href="HotItemContext_8cs_source.html#l00083">HotItemContext.Show()</a>, and <a class="el" href="LayerUploader_8cs_source.html#l00076">LayerUploader.Upload()</a>.</p>
 
 </div>
 </div>
@@ -336,6 +406,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00060">60</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHelp_8cs_source.html#l00013">OnAfterInit()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00047">OnDestroy()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00037">OnRightClick()</a>, and <a class="el" href="LayerHelp_8cs_source.html#l00028">Toggle()</a>.</p>
 
 </div>
 </div>
@@ -361,6 +433,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00056">56</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00035">HotItemLayer.OnClick()</a>.</p>
+
 </div>
 </div>
 <a id="a8dadbf6e553f6090f1a211bca7716c0b" name="a8dadbf6e553f6090f1a211bca7716c0b"></a>
@@ -384,6 +458,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00058">58</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00035">HotItemLayer.OnClick()</a>.</p>
 
 </div>
 </div>
@@ -409,16 +485,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerHelp_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerHelp_8cs_source.html">LayerHelp.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerHelp.html">LayerHelp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

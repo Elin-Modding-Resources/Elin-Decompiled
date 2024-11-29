@@ -1,0 +1,37 @@
+var CTAG_8cs =
+[
+    [ "CTAG", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07", [
+      [ "important", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a48818f3da3d36ad762480b319b56f588", null ],
+      [ "repeatSwing", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab05a7e25161dffbc7c99d0aedee97127", null ],
+      [ "nonHold", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3dac9b722adaf90c5f99d4113b923d59", null ],
+      [ "nonPick", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a29f49eaaa4f1f37afe0c7120f5f81736", null ],
+      [ "canMelee", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5a026bf976c51ba22c2a2b2cffbf02f2", null ],
+      [ "boss", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2", null ],
+      [ "currency", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962", null ],
+      [ "randomName", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ab3946e51e062bd6563060381599a16ea", null ],
+      [ "noDrop", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a47ae4a22bab18405ffcb232a3a020b3f", null ],
+      [ "hidden", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a662f707d5491e9bce8238a6c0be92190", null ],
+      [ "wilds", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a382dcad9b76f9fd19985185e6ebcbba1", null ],
+      [ "neg", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516", null ],
+      [ "replica", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ae0597c15d721776e8a797581b4cd4e30", null ],
+      [ "seed", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192", null ],
+      [ "rareSeed", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3ee94730c4c78551270eb9fa6d87f7b6", null ],
+      [ "gift", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e", null ],
+      [ "ignoreUse", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a77d5c72c578b34aab3f8a2708911db50", null ],
+      [ "throwWeapon", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a92acbd31c3abd8c925bfa9be7eaac5e2", null ],
+      [ "throwWeaponEnemy", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8b75fa19e543432aaf8aeec16cc9a439", null ],
+      [ "notHumanMeat", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1f0a31fb0555455e7d964326155ebf47", null ],
+      [ "noRandomProduct", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07adc12ce328ae3ab712a15b998f2a83ec7", null ],
+      [ "suicide", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0", null ],
+      [ "kamikaze", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aec894178b32d61b7b0fc75fb83d6f4f1", null ],
+      [ "randomSkin", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aafb833c425ac5fb8951cec17de3c30a9", null ],
+      [ "noPortrait", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a00779b0362864204c40db86e03f19dbe", null ],
+      [ "randomPortrait", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af674ecc8a03f8e24ea9ed65b91ea5a70", null ],
+      [ "rareResource", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a189da6cb1934f77daeb02c6da2955bc6", null ],
+      [ "tourism", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a02a954aad29fc4f3eb2dff2334b4226a", null ],
+      [ "staticSkin", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8c5f255675413ffbcbb70eb771f197b6", null ],
+      [ "godArtifact", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5871505b4532db9d9b2c203c12f90df9", null ],
+      [ "noWish", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193", null ],
+      [ "dish_bonus", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a09bd0c57208f68dcb3d008f06dbf9fc3", null ]
+    ] ]
+];

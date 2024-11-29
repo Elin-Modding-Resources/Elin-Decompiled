@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetMenuPanel.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -367,6 +387,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00043">43</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_variable" href="classWidgetMenuPanel.html#a420ab1c3e834e5656443b0b84a06d8e3">Instance</a> || <a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_variable" href="classWidgetMenuPanel.html#a420ab1c3e834e5656443b0b84a06d8e3">Instance</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        this.<a class="code hl_variable" href="classWidgetMenuPanel.html#a6d6afaa81e4144cb9beed87d0796e1b0">buttonBuild</a>.SetActive(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a7e5c1aa9b5823f4bf43ccdb70d67647b">CanEnterBuildModeAnywhere</a>);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">int</span> num = ((EMono._zone.mainFaction == <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a>) ? 2 : 0) + (EMono._zone.CanEnterBuildModeAnywhere ? 1 : 0);</div>
+<div class="line"><span class="lineno">   51</span>        this.imageGrid.uvRect = <span class="keyword">new</span> Rect(1f, 1f, (<span class="keywordtype">float</span>)num, 1f);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassChara_html_a34adc7979fac5d829240e53c7da2e5b8"><div class="ttname"><a href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">Chara.faction</a></div><div class="ttdeci">Faction faction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00245">Chara.cs:246</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html"><div class="ttname"><a href="classWidgetMenuPanel.html">WidgetMenuPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00005">WidgetMenuPanel.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a420ab1c3e834e5656443b0b84a06d8e3"><div class="ttname"><a href="classWidgetMenuPanel.html#a420ab1c3e834e5656443b0b84a06d8e3">WidgetMenuPanel.Instance</a></div><div class="ttdeci">static WidgetMenuPanel Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00112">WidgetMenuPanel.cs:112</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a6d6afaa81e4144cb9beed87d0796e1b0"><div class="ttname"><a href="classWidgetMenuPanel.html#a6d6afaa81e4144cb9beed87d0796e1b0">WidgetMenuPanel.buttonBuild</a></div><div class="ttdeci">UIButton buttonBuild</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00132">WidgetMenuPanel.cs:132</a></div></div>
+<div class="ttc" id="aclassZone_html_a7e5c1aa9b5823f4bf43ccdb70d67647b"><div class="ttname"><a href="classZone.html#a7e5c1aa9b5823f4bf43ccdb70d67647b">Zone.CanEnterBuildModeAnywhere</a></div><div class="ttdeci">bool CanEnterBuildModeAnywhere</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00756">Zone.cs:757</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00132">buttonBuild</a>, <a class="el" href="Zone_8cs_source.html#l00757">Zone.CanEnterBuildModeAnywhere</a>, <a class="el" href="Chara_8cs_source.html#l00246">Chara.faction</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00112">Instance</a>, and <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">Build()</a>, and <a class="el" href="WidgetMenuPanel_8cs_source.html#l00035">OnChangeMode()</a>.</p>
 
 </div>
 </div>
@@ -417,6 +458,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00084">84</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        UIButton uibutton = Util.Instantiate&lt;UIButton&gt;(this.<a class="code hl_variable" href="classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af">mold</a>, _layout);</div>
+<div class="line"><span class="lineno">   87</span>        uibutton.icon.sprite = SpriteSheet.Get(<span class="stringliteral">&quot;icon_&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   88</span>        uibutton.subText.SetActive(enableSubtext);</div>
+<div class="line"><span class="lineno">   89</span>        uibutton.tooltip.text = <span class="keywordtype">id</span>.lang();</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (action != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            uibutton.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                action();</div>
+<div class="line"><span class="lineno">   95</span>            });</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> uibutton;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a91dc46d684b3a6a1651270bcc75ea5af"><div class="ttname"><a href="classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af">WidgetMenuPanel.mold</a></div><div class="ttdeci">UIButton mold</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00118">WidgetMenuPanel.cs:118</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMenuPanel_8cs_source.html#l00118">mold</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">Build()</a>.</p>
 
 </div>
 </div>
@@ -444,6 +504,42 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">63</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classWidgetMenuPanel.html#a5c8dce57c58c3a7582d1be3a092e4678">layout</a>.DestroyChildren(<span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   66</span>        this.<a class="code hl_variable" href="classWidgetMenuPanel.html#a979df98dba6ebe4bc750e93d9a3dda6e">layout2</a>.DestroyChildren(<span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   67</span>        this.buttonBuild = this.<a class="code hl_function" href="classWidgetMenuPanel.html#aa3e35f77ee5ed480a98636058c705792">AddButton</a>(this.<a class="code hl_variable" href="classWidgetMenuPanel.html#a5c8dce57c58c3a7582d1be3a092e4678">layout</a>, <span class="stringliteral">&quot;Inspect&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.BlockInput)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   72</span>                return;</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">hotbars</a>.<a class="code hl_function" href="classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e">ResetHotbar</a>(3);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">hotbars</a>.<a class="code hl_variable" href="classHotbarManager.html#a0c42924beb038cee1659df7ddc7bda6a">bars</a>[3].<a class="code hl_variable" href="classHotbar.html#ac121e89667a4a269c43cccd2014e29b1">dirty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">hotbars</a>.<a class="code hl_function" href="classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e">ResetHotbar</a>(4);</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">hotbars</a>.<a class="code hl_variable" href="classHotbarManager.html#a0c42924beb038cee1659df7ddc7bda6a">bars</a>[4].<a class="code hl_variable" href="classHotbar.html#ac121e89667a4a269c43cccd2014e29b1">dirty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">Inspect</a>.<a class="code hl_function" href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   80</span>        this.<a class="code hl_function" href="classWidgetMenuPanel.html#a7edb0130dfeb566ea944abba3ba31c94">_OnChangeMode</a>();</div>
+<div class="line"><span class="lineno">   81</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassAM__MoveInstalled_html_acc4b380fcce0cc921fd59a9583aafce2"><div class="ttname"><a href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">AM_MoveInstalled.Activate</a></div><div class="ttdeci">void Activate(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.cs:103</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a03ce1f17d0e13fd5e7341cad4b9f4085"><div class="ttname"><a href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">ActionMode.Inspect</a></div><div class="ttdeci">static AM_Inspect Inspect</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01707">ActionMode.cs:1707</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassHotbarManager_html_a0c42924beb038cee1659df7ddc7bda6a"><div class="ttname"><a href="classHotbarManager.html#a0c42924beb038cee1659df7ddc7bda6a">HotbarManager.bars</a></div><div class="ttdeci">Hotbar[] bars</div><div class="ttdef"><b>Definition:</b> <a href="HotbarManager_8cs_source.html#l00256">HotbarManager.cs:256</a></div></div>
+<div class="ttc" id="aclassHotbarManager_html_af53b94f23ea108ff451105b2c44a4e8e"><div class="ttname"><a href="classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e">HotbarManager.ResetHotbar</a></div><div class="ttdeci">void ResetHotbar(int id)</div><div class="ttdef"><b>Definition:</b> <a href="HotbarManager_8cs_source.html#l00006">HotbarManager.cs:6</a></div></div>
+<div class="ttc" id="aclassHotbar_html_ac121e89667a4a269c43cccd2014e29b1"><div class="ttname"><a href="classHotbar.html#ac121e89667a4a269c43cccd2014e29b1">Hotbar.dirty</a></div><div class="ttdeci">bool dirty</div><div class="ttdef"><b>Definition:</b> <a href="Hotbar_8cs_source.html#l00244">Hotbar.cs:244</a></div></div>
+<div class="ttc" id="aclassPlayer_html_afb46f86512c8ccf198ceeb7e323b712a"><div class="ttname"><a href="classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a">Player.hotbars</a></div><div class="ttdeci">HotbarManager hotbars</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01524">Player.cs:1524</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a5c8dce57c58c3a7582d1be3a092e4678"><div class="ttname"><a href="classWidgetMenuPanel.html#a5c8dce57c58c3a7582d1be3a092e4678">WidgetMenuPanel.layout</a></div><div class="ttdeci">LayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00114">WidgetMenuPanel.cs:114</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a7edb0130dfeb566ea944abba3ba31c94"><div class="ttname"><a href="classWidgetMenuPanel.html#a7edb0130dfeb566ea944abba3ba31c94">WidgetMenuPanel._OnChangeMode</a></div><div class="ttdeci">void _OnChangeMode()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00043">WidgetMenuPanel.cs:43</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a979df98dba6ebe4bc750e93d9a3dda6e"><div class="ttname"><a href="classWidgetMenuPanel.html#a979df98dba6ebe4bc750e93d9a3dda6e">WidgetMenuPanel.layout2</a></div><div class="ttdeci">LayoutGroup layout2</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00116">WidgetMenuPanel.cs:116</a></div></div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_aa3e35f77ee5ed480a98636058c705792"><div class="ttname"><a href="classWidgetMenuPanel.html#aa3e35f77ee5ed480a98636058c705792">WidgetMenuPanel.AddButton</a></div><div class="ttdeci">UIButton AddButton(LayoutGroup _layout, string id, Action action, bool enableSubtext=false)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00084">WidgetMenuPanel.cs:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMenuPanel_8cs_source.html#l00043">_OnChangeMode()</a>, <a class="el" href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.Activate()</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00084">AddButton()</a>, <a class="el" href="HotbarManager_8cs_source.html#l00256">HotbarManager.bars</a>, <a class="el" href="Hotbar_8cs_source.html#l00244">Hotbar.dirty</a>, <a class="el" href="Player_8cs_source.html#l01524">Player.hotbars</a>, <a class="el" href="ActionMode_8cs_source.html#l01707">ActionMode.Inspect</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00114">layout</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00116">layout2</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="HotbarManager_8cs_source.html#l00006">HotbarManager.ResetHotbar()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00028">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -473,7 +569,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_class" href="classWidgetMenuPanel_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aclassWidgetMenuPanel_1_1Extra_html"><div class="ttname"><a href="classWidgetMenuPanel_1_1Extra.html">WidgetMenuPanel.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00140">WidgetMenuPanel.cs:141</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6838e8d39b618955993f03cdea3b5e19" name="a6838e8d39b618955993f03cdea3b5e19"></a>
@@ -500,7 +600,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00059">59</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8cdaf9db77a2217f6d1fc3bab84cf38a" name="a8cdaf9db77a2217f6d1fc3bab84cf38a"></a>
@@ -529,6 +631,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00028">28</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        WidgetMenuPanel.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   31</span>        this.mold.skinRoot = base.GetComponent&lt;SkinRoot&gt;();</div>
+<div class="line"><span class="lineno">   32</span>        this.<a class="code hl_function" href="classWidgetMenuPanel.html#a87064fed9d2619652f748c4f97e8d5d7">Build</a>();</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassWidgetMenuPanel_html_a87064fed9d2619652f748c4f97e8d5d7"><div class="ttname"><a href="classWidgetMenuPanel.html#a87064fed9d2619652f748c4f97e8d5d7">WidgetMenuPanel.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00063">WidgetMenuPanel.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">Build()</a>.</p>
 
 </div>
 </div>
@@ -556,6 +666,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00035">35</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_variable" href="classWidgetMenuPanel.html#a420ab1c3e834e5656443b0b84a06d8e3">Instance</a>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_variable" href="classWidgetMenuPanel.html#a420ab1c3e834e5656443b0b84a06d8e3">Instance</a>.<a class="code hl_function" href="classWidgetMenuPanel.html#a7edb0130dfeb566ea944abba3ba31c94">_OnChangeMode</a>();</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMenuPanel_8cs_source.html#l00043">_OnChangeMode()</a>, and <a class="el" href="WidgetMenuPanel_8cs_source.html#l00112">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemContext_8cs_source.html#l00288">HotItemContext.g__Toggle()</a>, <a class="el" href="Scene_8cs_source.html#l00050">Scene.Init()</a>, <a class="el" href="TraitDeed_8cs_source.html#l00021">TraitDeed.OnRead()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -585,7 +705,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a263ffee73ef73adc5497c8881dc113c8">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00054">54</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        base.OnChangeResolution();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aab8b6ccc862de3a90d23607a1d50972d" name="aab8b6ccc862de3a90d23607a1d50972d"></a>
@@ -615,6 +738,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00100">100</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        UIContextMenu uicontextMenu = m.AddChild(<span class="stringliteral">&quot;style&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">float</span>)base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            base.config.skin.button = (int)a;</div>
+<div class="line"><span class="lineno">  106</span>            this.<a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">  107</span>        }, 0f, (float)(base.config.skin.Skin.buttons.Count - 1), <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  108</span>        base.SetGridContextMenu(uicontextMenu);</div>
+<div class="line"><span class="lineno">  109</span>        base.SetBaseContextMenu(m);</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00425">Widget.cs:425</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00425">Widget.ApplySkin()</a>.</p>
 
 </div>
 </div>
@@ -632,6 +768,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00132">132</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00043">_OnChangeMode()</a>.</p>
 
 </div>
 </div>
@@ -721,6 +859,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00112">112</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00043">_OnChangeMode()</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00035">OnChangeMode()</a>, and <a class="el" href="LayerHome_8cs_source.html#l00088">LayerHome.RefreshFeat()</a>.</p>
+
 </div>
 </div>
 <a id="a5c8dce57c58c3a7582d1be3a092e4678" name="a5c8dce57c58c3a7582d1be3a092e4678"></a>
@@ -737,6 +877,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00114">114</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">Build()</a>.</p>
+
 </div>
 </div>
 <a id="a979df98dba6ebe4bc750e93d9a3dda6e" name="a979df98dba6ebe4bc750e93d9a3dda6e"></a>
@@ -752,6 +894,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00116">116</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00063">Build()</a>.</p>
 
 </div>
 </div>
@@ -817,6 +961,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00118">118</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00084">AddButton()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -841,7 +987,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00020">20</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a2d6f36f1c61a191a16d8fdefa62ad2be">allMenu</a>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a2d6f36f1c61a191a16d8fdefa62ad2be"><div class="ttname"><a href="classCoreDebug.html#a2d6f36f1c61a191a16d8fdefa62ad2be">CoreDebug.allMenu</a></div><div class="ttdeci">bool allMenu</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02248">CoreDebug.cs:2248</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00158">EMono.cs:159</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1606c374e85a74138c3af7a3e31f5b01" name="a1606c374e85a74138c3af7a3e31f5b01"></a>
@@ -865,16 +1019,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00012">12</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetMenuPanel.html">WidgetMenuPanel</a>.<a class="code hl_class" href="classWidgetMenuPanel_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetMenuPanel.html">WidgetMenuPanel</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

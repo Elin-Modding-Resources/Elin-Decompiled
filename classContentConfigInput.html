@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classContentConfigInput.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -302,6 +322,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00250">250</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>    {</div>
+<div class="line"><span class="lineno">  252</span>        b.text.text = (<span class="stringliteral">&quot;key_&quot;</span> + a.action.ToString()).lang();</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = a.key.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  254</span>        b.buttonKey.mainText.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">  255</span>        b.<a class="code hl_variable" href="classItemKeymap.html#a5277b850d84340b0b1670b1ec07e69c0">buttonKey</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  256</span>        {</div>
+<div class="line"><span class="lineno">  257</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a04bf9e674e96b5777228c12df85e48c6">Keymap</a>(a).SetOnKill(<span class="keyword">new</span> Action(this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a9beb41dcb4df6fb751133a07a210b50f">g___refreshList</a>|38_44));</div>
+<div class="line"><span class="lineno">  258</span>        });</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a934014e8a43a071cce52976fe981a0ac"><div class="ttname"><a href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">ContentConfigInput.OnInstantiate</a></div><div class="ttdeci">override void OnInstantiate()</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00008">ContentConfigInput.cs:8</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a9beb41dcb4df6fb751133a07a210b50f"><div class="ttname"><a href="classContentConfigInput.html#a9beb41dcb4df6fb751133a07a210b50f">ContentConfigInput.g___refreshList</a></div><div class="ttdeci">void&lt; OnInstantiate &gt; g___refreshList()</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00240">ContentConfigInput.cs:240</a></div></div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a04bf9e674e96b5777228c12df85e48c6"><div class="ttname"><a href="classDialog.html#a04bf9e674e96b5777228c12df85e48c6">Dialog.Keymap</a></div><div class="ttdeci">static Dialog Keymap(EInput.KeyMap keymap)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00460">Dialog.cs:460</a></div></div>
+<div class="ttc" id="aclassItemKeymap_html_a5277b850d84340b0b1670b1ec07e69c0"><div class="ttname"><a href="classItemKeymap.html#a5277b850d84340b0b1670b1ec07e69c0">ItemKeymap.buttonKey</a></div><div class="ttdeci">UIButton buttonKey</div><div class="ttdef"><b>Definition:</b> <a href="ItemKeymap_8cs_source.html#l00010">ItemKeymap.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemKeymap_8cs_source.html#l00010">ItemKeymap.buttonKey</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, <a class="el" href="Dialog_8cs_source.html#l00460">Dialog.Keymap()</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -329,6 +368,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00240">240</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
+<div class="line"><span class="lineno">  242</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ab1013dfa5dbcbc13827e4ff7357a7049">listMovement</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  243</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a0086a67270967ac52816c9e67d98b6b2">listGeneral</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  244</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a6b02edf84444b6559b13f84ba156793c">listMenu</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  245</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ace3d5bce37313a3044f96fede362b181">listEtc</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  246</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a44229b997615d8e8d85d4b5bb78d5079">listAdvanced</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  247</span>    }</div>
+<div class="ttc" id="aclassContentConfigInput_html_a0086a67270967ac52816c9e67d98b6b2"><div class="ttname"><a href="classContentConfigInput.html#a0086a67270967ac52816c9e67d98b6b2">ContentConfigInput.listGeneral</a></div><div class="ttdeci">UIList listGeneral</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00263">ContentConfigInput.cs:263</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a44229b997615d8e8d85d4b5bb78d5079"><div class="ttname"><a href="classContentConfigInput.html#a44229b997615d8e8d85d4b5bb78d5079">ContentConfigInput.listAdvanced</a></div><div class="ttdeci">UIList listAdvanced</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00269">ContentConfigInput.cs:269</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a6b02edf84444b6559b13f84ba156793c"><div class="ttname"><a href="classContentConfigInput.html#a6b02edf84444b6559b13f84ba156793c">ContentConfigInput.listMenu</a></div><div class="ttdeci">UIList listMenu</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00265">ContentConfigInput.cs:265</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ab1013dfa5dbcbc13827e4ff7357a7049"><div class="ttname"><a href="classContentConfigInput.html#ab1013dfa5dbcbc13827e4ff7357a7049">ContentConfigInput.listMovement</a></div><div class="ttdeci">UIList listMovement</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00261">ContentConfigInput.cs:261</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ace3d5bce37313a3044f96fede362b181"><div class="ttname"><a href="classContentConfigInput.html#ace3d5bce37313a3044f96fede362b181">ContentConfigInput.listEtc</a></div><div class="ttdeci">UIList listEtc</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00267">ContentConfigInput.cs:267</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ContentConfigInput_8cs_source.html#l00269">listAdvanced</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00267">listEtc</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00263">listGeneral</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00265">listMenu</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00261">listMovement</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00250">g___onInstantiate()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -356,6 +411,276 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00008">8</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ada1b0afac109921e3652dcde6f3b4efd">toggleAutorun</a>.SetToggle(base.config.input.autorun, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.config.input.autorun = on;</div>
+<div class="line"><span class="lineno">   13</span>        });</div>
+<div class="line"><span class="lineno">   14</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#afbf34bbcd52ae21d339f966a8e027423">toggleAltKeyAxis</a>.SetToggle(base.config.input.altKeyAxis, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            base.config.input.altKeyAxis = on;</div>
+<div class="line"><span class="lineno">   17</span>        });</div>
+<div class="line"><span class="lineno">   18</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a94b1b45cf36d908bb571cd61b58f8bcf">toggleIgnoreNPCs</a>.SetToggle(base.config.input.ignoreNPCs, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.config.input.ignoreNPCs = on;</div>
+<div class="line"><span class="lineno">   21</span>        });</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a7232c39c5c06d6cab1805fa558ecb24d">toggleKeepRunning</a>.SetToggle(base.config.input.keepRunning, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            base.config.input.keepRunning = on;</div>
+<div class="line"><span class="lineno">   25</span>        });</div>
+<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a802ab45dd7a9547b650250e0621db5ec">toggleRightClickExitBuildMode</a>.SetToggle(base.config.input.rightClickExitBuildMode, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            base.config.input.rightClickExitBuildMode = on;</div>
+<div class="line"><span class="lineno">   29</span>        });</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a2587e0e2ebad91c6a8905803039741c3">toggleAltExamine</a>.SetToggle(base.config.input.altExamine, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            base.config.input.altExamine = on;</div>
+<div class="line"><span class="lineno">   33</span>        });</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ad0d325364910b56a96caa7efdea2176d">toggleAltChangeHeight</a>.SetToggle(base.config.input.altChangeHeight, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            base.config.input.altChangeHeight = on;</div>
+<div class="line"><span class="lineno">   37</span>        });</div>
+<div class="line"><span class="lineno">   38</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#af30937f574b98ba95e24b081e9cdf5e6">toggleSmoothFollow</a>.SetToggle(base.config.camera.smoothFollow, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            base.config.camera.smoothFollow = on;</div>
+<div class="line"><span class="lineno">   41</span>        });</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a031702f00f572b371ca108dab1a8da16">toggleSmoothMove</a>.SetToggle(base.config.camera.smoothMove, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            base.config.camera.smoothMove = on;</div>
+<div class="line"><span class="lineno">   45</span>            this.<a class="code hl_variable" href="classContentConfigInput.html#acc8cb2089c3d698a7c1137ae6ee6465a">sliderMoveFrame</a>.SetActive(!on);</div>
+<div class="line"><span class="lineno">   46</span>        });</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a8ff5986d015e6cb0ee126ecb3959728c">toggleZoomToMouse</a>.SetToggle(base.config.camera.zoomToMouse, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            base.config.camera.zoomToMouse = on;</div>
+<div class="line"><span class="lineno">   50</span>        });</div>
+<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ad589bae87ccb0236999667ec38c59026">toggleZoomMin</a>.SetToggle(base.config.camera.extendZoomMin, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            base.config.camera.extendZoomMin = on;</div>
+<div class="line"><span class="lineno">   54</span>        });</div>
+<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a158e046d684444886fb651b47ba76d06">toggleZoomMax</a>.SetToggle(base.config.camera.extendZoomMax, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            base.config.camera.extendZoomMax = on;</div>
+<div class="line"><span class="lineno">   58</span>        });</div>
+<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a822ae93ddaade7608614b75c3c01aab2">toggleEdge</a>.SetToggle(base.config.camera.edgeScroll, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            base.config.camera.edgeScroll = on;</div>
+<div class="line"><span class="lineno">   62</span>        });</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a631622085c4600bdd44377495edace7a">toggleInvertX</a>.SetToggle(base.config.camera.invertX, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            base.config.camera.invertX = on;</div>
+<div class="line"><span class="lineno">   66</span>        });</div>
+<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a0fcbf4ca4e959874de4d75af0ffb54c5">toggleInvertY</a>.SetToggle(base.config.camera.invertY, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            base.config.camera.invertY = on;</div>
+<div class="line"><span class="lineno">   70</span>        });</div>
+<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a715f16a310ea572ca15510821477b556">toggleLinearZoom</a>.SetToggle(base.config.camera.linearZoom, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            base.config.camera.linearZoom = on;</div>
+<div class="line"><span class="lineno">   74</span>        });</div>
+<div class="line"><span class="lineno">   75</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigInput.html#acc8cb2089c3d698a7c1137ae6ee6465a">sliderMoveFrame</a>, (<span class="keywordtype">float</span>)base.config.camera.moveframe, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            base.config.camera.moveframe = (int)a;</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;moveframe&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + ((int)a).ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>        });</div>
+<div class="line"><span class="lineno">   80</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#acc8cb2089c3d698a7c1137ae6ee6465a">sliderMoveFrame</a>.SetActive(!base.config.camera.smoothMove);</div>
+<div class="line"><span class="lineno">   81</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigInput.html#a51f50f3f6b47fa204577fad4a1f094ba">sliderKeyboardScroll</a>, base.config.camera.senseKeyboard, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            base.config.camera.senseKeyboard = a;</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;speed&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + ((int)(a * 100f)).ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   85</span>        });</div>
+<div class="line"><span class="lineno">   86</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigInput.html#a758ee98173d6f71958e3329f7d063feb">sliderDragScroll</a>, base.config.camera.sensDrag, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            base.config.camera.sensDrag = a;</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;speed&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + ((int)(a * 100f)).ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   90</span>        });</div>
+<div class="line"><span class="lineno">   91</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigInput.html#a3c4264064a8fff70d1408bac19755c26">sliderEdgeScroll</a>, base.config.camera.sensEdge, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            base.config.camera.sensEdge = a;</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;speed&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + ((int)(a * 100f)).ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>        });</div>
+<div class="line"><span class="lineno">   96</span>        List&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt; list = Util.EnumToList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;();</div>
+<div class="line"><span class="lineno">   97</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ad25fb2421ce303b6afb47d008925e8a7">ddMiddleClick</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.middleClick, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            base.config.input.middleClick = b;</div>
+<div class="line"><span class="lineno">  100</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a94ada726dd3fdcee10a0fc3d81c0f17d">ddMiddleClickLong</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.middlePressLong, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            base.config.input.middlePressLong = b;</div>
+<div class="line"><span class="lineno">  104</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  105</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ac398a7d6e80f9eaa726849c4bc47bca8">ddMouse3Click</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.mouse3Click, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            base.config.input.mouse3Click = b;</div>
+<div class="line"><span class="lineno">  108</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  109</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a38d7fa582a79a51ae9821cdf062005ef">ddMouse3Long</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.mouse3PressLong, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            base.config.input.mouse3PressLong = b;</div>
+<div class="line"><span class="lineno">  112</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  113</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ac2718473d4741182021fcb49b16f970a">ddMouse4Click</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.mouse4Click, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            base.config.input.mouse4Click = b;</div>
+<div class="line"><span class="lineno">  116</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  117</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a54f40f68b0dd7870f351a0be55766f7f">ddMouse4Long</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a>&gt;((int)base.config.input.mouse4PressLong, list, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">GameFunc</a> b)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            base.config.input.mouse4PressLong = b;</div>
+<div class="line"><span class="lineno">  120</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  121</span>        List&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt; list2 = Util.EnumToList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;();</div>
+<div class="line"><span class="lineno">  122</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a10f1a7a8dec85ce71bc0d889e8f2dcdb">b_ddMiddleClick</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_middleClick, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            base.config.input.b_middleClick = b;</div>
+<div class="line"><span class="lineno">  125</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  126</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#aaaf4789670bf46a5a9c3d250e8dafa13">b_ddMiddleClickLong</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_middlePressLong, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            base.config.input.b_middlePressLong = b;</div>
+<div class="line"><span class="lineno">  129</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  130</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#aee1cd880c448339390d9f24a42ec17cc">b_ddMouse3Click</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_mouse3Click, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            base.config.input.b_mouse3Click = b;</div>
+<div class="line"><span class="lineno">  133</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  134</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a0b2c32a377c603697e7504fdcae90d46">b_ddMouse3Long</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_mouse3PressLong, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            base.config.input.b_mouse3PressLong = b;</div>
+<div class="line"><span class="lineno">  137</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  138</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#a5613a462a31136609530277624f4559c">b_ddMouse4Click</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_mouse4Click, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            base.config.input.b_mouse4Click = b;</div>
+<div class="line"><span class="lineno">  141</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  142</span>        this.<a class="code hl_variable" href="classContentConfigInput.html#ace1f31ef4d3a02d0db75079a8ef0157f">b_ddMouse4Long</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a>&gt;((int)base.config.input.b_mouse4PressLong, list2, (<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">GameFuncBuild</a> b)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            base.config.input.b_mouse4PressLong = b;</div>
+<div class="line"><span class="lineno">  145</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  146</span>        this.listMovement.callbacks = <span class="keyword">new</span> UIList.Callback&lt;EInput.KeyMap, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a>&gt;</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            onInstantiate = delegate(EInput.KeyMap a, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a> b)</div>
+<div class="line"><span class="lineno">  149</span>            {</div>
+<div class="line"><span class="lineno">  150</span>                this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">g___onInstantiate</a>|38_45(a, b);</div>
+<div class="line"><span class="lineno">  151</span>            },</div>
+<div class="line"><span class="lineno">  152</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  153</span>            {</div>
+<div class="line"><span class="lineno">  154</span>                EInput.KeyMapManager keys = base.config.input.keys;</div>
+<div class="line"><span class="lineno">  155</span>                UIList uilist = this.<a class="code hl_variable" href="classContentConfigInput.html#ab1013dfa5dbcbc13827e4ff7357a7049">listMovement</a>;</div>
+<div class="line"><span class="lineno">  156</span>                uilist.Add(keys.axisUp);</div>
+<div class="line"><span class="lineno">  157</span>                uilist.Add(keys.axisDown);</div>
+<div class="line"><span class="lineno">  158</span>                uilist.Add(keys.axisLeft);</div>
+<div class="line"><span class="lineno">  159</span>                uilist.Add(keys.axisRight);</div>
+<div class="line"><span class="lineno">  160</span>                uilist.Add(keys.axisUpLeft);</div>
+<div class="line"><span class="lineno">  161</span>                uilist.Add(keys.axisUpRight);</div>
+<div class="line"><span class="lineno">  162</span>                uilist.Add(keys.axisDownLeft);</div>
+<div class="line"><span class="lineno">  163</span>                uilist.Add(keys.axisDownRight);</div>
+<div class="line"><span class="lineno">  164</span>                uilist.Add(keys.wait);</div>
+<div class="line"><span class="lineno">  165</span>            }</div>
+<div class="line"><span class="lineno">  166</span>        };</div>
+<div class="line"><span class="lineno">  167</span>        this.listGeneral.callbacks = <span class="keyword">new</span> UIList.Callback&lt;EInput.KeyMap, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a>&gt;</div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            onInstantiate = delegate(EInput.KeyMap a, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a> b)</div>
+<div class="line"><span class="lineno">  170</span>            {</div>
+<div class="line"><span class="lineno">  171</span>                this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">g___onInstantiate</a>|38_45(a, b);</div>
+<div class="line"><span class="lineno">  172</span>            },</div>
+<div class="line"><span class="lineno">  173</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  174</span>            {</div>
+<div class="line"><span class="lineno">  175</span>                EInput.KeyMapManager keys = base.config.input.keys;</div>
+<div class="line"><span class="lineno">  176</span>                UIList uilist = this.<a class="code hl_variable" href="classContentConfigInput.html#a0086a67270967ac52816c9e67d98b6b2">listGeneral</a>;</div>
+<div class="line"><span class="lineno">  177</span>                uilist.Add(keys.mouseLeft);</div>
+<div class="line"><span class="lineno">  178</span>                uilist.Add(keys.mouseMiddle);</div>
+<div class="line"><span class="lineno">  179</span>                uilist.Add(keys.mouseRight);</div>
+<div class="line"><span class="lineno">  180</span>                uilist.Add(keys.fire);</div>
+<div class="line"><span class="lineno">  181</span>                uilist.Add(keys.autoCombat);</div>
+<div class="line"><span class="lineno">  182</span>                uilist.Add(keys.emptyHand);</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        };</div>
+<div class="line"><span class="lineno">  185</span>        this.listMenu.callbacks = <span class="keyword">new</span> UIList.Callback&lt;EInput.KeyMap, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a>&gt;</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            onInstantiate = delegate(EInput.KeyMap a, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a> b)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">g___onInstantiate</a>|38_45(a, b);</div>
+<div class="line"><span class="lineno">  190</span>            },</div>
+<div class="line"><span class="lineno">  191</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  192</span>            {</div>
+<div class="line"><span class="lineno">  193</span>                EInput.KeyMapManager keys = base.config.input.keys;</div>
+<div class="line"><span class="lineno">  194</span>                UIList uilist = this.<a class="code hl_variable" href="classContentConfigInput.html#a6b02edf84444b6559b13f84ba156793c">listMenu</a>;</div>
+<div class="line"><span class="lineno">  195</span>                uilist.Add(keys.chara);</div>
+<div class="line"><span class="lineno">  196</span>                uilist.Add(keys.inventory);</div>
+<div class="line"><span class="lineno">  197</span>                uilist.Add(keys.ability);</div>
+<div class="line"><span class="lineno">  198</span>                uilist.Add(keys.journal);</div>
+<div class="line"><span class="lineno">  199</span>                uilist.Add(keys.log);</div>
+<div class="line"><span class="lineno">  200</span>                uilist.Add(keys.report);</div>
+<div class="line"><span class="lineno">  201</span>                uilist.Add(keys.search);</div>
+<div class="line"><span class="lineno">  202</span>            }</div>
+<div class="line"><span class="lineno">  203</span>        };</div>
+<div class="line"><span class="lineno">  204</span>        this.listEtc.callbacks = <span class="keyword">new</span> UIList.Callback&lt;EInput.KeyMap, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a>&gt;</div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            onInstantiate = delegate(EInput.KeyMap a, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a> b)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">g___onInstantiate</a>|38_45(a, b);</div>
+<div class="line"><span class="lineno">  209</span>            },</div>
+<div class="line"><span class="lineno">  210</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                EInput.KeyMapManager keys = base.config.input.keys;</div>
+<div class="line"><span class="lineno">  213</span>                UIList uilist = this.<a class="code hl_variable" href="classContentConfigInput.html#ace3d5bce37313a3044f96fede362b181">listEtc</a>;</div>
+<div class="line"><span class="lineno">  214</span>                uilist.Add(keys.switchHotbar);</div>
+<div class="line"><span class="lineno">  215</span>                uilist.Add(keys.quickSave);</div>
+<div class="line"><span class="lineno">  216</span>                uilist.Add(keys.quickLoad);</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>        };</div>
+<div class="line"><span class="lineno">  219</span>        this.listAdvanced.callbacks = <span class="keyword">new</span> UIList.Callback&lt;EInput.KeyMap, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a>&gt;</div>
+<div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            onInstantiate = delegate(EInput.KeyMap a, <a class="code hl_class" href="classItemKeymap.html">ItemKeymap</a> b)</div>
+<div class="line"><span class="lineno">  222</span>            {</div>
+<div class="line"><span class="lineno">  223</span>                this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">g___onInstantiate</a>|38_45(a, b);</div>
+<div class="line"><span class="lineno">  224</span>            },</div>
+<div class="line"><span class="lineno">  225</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  226</span>            {</div>
+<div class="line"><span class="lineno">  227</span>                EInput.KeyMapManager keys = base.config.input.keys;</div>
+<div class="line"><span class="lineno">  228</span>                UIList uilist = this.<a class="code hl_variable" href="classContentConfigInput.html#a44229b997615d8e8d85d4b5bb78d5079">listAdvanced</a>;</div>
+<div class="line"><span class="lineno">  229</span>                uilist.Add(keys.examine);</div>
+<div class="line"><span class="lineno">  230</span>                uilist.Add(keys.getAll);</div>
+<div class="line"><span class="lineno">  231</span>                uilist.Add(keys.dump);</div>
+<div class="line"><span class="lineno">  232</span>                uilist.Add(keys.mute);</div>
+<div class="line"><span class="lineno">  233</span>                uilist.Add(keys.meditate);</div>
+<div class="line"><span class="lineno">  234</span>            }</div>
+<div class="line"><span class="lineno">  235</span>        };</div>
+<div class="line"><span class="lineno">  236</span>        this.&lt;<a class="code hl_function" href="classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac">OnInstantiate</a>&gt;<a class="code hl_function" href="classContentConfigInput.html#a9beb41dcb4df6fb751133a07a210b50f">g___refreshList</a>|38_44();</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+<div class="ttc" id="aclassContentConfigInput_html_a031702f00f572b371ca108dab1a8da16"><div class="ttname"><a href="classContentConfigInput.html#a031702f00f572b371ca108dab1a8da16">ContentConfigInput.toggleSmoothMove</a></div><div class="ttdeci">UIButton toggleSmoothMove</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00291">ContentConfigInput.cs:291</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a0b2c32a377c603697e7504fdcae90d46"><div class="ttname"><a href="classContentConfigInput.html#a0b2c32a377c603697e7504fdcae90d46">ContentConfigInput.b_ddMouse3Long</a></div><div class="ttdeci">UIDropdown b_ddMouse3Long</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00331">ContentConfigInput.cs:331</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a0fcbf4ca4e959874de4d75af0ffb54c5"><div class="ttname"><a href="classContentConfigInput.html#a0fcbf4ca4e959874de4d75af0ffb54c5">ContentConfigInput.toggleInvertY</a></div><div class="ttdeci">UIButton toggleInvertY</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00307">ContentConfigInput.cs:307</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a10f1a7a8dec85ce71bc0d889e8f2dcdb"><div class="ttname"><a href="classContentConfigInput.html#a10f1a7a8dec85ce71bc0d889e8f2dcdb">ContentConfigInput.b_ddMiddleClick</a></div><div class="ttdeci">UIDropdown b_ddMiddleClick</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00325">ContentConfigInput.cs:325</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a158e046d684444886fb651b47ba76d06"><div class="ttname"><a href="classContentConfigInput.html#a158e046d684444886fb651b47ba76d06">ContentConfigInput.toggleZoomMax</a></div><div class="ttdeci">UIButton toggleZoomMax</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00287">ContentConfigInput.cs:287</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a2587e0e2ebad91c6a8905803039741c3"><div class="ttname"><a href="classContentConfigInput.html#a2587e0e2ebad91c6a8905803039741c3">ContentConfigInput.toggleAltExamine</a></div><div class="ttdeci">UIButton toggleAltExamine</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00281">ContentConfigInput.cs:281</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a38d7fa582a79a51ae9821cdf062005ef"><div class="ttname"><a href="classContentConfigInput.html#a38d7fa582a79a51ae9821cdf062005ef">ContentConfigInput.ddMouse3Long</a></div><div class="ttdeci">UIDropdown ddMouse3Long</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00319">ContentConfigInput.cs:319</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a3c4264064a8fff70d1408bac19755c26"><div class="ttname"><a href="classContentConfigInput.html#a3c4264064a8fff70d1408bac19755c26">ContentConfigInput.sliderEdgeScroll</a></div><div class="ttdeci">Slider sliderEdgeScroll</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00297">ContentConfigInput.cs:297</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a51f50f3f6b47fa204577fad4a1f094ba"><div class="ttname"><a href="classContentConfigInput.html#a51f50f3f6b47fa204577fad4a1f094ba">ContentConfigInput.sliderKeyboardScroll</a></div><div class="ttdeci">Slider sliderKeyboardScroll</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00293">ContentConfigInput.cs:293</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a54f40f68b0dd7870f351a0be55766f7f"><div class="ttname"><a href="classContentConfigInput.html#a54f40f68b0dd7870f351a0be55766f7f">ContentConfigInput.ddMouse4Long</a></div><div class="ttdeci">UIDropdown ddMouse4Long</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00323">ContentConfigInput.cs:323</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a5613a462a31136609530277624f4559c"><div class="ttname"><a href="classContentConfigInput.html#a5613a462a31136609530277624f4559c">ContentConfigInput.b_ddMouse4Click</a></div><div class="ttdeci">UIDropdown b_ddMouse4Click</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00333">ContentConfigInput.cs:333</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a631622085c4600bdd44377495edace7a"><div class="ttname"><a href="classContentConfigInput.html#a631622085c4600bdd44377495edace7a">ContentConfigInput.toggleInvertX</a></div><div class="ttdeci">UIButton toggleInvertX</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00305">ContentConfigInput.cs:305</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a715f16a310ea572ca15510821477b556"><div class="ttname"><a href="classContentConfigInput.html#a715f16a310ea572ca15510821477b556">ContentConfigInput.toggleLinearZoom</a></div><div class="ttdeci">UIButton toggleLinearZoom</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00309">ContentConfigInput.cs:309</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a7232c39c5c06d6cab1805fa558ecb24d"><div class="ttname"><a href="classContentConfigInput.html#a7232c39c5c06d6cab1805fa558ecb24d">ContentConfigInput.toggleKeepRunning</a></div><div class="ttdeci">UIButton toggleKeepRunning</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00275">ContentConfigInput.cs:275</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a758ee98173d6f71958e3329f7d063feb"><div class="ttname"><a href="classContentConfigInput.html#a758ee98173d6f71958e3329f7d063feb">ContentConfigInput.sliderDragScroll</a></div><div class="ttdeci">Slider sliderDragScroll</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00295">ContentConfigInput.cs:295</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a802ab45dd7a9547b650250e0621db5ec"><div class="ttname"><a href="classContentConfigInput.html#a802ab45dd7a9547b650250e0621db5ec">ContentConfigInput.toggleRightClickExitBuildMode</a></div><div class="ttdeci">UIButton toggleRightClickExitBuildMode</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00277">ContentConfigInput.cs:277</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a822ae93ddaade7608614b75c3c01aab2"><div class="ttname"><a href="classContentConfigInput.html#a822ae93ddaade7608614b75c3c01aab2">ContentConfigInput.toggleEdge</a></div><div class="ttdeci">UIButton toggleEdge</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00303">ContentConfigInput.cs:303</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a880f59fd25b56f390e0e39df178c3413"><div class="ttname"><a href="classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413">ContentConfigInput.g___onInstantiate</a></div><div class="ttdeci">void&lt; OnInstantiate &gt; g___onInstantiate(EInput.KeyMap a, ItemKeymap b)</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00250">ContentConfigInput.cs:250</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a8ff5986d015e6cb0ee126ecb3959728c"><div class="ttname"><a href="classContentConfigInput.html#a8ff5986d015e6cb0ee126ecb3959728c">ContentConfigInput.toggleZoomToMouse</a></div><div class="ttdeci">UIButton toggleZoomToMouse</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00283">ContentConfigInput.cs:283</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a94ada726dd3fdcee10a0fc3d81c0f17d"><div class="ttname"><a href="classContentConfigInput.html#a94ada726dd3fdcee10a0fc3d81c0f17d">ContentConfigInput.ddMiddleClickLong</a></div><div class="ttdeci">UIDropdown ddMiddleClickLong</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00315">ContentConfigInput.cs:315</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_a94b1b45cf36d908bb571cd61b58f8bcf"><div class="ttname"><a href="classContentConfigInput.html#a94b1b45cf36d908bb571cd61b58f8bcf">ContentConfigInput.toggleIgnoreNPCs</a></div><div class="ttdeci">UIButton toggleIgnoreNPCs</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00279">ContentConfigInput.cs:279</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_aaaf4789670bf46a5a9c3d250e8dafa13"><div class="ttname"><a href="classContentConfigInput.html#aaaf4789670bf46a5a9c3d250e8dafa13">ContentConfigInput.b_ddMiddleClickLong</a></div><div class="ttdeci">UIDropdown b_ddMiddleClickLong</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00327">ContentConfigInput.cs:327</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ac2718473d4741182021fcb49b16f970a"><div class="ttname"><a href="classContentConfigInput.html#ac2718473d4741182021fcb49b16f970a">ContentConfigInput.ddMouse4Click</a></div><div class="ttdeci">UIDropdown ddMouse4Click</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00321">ContentConfigInput.cs:321</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ac398a7d6e80f9eaa726849c4bc47bca8"><div class="ttname"><a href="classContentConfigInput.html#ac398a7d6e80f9eaa726849c4bc47bca8">ContentConfigInput.ddMouse3Click</a></div><div class="ttdeci">UIDropdown ddMouse3Click</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00317">ContentConfigInput.cs:317</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_acc8cb2089c3d698a7c1137ae6ee6465a"><div class="ttname"><a href="classContentConfigInput.html#acc8cb2089c3d698a7c1137ae6ee6465a">ContentConfigInput.sliderMoveFrame</a></div><div class="ttdeci">Slider sliderMoveFrame</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00301">ContentConfigInput.cs:301</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ace1f31ef4d3a02d0db75079a8ef0157f"><div class="ttname"><a href="classContentConfigInput.html#ace1f31ef4d3a02d0db75079a8ef0157f">ContentConfigInput.b_ddMouse4Long</a></div><div class="ttdeci">UIDropdown b_ddMouse4Long</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00335">ContentConfigInput.cs:335</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ad0d325364910b56a96caa7efdea2176d"><div class="ttname"><a href="classContentConfigInput.html#ad0d325364910b56a96caa7efdea2176d">ContentConfigInput.toggleAltChangeHeight</a></div><div class="ttdeci">UIButton toggleAltChangeHeight</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00311">ContentConfigInput.cs:311</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ad25fb2421ce303b6afb47d008925e8a7"><div class="ttname"><a href="classContentConfigInput.html#ad25fb2421ce303b6afb47d008925e8a7">ContentConfigInput.ddMiddleClick</a></div><div class="ttdeci">UIDropdown ddMiddleClick</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00313">ContentConfigInput.cs:313</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ad589bae87ccb0236999667ec38c59026"><div class="ttname"><a href="classContentConfigInput.html#ad589bae87ccb0236999667ec38c59026">ContentConfigInput.toggleZoomMin</a></div><div class="ttdeci">UIButton toggleZoomMin</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00285">ContentConfigInput.cs:285</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_ada1b0afac109921e3652dcde6f3b4efd"><div class="ttname"><a href="classContentConfigInput.html#ada1b0afac109921e3652dcde6f3b4efd">ContentConfigInput.toggleAutorun</a></div><div class="ttdeci">UIButton toggleAutorun</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00271">ContentConfigInput.cs:271</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_aee1cd880c448339390d9f24a42ec17cc"><div class="ttname"><a href="classContentConfigInput.html#aee1cd880c448339390d9f24a42ec17cc">ContentConfigInput.b_ddMouse3Click</a></div><div class="ttdeci">UIDropdown b_ddMouse3Click</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00329">ContentConfigInput.cs:329</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_af30937f574b98ba95e24b081e9cdf5e6"><div class="ttname"><a href="classContentConfigInput.html#af30937f574b98ba95e24b081e9cdf5e6">ContentConfigInput.toggleSmoothFollow</a></div><div class="ttdeci">UIButton toggleSmoothFollow</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00289">ContentConfigInput.cs:289</a></div></div>
+<div class="ttc" id="aclassContentConfigInput_html_afbf34bbcd52ae21d339f966a8e027423"><div class="ttname"><a href="classContentConfigInput.html#afbf34bbcd52ae21d339f966a8e027423">ContentConfigInput.toggleAltKeyAxis</a></div><div class="ttdeci">UIButton toggleAltKeyAxis</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigInput_8cs_source.html#l00273">ContentConfigInput.cs:273</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html"><div class="ttname"><a href="classCoreConfig.html">CoreConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00011">CoreConfig.cs:12</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a75830db6af0286d65ccc8fea20b055f8"><div class="ttname"><a href="classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8">CoreConfig.GameFuncBuild</a></div><div class="ttdeci">GameFuncBuild</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00494">CoreConfig.cs:495</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad985ae8f519011ae201e8ec55758dc0e"><div class="ttname"><a href="classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0e">CoreConfig.GameFunc</a></div><div class="ttdeci">GameFunc</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00473">CoreConfig.cs:474</a></div></div>
+<div class="ttc" id="aclassItemKeymap_html"><div class="ttname"><a href="classItemKeymap.html">ItemKeymap</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemKeymap_8cs_source.html#l00004">ItemKeymap.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ContentConfigInput_8cs_source.html#l00325">b_ddMiddleClick</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00327">b_ddMiddleClickLong</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00329">b_ddMouse3Click</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00331">b_ddMouse3Long</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00333">b_ddMouse4Click</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00335">b_ddMouse4Long</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00313">ddMiddleClick</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00315">ddMiddleClickLong</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00317">ddMouse3Click</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00319">ddMouse3Long</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00321">ddMouse4Click</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00323">ddMouse4Long</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00250">g___onInstantiate()</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00269">listAdvanced</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00267">listEtc</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00263">listGeneral</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00265">listMenu</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00261">listMovement</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00295">sliderDragScroll</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00297">sliderEdgeScroll</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00293">sliderKeyboardScroll</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00301">sliderMoveFrame</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00311">toggleAltChangeHeight</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00281">toggleAltExamine</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00273">toggleAltKeyAxis</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00271">toggleAutorun</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00303">toggleEdge</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00279">toggleIgnoreNPCs</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00305">toggleInvertX</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00307">toggleInvertY</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00275">toggleKeepRunning</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00309">toggleLinearZoom</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00277">toggleRightClickExitBuildMode</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00289">toggleSmoothFollow</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00291">toggleSmoothMove</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00287">toggleZoomMax</a>, <a class="el" href="ContentConfigInput_8cs_source.html#l00285">toggleZoomMin</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00283">toggleZoomToMouse</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00250">g___onInstantiate()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +699,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00325">325</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="aaaf4789670bf46a5a9c3d250e8dafa13" name="aaaf4789670bf46a5a9c3d250e8dafa13"></a>
@@ -389,6 +716,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00327">327</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -406,6 +735,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00329">329</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a0b2c32a377c603697e7504fdcae90d46" name="a0b2c32a377c603697e7504fdcae90d46"></a>
@@ -421,6 +752,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00331">331</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -438,6 +771,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00333">333</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="ace1f31ef4d3a02d0db75079a8ef0157f" name="ace1f31ef4d3a02d0db75079a8ef0157f"></a>
@@ -453,6 +788,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00335">335</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -470,6 +807,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00313">313</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a94ada726dd3fdcee10a0fc3d81c0f17d" name="a94ada726dd3fdcee10a0fc3d81c0f17d"></a>
@@ -485,6 +824,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00315">315</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -502,6 +843,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00317">317</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a38d7fa582a79a51ae9821cdf062005ef" name="a38d7fa582a79a51ae9821cdf062005ef"></a>
@@ -517,6 +860,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00319">319</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -534,6 +879,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00321">321</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a54f40f68b0dd7870f351a0be55766f7f" name="a54f40f68b0dd7870f351a0be55766f7f"></a>
@@ -549,6 +896,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00323">323</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -566,6 +915,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00269">269</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="ace3d5bce37313a3044f96fede362b181" name="ace3d5bce37313a3044f96fede362b181"></a>
@@ -581,6 +932,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00267">267</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -598,6 +951,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00263">263</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a6b02edf84444b6559b13f84ba156793c" name="a6b02edf84444b6559b13f84ba156793c"></a>
@@ -613,6 +968,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00265">265</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -630,6 +987,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00261">261</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00240">g___refreshList()</a>, and <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a758ee98173d6f71958e3329f7d063feb" name="a758ee98173d6f71958e3329f7d063feb"></a>
@@ -645,6 +1004,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00295">295</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -662,6 +1023,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00297">297</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a51f50f3f6b47fa204577fad4a1f094ba" name="a51f50f3f6b47fa204577fad4a1f094ba"></a>
@@ -678,6 +1041,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00293">293</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="acc8cb2089c3d698a7c1137ae6ee6465a" name="acc8cb2089c3d698a7c1137ae6ee6465a"></a>
@@ -693,6 +1058,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00301">301</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -726,6 +1093,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00311">311</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a2587e0e2ebad91c6a8905803039741c3" name="a2587e0e2ebad91c6a8905803039741c3"></a>
@@ -741,6 +1110,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00281">281</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -758,6 +1129,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00273">273</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="ada1b0afac109921e3652dcde6f3b4efd" name="ada1b0afac109921e3652dcde6f3b4efd"></a>
@@ -773,6 +1146,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00271">271</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -790,6 +1165,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00303">303</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a94b1b45cf36d908bb571cd61b58f8bcf" name="a94b1b45cf36d908bb571cd61b58f8bcf"></a>
@@ -805,6 +1182,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00279">279</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -822,6 +1201,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00305">305</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a0fcbf4ca4e959874de4d75af0ffb54c5" name="a0fcbf4ca4e959874de4d75af0ffb54c5"></a>
@@ -837,6 +1218,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00307">307</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -854,6 +1237,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00275">275</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a715f16a310ea572ca15510821477b556" name="a715f16a310ea572ca15510821477b556"></a>
@@ -869,6 +1254,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00309">309</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -886,6 +1273,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00277">277</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="af30937f574b98ba95e24b081e9cdf5e6" name="af30937f574b98ba95e24b081e9cdf5e6"></a>
@@ -901,6 +1290,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00289">289</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -918,6 +1309,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00291">291</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a158e046d684444886fb651b47ba76d06" name="a158e046d684444886fb651b47ba76d06"></a>
@@ -933,6 +1326,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00287">287</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -950,6 +1345,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00285">285</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a8ff5986d015e6cb0ee126ecb3959728c" name="a8ff5986d015e6cb0ee126ecb3959728c"></a>
@@ -966,15 +1363,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigInput_8cs_source.html#l00283">283</a> of file <a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigInput_8cs_source.html#l00008">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ContentConfigInput_8cs_source.html">ContentConfigInput.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classContentConfigInput.html">ContentConfigInput</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

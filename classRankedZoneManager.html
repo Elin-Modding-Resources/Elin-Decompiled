@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classRankedZoneManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -199,6 +219,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RankedZoneManager_8cs_source.html#l00122">122</a> of file <a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">int</span> rank = this.<a class="code hl_function" href="classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1">GetRank</a>(_z);</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (rank &gt; 125)</div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> (126 - rank) * 100;</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclassRankedZoneManager_html_a869f1a8914291c2265f83fa779ce91e1"><div class="ttname"><a href="classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1">RankedZoneManager.GetRank</a></div><div class="ttdeci">int GetRank(Zone z)</div><div class="ttdef"><b>Definition:</b> <a href="RankedZoneManager_8cs_source.html#l00028">RankedZoneManager.cs:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="RankedZoneManager_8cs_source.html#l00008">GetIncome()</a>.</p>
 
 </div>
 </div>
@@ -227,6 +258,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RankedZoneManager_8cs_source.html#l00008">8</a> of file <a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        List&lt;FactionBranch&gt; children = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a>.<a class="code hl_function" href="classFaction.html#a0fbbcc93f973d9dc9d933dfddaf11ca8">GetChildren</a>();</div>
+<div class="line"><span class="lineno">   11</span>        children.Sort((<a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> a, <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> b) =&gt; this.<a class="code hl_function" href="classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1">GetRank</a>(a.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>) - <span class="keyword">this</span>.GetRank(b.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>));</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordtype">int</span> num = children.IndexOf(z.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>);</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> this.&lt;<a class="code hl_function" href="classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289">GetIncome</a>&gt;<a class="code hl_function" href="classRankedZoneManager.html#a81270438727921b7157fdef3a6c38257">g__CalcIncome</a>|0_0(z) * 100 / (100 + num * 40);</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassChara_html_a34adc7979fac5d829240e53c7da2e5b8"><div class="ttname"><a href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">Chara.faction</a></div><div class="ttdeci">Faction faction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00245">Chara.cs:246</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html"><div class="ttname"><a href="classFactionBranch.html">FactionBranch</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00008">FactionBranch.cs:9</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ab396614ec503ed152c0e039257610577"><div class="ttname"><a href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">FactionBranch.owner</a></div><div class="ttdeci">Zone owner</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01681">FactionBranch.cs:1681</a></div></div>
+<div class="ttc" id="aclassFaction_html_a0fbbcc93f973d9dc9d933dfddaf11ca8"><div class="ttname"><a href="classFaction.html#a0fbbcc93f973d9dc9d933dfddaf11ca8">Faction.GetChildren</a></div><div class="ttdeci">List&lt; FactionBranch &gt; GetChildren()</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00073">Faction.2.cs:73</a></div></div>
+<div class="ttc" id="aclassRankedZoneManager_html_a81270438727921b7157fdef3a6c38257"><div class="ttname"><a href="classRankedZoneManager.html#a81270438727921b7157fdef3a6c38257">RankedZoneManager.g__CalcIncome</a></div><div class="ttdeci">int&lt; GetIncome &gt; g__CalcIncome(Zone _z)</div><div class="ttdef"><b>Definition:</b> <a href="RankedZoneManager_8cs_source.html#l00122">RankedZoneManager.cs:122</a></div></div>
+<div class="ttc" id="aclassRankedZoneManager_html_ac48597be4e453de321fecdbebb904289"><div class="ttname"><a href="classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289">RankedZoneManager.GetIncome</a></div><div class="ttdeci">int GetIncome(Zone z)</div><div class="ttdef"><b>Definition:</b> <a href="RankedZoneManager_8cs_source.html#l00008">RankedZoneManager.cs:8</a></div></div>
+<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03852">Zone.cs:3852</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Zone_8cs_source.html#l03852">Zone.branch</a>, <a class="el" href="Chara_8cs_source.html#l00246">Chara.faction</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00122">g__CalcIncome()</a>, <a class="el" href="Faction_82_8cs_source.html#l00073">Faction.GetChildren()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00008">GetIncome()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00028">GetRank()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01681">FactionBranch.owner</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RankedZoneManager_8cs_source.html#l00008">GetIncome()</a>, <a class="el" href="Faction_82_8cs_source.html#l00339">Faction.GetRankIncome()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>, and <a class="el" href="UIFactionInfo_8cs_source.html#l00102">UIFactionInfo.SetZone()</a>.</p>
 
 </div>
 </div>
@@ -254,6 +304,102 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RankedZoneManager_8cs_source.html#l00040">40</a> of file <a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        List&lt;RankedZone&gt; list = <span class="keyword">new</span> List&lt;RankedZone&gt;();</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keyword">using</span> (Dictionary&lt;int, Spatial&gt;.ValueCollection.Enumerator enumerator = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Values.GetEnumerator())</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <a class="code hl_class" href="classSpatial.html">Spatial</a> z = enumerator.Current;</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> ((z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.value &gt; 0 &amp;&amp; z.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> == 0) || z.<a class="code hl_property" href="classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6">IsPlayerFaction</a>)</div>
+<div class="line"><span class="lineno">   49</span>                {</div>
+<div class="line"><span class="lineno">   50</span>                    <span class="keywordtype">int</span> v = 0;</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">if</span> (z.<a class="code hl_property" href="classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6">IsPlayerFaction</a>)</div>
+<div class="line"><span class="lineno">   52</span>                    {</div>
+<div class="line"><span class="lineno">   53</span>                        v = (z as <a class="code hl_class" href="classZone.html">Zone</a>).branch.Worth;</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   56</span>                    {</div>
+<div class="line"><span class="lineno">   57</span>                        v = z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.value;</div>
+<div class="line"><span class="lineno">   58</span>                        Rand.UseSeed(z.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>, delegate</div>
+<div class="line"><span class="lineno">   59</span>                        {</div>
+<div class="line"><span class="lineno">   60</span>                            v = z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.value + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.value / 10);</div>
+<div class="line"><span class="lineno">   61</span>                        });</div>
+<div class="line"><span class="lineno">   62</span>                    }</div>
+<div class="line"><span class="lineno">   63</span>                    list.Add(<span class="keyword">new</span> <a class="code hl_class" href="classRankedZone.html">RankedZone</a></div>
+<div class="line"><span class="lineno">   64</span>                    {</div>
+<div class="line"><span class="lineno">   65</span>                        z = (z as <a class="code hl_class" href="classZone.html">Zone</a>),</div>
+<div class="line"><span class="lineno">   66</span>                        value = v</div>
+<div class="line"><span class="lineno">   67</span>                    });</div>
+<div class="line"><span class="lineno">   68</span>                }</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        list.Sort((<a class="code hl_class" href="classRankedZone.html">RankedZone</a> a, <a class="code hl_class" href="classRankedZone.html">RankedZone</a> b) =&gt; b.Value - a.<a class="code hl_property" href="classRankedZone.html#abc23a020cbc55143362876c8cf0879f7">Value</a>);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRankedZone.html">RankedZone</a> rankedZone <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordtype">int</span> num3 = num2 - rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a>;</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordtype">int</span> num4;</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 100000000)</div>
+<div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                num4 = 100000000;</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 10000000)</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                num4 = 5000000;</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 5000000)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                num4 = 1000000;</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 1000000)</div>
+<div class="line"><span class="lineno">   91</span>            {</div>
+<div class="line"><span class="lineno">   92</span>                num4 = 500000;</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 500000)</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                num4 = 50000;</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 100000)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                num4 = 10000;</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 50000)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                num4 = 5000;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">value</a> &gt;= 10000)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                num4 = 2000;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                num4 = 1000;</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>            num += Mathf.Max(num3 / num4, 1);</div>
+<div class="line"><span class="lineno">  115</span>            rankedZone.rank = num;</div>
+<div class="line"><span class="lineno">  116</span>            num2 = rankedZone.<a class="code hl_property" href="classRankedZone.html#abc23a020cbc55143362876c8cf0879f7">Value</a>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
+<div class="ttc" id="aclassRankedZone_html"><div class="ttname"><a href="classRankedZone.html">RankedZone</a></div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00005">RankedZone.cs:6</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_abc23a020cbc55143362876c8cf0879f7"><div class="ttname"><a href="classRankedZone.html#abc23a020cbc55143362876c8cf0879f7">RankedZone.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00007">RankedZone.cs:8</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_aded6624a749beaee385e9f6a8f791e9b"><div class="ttname"><a href="classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b">RankedZone.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00045">RankedZone.cs:45</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a54dc5f41115039fd65cd42c74e43025d"><div class="ttname"><a href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">SpatialManager.map</a></div><div class="ttdeci">SpatialManager.GlobalSpatialList map</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00097">SpatialManager.cs:97</a></div></div>
+<div class="ttc" id="aclassSpatial_html"><div class="ttname"><a href="classSpatial.html">Spatial</a></div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00008">Spatial.cs:9</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a12267d80d357d59863cbbcf3da43a458"><div class="ttname"><a href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">Spatial.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00122">Spatial.cs:123</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a3d32786bb1d24d70693a1a132e44b4e1"><div class="ttname"><a href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">Spatial.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00050">Spatial.cs:51</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a76e41bd267f581e82f8a5592ff85c1d6"><div class="ttname"><a href="classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6">Spatial.IsPlayerFaction</a></div><div class="ttdeci">bool IsPlayerFaction</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00435">Spatial.cs:436</a></div></div>
+<div class="ttc" id="aclassSpatial_html_aa42f763f502591c824b67010aa9ecde7"><div class="ttname"><a href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">Spatial.source</a></div><div class="ttdeci">SourceZone.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00422">Spatial.cs:423</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Spatial_8cs_source.html#l00436">Spatial.IsPlayerFaction</a>, <a class="el" href="Spatial_8cs_source.html#l00123">Spatial.lv</a>, <a class="el" href="SpatialManager_8cs_source.html#l00097">SpatialManager.map</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Spatial_8cs_source.html#l00423">Spatial.source</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, and <a class="el" href="Spatial_8cs_source.html#l00051">Spatial.uid</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RankedZoneManager_8cs_source.html#l00028">GetRank()</a>, and <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">ContentHomeRanking.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -282,6 +428,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RankedZoneManager_8cs_source.html#l00028">28</a> of file <a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRankedZone.html">RankedZone</a> rankedZone <span class="keywordflow">in</span> this.<a class="code hl_function" href="classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d">GetList</a>())</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (rankedZone.<a class="code hl_variable" href="classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63">z</a> == z)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> rankedZone.<a class="code hl_variable" href="classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500">rank</a>;</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassRankedZoneManager_html_aff220cdd1f7b50f1c6f8e28d0bce976d"><div class="ttname"><a href="classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d">RankedZoneManager.GetList</a></div><div class="ttdeci">List&lt; RankedZone &gt; GetList()</div><div class="ttdef"><b>Definition:</b> <a href="RankedZoneManager_8cs_source.html#l00040">RankedZoneManager.cs:40</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_ab40e314009b6ea7d7ee01e8938f10500"><div class="ttname"><a href="classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500">RankedZone.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00043">RankedZone.cs:43</a></div></div>
+<div class="ttc" id="aclassRankedZone_html_ad926bf010c857b7145d4ff96df8f9b63"><div class="ttname"><a href="classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63">RankedZone.z</a></div><div class="ttdeci">Zone z</div><div class="ttdef"><b>Definition:</b> <a href="RankedZone_8cs_source.html#l00041">RankedZone.cs:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RankedZoneManager_8cs_source.html#l00040">GetList()</a>, <a class="el" href="RankedZone_8cs_source.html#l00043">RankedZone.rank</a>, and <a class="el" href="RankedZone_8cs_source.html#l00041">RankedZone.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RankedZoneManager_8cs_source.html#l00008">GetIncome()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00016">GetRankText()</a>, and <a class="el" href="HomeResourceWorth_8cs_source.html#l00016">HomeResourceWorth.UpdateRank()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +473,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RankedZoneManager_8cs_source.html#l00016">16</a> of file <a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">int</span> rank = this.<a class="code hl_function" href="classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1">GetRank</a>(z);</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">string</span>[] list = Lang.GetList(<span class="stringliteral">&quot;num_rank&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">int</span> num = rank % 10;</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (num &gt;= list.Length)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            num = 0;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> rank.ToString() + list[num];</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RankedZoneManager_8cs_source.html#l00028">GetRank()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIFactionInfo_8cs_source.html#l00102">UIFactionInfo.SetZone()</a>, and <a class="el" href="HomeResourceWorth_8cs_source.html#l00016">HomeResourceWorth.UpdateRank()</a>.</p>
 
 </div>
 </div>
@@ -317,9 +494,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="RankedZoneManager_8cs_source.html">RankedZoneManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRankedZoneManager.html">RankedZoneManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

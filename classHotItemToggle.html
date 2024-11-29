@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemToggle.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -212,7 +232,31 @@ Properties</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00116">116</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a5d5da0270e832a175ce6d86434654759">ToggleRoof</a>,</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52acebf6a570e09e9d985a4246077956905">showBalloon</a>,</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a5a88c30b6189db3c3d3ba37f79742596">muteBGM</a>,</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52af6f0913825572cf6d316caf6d51d2d17">instaComplete</a>,</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a16c4f05056f7da0c4bc2be553d9c3d74">ToggleSlope</a>,</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a39dcf2499a2b938429a6919337c70a26">ToggleWall</a>,</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a04a81245f8df74ba5581ea7aa164da49">ToggleFreepos</a>,</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a6413a346ffba31b0c47bc09fc8ebca80">SnapFreepos</a>,</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52af796cb1fd7ad9bc6bbe10827c57f287a">ToggleBuildLight</a>,</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a3fd45a9964e7e1f3b38354d6ddeef941">ToggleRoofEdit</a>,</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_enumvalue" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52aaae707edb0dc85bf36be27ce8f594967">ToggleNoRoof</a></div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a04a81245f8df74ba5581ea7aa164da49"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a04a81245f8df74ba5581ea7aa164da49">HotItemToggle.Type.ToggleFreepos</a></div><div class="ttdeci">@ ToggleFreepos</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a16c4f05056f7da0c4bc2be553d9c3d74"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a16c4f05056f7da0c4bc2be553d9c3d74">HotItemToggle.Type.ToggleSlope</a></div><div class="ttdeci">@ ToggleSlope</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a39dcf2499a2b938429a6919337c70a26"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a39dcf2499a2b938429a6919337c70a26">HotItemToggle.Type.ToggleWall</a></div><div class="ttdeci">@ ToggleWall</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a3fd45a9964e7e1f3b38354d6ddeef941"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a3fd45a9964e7e1f3b38354d6ddeef941">HotItemToggle.Type.ToggleRoofEdit</a></div><div class="ttdeci">@ ToggleRoofEdit</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a5a88c30b6189db3c3d3ba37f79742596"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a5a88c30b6189db3c3d3ba37f79742596">HotItemToggle.Type.muteBGM</a></div><div class="ttdeci">@ muteBGM</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a5d5da0270e832a175ce6d86434654759"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a5d5da0270e832a175ce6d86434654759">HotItemToggle.Type.ToggleRoof</a></div><div class="ttdeci">@ ToggleRoof</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52a6413a346ffba31b0c47bc09fc8ebca80"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52a6413a346ffba31b0c47bc09fc8ebca80">HotItemToggle.Type.SnapFreepos</a></div><div class="ttdeci">@ SnapFreepos</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52aaae707edb0dc85bf36be27ce8f594967"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52aaae707edb0dc85bf36be27ce8f594967">HotItemToggle.Type.ToggleNoRoof</a></div><div class="ttdeci">@ ToggleNoRoof</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52acebf6a570e09e9d985a4246077956905"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52acebf6a570e09e9d985a4246077956905">HotItemToggle.Type.showBalloon</a></div><div class="ttdeci">@ showBalloon</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52af6f0913825572cf6d316caf6d51d2d17"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52af6f0913825572cf6d316caf6d51d2d17">HotItemToggle.Type.instaComplete</a></div><div class="ttdeci">@ instaComplete</div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52af796cb1fd7ad9bc6bbe10827c57f287a"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52af796cb1fd7ad9bc6bbe10827c57f287a">HotItemToggle.Type.ToggleBuildLight</a></div><div class="ttdeci">@ ToggleBuildLight</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -253,6 +297,70 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotItem.html#a70fde84034309bd884c98d694fc58444">HotItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00067">67</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_variable" href="classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced">type</a>)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleRoof:</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a069377a0e67b6f038ba2e8ff0229c73d">ToggleShowRoof</a>();</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.showBalloon:</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a05c79747ba67e54b3d74680aef287fb6">ToggleBalloon</a>();</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.muteBGM:</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a0a63e42087bf706cc4eb5671deb6f26a">ToggleMuteBGM</a>();</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.instaComplete:</div>
+<div class="line"><span class="lineno">   81</span>            EClass.player.instaComplete = !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#ab2b183e8459e103bf50c641b39bbd505">instaComplete</a>;</div>
+<div class="line"><span class="lineno">   82</span>            SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (b)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">RefreshHighlight</a>();</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleSlope:</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#aa199c81cc0927ca0d5d9df085bcfa9ef">ToggleSlope</a>();</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleWall:</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a0824774ae690b74175d63e28bbe73db0">ToggleShowWall</a>();</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleFreepos:</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#ac2673e5cdc0919a5507a19dddd506bc4">ToggleFreePos</a>();</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.SnapFreepos:</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#ac946df61bb407f87297bc4fa019f03af">ToggleSnapFreePos</a>();</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleBuildLight:</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a30a4cffa8405091f15dba1cba586a36d">ToggleLight</a>();</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleNoRoof:</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">ToggleRoof</a>();</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (b)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">RefreshHighlight</a>();</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="ttc" id="aclassButtonHotItem_html_a0a9f69e1f6138f2b98430160c036148e"><div class="ttname"><a href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">ButtonHotItem.widget</a></div><div class="ttdeci">WidgetHotbar widget</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.cs:128</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassHotItemToggle_html"><div class="ttname"><a href="classHotItemToggle.html">HotItemToggle</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggle_8cs_source.html#l00005">HotItemToggle.cs:6</a></div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a422bc29ce33b632d0de2720b30c0ac52"><div class="ttname"><a href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">HotItemToggle.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggle_8cs_source.html#l00116">HotItemToggle.cs:117</a></div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a9d2ae891e224456cd162807d5229cced"><div class="ttname"><a href="classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced">HotItemToggle.type</a></div><div class="ttdeci">HotItemToggle.Type type</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggle_8cs_source.html#l00114">HotItemToggle.cs:114</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ab2b183e8459e103bf50c641b39bbd505"><div class="ttname"><a href="classPlayer.html#ab2b183e8459e103bf50c641b39bbd505">Player.instaComplete</a></div><div class="ttdeci">bool instaComplete</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01591">Player.cs:1591</a></div></div>
+<div class="ttc" id="aclassScene_html_a05c79747ba67e54b3d74680aef287fb6"><div class="ttname"><a href="classScene.html#a05c79747ba67e54b3d74680aef287fb6">Scene.ToggleBalloon</a></div><div class="ttdeci">void ToggleBalloon()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00807">Scene.cs:807</a></div></div>
+<div class="ttc" id="aclassScene_html_a069377a0e67b6f038ba2e8ff0229c73d"><div class="ttname"><a href="classScene.html#a069377a0e67b6f038ba2e8ff0229c73d">Scene.ToggleShowRoof</a></div><div class="ttdeci">void ToggleShowRoof()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00723">Scene.cs:723</a></div></div>
+<div class="ttc" id="aclassScene_html_a0824774ae690b74175d63e28bbe73db0"><div class="ttname"><a href="classScene.html#a0824774ae690b74175d63e28bbe73db0">Scene.ToggleShowWall</a></div><div class="ttdeci">void ToggleShowWall()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00757">Scene.cs:757</a></div></div>
+<div class="ttc" id="aclassScene_html_a0a63e42087bf706cc4eb5671deb6f26a"><div class="ttname"><a href="classScene.html#a0a63e42087bf706cc4eb5671deb6f26a">Scene.ToggleMuteBGM</a></div><div class="ttdeci">void ToggleMuteBGM()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00815">Scene.cs:815</a></div></div>
+<div class="ttc" id="aclassScene_html_a30a4cffa8405091f15dba1cba586a36d"><div class="ttname"><a href="classScene.html#a30a4cffa8405091f15dba1cba586a36d">Scene.ToggleLight</a></div><div class="ttdeci">void ToggleLight()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00729">Scene.cs:729</a></div></div>
+<div class="ttc" id="aclassScene_html_aa199c81cc0927ca0d5d9df085bcfa9ef"><div class="ttname"><a href="classScene.html#aa199c81cc0927ca0d5d9df085bcfa9ef">Scene.ToggleSlope</a></div><div class="ttdeci">void ToggleSlope()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00769">Scene.cs:769</a></div></div>
+<div class="ttc" id="aclassScene_html_aaa4c834df143d223bc8be2e8417d27c7"><div class="ttname"><a href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">Scene.ToggleRoof</a></div><div class="ttdeci">void ToggleRoof()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00763">Scene.cs:763</a></div></div>
+<div class="ttc" id="aclassScene_html_ac2673e5cdc0919a5507a19dddd506bc4"><div class="ttname"><a href="classScene.html#ac2673e5cdc0919a5507a19dddd506bc4">Scene.ToggleFreePos</a></div><div class="ttdeci">void ToggleFreePos()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00746">Scene.cs:746</a></div></div>
+<div class="ttc" id="aclassScene_html_ac946df61bb407f87297bc4fa019f03af"><div class="ttname"><a href="classScene.html#ac946df61bb407f87297bc4fa019f03af">Scene.ToggleSnapFreePos</a></div><div class="ttdeci">void ToggleSnapFreePos()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00735">Scene.cs:735</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a63c30bdbc5e23f621d6c0ae69294a033"><div class="ttname"><a href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">WidgetHotbar.RefreshHighlight</a></div><div class="ttdeci">bool RefreshHighlight()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00463">WidgetHotbar.cs:463</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01591">Player.instaComplete</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00463">WidgetHotbar.RefreshHighlight()</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l00807">Scene.ToggleBalloon()</a>, <a class="el" href="Scene_8cs_source.html#l00746">Scene.ToggleFreePos()</a>, <a class="el" href="Scene_8cs_source.html#l00729">Scene.ToggleLight()</a>, <a class="el" href="Scene_8cs_source.html#l00815">Scene.ToggleMuteBGM()</a>, <a class="el" href="Scene_8cs_source.html#l00763">Scene.ToggleRoof()</a>, <a class="el" href="Scene_8cs_source.html#l00723">Scene.ToggleShowRoof()</a>, <a class="el" href="Scene_8cs_source.html#l00757">Scene.ToggleShowWall()</a>, <a class="el" href="Scene_8cs_source.html#l00769">Scene.ToggleSlope()</a>, <a class="el" href="Scene_8cs_source.html#l00735">Scene.ToggleSnapFreePos()</a>, <a class="el" href="HotItemToggle_8cs_source.html#l00114">type</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.widget</a>.</p>
 
 </div>
 </div>
@@ -280,6 +388,38 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00039">39</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_variable" href="classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced">type</a>)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleRoof:</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.showRoof;</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.showBalloon:</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a795e862bdae4885d1894692469b0bf51">hideBalloon</a>;</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.muteBGM:</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.muteBGM;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.instaComplete:</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#ab2b183e8459e103bf50c641b39bbd505">instaComplete</a>;</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleSlope:</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.slope;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleWall:</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.showWall;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleFreepos:</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.freePos;</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.SnapFreepos:</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.snapFreePos;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleBuildLight:</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.buildLight;</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classHotItemToggle.html">HotItemToggle</a>.<a class="code hl_enumeration" href="classHotItemToggle.html#a422bc29ce33b632d0de2720b30c0ac52">Type</a>.ToggleNoRoof:</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.noRoof;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00159">EClass.cs:160</a></div></div>
+<div class="ttc" id="aclassGame_html_abc8a6c6cf00c78236e51e7f6a94407f4"><div class="ttname"><a href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">Game.config</a></div><div class="ttdeci">Game.Config config</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00850">Game.cs:850</a></div></div>
+<div class="ttc" id="aclassScene_html_a795e862bdae4885d1894692469b0bf51"><div class="ttname"><a href="classScene.html#a795e862bdae4885d1894692469b0bf51">Scene.hideBalloon</a></div><div class="ttdeci">bool hideBalloon</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01109">Scene.cs:1109</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00850">Game.config</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Scene_8cs_source.html#l01109">Scene.hideBalloon</a>, <a class="el" href="Player_8cs_source.html#l01591">Player.instaComplete</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>, and <a class="el" href="HotItemToggle_8cs_source.html#l00114">type</a>.</p>
 
 </div>
 </div>
@@ -297,6 +437,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00114">114</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemToggle_8cs_source.html#l00067">OnClick()</a>, and <a class="el" href="HotItemToggle_8cs_source.html#l00039">ShouldHighlight()</a>.</p>
 
 </div>
 </div>
@@ -322,7 +464,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00031">31</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> this.type == HotItemToggle.Type.instaComplete &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaec5f3f0ea1c3cce9dbe7b7afd3d9ae8" name="aaec5f3f0ea1c3cce9dbe7b7afd3d9ae8"></a>
@@ -346,7 +496,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00007">7</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced">type</a>.ToString().lang();</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9f863e0b2f13ef2fccc4042feddf8953" name="a9f863e0b2f13ef2fccc4042feddf8953"></a>
@@ -370,7 +526,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00023">23</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_&quot;</span> + this.<a class="code hl_variable" href="classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced">type</a>.ToString();</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="addff1613029ddd1a645d098e666f06b0" name="addff1613029ddd1a645d098e666f06b0"></a>
@@ -394,16 +556,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemToggle_8cs_source.html#l00015">15</a> of file <a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> SpriteSheet.Get(this.<a class="code hl_property" href="classHotItemToggle.html#a9f863e0b2f13ef2fccc4042feddf8953">pathSprite</a> + <span class="stringliteral">&quot;_highlight&quot;</span>) ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.spritesHighlight[2];</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassHotItemToggle_html_a9f863e0b2f13ef2fccc4042feddf8953"><div class="ttname"><a href="classHotItemToggle.html#a9f863e0b2f13ef2fccc4042feddf8953">HotItemToggle.pathSprite</a></div><div class="ttdeci">override string pathSprite</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggle_8cs_source.html#l00023">HotItemToggle.cs:24</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemToggle_8cs_source.html">HotItemToggle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemToggle.html">HotItemToggle</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

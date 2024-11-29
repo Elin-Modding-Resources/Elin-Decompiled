@@ -1,0 +1,25 @@
+var classSpawnSetting =
+[
+    [ "Boss", "classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039", null ],
+    [ "DefenseEnemy", "classSpawnSetting.html#ad0b09c0647d774fc82deace7d2932f6b", null ],
+    [ "Encounter", "classSpawnSetting.html#a0cb6358dbdc2a78e6b0d794701da5b0e", null ],
+    [ "Evolved", "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a", null ],
+    [ "HomeEnemy", "classSpawnSetting.html#a3b50dc0e398966092d680d41b941a611", null ],
+    [ "HomeGuest", "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832", null ],
+    [ "HomeWild", "classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967", null ],
+    [ "Mob", "classSpawnSetting.html#ac8f954151ce73f00eb8592f9d1d83237", null ],
+    [ "Debug", "classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588", null ],
+    [ "Default", "classSpawnSetting.html#a28e3c3eb950ac72d3e9111554a0b8e51", null ],
+    [ "filterLv", "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e", null ],
+    [ "fixedLv", "classSpawnSetting.html#a2440c0a8c9505303947061db11b3bb21", null ],
+    [ "forcedHostility", "classSpawnSetting.html#a489d36b071421240d07e5caaada0d581", null ],
+    [ "hostility", "classSpawnSetting.html#a173add994ee5df417322be39c52aea79", null ],
+    [ "id", "classSpawnSetting.html#aa580628089b00d52eb870b037d9cd3f3", null ],
+    [ "idSpawnList", "classSpawnSetting.html#ac9967d2ba69dd3c0b0ed2b6855b121eb", null ],
+    [ "isBoss", "classSpawnSetting.html#ae27e7a07baf5bf5816fe611e0e5adfcd", null ],
+    [ "isEvolved", "classSpawnSetting.html#a16dffa2fa82e6d8e79407d4ef04f7d46", null ],
+    [ "levelRange", "classSpawnSetting.html#add15efe890d670829aef42c70aee6bcf", null ],
+    [ "position", "classSpawnSetting.html#af0eaf354ef07f73cfad029ec9884cd88", null ],
+    [ "rarity", "classSpawnSetting.html#ab05b7a4cf8640a000889af414880dab0", null ],
+    [ "tries", "classSpawnSetting.html#a6e87093df32af6f2c144907ec43ae7f6", null ]
+];

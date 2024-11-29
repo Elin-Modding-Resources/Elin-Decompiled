@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAlgorithms_1_1PathFinder.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceAlgorithms.html">Algorithms</a></li><li class="navelem"><a class="el" href="classAlgorithms_1_1PathFinder.html">PathFinder</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -231,6 +247,269 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00049">49</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            lock (<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <a class="code hl_class" href="classPoint.html">Point</a> startPoint = path.<a class="code hl_variable" href="classPathProgress.html#a69cf8d496f54b05f24d9fde71ff203ca">startPoint</a>;</div>
+<div class="line"><span class="lineno">   54</span>                <a class="code hl_class" href="classPoint.html">Point</a> destPoint = path.<a class="code hl_variable" href="classPathProgress.html#a826e61b598a8e03afcc1a60cfd5fcc7e">destPoint</a>;</div>
+<div class="line"><span class="lineno">   55</span>                path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Clear();</div>
+<div class="line"><span class="lineno">   56</span>                this.mFound = (this.mStop = (this.mStopped = <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   57</span>                this.mCloseNodeCounter = 0;</div>
+<div class="line"><span class="lineno">   58</span>                this.mOpenNodeValue += 2;</div>
+<div class="line"><span class="lineno">   59</span>                this.mCloseNodeValue += 2;</div>
+<div class="line"><span class="lineno">   60</span>                this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">mOpen</a>.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Clear</a>();</div>
+<div class="line"><span class="lineno">   61</span>                this.mLocation = (this.mStartLocation = startPoint.z * this.mGridX + startPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>);</div>
+<div class="line"><span class="lineno">   62</span>                this.mEndLocation = destPoint.z * this.mGridX + destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a> &gt;= this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>.Length)</div>
+<div class="line"><span class="lineno">   64</span>                {</div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ad6de693f86572d28647890f17bcaf81f">debug</a>)</div>
+<div class="line"><span class="lineno">   66</span>                    {</div>
+<div class="line"><span class="lineno">   67</span>                        Debug.Log(<span class="stringliteral">&quot;length over&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>                    }</div>
+<div class="line"><span class="lineno">   69</span>                }</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab9d3b2aaada2289792952dbfca6f4bc7">mEndLocation</a> != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>)</div>
+<div class="line"><span class="lineno">   71</span>                {</div>
+<div class="line"><span class="lineno">   72</span>                    this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].G = 0;</div>
+<div class="line"><span class="lineno">   73</span>                    this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].F = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0e6014d69806d8b655abb7ab8c7a1452">mHEstimate</a>;</div>
+<div class="line"><span class="lineno">   74</span>                    this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].PX = (ushort)startPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keyword">this</span>.mCalcGrid[<span class="keyword">this</span>.mLocation].PZ = (ushort)startPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">   76</span>                    this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].Status = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#abd253586f9deb3905d885391cd5c7f8f">mOpenNodeValue</a>;</div>
+<div class="line"><span class="lineno">   77</span>                    this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">mOpen</a>.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Push</a>(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>);</div>
+<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">while</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">mOpen</a>.<a class="code hl_property" href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Count</a> &gt; 0 &amp;&amp; !<span class="keyword">this</span>.mStop)</div>
+<div class="line"><span class="lineno">   79</span>                    {</div>
+<div class="line"><span class="lineno">   80</span>                        this.mLocation = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">mOpen</a>.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Pop</a>();</div>
+<div class="line"><span class="lineno">   81</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].Status != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">mCloseNodeValue</a>)</div>
+<div class="line"><span class="lineno">   82</span>                        {</div>
+<div class="line"><span class="lineno">   83</span>                            this.mLocationX = (ushort)(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a> % this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a3c42a398932813c07b4fdbe645475e97">mGridX</a>);</div>
+<div class="line"><span class="lineno">   84</span>                            this.mLocationZ = (ushort)(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a> % this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a91c2506f0fcc0c400ef601c7b9f2d181">mGridXZ</a> / this.mGridX);</div>
+<div class="line"><span class="lineno">   85</span>                            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a> == this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab9d3b2aaada2289792952dbfca6f4bc7">mEndLocation</a>)</div>
+<div class="line"><span class="lineno">   86</span>                            {</div>
+<div class="line"><span class="lineno">   87</span>                                this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].Status = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">mCloseNodeValue</a>;</div>
+<div class="line"><span class="lineno">   88</span>                                this.mFound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   89</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   90</span>                            }</div>
+<div class="line"><span class="lineno">   91</span>                            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a31c7ef8ad2efa1bbe70e43f6960f3e4e">mCloseNodeCounter</a> &gt; path.<a class="code hl_variable" href="classPathProgress.html#a4ca01d68abb009e493e349d09b6ba21c">searchLimit</a>)</div>
+<div class="line"><span class="lineno">   92</span>                            {</div>
+<div class="line"><span class="lineno">   93</span>                                this.mStopped = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   94</span>                                <span class="keywordflow">if</span> (path.<a class="code hl_variable" href="classPathProgress.html#a4ca01d68abb009e493e349d09b6ba21c">searchLimit</a> &gt; 1000)</div>
+<div class="line"><span class="lineno">   95</span>                                {</div>
+<div class="line"><span class="lineno">   96</span>                                    <span class="keywordtype">string</span> str = <span class="stringliteral">&quot;search limit: &quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>                                    <a class="code hl_class" href="classPoint.html">Point</a> startPoint2 = path.<a class="code hl_variable" href="classPathProgress.html#a69cf8d496f54b05f24d9fde71ff203ca">startPoint</a>;</div>
+<div class="line"><span class="lineno">   98</span>                                    <span class="keywordtype">string</span> str2 = (startPoint2 != <span class="keyword">null</span>) ? startPoint2.<a class="code hl_function" href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">ToString</a>() : <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   99</span>                                    <span class="keywordtype">string</span> str3 = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>                                    <a class="code hl_class" href="classPoint.html">Point</a> destPoint2 = path.<a class="code hl_variable" href="classPathProgress.html#a826e61b598a8e03afcc1a60cfd5fcc7e">destPoint</a>;</div>
+<div class="line"><span class="lineno">  101</span>                                    Debug.Log(str + str2 + str3 + ((destPoint2 != <span class="keyword">null</span>) ? destPoint2.<a class="code hl_function" href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">ToString</a>() : <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">  102</span>                                }</div>
+<div class="line"><span class="lineno">  103</span>                                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  104</span>                            }</div>
+<div class="line"><span class="lineno">  105</span>                            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa51616c6ecb853a2f0cda5f5ffb4f038">PunishChangeDirection</a>)</div>
+<div class="line"><span class="lineno">  106</span>                            {</div>
+<div class="line"><span class="lineno">  107</span>                                this.mHoriz = (int)(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a> - this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].PX);</div>
+<div class="line"><span class="lineno">  108</span>                            }</div>
+<div class="line"><span class="lineno">  109</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (this.Diagonals ? 8 : 4); i++)</div>
+<div class="line"><span class="lineno">  110</span>                            {</div>
+<div class="line"><span class="lineno">  111</span>                                this.mNewLocationX = this.mLocationX + (ushort)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6">mDirection</a>[i, 0];</div>
+<div class="line"><span class="lineno">  112</span>                                this.mNewLocationZ = this.mLocationZ + (ushort)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6">mDirection</a>[i, 1];</div>
+<div class="line"><span class="lineno">  113</span>                                this.mNewLocation = (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a> * this.mGridX + (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a68cfb2725dd00631d8ce7d48c4eb692f">mNewLocationX</a>;</div>
+<div class="line"><span class="lineno">  114</span>                                <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)this.mNewLocationX &lt; this.mGridX &amp;&amp; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a> &lt; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a3f0fc4c9908c6f784cd8dcc9dba9da94">mGridZ</a> &amp;&amp; (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].Status != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">mCloseNodeValue</a> || this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a1985446ab74477a1c949fc31b528d523">mReopenCloseNodes</a>))</div>
+<div class="line"><span class="lineno">  115</span>                                {</div>
+<div class="line"><span class="lineno">  116</span>                                    <span class="keywordflow">if</span> (path.<a class="code hl_variable" href="classPathProgress.html#afa7c8fd6a31fe2fcd00b1887121a2d3e">ignoreConnection</a> &amp;&amp; <span class="keyword">this</span>.mEndLocation == <span class="keyword">this</span>.mNewLocation)</div>
+<div class="line"><span class="lineno">  117</span>                                    {</div>
+<div class="line"><span class="lineno">  118</span>                                        this._weight = 1;</div>
+<div class="line"><span class="lineno">  119</span>                                    }</div>
+<div class="line"><span class="lineno">  120</span>                                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  121</span>                                    {</div>
+<div class="line"><span class="lineno">  122</span>                                        <span class="keywordflow">if</span> (i &lt; 4)</div>
+<div class="line"><span class="lineno">  123</span>                                        {</div>
+<div class="line"><span class="lineno">  124</span>                                            this.index = ((this.mNewLocationZ &lt; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>) ? 0 : ((this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a68cfb2725dd00631d8ce7d48c4eb692f">mNewLocationX</a> &gt; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a>) ? 1 : ((this.mNewLocationZ &gt; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>) ? 2 : 3)));</div>
+<div class="line"><span class="lineno">  125</span>                                            this._weight = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a>, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">weights</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">index</a>];</div>
+<div class="line"><span class="lineno">  126</span>                                        }</div>
+<div class="line"><span class="lineno">  127</span>                                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  128</span>                                        {</div>
+<div class="line"><span class="lineno">  129</span>                                            this.mx = (int)(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a> + (ushort)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6">mDirection</a>[i, 0]);</div>
+<div class="line"><span class="lineno">  130</span>                                            this.mz = (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>;</div>
+<div class="line"><span class="lineno">  131</span>                                            this.index = ((this.mz &lt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>) ? 0 : ((this.mx &gt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a>) ? 1 : ((this.mz &gt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>) ? 2 : 3)));</div>
+<div class="line"><span class="lineno">  132</span>                                            this._weight = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.mLocationX, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">weights</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">index</a>];</div>
+<div class="line"><span class="lineno">  133</span>                                            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a38e1b759a9a864760db4e564f85056d1">mx</a>, this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85494624383a3a5990411a1a94dd7db0">mz</a>].IsPathBlocked(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a4778b53c50c090807a147a853ff5c618">moveType</a>))</div>
+<div class="line"><span class="lineno">  134</span>                                            {</div>
+<div class="line"><span class="lineno">  135</span>                                                this._weight = 0;</div>
+<div class="line"><span class="lineno">  136</span>                                            }</div>
+<div class="line"><span class="lineno">  137</span>                                            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">_weight</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  138</span>                                            {</div>
+<div class="line"><span class="lineno">  139</span>                                                this.index = ((this.mz &lt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a>) ? 0 : ((this.mx &gt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a68cfb2725dd00631d8ce7d48c4eb692f">mNewLocationX</a>) ? 1 : ((this.mz &gt; (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a>) ? 2 : 3)));</div>
+<div class="line"><span class="lineno">  140</span>                                                this._weight = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.mNewLocationX, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">weights</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">index</a>];</div>
+<div class="line"><span class="lineno">  141</span>                                                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">_weight</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  142</span>                                                {</div>
+<div class="line"><span class="lineno">  143</span>                                                    this.mx = (int)this.mLocationX;</div>
+<div class="line"><span class="lineno">  144</span>                                                    this.mz = (int)(this.mLocationZ + (ushort)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6">mDirection</a>[i, 1]);</div>
+<div class="line"><span class="lineno">  145</span>                                                    this.index = ((this.mz &lt; (int)this.mLocationZ) ? 0 : ((this.mx &gt; (int)this.mLocationX) ? 1 : ((this.mz &gt; (int)this.mLocationZ) ? 2 : 3)));</div>
+<div class="line"><span class="lineno">  146</span>                                                    this._weight = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.mLocationX, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">weights</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">index</a>];</div>
+<div class="line"><span class="lineno">  147</span>                                                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[this.mx, this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a85494624383a3a5990411a1a94dd7db0">mz</a>].IsPathBlocked(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a4778b53c50c090807a147a853ff5c618">moveType</a>))</div>
+<div class="line"><span class="lineno">  148</span>                                                    {</div>
+<div class="line"><span class="lineno">  149</span>                                                        this._weight = 0;</div>
+<div class="line"><span class="lineno">  150</span>                                                    }</div>
+<div class="line"><span class="lineno">  151</span>                                                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">_weight</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  152</span>                                                    {</div>
+<div class="line"><span class="lineno">  153</span>                                                        this.index = ((this.mz &lt; (int)this.mNewLocationZ) ? 0 : ((this.mx &gt; (int)this.mNewLocationX) ? 1 : ((this.mz &gt; (int)this.mNewLocationZ) ? 2 : 3)));</div>
+<div class="line"><span class="lineno">  154</span>                                                        this._weight = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.mNewLocationX, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">mNewLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">weights</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">index</a>];</div>
+<div class="line"><span class="lineno">  155</span>                                                    }</div>
+<div class="line"><span class="lineno">  156</span>                                                }</div>
+<div class="line"><span class="lineno">  157</span>                                            }</div>
+<div class="line"><span class="lineno">  158</span>                                        }</div>
+<div class="line"><span class="lineno">  159</span>                                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">_weight</a> == 0)</div>
+<div class="line"><span class="lineno">  160</span>                                        {</div>
+<div class="line"><span class="lineno">  161</span>                                            <span class="keywordflow">goto</span> IL_A70;</div>
+<div class="line"><span class="lineno">  162</span>                                        }</div>
+<div class="line"><span class="lineno">  163</span>                                        this._weight += this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(int)this.mLocationX, (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>].<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a8d81e4a1a7d1d2c74ced5f73110add48">baseWeight</a>;</div>
+<div class="line"><span class="lineno">  164</span>                                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab9d3b2aaada2289792952dbfca6f4bc7">mEndLocation</a> != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a> &amp;&amp; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">weightMap</a>[(<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a68cfb2725dd00631d8ce7d48c4eb692f">mNewLocationX</a>, (int)this.mNewLocationZ].IsPathBlocked(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a4778b53c50c090807a147a853ff5c618">moveType</a>))</div>
+<div class="line"><span class="lineno">  165</span>                                        {</div>
+<div class="line"><span class="lineno">  166</span>                                            <span class="keywordflow">goto</span> IL_A70;</div>
+<div class="line"><span class="lineno">  167</span>                                        }</div>
+<div class="line"><span class="lineno">  168</span>                                    }</div>
+<div class="line"><span class="lineno">  169</span>                                    this.mNewG = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].G + (int)this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">_weight</a>;</div>
+<div class="line"><span class="lineno">  170</span>                                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa51616c6ecb853a2f0cda5f5ffb4f038">PunishChangeDirection</a>)</div>
+<div class="line"><span class="lineno">  171</span>                                    {</div>
+<div class="line"><span class="lineno">  172</span>                                        <span class="keywordflow">if</span> (this.mNewLocationX - this.mLocationX != 0 &amp;&amp; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a4997919a13fd3318bf785522ef0f3e59">mHoriz</a> == 0)</div>
+<div class="line"><span class="lineno">  173</span>                                        {</div>
+<div class="line"><span class="lineno">  174</span>                                            this.mNewG += Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>) + Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  175</span>                                        }</div>
+<div class="line"><span class="lineno">  176</span>                                        <span class="keywordflow">if</span> (this.mNewLocationZ - this.mLocationZ != 0 &amp;&amp; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a4997919a13fd3318bf785522ef0f3e59">mHoriz</a> != 0)</div>
+<div class="line"><span class="lineno">  177</span>                                        {</div>
+<div class="line"><span class="lineno">  178</span>                                            this.mNewG += Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>) + Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  179</span>                                        }</div>
+<div class="line"><span class="lineno">  180</span>                                    }</div>
+<div class="line"><span class="lineno">  181</span>                                    <span class="keywordflow">if</span> ((this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].Status != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#abd253586f9deb3905d885391cd5c7f8f">mOpenNodeValue</a> &amp;&amp; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].Status != this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">mCloseNodeValue</a>) || this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].G &gt; this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aeb087f9cc16224f333a710e6c0c73f66">mNewG</a>)</div>
+<div class="line"><span class="lineno">  182</span>                                    {</div>
+<div class="line"><span class="lineno">  183</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].PX = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">mLocationX</a>;</div>
+<div class="line"><span class="lineno">  184</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].PZ = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">mLocationZ</a>;</div>
+<div class="line"><span class="lineno">  185</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].G = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#aeb087f9cc16224f333a710e6c0c73f66">mNewG</a>;</div>
+<div class="line"><span class="lineno">  186</span>                                        <span class="keywordflow">switch</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a31494f3333e429d2fbfbefe57457603f">mFormula</a>)</div>
+<div class="line"><span class="lineno">  187</span>                                        {</div>
+<div class="line"><span class="lineno">  188</span>                                        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  189</span>                                            this.mH = this.mHEstimate * (Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>) + Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>));</div>
+<div class="line"><span class="lineno">  190</span>                                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  191</span>                                        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f">HeuristicFormula</a>.MaxDXDY:</div>
+<div class="line"><span class="lineno">  192</span>                                            this.mH = this.mHEstimate * Math.Max(Math.Abs((<span class="keywordtype">int</span>)<span class="keyword">this</span>.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>), Math.Abs((<span class="keywordtype">int</span>)<span class="keyword">this</span>.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>));</div>
+<div class="line"><span class="lineno">  193</span>                                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  194</span>                                        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f">HeuristicFormula</a>.DiagonalShortCut:</div>
+<div class="line"><span class="lineno">  195</span>                                        {</div>
+<div class="line"><span class="lineno">  196</span>                                            <span class="keywordtype">int</span> num = Math.Min(Math.Abs((<span class="keywordtype">int</span>)<span class="keyword">this</span>.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>), Math.Abs((<span class="keywordtype">int</span>)<span class="keyword">this</span>.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>));</div>
+<div class="line"><span class="lineno">  197</span>                                            <span class="keywordtype">int</span> num2 = Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>) + Math.Abs((<span class="keywordtype">int</span>)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  198</span>                                            this.mH = this.mHEstimate * 2 * num + this.mHEstimate * (num2 - 2 * num);</div>
+<div class="line"><span class="lineno">  199</span>                                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  200</span>                                        }</div>
+<div class="line"><span class="lineno">  201</span>                                        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f">HeuristicFormula</a>.Euclidean:</div>
+<div class="line"><span class="lineno">  202</span>                                            this.mH = (int)((<span class="keywordtype">double</span>)this.mHEstimate * Math.Sqrt(Math.Pow((<span class="keywordtype">double</span>)((<span class="keywordtype">int</span>)<span class="keyword">this</span>.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>), 2.0) + Math.Pow((<span class="keywordtype">double</span>)((<span class="keywordtype">int</span>)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>), 2.0)));</div>
+<div class="line"><span class="lineno">  203</span>                                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  204</span>                                        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f">HeuristicFormula</a>.EuclideanNoSQR:</div>
+<div class="line"><span class="lineno">  205</span>                                            this.mH = (int)((<span class="keywordtype">double</span>)this.mHEstimate * (Math.Pow((<span class="keywordtype">double</span>)((int)this.mNewLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>), 2.0) + Math.Pow((<span class="keywordtype">double</span>)((int)this.mNewLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>), 2.0)));</div>
+<div class="line"><span class="lineno">  206</span>                                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  207</span>                                        }</div>
+<div class="line"><span class="lineno">  208</span>                                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a2774ab62eda72a0f212a30ad58170c1b">TieBreaker</a>)</div>
+<div class="line"><span class="lineno">  209</span>                                        {</div>
+<div class="line"><span class="lineno">  210</span>                                            <span class="keywordtype">int</span> num3 = (int)this.mLocationX - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">  211</span>                                            <span class="keywordtype">int</span> num4 = (<span class="keywordtype">int</span>)this.mLocationZ - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">  212</span>                                            <span class="keywordtype">int</span> num5 = startPoint.x - destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">  213</span>                                            <span class="keywordtype">int</span> num6 = startPoint.z - destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">  214</span>                                            <span class="keywordtype">int</span> num7 = Math.Abs(num3 * num6 - num5 * num4);</div>
+<div class="line"><span class="lineno">  215</span>                                            this.mH = (int)((<span class="keywordtype">double</span>)this.mH + (double)num7 * 0.001);</div>
+<div class="line"><span class="lineno">  216</span>                                        }</div>
+<div class="line"><span class="lineno">  217</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].F = this.mNewG + this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ad9309c813fbff64c7c36817f9eaed2a5">mH</a>;</div>
+<div class="line"><span class="lineno">  218</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">mOpen</a>.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Push</a>(this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>);</div>
+<div class="line"><span class="lineno">  219</span>                                        this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">mNewLocation</a>].Status = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#abd253586f9deb3905d885391cd5c7f8f">mOpenNodeValue</a>;</div>
+<div class="line"><span class="lineno">  220</span>                                    }</div>
+<div class="line"><span class="lineno">  221</span>                                }</div>
+<div class="line"><span class="lineno">  222</span>                                IL_A70:;</div>
+<div class="line"><span class="lineno">  223</span>                            }</div>
+<div class="line"><span class="lineno">  224</span>                            this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a31c7ef8ad2efa1bbe70e43f6960f3e4e">mCloseNodeCounter</a>++;</div>
+<div class="line"><span class="lineno">  225</span>                            this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">mLocation</a>].Status = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">mCloseNodeValue</a>;</div>
+<div class="line"><span class="lineno">  226</span>                        }</div>
+<div class="line"><span class="lineno">  227</span>                    }</div>
+<div class="line"><span class="lineno">  228</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a0843be674764c031a781a1625bb6e1ac">mFound</a>)</div>
+<div class="line"><span class="lineno">  229</span>                    {</div>
+<div class="line"><span class="lineno">  230</span>                        <span class="keywordtype">int</span> num8 = destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">  231</span>                        <span class="keywordtype">int</span> num9 = destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">  232</span>                        PathFinder.PathFinderNodeFast pathFinderNodeFast = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[destPoint.z * this.mGridX + destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>];</div>
+<div class="line"><span class="lineno">  233</span>                        PathFinderNode pathFinderNode;</div>
+<div class="line"><span class="lineno">  234</span>                        pathFinderNode.G = pathFinderNodeFast.G;</div>
+<div class="line"><span class="lineno">  235</span>                        pathFinderNode.PX = (int)pathFinderNodeFast.PX;</div>
+<div class="line"><span class="lineno">  236</span>                        pathFinderNode.PZ = (<span class="keywordtype">int</span>)pathFinderNodeFast.PZ;</div>
+<div class="line"><span class="lineno">  237</span>                        pathFinderNode.X = destPoint.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">  238</span>                        pathFinderNode.Z = destPoint.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">  239</span>                        <span class="keywordflow">while</span> (pathFinderNode.X != pathFinderNode.PX || pathFinderNode.Z != pathFinderNode.PZ)</div>
+<div class="line"><span class="lineno">  240</span>                        {</div>
+<div class="line"><span class="lineno">  241</span>                            path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Add(pathFinderNode);</div>
+<div class="line"><span class="lineno">  242</span>                            num8 = pathFinderNode.PX;</div>
+<div class="line"><span class="lineno">  243</span>                            num9 = pathFinderNode.PZ;</div>
+<div class="line"><span class="lineno">  244</span>                            pathFinderNodeFast = this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>[num9 * this.mGridX + num8];</div>
+<div class="line"><span class="lineno">  245</span>                            pathFinderNode.G = pathFinderNodeFast.G;</div>
+<div class="line"><span class="lineno">  246</span>                            pathFinderNode.PX = (int)pathFinderNodeFast.PX;</div>
+<div class="line"><span class="lineno">  247</span>                            pathFinderNode.PZ = (<span class="keywordtype">int</span>)pathFinderNodeFast.PZ;</div>
+<div class="line"><span class="lineno">  248</span>                            pathFinderNode.X = num8;</div>
+<div class="line"><span class="lineno">  249</span>                            pathFinderNode.Z = num9;</div>
+<div class="line"><span class="lineno">  250</span>                        }</div>
+<div class="line"><span class="lineno">  251</span>                        path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Add(pathFinderNode);</div>
+<div class="line"><span class="lineno">  252</span>                        this.mStopped = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  253</span>                    }</div>
+<div class="line"><span class="lineno">  254</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  255</span>                    {</div>
+<div class="line"><span class="lineno">  256</span>                        this.mStopped = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  257</span>                    }</div>
+<div class="line"><span class="lineno">  258</span>                }</div>
+<div class="line"><span class="lineno">  259</span>            }</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a0843be674764c031a781a1625bb6e1ac"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a0843be674764c031a781a1625bb6e1ac">Algorithms.PathFinder.mFound</a></div><div class="ttdeci">bool mFound</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00321">PathFinder.cs:321</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a0e6014d69806d8b655abb7ab8c7a1452"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a0e6014d69806d8b655abb7ab8c7a1452">Algorithms.PathFinder.mHEstimate</a></div><div class="ttdeci">int mHEstimate</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00276">PathFinder.cs:276</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a0edd44a928ccee654ed3da7b716649d8"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a0edd44a928ccee654ed3da7b716649d8">Algorithms.PathFinder.mLocation</a></div><div class="ttdeci">int mLocation</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00301">PathFinder.cs:301</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a1985446ab74477a1c949fc31b528d523"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a1985446ab74477a1c949fc31b528d523">Algorithms.PathFinder.mReopenCloseNodes</a></div><div class="ttdeci">bool mReopenCloseNodes</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00286">PathFinder.cs:286</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a2774ab62eda72a0f212a30ad58170c1b"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a2774ab62eda72a0f212a30ad58170c1b">Algorithms.PathFinder.TieBreaker</a></div><div class="ttdeci">bool TieBreaker</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00270">PathFinder.cs:270</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a31494f3333e429d2fbfbefe57457603f"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a31494f3333e429d2fbfbefe57457603f">Algorithms.PathFinder.mFormula</a></div><div class="ttdeci">HeuristicFormula mFormula</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00272">PathFinder.cs:272</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a31c7ef8ad2efa1bbe70e43f6960f3e4e"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a31c7ef8ad2efa1bbe70e43f6960f3e4e">Algorithms.PathFinder.mCloseNodeCounter</a></div><div class="ttdeci">int mCloseNodeCounter</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00319">PathFinder.cs:319</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a38e1b759a9a864760db4e564f85056d1"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a38e1b759a9a864760db4e564f85056d1">Algorithms.PathFinder.mx</a></div><div class="ttdeci">int mx</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00371">PathFinder.cs:371</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a3c42a398932813c07b4fdbe645475e97"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a3c42a398932813c07b4fdbe645475e97">Algorithms.PathFinder.mGridX</a></div><div class="ttdeci">int mGridX</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00315">PathFinder.cs:315</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a3f0fc4c9908c6f784cd8dcc9dba9da94"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a3f0fc4c9908c6f784cd8dcc9dba9da94">Algorithms.PathFinder.mGridZ</a></div><div class="ttdeci">int mGridZ</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00317">PathFinder.cs:317</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a4778b53c50c090807a147a853ff5c618"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a4778b53c50c090807a147a853ff5c618">Algorithms.PathFinder.moveType</a></div><div class="ttdeci">PathManager.MoveType moveType</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00294">PathFinder.cs:294</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a4997919a13fd3318bf785522ef0f3e59"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a4997919a13fd3318bf785522ef0f3e59">Algorithms.PathFinder.mHoriz</a></div><div class="ttdeci">int mHoriz</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00284">PathFinder.cs:284</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a68cfb2725dd00631d8ce7d48c4eb692f"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a68cfb2725dd00631d8ce7d48c4eb692f">Algorithms.PathFinder.mNewLocationX</a></div><div class="ttdeci">ushort mNewLocationX</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00309">PathFinder.cs:309</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a6caae9fe6fbe8ebe518bbbffbbc2e641"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a6caae9fe6fbe8ebe518bbbffbbc2e641">Algorithms.PathFinder.mLocationZ</a></div><div class="ttdeci">ushort mLocationZ</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00307">PathFinder.cs:307</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a7078a2716ce1923a198a6c487ab7e515"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a7078a2716ce1923a198a6c487ab7e515">Algorithms.PathFinder.mOpen</a></div><div class="ttdeci">PriorityQueueB&lt; int &gt; mOpen</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00278">PathFinder.cs:278</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a85494624383a3a5990411a1a94dd7db0"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a85494624383a3a5990411a1a94dd7db0">Algorithms.PathFinder.mz</a></div><div class="ttdeci">int mz</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00373">PathFinder.cs:373</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a85525918e0416ef29cf351bd6af816e6"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6">Algorithms.PathFinder.mDirection</a></div><div class="ttdeci">sbyte[,] mDirection</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00323">PathFinder.cs:323</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a91c2506f0fcc0c400ef601c7b9f2d181"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a91c2506f0fcc0c400ef601c7b9f2d181">Algorithms.PathFinder.mGridXZ</a></div><div class="ttdeci">int mGridXZ</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00313">PathFinder.cs:313</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a969aea389bf18c3cf7dcb2407f7e6aa9"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9">Algorithms.PathFinder.weightMap</a></div><div class="ttdeci">WeightCell[,] weightMap</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00367">PathFinder.cs:367</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_a9d875da9aa88a40436afa1af5e77ba93"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">Algorithms.PathFinder.mCalcGrid</a></div><div class="ttdeci">PathFinder.PathFinderNodeFast[] mCalcGrid</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00288">PathFinder.cs:288</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_aa51616c6ecb853a2f0cda5f5ffb4f038"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#aa51616c6ecb853a2f0cda5f5ffb4f038">Algorithms.PathFinder.PunishChangeDirection</a></div><div class="ttdeci">bool PunishChangeDirection</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00266">PathFinder.cs:266</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_aa7cfdd32795a6e68ada06ddb0dcf635d"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#aa7cfdd32795a6e68ada06ddb0dcf635d">Algorithms.PathFinder.mLocationX</a></div><div class="ttdeci">ushort mLocationX</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00305">PathFinder.cs:305</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ab0af88bd8814fa4ddfc6ad86e3bd1b7e"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ab0af88bd8814fa4ddfc6ad86e3bd1b7e">Algorithms.PathFinder.mNewLocationZ</a></div><div class="ttdeci">ushort mNewLocationZ</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00311">PathFinder.cs:311</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ab0ec587c703a128133dece6c7684364d"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d">Algorithms.PathFinder.mCloseNodeValue</a></div><div class="ttdeci">byte mCloseNodeValue</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00292">PathFinder.cs:292</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ab9d3b2aaada2289792952dbfca6f4bc7"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ab9d3b2aaada2289792952dbfca6f4bc7">Algorithms.PathFinder.mEndLocation</a></div><div class="ttdeci">int mEndLocation</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00359">PathFinder.cs:359</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_abd253586f9deb3905d885391cd5c7f8f"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#abd253586f9deb3905d885391cd5c7f8f">Algorithms.PathFinder.mOpenNodeValue</a></div><div class="ttdeci">byte mOpenNodeValue</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00290">PathFinder.cs:290</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ad6de693f86572d28647890f17bcaf81f"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ad6de693f86572d28647890f17bcaf81f">Algorithms.PathFinder.debug</a></div><div class="ttdeci">bool debug</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00262">PathFinder.cs:262</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ad9309c813fbff64c7c36817f9eaed2a5"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ad9309c813fbff64c7c36817f9eaed2a5">Algorithms.PathFinder.mH</a></div><div class="ttdeci">int mH</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00299">PathFinder.cs:299</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_ada23ba7b28bcdd1d8d198138b8d96a21"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#ada23ba7b28bcdd1d8d198138b8d96a21">Algorithms.PathFinder.mNewLocation</a></div><div class="ttdeci">int mNewLocation</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00303">PathFinder.cs:303</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_aeb087f9cc16224f333a710e6c0c73f66"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#aeb087f9cc16224f333a710e6c0c73f66">Algorithms.PathFinder.mNewG</a></div><div class="ttdeci">int mNewG</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00363">PathFinder.cs:363</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_aed5a2b7a86c63e07b183063f6e72e1f4"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4">Algorithms.PathFinder.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00369">PathFinder.cs:369</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_af1c868552233fffa5407901024a309cf"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#af1c868552233fffa5407901024a309cf">Algorithms.PathFinder._weight</a></div><div class="ttdeci">byte _weight</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00365">PathFinder.cs:365</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4493d3d282d7d02290a26dd2c7205d30"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Algorithms.PriorityQueueB.Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00054">PriorityQueueB.cs:54</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a8609c9de258b03358a1e6af65c9bb59b"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Algorithms.PriorityQueueB.Push</a></div><div class="ttdeci">int Push(T item)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00037">PriorityQueueB.cs:37</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a9a7905feee12ba3f2f9a2d4f0ba3b465"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Algorithms.PriorityQueueB.Count</a></div><div class="ttdeci">int Count</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00134">PriorityQueueB.cs:135</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_aa0c8eaf824ae6d851b4972b0c4978098"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Algorithms.PriorityQueueB.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00129">PriorityQueueB.cs:129</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1WeightCell_html_a8d81e4a1a7d1d2c74ced5f73110add48"><div class="ttname"><a href="classAlgorithms_1_1WeightCell.html#a8d81e4a1a7d1d2c74ced5f73110add48">Algorithms.WeightCell.baseWeight</a></div><div class="ttdeci">byte baseWeight</div><div class="ttdef"><b>Definition:</b> <a href="WeightCell_8cs_source.html#l00016">WeightCell.cs:16</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1WeightCell_html_ab4a78bd9fec44ccd71d1264027a59843"><div class="ttname"><a href="classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843">Algorithms.WeightCell.weights</a></div><div class="ttdeci">byte[] weights</div><div class="ttdef"><b>Definition:</b> <a href="WeightCell_8cs_source.html#l00014">WeightCell.cs:14</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_a4ca01d68abb009e493e349d09b6ba21c"><div class="ttname"><a href="classPathProgress.html#a4ca01d68abb009e493e349d09b6ba21c">PathProgress.searchLimit</a></div><div class="ttdeci">int searchLimit</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00054">PathProgress.cs:54</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_a69cf8d496f54b05f24d9fde71ff203ca"><div class="ttname"><a href="classPathProgress.html#a69cf8d496f54b05f24d9fde71ff203ca">PathProgress.startPoint</a></div><div class="ttdeci">Point startPoint</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00044">PathProgress.cs:44</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_a826e61b598a8e03afcc1a60cfd5fcc7e"><div class="ttname"><a href="classPathProgress.html#a826e61b598a8e03afcc1a60cfd5fcc7e">PathProgress.destPoint</a></div><div class="ttdeci">Point destPoint</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00046">PathProgress.cs:46</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_adf90c032ba106931b892d67310e76f4c"><div class="ttname"><a href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">PathProgress.nodes</a></div><div class="ttdeci">List&lt; PathFinderNode &gt; nodes</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00042">PathProgress.cs:42</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_afa7c8fd6a31fe2fcd00b1887121a2d3e"><div class="ttname"><a href="classPathProgress.html#afa7c8fd6a31fe2fcd00b1887121a2d3e">PathProgress.ignoreConnection</a></div><div class="ttdeci">bool ignoreConnection</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00056">PathProgress.cs:56</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a41611e1395be01bf3d49302d97d2f9bf"><div class="ttname"><a href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">Point.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00598">Point.cs:598</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="anamespaceAlgorithms_html_a53b8d14b2d24c1ec77f42620b2171e4f"><div class="ttname"><a href="namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f">Algorithms.HeuristicFormula</a></div><div class="ttdeci">HeuristicFormula</div><div class="ttdef"><b>Definition:</b> <a href="HeuristicFormula_8cs_source.html#l00005">HeuristicFormula.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PathFinder_8cs_source.html#l00365">Algorithms.PathFinder._weight</a>, <a class="el" href="WeightCell_8cs_source.html#l00016">Algorithms.WeightCell.baseWeight</a>, <a class="el" href="PriorityQueueB_8cs_source.html#l00129">Algorithms.PriorityQueueB&lt; T &gt;.Clear()</a>, <a class="el" href="PriorityQueueB_8cs_source.html#l00135">Algorithms.PriorityQueueB&lt; T &gt;.Count</a>, <a class="el" href="PathFinder_8cs_source.html#l00262">Algorithms.PathFinder.debug</a>, <a class="el" href="PathProgress_8cs_source.html#l00046">PathProgress.destPoint</a>, <a class="el" href="PathFinder_8cs_source.html#l00379">Algorithms.PathFinder.PathFinderNodeFast.G</a>, <a class="el" href="PathProgress_8cs_source.html#l00056">PathProgress.ignoreConnection</a>, <a class="el" href="PathFinder_8cs_source.html#l00369">Algorithms.PathFinder.index</a>, <a class="el" href="PathFinder_8cs_source.html#l00288">Algorithms.PathFinder.mCalcGrid</a>, <a class="el" href="PathFinder_8cs_source.html#l00319">Algorithms.PathFinder.mCloseNodeCounter</a>, <a class="el" href="PathFinder_8cs_source.html#l00292">Algorithms.PathFinder.mCloseNodeValue</a>, <a class="el" href="PathFinder_8cs_source.html#l00323">Algorithms.PathFinder.mDirection</a>, <a class="el" href="PathFinder_8cs_source.html#l00359">Algorithms.PathFinder.mEndLocation</a>, <a class="el" href="PathFinder_8cs_source.html#l00272">Algorithms.PathFinder.mFormula</a>, <a class="el" href="PathFinder_8cs_source.html#l00321">Algorithms.PathFinder.mFound</a>, <a class="el" href="PathFinder_8cs_source.html#l00315">Algorithms.PathFinder.mGridX</a>, <a class="el" href="PathFinder_8cs_source.html#l00313">Algorithms.PathFinder.mGridXZ</a>, <a class="el" href="PathFinder_8cs_source.html#l00317">Algorithms.PathFinder.mGridZ</a>, <a class="el" href="PathFinder_8cs_source.html#l00299">Algorithms.PathFinder.mH</a>, <a class="el" href="PathFinder_8cs_source.html#l00276">Algorithms.PathFinder.mHEstimate</a>, <a class="el" href="PathFinder_8cs_source.html#l00284">Algorithms.PathFinder.mHoriz</a>, <a class="el" href="PathFinder_8cs_source.html#l00301">Algorithms.PathFinder.mLocation</a>, <a class="el" href="PathFinder_8cs_source.html#l00305">Algorithms.PathFinder.mLocationX</a>, <a class="el" href="PathFinder_8cs_source.html#l00307">Algorithms.PathFinder.mLocationZ</a>, <a class="el" href="PathFinder_8cs_source.html#l00363">Algorithms.PathFinder.mNewG</a>, <a class="el" href="PathFinder_8cs_source.html#l00303">Algorithms.PathFinder.mNewLocation</a>, <a class="el" href="PathFinder_8cs_source.html#l00309">Algorithms.PathFinder.mNewLocationX</a>, <a class="el" href="PathFinder_8cs_source.html#l00311">Algorithms.PathFinder.mNewLocationZ</a>, <a class="el" href="PathFinder_8cs_source.html#l00278">Algorithms.PathFinder.mOpen</a>, <a class="el" href="PathFinder_8cs_source.html#l00290">Algorithms.PathFinder.mOpenNodeValue</a>, <a class="el" href="PathFinder_8cs_source.html#l00294">Algorithms.PathFinder.moveType</a>, <a class="el" href="PathFinder_8cs_source.html#l00286">Algorithms.PathFinder.mReopenCloseNodes</a>, <a class="el" href="PathFinder_8cs_source.html#l00371">Algorithms.PathFinder.mx</a>, <a class="el" href="PathFinder_8cs_source.html#l00373">Algorithms.PathFinder.mz</a>, <a class="el" href="PathProgress_8cs_source.html#l00042">PathProgress.nodes</a>, <a class="el" href="PriorityQueueB_8cs_source.html#l00054">Algorithms.PriorityQueueB&lt; T &gt;.Pop()</a>, <a class="el" href="PathFinder_8cs_source.html#l00266">Algorithms.PathFinder.PunishChangeDirection</a>, <a class="el" href="PriorityQueueB_8cs_source.html#l00037">Algorithms.PriorityQueueB&lt; T &gt;.Push()</a>, <a class="el" href="PathFinder_8cs_source.html#l00381">Algorithms.PathFinder.PathFinderNodeFast.PX</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00013">Algorithms.PathFinderNode.PX</a>, <a class="el" href="PathFinder_8cs_source.html#l00383">Algorithms.PathFinder.PathFinderNodeFast.PZ</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00015">Algorithms.PathFinderNode.PZ</a>, <a class="el" href="PathProgress_8cs_source.html#l00054">PathProgress.searchLimit</a>, <a class="el" href="PathProgress_8cs_source.html#l00044">PathProgress.startPoint</a>, <a class="el" href="PathFinder_8cs_source.html#l00270">Algorithms.PathFinder.TieBreaker</a>, <a class="el" href="Point_8cs_source.html#l00598">Point.ToString()</a>, <a class="el" href="PathFinder_8cs_source.html#l00367">Algorithms.PathFinder.weightMap</a>, <a class="el" href="WeightCell_8cs_source.html#l00014">Algorithms.WeightCell.weights</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00009">Algorithms.PathFinderNode.X</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00011">Algorithms.PathFinderNode.Z</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00028">Algorithms.PathFinder.FindPath()</a>.</p>
 
 </div>
 </div>
@@ -261,6 +540,31 @@ Private Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIPathfinder.html#a5b4fce198c3a23e0b312579f6e87fe52">IPathfinder</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00028">28</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            this.moveType = path.<a class="code hl_variable" href="classPathProgress.html#a877ea55e29aaf08501598300e667a866">moveType</a>;</div>
+<div class="line"><span class="lineno">   31</span>            this.<a class="code hl_function" href="classAlgorithms_1_1PathFinder.html#aee0064c49dd5a6c7360ba21290218c5d">_FindPath</a>(path);</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                PathFinderNode pathFinderNode = path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>[path.nodes.Count - 1];</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (pathFinderNode.X == path.<a class="code hl_variable" href="classPathProgress.html#a69cf8d496f54b05f24d9fde71ff203ca">startPoint</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &amp;&amp; pathFinderNode.Z == path.<a class="code hl_variable" href="classPathProgress.html#a69cf8d496f54b05f24d9fde71ff203ca">startPoint</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.RemoveAt(path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Count - 1);</div>
+<div class="line"><span class="lineno">   38</span>                }</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (path.<a class="code hl_variable" href="classPathProgress.html#adf90c032ba106931b892d67310e76f4c">nodes</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                path.state = <a class="code hl_class" href="classPathProgress.html">PathProgress</a>.<a class="code hl_enumeration" href="classPathProgress.html#a71a9df50a827b3358cdef39664047e6c">State</a>.Fail;</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            path.state = <a class="code hl_class" href="classPathProgress.html">PathProgress</a>.<a class="code hl_enumeration" href="classPathProgress.html#a71a9df50a827b3358cdef39664047e6c">State</a>.PathReady;</div>
+<div class="line"><span class="lineno">   46</span>            path.nodeIndex = path.nodes.Count - 1;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="ttc" id="aclassAlgorithms_1_1PathFinder_html_aee0064c49dd5a6c7360ba21290218c5d"><div class="ttname"><a href="classAlgorithms_1_1PathFinder.html#aee0064c49dd5a6c7360ba21290218c5d">Algorithms.PathFinder._FindPath</a></div><div class="ttdeci">void _FindPath(PathProgress path)</div><div class="ttdef"><b>Definition:</b> <a href="PathFinder_8cs_source.html#l00049">PathFinder.cs:49</a></div></div>
+<div class="ttc" id="aclassPathProgress_html"><div class="ttname"><a href="classPathProgress.html">PathProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00005">PathProgress.cs:6</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_a71a9df50a827b3358cdef39664047e6c"><div class="ttname"><a href="classPathProgress.html#a71a9df50a827b3358cdef39664047e6c">PathProgress.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00060">PathProgress.cs:61</a></div></div>
+<div class="ttc" id="aclassPathProgress_html_a877ea55e29aaf08501598300e667a866"><div class="ttname"><a href="classPathProgress.html#a877ea55e29aaf08501598300e667a866">PathProgress.moveType</a></div><div class="ttdeci">PathManager.MoveType moveType</div><div class="ttdef"><b>Definition:</b> <a href="PathProgress_8cs_source.html#l00058">PathProgress.cs:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, <a class="el" href="PathProgress_8cs_source.html#l00058">PathProgress.moveType</a>, <a class="el" href="PathProgress_8cs_source.html#l00042">PathProgress.nodes</a>, <a class="el" href="PathProgress_8cs_source.html#l00044">PathProgress.startPoint</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00009">Algorithms.PathFinderNode.X</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, <a class="el" href="PathFinderNode_8cs_source.html#l00011">Algorithms.PathFinderNode.Z</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -307,6 +611,20 @@ Private Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIPathfinder.html#a883ce17fbbce91b1d4ef0757ef84e26c">IPathfinder</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00014">14</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            this.grid = _grid;</div>
+<div class="line"><span class="lineno">   17</span>            this.weightMap = _weightMap;</div>
+<div class="line"><span class="lineno">   18</span>            this.mGridX = (int)((ushort)size);</div>
+<div class="line"><span class="lineno">   19</span>            this.mGridZ = (int)((ushort)size);</div>
+<div class="line"><span class="lineno">   20</span>            this.mGridXZ = this.mGridX * this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a3f0fc4c9908c6f784cd8dcc9dba9da94">mGridZ</a>;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a> == <span class="keyword">null</span> || this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93">mCalcGrid</a>.Length != <span class="keyword">this</span>.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a91c2506f0fcc0c400ef601c7b9f2d181">mGridXZ</a>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                this.mCalcGrid = <span class="keyword">new</span> PathFinder.PathFinderNodeFast[this.<a class="code hl_variable" href="classAlgorithms_1_1PathFinder.html#a91c2506f0fcc0c400ef601c7b9f2d181">mGridXZ</a>];</div>
+<div class="line"><span class="lineno">   24</span>                this.mOpen = <span class="keyword">new</span> PriorityQueueB&lt;int&gt;(<span class="keyword">new</span> PathFinder.ComparePFNodeMatrix(<span class="keyword">this</span>.mCalcGrid));</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PathFinder_8cs_source.html#l00288">Algorithms.PathFinder.mCalcGrid</a>, <a class="el" href="PathFinder_8cs_source.html#l00313">Algorithms.PathFinder.mGridXZ</a>, and <a class="el" href="PathFinder_8cs_source.html#l00317">Algorithms.PathFinder.mGridZ</a>.</p>
 
 </div>
 </div>
@@ -361,6 +679,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00365">365</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="ad6de693f86572d28647890f17bcaf81f" name="ad6de693f86572d28647890f17bcaf81f"></a>
@@ -376,6 +696,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00262">262</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -457,6 +779,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00369">369</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a9d875da9aa88a40436afa1af5e77ba93" name="a9d875da9aa88a40436afa1af5e77ba93"></a>
@@ -480,6 +804,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00288">288</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, and <a class="el" href="PathFinder_8cs_source.html#l00014">Algorithms.PathFinder.Init()</a>.</p>
 
 </div>
 </div>
@@ -505,6 +831,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00319">319</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="ab0ec587c703a128133dece6c7684364d" name="ab0ec587c703a128133dece6c7684364d"></a>
@@ -528,6 +856,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00292">292</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -553,6 +883,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00323">323</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="ab9d3b2aaada2289792952dbfca6f4bc7" name="ab9d3b2aaada2289792952dbfca6f4bc7"></a>
@@ -577,6 +909,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00359">359</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a31494f3333e429d2fbfbefe57457603f" name="a31494f3333e429d2fbfbefe57457603f"></a>
@@ -592,6 +926,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00272">272</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -617,6 +953,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00321">321</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a3c42a398932813c07b4fdbe645475e97" name="a3c42a398932813c07b4fdbe645475e97"></a>
@@ -640,6 +978,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00315">315</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -665,6 +1005,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00313">313</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, and <a class="el" href="PathFinder_8cs_source.html#l00014">Algorithms.PathFinder.Init()</a>.</p>
+
 </div>
 </div>
 <a id="a3f0fc4c9908c6f784cd8dcc9dba9da94" name="a3f0fc4c9908c6f784cd8dcc9dba9da94"></a>
@@ -688,6 +1030,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00317">317</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>, and <a class="el" href="PathFinder_8cs_source.html#l00014">Algorithms.PathFinder.Init()</a>.</p>
 
 </div>
 </div>
@@ -713,6 +1057,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00299">299</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a0e6014d69806d8b655abb7ab8c7a1452" name="a0e6014d69806d8b655abb7ab8c7a1452"></a>
@@ -736,6 +1082,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00276">276</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -761,6 +1109,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00284">284</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a0edd44a928ccee654ed3da7b716649d8" name="a0edd44a928ccee654ed3da7b716649d8"></a>
@@ -784,6 +1134,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00301">301</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -809,6 +1161,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00305">305</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a6caae9fe6fbe8ebe518bbbffbbc2e641" name="a6caae9fe6fbe8ebe518bbbffbbc2e641"></a>
@@ -832,6 +1186,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00307">307</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -857,6 +1213,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00363">363</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="ada23ba7b28bcdd1d8d198138b8d96a21" name="ada23ba7b28bcdd1d8d198138b8d96a21"></a>
@@ -880,6 +1238,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00303">303</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -905,6 +1265,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00309">309</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="ab0af88bd8814fa4ddfc6ad86e3bd1b7e" name="ab0af88bd8814fa4ddfc6ad86e3bd1b7e"></a>
@@ -928,6 +1290,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00311">311</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -953,6 +1317,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00278">278</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="abd253586f9deb3905d885391cd5c7f8f" name="abd253586f9deb3905d885391cd5c7f8f"></a>
@@ -976,6 +1342,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00290">290</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -1001,6 +1369,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00294">294</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a1985446ab74477a1c949fc31b528d523" name="a1985446ab74477a1c949fc31b528d523"></a>
@@ -1024,6 +1394,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00286">286</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -1121,6 +1493,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00371">371</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a85494624383a3a5990411a1a94dd7db0" name="a85494624383a3a5990411a1a94dd7db0"></a>
@@ -1145,6 +1519,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00373">373</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="aa51616c6ecb853a2f0cda5f5ffb4f038" name="aa51616c6ecb853a2f0cda5f5ffb4f038"></a>
@@ -1161,6 +1537,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00266">266</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <a id="a2774ab62eda72a0f212a30ad58170c1b" name="a2774ab62eda72a0f212a30ad58170c1b"></a>
@@ -1176,6 +1554,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00270">270</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
 
 </div>
 </div>
@@ -1209,15 +1589,21 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PathFinder_8cs_source.html#l00367">367</a> of file <a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PathFinder_8cs_source.html#l00049">Algorithms.PathFinder._FindPath()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/Algorithms/<a class="el" href="PathFinder_8cs_source.html">PathFinder.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceAlgorithms.html">Algorithms</a></li><li class="navelem"><a class="el" href="classAlgorithms_1_1PathFinder.html">PathFinder</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGridItemCard.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -205,6 +225,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGridItem.html#a164a239460c2beee2065eb770412d45b">GridItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItemCard_8cs_source.html#l00020">20</a> of file <a class="el" href="GridItemCard_8cs_source.html">GridItemCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a5c86bc09de450fe0e3bd756fe0da981c">AddInventory</a>(this.<a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>);</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassGridItemCard_html_a4437a78ed44ed4cecc51a5b32b2d4bed"><div class="ttname"><a href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">GridItemCard.c</a></div><div class="ttdeci">Card c</div><div class="ttdef"><b>Definition:</b> <a href="GridItemCard_8cs_source.html#l00025">GridItemCard.cs:25</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a5c86bc09de450fe0e3bd756fe0da981c"><div class="ttname"><a href="classPlayer.html#a5c86bc09de450fe0e3bd756fe0da981c">Player.AddInventory</a></div><div class="ttdeci">void AddInventory(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00849">Player.cs:849</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00849">Player.AddInventory()</a>, <a class="el" href="GridItemCard_8cs_source.html#l00025">c</a>, and <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>.</p>
 
 </div>
 </div>
@@ -235,6 +264,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGridItem.html#aa98a6be7e98cd96cda7c570da1bafb03">GridItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItemCard_8cs_source.html#l00015">15</a> of file <a class="el" href="GridItemCard_8cs_source.html">GridItemCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInfo.html">LayerInfo</a>&gt;().Set(this.<a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00004">LayerInfo.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GridItemCard_8cs_source.html#l00025">c</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -265,6 +301,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGridItem.html#a33f9c4f7efefaccdd70f52a45027f63a">GridItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItemCard_8cs_source.html#l00005">5</a> of file <a class="el" href="GridItemCard_8cs_source.html">GridItemCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        b.mainText.text = (this.<a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(b.icon);</div>
+<div class="line"><span class="lineno">    9</span>        b.SetTooltip(<span class="stringliteral">&quot;note&quot;</span>, delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            this.<a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_function" href="classCard.html#ac0f5707fc9f9f1751d657cf60018af06">WriteNote</a>(t.note, <span class="keyword">null</span>, <a class="code hl_interface" href="interfaceIInspect.html">IInspect</a>.<a class="code hl_enumeration" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">NoteMode</a>.Default, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   12</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassCard_html_ac0f5707fc9f9f1751d657cf60018af06"><div class="ttname"><a href="classCard.html#ac0f5707fc9f9f1751d657cf60018af06">Card.WriteNote</a></div><div class="ttdeci">virtual void WriteNote(UINote n, Action&lt; UINote &gt; onWriteNote=null, IInspect.NoteMode mode=IInspect.NoteMode.Default, Recipe recipe=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07192">Card.cs:7192</a></div></div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05467">Card.cs:5467</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html"><div class="ttname"><a href="interfaceIInspect.html">IInspect</a></div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00004">IInspect.cs:5</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">IInspect.NoteMode</a></div><div class="ttdeci">NoteMode</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00018">IInspect.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GridItemCard_8cs_source.html#l00025">c</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="Card_8cs_source.html#l05467">Card.SetImage()</a>, and <a class="el" href="Card_8cs_source.html#l07192">Card.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -283,15 +334,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GridItemCard_8cs_source.html#l00025">25</a> of file <a class="el" href="GridItemCard_8cs_source.html">GridItemCard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GridItemCard_8cs_source.html#l00020">AutoAdd()</a>, <a class="el" href="GridItemCard_8cs_source.html#l00015">OnClick()</a>, and <a class="el" href="GridItemCard_8cs_source.html#l00005">SetButton()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="GridItemCard_8cs_source.html">GridItemCard.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGridItemCard.html">GridItemCard</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

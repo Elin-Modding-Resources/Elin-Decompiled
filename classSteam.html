@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSteam.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -159,7 +179,10 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00011">11</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        Steam.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ca228997c65c35b796ddb721042a21a" name="a4ca228997c65c35b796ddb721042a21a"></a>
@@ -186,6 +209,14 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00026">26</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        Debug.Log(<a class="code hl_class" href="classSteam.html">Steam</a>.<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.Test));</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aID__DLC_8cs_html_a388d737f2417abc42bf7c1cb10e469f9"><div class="ttname"><a href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a></div><div class="ttdeci">ID_DLC</div><div class="ttdef"><b>Definition:</b> <a href="ID__DLC_8cs_source.html#l00003">ID_DLC.cs:4</a></div></div>
+<div class="ttc" id="aclassSteam_html"><div class="ttname"><a href="classSteam.html">Steam</a></div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00009">Steam.cs:10</a></div></div>
+<div class="ttc" id="aclassSteam_html_aa8e05cdeeba8f9bdbe101b0b184500e9"><div class="ttname"><a href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">Steam.HasDLC</a></div><div class="ttdeci">static bool HasDLC(ID_DLC id)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00031">Steam.cs:31</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00031">HasDLC()</a>.</p>
 
 </div>
 </div>
@@ -213,7 +244,9 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00022">22</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeaa01c2e930f6a94ccd945bf3a4ebfcd" name="aeaa01c2e930f6a94ccd945bf3a4ebfcd"></a>
@@ -241,6 +274,22 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00064">64</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">Start</a>(<span class="stringliteral">&quot;Uploading&quot;</span>, <span class="keyword">null</span>).<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> = delegate()</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>        };</div>
+<div class="line"><span class="lineno">   69</span>        p.UpdateMeta(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   70</span>        this.currentPackage = p;</div>
+<div class="line"><span class="lineno">   71</span>        UgcQuery myPublished = UgcQuery.GetMyPublished();</div>
+<div class="line"><span class="lineno">   72</span>        myPublished.SetReturnKeyValueTags(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>        myPublished.Execute(<span class="keyword">new</span> UnityAction&lt;UgcQuery&gt;(this.<a class="code hl_function" href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">CreateUserContent2</a>));</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassLayerProgress_html"><div class="ttname"><a href="classLayerProgress.html">LayerProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00010">LayerProgress.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a0b1344b3c0c9b2b18a4b2102f8126b85"><div class="ttname"><a href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">LayerProgress.onCancel</a></div><div class="ttdeci">Action onCancel</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00120">LayerProgress.cs:120</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a8b560e07065b5164a6bc68750bce6c78"><div class="ttname"><a href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">LayerProgress.Start</a></div><div class="ttdeci">static LayerProgress Start(string text, Action onComplete=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00070">LayerProgress.cs:70</a></div></div>
+<div class="ttc" id="aclassSteam_html_ad9a90afb6714ac496ac55895ebc2a139"><div class="ttname"><a href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">Steam.CreateUserContent2</a></div><div class="ttdeci">void CreateUserContent2(UgcQuery query)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00076">Steam.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00076">CreateUserContent2()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00120">LayerProgress.onCancel</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00070">LayerProgress.Start()</a>.</p>
 
 </div>
 </div>
@@ -269,6 +318,75 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00076">76</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        Debug.Log(<span class="stringliteral">&quot;Creating Content2&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>        BaseModPackage baseModPackage = this.<a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (query.ResultsList != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            Debug.Log(query.ResultsList.Count);</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">foreach</span> (WorkshopItem workshopItem <span class="keywordflow">in</span> query.ResultsList)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (workshopItem.keyValueTags != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">foreach</span> (StringKeyValuePair stringKeyValuePair <span class="keywordflow">in</span> workshopItem.keyValueTags)</div>
+<div class="line"><span class="lineno">   89</span>                {</div>
+<div class="line"><span class="lineno">   90</span>                    <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.id &amp;&amp; workshopItem.Owner.id == App.Client.Owner.id)</div>
+<div class="line"><span class="lineno">   91</span>                    {</div>
+<div class="line"><span class="lineno">   92</span>                        Debug.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>                        this.<a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(workshopItem.FileId);</div>
+<div class="line"><span class="lineno">   94</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   95</span>                    }</div>
+<div class="line"><span class="lineno">   96</span>                }</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        Debug.Log(<span class="stringliteral">&quot;Creating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(baseModPackage.dirInfo.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>);</div>
+<div class="line"><span class="lineno">  101</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(baseModPackage.dirInfo.FullName);</div>
+<div class="line"><span class="lineno">  102</span>        WorkshopItemData workshopItemData = <span class="keyword">new</span> WorkshopItemData</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            appId = this.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId,</div>
+<div class="line"><span class="lineno">  105</span>            title = baseModPackage.title,</div>
+<div class="line"><span class="lineno">  106</span>            description = baseModPackage.description,</div>
+<div class="line"><span class="lineno">  107</span>            content = directoryInfo,</div>
+<div class="line"><span class="lineno">  108</span>            preview = fileInfo,</div>
+<div class="line"><span class="lineno">  109</span>            metadata = (baseModPackage.id ?? <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  110</span>            tags = <span class="keyword">new</span> <span class="keywordtype">string</span>[0]</div>
+<div class="line"><span class="lineno">  111</span>        };</div>
+<div class="line"><span class="lineno">  112</span>        Debug.Log(App.Client.Owner.id);</div>
+<div class="line"><span class="lineno">  113</span>        Debug.Log(workshopItemData.appId);</div>
+<div class="line"><span class="lineno">  114</span>        Debug.Log(baseModPackage.id);</div>
+<div class="line"><span class="lineno">  115</span>        Debug.Log(directoryInfo.Exists.ToString() + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  116</span>        Debug.Log(fileInfo.Exists.ToString() + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.FullName);</div>
+<div class="line"><span class="lineno">  117</span>        workshopItemData.Create(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">new</span> WorkshopItemKeyValueTag[]</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keyword">new</span> WorkshopItemKeyValueTag</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                key = <span class="stringliteral">&quot;id&quot;</span>,</div>
+<div class="line"><span class="lineno">  122</span>                value = baseModPackage.id</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>        }, delegate(WorkshopItemDataCreateStatus result)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  130</span>                Debug.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_created&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  134</span>            Debug.Log(<span class="stringliteral">&quot;created&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span>        }, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a8cf00750d0a8ed4e4212aa3956dead48"><div class="ttname"><a href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Dialog.Ok</a></div><div class="ttdeci">static Dialog Ok(string langDetail, Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00182">Dialog.cs:182</a></div></div>
+<div class="ttc" id="aclassSteam_html_a18718c8872733ffe0e2d561c94abcc6f"><div class="ttname"><a href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">Steam.UpdateUserContent</a></div><div class="ttdeci">void UpdateUserContent(PublishedFileId_t fileId)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00138">Steam.cs:138</a></div></div>
+<div class="ttc" id="aclassSteam_html_a202d04d123f0110ae37da006d3a839ba"><div class="ttname"><a href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">Steam.steamworks</a></div><div class="ttdeci">SteamworksBehaviour steamworks</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00169">Steam.cs:169</a></div></div>
+<div class="ttc" id="aclassSteam_html_a9655d73df0490d47b8a9b8fa3db6d247"><div class="ttname"><a href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">Steam.currentPackage</a></div><div class="ttdeci">BaseModPackage currentPackage</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00175">Steam.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00175">currentPackage</a>, <a class="el" href="Dialog_8cs_source.html#l00182">Dialog.Ok()</a>, <a class="el" href="Steam_8cs_source.html#l00169">steamworks</a>, and <a class="el" href="Steam_8cs_source.html#l00138">UpdateUserContent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00064">CreateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -297,6 +415,31 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00039">39</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;acv_&quot;</span> + <span class="keywordtype">id</span>.ToString();</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">foreach</span> (AchievementObject achievementObject <span class="keywordflow">in</span> <a class="code hl_class" href="classSteam.html">Steam</a>.<a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (achievementObject.Id == <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (achievementObject.IsAchieved)</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>                achievementObject.Unlock();</div>
+<div class="line"><span class="lineno">   51</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_acv&quot;</span>.lang(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.lang(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Icon/Achievement/&quot;</span> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>));</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        Debug.Log(<span class="stringliteral">&quot;Achievement not found:&quot;</span> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassSteam_html_a8042508c3cfc8f7c6cb9ed189614bdb4"><div class="ttname"><a href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Steam.Instance</a></div><div class="ttdeci">static Steam Instance</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00167">Steam.cs:167</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00167">Instance</a>, <a class="el" href="Steam_8cs_source.html#l00169">steamworks</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00456">CoreDebug.UpdateAlways()</a>.</p>
 
 </div>
 </div>
@@ -325,6 +468,17 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00031">31</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != <a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.BackerReward)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.HasBackerRewardCode();</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00026">CheckDLC()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00559">FactionBranch.ReceivePackages()</a>, and <a class="el" href="Steam_8cs_source.html#l00058">TestHasDLC()</a>.</p>
 
 </div>
 </div>
@@ -352,6 +506,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00016">16</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        SteamAPI.Init();</div>
+<div class="line"><span class="lineno">   19</span>        BaseCore.IsOffline = (!App.Client.LoggedOn || SteamSettings.behaviour == <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00132">Core.Start()</a>.</p>
 
 </div>
 </div>
@@ -379,6 +539,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00058">58</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        Debug.Log(<a class="code hl_class" href="classSteam.html">Steam</a>.<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.Test));</div>
+<div class="line"><span class="lineno">   61</span>        Debug.Log(<a class="code hl_class" href="classSteam.html">Steam</a>.<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.CursedManor));</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00031">HasDLC()</a>.</p>
 
 </div>
 </div>
@@ -407,6 +573,37 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00138">138</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        Debug.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        BaseModPackage baseModPackage = this.<a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><span class="lineno">  142</span>        WorkshopItemData workshopItemData = <span class="keyword">new</span> WorkshopItemData</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            appId = this.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId,</div>
+<div class="line"><span class="lineno">  145</span>            title = baseModPackage.title,</div>
+<div class="line"><span class="lineno">  146</span>            description = baseModPackage.description,</div>
+<div class="line"><span class="lineno">  147</span>            content = <span class="keyword">new</span> DirectoryInfo(baseModPackage.dirInfo.FullName),</div>
+<div class="line"><span class="lineno">  148</span>            preview = <span class="keyword">new</span> FileInfo(baseModPackage.dirInfo.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>),</div>
+<div class="line"><span class="lineno">  149</span>            metadata = (baseModPackage.id ?? <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  150</span>            tags = <span class="keyword">new</span> <span class="keywordtype">string</span>[0]</div>
+<div class="line"><span class="lineno">  151</span>        };</div>
+<div class="line"><span class="lineno">  152</span>        workshopItemData.publishedFileId = <span class="keyword">new</span> PublishedFileId_t?(fileId);</div>
+<div class="line"><span class="lineno">  153</span>        workshopItemData.Update(delegate(WorkshopItemDataUpdateStatus result)</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  159</span>                Debug.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  161</span>            }</div>
+<div class="line"><span class="lineno">  162</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_updated&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  163</span>            Debug.Log(<span class="stringliteral">&quot;updated&quot;</span>);</div>
+<div class="line"><span class="lineno">  164</span>        }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00175">currentPackage</a>, <a class="el" href="Dialog_8cs_source.html#l00182">Dialog.Ok()</a>, and <a class="el" href="Steam_8cs_source.html#l00169">steamworks</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00076">CreateUserContent2()</a>.</p>
 
 </div>
 </div>
@@ -424,6 +621,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00175">175</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00076">CreateUserContent2()</a>, and <a class="el" href="Steam_8cs_source.html#l00138">UpdateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -449,6 +648,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00167">167</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00039">GetAchievement()</a>.</p>
+
 </div>
 </div>
 <a id="a202d04d123f0110ae37da006d3a839ba" name="a202d04d123f0110ae37da006d3a839ba"></a>
@@ -464,6 +665,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00169">169</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00030">Core.Awake()</a>, <a class="el" href="Steam_8cs_source.html#l00076">CreateUserContent2()</a>, <a class="el" href="Steam_8cs_source.html#l00039">GetAchievement()</a>, and <a class="el" href="Steam_8cs_source.html#l00138">UpdateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -503,9 +706,13 @@ Private Member Functions</h2></td></tr>
 <li>Elin/<a class="el" href="Steam_8cs_source.html">Steam.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSteam.html">Steam</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

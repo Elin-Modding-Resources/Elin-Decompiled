@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerInteraction.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -267,7 +287,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00234">234</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
+<div class="line"><span class="lineno">  236</span>        <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a46f3ea056caa3126b91f3f70beea068c">Map</a>,</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a4d604dd8f008145471dc845683399189">Inventory</a>,</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a6e040661e5d964f2ae2fac7b1fdb52ff">EloMap</a>,</div>
+<div class="line"><span class="lineno">  239</span>        <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542adeec4ff19974f12ed781cb9a59064214">Area</a>,</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a90589c47f06eb971d548591f23c285af">Custom</a></div>
+<div class="line"><span class="lineno">  241</span>    }</div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542a46f3ea056caa3126b91f3f70beea068c"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a46f3ea056caa3126b91f3f70beea068c">LayerInteraction.Mode.Map</a></div><div class="ttdeci">@ Map</div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542a4d604dd8f008145471dc845683399189"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a4d604dd8f008145471dc845683399189">LayerInteraction.Mode.Inventory</a></div><div class="ttdeci">@ Inventory</div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542a6e040661e5d964f2ae2fac7b1fdb52ff"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a6e040661e5d964f2ae2fac7b1fdb52ff">LayerInteraction.Mode.EloMap</a></div><div class="ttdeci">@ EloMap</div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542a90589c47f06eb971d548591f23c285af"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a90589c47f06eb971d548591f23c285af">LayerInteraction.Mode.Custom</a></div><div class="ttdeci">@ Custom</div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542adeec4ff19974f12ed781cb9a59064214"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542adeec4ff19974f12ed781cb9a59064214">LayerInteraction.Mode.Area</a></div><div class="ttdeci">@ Area</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -296,6 +328,113 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00056">56</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classLayerInteraction_1_1Page.html">LayerInteraction.Page</a> page = <span class="keyword">new</span> <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Page.html">Page</a>();</div>
+<div class="line"><span class="lineno">   59</span>        List&lt;<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Item.html">Item</a>&gt; items = page.<a class="code hl_variable" href="classLayerInteraction_1_1Page.html#afbb5e071ee23dab1905a921715638f38">items</a>;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (o is <a class="code hl_class" href="classArea.html">Area</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_class" href="classArea.html">Area</a> area = o as <a class="code hl_enumvalue" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542adeec4ff19974f12ed781cb9a59064214">Area</a>;</div>
+<div class="line"><span class="lineno">   63</span>            page.area = area;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (o is <a class="code hl_class" href="classChara.html">Chara</a>)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classChara.html">Chara</a> t = o as <a class="code hl_class" href="classChara.html">Chara</a>;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;charaInfo&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>())</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;(&quot;</span> + <span class="stringliteral">&quot;unidentified&quot;</span>.lang() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>())</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;tTalk&quot;</span>.lang(), <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    t.<a class="code hl_function" href="classChara.html#a4426cd24f5bdce304e0c89e636f608ae">ShowDialog</a>();</div>
+<div class="line"><span class="lineno">   78</span>                }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   83</span>                {</div>
+<div class="line"><span class="lineno">   84</span>                    <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>())</div>
+<div class="line"><span class="lineno">   85</span>                    {</div>
+<div class="line"><span class="lineno">   86</span>                        SE.Beep();</div>
+<div class="line"><span class="lineno">   87</span>                        return;</div>
+<div class="line"><span class="lineno">   88</span>                    }</div>
+<div class="line"><span class="lineno">   89</span>                }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (o is <a class="code hl_class" href="classThing.html">Thing</a>)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_class" href="classThing.html">Thing</a> t = o as <a class="code hl_class" href="classThing.html">Thing</a>;</div>
+<div class="line"><span class="lineno">   95</span>            page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;objInfo&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInfo.html">LayerInfo</a>&gt;().Set(t, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   98</span>            }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitQuestBoard.html">TraitQuestBoard</a>)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;quest&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerQuestBoard.html">LayerQuestBoard</a>&gt;();</div>
+<div class="line"><span class="lineno">  104</span>                }, 20, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  105</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;hire&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerHire.html">LayerHire</a>&gt;();</div>
+<div class="line"><span class="lineno">  108</span>                }, 20, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitGacha.html">TraitGacha</a>)</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;gacha&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  113</span>                {</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerGacha.html">LayerGacha</a>&gt;();</div>
+<div class="line"><span class="lineno">  115</span>                }, 10, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;craft&quot;</span>, <span class="stringliteral">&quot;icon_Inspect&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  120</span>                {</div>
+<div class="line"><span class="lineno">  121</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>&gt;().SetFactory(t);</div>
+<div class="line"><span class="lineno">  122</span>                }, 100, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(t, <span class="stringliteral">&quot;move&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">Inspect</a>.<a class="code hl_function" href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">Activate</a>(t);</div>
+<div class="line"><span class="lineno">  129</span>                }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> page;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassAM__MoveInstalled_html_acc4b380fcce0cc921fd59a9583aafce2"><div class="ttname"><a href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">AM_MoveInstalled.Activate</a></div><div class="ttdeci">void Activate(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.cs:103</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a03ce1f17d0e13fd5e7341cad4b9f4085"><div class="ttname"><a href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">ActionMode.Inspect</a></div><div class="ttdeci">static AM_Inspect Inspect</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01707">ActionMode.cs:1707</a></div></div>
+<div class="ttc" id="aclassArea_html"><div class="ttname"><a href="classArea.html">Area</a></div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00004">Area.cs:5</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a4426cd24f5bdce304e0c89e636f608ae"><div class="ttname"><a href="classChara.html#a4426cd24f5bdce304e0c89e636f608ae">Chara.ShowDialog</a></div><div class="ttdeci">void ShowDialog()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06300">Chara.cs:6300</a></div></div>
+<div class="ttc" id="aclassChara_html_aa789983a23b2c9294d4093ace7c5cd43"><div class="ttname"><a href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">Chara.IsHomeMember</a></div><div class="ttdeci">bool IsHomeMember()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05850">Chara.cs:5850</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html"><div class="ttname"><a href="classLayerCraft.html">LayerCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00007">LayerCraft.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerGacha_html"><div class="ttname"><a href="classLayerGacha.html">LayerGacha</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerGacha_8cs_source.html#l00005">LayerGacha.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerHire_html"><div class="ttname"><a href="classLayerHire.html">LayerHire</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHire_8cs_source.html#l00004">LayerHire.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00004">LayerInfo.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html"><div class="ttname"><a href="classLayerInteraction_1_1Item.html">LayerInteraction.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00285">LayerInteraction.cs:286</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Page_html"><div class="ttname"><a href="classLayerInteraction_1_1Page.html">LayerInteraction.Page</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00243">LayerInteraction.cs:244</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Page_html_a1ce34fabc8152661c9e2d6cfd76d7105"><div class="ttname"><a href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">LayerInteraction.Page.Add</a></div><div class="ttdeci">LayerInteraction.Item Add(object target, string text, string idSprite, Action action, int priority=0, bool auto=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00245">LayerInteraction.cs:245</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Page_html_afbb5e071ee23dab1905a921715638f38"><div class="ttname"><a href="classLayerInteraction_1_1Page.html#afbb5e071ee23dab1905a921715638f38">LayerInteraction.Page.items</a></div><div class="ttdeci">List&lt; LayerInteraction.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00282">LayerInteraction.cs:282</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html"><div class="ttname"><a href="classLayerInteraction.html">LayerInteraction</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00005">LayerInteraction.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerQuestBoard_html"><div class="ttname"><a href="classLayerQuestBoard.html">LayerQuestBoard</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerQuestBoard_8cs_source.html#l00006">LayerQuestBoard.cs:7</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitGacha_html"><div class="ttname"><a href="classTraitGacha.html">TraitGacha</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGacha_8cs_source.html#l00003">TraitGacha.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitQuestBoard_html"><div class="ttname"><a href="classTraitQuestBoard.html">TraitQuestBoard</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitQuestBoard_8cs_source.html#l00003">TraitQuestBoard.cs:4</a></div></div>
+<div class="ttc" id="aclassTrait_html_a06590eefdc1c4a805265acbe621db669"><div class="ttname"><a href="classTrait.html#a06590eefdc1c4a805265acbe621db669">Trait.IsFactory</a></div><div class="ttdeci">virtual bool IsFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00314">Trait.cs:315</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.Activate()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00245">LayerInteraction.Page.Add()</a>, <a class="el" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542adeec4ff19974f12ed781cb9a59064214">Area</a>, <a class="el" href="ActionMode_8cs_source.html#l01707">ActionMode.Inspect</a>, <a class="el" href="Trait_8cs_source.html#l00315">Trait.IsFactory</a>, <a class="el" href="Chara_8cs_source.html#l05850">Chara.IsHomeMember()</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00282">LayerInteraction.Page.items</a>, <a class="el" href="Chara_8cs_source.html#l06300">Chara.ShowDialog()</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00035">Show()</a>.</p>
 
 </div>
 </div>
@@ -323,7 +462,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        LayerInteraction.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   10</span>        this.first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af47c2a1659a34529511dc8f64d429749" name="af47c2a1659a34529511dc8f64d429749"></a>
@@ -350,7 +493,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        LayerInteraction.Target = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac437e056bf5698f39265e656a3eb93f3" name="ac437e056bf5698f39265e656a3eb93f3"></a>
@@ -377,7 +523,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7a43e05b5e5e3d54ee00fb3c1b361604" name="a7a43e05b5e5e3d54ee00fb3c1b361604"></a>
@@ -404,6 +552,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00214">214</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>    {</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00181">ShowPage()</a>.</p>
 
 </div>
 </div>
@@ -432,6 +584,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00035">35</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_variable" href="classLayerInteraction.html#ad705b471fa345ce29e6bd3532859d3f9">Target</a> == newTarget)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        LayerInteraction.Target = newTarget;</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classLayerInteraction_1_1Page.html">LayerInteraction.Page</a> page = <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_function" href="classLayerInteraction.html#a3c37aeeb388e83bbbe965df4e65904da">GetPage</a>(<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_variable" href="classLayerInteraction.html#ad705b471fa345ce29e6bd3532859d3f9">Target</a>);</div>
+<div class="line"><span class="lineno">   43</span>        ((LayerInteraction.Instance != <span class="keyword">null</span>) ? <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_variable" href="classLayerInteraction.html#a21da9eeb0c2c726b27c0ced1593e178b">Instance</a> : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>&gt;()).<a class="code hl_function" href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">ShowPage</a>(page);</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassLayerInteraction_html_a21da9eeb0c2c726b27c0ced1593e178b"><div class="ttname"><a href="classLayerInteraction.html#a21da9eeb0c2c726b27c0ced1593e178b">LayerInteraction.Instance</a></div><div class="ttdeci">static LayerInteraction Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00218">LayerInteraction.cs:218</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a3c37aeeb388e83bbbe965df4e65904da"><div class="ttname"><a href="classLayerInteraction.html#a3c37aeeb388e83bbbe965df4e65904da">LayerInteraction.GetPage</a></div><div class="ttdeci">static LayerInteraction.Page GetPage(IInspect o)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00056">LayerInteraction.cs:56</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a60e9a5c0f072f6617feef78815f41c68"><div class="ttname"><a href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">LayerInteraction.ShowPage</a></div><div class="ttdeci">void ShowPage(int index)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00176">LayerInteraction.cs:176</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_ad705b471fa345ce29e6bd3532859d3f9"><div class="ttname"><a href="classLayerInteraction.html#ad705b471fa345ce29e6bd3532859d3f9">LayerInteraction.Target</a></div><div class="ttdeci">static IInspect Target</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00220">LayerInteraction.cs:220</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerInteraction_8cs_source.html#l00056">GetPage()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00218">Instance</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00220">Target</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00046">TryShow()</a>.</p>
 
 </div>
 </div>
@@ -470,6 +639,59 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00135">135</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>        this.pages = _pages;</div>
+<div class="line"><span class="lineno">  138</span>        this.mode = _mode;</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_enumeration" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542">LayerInteraction.Mode</a> <a class="code hl_variable" href="classLayerInteraction.html#a2221a5dde962f598c412048c3d0a147c">mode</a> = this.<a class="code hl_variable" href="classLayerInteraction.html#a2221a5dde962f598c412048c3d0a147c">mode</a>;</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span> (mode != <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_enumeration" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542">Mode</a>.Map)</div>
+<div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerInteraction.html#a2221a5dde962f598c412048c3d0a147c">mode</a> == <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_enumeration" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542">Mode</a>.EloMap)</div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                <a class="code hl_class" href="classLayerInteraction_1_1Page.html">LayerInteraction.Page</a> page = <span class="keyword">new</span> <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Page.html">Page</a>();</div>
+<div class="line"><span class="lineno">  145</span>                this.pages = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Page.html">Page</a>&gt;();</div>
+<div class="line"><span class="lineno">  146</span>                this.<a class="code hl_variable" href="classLayerInteraction.html#af59f49c734f988d71da14a1e0ea531b6">pages</a>.Add(page);</div>
+<div class="line"><span class="lineno">  147</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;test1&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  150</span>                page.<a class="code hl_function" href="classLayerInteraction_1_1Page.html#a1ce34fabc8152661c9e2d6cfd76d7105">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;test2&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  151</span>                {</div>
+<div class="line"><span class="lineno">  152</span>                }, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            this.<a class="code hl_variable" href="classLayerInteraction.html#ac7c04d2531191d58f0c05295f3d151e7">point</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classScene.html">Scene</a>.<a class="code hl_variable" href="classScene.html#a333286137d2976b11b59fd8c5b751717">HitPoint</a>);</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Page.html">Page</a> page2 in <span class="keyword">this</span>.pages)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = this.<a class="code hl_variable" href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">menu</a>.<a class="code hl_function" href="classInteractionMenu.html#ad1da473e376309db1b773cc9d30c0f1c">Add</a>() as <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>;</div>
+<div class="line"><span class="lineno">  162</span>            page2.button = buttonGrid;</div>
+<div class="line"><span class="lineno">  163</span>            buttonGrid.<a class="code hl_function" href="classButtonGrid.html#a481bd8aa40e2ad1186c9ff3b200aa170">SetObject</a>(page2.items[0].target);</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_class" href="classLayerInteraction_1_1Page.html">LayerInteraction.Page</a> _page = page2;</div>
+<div class="line"><span class="lineno">  165</span>            buttonGrid.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                this.<a class="code hl_function" href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">ShowPage</a>(_page);</div>
+<div class="line"><span class="lineno">  168</span>                SE.Click();</div>
+<div class="line"><span class="lineno">  169</span>            });</div>
+<div class="line"><span class="lineno">  170</span>            buttonGrid.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        this.<a class="code hl_variable" href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">menu</a>.<a class="code hl_function" href="classInteractionMenu.html#a76c591f15d183b2215e06602ce159054">Show</a>();</div>
+<div class="line"><span class="lineno">  173</span>        this.<a class="code hl_function" href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">ShowPage</a>(0);</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a481bd8aa40e2ad1186c9ff3b200aa170"><div class="ttname"><a href="classButtonGrid.html#a481bd8aa40e2ad1186c9ff3b200aa170">ButtonGrid.SetObject</a></div><div class="ttdeci">void SetObject(object o)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00396">ButtonGrid.cs:396</a></div></div>
+<div class="ttc" id="aclassInteractionMenu_html_a76c591f15d183b2215e06602ce159054"><div class="ttname"><a href="classInteractionMenu.html#a76c591f15d183b2215e06602ce159054">InteractionMenu.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdef"><b>Definition:</b> <a href="InteractionMenu_8cs_source.html#l00012">InteractionMenu.cs:12</a></div></div>
+<div class="ttc" id="aclassInteractionMenu_html_ad1da473e376309db1b773cc9d30c0f1c"><div class="ttname"><a href="classInteractionMenu.html#ad1da473e376309db1b773cc9d30c0f1c">InteractionMenu.Add</a></div><div class="ttdeci">UIButton Add()</div><div class="ttdef"><b>Definition:</b> <a href="InteractionMenu_8cs_source.html#l00018">InteractionMenu.cs:18</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a2221a5dde962f598c412048c3d0a147c"><div class="ttname"><a href="classLayerInteraction.html#a2221a5dde962f598c412048c3d0a147c">LayerInteraction.mode</a></div><div class="ttdeci">LayerInteraction.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00222">LayerInteraction.cs:222</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a6e5a11d9e50dc4e14f37f1712fe2b542"><div class="ttname"><a href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542">LayerInteraction.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00234">LayerInteraction.cs:235</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a75d287ae33813dcba4612c01784c0757"><div class="ttname"><a href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">LayerInteraction.menu</a></div><div class="ttdeci">InteractionMenu menu</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00230">LayerInteraction.cs:230</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_ac7c04d2531191d58f0c05295f3d151e7"><div class="ttname"><a href="classLayerInteraction.html#ac7c04d2531191d58f0c05295f3d151e7">LayerInteraction.point</a></div><div class="ttdeci">Point point</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00224">LayerInteraction.cs:224</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_af59f49c734f988d71da14a1e0ea531b6"><div class="ttname"><a href="classLayerInteraction.html#af59f49c734f988d71da14a1e0ea531b6">LayerInteraction.pages</a></div><div class="ttdeci">List&lt; LayerInteraction.Page &gt; pages</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00226">LayerInteraction.cs:226</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00008">Scene.cs:9</a></div></div>
+<div class="ttc" id="aclassScene_html_a333286137d2976b11b59fd8c5b751717"><div class="ttname"><a href="classScene.html#a333286137d2976b11b59fd8c5b751717">Scene.HitPoint</a></div><div class="ttdeci">static Point HitPoint</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00993">Scene.cs:993</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InteractionMenu_8cs_source.html#l00018">InteractionMenu.Add()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00245">LayerInteraction.Page.Add()</a>, <a class="el" href="Scene_8cs_source.html#l00993">Scene.HitPoint</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00230">menu</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00222">mode</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00226">pages</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00224">point</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00396">ButtonGrid.SetObject()</a>, <a class="el" href="InteractionMenu_8cs_source.html#l00012">InteractionMenu.Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>.</p>
 
 </div>
 </div>
@@ -498,6 +720,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00176">176</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        this.<a class="code hl_function" href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">ShowPage</a>(this.<a class="code hl_variable" href="classLayerInteraction.html#af59f49c734f988d71da14a1e0ea531b6">pages</a>[index]);</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerInteraction_8cs_source.html#l00226">pages</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00035">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>.</p>
 
 </div>
 </div>
@@ -526,6 +755,48 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00181">181</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        this.<a class="code hl_variable" href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">menu</a>.<a class="code hl_function" href="classInteractionMenu.html#ac4e193b0ceb6ab52493f27332dfb9bfd">Clear</a>();</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keyword">using</span> (List&lt;<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_class" href="classLayerInteraction_1_1Item.html">Item</a>&gt;.Enumerator enumerator = page.<a class="code hl_variable" href="classLayerInteraction_1_1Page.html#afbb5e071ee23dab1905a921715638f38">items</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  187</span>            {</div>
+<div class="line"><span class="lineno">  188</span>                <a class="code hl_class" href="classLayerInteraction_1_1Item.html">LayerInteraction.Item</a> item = enumerator.Current;</div>
+<div class="line"><span class="lineno">  189</span>                UIButton uibutton = this.<a class="code hl_variable" href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">menu</a>.<a class="code hl_function" href="classInteractionMenu.html#ad1da473e376309db1b773cc9d30c0f1c">Add</a>();</div>
+<div class="line"><span class="lineno">  190</span>                uibutton.icon.sprite = (SpriteSheet.Get(item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#a892599aea4e0521bdf246ada1ed00ecd">idSprite</a>.IsEmpty(<span class="stringliteral">&quot;icon_&quot;</span> + item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#ae655b10d51401356229328fa062e8684">text</a>)) ?? uibutton.icon.sprite);</div>
+<div class="line"><span class="lineno">  191</span>                uibutton.mainText.SetText((item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#aec04a2f573439f7f69fcda48121f04e2">textFunc</a> != <span class="keyword">null</span>) ? item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#aec04a2f573439f7f69fcda48121f04e2">textFunc</a>() : item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#ae655b10d51401356229328fa062e8684">text</a>.lang());</div>
+<div class="line"><span class="lineno">  192</span>                uibutton.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">  193</span>                {</div>
+<div class="line"><span class="lineno">  194</span>                    item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#a20c529b7c92aa1ee88fbe9735db33d03">action</a>();</div>
+<div class="line"><span class="lineno">  195</span>                    <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classLayerInteraction_1_1Item.html#afca7ee90b7302861fc6c6e8ae130ed66">reload</a>)</div>
+<div class="line"><span class="lineno">  196</span>                    {</div>
+<div class="line"><span class="lineno">  197</span>                        this.<a class="code hl_function" href="classLayerInteraction.html#a7a43e05b5e5e3d54ee00fb3c1b361604">Reload</a>();</div>
+<div class="line"><span class="lineno">  198</span>                        this.<a class="code hl_function" href="classLayerInteraction.html#a60e9a5c0f072f6617feef78815f41c68">ShowPage</a>(page);</div>
+<div class="line"><span class="lineno">  199</span>                    }</div>
+<div class="line"><span class="lineno">  200</span>                });</div>
+<div class="line"><span class="lineno">  201</span>                uibutton.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  202</span>            }</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = LayerInteraction.Target as <a class="code hl_class" href="classChara.html">Chara</a>;</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordtype">bool</span> flag = chara != <span class="keyword">null</span> &amp;&amp; chara.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>();</div>
+<div class="line"><span class="lineno">  206</span>        this.<a class="code hl_variable" href="classLayerInteraction.html#a9b32f637eebba648eeacfbf519d92429">windowChara</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            this.<a class="code hl_variable" href="classLayerInteraction.html#a9b32f637eebba648eeacfbf519d92429">windowChara</a>.<a class="code hl_function" href="classWindowChara.html#a1652def3f15e1d1f2ffa45fbc0da3f7e">SetChara</a>(chara);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span>        this.<a class="code hl_variable" href="classLayerInteraction.html#a75d287ae33813dcba4612c01784c0757">menu</a>.<a class="code hl_function" href="classInteractionMenu.html#a76c591f15d183b2215e06602ce159054">Show</a>();</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="ttc" id="aclassInteractionMenu_html_ac4e193b0ceb6ab52493f27332dfb9bfd"><div class="ttname"><a href="classInteractionMenu.html#ac4e193b0ceb6ab52493f27332dfb9bfd">InteractionMenu.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="InteractionMenu_8cs_source.html#l00023">InteractionMenu.cs:23</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html_a20c529b7c92aa1ee88fbe9735db33d03"><div class="ttname"><a href="classLayerInteraction_1_1Item.html#a20c529b7c92aa1ee88fbe9735db33d03">LayerInteraction.Item.action</a></div><div class="ttdeci">Action action</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00301">LayerInteraction.cs:301</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html_a892599aea4e0521bdf246ada1ed00ecd"><div class="ttname"><a href="classLayerInteraction_1_1Item.html#a892599aea4e0521bdf246ada1ed00ecd">LayerInteraction.Item.idSprite</a></div><div class="ttdeci">string idSprite</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00299">LayerInteraction.cs:299</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html_ae655b10d51401356229328fa062e8684"><div class="ttname"><a href="classLayerInteraction_1_1Item.html#ae655b10d51401356229328fa062e8684">LayerInteraction.Item.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00297">LayerInteraction.cs:297</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html_aec04a2f573439f7f69fcda48121f04e2"><div class="ttname"><a href="classLayerInteraction_1_1Item.html#aec04a2f573439f7f69fcda48121f04e2">LayerInteraction.Item.textFunc</a></div><div class="ttdeci">Func&lt; string &gt; textFunc</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00309">LayerInteraction.cs:309</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_1_1Item_html_afca7ee90b7302861fc6c6e8ae130ed66"><div class="ttname"><a href="classLayerInteraction_1_1Item.html#afca7ee90b7302861fc6c6e8ae130ed66">LayerInteraction.Item.reload</a></div><div class="ttdeci">bool reload</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00307">LayerInteraction.cs:307</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a7a43e05b5e5e3d54ee00fb3c1b361604"><div class="ttname"><a href="classLayerInteraction.html#a7a43e05b5e5e3d54ee00fb3c1b361604">LayerInteraction.Reload</a></div><div class="ttdeci">void Reload()</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00214">LayerInteraction.cs:214</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a9b32f637eebba648eeacfbf519d92429"><div class="ttname"><a href="classLayerInteraction.html#a9b32f637eebba648eeacfbf519d92429">LayerInteraction.windowChara</a></div><div class="ttdeci">WindowChara windowChara</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00232">LayerInteraction.cs:232</a></div></div>
+<div class="ttc" id="aclassWindowChara_html_a1652def3f15e1d1f2ffa45fbc0da3f7e"><div class="ttname"><a href="classWindowChara.html#a1652def3f15e1d1f2ffa45fbc0da3f7e">WindowChara.SetChara</a></div><div class="ttdeci">void SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="WindowChara_8cs_source.html#l00019">WindowChara.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerInteraction_8cs_source.html#l00301">LayerInteraction.Item.action</a>, <a class="el" href="InteractionMenu_8cs_source.html#l00018">InteractionMenu.Add()</a>, <a class="el" href="InteractionMenu_8cs_source.html#l00023">InteractionMenu.Clear()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00299">LayerInteraction.Item.idSprite</a>, <a class="el" href="Chara_8cs_source.html#l05850">Chara.IsHomeMember()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00230">menu</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00214">Reload()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00307">LayerInteraction.Item.reload</a>, <a class="el" href="WindowChara_8cs_source.html#l00019">WindowChara.SetChara()</a>, <a class="el" href="InteractionMenu_8cs_source.html#l00012">InteractionMenu.Show()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00297">LayerInteraction.Item.text</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00309">LayerInteraction.Item.textFunc</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00232">windowChara</a>.</p>
 
 </div>
 </div>
@@ -554,6 +825,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00046">46</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classScene.html">Scene</a>.<a class="code hl_variable" href="classScene.html#a333286137d2976b11b59fd8c5b751717">HitPoint</a>.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_function" href="classLayerInteraction.html#a3d7321576b258e57c486447b250cbf21">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">scene</a>.<a class="code hl_variable" href="classScene.html#acb1c8aaa9c42aaff99807d85c8653bd1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>.<a class="code hl_function" href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">ListInspectorTargets</a>().NextItem(<a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_variable" href="classLayerInteraction.html#ad705b471fa345ce29e6bd3532859d3f9">Target</a>));</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a0ab4ed57f34ce34e428ae56702787e05"><div class="ttname"><a href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">ELayer.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00086">ELayer.cs:87</a></div></div>
+<div class="ttc" id="aclassLayerInteraction_html_a3d7321576b258e57c486447b250cbf21"><div class="ttname"><a href="classLayerInteraction.html#a3d7321576b258e57c486447b250cbf21">LayerInteraction.Show</a></div><div class="ttdeci">static void Show(IInspect newTarget)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInteraction_8cs_source.html#l00035">LayerInteraction.cs:35</a></div></div>
+<div class="ttc" id="aclassPointTarget_html_a8e3f9431c0938d6d92565e1a9d7a7d3c"><div class="ttname"><a href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">PointTarget.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="PointTarget_8cs_source.html#l00233">PointTarget.cs:233</a></div></div>
+<div class="ttc" id="aclassPoint_html_a4c05463f4ffe9ed95d182ef08212f951"><div class="ttname"><a href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">Point.ListInspectorTargets</a></div><div class="ttdeci">List&lt; IInspect &gt; ListInspectorTargets()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01400">Point.cs:1400</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+<div class="ttc" id="aclassScene_html_acb1c8aaa9c42aaff99807d85c8653bd1"><div class="ttname"><a href="classScene.html#acb1c8aaa9c42aaff99807d85c8653bd1">Scene.mouseTarget</a></div><div class="ttdeci">PointTarget mouseTarget</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01097">Scene.cs:1097</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00993">Scene.HitPoint</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="Point_8cs_source.html#l01400">Point.ListInspectorTargets()</a>, <a class="el" href="Scene_8cs_source.html#l01097">Scene.mouseTarget</a>, <a class="el" href="PointTarget_8cs_source.html#l00233">PointTarget.pos</a>, <a class="el" href="ELayer_8cs_source.html#l00087">ELayer.scene</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00035">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00220">Target</a>.</p>
 
 </div>
 </div>
@@ -581,6 +868,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerInteraction.html#a2221a5dde962f598c412048c3d0a147c">mode</a> != <a class="code hl_class" href="classLayerInteraction.html">LayerInteraction</a>.<a class="code hl_enumeration" href="classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542">Mode</a>.Map)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a> tileSelector = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">tileSelector</a>;</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_class" href="classMeshPass.html">MeshPass</a> meshPass = (this.point.HasBlock || this.point.cell.liquidLv &gt; 0) ? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a> : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>;</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   27</span>        Vector3 vector = *<span class="keyword">this</span>.point.Position();</div>
+<div class="line"><span class="lineno">   28</span>        meshPass.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(vector.x, vector.y, vector.z, (<span class="keywordtype">float</span>)num, 0.3f);</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_ab7be591966272c30dbaf7f49dae84e8d"><div class="ttname"><a href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">BaseGameScreen.tileSelector</a></div><div class="ttdeci">BaseTileSelector tileSelector</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.cs:859</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_ad53616b9a079016467151457786ef3f3"><div class="ttname"><a href="classELayer.html#ad53616b9a079016467151457786ef3f3">ELayer.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00094">ELayer.cs:95</a></div></div>
+<div class="ttc" id="aclassMeshPass_html"><div class="ttname"><a href="classMeshPass.html">MeshPass</a></div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00007">MeshPass.cs:8</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abae9aeeca1578db7eff6d822e491eb7c"><div class="ttname"><a href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">ScreenGuide.passGuideBlock</a></div><div class="ttdeci">MeshPass passGuideBlock</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.cs:66</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00222">mode</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.passGuideBlock</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, <a class="el" href="ELayer_8cs_source.html#l00095">ELayer.screen</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.tileSelector</a>.</p>
 
 </div>
 </div>
@@ -631,6 +939,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00218">218</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00035">Show()</a>.</p>
+
 </div>
 </div>
 <a id="a75d287ae33813dcba4612c01784c0757" name="a75d287ae33813dcba4612c01784c0757"></a>
@@ -646,6 +956,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00230">230</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00135">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00181">ShowPage()</a>.</p>
 
 </div>
 </div>
@@ -663,6 +975,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00222">222</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00135">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00018">Update()</a>.</p>
+
 </div>
 </div>
 <a id="af59f49c734f988d71da14a1e0ea531b6" name="af59f49c734f988d71da14a1e0ea531b6"></a>
@@ -679,6 +993,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00226">226</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00135">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00176">ShowPage()</a>.</p>
+
 </div>
 </div>
 <a id="ac7c04d2531191d58f0c05295f3d151e7" name="ac7c04d2531191d58f0c05295f3d151e7"></a>
@@ -694,6 +1010,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00224">224</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00135">Show()</a>.</p>
 
 </div>
 </div>
@@ -719,6 +1037,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00220">220</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00035">Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00046">TryShow()</a>.</p>
+
 </div>
 </div>
 <a id="a9b32f637eebba648eeacfbf519d92429" name="a9b32f637eebba648eeacfbf519d92429"></a>
@@ -735,15 +1055,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerInteraction_8cs_source.html#l00232">232</a> of file <a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerInteraction_8cs_source.html#l00181">ShowPage()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerInteraction_8cs_source.html">LayerInteraction.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerInteraction.html">LayerInteraction</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

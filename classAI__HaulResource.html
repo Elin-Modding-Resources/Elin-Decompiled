@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__HaulResource.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -772,6 +792,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00091">91</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> this.owner != <span class="keyword">null</span> &amp;&amp; this.owner.held != <span class="keyword">null</span> &amp;&amp; this.owner.held.id == ing.id &amp;&amp; (ing.mat == -1 || this.owner.held.material.id == ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a4dca129b30f3f4070784361ea8e7676c">mat</a>) &amp;&amp; (ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a">refVal</a> == -1 || <span class="keyword">this</span>.owner.held.refVal == ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a">refVal</a>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html_a4dca129b30f3f4070784361ea8e7676c"><div class="ttname"><a href="classRecipe_1_1Ingredient.html#a4dca129b30f3f4070784361ea8e7676c">Recipe.Ingredient.mat</a></div><div class="ttdeci">int mat</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l01015">Recipe.cs:1015</a></div></div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html_a580848dba508d908a2ea969b190b7d1a"><div class="ttname"><a href="classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a">Recipe.Ingredient.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l01018">Recipe.cs:1018</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00007">Run()</a>.</p>
 
 </div>
 </div>
@@ -801,6 +828,119 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">bool</span> flag;</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordtype">int</span> num2;</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classAI__HaulResource.html#acbee361e9b61d4fc06f8d886732d10a3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">ingredients</a>.Count; i = num2 + 1)</div>
+<div class="line"><span class="lineno">   15</span>            {</div>
+<div class="line"><span class="lineno">   16</span>                <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a> ing = this.<a class="code hl_variable" href="classAI__HaulResource.html#acbee361e9b61d4fc06f8d886732d10a3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">ingredients</a>[i];</div>
+<div class="line"><span class="lineno">   17</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__HaulResource.html#a0d8d724c89cb8d99aa5f0d08a417e287">reqs</a>[i] &gt; 0)</div>
+<div class="line"><span class="lineno">   18</span>                {</div>
+<div class="line"><span class="lineno">   19</span>                    <span class="keywordflow">if</span> (ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   20</span>                    {</div>
+<div class="line"><span class="lineno">   21</span>                        ing.<a class="code hl_function" href="classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16">RefreshThing</a>();</div>
+<div class="line"><span class="lineno">   22</span>                    }</div>
+<div class="line"><span class="lineno">   23</span>                    <span class="keywordflow">if</span> (ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a> == <span class="keyword">null</span> || ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a>.<a class="code hl_variable" href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">isDestroyed</a>)</div>
+<div class="line"><span class="lineno">   24</span>                    {</div>
+<div class="line"><span class="lineno">   25</span>                        ing.thing = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   26</span>                        yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTask.html#a79c3640290766cf28e62340d96a3366f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   27</span>                    }</div>
+<div class="line"><span class="lineno">   28</span>                    <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAI__HaulResource.html#af600969f354d0fdaf154d36796bf5686">HoldingResource</a>(ing))</div>
+<div class="line"><span class="lineno">   29</span>                    {</div>
+<div class="line"><span class="lineno">   30</span>                        yield <span class="keywordflow">return</span> base.DoGrab(ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a>, <span class="keyword">this</span>.reqs[i], <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   31</span>                    }</div>
+<div class="line"><span class="lineno">   32</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__HaulResource.html#a383a02b903a877d28caa9a9a515ba6de">target</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>                    {</div>
+<div class="line"><span class="lineno">   34</span>                        <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">   35</span>                        {</div>
+<div class="line"><span class="lineno">   36</span>                            <a class="code hl_class" href="classPoint.html">Point</a> objPos = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   37</span>                            <a class="code hl_class" href="classPoint.html">Point</a> blockPos = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   38</span>                            this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">ForeachMultiSize</a>(this.<a class="code hl_variable" href="classAI__HaulResource.html#acbee361e9b61d4fc06f8d886732d10a3">recipe</a>.<a class="code hl_property" href="classRecipe.html#af249c1a508cebbbc321adc1560639378">W</a>, <span class="keyword">this</span>.recipe.H, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">   39</span>                            {</div>
+<div class="line"><span class="lineno">   40</span>                                <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a> &amp;&amp; !p.<a class="code hl_property" href="classPoint.html#a920e88c8c578ccd30d7d03230169226b">HasMinableBlock</a> &amp;&amp; !<span class="keyword">this</span>.recipe.tileType.AllowObj)</div>
+<div class="line"><span class="lineno">   41</span>                                {</div>
+<div class="line"><span class="lineno">   42</span>                                    objPos = p.Copy();</div>
+<div class="line"><span class="lineno">   43</span>                                }</div>
+<div class="line"><span class="lineno">   44</span>                                if (p.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a> &amp;&amp; !<span class="keyword">this</span>.recipe.tileType.CanBuiltOnBlock)</div>
+<div class="line"><span class="lineno">   45</span>                                {</div>
+<div class="line"><span class="lineno">   46</span>                                    blockPos = p.Copy();</div>
+<div class="line"><span class="lineno">   47</span>                                }</div>
+<div class="line"><span class="lineno">   48</span>                            });</div>
+<div class="line"><span class="lineno">   49</span>                            <span class="keywordflow">if</span> (blockPos != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   50</span>                            {</div>
+<div class="line"><span class="lineno">   51</span>                                yield <span class="keywordflow">return</span> base.Do(<span class="keyword">new</span> <a class="code hl_class" href="classTaskMine.html">TaskMine</a></div>
+<div class="line"><span class="lineno">   52</span>                                {</div>
+<div class="line"><span class="lineno">   53</span>                                    <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = blockPos</div>
+<div class="line"><span class="lineno">   54</span>                                }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   55</span>                            }</div>
+<div class="line"><span class="lineno">   56</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   57</span>                            {</div>
+<div class="line"><span class="lineno">   58</span>                                <span class="keywordflow">if</span> (objPos == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   59</span>                                {</div>
+<div class="line"><span class="lineno">   60</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   61</span>                                }</div>
+<div class="line"><span class="lineno">   62</span>                                yield <span class="keywordflow">return</span> base.Do(<span class="keyword">new</span> <a class="code hl_class" href="classTaskCut.html">TaskCut</a></div>
+<div class="line"><span class="lineno">   63</span>                                {</div>
+<div class="line"><span class="lineno">   64</span>                                    <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = objPos</div>
+<div class="line"><span class="lineno">   65</span>                                }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   66</span>                            }</div>
+<div class="line"><span class="lineno">   67</span>                        }</div>
+<div class="line"><span class="lineno">   68</span>                        yield <span class="keywordflow">return</span> base.DoGoto(this.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>, this.<a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>, this.<a class="code hl_property" href="classTaskPoint.html#acfa62455f713e7b8e27d1583884c8601">destIgnoreConnection</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   69</span>                    }</div>
+<div class="line"><span class="lineno">   70</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   71</span>                    {</div>
+<div class="line"><span class="lineno">   72</span>                        yield <span class="keywordflow">return</span> base.DoGoto(this.<a class="code hl_variable" href="classAI__HaulResource.html#a383a02b903a877d28caa9a9a515ba6de">target</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   73</span>                    }</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__HaulResource.html#a0d8d724c89cb8d99aa5f0d08a417e287">reqs</a>[i] &gt; 0 &amp;&amp; this.<a class="code hl_function" href="classAI__HaulResource.html#af600969f354d0fdaf154d36796bf5686">HoldingResource</a>(ing))</div>
+<div class="line"><span class="lineno">   75</span>                    {</div>
+<div class="line"><span class="lineno">   76</span>                        <span class="keywordtype">int</span> num = Mathf.Min(this.<a class="code hl_variable" href="classAI__HaulResource.html#a0d8d724c89cb8d99aa5f0d08a417e287">reqs</a>[i], this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>);</div>
+<div class="line"><span class="lineno">   77</span>                        this.<a class="code hl_variable" href="classAI__HaulResource.html#a0d8d724c89cb8d99aa5f0d08a417e287">reqs</a>[i] -= num;</div>
+<div class="line"><span class="lineno">   78</span>                        this.<a class="code hl_variable" href="classAI__HaulResource.html#a66b81578f169aafd2dfec0f934dafc93">resources</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#ad9f8fb387f2035c8c3707d6f4cb13022">SplitHeld</a>(num) as <a class="code hl_class" href="classThing.html">Thing</a>);</div>
+<div class="line"><span class="lineno">   79</span>                        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;build_resource&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   80</span>                    }</div>
+<div class="line"><span class="lineno">   81</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>                num2 = i;</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">while</span> (!flag);</div>
+<div class="line"><span class="lineno">   88</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAI__HaulResource_html_a0d8d724c89cb8d99aa5f0d08a417e287"><div class="ttname"><a href="classAI__HaulResource.html#a0d8d724c89cb8d99aa5f0d08a417e287">AI_HaulResource.reqs</a></div><div class="ttdeci">int[] reqs</div><div class="ttdef"><b>Definition:</b> <a href="AI__HaulResource_8cs_source.html#l00102">AI_HaulResource.cs:102</a></div></div>
+<div class="ttc" id="aclassAI__HaulResource_html_a383a02b903a877d28caa9a9a515ba6de"><div class="ttname"><a href="classAI__HaulResource.html#a383a02b903a877d28caa9a9a515ba6de">AI_HaulResource.target</a></div><div class="ttdeci">Thing target</div><div class="ttdef"><b>Definition:</b> <a href="AI__HaulResource_8cs_source.html#l00098">AI_HaulResource.cs:98</a></div></div>
+<div class="ttc" id="aclassAI__HaulResource_html_a66b81578f169aafd2dfec0f934dafc93"><div class="ttname"><a href="classAI__HaulResource.html#a66b81578f169aafd2dfec0f934dafc93">AI_HaulResource.resources</a></div><div class="ttdeci">List&lt; Thing &gt; resources</div><div class="ttdef"><b>Definition:</b> <a href="AI__HaulResource_8cs_source.html#l00100">AI_HaulResource.cs:100</a></div></div>
+<div class="ttc" id="aclassAI__HaulResource_html_acbee361e9b61d4fc06f8d886732d10a3"><div class="ttname"><a href="classAI__HaulResource.html#acbee361e9b61d4fc06f8d886732d10a3">AI_HaulResource.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="AI__HaulResource_8cs_source.html#l00096">AI_HaulResource.cs:96</a></div></div>
+<div class="ttc" id="aclassAI__HaulResource_html_af600969f354d0fdaf154d36796bf5686"><div class="ttname"><a href="classAI__HaulResource.html#af600969f354d0fdaf154d36796bf5686">AI_HaulResource.HoldingResource</a></div><div class="ttdeci">bool HoldingResource(Recipe.Ingredient ing)</div><div class="ttdef"><b>Definition:</b> <a href="AI__HaulResource_8cs_source.html#l00091">AI_HaulResource.cs:91</a></div></div>
+<div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00823">ActPlan.cs:823</a></div></div>
+<div class="ttc" id="aclassCard_html_a05dffd4f600c4a61fcabec797f77b221"><div class="ttname"><a href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">Card.isDestroyed</a></div><div class="ttdeci">bool isDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07316">Card.cs:7316</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
+<div class="ttc" id="aclassChara_html_a1a07bdf34edac20229f9c2ac895e83f8"><div class="ttname"><a href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">Chara.held</a></div><div class="ttdeci">Card held</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09386">Chara.cs:9386</a></div></div>
+<div class="ttc" id="aclassChara_html_ad9f8fb387f2035c8c3707d6f4cb13022"><div class="ttname"><a href="classChara.html#ad9f8fb387f2035c8c3707d6f4cb13022">Chara.SplitHeld</a></div><div class="ttdeci">Card SplitHeld(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04016">Chara.cs:4016</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a1b6aa4e8565d4dde3333a6dfb99bd894"><div class="ttname"><a href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">Point.ForeachMultiSize</a></div><div class="ttdeci">void ForeachMultiSize(int w, int h, Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01433">Point.cs:1433</a></div></div>
+<div class="ttc" id="aclassPoint_html_a920e88c8c578ccd30d7d03230169226b"><div class="ttname"><a href="classPoint.html#a920e88c8c578ccd30d7d03230169226b">Point.HasMinableBlock</a></div><div class="ttdeci">bool HasMinableBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00273">Point.cs:274</a></div></div>
+<div class="ttc" id="aclassPoint_html_abd8d973186ba376ea92ca7563dd98231"><div class="ttname"><a href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">Point.HasObj</a></div><div class="ttdeci">bool HasObj</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00249">Point.cs:250</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf88acccb063c764604ddcd520fe332d"><div class="ttname"><a href="classPoint.html#adf88acccb063c764604ddcd520fe332d">Point.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00265">Point.cs:266</a></div></div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html"><div class="ttname"><a href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00921">Recipe.cs:922</a></div></div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html_a02ff2039cd048aaa48058463ad174c16"><div class="ttname"><a href="classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16">Recipe.Ingredient.RefreshThing</a></div><div class="ttdeci">Thing RefreshThing()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00943">Recipe.cs:943</a></div></div>
+<div class="ttc" id="aclassRecipe_1_1Ingredient_html_a1815a4273d3b3808f02c079e4750544e"><div class="ttname"><a href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">Recipe.Ingredient.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l01029">Recipe.cs:1029</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6c7bf4b0a53e229bea7bd21af75e0f61"><div class="ttname"><a href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">Recipe.ingredients</a></div><div class="ttdeci">List&lt; Recipe.Ingredient &gt; ingredients</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00892">Recipe.cs:892</a></div></div>
+<div class="ttc" id="aclassRecipe_html_af249c1a508cebbbc321adc1560639378"><div class="ttname"><a href="classRecipe.html#af249c1a508cebbbc321adc1560639378">Recipe.W</a></div><div class="ttdeci">virtual int W</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00255">Recipe.cs:256</a></div></div>
+<div class="ttc" id="aclassTaskCut_html"><div class="ttname"><a href="classTaskCut.html">TaskCut</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskCut_8cs_source.html#l00003">TaskCut.cs:4</a></div></div>
+<div class="ttc" id="aclassTaskMine_html"><div class="ttname"><a href="classTaskMine.html">TaskMine</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskMine_8cs_source.html#l00003">TaskMine.cs:4</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_a14bd72967b54c56f9fc32d26a866fbaa"><div class="ttname"><a href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">TaskPoint.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00180">TaskPoint.cs:180</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_acfa62455f713e7b8e27d1583884c8601"><div class="ttname"><a href="classTaskPoint.html#acfa62455f713e7b8e27d1583884c8601">TaskPoint.destIgnoreConnection</a></div><div class="ttdeci">virtual bool destIgnoreConnection</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00024">TaskPoint.cs:25</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_afd38bbc78a297cca8bb7cd10f4660cc1"><div class="ttname"><a href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">TaskPoint.destDist</a></div><div class="ttdeci">virtual int destDist</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00016">TaskPoint.cs:17</a></div></div>
+<div class="ttc" id="aclassTask_html_a79c3640290766cf28e62340d96a3366f"><div class="ttname"><a href="classTask.html#a79c3640290766cf28e62340d96a3366f">Task.Cancel</a></div><div class="ttdeci">override AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00052">Task.cs:52</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00823">ActPlan.List.Add()</a>, <a class="el" href="Task_8cs_source.html#l00052">Task.Cancel()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00017">TaskPoint.destDist</a>, <a class="el" href="TaskPoint_8cs_source.html#l00025">TaskPoint.destIgnoreConnection</a>, <a class="el" href="Point_8cs_source.html#l01433">Point.ForeachMultiSize()</a>, <a class="el" href="Point_8cs_source.html#l00266">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00274">Point.HasMinableBlock</a>, <a class="el" href="Point_8cs_source.html#l00250">Point.HasObj</a>, <a class="el" href="Chara_8cs_source.html#l09386">Chara.held</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00091">HoldingResource()</a>, <a class="el" href="Recipe_8cs_source.html#l00892">Recipe.ingredients</a>, <a class="el" href="Card_8cs_source.html#l07316">Card.isDestroyed</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00180">TaskPoint.pos</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00096">recipe</a>, <a class="el" href="Recipe_8cs_source.html#l00943">Recipe.Ingredient.RefreshThing()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00102">reqs</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00100">resources</a>, <a class="el" href="Chara_8cs_source.html#l04016">Chara.SplitHeld()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00098">target</a>, <a class="el" href="Recipe_8cs_source.html#l01029">Recipe.Ingredient.thing</a>, and <a class="el" href="Recipe_8cs_source.html#l00256">Recipe.W</a>.</p>
 
 </div>
 </div>
@@ -819,6 +959,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00096">96</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00007">Run()</a>.</p>
+
 </div>
 </div>
 <a id="a0d8d724c89cb8d99aa5f0d08a417e287" name="a0d8d724c89cb8d99aa5f0d08a417e287"></a>
@@ -834,6 +976,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00102">102</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00007">Run()</a>.</p>
 
 </div>
 </div>
@@ -851,6 +995,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00100">100</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00007">Run()</a>.</p>
+
 </div>
 </div>
 <a id="a383a02b903a877d28caa9a9a515ba6de" name="a383a02b903a877d28caa9a9a515ba6de"></a>
@@ -867,15 +1013,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__HaulResource_8cs_source.html#l00098">98</a> of file <a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00007">Run()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__HaulResource_8cs_source.html">AI_HaulResource.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__HaulResource.html">AI_HaulResource</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

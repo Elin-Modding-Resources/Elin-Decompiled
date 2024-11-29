@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetTracker.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -355,7 +375,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_class" href="classWidgetTracker_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aclassWidgetTracker_1_1Extra_html"><div class="ttname"><a href="classWidgetTracker_1_1Extra.html">WidgetTracker.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00136">WidgetTracker.cs:137</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html"><div class="ttname"><a href="classWidgetTracker.html">WidgetTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00005">WidgetTracker.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac07779a471091ea331fb4fb2d3644505" name="ac07779a471091ea331fb4fb2d3644505"></a>
@@ -384,6 +409,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00051">51</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        WidgetTracker.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_function" href="classWidgetTracker.html#a4642ec07619e6720dc41e60a3f9e760f">Refresh</a>();</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassWidgetTracker_html_a4642ec07619e6720dc41e60a3f9e760f"><div class="ttname"><a href="classWidgetTracker.html#a4642ec07619e6720dc41e60a3f9e760f">WidgetTracker.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00067">WidgetTracker.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -411,7 +443,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00062">62</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        base.CancelInvoke();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad7192c7e247d0d7e45015c49e7162b17" name="ad7192c7e247d0d7e45015c49e7162b17"></a>
@@ -438,7 +473,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00057">57</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        base.InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a517aec33305bdfff9daecca2c5853e5e" name="a517aec33305bdfff9daecca2c5853e5e"></a>
@@ -468,6 +506,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00113">113</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>        m.AddToggle(<span class="stringliteral">&quot;showPotential&quot;</span>, this.<a class="code hl_property" href="classWidgetTracker.html#ae4a4d4304c5191351873992fa858cb76">extra</a>.potential, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            this.extra.potential = a;</div>
+<div class="line"><span class="lineno">  118</span>            this.<a class="code hl_function" href="classWidgetTracker.html#a4642ec07619e6720dc41e60a3f9e760f">Refresh</a>();</div>
+<div class="line"><span class="lineno">  119</span>        });</div>
+<div class="line"><span class="lineno">  120</span>        m.AddButton(<span class="stringliteral">&quot;clear&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af04e0756a533e583022aef7df1059fe0">trackedElements</a>.Clear();</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.DeactivateWidget(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  124</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  125</span>        base.SetBaseContextMenu(m);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af04e0756a533e583022aef7df1059fe0"><div class="ttname"><a href="classPlayer.html#af04e0756a533e583022aef7df1059fe0">Player.trackedElements</a></div><div class="ttdeci">HashSet&lt; int &gt; trackedElements</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01500">Player.cs:1500</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html_ae4a4d4304c5191351873992fa858cb76"><div class="ttname"><a href="classWidgetTracker.html#ae4a4d4304c5191351873992fa858cb76">WidgetTracker.extra</a></div><div class="ttdeci">WidgetTracker.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00012">WidgetTracker.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetTracker_8cs_source.html#l00013">extra</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>, <a class="el" href="Player_8cs_source.html#l01500">Player.trackedElements</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -495,6 +553,64 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00067">67</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.Clear();</div>
+<div class="line"><span class="lineno">   70</span>        HashSet&lt;int&gt; trackedElements = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af04e0756a533e583022aef7df1059fe0">trackedElements</a>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (trackedElements.Count == 0)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.Append(<span class="stringliteral">&quot;none&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordtype">int</span> num = trackedElements.Last&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num2 <span class="keywordflow">in</span> trackedElements)</div>
+<div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(num2);</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (element != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   82</span>                {</div>
+<div class="line"><span class="lineno">   83</span>                    <span class="keywordtype">string</span> <a class="code hl_variable" href="classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd">text</a> = element.Name + <span class="stringliteral">&quot;  &quot;</span> + element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>.ToString();</div>
+<div class="line"><span class="lineno">   84</span>                    <span class="keywordflow">if</span> (element.<a class="code hl_property" href="classElement.html#a229c70d645c38d76d2fbccee62cf9326">ShowXP</a>)</div>
+<div class="line"><span class="lineno">   85</span>                    {</div>
+<div class="line"><span class="lineno">   86</span>                        <a class="code hl_variable" href="classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd">text</a> = <a class="code hl_variable" href="classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd">text</a> + <span class="stringliteral">&quot;.&quot;</span> + (element.vExp / 10).ToString(<span class="stringliteral">&quot;D2&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span>                    }</div>
+<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetTracker.html#ae4a4d4304c5191351873992fa858cb76">extra</a>.potential)</div>
+<div class="line"><span class="lineno">   89</span>                    {</div>
+<div class="line"><span class="lineno">   90</span>                        text += (<span class="stringliteral">&quot; (&quot;</span> + element.<a class="code hl_property" href="classElement.html#a30300b8ad7b1c9e0d698c379ec93dfb8">Potential</a>.ToString() + <span class="stringliteral">&quot;)&quot;</span>).TagSize(13);</div>
+<div class="line"><span class="lineno">   91</span>                    }</div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span> (num2 != num)</div>
+<div class="line"><span class="lineno">   93</span>                    {</div>
+<div class="line"><span class="lineno">   94</span>                        <a class="code hl_variable" href="classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd">text</a> += <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>                    }</div>
+<div class="line"><span class="lineno">   96</span>                    this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.Append(text);</div>
+<div class="line"><span class="lineno">   97</span>                }</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.Append(<span class="stringliteral">&quot;none&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.Equals(<span class="keyword">this</span>.lastSb))</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        this.text.text = this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>.ToString();</div>
+<div class="line"><span class="lineno">  109</span>        this.<a class="code hl_variable" href="classWidgetTracker.html#a9761443ed0920efbf61fe1ef18cf3337">lastSb</a>.Set(this.<a class="code hl_variable" href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">sb</a>);</div>
+<div class="line"><span class="lineno">  110</span>        this.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a229c70d645c38d76d2fbccee62cf9326"><div class="ttname"><a href="classElement.html#a229c70d645c38d76d2fbccee62cf9326">Element.ShowXP</a></div><div class="ttdeci">virtual bool ShowXP</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00199">Element.2.cs:200</a></div></div>
+<div class="ttc" id="aclassElement_html_a30300b8ad7b1c9e0d698c379ec93dfb8"><div class="ttname"><a href="classElement.html#a30300b8ad7b1c9e0d698c379ec93dfb8">Element.Potential</a></div><div class="ttdeci">int Potential</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00077">Element.2.cs:78</a></div></div>
+<div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html_a01abf9b80f646807e83609467e08c07e"><div class="ttname"><a href="classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e">WidgetTracker.sb</a></div><div class="ttdeci">FastString sb</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00130">WidgetTracker.cs:130</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html_a9761443ed0920efbf61fe1ef18cf3337"><div class="ttname"><a href="classWidgetTracker.html#a9761443ed0920efbf61fe1ef18cf3337">WidgetTracker.lastSb</a></div><div class="ttdeci">FastString lastSb</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00132">WidgetTracker.cs:132</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html_aa73ce6825a49f4342854d3ff422ab8fd"><div class="ttname"><a href="classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd">WidgetTracker.text</a></div><div class="ttdeci">UIText text</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00134">WidgetTracker.cs:134</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00013">extra</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00132">lastSb</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="Element_82_8cs_source.html#l00078">Element.Potential</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00130">sb</a>, <a class="el" href="Element_82_8cs_source.html#l00200">Element.ShowXP</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00134">text</a>, <a class="el" href="Player_8cs_source.html#l01500">Player.trackedElements</a>, and <a class="el" href="Element_82_8cs_source.html#l00054">Element.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00051">OnActivate()</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00113">OnSetContextMenu()</a>, and <a class="el" href="WidgetTracker_8cs_source.html#l00020">Toggle()</a>.</p>
 
 </div>
 </div>
@@ -523,6 +639,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00020">20</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> != <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        HashSet&lt;int&gt; trackedElements = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af04e0756a533e583022aef7df1059fe0">trackedElements</a>;</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (trackedElements.Contains(e.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>))</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            trackedElements.Remove(e.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (trackedElements.Count == 0 &amp;&amp; <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_variable" href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">Instance</a>)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_variable" href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">Instance</a>.<a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            trackedElements.Add(e.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_variable" href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">Instance</a>)</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.ActivateWidget(<span class="stringliteral">&quot;Tracker&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_variable" href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">Instance</a>)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_variable" href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">Instance</a>.<a class="code hl_function" href="classWidgetTracker.html#a4642ec07619e6720dc41e60a3f9e760f">Refresh</a>();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00892">Element.2.cs:892</a></div></div>
+<div class="ttc" id="aclassWidgetTracker_html_a3f49050cc201369be163b0af875de077"><div class="ttname"><a href="classWidgetTracker.html#a3f49050cc201369be163b0af875de077">WidgetTracker.Instance</a></div><div class="ttdeci">static WidgetTracker Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00128">WidgetTracker.cs:128</a></div></div>
+<div class="ttc" id="aclassWidget_html_aaaf019896e4e771a5c74a4ccbecf24eb"><div class="ttname"><a href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Widget.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00195">Widget.cs:195</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00195">Widget.Close()</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00128">Instance</a>, <a class="el" href="Element_82_8cs_source.html#l00892">Element.owner</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>, <a class="el" href="Player_8cs_source.html#l01500">Player.trackedElements</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WindowCharaMini_8cs_source.html#l00023">WindowCharaMini.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00371">WindowChara.RefreshSkill()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>.</p>
 
 </div>
 </div>
@@ -549,6 +702,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00128">128</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00020">Toggle()</a>.</p>
+
 </div>
 </div>
 <a id="a9761443ed0920efbf61fe1ef18cf3337" name="a9761443ed0920efbf61fe1ef18cf3337"></a>
@@ -572,6 +727,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00132">132</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -597,6 +754,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00130">130</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="aa73ce6825a49f4342854d3ff422ab8fd" name="aa73ce6825a49f4342854d3ff422ab8fd"></a>
@@ -612,6 +771,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00134">134</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -637,6 +798,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetTracker_8cs_source.html#l00012">12</a> of file <a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a>.<a class="code hl_class" href="classWidgetTracker_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetTracker_8cs_source.html#l00113">OnSetContextMenu()</a>, and <a class="el" href="WidgetTracker_8cs_source.html#l00067">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -644,9 +813,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="WidgetTracker_8cs_source.html">WidgetTracker.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetTracker.html">WidgetTracker</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

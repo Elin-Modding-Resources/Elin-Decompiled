@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerAbility.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -253,6 +273,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00205">205</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.List();</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="ttc" id="aclassLayerAbility_html_a5ddcbcf983118b23fd2526c77c00878d"><div class="ttname"><a href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">LayerAbility.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00255">LayerAbility.cs:255</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00255">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00197">Redraw()</a>.</p>
 
 </div>
 </div>
@@ -280,6 +308,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00133">133</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a> buttonAbility = <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a4b1b971cde12ef29e67c64e9c9b8df77">hotElement</a>;</div>
+<div class="line"><span class="lineno">  136</span>        LayerAbility.hotElement = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a837957362249b856f71753279addb5ea">SetDirtyAll</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (buttonAbility &amp;&amp; buttonAbility.<a class="code hl_variable" href="classButtonAbility.html#a840d1141b2da1156afe70c14bbb661e0">attach</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            UnityEngine.Object.Destroy(buttonAbility.<a class="code hl_variable" href="classButtonAbility.html#a840d1141b2da1156afe70c14bbb661e0">attach</a>.gameObject);</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>        EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.SetDragImage(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html"><div class="ttname"><a href="classButtonAbility.html">ButtonAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00006">ButtonAbility.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a840d1141b2da1156afe70c14bbb661e0"><div class="ttname"><a href="classButtonAbility.html#a840d1141b2da1156afe70c14bbb661e0">ButtonAbility.attach</a></div><div class="ttdeci">Transform attach</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00294">ButtonAbility.cs:294</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a4b1b971cde12ef29e67c64e9c9b8df77"><div class="ttname"><a href="classLayerAbility.html#a4b1b971cde12ef29e67c64e9c9b8df77">LayerAbility.hotElement</a></div><div class="ttdeci">static ButtonAbility hotElement</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00253">LayerAbility.cs:253</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a837957362249b856f71753279addb5ea"><div class="ttname"><a href="classLayerInventory.html#a837957362249b856f71753279addb5ea">LayerInventory.SetDirtyAll</a></div><div class="ttdeci">static void SetDirtyAll(bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00089">LayerInventory.cs:89</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00294">ButtonAbility.attach</a>, <a class="el" href="LayerAbility_8cs_source.html#l00253">hotElement</a>, <a class="el" href="LayerInventory_8cs_source.html#l00089">LayerInventory.SetDirtyAll()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -307,6 +358,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00244">244</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>    {</div>
+<div class="line"><span class="lineno">  246</span>        ELayer.player.pref.sortAbility = this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.sortMode;</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.imageDrag.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="ttc" id="aclassLayerRegisterHotbar_html"><div class="ttname"><a href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerRegisterHotbar_8cs_source.html#l00006">LayerRegisterHotbar.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00255">list</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -335,6 +394,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00215">215</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>        <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a> buttonAbility = b as <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>;</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a> layer = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (((layer != <span class="keyword">null</span>) ? layer.<a class="code hl_function" href="classLayerRegisterHotbar.html#ac0d698fbc6ff5c53f6f5e765477b16e2">GetButton</a>() : <span class="keyword">null</span>) ?? <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;hotitemRegister&quot;</span>;</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!layer)</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;().SetItem(buttonAbility.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>);</div>
+<div class="line"><span class="lineno">  227</span>        }</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.SetDragText(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a7f8966240ba94ebea2a0309754a64e52"><div class="ttname"><a href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">ButtonAbility.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00284">ButtonAbility.cs:284</a></div></div>
+<div class="ttc" id="aclassLayerRegisterHotbar_html_ac0d698fbc6ff5c53f6f5e765477b16e2"><div class="ttname"><a href="classLayerRegisterHotbar.html#ac0d698fbc6ff5c53f6f5e765477b16e2">LayerRegisterHotbar.GetButton</a></div><div class="ttdeci">ButtonHotItem GetButton()</div><div class="ttdef"><b>Definition:</b> <a href="LayerRegisterHotbar_8cs_source.html#l00054">LayerRegisterHotbar.cs:54</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00054">LayerRegisterHotbar.GetButton()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00284">ButtonAbility.source</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -373,6 +451,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00231">231</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.imageDrag.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  234</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> source = (b as <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>).source;</div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a> layer = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (layer)</div>
+<div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            layer.<a class="code hl_function" href="classLayerRegisterHotbar.html#a55bba61c764765ea70a60252066c50fe">OnEndDrag</a>();</div>
+<div class="line"><span class="lineno">  239</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
+<div class="ttc" id="aclassLayerRegisterHotbar_html_a55bba61c764765ea70a60252066c50fe"><div class="ttname"><a href="classLayerRegisterHotbar.html#a55bba61c764765ea70a60252066c50fe">LayerRegisterHotbar.OnEndDrag</a></div><div class="ttdeci">bool OnEndDrag()</div><div class="ttdef"><b>Definition:</b> <a href="LayerRegisterHotbar_8cs_source.html#l00069">LayerRegisterHotbar.cs:69</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00069">LayerRegisterHotbar.OnEndDrag()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -400,6 +493,68 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        this.chara = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>;</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> str <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classLayerAbility.html#ae02d0c2a293eaa6beecd9a729b800b12">idGroup</a>)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            this.windows[0].AddTab(<span class="stringliteral">&quot;cat_&quot;</span> + str, this.windows[0].CurrentContent, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>        LayerAbility.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   23</span>        this.list.sortMode = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a449f0cea0e1adf7a0395cee0a9f7069b">pref</a>.sortAbility;</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            UIButton buttonSort = this.windows[0].buttonSort;</div>
+<div class="line"><span class="lineno">   27</span>            buttonSort.onClick.RemoveAllListeners();</div>
+<div class="line"><span class="lineno">   28</span>            buttonSort.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                UIContextMenu uicontextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   31</span>                uicontextMenu.layoutGroup.childAlignment = TextAnchor.UpperLeft;</div>
+<div class="line"><span class="lineno">   32</span>                uicontextMenu.alwaysPopLeft = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>                UIContextMenu uicontextMenu2 = uicontextMenu.AddChild(<span class="stringliteral">&quot;sort&quot;</span>, TextAnchor.UpperRight);</div>
+<div class="line"><span class="lineno">   34</span>                UIList.SortMode[] sorts = <span class="keyword">this</span>.list.sorts;</div>
+<div class="line"><span class="lineno">   35</span>                for (<span class="keywordtype">int</span> j = 0; j &lt; sorts.Length; j++)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    UIList.SortMode sortMode = sorts[j];</div>
+<div class="line"><span class="lineno">   38</span>                    <span class="keywordtype">string</span> str2 = (this.list.sortMode == sortMode) ? <span class="stringliteral">&quot;context_checker&quot;</span>.lang() : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>                    UIList.SortMode _sort = sortMode;</div>
+<div class="line"><span class="lineno">   40</span>                    uicontextMenu2.AddButton(str2 + sortMode.ToString().lang(), delegate()</div>
+<div class="line"><span class="lineno">   41</span>                    {</div>
+<div class="line"><span class="lineno">   42</span>                        this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.List(_sort);</div>
+<div class="line"><span class="lineno">   43</span>                        SE.Click();</div>
+<div class="line"><span class="lineno">   44</span>                    }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   45</span>                }</div>
+<div class="line"><span class="lineno">   46</span>                UIContextMenu uicontextMenu3 = uicontextMenu.AddChild(<span class="stringliteral">&quot;config&quot;</span>, TextAnchor.UpperRight);</div>
+<div class="line"><span class="lineno">   47</span>                uicontextMenu3.AddSlider(<span class="stringliteral">&quot;alpha&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">float</span>)<span class="keyword">this</span>.config.bgAlpha, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">   48</span>                {</div>
+<div class="line"><span class="lineno">   49</span>                    this.config.bgAlpha = (int)b;</div>
+<div class="line"><span class="lineno">   50</span>                    this.<a class="code hl_function" href="classLayerAbility.html#aa78ae6d307228d009178a45caf677ae6">RefreshConfig</a>();</div>
+<div class="line"><span class="lineno">   51</span>                }, 0f, 100f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   52</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;autoHideBG&quot;</span>, this.<a class="code hl_property" href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">config</a>.autoHideBG, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    this.config.autoHideBG = a;</div>
+<div class="line"><span class="lineno">   55</span>                    this.<a class="code hl_function" href="classLayerAbility.html#aa78ae6d307228d009178a45caf677ae6">RefreshConfig</a>();</div>
+<div class="line"><span class="lineno">   56</span>                });</div>
+<div class="line"><span class="lineno">   57</span>                uicontextMenu3.AddToggle(<span class="stringliteral">&quot;hideDepletedSpell&quot;</span>, this.<a class="code hl_property" href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">config</a>.hideDepletedSpell, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   58</span>                {</div>
+<div class="line"><span class="lineno">   59</span>                    this.config.hideDepletedSpell = a;</div>
+<div class="line"><span class="lineno">   60</span>                    this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.List();</div>
+<div class="line"><span class="lineno">   61</span>                });</div>
+<div class="line"><span class="lineno">   62</span>                uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   63</span>            });</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        this.windows[0].idTab = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a449f0cea0e1adf7a0395cee0a9f7069b">pref</a>.lastIdTabAbility;</div>
+<div class="line"><span class="lineno">   66</span>        this.<a class="code hl_function" href="classLayerAbility.html#aa78ae6d307228d009178a45caf677ae6">RefreshConfig</a>();</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00014">ELayer.cs:15</a></div></div>
+<div class="ttc" id="aclassGame_html_a0b6ef45569f091050847284c1abc35c5"><div class="ttname"><a href="classGame.html#a0b6ef45569f091050847284c1abc35c5">Game.altAbility</a></div><div class="ttdeci">bool altAbility</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00088">Game.cs:89</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_aa78ae6d307228d009178a45caf677ae6"><div class="ttname"><a href="classLayerAbility.html#aa78ae6d307228d009178a45caf677ae6">LayerAbility.RefreshConfig</a></div><div class="ttdeci">void RefreshConfig()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00069">LayerAbility.cs:69</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_abc1361b374283e1fbe1e0ea3c85109a7"><div class="ttname"><a href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">LayerAbility.config</a></div><div class="ttdeci">new LayerAbility.Config config</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00007">LayerAbility.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_ae02d0c2a293eaa6beecd9a729b800b12"><div class="ttname"><a href="classLayerAbility.html#ae02d0c2a293eaa6beecd9a729b800b12">LayerAbility.idGroup</a></div><div class="ttdeci">string[] idGroup</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00262">LayerAbility.cs:262</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a449f0cea0e1adf7a0395cee0a9f7069b"><div class="ttname"><a href="classPlayer.html#a449f0cea0e1adf7a0395cee0a9f7069b">Player.pref</a></div><div class="ttdeci">Player.Pref pref</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01452">Player.cs:1452</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00089">Game.altAbility</a>, <a class="el" href="LayerAbility_8cs_source.html#l00008">config</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="LayerAbility_8cs_source.html#l00262">idGroup</a>, <a class="el" href="LayerAbility_8cs_source.html#l00255">list</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01452">Player.pref</a>, <a class="el" href="LayerAbility_8cs_source.html#l00069">RefreshConfig()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -428,6 +583,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00210">210</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.SetDragImage(b.icon, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -456,6 +616,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00112">112</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        ELayer.player.pref.lastIdTabAbility = window.idTab;</div>
+<div class="line"><span class="lineno">  115</span>        this.<a class="code hl_function" href="classLayerAbility.html#ab9679bae2f5a50b00e822f2db4598b0f">SelectGroup</a>(this.windows[0].<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.tabs[window.idTab].idLang.Replace(<span class="stringliteral">&quot;cat_&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a8425a850da931bf4ff4469f7c45880f0"><div class="ttname"><a href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">ELayer.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00110">ELayer.cs:111</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_ab9679bae2f5a50b00e822f2db4598b0f"><div class="ttname"><a href="classLayerAbility.html#ab9679bae2f5a50b00e822f2db4598b0f">LayerAbility.SelectGroup</a></div><div class="ttdeci">void SelectGroup(string id)</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00146">LayerAbility.cs:146</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00146">SelectGroup()</a>, and <a class="el" href="ELayer_8cs_source.html#l00111">ELayer.setting</a>.</p>
 
 </div>
 </div>
@@ -483,6 +651,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00118">118</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (EInput.middleMouse.down)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a> componentOf = InputModuleEX.GetComponentOf&lt;<a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>&gt;();</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (componentOf)</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_function" href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">SetCurrentHotItem</a>(<span class="keyword">new</span> <a class="code hl_class" href="classHotItemAct.html">HotItemAct</a>(componentOf.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>));</div>
+<div class="line"><span class="lineno">  126</span>                SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        base.OnUpdateInput();</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="ttc" id="aclassHotItemAct_html"><div class="ttname"><a href="classHotItemAct.html">HotItemAct</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemAct_8cs_source.html#l00006">HotItemAct.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_afbe334fb5e8a370af1caffdf123e585e"><div class="ttname"><a href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">Player.SetCurrentHotItem</a></div><div class="ttdeci">void SetCurrentHotItem(HotItem item)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01025">Player.cs:1025</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01025">Player.SetCurrentHotItem()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00284">ButtonAbility.source</a>.</p>
 
 </div>
 </div>
@@ -510,6 +695,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00197">197</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">Instance</a>)</div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">Instance</a>.<a class="code hl_function" href="classLayerAbility.html#a276eba71966b01adf3a5348d566e84a1">_Redraw</a>();</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="ttc" id="aclassLayerAbility_html_a276eba71966b01adf3a5348d566e84a1"><div class="ttname"><a href="classLayerAbility.html#a276eba71966b01adf3a5348d566e84a1">LayerAbility._Redraw</a></div><div class="ttdeci">void _Redraw()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00205">LayerAbility.cs:205</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a6b807f2d25164920a38c19aaa7fe43e4"><div class="ttname"><a href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">LayerAbility.Instance</a></div><div class="ttdeci">static LayerAbility Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00251">LayerAbility.cs:251</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00205">_Redraw()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00251">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ElementContainerCard_8cs_source.html#l00248">ElementContainerCard.g__TryLearn()</a>, and <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>.</p>
 
 </div>
 </div>
@@ -537,6 +734,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00069">69</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        Window window = this.windows[0];</div>
+<div class="line"><span class="lineno">   72</span>        window.imageBG.color = <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white.SetAlpha(0.01f * (<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">config</a>.bgAlpha);</div>
+<div class="line"><span class="lineno">   73</span>        window.listCgFloat.Clear();</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">config</a>.autoHideBG)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            window.listCgFloat.Add(window.cgBG);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        window.cgBG.enabled = this.<a class="code hl_property" href="classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7">config</a>.autoHideBG;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00008">config</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00015">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -565,6 +777,71 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00146">146</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Clear();</div>
+<div class="line"><span class="lineno">  149</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>;</div>
+<div class="line"><span class="lineno">  150</span>        UIList.Callback&lt;<a class="code hl_class" href="classElement.html">Element</a>, <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classElement.html">Element</a>, <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>&gt;();</div>
+<div class="line"><span class="lineno">  151</span>        callback.onClick = delegate(<a class="code hl_class" href="classElement.html">Element</a> a, <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a> b)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.IsActive)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            SE.Equip();</div>
+<div class="line"><span class="lineno">  159</span>            LayerAbility.hotElement = b;</div>
+<div class="line"><span class="lineno">  160</span>            b.attach = Util.Instantiate(<span class="stringliteral">&quot;UI/Element/Grid/Attach/guide_ability&quot;</span>, b.transform);</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a837957362249b856f71753279addb5ea">SetDirtyAll</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  162</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.SetDragImage(b.icon, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  163</span>        };</div>
+<div class="line"><span class="lineno">  164</span>        callback.onRedraw = delegate(<a class="code hl_class" href="classElement.html">Element</a> a, <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            b.dragParent = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  167</span>            b.<a class="code hl_function" href="classButtonAbility.html#a3ff586950bff7cc8d7e5e9b627ea5cdc">SetAct</a>(this.<a class="code hl_variable" href="classLayerAbility.html#a50f44f7af8d914b698cffad58502af83">chara</a>, a);</div>
+<div class="line"><span class="lineno">  168</span>        };</div>
+<div class="line"><span class="lineno">  169</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            List&lt;Element&gt; <a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a> = <span class="keyword">new</span> List&lt;Element&gt;();</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
+<div class="line"><span class="lineno">  173</span>            {</div>
+<div class="line"><span class="lineno">  174</span>                <span class="keywordtype">string</span> categorySub = element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.categorySub;</div>
+<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">if</span> (element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> != 0 &amp;&amp; (!<span class="keyword">this</span>.config.hideDepletedSpell || !element.<a class="code hl_property" href="classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398">PotentialAsStock</a> || element.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> &gt; 0))</div>
+<div class="line"><span class="lineno">  176</span>                {</div>
+<div class="line"><span class="lineno">  177</span>                    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;favAbility&quot;</span> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Contains(element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>))</div>
+<div class="line"><span class="lineno">  178</span>                    {</div>
+<div class="line"><span class="lineno">  179</span>                        <a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Add(element);</div>
+<div class="line"><span class="lineno">  180</span>                    }</div>
+<div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == categorySub || (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;all&quot;</span> &amp;&amp; this.<a class="code hl_variable" href="classLayerAbility.html#ae02d0c2a293eaa6beecd9a729b800b12">idGroup</a>.Contains(categorySub)))</div>
+<div class="line"><span class="lineno">  182</span>                    {</div>
+<div class="line"><span class="lineno">  183</span>                        <a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Add(element);</div>
+<div class="line"><span class="lineno">  184</span>                    }</div>
+<div class="line"><span class="lineno">  185</span>                }</div>
+<div class="line"><span class="lineno">  186</span>            }</div>
+<div class="line"><span class="lineno">  187</span>            <a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Sort((<a class="code hl_class" href="classElement.html">Element</a> a, <a class="code hl_class" href="classElement.html">Element</a> b) =&gt; a.<a class="code hl_function" href="classElement.html#a61b0f8c35a0b1d63e92b538aa8eaddb8">GetSortVal</a>(m) - b.<a class="code hl_function" href="classElement.html#a61b0f8c35a0b1d63e92b538aa8eaddb8">GetSortVal</a>(m));</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> o <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>)</div>
+<div class="line"><span class="lineno">  189</span>            {</div>
+<div class="line"><span class="lineno">  190</span>                this.list.Add(o);</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>        };</div>
+<div class="line"><span class="lineno">  193</span>        baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">  194</span>        this.list.List();</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_a3ff586950bff7cc8d7e5e9b627ea5cdc"><div class="ttname"><a href="classButtonAbility.html#a3ff586950bff7cc8d7e5e9b627ea5cdc">ButtonAbility.SetAct</a></div><div class="ttdeci">void SetAct(Chara _chara, Element e)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00008">ButtonAbility.cs:8</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00887">ElementContainer.cs:887</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassElement_html_a458fcaa631dde18afaff0d34f26d70fe"><div class="ttname"><a href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">Element.vPotential</a></div><div class="ttdeci">int vPotential</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00882">Element.2.cs:882</a></div></div>
+<div class="ttc" id="aclassElement_html_a61b0f8c35a0b1d63e92b538aa8eaddb8"><div class="ttname"><a href="classElement.html#a61b0f8c35a0b1d63e92b538aa8eaddb8">Element.GetSortVal</a></div><div class="ttdeci">int GetSortVal(UIList.SortMode m)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00680">Element.2.cs:680</a></div></div>
+<div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
+<div class="ttc" id="aclassElement_html_a9dd0afbc97aed40e9e9ca267e72ce398"><div class="ttname"><a href="classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398">Element.PotentialAsStock</a></div><div class="ttdeci">virtual bool PotentialAsStock</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00239">Element.2.cs:240</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a50f44f7af8d914b698cffad58502af83"><div class="ttname"><a href="classLayerAbility.html#a50f44f7af8d914b698cffad58502af83">LayerAbility.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00257">LayerAbility.cs:257</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a9f5205a935f87557f969deca18fa3d84"><div class="ttname"><a href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">Player.favAbility</a></div><div class="ttdeci">HashSet&lt; int &gt; favAbility</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01506">Player.cs:1506</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00257">chara</a>, <a class="el" href="ElementContainer_8cs_source.html#l00887">ElementContainer.dict</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Player_8cs_source.html#l01506">Player.favAbility</a>, <a class="el" href="Element_82_8cs_source.html#l00680">Element.GetSortVal()</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="LayerAbility_8cs_source.html#l00262">idGroup</a>, <a class="el" href="LayerAbility_8cs_source.html#l00255">list</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Element_82_8cs_source.html#l00240">Element.PotentialAsStock</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00008">ButtonAbility.SetAct()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00089">LayerInventory.SetDirtyAll()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, <a class="el" href="Element_82_8cs_source.html#l00054">Element.Value</a>, and <a class="el" href="Element_82_8cs_source.html#l00882">Element.vPotential</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00112">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -593,6 +870,50 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00081">81</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">Instance</a>)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">Instance</a>.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Redraw();</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> layerInventory <span class="keywordflow">in</span> <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">foreach</span> (UIList.ButtonPair buttonPair in layerInventory.<a class="code hl_variable" href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">invs</a>[0].list.buttons)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = buttonPair.component as <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>;</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> != <span class="keyword">null</span> &amp;&amp; buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>)</div>
+<div class="line"><span class="lineno">   93</span>                {</div>
+<div class="line"><span class="lineno">   94</span>                    layerInventory.<a class="code hl_variable" href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">invs</a>[0].list.callbacks.OnRedraw(buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>, buttonGrid, buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">index</a>);</div>
+<div class="line"><span class="lineno">   95</span>                }</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">foreach</span> (UIList.ButtonPair buttonPair2 in <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#aed7194a86625a4583adbb486717edca5">list</a>.buttons)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid2 = buttonPair2.component as <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>;</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">if</span> (buttonGrid2.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> != <span class="keyword">null</span> &amp;&amp; buttonGrid2.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>)</div>
+<div class="line"><span class="lineno">  104</span>                {</div>
+<div class="line"><span class="lineno">  105</span>                    <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#aed7194a86625a4583adbb486717edca5">list</a>.callbacks.OnRedraw(buttonGrid2.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>, buttonGrid2, buttonGrid2.<a class="code hl_variable" href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">index</a>);</div>
+<div class="line"><span class="lineno">  106</span>                }</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_function" href="classWidgetCurrentTool.html#aa615af0cb0e0a2fdace0387cdbf75fef">RefreshCurrentHotItem</a>();</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a1e704bdf3a08c312e607ad3bc919534d"><div class="ttname"><a href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">ButtonGrid.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00778">ButtonGrid.cs:778</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a20afe24d5e89b755b5cc2e951895250e"><div class="ttname"><a href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">ButtonGrid.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00780">ButtonGrid.cs:780</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a13623db366d1e1d41cbda95292fbe79f"><div class="ttname"><a href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">LayerInventory.invs</a></div><div class="ttdeci">List&lt; UIInventory &gt; invs</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00612">LayerInventory.cs:612</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a859b8c7f75365fba1e441ce5d983d466"><div class="ttname"><a href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">LayerInventory.listInv</a></div><div class="ttdeci">static List&lt; LayerInventory &gt; listInv</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00608">LayerInventory.cs:608</a></div></div>
+<div class="ttc" id="aclassTraitAbility_html"><div class="ttname"><a href="classTraitAbility.html">TraitAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitAbility_8cs_source.html#l00004">TraitAbility.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html"><div class="ttname"><a href="classWidgetCurrentTool.html">WidgetCurrentTool</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00007">WidgetCurrentTool.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a026d2a629ff4d74acd15d5fe806bd04b"><div class="ttname"><a href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">WidgetCurrentTool.Instance</a></div><div class="ttdeci">static WidgetCurrentTool Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.cs:310</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_aa615af0cb0e0a2fdace0387cdbf75fef"><div class="ttname"><a href="classWidgetCurrentTool.html#aa615af0cb0e0a2fdace0387cdbf75fef">WidgetCurrentTool.RefreshCurrentHotItem</a></div><div class="ttdeci">static void RefreshCurrentHotItem()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00136">WidgetCurrentTool.cs:136</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_aed7194a86625a4583adbb486717edca5"><div class="ttname"><a href="classWidgetCurrentTool.html#aed7194a86625a4583adbb486717edca5">WidgetCurrentTool.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00320">WidgetCurrentTool.cs:320</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00778">ButtonGrid.card</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00780">ButtonGrid.index</a>, <a class="el" href="LayerAbility_8cs_source.html#l00251">Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, <a class="el" href="LayerInventory_8cs_source.html#l00612">LayerInventory.invs</a>, <a class="el" href="LayerAbility_8cs_source.html#l00255">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00320">WidgetCurrentTool.list</a>, <a class="el" href="LayerInventory_8cs_source.html#l00608">LayerInventory.listInv</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00136">WidgetCurrentTool.RefreshCurrentHotItem()</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09030">Chara.GainAbility()</a>, <a class="el" href="Ability_82_8cs_source.html#l00047">Ability.OnChangeValue()</a>, and <a class="el" href="Chara_8cs_source.html#l05204">Chara.UseAbility()</a>.</p>
 
 </div>
 </div>
@@ -610,6 +931,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00257">257</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00146">SelectGroup()</a>.</p>
 
 </div>
 </div>
@@ -651,6 +974,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00253">253</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00133">ClearHotElement()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00128">LayerInventory.TryShowGuide()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="ae02d0c2a293eaa6beecd9a729b800b12" name="ae02d0c2a293eaa6beecd9a729b800b12"></a>
@@ -676,6 +1001,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00262">262</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00015">OnInit()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00146">SelectGroup()</a>.</p>
+
 </div>
 </div>
 <a id="a6b807f2d25164920a38c19aaa7fe43e4" name="a6b807f2d25164920a38c19aaa7fe43e4"></a>
@@ -700,6 +1027,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00251">251</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00197">Redraw()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00081">SetDirty()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00262">ButtonAbility.ToggleFav()</a>.</p>
+
 </div>
 </div>
 <a id="a5ddcbcf983118b23fd2526c77c00878d" name="a5ddcbcf983118b23fd2526c77c00878d"></a>
@@ -715,6 +1044,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00255">255</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00205">_Redraw()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00244">OnDisable()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00015">OnInit()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00146">SelectGroup()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00081">SetDirty()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00262">ButtonAbility.ToggleFav()</a>.</p>
 
 </div>
 </div>
@@ -740,6 +1071,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerAbility_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aeb66c6f1096637128ad665410499bf84">layerAbilityConfig</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassPlayer_html_aeb66c6f1096637128ad665410499bf84"><div class="ttname"><a href="classPlayer.html#aeb66c6f1096637128ad665410499bf84">Player.layerAbilityConfig</a></div><div class="ttdeci">LayerAbility.Config layerAbilityConfig</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01476">Player.cs:1476</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00015">OnInit()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00069">RefreshConfig()</a>.</p>
 
 </div>
 </div>
@@ -747,9 +1087,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="LayerAbility_8cs_source.html">LayerAbility.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerAbility.html">LayerAbility</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

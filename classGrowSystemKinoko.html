@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGrowSystemKinoko.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -350,7 +370,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGrowSystem.html#a70a66c10a8b0f8a2067d6a99935a70aa">GrowSystem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00005">5</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a685d47708d073b638555f69323076d37" name="a685d47708d073b638555f69323076d37"></a>
@@ -379,7 +402,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGrowSystem.html#ab028808110e94251906390f66f446389">GrowSystem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00058">58</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        base.SetStage(1, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac3ff4c25f4969ab353f963d0a2477dc9" name="ac3ff4c25f4969ab353f963d0a2477dc9"></a>
@@ -409,6 +435,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGrowSystem.html#ab9f10adb899d78bdd81163f4619bb26a">GrowSystem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00063">63</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        base.PopHarvest(c ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">CreateFromCategory</a>(<span class="stringliteral">&quot;mushroom&quot;</span>, -1), -1);</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_ac4a7ef4a68508b96961ea565b80be7d8"><div class="ttname"><a href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">ThingGen.CreateFromCategory</a></div><div class="ttdeci">static Thing CreateFromCategory(string idCat, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00081">ThingGen.cs:81</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00081">ThingGen.CreateFromCategory()</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -434,7 +469,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00050">50</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad3ecf944a2fabd71d75a486330ac08e2" name="ad3ecf944a2fabd71d75a486330ac08e2"></a>
@@ -458,7 +499,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00010">10</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d762e7ad7f24dd7edb6e6d28e974d98" name="a0d762e7ad7f24dd7edb6e6d28e974d98"></a>
@@ -482,7 +529,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00034">34</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a33a9fe10b0d5adf8e706a70e9adc5621" name="a33a9fe10b0d5adf8e706a70e9adc5621"></a>
@@ -506,7 +559,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00042">42</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> 4;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9baf46e4f24e58cf40b755e28b55be56" name="a9baf46e4f24e58cf40b755e28b55be56"></a>
@@ -530,7 +589,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00026">26</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17ba0063fc4757d5e69ac11e78b43ac8" name="a17ba0063fc4757d5e69ac11e78b43ac8"></a>
@@ -554,16 +619,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemKinoko_8cs_source.html#l00018">18</a> of file <a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="GrowSystemKinoko_8cs_source.html">GrowSystemKinoko.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGrowSystemKinoko.html">GrowSystemKinoko</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

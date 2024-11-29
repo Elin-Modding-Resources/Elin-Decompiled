@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerNewspaper.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -271,6 +291,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00056">56</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        SE.Play(<span class="stringliteral">&quot;click_recipe&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerImage.html">LayerImage</a>&gt;().SetImage(this.<a class="code hl_variable" href="classLayerNewspaper.html#ac852aee8f34f6c409418b070e345c34d">spriteComicBig</a>);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerImage_html"><div class="ttname"><a href="classLayerImage.html">LayerImage</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00005">LayerImage.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_ac852aee8f34f6c409418b070e345c34d"><div class="ttname"><a href="classLayerNewspaper.html#ac852aee8f34f6c409418b070e345c34d">LayerNewspaper.spriteComicBig</a></div><div class="ttdeci">Sprite spriteComicBig</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00190">LayerNewspaper.cs:190</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00190">spriteComicBig</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -298,6 +328,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00042">42</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        this.topPage = !this.<a class="code hl_variable" href="classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3">topPage</a>;</div>
+<div class="line"><span class="lineno">   45</span>        this.<a class="code hl_variable" href="classLayerNewspaper.html#a671d14770afeb02702a33a8c91e022e7">buttonPage</a>.mainText.SetText((this.<a class="code hl_variable" href="classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3">topPage</a> ? <span class="stringliteral">&quot;news_firstPage&quot;</span> : <span class="stringliteral">&quot;news_secondPage&quot;</span>).lang());</div>
+<div class="line"><span class="lineno">   46</span>        SE.Play(<span class="stringliteral">&quot;click_scroll&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc">RefreshPage</a>();</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassLayerNewspaper_html_a27e4c094cbdf9e83e5cf147a2549dfcc"><div class="ttname"><a href="classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc">LayerNewspaper.RefreshPage</a></div><div class="ttdeci">void RefreshPage()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00050">LayerNewspaper.cs:50</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a671d14770afeb02702a33a8c91e022e7"><div class="ttname"><a href="classLayerNewspaper.html#a671d14770afeb02702a33a8c91e022e7">LayerNewspaper.buttonPage</a></div><div class="ttdeci">UIButton buttonPage</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00184">LayerNewspaper.cs:184</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a94582d1109e4b8b9464dea8e33176ed3"><div class="ttname"><a href="classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3">LayerNewspaper.topPage</a></div><div class="ttdeci">bool topPage</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00192">LayerNewspaper.cs:192</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00184">buttonPage</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00050">RefreshPage()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00192">topPage</a>.</p>
 
 </div>
 </div>
@@ -325,6 +366,48 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            NewsList.dict = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_function" href="classWorld.html#a2d3bc836c6621d37681f1b1d4b89ee51">CreateDayData</a>();</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        this.seed = (ELayer.debug.enable ? -1 : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#a77d38e165e742d8a4c153d99e6bd5d66">dayData</a>.<a class="code hl_variable" href="classDayData.html#ab09dba873b94e9acf9cef538404f4ebb">seed</a>);</div>
+<div class="line"><span class="lineno">   26</span>        Rand.UseSeed(this.<a class="code hl_variable" href="classLayerNewspaper.html#ae37e07192b29cc7976508d2092f9822c">seed</a>, delegate</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.imageAdRight.sprite = this.<a class="code hl_variable" href="classLayerNewspaper.html#a6171e480d0eead857a4ff685847167cc">spritesAd</a>.RandomItem&lt;Sprite&gt;();</div>
+<div class="line"><span class="lineno">   29</span>            this.<a class="code hl_variable" href="classLayerNewspaper.html#a87ff9a5a1b085ce62b0a4838e1566107">imageAdRight</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">   30</span>        });</div>
+<div class="line"><span class="lineno">   31</span>        this.textDate.text = <span class="stringliteral">&quot;news_date&quot;</span>.lang(Lang.GetList(<span class="stringliteral">&quot;monthEng&quot;</span>)[ELayer.world.date.month - 1], <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> luck = (int)<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#a77d38e165e742d8a4c153d99e6bd5d66">dayData</a>.<a class="code hl_variable" href="classDayData.html#a84269609cc56a1cf9be421b7a096aed7">luck</a>;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">this</span>.textFortune.text = <span class="stringliteral">&quot;news_tellLuck&quot;</span>.lang(Lang.GetList(<span class="stringliteral">&quot;dayLuck&quot;</span>)[luck], Lang.GetList(<span class="stringliteral">&quot;dayLuck2&quot;</span>)[luck], <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#ad29f4282c70fa9efb01704d6dac767ee">RefreshAD</a>();</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>();</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>();</div>
+<div class="line"><span class="lineno">   37</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#ab9121e7e5c3829188bf1c83467e12ffd">RefreshWeather</a>();</div>
+<div class="line"><span class="lineno">   38</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>();</div>
+<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_function" href="classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc">RefreshPage</a>();</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00030">Date.cs:31</a></div></div>
+<div class="ttc" id="aclassDate_html_a8d8552788241d94c4731cb078a625a6f"><div class="ttname"><a href="classDate.html#a8d8552788241d94c4731cb078a625a6f">Date.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00006">Date.cs:7</a></div></div>
+<div class="ttc" id="aclassDayData_html_a84269609cc56a1cf9be421b7a096aed7"><div class="ttname"><a href="classDayData.html#a84269609cc56a1cf9be421b7a096aed7">DayData.luck</a></div><div class="ttdeci">DayData.Luck luck</div><div class="ttdef"><b>Definition:</b> <a href="DayData_8cs_source.html#l00015">DayData.cs:15</a></div></div>
+<div class="ttc" id="aclassDayData_html_ab09dba873b94e9acf9cef538404f4ebb"><div class="ttname"><a href="classDayData.html#ab09dba873b94e9acf9cef538404f4ebb">DayData.seed</a></div><div class="ttdeci">int seed</div><div class="ttdef"><b>Definition:</b> <a href="DayData_8cs_source.html#l00017">DayData.cs:17</a></div></div>
+<div class="ttc" id="aclassELayer_html_a02d3cd5d8d5cb20fcda917f05d7f35c7"><div class="ttname"><a href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">ELayer.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00134">ELayer.cs:135</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a6171e480d0eead857a4ff685847167cc"><div class="ttname"><a href="classLayerNewspaper.html#a6171e480d0eead857a4ff685847167cc">LayerNewspaper.spritesAd</a></div><div class="ttdeci">List&lt; Sprite &gt; spritesAd</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00170">LayerNewspaper.cs:170</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a87ff9a5a1b085ce62b0a4838e1566107"><div class="ttname"><a href="classLayerNewspaper.html#a87ff9a5a1b085ce62b0a4838e1566107">LayerNewspaper.imageAdRight</a></div><div class="ttdeci">Image imageAdRight</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00166">LayerNewspaper.cs:166</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a946e28b1f6f64c92ede5ae99f45a89e1"><div class="ttname"><a href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">LayerNewspaper.RefreshChat</a></div><div class="ttdeci">void RefreshChat()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00092">LayerNewspaper.cs:92</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_ab9121e7e5c3829188bf1c83467e12ffd"><div class="ttname"><a href="classLayerNewspaper.html#ab9121e7e5c3829188bf1c83467e12ffd">LayerNewspaper.RefreshWeather</a></div><div class="ttdeci">void RefreshWeather()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00110">LayerNewspaper.cs:110</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_accb6b92d6caf6532f277f4d2a6003c91"><div class="ttname"><a href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">LayerNewspaper.RefreshVote</a></div><div class="ttdeci">void RefreshVote()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00101">LayerNewspaper.cs:101</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_ad29f4282c70fa9efb01704d6dac767ee"><div class="ttname"><a href="classLayerNewspaper.html#ad29f4282c70fa9efb01704d6dac767ee">LayerNewspaper.RefreshAD</a></div><div class="ttdeci">void RefreshAD()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00071">LayerNewspaper.cs:71</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_ae37e07192b29cc7976508d2092f9822c"><div class="ttname"><a href="classLayerNewspaper.html#ae37e07192b29cc7976508d2092f9822c">LayerNewspaper.seed</a></div><div class="ttdeci">int seed</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00194">LayerNewspaper.cs:194</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_af7da2175f21291e99a89f940329aac70"><div class="ttname"><a href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">LayerNewspaper.RefreshNews</a></div><div class="ttdeci">void RefreshNews()</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00062">LayerNewspaper.cs:62</a></div></div>
+<div class="ttc" id="aclassWorld_html_a2d3bc836c6621d37681f1b1d4b89ee51"><div class="ttname"><a href="classWorld.html#a2d3bc836c6621d37681f1b1d4b89ee51">World.CreateDayData</a></div><div class="ttdeci">void CreateDayData()</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00032">World.cs:32</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+<div class="ttc" id="aclassWorld_html_a77d38e165e742d8a4c153d99e6bd5d66"><div class="ttname"><a href="classWorld.html#a77d38e165e742d8a4c153d99e6bd5d66">World.dayData</a></div><div class="ttdeci">DayData dayData</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00075">World.cs:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="World_8cs_source.html#l00032">World.CreateDayData()</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00031">Date.day</a>, <a class="el" href="World_8cs_source.html#l00075">World.dayData</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00166">imageAdRight</a>, <a class="el" href="DayData_8cs_source.html#l00015">DayData.luck</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00071">RefreshAD()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00092">RefreshChat()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00062">RefreshNews()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00050">RefreshPage()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00101">RefreshVote()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00110">RefreshWeather()</a>, <a class="el" href="DayData_8cs_source.html#l00017">DayData.seed</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00194">seed</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00170">spritesAd</a>, <a class="el" href="ELayer_8cs_source.html#l00135">ELayer.world</a>, and <a class="el" href="Date_8cs_source.html#l00007">Date.year</a>.</p>
 
 </div>
 </div>
@@ -352,6 +435,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00071">71</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        Rand.SetSeed(this.<a class="code hl_variable" href="classLayerNewspaper.html#ae37e07192b29cc7976508d2092f9822c">seed</a>);</div>
+<div class="line"><span class="lineno">   74</span>        this.moldAdBottom = this.<a class="code hl_variable" href="classLayerNewspaper.html#a6194681ce5349bc36396af31ec35fd12">layoutAdBottom</a>.CreateMold(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> num = this.<a class="code hl_variable" href="classLayerNewspaper.html#a6194681ce5349bc36396af31ec35fd12">layoutAdBottom</a>.Rect().sizeDelta.x - 20f;</div>
+<div class="line"><span class="lineno">   76</span>        IList&lt;Sprite&gt; list = this.<a class="code hl_variable" href="classLayerNewspaper.html#a88e79c9db6a5a5f43217d5eed62e86b9">spritesSmallAd</a>.Copy&lt;Sprite&gt;().Shuffle&lt;Sprite&gt;();</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            Sprite sprite = list[i];</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (num &gt; sprite.textureRect.width)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                Image image = Util.Instantiate&lt;Image&gt;(this.<a class="code hl_variable" href="classLayerNewspaper.html#a56be60936311315bcaae49e2bc7ef840">moldAdBottom</a>, this.<a class="code hl_variable" href="classLayerNewspaper.html#a6194681ce5349bc36396af31ec35fd12">layoutAdBottom</a>);</div>
+<div class="line"><span class="lineno">   83</span>                num = num - sprite.textureRect.width - 5f;</div>
+<div class="line"><span class="lineno">   84</span>                image.sprite = sprite;</div>
+<div class="line"><span class="lineno">   85</span>                image.SetNativeSize();</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        this.<a class="code hl_variable" href="classLayerNewspaper.html#a6194681ce5349bc36396af31ec35fd12">layoutAdBottom</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   89</span>        Rand.SetSeed(-1);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassLayerNewspaper_html_a56be60936311315bcaae49e2bc7ef840"><div class="ttname"><a href="classLayerNewspaper.html#a56be60936311315bcaae49e2bc7ef840">LayerNewspaper.moldAdBottom</a></div><div class="ttdeci">Image moldAdBottom</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00168">LayerNewspaper.cs:168</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a6194681ce5349bc36396af31ec35fd12"><div class="ttname"><a href="classLayerNewspaper.html#a6194681ce5349bc36396af31ec35fd12">LayerNewspaper.layoutAdBottom</a></div><div class="ttdeci">LayoutGroup layoutAdBottom</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00176">LayerNewspaper.cs:176</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_a88e79c9db6a5a5f43217d5eed62e86b9"><div class="ttname"><a href="classLayerNewspaper.html#a88e79c9db6a5a5f43217d5eed62e86b9">LayerNewspaper.spritesSmallAd</a></div><div class="ttdeci">List&lt; Sprite &gt; spritesSmallAd</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00172">LayerNewspaper.cs:172</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00176">layoutAdBottom</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00168">moldAdBottom</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00194">seed</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00172">spritesSmallAd</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -379,6 +488,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00092">92</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__32 &lt;RefreshChat&gt;d__;</div>
+<div class="line"><span class="lineno">   95</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__.&lt;&gt;t__builder = AsyncVoidMethodBuilder.Create();</div>
+<div class="line"><span class="lineno">   96</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   97</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__.&lt;&gt;1__state = -1;</div>
+<div class="line"><span class="lineno">   98</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__.&lt;&gt;t__builder.Start&lt;<a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#a946e28b1f6f64c92ede5ae99f45a89e1">RefreshChat</a>&gt;d__32&gt;(ref &lt;RefreshChat&gt;d__);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassLayerNewspaper_html"><div class="ttname"><a href="classLayerNewspaper.html">LayerNewspaper</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00008">LayerNewspaper.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00092">RefreshChat()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00092">RefreshChat()</a>.</p>
 
 </div>
 </div>
@@ -406,6 +527,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00062">62</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__30 &lt;RefreshNews&gt;d__;</div>
+<div class="line"><span class="lineno">   65</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__.&lt;&gt;t__builder = AsyncVoidMethodBuilder.Create();</div>
+<div class="line"><span class="lineno">   66</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   67</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__.&lt;&gt;1__state = -1;</div>
+<div class="line"><span class="lineno">   68</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__.&lt;&gt;t__builder.Start&lt;<a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#af7da2175f21291e99a89f940329aac70">RefreshNews</a>&gt;d__30&gt;(ref &lt;RefreshNews&gt;d__);</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00062">RefreshNews()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00062">RefreshNews()</a>.</p>
 
 </div>
 </div>
@@ -433,6 +565,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00050">50</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_variable" href="classLayerNewspaper.html#adeb375f867da2e8f3fe53c04f5b535da">goTop</a>.SetActive(this.<a class="code hl_variable" href="classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3">topPage</a>);</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classLayerNewspaper.html#ac8f21e4b8a62cab9116f8c249eb1e0b3">goBack</a>.SetActive(!this.<a class="code hl_variable" href="classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3">topPage</a>);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassLayerNewspaper_html_ac8f21e4b8a62cab9116f8c249eb1e0b3"><div class="ttname"><a href="classLayerNewspaper.html#ac8f21e4b8a62cab9116f8c249eb1e0b3">LayerNewspaper.goBack</a></div><div class="ttdeci">GameObject goBack</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00188">LayerNewspaper.cs:188</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_adeb375f867da2e8f3fe53c04f5b535da"><div class="ttname"><a href="classLayerNewspaper.html#adeb375f867da2e8f3fe53c04f5b535da">LayerNewspaper.goTop</a></div><div class="ttdeci">GameObject goTop</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00186">LayerNewspaper.cs:186</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00188">goBack</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00186">goTop</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00192">topPage</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00042">OnClickPage()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -460,6 +602,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00101">101</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__33 &lt;RefreshVote&gt;d__;</div>
+<div class="line"><span class="lineno">  104</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__.&lt;&gt;t__builder = AsyncVoidMethodBuilder.Create();</div>
+<div class="line"><span class="lineno">  105</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  106</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__.&lt;&gt;1__state = -1;</div>
+<div class="line"><span class="lineno">  107</span>        &lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__.&lt;&gt;t__builder.Start&lt;<a class="code hl_class" href="classLayerNewspaper.html">LayerNewspaper</a>.&lt;<a class="code hl_function" href="classLayerNewspaper.html#accb6b92d6caf6532f277f4d2a6003c91">RefreshVote</a>&gt;d__33&gt;(ref &lt;RefreshVote&gt;d__);</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerNewspaper_8cs_source.html#l00101">RefreshVote()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00101">RefreshVote()</a>.</p>
 
 </div>
 </div>
@@ -487,6 +640,53 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00110">110</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        List&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a>&gt; list = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_function" href="classWeather.html#abb4e28247e11b9da70a6c6ee2cafcd3b">GetWeatherForecast</a>();</div>
+<div class="line"><span class="lineno">  113</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerNewspaper.html#ab0996e26eb7663ba37cb659974d38100">listWeather</a>;</div>
+<div class="line"><span class="lineno">  114</span>        UIList.Callback&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a>, UIItem&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a>, UIItem&gt;();</div>
+<div class="line"><span class="lineno">  115</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_class" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a> a, UIItem b)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = a.date.month.ToString() + <span class="stringliteral">&quot;/&quot;</span> + a.date.day.ToString();</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">foreach</span> (KeyValuePair&lt;Weather.Condition, int&gt; keyValuePair <span class="keywordflow">in</span> from a <span class="keywordflow">in</span> a.cons</div>
+<div class="line"><span class="lineno">  119</span>            orderby a.Value descending</div>
+<div class="line"><span class="lineno">  120</span>            select a)</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (b.image1.sprite == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    b.image1.sprite = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.refs.icons.weather[keyValuePair.Key];</div>
+<div class="line"><span class="lineno">  125</span>                }</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (b.image2.sprite == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    b.image2.sprite = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.refs.icons.weather[keyValuePair.Key];</div>
+<div class="line"><span class="lineno">  129</span>                    b.image2.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>            b.text1.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">  133</span>        };</div>
+<div class="line"><span class="lineno">  134</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 7; i++)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span> (list.Count &gt; i &amp;&amp; list[i].cons.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  139</span>                {</div>
+<div class="line"><span class="lineno">  140</span>                    this.<a class="code hl_variable" href="classLayerNewspaper.html#ab0996e26eb7663ba37cb659974d38100">listWeather</a>.Add(list[i]);</div>
+<div class="line"><span class="lineno">  141</span>                }</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>        };</div>
+<div class="line"><span class="lineno">  144</span>        baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">  145</span>        this.<a class="code hl_variable" href="classLayerNewspaper.html#ab0996e26eb7663ba37cb659974d38100">listWeather</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerNewspaper_html_ab0996e26eb7663ba37cb659974d38100"><div class="ttname"><a href="classLayerNewspaper.html#ab0996e26eb7663ba37cb659974d38100">LayerNewspaper.listWeather</a></div><div class="ttdeci">UIList listWeather</div><div class="ttdef"><b>Definition:</b> <a href="LayerNewspaper_8cs_source.html#l00158">LayerNewspaper.cs:158</a></div></div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html">Weather.WeatherForecast</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00317">Weather.cs:318</a></div></div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00006">Weather.cs:7</a></div></div>
+<div class="ttc" id="aclassWeather_html_abb4e28247e11b9da70a6c6ee2cafcd3b"><div class="ttname"><a href="classWeather.html#abb4e28247e11b9da70a6c6ee2cafcd3b">Weather.GetWeatherForecast</a></div><div class="ttdeci">List&lt; Weather.WeatherForecast &gt; GetWeatherForecast()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00135">Weather.cs:135</a></div></div>
+<div class="ttc" id="aclassWorld_html_abe79d49b82af83246cebd487414ba156"><div class="ttname"><a href="classWorld.html#abe79d49b82af83246cebd487414ba156">World.weather</a></div><div class="ttdeci">Weather weather</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00069">World.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="Weather_8cs_source.html#l00135">Weather.GetWeatherForecast()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00158">listWeather</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="World_8cs_source.html#l00069">World.weather</a>, and <a class="el" href="ELayer_8cs_source.html#l00135">ELayer.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -504,6 +704,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00184">184</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00042">OnClickPage()</a>.</p>
 
 </div>
 </div>
@@ -537,6 +739,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00188">188</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00050">RefreshPage()</a>.</p>
+
 </div>
 </div>
 <a id="adeb375f867da2e8f3fe53c04f5b535da" name="adeb375f867da2e8f3fe53c04f5b535da"></a>
@@ -553,6 +757,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00186">186</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00050">RefreshPage()</a>.</p>
+
 </div>
 </div>
 <a id="a87ff9a5a1b085ce62b0a4838e1566107" name="a87ff9a5a1b085ce62b0a4838e1566107"></a>
@@ -568,6 +774,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00166">166</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -600,6 +808,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00176">176</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00071">RefreshAD()</a>.</p>
 
 </div>
 </div>
@@ -681,6 +891,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00158">158</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00110">RefreshWeather()</a>.</p>
+
 </div>
 </div>
 <a id="a56be60936311315bcaae49e2bc7ef840" name="a56be60936311315bcaae49e2bc7ef840"></a>
@@ -696,6 +908,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00168">168</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00071">RefreshAD()</a>.</p>
 
 </div>
 </div>
@@ -737,6 +951,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00194">194</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00071">RefreshAD()</a>.</p>
+
 </div>
 </div>
 <a id="ac852aee8f34f6c409418b070e345c34d" name="ac852aee8f34f6c409418b070e345c34d"></a>
@@ -753,6 +969,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00190">190</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00056">OnClickComic()</a>.</p>
+
 </div>
 </div>
 <a id="a6171e480d0eead857a4ff685847167cc" name="a6171e480d0eead857a4ff685847167cc"></a>
@@ -768,6 +986,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00170">170</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00018">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -800,6 +1020,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00172">172</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00071">RefreshAD()</a>.</p>
 
 </div>
 </div>
@@ -881,6 +1103,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00192">192</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00042">OnClickPage()</a>, and <a class="el" href="LayerNewspaper_8cs_source.html#l00050">RefreshPage()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -905,16 +1129,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerNewspaper_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_variable" href="classWorld.html#a77d38e165e742d8a4c153d99e6bd5d66">dayData</a>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerNewspaper_8cs_source.html">LayerNewspaper.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerNewspaper.html">LayerNewspaper</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

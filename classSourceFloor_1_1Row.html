@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceFloor_1_1Row.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classSourceFloor.html">SourceFloor</a></li><li class="navelem"><a class="el" href="classSourceFloor_1_1Row.html">Row</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -344,6 +360,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">RenderRow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00160">160</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % this.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length];</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00441">RenderRow.cs:441</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00441">RenderRow._tiles</a>.</p>
 
 </div>
 </div>
@@ -373,6 +395,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTileRow.html#a2e956f83baa2b038696bc3253a6d8b14">TileRow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00148">148</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            this.ignoreTransition = this.<a class="code hl_variable" href="classRenderRow.html#a27f7605ea319dca8f8d0a3f29bf9d24f">tag</a>.Contains(<span class="stringliteral">&quot;noTransition&quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>            this.ignoreSnow = this.<a class="code hl_variable" href="classRenderRow.html#a27f7605ea319dca8f8d0a3f29bf9d24f">tag</a>.Contains(<span class="stringliteral">&quot;noSnow&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>            this.isBeach = this.<a class="code hl_variable" href="classRenderRow.html#a27f7605ea319dca8f8d0a3f29bf9d24f">tag</a>.Contains(<span class="stringliteral">&quot;beach&quot;</span>);</div>
+<div class="line"><span class="lineno">  153</span>            this.snowtile = this.<a class="code hl_variable" href="classRenderRow.html#a27f7605ea319dca8f8d0a3f29bf9d24f">tag</a>.Contains(<span class="stringliteral">&quot;snowtile&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classSourceFloor_1_1Row.html#a6adf954744bbebba5f9636354b286d36">idBiome</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                this.biome = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.biomes.dict[this.<a class="code hl_variable" href="classSourceFloor_1_1Row.html#a6adf954744bbebba5f9636354b286d36">idBiome</a>];</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a27f7605ea319dca8f8d0a3f29bf9d24f"><div class="ttname"><a href="classRenderRow.html#a27f7605ea319dca8f8d0a3f29bf9d24f">RenderRow.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00487">RenderRow.cs:487</a></div></div>
+<div class="ttc" id="aclassSourceFloor_1_1Row_html_a6adf954744bbebba5f9636354b286d36"><div class="ttname"><a href="classSourceFloor_1_1Row.html#a6adf954744bbebba5f9636354b286d36">SourceFloor.Row.idBiome</a></div><div class="ttdeci">string idBiome</div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00165">SourceFloor.cs:165</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="SourceFloor_8cs_source.html#l00165">SourceFloor.Row.idBiome</a>, and <a class="el" href="RenderRow_8cs_source.html#l00487">RenderRow.tag</a>.</p>
 
 </div>
 </div>
@@ -551,6 +589,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00165">165</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceFloor_8cs_source.html#l00148">SourceFloor.Row.OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a1dc17fa0c32af1512e6aba2d137d4f7d" name="a1dc17fa0c32af1512e6aba2d137d4f7d"></a>
@@ -671,7 +711,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00140">140</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classSourceFloor.html">SourceFloor</a>.<a class="code hl_variable" href="classSourceFloor.html#ace984d8795b4d5a20bfec883210e8339">FallbackRenderData</a>;</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="ttc" id="aclassSourceFloor_html"><div class="ttname"><a href="classSourceFloor.html">SourceFloor</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00004">SourceFloor.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceFloor_html_ace984d8795b4d5a20bfec883210e8339"><div class="ttname"><a href="classSourceFloor.html#ace984d8795b4d5a20bfec883210e8339">SourceFloor.FallbackRenderData</a></div><div class="ttdeci">static RenderData FallbackRenderData</div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00111">SourceFloor.cs:111</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d9c26783b90301073cb210bfcd0a8df" name="a7d9c26783b90301073cb210bfcd0a8df"></a>
@@ -695,7 +743,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00124">124</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">alias</a>;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="ttc" id="aclassTileRow_html_aa04ce5718657608d45e983e9a3798fc6"><div class="ttname"><a href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">TileRow.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00023">TileRow.cs:23</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c8f97cdcb49a9a84e4ab87eba978af8" name="a9c8f97cdcb49a9a84e4ab87eba978af8"></a>
@@ -719,7 +774,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00132">132</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  135</span>            {</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;f&quot;</span> + this.<span class="keywordtype">id</span>.ToString();</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7fa2f7bc5b05c7d38ac550831a0b19a4" name="a7fa2f7bc5b05c7d38ac550831a0b19a4"></a>
@@ -743,16 +804,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFloor_8cs_source.html#l00116">116</a> of file <a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceFloor_8cs_source.html">SourceFloor.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceFloor.html">SourceFloor</a></li><li class="navelem"><a class="el" href="classSourceFloor_1_1Row.html">Row</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

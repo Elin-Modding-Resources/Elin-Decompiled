@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classUIMultiList.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -150,6 +170,33 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00012">12</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        o.index = this.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>.Count;</div>
+<div class="line"><span class="lineno">   15</span>        this.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>.Add(o);</div>
+<div class="line"><span class="lineno">   16</span>        o.layer = this.<a class="code hl_variable" href="classUIMultiList.html#a491957414f2e6ae836c0ebab3dfda3fb">layer</a>;</div>
+<div class="line"><span class="lineno">   17</span>        o.window = this.<a class="code hl_variable" href="classUIMultiList.html#a64634745140a42cccebb999f24e92b71">windows</a>[i];</div>
+<div class="line"><span class="lineno">   18</span>        o.list = this.<a class="code hl_variable" href="classUIMultiList.html#acf043d8c73263723f6586f61853372a4">lists</a>[i];</div>
+<div class="line"><span class="lineno">   19</span>        o.multi = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   20</span>        o.main = (i == 0);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUIMultiList.html#a6647ae7773002c4fa130ecd0cc460f91">Double</a> &amp;&amp; this.<a class="code hl_variable" href="classUIMultiList.html#a0191b5999343a5d61e5fc8714a576362">addTab</a>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            o.<a class="code hl_variable" href="classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6">window</a>.AddTab(o.<a class="code hl_property" href="classListOwner.html#a6289c78362ca05fdd850f5b06a14aea3">TextTab</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        o.<a class="code hl_function" href="classListOwner.html#a777f206ef6ebf7a5ec9e573fa70ec0be">OnCreate</a>();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassListOwner_html_a6289c78362ca05fdd850f5b06a14aea3"><div class="ttname"><a href="classListOwner.html#a6289c78362ca05fdd850f5b06a14aea3">ListOwner.TextTab</a></div><div class="ttdeci">virtual string TextTab</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00033">ListOwner.2.cs:34</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a777f206ef6ebf7a5ec9e573fa70ec0be"><div class="ttname"><a href="classListOwner.html#a777f206ef6ebf7a5ec9e573fa70ec0be">ListOwner.OnCreate</a></div><div class="ttdeci">virtual void OnCreate()</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00057">ListOwner.2.cs:57</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a9d3273fa305bf8fddb90262d603af6d6"><div class="ttname"><a href="classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6">ListOwner.window</a></div><div class="ttdeci">Window window</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00091">ListOwner.2.cs:91</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_a0191b5999343a5d61e5fc8714a576362"><div class="ttname"><a href="classUIMultiList.html#a0191b5999343a5d61e5fc8714a576362">UIMultiList.addTab</a></div><div class="ttdeci">bool addTab</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00061">UIMultiList.cs:61</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_a491957414f2e6ae836c0ebab3dfda3fb"><div class="ttname"><a href="classUIMultiList.html#a491957414f2e6ae836c0ebab3dfda3fb">UIMultiList.layer</a></div><div class="ttdeci">Layer layer</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00051">UIMultiList.cs:51</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_a64634745140a42cccebb999f24e92b71"><div class="ttname"><a href="classUIMultiList.html#a64634745140a42cccebb999f24e92b71">UIMultiList.windows</a></div><div class="ttdeci">Window[] windows</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00053">UIMultiList.cs:53</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_a6647ae7773002c4fa130ecd0cc460f91"><div class="ttname"><a href="classUIMultiList.html#a6647ae7773002c4fa130ecd0cc460f91">UIMultiList.Double</a></div><div class="ttdeci">bool Double</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00059">UIMultiList.cs:59</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_a844a8d8423b4fb520114408034a27a49"><div class="ttname"><a href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">UIMultiList.owners</a></div><div class="ttdeci">List&lt; ListOwner &gt; owners</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00049">UIMultiList.cs:49</a></div></div>
+<div class="ttc" id="aclassUIMultiList_html_acf043d8c73263723f6586f61853372a4"><div class="ttname"><a href="classUIMultiList.html#acf043d8c73263723f6586f61853372a4">UIMultiList.lists</a></div><div class="ttdeci">UIList[] lists</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00055">UIMultiList.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMultiList_8cs_source.html#l00061">addTab</a>, <a class="el" href="UIMultiList_8cs_source.html#l00059">Double</a>, <a class="el" href="UIMultiList_8cs_source.html#l00051">layer</a>, <a class="el" href="UIMultiList_8cs_source.html#l00055">lists</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00057">ListOwner&lt; T1, T2 &gt;.OnCreate()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00049">owners</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00034">ListOwner&lt; T1, T2 &gt;.TextTab</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00091">ListOwner&lt; T1, T2 &gt;.window</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00053">windows</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerPeople_8cs_source.html#l00143">LayerPeople.Create()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00080">LayerPeople.Create&lt; T &gt;()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00102">LayerPeople.CreateBed()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00090">LayerPeople.CreateReserve()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00150">LayerPeople.CreateSelect()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00012">LayerPeople.OnInit()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00075">LayerEditPlaylist.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -178,6 +225,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00028">28</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classListOwner.html">ListOwner</a> listOwner <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            listOwner.list.sortMode = m;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIMultiList.html#a6647ae7773002c4fa130ecd0cc460f91">Double</a>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            this.owners[0].other = this.owners[1];</div>
+<div class="line"><span class="lineno">   37</span>            this.owners[1].other = this.owners[0];</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassListOwner_html"><div class="ttname"><a href="classListOwner.html">ListOwner</a></div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_8cs_source.html#l00003">ListOwner.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMultiList_8cs_source.html#l00059">Double</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00049">owners</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerPeople_8cs_source.html#l00012">LayerPeople.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -205,6 +268,13 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00007">7</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        this.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>.Clear();</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIMultiList_8cs_source.html#l00049">owners</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00075">LayerEditPlaylist.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -232,6 +302,15 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00041">41</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classListOwner.html">ListOwner</a> listOwner <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            listOwner.<a class="code hl_function" href="classListOwner.html#a6094e79696b1f11fb891b7a98e272180">OnSwitchContent</a>();</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassListOwner_html_a6094e79696b1f11fb891b7a98e272180"><div class="ttname"><a href="classListOwner.html#a6094e79696b1f11fb891b7a98e272180">ListOwner.OnSwitchContent</a></div><div class="ttdeci">virtual void OnSwitchContent()</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00061">ListOwner.2.cs:61</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListOwner_82_8cs_source.html#l00061">ListOwner&lt; T1, T2 &gt;.OnSwitchContent()</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00049">owners</a>.</p>
 
 </div>
 </div>
@@ -250,6 +329,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00061">61</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>.</p>
+
 </div>
 </div>
 <a id="a6647ae7773002c4fa130ecd0cc460f91" name="a6647ae7773002c4fa130ecd0cc460f91"></a>
@@ -265,6 +346,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00059">59</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00028">Build()</a>, and <a class="el" href="LayerPeople_8cs_source.html#l00060">LayerPeople.OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -298,6 +381,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00051">51</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>.</p>
+
 </div>
 </div>
 <a id="acf043d8c73263723f6586f61853372a4" name="acf043d8c73263723f6586f61853372a4"></a>
@@ -313,6 +398,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00055">55</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>.</p>
 
 </div>
 </div>
@@ -330,6 +417,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00049">49</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00034">LayerEditPlaylist.Activate()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00028">Build()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00007">Clear()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00012">LayerPeople.OnInit()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00053">LayerPeople.OnKill()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00060">LayerPeople.OnSwitchContent()</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00041">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a64634745140a42cccebb999f24e92b71" name="a64634745140a42cccebb999f24e92b71"></a>
@@ -346,15 +435,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIMultiList_8cs_source.html#l00053">53</a> of file <a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIMultiList_8cs_source.html#l00012">AddOwner()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="UIMultiList_8cs_source.html">UIMultiList.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUIMultiList.html">UIMultiList</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

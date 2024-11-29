@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Cinema.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -553,6 +573,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4f9772ef40238c15ad2020c0e819883b">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00062">62</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7">profile</a>)</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            this.profile = <a class="code hl_class" href="classSceneProfile.html">SceneProfile</a>.<a class="code hl_function" href="classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f">Load</a>(<span class="stringliteral">&quot;cinema&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.widgets.Activate(<span class="stringliteral">&quot;ArtTool&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span>        this.destPos = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassAM__Cinema_html_ac56c1ff4f82f286a5f85a0d778a494c7"><div class="ttname"><a href="classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7">AM_Cinema.profile</a></div><div class="ttdeci">SceneProfile profile</div><div class="ttdef"><b>Definition:</b> <a href="AM__Cinema_8cs_source.html#l00111">AM_Cinema.cs:111</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassSceneProfile_html"><div class="ttname"><a href="classSceneProfile.html">SceneProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="SceneProfile_8cs_source.html#l00005">SceneProfile.cs:6</a></div></div>
+<div class="ttc" id="aclassSceneProfile_html_a6778ce7f52f41aa2534081a411457f3f"><div class="ttname"><a href="classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f">SceneProfile.Load</a></div><div class="ttdeci">static SceneProfile Load(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SceneProfile_8cs_source.html#l00007">SceneProfile.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SceneProfile_8cs_source.html#l00007">SceneProfile.Load()</a>, <a class="el" href="AM__Cinema_8cs_source.html#l00111">profile</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -582,6 +617,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a60169ef780ec579954fa93da38febf23">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00072">72</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;ArtTool&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>        EClass.scene.camSupport.grading.cinemaBrightness = 0f;</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.ApplyGrading();</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -611,6 +654,55 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4025ab325b17507860ed9192c0b79769">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00079">79</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (EInput.leftMouse.clicked &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.isPointerOverUI)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   84</span>            EClass.ui.canvas.enabled = !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.canvas.enabled;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (EInput.rightMouse.down || <span class="keyword">this</span>.conf.speed == 0)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            this.destPos = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        Vector3Int vector3Int = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a1d18df6dc85cc537018d3df31b4688a9">grid</a>.WorldToCell(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>);</div>
+<div class="line"><span class="lineno">   92</span>        this.<a class="code hl_variable" href="classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d">center</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(-vector3Int.y, vector3Int.x - 1);</div>
+<div class="line"><span class="lineno">   93</span>        this.<a class="code hl_variable" href="classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d">center</a>.<a class="code hl_function" href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Clamp</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b">destPos</a> == <span class="keyword">null</span> || this.<a class="code hl_variable" href="classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b">destPos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<span class="keyword">this</span>.center) &lt;= 2)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            this.destPos = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>();</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10000; i++)</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                this.destPos.x = EClass._map.bounds.x + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a>);</div>
+<div class="line"><span class="lineno">  100</span>                this.destPos.z = EClass._map.bounds.z + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">Height</a>);</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d">center</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<span class="keyword">this</span>.destPos) &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a>)</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  104</span>                }</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        Vector3 normalized = (*this.<a class="code hl_variable" href="classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b">destPos</a>.<a class="code hl_function" href="classPoint.html#a85694fc0f7f94f8ead9b6c1612eb5604">PositionCenter</a>() - *this.<a class="code hl_variable" href="classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d">center</a>.<a class="code hl_function" href="classPoint.html#a85694fc0f7f94f8ead9b6c1612eb5604">PositionCenter</a>()).normalized;</div>
+<div class="line"><span class="lineno">  108</span>        EClass.screen.position += normalized * Core.delta * (float)this.<a class="code hl_property" href="classAM__Cinema.html#a3012a684a1c8dc3da5aecc9d13f09043">conf</a>.<a class="code hl_variable" href="classCinemaConfig.html#aa360b325623e11f1b7748d955e6fb7a0">speed</a> * 0.5f;</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclassAM__Cinema_html_a3012a684a1c8dc3da5aecc9d13f09043"><div class="ttname"><a href="classAM__Cinema.html#a3012a684a1c8dc3da5aecc9d13f09043">AM_Cinema.conf</a></div><div class="ttdeci">CinemaConfig conf</div><div class="ttdef"><b>Definition:</b> <a href="AM__Cinema_8cs_source.html#l00054">AM_Cinema.cs:55</a></div></div>
+<div class="ttc" id="aclassAM__Cinema_html_a462fcd22cf090aed9d0d4848592efa5d"><div class="ttname"><a href="classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d">AM_Cinema.center</a></div><div class="ttdeci">Point center</div><div class="ttdef"><b>Definition:</b> <a href="AM__Cinema_8cs_source.html#l00115">AM_Cinema.cs:115</a></div></div>
+<div class="ttc" id="aclassAM__Cinema_html_aceaa0a6f569081529f858b05bc81ca2b"><div class="ttname"><a href="classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b">AM_Cinema.destPos</a></div><div class="ttdeci">Point destPos</div><div class="ttdef"><b>Definition:</b> <a href="AM__Cinema_8cs_source.html#l00113">AM_Cinema.cs:113</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a1d18df6dc85cc537018d3df31b4688a9"><div class="ttname"><a href="classBaseGameScreen.html#a1d18df6dc85cc537018d3df31b4688a9">BaseGameScreen.grid</a></div><div class="ttdeci">Grid grid</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00863">BaseGameScreen.cs:863</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a94b0cc44b9446149cbe3b66bfd3c97be"><div class="ttname"><a href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">BaseGameScreen.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00882">BaseGameScreen.cs:882</a></div></div>
+<div class="ttc" id="aclassCinemaConfig_html_aa360b325623e11f1b7748d955e6fb7a0"><div class="ttname"><a href="classCinemaConfig.html#aa360b325623e11f1b7748d955e6fb7a0">CinemaConfig.speed</a></div><div class="ttdeci">int speed</div><div class="ttdef"><b>Definition:</b> <a href="CinemaConfig_8cs_source.html#l00005">CinemaConfig.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a99534a5f7331b6dae01f07e565accad7"><div class="ttname"><a href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">MapBounds.Width</a></div><div class="ttdeci">int Width</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00023">MapBounds.cs:24</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_ad8c28f1465f8f95e69ba0f6e40abfd84"><div class="ttname"><a href="classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84">MapBounds.Height</a></div><div class="ttdeci">int Height</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00031">MapBounds.cs:32</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_a85694fc0f7f94f8ead9b6c1612eb5604"><div class="ttname"><a href="classPoint.html#a85694fc0f7f94f8ead9b6c1612eb5604">Point.PositionCenter</a></div><div class="ttdeci">ref Vector3 PositionCenter()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00668">Point.cs:668</a></div></div>
+<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01054">Point.cs:1054</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf369f86fc7eba0d290a45cf8c8f54c5"><div class="ttname"><a href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Point.Clamp</a></div><div class="ttdeci">Point Clamp(bool useBounds=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01069">Point.cs:1069</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="AM__Cinema_8cs_source.html#l00115">center</a>, <a class="el" href="Point_8cs_source.html#l01069">Point.Clamp()</a>, <a class="el" href="AM__Cinema_8cs_source.html#l00055">conf</a>, <a class="el" href="AM__Cinema_8cs_source.html#l00113">destPos</a>, <a class="el" href="Point_8cs_source.html#l01054">Point.Distance()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00863">BaseGameScreen.grid</a>, <a class="el" href="MapBounds_8cs_source.html#l00032">MapBounds.Height</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00882">BaseGameScreen.position</a>, <a class="el" href="Point_8cs_source.html#l00668">Point.PositionCenter()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="CinemaConfig_8cs_source.html#l00005">CinemaConfig.speed</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, and <a class="el" href="MapBounds_8cs_source.html#l00024">MapBounds.Width</a>.</p>
 
 </div>
 </div>
@@ -629,6 +721,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00115">115</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Cinema_8cs_source.html#l00079">OnUpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="aceaa0a6f569081529f858b05bc81ca2b" name="aceaa0a6f569081529f858b05bc81ca2b"></a>
@@ -645,6 +739,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00113">113</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Cinema_8cs_source.html#l00079">OnUpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="ac56c1ff4f82f286a5f85a0d778a494c7" name="ac56c1ff4f82f286a5f85a0d778a494c7"></a>
@@ -660,6 +756,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00111">111</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="AM__Cinema_8cs_source.html#l00062">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -685,6 +783,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00054">54</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a3e1a4562bbabd56b4a9c89e6d4283217">cinemaConfig</a>;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a3e1a4562bbabd56b4a9c89e6d4283217"><div class="ttname"><a href="classPlayer.html#a3e1a4562bbabd56b4a9c89e6d4283217">Player.cinemaConfig</a></div><div class="ttdeci">CinemaConfig cinemaConfig</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01551">Player.cs:1551</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Cinema_8cs_source.html#l00079">OnUpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -709,7 +817,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00038">38</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01b50382544c17f232d312c4cdad1a19" name="a01b50382544c17f232d312c4cdad1a19"></a>
@@ -733,7 +847,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00006">6</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3a03039ee823f84da812bb5c96f7fd70" name="a3a03039ee823f84da812bb5c96f7fd70"></a>
@@ -757,7 +877,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00014">14</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.None;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_a126c209eb9b08ada2549a86c6fc6dd1f"><div class="ttname"><a href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">BaseTileSelector.SelectType</a></div><div class="ttdeci">SelectType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00517">BaseTileSelector.cs:518</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d67fe799f4768b652b186a61200c850" name="a0d67fe799f4768b652b186a61200c850"></a>
@@ -781,7 +909,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00022">22</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a66c97dd18aa05b99e4ae700b5022bc52" name="a66c97dd18aa05b99e4ae700b5022bc52"></a>
@@ -805,7 +939,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00046">46</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2cab20f8808e1d3346c6c2188cc1df5" name="ad2cab20f8808e1d3346c6c2188cc1df5"></a>
@@ -829,16 +969,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Cinema_8cs_source.html#l00030">30</a> of file <a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Cinema_8cs_source.html">AM_Cinema.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Cinema.html">AM_Cinema</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

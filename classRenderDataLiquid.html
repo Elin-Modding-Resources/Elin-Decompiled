@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classRenderDataLiquid.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -249,7 +269,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="RenderDataLiquid_8cs_source.html#l00030">30</a> of file <a class="el" href="RenderDataLiquid_8cs_source.html">RenderDataLiquid.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_enumvalue" href="classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73baa5635bf596d97c1c2e7afe481ed060774">Liquid</a>,</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_enumvalue" href="classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73baab6230dfc594205d0ea15d5890ac22d7f">Bubble</a></div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassRenderDataLiquid_html_ae093df1b791413fb7560d3fca2ea73baa5635bf596d97c1c2e7afe481ed060774"><div class="ttname"><a href="classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73baa5635bf596d97c1c2e7afe481ed060774">RenderDataLiquid.EffectType.Liquid</a></div><div class="ttdeci">@ Liquid</div></div>
+<div class="ttc" id="aclassRenderDataLiquid_html_ae093df1b791413fb7560d3fca2ea73baab6230dfc594205d0ea15d5890ac22d7f"><div class="ttname"><a href="classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73baab6230dfc594205d0ea15d5890ac22d7f">RenderDataLiquid.EffectType.Bubble</a></div><div class="ttdeci">@ Bubble</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -280,6 +306,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classRenderData.html#ac31d8367cdfa01d4a669e8e9929e9392">RenderData</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RenderDataLiquid_8cs_source.html#l00005">5</a> of file <a class="el" href="RenderDataLiquid_8cs_source.html">RenderDataLiquid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <a class="code hl_class" href="classMeshBatch.html">MeshBatch</a> meshBatch = this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#af915aaa7a6efe4d1367d86b44b49bab1">batches</a>[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#a1427b967e64b1023349ea666c8c31db8">batchIdx</a>];</div>
+<div class="line"><span class="lineno">    8</span>        meshBatch.<a class="code hl_variable" href="classMeshBatch.html#a2f9ed251825ee3c0a46558c05246231a">matrices</a>[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>].m03 = p.x + this.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x;</div>
+<div class="line"><span class="lineno">    9</span>        meshBatch.<a class="code hl_variable" href="classMeshBatch.html#a2f9ed251825ee3c0a46558c05246231a">matrices</a>[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>].m13 = p.y + this.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y;</div>
+<div class="line"><span class="lineno">   10</span>        meshBatch.<a class="code hl_variable" href="classMeshBatch.html#a2f9ed251825ee3c0a46558c05246231a">matrices</a>[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>].m23 = p.z + ((this.effectType == RenderDataLiquid.EffectType.Liquid &amp;&amp; p.liquidLv &lt;= 10) ? this.<a class="code hl_variable" href="classRenderDataLiquid.html#addf6fded813cd248bbc8d38cdd02f7be">puddleZ</a> : this.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z);</div>
+<div class="line"><span class="lineno">   11</span>        meshBatch.tiles[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>] = p.<a class="code hl_variable" href="classMeshPassParam.html#a28a1e7d27a2216cc026b1e6d512c09f1">tile</a>;</div>
+<div class="line"><span class="lineno">   12</span>        meshBatch.colors[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>] = p.<a class="code hl_variable" href="classMeshPassParam.html#a6cfcdaf943e6531221f35b5914866838">color</a>;</div>
+<div class="line"><span class="lineno">   13</span>        meshBatch.matColors[this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>] = p.<a class="code hl_variable" href="classMeshPassParam.html#a1ca5d9a2edc7b1a49acbf8302d411a05">matColor</a>;</div>
+<div class="line"><span class="lineno">   14</span>        this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a>++;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">idx</a> == <span class="keyword">this</span>.pass.batchSize)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_function" href="classMeshPass.html#a84fae24a30196fde7b3b595c23fa9096">NextBatch</a>();</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassMeshBatch_html"><div class="ttname"><a href="classMeshBatch.html">MeshBatch</a></div><div class="ttdef"><b>Definition:</b> <a href="MeshBatch_8cs_source.html#l00004">MeshBatch.cs:5</a></div></div>
+<div class="ttc" id="aclassMeshBatch_html_a2f9ed251825ee3c0a46558c05246231a"><div class="ttname"><a href="classMeshBatch.html#a2f9ed251825ee3c0a46558c05246231a">MeshBatch.matrices</a></div><div class="ttdeci">Matrix4x4[] matrices</div><div class="ttdef"><b>Definition:</b> <a href="MeshBatch_8cs_source.html#l00039">MeshBatch.cs:39</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_a1ca5d9a2edc7b1a49acbf8302d411a05"><div class="ttname"><a href="classMeshPassParam.html#a1ca5d9a2edc7b1a49acbf8302d411a05">MeshPassParam.matColor</a></div><div class="ttdeci">float matColor</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00015">MeshPassParam.cs:15</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_a28a1e7d27a2216cc026b1e6d512c09f1"><div class="ttname"><a href="classMeshPassParam.html#a28a1e7d27a2216cc026b1e6d512c09f1">MeshPassParam.tile</a></div><div class="ttdeci">float tile</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00013">MeshPassParam.cs:13</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_a6cfcdaf943e6531221f35b5914866838"><div class="ttname"><a href="classMeshPassParam.html#a6cfcdaf943e6531221f35b5914866838">MeshPassParam.color</a></div><div class="ttdeci">float color</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00011">MeshPassParam.cs:11</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a1427b967e64b1023349ea666c8c31db8"><div class="ttname"><a href="classMeshPass.html#a1427b967e64b1023349ea666c8c31db8">MeshPass.batchIdx</a></div><div class="ttdeci">int batchIdx</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00470">MeshPass.cs:470</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a84fae24a30196fde7b3b595c23fa9096"><div class="ttname"><a href="classMeshPass.html#a84fae24a30196fde7b3b595c23fa9096">MeshPass.NextBatch</a></div><div class="ttdeci">void NextBatch()</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00328">MeshPass.cs:328</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_af915aaa7a6efe4d1367d86b44b49bab1"><div class="ttname"><a href="classMeshPass.html#af915aaa7a6efe4d1367d86b44b49bab1">MeshPass.batches</a></div><div class="ttdeci">List&lt; MeshBatch &gt; batches</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00476">MeshPass.cs:476</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_afaeddd8151e8cf2414d365cc1b8f5c8e"><div class="ttname"><a href="classMeshPass.html#afaeddd8151e8cf2414d365cc1b8f5c8e">MeshPass.idx</a></div><div class="ttdeci">int idx</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00467">MeshPass.cs:467</a></div></div>
+<div class="ttc" id="aclassRenderDataLiquid_html_addf6fded813cd248bbc8d38cdd02f7be"><div class="ttname"><a href="classRenderDataLiquid.html#addf6fded813cd248bbc8d38cdd02f7be">RenderDataLiquid.puddleZ</a></div><div class="ttdeci">float puddleZ</div><div class="ttdef"><b>Definition:</b> <a href="RenderDataLiquid_8cs_source.html#l00028">RenderDataLiquid.cs:28</a></div></div>
+<div class="ttc" id="aclassRenderData_html_ab0c24dab311f1c22c8b109f201135029"><div class="ttname"><a href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">RenderData.offset</a></div><div class="ttdeci">Vector3 offset</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00268">RenderData.cs:268</a></div></div>
+<div class="ttc" id="aclassRenderData_html_af031b3f320b3afc746c88242b7269b70"><div class="ttname"><a href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">RenderData.pass</a></div><div class="ttdeci">MeshPass pass</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00266">RenderData.cs:266</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00476">MeshPass.batches</a>, <a class="el" href="MeshPass_8cs_source.html#l00470">MeshPass.batchIdx</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00011">MeshPassParam.color</a>, <a class="el" href="MeshBatch_8cs_source.html#l00043">MeshBatch.colors</a>, <a class="el" href="MeshPass_8cs_source.html#l00467">MeshPass.idx</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00015">MeshPassParam.matColor</a>, <a class="el" href="MeshBatch_8cs_source.html#l00045">MeshBatch.matColors</a>, <a class="el" href="MeshBatch_8cs_source.html#l00039">MeshBatch.matrices</a>, <a class="el" href="MeshPass_8cs_source.html#l00328">MeshPass.NextBatch()</a>, <a class="el" href="RenderData_8cs_source.html#l00268">RenderData.offset</a>, <a class="el" href="RenderData_8cs_source.html#l00266">RenderData.pass</a>, <a class="el" href="RenderDataLiquid_8cs_source.html#l00028">puddleZ</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00013">MeshPassParam.tile</a>, and <a class="el" href="MeshBatch_8cs_source.html#l00041">MeshBatch.tiles</a>.</p>
 
 </div>
 </div>
@@ -307,6 +361,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RenderDataLiquid_8cs_source.html#l00021">21</a> of file <a class="el" href="RenderDataLiquid_8cs_source.html">RenderDataLiquid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        this._offset = this.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderData_8cs_source.html#l00268">RenderData.offset</a>.</p>
 
 </div>
 </div>
@@ -341,15 +400,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderDataLiquid_8cs_source.html#l00028">28</a> of file <a class="el" href="RenderDataLiquid_8cs_source.html">RenderDataLiquid.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RenderDataLiquid_8cs_source.html#l00005">Draw()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="RenderDataLiquid_8cs_source.html">RenderDataLiquid.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRenderDataLiquid.html">RenderDataLiquid</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

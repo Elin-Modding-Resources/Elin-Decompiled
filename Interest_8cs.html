@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Interest_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -119,13 +135,33 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Interest_8cs_source.html#l00003">3</a> of file <a class="el" href="Interest_8cs_source.html">Interest.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa0959a8b663be96468a1c5c1d456243a2">economy</a>,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daafb5c7f9bb4b32ce2f3bff4662f1ab27b">science</a>,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa69266c67e75c946ef9b4144b0554326d">travel</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa7d793037a0760186574b0282f2f435e7">world</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">human</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daac3b67dd9c205bbd8add94f291c83a41c">elea</a></div>
+<div class="line"><span class="lineno">   12</span>}</div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daa0959a8b663be96468a1c5c1d456243a2"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa0959a8b663be96468a1c5c1d456243a2">Interest.economy</a></div><div class="ttdeci">@ economy</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daa69266c67e75c946ef9b4144b0554326d"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa69266c67e75c946ef9b4144b0554326d">Interest.travel</a></div><div class="ttdeci">@ travel</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daa7d793037a0760186574b0282f2f435e7"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa7d793037a0760186574b0282f2f435e7">Interest.world</a></div><div class="ttdeci">@ world</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">Interest.human</a></div><div class="ttdeci">@ human</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daac3b67dd9c205bbd8add94f291c83a41c"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daac3b67dd9c205bbd8add94f291c83a41c">Interest.elea</a></div><div class="ttdeci">@ elea</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">Interest.religion</a></div><div class="ttdeci">@ religion</div></div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daafb5c7f9bb4b32ce2f3bff4662f1ab27b"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daafb5c7f9bb4b32ce2f3bff4662f1ab27b">Interest.science</a></div><div class="ttdeci">@ science</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="Interest_8cs.html">Interest.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

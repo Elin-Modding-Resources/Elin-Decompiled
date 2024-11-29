@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classNotificationStockpile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -236,6 +256,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#acdb74f1045304fd4ac7752445dccd98e">BaseNotification</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="NotificationStockpile_8cs_source.html#l00025">25</a> of file <a class="el" href="NotificationStockpile_8cs_source.html">NotificationStockpile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerResource.html">LayerResource</a>&gt;();</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerResource_html"><div class="ttname"><a href="classLayerResource.html">LayerResource</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerResource_8cs_source.html#l00004">LayerResource.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -265,6 +293,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="NotificationStockpile_8cs_source.html#l00013">13</a> of file <a class="el" href="NotificationStockpile_8cs_source.html">NotificationStockpile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">int</span> num = EClass._map.Stocked.weight * 100 / <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_variable" href="classProps.html#a374b4de339301d262590da4254b0150e">maxWeight</a>;</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (num &gt; 100)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            num = 100;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        this.text = num.ToString() + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">   21</span>        this.item.button.mainText.fontColor = FontColor.DontChange;</div>
+<div class="line"><span class="lineno">   22</span>        this.item.button.mainText.color = this.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.skinRoot.GetButton().colorProf.gradients[<span class="stringliteral">&quot;default&quot;</span>].Evaluate(1f - (<span class="keywordtype">float</span>)num / 100f);</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassBaseNotification_html_aa8f147285c7f23a0e53b81e3fa033c40"><div class="ttname"><a href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">BaseNotification.item</a></div><div class="ttdeci">ItemNotice item</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00089">BaseNotification.cs:89</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassItemNotice_html_a281b58b4cd46a352ad804f727f5bc747"><div class="ttname"><a href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">ItemNotice.button</a></div><div class="ttdeci">UIButton button</div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00012">ItemNotice.cs:12</a></div></div>
+<div class="ttc" id="aclassMap_html_adcedfe3c98f07260b41fc4b0254e3b6a"><div class="ttname"><a href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Map.Stocked</a></div><div class="ttdeci">PropsStocked Stocked</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00027">Map.cs:28</a></div></div>
+<div class="ttc" id="aclassProps_html_a374b4de339301d262590da4254b0150e"><div class="ttname"><a href="classProps.html#a374b4de339301d262590da4254b0150e">Props.maxWeight</a></div><div class="ttdeci">int maxWeight</div><div class="ttdef"><b>Definition:</b> <a href="Props_8cs_source.html#l00419">Props.cs:419</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="ItemNotice_8cs_source.html#l00012">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00089">BaseNotification.item</a>, <a class="el" href="Props_8cs_source.html#l00419">Props.maxWeight</a>, and <a class="el" href="Map_8cs_source.html#l00028">Map.Stocked</a>.</p>
 
 </div>
 </div>
@@ -290,7 +335,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="NotificationStockpile_8cs_source.html#l00005">5</a> of file <a class="el" href="NotificationStockpile_8cs_source.html">NotificationStockpile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 8;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1cbd7e851091b4f8d57ec53f7f926ad8" name="a1cbd7e851091b4f8d57ec53f7f926ad8"></a>
@@ -314,16 +365,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="NotificationStockpile_8cs_source.html#l00030">30</a> of file <a class="el" href="NotificationStockpile_8cs_source.html">NotificationStockpile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> delegate(UITooltip a)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                a.textMain.text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   37</span>                {</div>
+<div class="line"><span class="lineno">   38</span>                    <span class="stringliteral">&quot;maxCapacity&quot;</span>.lang(),</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="stringliteral">&quot;: &quot;</span>,</div>
+<div class="line"><span class="lineno">   40</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_variable" href="classProps.html#a0cf688ed0863ccc099eefc426fc2fe68">weight</a>.ToString(),</div>
+<div class="line"><span class="lineno">   41</span>                    <span class="stringliteral">&quot; / &quot;</span>,</div>
+<div class="line"><span class="lineno">   42</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_variable" href="classProps.html#a374b4de339301d262590da4254b0150e">maxWeight</a>.ToString()</div>
+<div class="line"><span class="lineno">   43</span>                });</div>
+<div class="line"><span class="lineno">   44</span>            };</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassProps_html_a0cf688ed0863ccc099eefc426fc2fe68"><div class="ttname"><a href="classProps.html#a0cf688ed0863ccc099eefc426fc2fe68">Props.weight</a></div><div class="ttdeci">int weight</div><div class="ttdef"><b>Definition:</b> <a href="Props_8cs_source.html#l00421">Props.cs:421</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="NotificationStockpile_8cs_source.html">NotificationStockpile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classNotificationStockpile.html">NotificationStockpile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

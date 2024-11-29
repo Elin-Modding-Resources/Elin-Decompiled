@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classReligionManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -229,6 +249,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00050">50</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classReligion.html">Religion</a> <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169">dictAll</a>.Values)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (religion.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">Interest.religion</a></div><div class="ttdeci">@ religion</div></div>
+<div class="ttc" id="aclassReligionManager_html_a64b6c1e970d860efd2e4306d66eda169"><div class="ttname"><a href="classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169">ReligionManager.dictAll</a></div><div class="ttdeci">Dictionary&lt; string, Religion &gt; dictAll</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00069">ReligionManager.cs:69</a></div></div>
+<div class="ttc" id="aclassReligion_html"><div class="ttname"><a href="classReligion.html">Religion</a></div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00006">Religion.cs:7</a></div></div>
+<div class="ttc" id="aclassReligion_html_abe2bc6614b87754e9d5dbbf2df46d25b"><div class="ttname"><a href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">Religion.id</a></div><div class="ttdeci">virtual string id</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00008">Religion.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReligionManager_8cs_source.html#l00069">dictAll</a>, <a class="el" href="Religion_8cs_source.html#l00009">Religion.id</a>, and <a class="el" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00893">Thing.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -267,6 +305,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00062">62</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> (from a in this.<a class="code hl_variable" href="classReligionManager.html#aa96dceff542c7c35156e31ad4d2e6e48">list</a></div>
+<div class="line"><span class="lineno">   65</span>        where (!onlyJoinable || a.CanJoin) &amp;&amp; (includeMinor || !a.IsMinorGod)</div>
+<div class="line"><span class="lineno">   66</span>        select a).RandomItem&lt;<a class="code hl_class" href="classReligion.html">Religion</a>&gt;();</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassReligionManager_html_aa96dceff542c7c35156e31ad4d2e6e48"><div class="ttname"><a href="classReligionManager.html#aa96dceff542c7c35156e31ad4d2e6e48">ReligionManager.list</a></div><div class="ttdeci">List&lt; Religion &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00071">ReligionManager.cs:71</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReligionManager_8cs_source.html#l00071">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameLang_8cs_source.html#l00006">GameLang.ConvertDrama()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00070">TraitAltar.OnCreate()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00075">TraitAltar.OnImportMap()</a>, and <a class="el" href="Zone_8cs_source.html#l02658">Zone.SpawnAltar()</a>.</p>
 
 </div>
 </div>
@@ -294,6 +342,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00032">32</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_function" href="classReligionManager.html#a13ab03f6808ef49713bd40d42086a1ba">SetOwner</a>();</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classReligion.html">Religion</a> <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classReligionManager.html#aa96dceff542c7c35156e31ad4d2e6e48">list</a>)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            religion.<a class="code hl_function" href="classReligion.html#aa9761f5dc15f2242794d70b9bc165274">Init</a>();</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassReligionManager_html_a13ab03f6808ef49713bd40d42086a1ba"><div class="ttname"><a href="classReligionManager.html#a13ab03f6808ef49713bd40d42086a1ba">ReligionManager.SetOwner</a></div><div class="ttdeci">void SetOwner()</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00008">ReligionManager.cs:8</a></div></div>
+<div class="ttc" id="aclassReligion_html_aa9761f5dc15f2242794d70b9bc165274"><div class="ttname"><a href="classReligion.html#aa9761f5dc15f2242794d70b9bc165274">Religion.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00130">Religion.cs:130</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Religion_8cs_source.html#l00130">Religion.Init()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00071">list</a>, <a class="el" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -321,6 +380,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00041">41</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        this.<a class="code hl_function" href="classReligionManager.html#a13ab03f6808ef49713bd40d42086a1ba">SetOwner</a>();</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classReligion.html">Religion</a> <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169">dictAll</a>.Values)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            religion.<a class="code hl_function" href="classReligion.html#ac84f29bee5d37085ec7e1bf692c5b9c8">OnLoad</a>();</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassReligion_html_ac84f29bee5d37085ec7e1bf692c5b9c8"><div class="ttname"><a href="classReligion.html#ac84f29bee5d37085ec7e1bf692c5b9c8">Religion.OnLoad</a></div><div class="ttdeci">void OnLoad()</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00135">Religion.cs:135</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReligionManager_8cs_source.html#l00069">dictAll</a>, <a class="el" href="Religion_8cs_source.html#l00135">Religion.OnLoad()</a>, <a class="el" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00153">Game.OnLoad()</a>.</p>
 
 </div>
 </div>
@@ -348,6 +419,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00008">8</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        this.list = <span class="keyword">new</span> List&lt;Religion&gt;</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            this.<a class="code hl_variable" href="classReligionManager.html#a39f22beeef8040eac5063b9e9388dacb">Eyth</a>,</div>
+<div class="line"><span class="lineno">   13</span>            this.<a class="code hl_variable" href="classReligionManager.html#a036902825c693160d49a77bdd20db539">Wind</a>,</div>
+<div class="line"><span class="lineno">   14</span>            this.<a class="code hl_variable" href="classReligionManager.html#ab5a8f054052e21f5f4cb8045dba783e3">Earth</a>,</div>
+<div class="line"><span class="lineno">   15</span>            this.<a class="code hl_variable" href="classReligionManager.html#abb35a900a1414883f71e413b177176a4">Healing</a>,</div>
+<div class="line"><span class="lineno">   16</span>            this.<a class="code hl_variable" href="classReligionManager.html#a494746b064035d10a70cf080a9a237ea">Luck</a>,</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classReligionManager.html#a3592a593ee6ad3871677de25f026fd39">Machine</a>,</div>
+<div class="line"><span class="lineno">   18</span>            this.<a class="code hl_variable" href="classReligionManager.html#a9993ce637a7381bb9cebf4196602bff1">Element</a>,</div>
+<div class="line"><span class="lineno">   19</span>            this.<a class="code hl_variable" href="classReligionManager.html#a282988e7ede83a0693f9b7f042d7f58d">Harvest</a>,</div>
+<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_variable" href="classReligionManager.html#a1b1d6cc19725f30f99321f75c03a4302">Oblivion</a>,</div>
+<div class="line"><span class="lineno">   21</span>            this.<a class="code hl_variable" href="classReligionManager.html#a6cce1d812241193fbb838fad49b50c84">Harmony</a>,</div>
+<div class="line"><span class="lineno">   22</span>            this.<a class="code hl_variable" href="classReligionManager.html#a966f03357803b04e5947b80ef23271e0">Trickery</a>,</div>
+<div class="line"><span class="lineno">   23</span>            this.<a class="code hl_variable" href="classReligionManager.html#a76dc8a310c6021205baa8049cb671396">MoonShadow</a>,</div>
+<div class="line"><span class="lineno">   24</span>            this.Strife</div>
+<div class="line"><span class="lineno">   25</span>        };</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classReligion.html">Religion</a> <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classReligionManager.html#aa96dceff542c7c35156e31ad4d2e6e48">list</a>)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169">dictAll</a>.Add(religion.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a>, <a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassReligionManager_html_a036902825c693160d49a77bdd20db539"><div class="ttname"><a href="classReligionManager.html#a036902825c693160d49a77bdd20db539">ReligionManager.Wind</a></div><div class="ttdeci">ReligionWind Wind</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00077">ReligionManager.cs:77</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a1b1d6cc19725f30f99321f75c03a4302"><div class="ttname"><a href="classReligionManager.html#a1b1d6cc19725f30f99321f75c03a4302">ReligionManager.Oblivion</a></div><div class="ttdeci">ReligionOblivion Oblivion</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00098">ReligionManager.cs:98</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a282988e7ede83a0693f9b7f042d7f58d"><div class="ttname"><a href="classReligionManager.html#a282988e7ede83a0693f9b7f042d7f58d">ReligionManager.Harvest</a></div><div class="ttdeci">ReligionHarvest Harvest</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00095">ReligionManager.cs:95</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a3592a593ee6ad3871677de25f026fd39"><div class="ttname"><a href="classReligionManager.html#a3592a593ee6ad3871677de25f026fd39">ReligionManager.Machine</a></div><div class="ttdeci">ReligionMachine Machine</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00089">ReligionManager.cs:89</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a39f22beeef8040eac5063b9e9388dacb"><div class="ttname"><a href="classReligionManager.html#a39f22beeef8040eac5063b9e9388dacb">ReligionManager.Eyth</a></div><div class="ttdeci">ReligionEyth Eyth</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00074">ReligionManager.cs:74</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a494746b064035d10a70cf080a9a237ea"><div class="ttname"><a href="classReligionManager.html#a494746b064035d10a70cf080a9a237ea">ReligionManager.Luck</a></div><div class="ttdeci">ReligionLuck Luck</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00086">ReligionManager.cs:86</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a6cce1d812241193fbb838fad49b50c84"><div class="ttname"><a href="classReligionManager.html#a6cce1d812241193fbb838fad49b50c84">ReligionManager.Harmony</a></div><div class="ttdeci">ReligionHarmony Harmony</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00101">ReligionManager.cs:101</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a76dc8a310c6021205baa8049cb671396"><div class="ttname"><a href="classReligionManager.html#a76dc8a310c6021205baa8049cb671396">ReligionManager.MoonShadow</a></div><div class="ttdeci">ReligionMoonShadow MoonShadow</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00107">ReligionManager.cs:107</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a966f03357803b04e5947b80ef23271e0"><div class="ttname"><a href="classReligionManager.html#a966f03357803b04e5947b80ef23271e0">ReligionManager.Trickery</a></div><div class="ttdeci">ReligionTrickery Trickery</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00104">ReligionManager.cs:104</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a9993ce637a7381bb9cebf4196602bff1"><div class="ttname"><a href="classReligionManager.html#a9993ce637a7381bb9cebf4196602bff1">ReligionManager.Element</a></div><div class="ttdeci">ReligionElement Element</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00092">ReligionManager.cs:92</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_ab5a8f054052e21f5f4cb8045dba783e3"><div class="ttname"><a href="classReligionManager.html#ab5a8f054052e21f5f4cb8045dba783e3">ReligionManager.Earth</a></div><div class="ttdeci">ReligionEarth Earth</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00080">ReligionManager.cs:80</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_abb35a900a1414883f71e413b177176a4"><div class="ttname"><a href="classReligionManager.html#abb35a900a1414883f71e413b177176a4">ReligionManager.Healing</a></div><div class="ttdeci">ReligionHealing Healing</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00083">ReligionManager.cs:83</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReligionManager_8cs_source.html#l00069">dictAll</a>, <a class="el" href="ReligionManager_8cs_source.html#l00080">Earth</a>, <a class="el" href="ReligionManager_8cs_source.html#l00092">Element</a>, <a class="el" href="ReligionManager_8cs_source.html#l00074">Eyth</a>, <a class="el" href="ReligionManager_8cs_source.html#l00101">Harmony</a>, <a class="el" href="ReligionManager_8cs_source.html#l00095">Harvest</a>, <a class="el" href="ReligionManager_8cs_source.html#l00083">Healing</a>, <a class="el" href="Religion_8cs_source.html#l00009">Religion.id</a>, <a class="el" href="ReligionManager_8cs_source.html#l00071">list</a>, <a class="el" href="ReligionManager_8cs_source.html#l00086">Luck</a>, <a class="el" href="ReligionManager_8cs_source.html#l00089">Machine</a>, <a class="el" href="ReligionManager_8cs_source.html#l00107">MoonShadow</a>, <a class="el" href="ReligionManager_8cs_source.html#l00098">Oblivion</a>, <a class="el" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daaf16cc584cec55f3f285086daaf0c2fdf">religion</a>, <a class="el" href="ReligionManager_8cs_source.html#l00104">Trickery</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00077">Wind</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ReligionManager_8cs_source.html#l00032">OnCreateGame()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00041">OnLoad()</a>.</p>
 
 </div>
 </div>
@@ -366,6 +475,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00069">69</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ReligionManager_8cs_source.html#l00050">Find()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00059">TraitBaseSpellbook.OnCreate()</a>, <a class="el" href="TraitFollower_8cs_source.html#l00005">TraitFollower.OnCreate()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00041">OnLoad()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00026">LayerFactions.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00021">ContentFaction.RefreshFactions()</a>, <a class="el" href="Chara_8cs_source.html#l01371">Chara.SetFaith()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00267">TraitBaseSpellbook.SetName()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l01464">CoreDebug.Test_GodTalk()</a>.</p>
+
 </div>
 </div>
 <a id="ab5a8f054052e21f5f4cb8045dba783e3" name="ab5a8f054052e21f5f4cb8045dba783e3"></a>
@@ -381,6 +492,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00080">80</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>, and <a class="el" href="TraitAltarChaos_8cs_source.html#l00021">TraitAltarChaos.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -398,6 +511,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00092">92</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <a id="a39f22beeef8040eac5063b9e9388dacb" name="a39f22beeef8040eac5063b9e9388dacb"></a>
@@ -413,6 +528,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00074">74</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00189">FactionBranch.OnCreate()</a>, <a class="el" href="Player_8cs_source.html#l00154">Player.OnCreateGame()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>, and <a class="el" href="Thing_8cs_source.html#l00893">Thing.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -430,6 +547,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00101">101</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <a id="a282988e7ede83a0693f9b7f042d7f58d" name="a282988e7ede83a0693f9b7f042d7f58d"></a>
@@ -445,6 +564,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00095">95</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06602">Card.GetPrice()</a>, <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -462,6 +583,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00083">83</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <a id="aa96dceff542c7c35156e31ad4d2e6e48" name="aa96dceff542c7c35156e31ad4d2e6e48"></a>
@@ -477,6 +600,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00071">71</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFaith_8cs_source.html#l00011">LayerFaith.Activate()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00062">GetRandomReligion()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00032">OnCreateGame()</a>, <a class="el" href="Player_8cs_source.html#l00187">Player.OnStartNewGame()</a>, <a class="el" href="Religion_8cs_source.html#l00633">Religion.Punish()</a>, <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>, and <a class="el" href="ActEffect_8cs_source.html#l02362">ActEffect.Wish()</a>.</p>
 
 </div>
 </div>
@@ -494,6 +619,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00086">86</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <a id="a3592a593ee6ad3871677de25f026fd39" name="a3592a593ee6ad3871677de25f026fd39"></a>
@@ -509,6 +636,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00089">89</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -526,6 +655,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00107">107</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05543">Chara.Cuddle()</a>, <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <a id="a1b1d6cc19725f30f99321f75c03a4302" name="a1b1d6cc19725f30f99321f75c03a4302"></a>
@@ -541,6 +672,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00098">98</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -558,6 +691,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00110">110</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, and <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>.</p>
+
 </div>
 </div>
 <a id="a966f03357803b04e5947b80ef23271e0" name="a966f03357803b04e5947b80ef23271e0"></a>
@@ -573,6 +708,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00104">104</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="Zone__SubTown_8cs_source.html#l00013">Zone_SubTown.OnGenerateRooms()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -590,15 +727,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ReligionManager_8cs_source.html#l00077">77</a> of file <a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Religion_8cs_source.html#l00310">Religion.IsValidArtifact()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00413">Religion.Reforge()</a>, and <a class="el" href="ReligionManager_8cs_source.html#l00008">SetOwner()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ReligionManager_8cs_source.html">ReligionManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classReligionManager.html">ReligionManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

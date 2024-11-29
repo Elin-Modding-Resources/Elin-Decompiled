@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetStatsBar.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -414,6 +434,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00160">160</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
+<div class="line"><span class="lineno">  162</span>        UIItem uiitem = Util.Instantiate&lt;UIItem&gt;(this.<a class="code hl_variable" href="classWidgetStatsBar.html#a624fd58f16daa2c6d2c140a720ecbfc5">mold</a>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e">layout</a>);</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="classWidgetStatsBar_1_1Item.html">WidgetStatsBar.Item</a> item = <span class="keyword">new</span> <a class="code hl_class" href="classWidgetStatsBar_1_1Item.html">WidgetStatsBar.Item</a></div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            ele = ele,</div>
+<div class="line"><span class="lineno">  166</span>            component = uiitem,</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordtype">id</span> = id,</div>
+<div class="line"><span class="lineno">  168</span>            func = func,</div>
+<div class="line"><span class="lineno">  169</span>            funcCol = funcCol,</div>
+<div class="line"><span class="lineno">  170</span>            funcShow = funcShow</div>
+<div class="line"><span class="lineno">  171</span>        };</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (sprite)</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            uiitem.image1.sprite = sprite;</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            uiitem.image1.sprite = ele.<a class="code hl_function" href="classElement.html#a4c736532f2dbff4037fee4dfba0be948">GetIcon</a>(<span class="stringliteral">&quot;_m&quot;</span>);</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        uiitem.image1.SetNativeSize();</div>
+<div class="line"><span class="lineno">  181</span>        uiitem.text1.skinRoot = base.skinRoot;</div>
+<div class="line"><span class="lineno">  182</span>        Shadow component = uiitem.text1.GetComponent&lt;Shadow&gt;();</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (component)</div>
+<div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            component.enabled = base.config.skin.BG.textShadow;</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>        this.<a class="code hl_variable" href="classWidgetStatsBar.html#aa297618848ad573ffadbee1c30f4a4ed">items</a>.Add(item);</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> uiitem;</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="ttc" id="aclassElement_html_a4c736532f2dbff4037fee4dfba0be948"><div class="ttname"><a href="classElement.html#a4c736532f2dbff4037fee4dfba0be948">Element.GetIcon</a></div><div class="ttdeci">virtual Sprite GetIcon(string suffix=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00157">Element.2.cs:157</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_1_1Item_html"><div class="ttname"><a href="classWidgetStatsBar_1_1Item.html">WidgetStatsBar.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00366">WidgetStatsBar.cs:367</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a624fd58f16daa2c6d2c140a720ecbfc5"><div class="ttname"><a href="classWidgetStatsBar.html#a624fd58f16daa2c6d2c140a720ecbfc5">WidgetStatsBar.mold</a></div><div class="ttdeci">UIItem mold</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00364">WidgetStatsBar.cs:364</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_aa297618848ad573ffadbee1c30f4a4ed"><div class="ttname"><a href="classWidgetStatsBar.html#aa297618848ad573ffadbee1c30f4a4ed">WidgetStatsBar.items</a></div><div class="ttdeci">List&lt; WidgetStatsBar.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00336">WidgetStatsBar.cs:336</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_af364830d98024f2330635032ba956e8e"><div class="ttname"><a href="classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e">WidgetStatsBar.layout</a></div><div class="ttdeci">LayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00334">WidgetStatsBar.cs:334</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00157">Element.GetIcon()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>.</p>
 
 </div>
 </div>
@@ -441,6 +499,157 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">53</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classWidgetStatsBar.html#aa297618848ad573ffadbee1c30f4a4ed">items</a>.Clear();</div>
+<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e">layout</a>.DestroyChildren(<span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.attributes)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> ele <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a07747c1874b09f80ab65ea65ab715828">ListElements</a>((<a class="code hl_class" href="classElement.html">Element</a> e) =&gt; e.<a class="code hl_function" href="classElement.html#a5163326f1ee817cd7b4d06165bbf30c7">HasTag</a>(<span class="stringliteral">&quot;primary&quot;</span>), <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(ele, <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(79), <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.dv)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;dvpv&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a92ba4311a465c33b2c51ba25810bc9fb">iconDvPv</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a7c50888624fe29bf123cc1863d0c799e">DV</a>.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a9b90b5fc39dfdef5a04b59c8ede96907">PV</a>.ToString(), <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.maxAlly)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;maxAlly&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a48e6b4d29f4ab6f49fdddae67a769e52">iconMaxAlly</a>, () =&gt; (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Count - 1).ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_property" href="classPlayer.html#a84887076fe7e500b149a0c9b54b6ee47">MaxAlly</a>.ToString(), delegate</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                if (EMono.player.lastEmptyAlly &gt;= 0)</div>
+<div class="line"><span class="lineno">   74</span>                {</div>
+<div class="line"><span class="lineno">   75</span>                    return FontColor.Default;</div>
+<div class="line"><span class="lineno">   76</span>                }</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> FontColor.Bad;</div>
+<div class="line"><span class="lineno">   78</span>            }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.money)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;money&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a1a71ac262d712bcb5cf75ae8cbd1cbb1">iconMoney</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;money&quot;</span>).ToString(<span class="stringliteral">&quot;#,0&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.money2)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;money2&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a3a4a40295ad306485e364858ab29528d">iconMoney2</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;money2&quot;</span>).ToString(<span class="stringliteral">&quot;#,0&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.plat)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;plat&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#af1c6b9caffd73dd19ad271a9152c48d3">iconPlat</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;plat&quot;</span>).ToString(<span class="stringliteral">&quot;#,0&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.medal)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;medal&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a234f406d43331263be8e499907fe6f88">iconMedal</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;medal&quot;</span>).ToString(<span class="stringliteral">&quot;#,0&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.karma)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;karma&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a37f87b5fb6fd4c29b0629fae28c2779d">iconKarma</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a48e2d6efafa3d77e2ad6ee5e638158f4">karma</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.mood)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;mood&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a29eb517dcc4b12f89f9c97b0239d2843">iconGodMood</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#ac3123758210191c800b2d93178d521c4">faith</a>.<a class="code hl_property" href="classReligion.html#a51919be9ce51f6006e90b663540af76d">TextMood</a> ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.fame)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;fame&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a655d6b34a3d6397f6e236a44f14961d3">iconFame</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ad7944412ba2a46dd20aba76cbc517ddd">fame</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.influence)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;influence&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a54eaa585630c3ec70ff6973edc03ac22">iconInfluence</a>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#ae847b0cf3640d92e03e1a39fe7f1988c">influence</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#ae847b0cf3640d92e03e1a39fe7f1988c">influence</a> != 0);</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.tourism_value)</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;tourism_value&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#aa35c999bf727a9dd482ac9938fea0945">iconTourismValue</a>, delegate</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    return EMono.Branch.tourism.ToFormat();</div>
+<div class="line"><span class="lineno">  119</span>                }</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  121</span>            }, <span class="keyword">null</span>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.hearthLv)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;hearth_lv&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a31756ef8e2bb3216d294e3e27d6d32d0">iconHearth</a>, delegate</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  128</span>                {</div>
+<div class="line"><span class="lineno">  129</span>                    return EMono.Branch.TextLv;</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  132</span>            }, delegate</div>
+<div class="line"><span class="lineno">  133</span>            {</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#aea176952c73ef30b1bc84c356a08d655">exp</a> &lt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">Branch</a>.<a class="code hl_function" href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">GetNextExp</a>(-1))</div>
+<div class="line"><span class="lineno">  135</span>                {</div>
+<div class="line"><span class="lineno">  136</span>                    return FontColor.Default;</div>
+<div class="line"><span class="lineno">  137</span>                }</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">return</span> FontColor.Good;</div>
+<div class="line"><span class="lineno">  139</span>            }, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>);</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.weight)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">Add</a>(<span class="keyword">null</span>, <span class="stringliteral">&quot;weight&quot;</span>, this.<a class="code hl_variable" href="classWidgetStatsBar.html#a647b502331d7104cb78fb1c02de49c8b">iconWeight</a>, () =&gt; ((<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#a2536cb461f36b3d2736154a5a225f99b">ChildrenWeight</a> / 1000f).ToString(<span class="stringliteral">&quot;F1&quot;</span>) + <span class="stringliteral">&quot; / &quot;</span> + ((<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a69253846581bb62c2ffdb87f645de2a2">WeightLimit</a> / 1000f).ToString(<span class="stringliteral">&quot;F1&quot;</span>), delegate</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                int phase = EMono.pc.burden.GetPhase();</div>
+<div class="line"><span class="lineno">  146</span>                if (phase == 0)</div>
+<div class="line"><span class="lineno">  147</span>                {</div>
+<div class="line"><span class="lineno">  148</span>                    return FontColor.Default;</div>
+<div class="line"><span class="lineno">  149</span>                }</div>
+<div class="line"><span class="lineno">  150</span>                if (phase != 1)</div>
+<div class="line"><span class="lineno">  151</span>                {</div>
+<div class="line"><span class="lineno">  152</span>                    <span class="keywordflow">return</span> FontColor.Bad;</div>
+<div class="line"><span class="lineno">  153</span>                }</div>
+<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">return</span> FontColor.Warning;</div>
+<div class="line"><span class="lineno">  155</span>            }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>        this.<a class="code hl_function" href="classWidgetStatsBar.html#a0459069033ec702cb98022e4364e23e7">Refresh</a>();</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a2536cb461f36b3d2736154a5a225f99b"><div class="ttname"><a href="classCard.html#a2536cb461f36b3d2736154a5a225f99b">Card.ChildrenWeight</a></div><div class="ttdeci">int ChildrenWeight</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01843">Card.cs:1844</a></div></div>
+<div class="ttc" id="aclassCard_html_a6b8ed8f4280ec4fde249ed153321db75"><div class="ttname"><a href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">Card.GetCurrency</a></div><div class="ttdeci">int GetCurrency(string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03807">Card.cs:3807</a></div></div>
+<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09362">Chara.cs:9362</a></div></div>
+<div class="ttc" id="aclassChara_html_a69253846581bb62c2ffdb87f645de2a2"><div class="ttname"><a href="classChara.html#a69253846581bb62c2ffdb87f645de2a2">Chara.WeightLimit</a></div><div class="ttdeci">override int WeightLimit</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00620">Chara.cs:621</a></div></div>
+<div class="ttc" id="aclassChara_html_a7c50888624fe29bf123cc1863d0c799e"><div class="ttname"><a href="classChara.html#a7c50888624fe29bf123cc1863d0c799e">Chara.DV</a></div><div class="ttdeci">override int DV</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00656">Chara.cs:657</a></div></div>
+<div class="ttc" id="aclassChara_html_a9b90b5fc39dfdef5a04b59c8ede96907"><div class="ttname"><a href="classChara.html#a9b90b5fc39dfdef5a04b59c8ede96907">Chara.PV</a></div><div class="ttdeci">override int PV</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00673">Chara.cs:674</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3123758210191c800b2d93178d521c4"><div class="ttname"><a href="classChara.html#ac3123758210191c800b2d93178d521c4">Chara.faith</a></div><div class="ttdeci">Religion faith</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00262">Chara.cs:263</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassEMono_html_acc403af024c59c21b98bd5d85f9fd794"><div class="ttname"><a href="classEMono.html#acc403af024c59c21b98bd5d85f9fd794">EMono.Branch</a></div><div class="ttdeci">static FactionBranch Branch</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00062">EMono.cs:63</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a07747c1874b09f80ab65ea65ab715828"><div class="ttname"><a href="classElementContainer.html#a07747c1874b09f80ab65ea65ab715828">ElementContainer.ListElements</a></div><div class="ttdeci">List&lt; Element &gt; ListElements(Func&lt; Element, bool &gt; shoudList=null, Comparison&lt; Element &gt; comparison=null)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00591">ElementContainer.cs:591</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a5163326f1ee817cd7b4d06165bbf30c7"><div class="ttname"><a href="classElement.html#a5163326f1ee817cd7b4d06165bbf30c7">Element.HasTag</a></div><div class="ttdeci">bool HasTag(string tag)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00346">Element.2.cs:346</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a8ee5986d0049c14300f07ca58f9931c4"><div class="ttname"><a href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">FactionBranch.GetNextExp</a></div><div class="ttdeci">int GetNextExp(int _lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00010">FactionBranch.cs:10</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_aea176952c73ef30b1bc84c356a08d655"><div class="ttname"><a href="classFactionBranch.html#aea176952c73ef30b1bc84c356a08d655">FactionBranch.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01613">FactionBranch.cs:1613</a></div></div>
+<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00008">Party.cs:9</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a48e2d6efafa3d77e2ad6ee5e638158f4"><div class="ttname"><a href="classPlayer.html#a48e2d6efafa3d77e2ad6ee5e638158f4">Player.karma</a></div><div class="ttdeci">int karma</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01344">Player.cs:1344</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a84887076fe7e500b149a0c9b54b6ee47"><div class="ttname"><a href="classPlayer.html#a84887076fe7e500b149a0c9b54b6ee47">Player.MaxAlly</a></div><div class="ttdeci">int MaxAlly</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00086">Player.cs:87</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ad7944412ba2a46dd20aba76cbc517ddd"><div class="ttname"><a href="classPlayer.html#ad7944412ba2a46dd20aba76cbc517ddd">Player.fame</a></div><div class="ttdeci">int fame</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01347">Player.cs:1347</a></div></div>
+<div class="ttc" id="aclassReligion_html_a51919be9ce51f6006e90b663540af76d"><div class="ttname"><a href="classReligion.html#a51919be9ce51f6006e90b663540af76d">Religion.TextMood</a></div><div class="ttdeci">string TextMood</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00082">Religion.cs:83</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ae847b0cf3640d92e03e1a39fe7f1988c"><div class="ttname"><a href="classSpatial.html#ae847b0cf3640d92e03e1a39fe7f1988c">Spatial.influence</a></div><div class="ttdeci">int influence</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00194">Spatial.cs:195</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a0459069033ec702cb98022e4364e23e7"><div class="ttname"><a href="classWidgetStatsBar.html#a0459069033ec702cb98022e4364e23e7">WidgetStatsBar.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00191">WidgetStatsBar.cs:191</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a1a71ac262d712bcb5cf75ae8cbd1cbb1"><div class="ttname"><a href="classWidgetStatsBar.html#a1a71ac262d712bcb5cf75ae8cbd1cbb1">WidgetStatsBar.iconMoney</a></div><div class="ttdeci">Sprite iconMoney</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00338">WidgetStatsBar.cs:338</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a234f406d43331263be8e499907fe6f88"><div class="ttname"><a href="classWidgetStatsBar.html#a234f406d43331263be8e499907fe6f88">WidgetStatsBar.iconMedal</a></div><div class="ttdeci">Sprite iconMedal</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00344">WidgetStatsBar.cs:344</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a29eb517dcc4b12f89f9c97b0239d2843"><div class="ttname"><a href="classWidgetStatsBar.html#a29eb517dcc4b12f89f9c97b0239d2843">WidgetStatsBar.iconGodMood</a></div><div class="ttdeci">Sprite iconGodMood</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00354">WidgetStatsBar.cs:354</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a31756ef8e2bb3216d294e3e27d6d32d0"><div class="ttname"><a href="classWidgetStatsBar.html#a31756ef8e2bb3216d294e3e27d6d32d0">WidgetStatsBar.iconHearth</a></div><div class="ttdeci">Sprite iconHearth</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00356">WidgetStatsBar.cs:356</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a37f87b5fb6fd4c29b0629fae28c2779d"><div class="ttname"><a href="classWidgetStatsBar.html#a37f87b5fb6fd4c29b0629fae28c2779d">WidgetStatsBar.iconKarma</a></div><div class="ttdeci">Sprite iconKarma</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00346">WidgetStatsBar.cs:346</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a3a4a40295ad306485e364858ab29528d"><div class="ttname"><a href="classWidgetStatsBar.html#a3a4a40295ad306485e364858ab29528d">WidgetStatsBar.iconMoney2</a></div><div class="ttdeci">Sprite iconMoney2</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00340">WidgetStatsBar.cs:340</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a48e6b4d29f4ab6f49fdddae67a769e52"><div class="ttname"><a href="classWidgetStatsBar.html#a48e6b4d29f4ab6f49fdddae67a769e52">WidgetStatsBar.iconMaxAlly</a></div><div class="ttdeci">Sprite iconMaxAlly</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00352">WidgetStatsBar.cs:352</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a54eaa585630c3ec70ff6973edc03ac22"><div class="ttname"><a href="classWidgetStatsBar.html#a54eaa585630c3ec70ff6973edc03ac22">WidgetStatsBar.iconInfluence</a></div><div class="ttdeci">Sprite iconInfluence</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00350">WidgetStatsBar.cs:350</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a647b502331d7104cb78fb1c02de49c8b"><div class="ttname"><a href="classWidgetStatsBar.html#a647b502331d7104cb78fb1c02de49c8b">WidgetStatsBar.iconWeight</a></div><div class="ttdeci">Sprite iconWeight</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00348">WidgetStatsBar.cs:348</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a655d6b34a3d6397f6e236a44f14961d3"><div class="ttname"><a href="classWidgetStatsBar.html#a655d6b34a3d6397f6e236a44f14961d3">WidgetStatsBar.iconFame</a></div><div class="ttdeci">Sprite iconFame</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00360">WidgetStatsBar.cs:360</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a92ba4311a465c33b2c51ba25810bc9fb"><div class="ttname"><a href="classWidgetStatsBar.html#a92ba4311a465c33b2c51ba25810bc9fb">WidgetStatsBar.iconDvPv</a></div><div class="ttdeci">Sprite iconDvPv</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00362">WidgetStatsBar.cs:362</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_aa26e76ed4eb0b85cbaa62efc58cc5807"><div class="ttname"><a href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">WidgetStatsBar.extra</a></div><div class="ttdeci">WidgetStatsBar.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00013">WidgetStatsBar.cs:14</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_aa35c999bf727a9dd482ac9938fea0945"><div class="ttname"><a href="classWidgetStatsBar.html#aa35c999bf727a9dd482ac9938fea0945">WidgetStatsBar.iconTourismValue</a></div><div class="ttdeci">Sprite iconTourismValue</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00358">WidgetStatsBar.cs:358</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_ada0afcfbe36ab98d9140e80dc30ad400"><div class="ttname"><a href="classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400">WidgetStatsBar.Add</a></div><div class="ttdeci">UIItem Add(Element ele, string id=&quot;&quot;, Sprite sprite=null, Func&lt; string &gt; func=null, Func&lt; FontColor &gt; funcCol=null, Func&lt; bool &gt; funcShow=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00160">WidgetStatsBar.cs:160</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html_af1c6b9caffd73dd19ad271a9152c48d3"><div class="ttname"><a href="classWidgetStatsBar.html#af1c6b9caffd73dd19ad271a9152c48d3">WidgetStatsBar.iconPlat</a></div><div class="ttdeci">Sprite iconPlat</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00342">WidgetStatsBar.cs:342</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetStatsBar_8cs_source.html#l00160">Add()</a>, <a class="el" href="Chara_8cs_source.html#l00657">Chara.DV</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00014">extra</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00346">Element.HasTag()</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00362">iconDvPv</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00352">iconMaxAlly</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00336">items</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00334">layout</a>, <a class="el" href="ElementContainer_8cs_source.html#l00591">ElementContainer.ListElements()</a>, <a class="el" href="Player_8cs_source.html#l00087">Player.MaxAlly</a>, <a class="el" href="Party_8cs_source.html#l00009">Party.members</a>, <a class="el" href="Chara_8cs_source.html#l09362">Chara.party</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, and <a class="el" href="Chara_8cs_source.html#l00674">Chara.PV</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00045">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -470,7 +679,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00008">8</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetStatsBar.html">WidgetStatsBar</a>.<a class="code hl_class" href="classWidgetStatsBar_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassWidgetStatsBar_1_1Extra_html"><div class="ttname"><a href="classWidgetStatsBar_1_1Extra.html">WidgetStatsBar.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00385">WidgetStatsBar.cs:386</a></div></div>
+<div class="ttc" id="aclassWidgetStatsBar_html"><div class="ttname"><a href="classWidgetStatsBar.html">WidgetStatsBar</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00006">WidgetStatsBar.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abdec7e21f71943280cdb9523f2052e73" name="abdec7e21f71943280cdb9523f2052e73"></a>
@@ -499,6 +713,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00045">45</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        WidgetStatsBar.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   48</span>        this.mold = this.<a class="code hl_variable" href="classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e">layout</a>.CreateMold(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   49</span>        this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">   50</span>        base.InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0.2f, 0.2f);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassWidgetStatsBar_html_a52c1671dfbcb214cd78128e086e89b93"><div class="ttname"><a href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">WidgetStatsBar.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStatsBar_8cs_source.html#l00053">WidgetStatsBar.cs:53</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>, and <a class="el" href="WidgetStatsBar_8cs_source.html#l00334">layout</a>.</p>
 
 </div>
 </div>
@@ -528,6 +751,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00326">326</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>    {</div>
+<div class="line"><span class="lineno">  328</span>        base.OnApplySkin();</div>
+<div class="line"><span class="lineno">  329</span>        this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  330</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac74c1f42f141c011ca6bd8b1114fc3d0">Build</a>.</p>
 
 </div>
 </div>
@@ -558,6 +787,86 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00247">247</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>    {</div>
+<div class="line"><span class="lineno">  249</span>        UIContextMenu uicontextMenu = m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>);</div>
+<div class="line"><span class="lineno">  250</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;attributes&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.attributes, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            this.extra.attributes = a;</div>
+<div class="line"><span class="lineno">  253</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  254</span>        });</div>
+<div class="line"><span class="lineno">  255</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;dvpv&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.dv, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  256</span>        {</div>
+<div class="line"><span class="lineno">  257</span>            this.extra.dv = a;</div>
+<div class="line"><span class="lineno">  258</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  259</span>        });</div>
+<div class="line"><span class="lineno">  260</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;maxAlly&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.maxAlly, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  261</span>        {</div>
+<div class="line"><span class="lineno">  262</span>            this.extra.maxAlly = a;</div>
+<div class="line"><span class="lineno">  263</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  264</span>        });</div>
+<div class="line"><span class="lineno">  265</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;money&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.money, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>            this.extra.money = a;</div>
+<div class="line"><span class="lineno">  268</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  269</span>        });</div>
+<div class="line"><span class="lineno">  270</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;money2&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.money2, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            this.extra.money2 = a;</div>
+<div class="line"><span class="lineno">  273</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  274</span>        });</div>
+<div class="line"><span class="lineno">  275</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;plat&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.plat, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            this.extra.plat = a;</div>
+<div class="line"><span class="lineno">  278</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  279</span>        });</div>
+<div class="line"><span class="lineno">  280</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;medal&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.medal, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            this.extra.medal = a;</div>
+<div class="line"><span class="lineno">  283</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  284</span>        });</div>
+<div class="line"><span class="lineno">  285</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;influence&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.influence, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  286</span>        {</div>
+<div class="line"><span class="lineno">  287</span>            this.extra.influence = a;</div>
+<div class="line"><span class="lineno">  288</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  289</span>        });</div>
+<div class="line"><span class="lineno">  290</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;karma&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.karma, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  291</span>        {</div>
+<div class="line"><span class="lineno">  292</span>            this.extra.karma = a;</div>
+<div class="line"><span class="lineno">  293</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  294</span>        });</div>
+<div class="line"><span class="lineno">  295</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;fame&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.fame, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  296</span>        {</div>
+<div class="line"><span class="lineno">  297</span>            this.extra.fame = a;</div>
+<div class="line"><span class="lineno">  298</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  299</span>        });</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>)</div>
+<div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            uicontextMenu.AddToggle(<span class="stringliteral">&quot;godMood&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.mood, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  303</span>            {</div>
+<div class="line"><span class="lineno">  304</span>                this.extra.mood = a;</div>
+<div class="line"><span class="lineno">  305</span>                this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  306</span>            });</div>
+<div class="line"><span class="lineno">  307</span>        }</div>
+<div class="line"><span class="lineno">  308</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;tourism_value&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.tourism_value, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  309</span>        {</div>
+<div class="line"><span class="lineno">  310</span>            this.extra.tourism_value = a;</div>
+<div class="line"><span class="lineno">  311</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  312</span>        });</div>
+<div class="line"><span class="lineno">  313</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;hearth_lv&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.hearthLv, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  314</span>        {</div>
+<div class="line"><span class="lineno">  315</span>            this.extra.hearthLv = a;</div>
+<div class="line"><span class="lineno">  316</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  317</span>        });</div>
+<div class="line"><span class="lineno">  318</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;invWeight&quot;</span>, this.<a class="code hl_property" href="classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807">extra</a>.weight, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>            this.extra.weight = a;</div>
+<div class="line"><span class="lineno">  321</span>            this.<a class="code hl_function" href="classWidgetStatsBar.html#a52c1671dfbcb214cd78128e086e89b93">Build</a>();</div>
+<div class="line"><span class="lineno">  322</span>        });</div>
+<div class="line"><span class="lineno">  323</span>        base.SetBaseContextMenu(m);</div>
+<div class="line"><span class="lineno">  324</span>    }</div>
+<div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00158">EMono.cs:159</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac74c1f42f141c011ca6bd8b1114fc3d0">Build</a>, and <a class="el" href="EMono_8cs_source.html#l00159">EMono.debug</a>.</p>
 
 </div>
 </div>
@@ -585,6 +894,68 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00191">191</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidgetStatsBar.html">WidgetStatsBar</a>.<a class="code hl_class" href="classWidgetStatsBar_1_1Item.html">Item</a> item in <span class="keyword">this</span>.items)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = item.component.text1.text;</div>
+<div class="line"><span class="lineno">  197</span>            FontColor fontColor = FontColor.Default;</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordtype">string</span> text2;</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (!item.id.IsEmpty())</div>
+<div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>                text2 = item.func();</div>
+<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">if</span> (item.funcCol != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  203</span>                {</div>
+<div class="line"><span class="lineno">  204</span>                    fontColor = item.funcCol();</div>
+<div class="line"><span class="lineno">  205</span>                }</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classElement.html">Element</a> ele = item.ele;</div>
+<div class="line"><span class="lineno">  210</span>                text2 = (ele.<a class="code hl_property" href="classElement.html#a0d57e0ec446063ec29783bfa47ce5682">DisplayValue</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">if</span> (ele.<a class="code hl_property" href="classElement.html#a0d57e0ec446063ec29783bfa47ce5682">DisplayValue</a> &lt; ele.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a>)</div>
+<div class="line"><span class="lineno">  212</span>                {</div>
+<div class="line"><span class="lineno">  213</span>                    text2 = text2 + <span class="stringliteral">&quot; (&quot;</span> + ele.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a>.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  214</span>                }</div>
+<div class="line"><span class="lineno">  215</span>                <span class="keywordflow">if</span> (ele.<a class="code hl_property" href="classElement.html#a0d57e0ec446063ec29783bfa47ce5682">DisplayValue</a> &lt; ele.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a>)</div>
+<div class="line"><span class="lineno">  216</span>                {</div>
+<div class="line"><span class="lineno">  217</span>                    fontColor = FontColor.Bad;</div>
+<div class="line"><span class="lineno">  218</span>                }</div>
+<div class="line"><span class="lineno">  219</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a482a8c7e0ae29c4fd0fd5c3ffd8371a9">tempElements</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a482a8c7e0ae29c4fd0fd5c3ffd8371a9">tempElements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(ele.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keywordflow">if</span> (element != <span class="keyword">null</span> &amp;&amp; element.<a class="code hl_variable" href="classElement.html#a376b2a501a19d18737b32eb44f59e7d7">vBase</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  223</span>                    {</div>
+<div class="line"><span class="lineno">  224</span>                        fontColor = FontColor.Good;</div>
+<div class="line"><span class="lineno">  225</span>                    }</div>
+<div class="line"><span class="lineno">  226</span>                }</div>
+<div class="line"><span class="lineno">  227</span>            }</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">if</span> (text2 != <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> || item.lastColor != fontColor)</div>
+<div class="line"><span class="lineno">  229</span>            {</div>
+<div class="line"><span class="lineno">  230</span>                item.component.text1.SetText(text2, fontColor);</div>
+<div class="line"><span class="lineno">  231</span>                item.component.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  232</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  233</span>                item.lastColor = fontColor;</div>
+<div class="line"><span class="lineno">  234</span>            }</div>
+<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (item.funcShow != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  236</span>            {</div>
+<div class="line"><span class="lineno">  237</span>                item.component.SetActive(item.funcShow());</div>
+<div class="line"><span class="lineno">  238</span>            }</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  241</span>        {</div>
+<div class="line"><span class="lineno">  242</span>            this.<a class="code hl_variable" href="classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e">layout</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  243</span>            this.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  244</span>        }</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassChara_html_a482a8c7e0ae29c4fd0fd5c3ffd8371a9"><div class="ttname"><a href="classChara.html#a482a8c7e0ae29c4fd0fd5c3ffd8371a9">Chara.tempElements</a></div><div class="ttdeci">ElementContainer tempElements</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09355">Chara.cs:9355</a></div></div>
+<div class="ttc" id="aclassElement_html_a0d57e0ec446063ec29783bfa47ce5682"><div class="ttname"><a href="classElement.html#a0d57e0ec446063ec29783bfa47ce5682">Element.DisplayValue</a></div><div class="ttdeci">virtual int DisplayValue</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00037">Element.2.cs:38</a></div></div>
+<div class="ttc" id="aclassElement_html_a1360f9020059a1c35402e1b66e8dfee4"><div class="ttname"><a href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">Element.ValueWithoutLink</a></div><div class="ttdeci">int ValueWithoutLink</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00061">Element.2.cs:62</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a376b2a501a19d18737b32eb44f59e7d7"><div class="ttname"><a href="classElement.html#a376b2a501a19d18737b32eb44f59e7d7">Element.vBase</a></div><div class="ttdeci">int vBase</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00878">Element.2.cs:878</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00038">Element.DisplayValue</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Chara_8cs_source.html#l09355">Chara.tempElements</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="Element_82_8cs_source.html#l00062">Element.ValueWithoutLink</a>, and <a class="el" href="Element_82_8cs_source.html#l00878">Element.vBase</a>.</p>
 
 </div>
 </div>
@@ -602,6 +973,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00362">362</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>.</p>
 
 </div>
 </div>
@@ -698,6 +1071,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00352">352</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>.</p>
 
 </div>
 </div>
@@ -835,6 +1210,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00336">336</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>.</p>
+
 </div>
 </div>
 <a id="af364830d98024f2330635032ba956e8e" name="af364830d98024f2330635032ba956e8e"></a>
@@ -850,6 +1227,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00334">334</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>, and <a class="el" href="WidgetStatsBar_8cs_source.html#l00045">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -899,7 +1278,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> base.config.skin.BG.colors.textBad;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad7e10d98abf27cf55839a2663d2861cd" name="ad7e10d98abf27cf55839a2663d2861cd"></a>
@@ -923,7 +1308,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> base.config.skin.BG.colors.textDefault;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a73401d84f1f401129ef349eead6de95f" name="a73401d84f1f401129ef349eead6de95f"></a>
@@ -947,7 +1338,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00037">37</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> base.config.skin.BG.colors.textBad;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa26e76ed4eb0b85cbaa62efc58cc5807" name="aa26e76ed4eb0b85cbaa62efc58cc5807"></a>
@@ -971,6 +1368,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetStatsBar_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetStatsBar.html">WidgetStatsBar</a>.<a class="code hl_class" href="classWidgetStatsBar_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">Build()</a>.</p>
 
 </div>
 </div>
@@ -978,9 +1383,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="WidgetStatsBar_8cs_source.html">WidgetStatsBar.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetStatsBar.html">WidgetStatsBar</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

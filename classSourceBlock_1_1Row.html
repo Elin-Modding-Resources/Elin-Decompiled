@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceBlock_1_1Row.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classSourceBlock.html">SourceBlock</a></li><li class="navelem"><a class="el" href="classSourceBlock_1_1Row.html">Row</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -346,6 +362,38 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classRenderRow.html#a241cb197c6e275c82e754dce019929d5">RenderRow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00151">151</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_class" href="classRenderParam.html">RenderParam</a> renderParam = base.GetRenderParam(mat, dir, point, bridgeHeight);</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9">tileType</a> == <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a1f57f8425c92d5b5b7bac21cac1f224f">HalfBlock</a>)</div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordtype">int</span> num = 104025;</div>
+<div class="line"><span class="lineno">  157</span>                <a class="code hl_class" href="classSourceBlock_1_1Row.html">SourceBlock.Row</a> row = (this.id == 5) ? base.<a class="code hl_property" href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.rows[mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a5e7c206e9fce423fd682390fdf51c012">defBlock</a>] : <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  158</span>                renderParam.<a class="code hl_variable" href="classMeshPassParam.html#a28a1e7d27a2216cc026b1e6d512c09f1">tile</a> = (<span class="keywordtype">float</span>)row.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0];</div>
+<div class="line"><span class="lineno">  159</span>                renderParam.matColor = (float)((row.<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a> == 0) ? num : <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>, row.<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a>));</div>
+<div class="line"><span class="lineno">  160</span>                renderParam.tile2 = row.<a class="code hl_variable" href="classSourceBlock_1_1Row.html#ae19ea28f622bb36d484b4e6c57aaf776">sourceAutoFloor</a>._tiles[0];</div>
+<div class="line"><span class="lineno">  161</span>                renderParam.halfBlockColor = ((row.sourceAutoFloor.colorMod == 0) ? num : <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>, row.<a class="code hl_variable" href="classSourceBlock_1_1Row.html#ae19ea28f622bb36d484b4e6c57aaf776">sourceAutoFloor</a>.colorMod));</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">return</span> renderParam;</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00006">BaseTileMap.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a4ce40943930704595f222254d924a7c5"><div class="ttname"><a href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">BaseTileMap.GetColorInt</a></div><div class="ttdeci">static int GetColorInt(ref Color matColor, int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03344">BaseTileMap.cs:3344</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_a28a1e7d27a2216cc026b1e6d512c09f1"><div class="ttname"><a href="classMeshPassParam.html#a28a1e7d27a2216cc026b1e6d512c09f1">MeshPassParam.tile</a></div><div class="ttdeci">float tile</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00013">MeshPassParam.cs:13</a></div></div>
+<div class="ttc" id="aclassRenderParam_html"><div class="ttname"><a href="classRenderParam.html">RenderParam</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00004">RenderParam.cs:5</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a18f34f005da6c0978f96568dac3018da"><div class="ttname"><a href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">RenderRow.sources</a></div><div class="ttdeci">SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00125">RenderRow.cs:126</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a92b1a12f2812bb1c486ce1b23ce093c9"><div class="ttname"><a href="classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9">RenderRow.tileType</a></div><div class="ttdeci">TileType tileType</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00504">RenderRow.cs:504</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00441">RenderRow.cs:441</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aea949f00c2d71b1a2065f925193da56d"><div class="ttname"><a href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">RenderRow.colorMod</a></div><div class="ttdeci">int colorMod</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00445">RenderRow.cs:445</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html"><div class="ttname"><a href="classSourceBlock_1_1Row.html">SourceBlock.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00107">SourceBlock.cs:108</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html_ae19ea28f622bb36d484b4e6c57aaf776"><div class="ttname"><a href="classSourceBlock_1_1Row.html#ae19ea28f622bb36d484b4e6c57aaf776">SourceBlock.Row.sourceAutoFloor</a></div><div class="ttdeci">SourceFloor.Row sourceAutoFloor</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00184">SourceBlock.cs:184</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6bbe3e57f372109d0661eb0872cf590e"><div class="ttname"><a href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">SourceManager.blocks</a></div><div class="ttdeci">SourceBlock blocks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00177">SourceManager.cs:177</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a5e7c206e9fce423fd682390fdf51c012"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a5e7c206e9fce423fd682390fdf51c012">SourceMaterial.Row.defBlock</a></div><div class="ttdeci">int defBlock</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00397">SourceMaterial.cs:397</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_ac134d6a3e626a2e05695b105aa708ee4"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">SourceMaterial.Row.matColor</a></div><div class="ttdeci">Color matColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00440">SourceMaterial.cs:440</a></div></div>
+<div class="ttc" id="aclassTileType_html"><div class="ttname"><a href="classTileType.html">TileType</a></div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00006">TileType.cs:7</a></div></div>
+<div class="ttc" id="aclassTileType_html_a1f57f8425c92d5b5b7bac21cac1f224f"><div class="ttname"><a href="classTileType.html#a1f57f8425c92d5b5b7bac21cac1f224f">TileType.HalfBlock</a></div><div class="ttdeci">static TileTypeHalfBlock HalfBlock</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00728">TileType.cs:728</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00441">RenderRow._tiles</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, <a class="el" href="RenderRow_8cs_source.html#l00445">RenderRow.colorMod</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03344">BaseTileMap.GetColorInt()</a>, <a class="el" href="TileType_8cs_source.html#l00728">TileType.HalfBlock</a>, <a class="el" href="SourceBlock_8cs_source.html#l00184">SourceBlock.Row.sourceAutoFloor</a>, <a class="el" href="RenderRow_8cs_source.html#l00126">RenderRow.sources</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00013">MeshPassParam.tile</a>, and <a class="el" href="RenderRow_8cs_source.html#l00504">RenderRow.tileType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ScreenGuide_8cs_source.html#l00031">ScreenGuide.DrawWall()</a>.</p>
 
 </div>
 </div>
@@ -386,6 +434,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">RenderRow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00146">146</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % this.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length];</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00441">RenderRow._tiles</a>.</p>
 
 </div>
 </div>
@@ -415,6 +468,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTileRow.html#a2e956f83baa2b038696bc3253a6d8b14">TileRow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00141">141</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            this.isBlockOrRamp = (this.tileType == TileType.Block || this.<a class="code hl_variable" href="classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9">tileType</a>.<a class="code hl_property" href="classTileType.html#a60ee43bbee3ec99ac75e72361f10c70f">IsRamp</a>);</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="ttc" id="aclassTileType_html_a60ee43bbee3ec99ac75e72361f10c70f"><div class="ttname"><a href="classTileType.html#a60ee43bbee3ec99ac75e72361f10c70f">TileType.IsRamp</a></div><div class="ttdeci">bool IsRamp</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00121">TileType.cs:122</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00122">TileType.IsRamp</a>, and <a class="el" href="RenderRow_8cs_source.html#l00504">RenderRow.tileType</a>.</p>
 
 </div>
 </div>
@@ -432,6 +491,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00172">172</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -561,6 +622,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00184">184</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00151">SourceBlock.Row.GetRenderParam()</a>.</p>
+
 </div>
 </div>
 <a id="a58959e65c24ae9ffe85cf63e7fea7e3b" name="a58959e65c24ae9ffe85cf63e7fea7e3b"></a>
@@ -617,7 +680,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00133">133</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_variable" href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">FallbackRenderData</a>;</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="ttc" id="aclassSourceBlock_html"><div class="ttname"><a href="classSourceBlock.html">SourceBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00004">SourceBlock.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceBlock_html_a9de65c59e76be1e9c4624c260495c1e5"><div class="ttname"><a href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">SourceBlock.FallbackRenderData</a></div><div class="ttdeci">static RenderData FallbackRenderData</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00104">SourceBlock.cs:104</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88afe00128ee7a36eb1a7eabf39ac1be" name="a88afe00128ee7a36eb1a7eabf39ac1be"></a>
@@ -641,7 +712,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00117">117</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">alias</a>;</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="ttc" id="aclassTileRow_html_aa04ce5718657608d45e983e9a3798fc6"><div class="ttname"><a href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">TileRow.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00023">TileRow.cs:23</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7c348b851ca861eed724f46320df005" name="ac7c348b851ca861eed724f46320df005"></a>
@@ -665,7 +743,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00125">125</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;b&quot;</span> + this.<span class="keywordtype">id</span>.ToString();</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a55999d008850d8d0780b0d2f74342858" name="a55999d008850d8d0780b0d2f74342858"></a>
@@ -689,16 +773,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00109">109</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceBlock.html">SourceBlock</a></li><li class="navelem"><a class="el" href="classSourceBlock_1_1Row.html">Row</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

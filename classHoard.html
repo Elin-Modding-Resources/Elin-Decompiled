@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHoard.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -243,7 +263,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00138">138</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_enumvalue" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9baa181a603769c1f98ad927e7367c7aa51">all</a>,</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_enumvalue" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9bad877c55797fd430ce8150363cd86058f">lux</a>,</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_enumvalue" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9ba0c821f675f132d790b3f25e79da739a7">junk</a></div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9ba0c821f675f132d790b3f25e79da739a7"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9ba0c821f675f132d790b3f25e79da739a7">Hoard.Mode.junk</a></div><div class="ttdeci">@ junk</div></div>
+<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9baa181a603769c1f98ad927e7367c7aa51"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9baa181a603769c1f98ad927e7367c7aa51">Hoard.Mode.all</a></div><div class="ttdeci">@ all</div></div>
+<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9bad877c55797fd430ce8150363cd86058f"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9bad877c55797fd430ce8150363cd86058f">Hoard.Mode.lux</a></div><div class="ttdeci">@ lux</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -272,6 +300,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00033">33</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classSourceCollectible_1_1Row.html">SourceCollectible.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.map[id];</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> num = (row.num == 0) ? 10 : row.<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#a9c93c9de2b95e4d2c2d6f67ea251f99a">num</a>;</div>
+<div class="line"><span class="lineno">   37</span>        if (num != 1)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            num *= 2;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classHoard_1_1Item.html">Hoard.Item</a> item = this.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(row.<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#ad6f26015541e36f97ae9f8a464f161ba">id</a>, num, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   42</span>        item.random = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassHoard_1_1Item_html"><div class="ttname"><a href="classHoard_1_1Item.html">Hoard.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00145">Hoard.cs:146</a></div></div>
+<div class="ttc" id="aclassHoard_html_a4d409da45d77758904209a9a9c5ade99"><div class="ttname"><a href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Hoard.Add</a></div><div class="ttdeci">Hoard.Item Add(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00033">Hoard.cs:33</a></div></div>
+<div class="ttc" id="aclassSourceCollectible_1_1Row_html"><div class="ttname"><a href="classSourceCollectible_1_1Row.html">SourceCollectible.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00029">SourceCollectible.cs:30</a></div></div>
+<div class="ttc" id="aclassSourceCollectible_1_1Row_html_a9c93c9de2b95e4d2c2d6f67ea251f99a"><div class="ttname"><a href="classSourceCollectible_1_1Row.html#a9c93c9de2b95e4d2c2d6f67ea251f99a">SourceCollectible.Row.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00057">SourceCollectible.cs:57</a></div></div>
+<div class="ttc" id="aclassSourceCollectible_1_1Row_html_ad6f26015541e36f97ae9f8a464f161ba"><div class="ttname"><a href="classSourceCollectible_1_1Row.html#ad6f26015541e36f97ae9f8a464f161ba">SourceCollectible.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00047">SourceCollectible.cs:47</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a4bf87f219cdfb7f4da20de5e3d14852b"><div class="ttname"><a href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">SourceManager.collectibles</a></div><div class="ttdeci">SourceCollectible collectibles</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00207">SourceManager.cs:207</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00033">Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, <a class="el" href="SourceCollectible_8cs_source.html#l00047">SourceCollectible.Row.id</a>, <a class="el" href="SourceCollectible_8cs_source.html#l00057">SourceCollectible.Row.num</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Hoard_8cs_source.html#l00033">Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00019">AddRandom()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00147">LayerHoard.Generate()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00015">LayerCollectible.OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00161">LayerHoard.OnClickClear()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
 
 </div>
 </div>
@@ -316,6 +367,51 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00046">46</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.TryGetValue(<span class="keywordtype">id</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_class" href="classHoard_1_1Item.html">Hoard.Item</a> item = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.TryGetValue(<span class="keywordtype">id</span>, out item))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            item = <span class="keyword">new</span> <a class="code hl_class" href="classHoard_1_1Item.html">Hoard.Item</a></div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordtype">id</span> = <span class="keywordtype">id</span></div>
+<div class="line"><span class="lineno">   58</span>            };</div>
+<div class="line"><span class="lineno">   59</span>            this.<a class="code hl_variable" href="classHoard.html#a99f5173ab9f7098bb75bdbc19c897496">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">   60</span>            this.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>[id] = item;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (item.num == item.show)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            item.show += num;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        item.num += num;</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (item.IsUnique &amp;&amp; item.show &gt; 1)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            item.show = 1;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (msg)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">SetColor</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_function" href="classColorProfile.html#ab00647b204c84d3d7d248b2ed7ad2b0e">GetRarityColor</a>(item.Source.rarity, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a3cc599ee5c746c98cc7dd10bc74f4736">AquireItem</a>(item.Name(num));</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoard.html#aa9cae0bfaa45270f07466ee2616fece4">hentai</a>)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            item.show = item.num;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassColorProfile_html_ab00647b204c84d3d7d248b2ed7ad2b0e"><div class="ttname"><a href="classColorProfile.html#ab00647b204c84d3d7d248b2ed7ad2b0e">ColorProfile.GetRarityColor</a></div><div class="ttdeci">Color GetRarityColor(int r, bool light=false)</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00035">ColorProfile.cs:35</a></div></div>
+<div class="ttc" id="aclassEClass_html_a0803a3f94e106e7d65031cb5c9f23ebe"><div class="ttname"><a href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">EClass.Colors</a></div><div class="ttdeci">static ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00127">EClass.cs:128</a></div></div>
+<div class="ttc" id="aclassHoard_html_a10058610034de8b461710c6df53d31b4"><div class="ttname"><a href="classHoard.html#a10058610034de8b461710c6df53d31b4">Hoard.items</a></div><div class="ttdeci">Dictionary&lt; string, Hoard.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00104">Hoard.cs:104</a></div></div>
+<div class="ttc" id="aclassHoard_html_a99f5173ab9f7098bb75bdbc19c897496"><div class="ttname"><a href="classHoard.html#a99f5173ab9f7098bb75bdbc19c897496">Hoard.list</a></div><div class="ttdeci">List&lt; Hoard.Item &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00107">Hoard.cs:107</a></div></div>
+<div class="ttc" id="aclassHoard_html_aa9cae0bfaa45270f07466ee2616fece4"><div class="ttname"><a href="classHoard.html#aa9cae0bfaa45270f07466ee2616fece4">Hoard.hentai</a></div><div class="ttdeci">bool hentai</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00136">Hoard.cs:136</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_a3cc599ee5c746c98cc7dd10bc74f4736"><div class="ttname"><a href="classMsg.html#a3cc599ee5c746c98cc7dd10bc74f4736">Msg.AquireItem</a></div><div class="ttdeci">static void AquireItem(string itemName)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00152">Msg.cs:152</a></div></div>
+<div class="ttc" id="aclassMsg_html_afb750c35eea77e527ebbe43d7fb085ef"><div class="ttname"><a href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">Msg.SetColor</a></div><div class="ttdeci">static void SetColor()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00031">Msg.cs:31</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00152">Msg.AquireItem()</a>, <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, <a class="el" href="ColorProfile_8cs_source.html#l00035">ColorProfile.GetRarityColor()</a>, <a class="el" href="Hoard_8cs_source.html#l00136">hentai</a>, <a class="el" href="Hoard_8cs_source.html#l00208">Hoard.Item.IsUnique</a>, <a class="el" href="Hoard_8cs_source.html#l00104">items</a>, <a class="el" href="Hoard_8cs_source.html#l00107">list</a>, <a class="el" href="Hoard_8cs_source.html#l00227">Hoard.Item.Name()</a>, <a class="el" href="Hoard_8cs_source.html#l00148">Hoard.Item.num</a>, <a class="el" href="Msg_8cs_source.html#l00031">Msg.SetColor()</a>, <a class="el" href="Hoard_8cs_source.html#l00160">Hoard.Item.show</a>, and <a class="el" href="Hoard_8cs_source.html#l00196">Hoard.Item.Source</a>.</p>
 
 </div>
 </div>
@@ -344,6 +440,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00027">27</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.rows.RandomItem&lt;<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a>&gt;().<span class="keywordtype">id</span>;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="keywordtype">id</span>, 1, msg);</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassSourceCollectible_html"><div class="ttname"><a href="classSourceCollectible.html">SourceCollectible</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00003">SourceCollectible.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00033">Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -382,6 +485,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00019">19</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        IEnumerable&lt;<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a>&gt; ie = from a in EClass.sources.collectibles.rows</div>
+<div class="line"><span class="lineno">   22</span>        where a.rarity == r</div>
+<div class="line"><span class="lineno">   23</span>        select a;</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(ie.RandomItem&lt;<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a>&gt;().<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#ad6f26015541e36f97ae9f8a464f161ba">id</a>, 1, msg);</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00033">Add()</a>, and <a class="el" href="SourceCollectible_8cs_source.html#l00047">SourceCollectible.Row.id</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -409,6 +522,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00098">98</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        this.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.Clear();</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_variable" href="classHoard.html#a99f5173ab9f7098bb75bdbc19c897496">list</a>.Clear();</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00104">items</a>, and <a class="el" href="Hoard_8cs_source.html#l00107">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00147">LayerHoard.Generate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00161">LayerHoard.OnClickClear()</a>.</p>
 
 </div>
 </div>
@@ -437,6 +558,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00089">89</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.Init();</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_class" href="classSourceCollectible_1_1Row.html">SourceCollectible.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.map[id];</div>
+<div class="line"><span class="lineno">   93</span>        SpriteRenderer spriteRenderer = UnityEngine.Object.Instantiate&lt;SpriteRenderer&gt;(ResourceCache.Load&lt;SpriteRenderer&gt;(<span class="stringliteral">&quot;UI/Layer/Hoard/Molds/&quot;</span> + row.<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#a4127063c56d1590942f1d882eb467f9f">prefab</a>.IsEmpty(<span class="stringliteral">&quot;default&quot;</span>)));</div>
+<div class="line"><span class="lineno">   94</span>        spriteRenderer.sprite = this.<a class="code hl_function" href="classHoard.html#ac05dee0306b7e1bcd1a1e0a11fd5ba25">GetSprite</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> spriteRenderer.gameObject;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aclassHoard_html_ac05dee0306b7e1bcd1a1e0a11fd5ba25"><div class="ttname"><a href="classHoard.html#ac05dee0306b7e1bcd1a1e0a11fd5ba25">Hoard.GetSprite</a></div><div class="ttdeci">Sprite GetSprite(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00083">Hoard.cs:83</a></div></div>
+<div class="ttc" id="aclassSourceCollectible_1_1Row_html_a4127063c56d1590942f1d882eb467f9f"><div class="ttname"><a href="classSourceCollectible_1_1Row.html#a4127063c56d1590942f1d882eb467f9f">SourceCollectible.Row.prefab</a></div><div class="ttdeci">string prefab</div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00055">SourceCollectible.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, <a class="el" href="Hoard_8cs_source.html#l00083">GetSprite()</a>, <a class="el" href="SourceCollectible_8cs_source.html#l00055">SourceCollectible.Row.prefab</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>.</p>
 
 </div>
 </div>
@@ -465,6 +599,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00083">83</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        SpriteSheet.Add(<span class="stringliteral">&quot;UI/Layer/Hoard/Molds/_sprites_hoard&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> SpriteSheet.Get(<span class="stringliteral">&quot;_sprites_hoard_&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Hoard_8cs_source.html#l00089">GetActor()</a>, <a class="el" href="UIHangIcon_8cs_source.html#l00056">UIHangIcon.Refresh()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00099">LayerCollectible.RefreshInfo()</a>, and <a class="el" href="LayerCollectible_8cs_source.html#l00086">LayerCollectible.SetButton()</a>.</p>
 
 </div>
 </div>
@@ -493,6 +633,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00011">11</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_class" href="classHoard_1_1Item.html">Item</a> item in <span class="keyword">this</span>.list)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            this.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.Add(item.id, item);</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00008">Hoard.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00104">items</a>.</p>
 
 </div>
 </div>
@@ -527,6 +676,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00136">136</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Hoard_8cs_source.html#l00046">Add()</a>.</p>
+
 </div>
 </div>
 <a id="af1b627603e955249f9820f0f2fa915b1" name="af1b627603e955249f9820f0f2fa915b1"></a>
@@ -542,6 +693,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00125">125</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.OnCollisionEnter2D()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
 
 </div>
 </div>
@@ -559,6 +712,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00104">104</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, <a class="el" href="Hoard_8cs_source.html#l00046">Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00098">Clear()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00015">LayerCollectible.OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">LayerHoard.OnAfterInit()</a>, <a class="el" href="Hoard_8cs_source.html#l00011">OnDeserialized()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00024">LayerCollectible.Refresh()</a>, and <a class="el" href="UIHangIcon_8cs_source.html#l00056">UIHangIcon.Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a99f5173ab9f7098bb75bdbc19c897496" name="a99f5173ab9f7098bb75bdbc19c897496"></a>
@@ -574,6 +729,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00107">107</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Hoard_8cs_source.html#l00046">Add()</a>, and <a class="el" href="Hoard_8cs_source.html#l00098">Clear()</a>.</p>
 
 </div>
 </div>
@@ -591,6 +748,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00119">119</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.OnCollisionEnter2D()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a96dbfa632bb1cef5c6d038035aa19d54" name="a96dbfa632bb1cef5c6d038035aa19d54"></a>
@@ -606,6 +765,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00110">110</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00168">LayerHoard.OnClickNextMode()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00045">LayerHoard.Reset()</a>.</p>
 
 </div>
 </div>
@@ -623,6 +784,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00134">134</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00570">HoardActor.RefreshZoom()</a>.</p>
+
 </div>
 </div>
 <a id="a14ed19f37de12dc8fac23f0517b0d2a2" name="a14ed19f37de12dc8fac23f0517b0d2a2"></a>
@@ -638,6 +801,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00116">116</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00605">HoardActor.RefreshBG()</a>.</p>
 
 </div>
 </div>
@@ -655,6 +820,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00128">128</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.OnCollisionEnter2D()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a48ebae85bb650431db04296ee5a9a905" name="a48ebae85bb650431db04296ee5a9a905"></a>
@@ -670,6 +837,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00130">130</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">HoardActor.Update()</a>.</p>
 
 </div>
 </div>
@@ -687,6 +856,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00132">132</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>.</p>
+
 </div>
 </div>
 <a id="af86a25e23e0e20d6312b8d73c2d8d0f6" name="af86a25e23e0e20d6312b8d73c2d8d0f6"></a>
@@ -703,15 +874,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Hoard_8cs_source.html#l00122">122</a> of file <a class="el" href="Hoard_8cs_source.html">Hoard.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.OnCollisionEnter2D()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00024">CollectibleActor.PlaySound()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Hoard_8cs_source.html">Hoard.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHoard.html">Hoard</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

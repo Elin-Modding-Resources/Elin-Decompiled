@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classItemQuestTracker.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -194,6 +214,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00087">87</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a00e241b660fe2a5517062ab370ff4cd1">items</a>.Remove(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   94</span>        UnityEngine.Object.DestroyImmediate(base.gameObject);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00005">WidgetQuestTracker.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a00e241b660fe2a5517062ab370ff4cd1"><div class="ttname"><a href="classWidgetQuestTracker.html#a00e241b660fe2a5517062ab370ff4cd1">WidgetQuestTracker.items</a></div><div class="ttdeci">List&lt; ItemQuestTracker &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00103">WidgetQuestTracker.cs:103</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a4342d71955ad4c1dac6c898f2e686435"><div class="ttname"><a href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">WidgetQuestTracker.Instance</a></div><div class="ttdeci">static WidgetQuestTracker Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.cs:101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.Instance</a>, and <a class="el" href="WidgetQuestTracker_8cs_source.html#l00103">WidgetQuestTracker.items</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00068">OnClickClose()</a>, and <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -221,6 +256,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00068">68</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerJournal.html">LayerJournal</a>&gt;(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        this.quest.track = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   75</span>        this.<a class="code hl_function" href="classItemQuestTracker.html#a05d587f7b91caf599eaf420995cd64c7">Kill</a>();</div>
+<div class="line"><span class="lineno">   76</span>        SE.Trash();</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a> is <a class="code hl_class" href="classQuestTrackCraft.html">QuestTrackCraft</a>)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#a88f3254faeb7458eea94753c61a98862">Remove</a>(this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>);</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>.<a class="code hl_function" href="classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b">RefreshTrackButton</a>();</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00006">EMono.cs:7</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a05d587f7b91caf599eaf420995cd64c7"><div class="ttname"><a href="classItemQuestTracker.html#a05d587f7b91caf599eaf420995cd64c7">ItemQuestTracker.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00087">ItemQuestTracker.cs:87</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a0c61c50f219c065f62681db6484a1bd0"><div class="ttname"><a href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">ItemQuestTracker.quest</a></div><div class="ttdeci">Quest quest</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00103">ItemQuestTracker.cs:103</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html"><div class="ttname"><a href="classLayerCraft.html">LayerCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00007">LayerCraft.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a12e4d944e822dfcfdc7c12313dc8417f"><div class="ttname"><a href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">LayerCraft.Instance</a></div><div class="ttdeci">static LayerCraft Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00478">LayerCraft.cs:478</a></div></div>
+<div class="ttc" id="aclassLayerCraft_html_a5a28595a37cd8246266cacb2db8dfa2b"><div class="ttname"><a href="classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b">LayerCraft.RefreshTrackButton</a></div><div class="ttdeci">void RefreshTrackButton()</div><div class="ttdef"><b>Definition:</b> <a href="LayerCraft_8cs_source.html#l00373">LayerCraft.cs:373</a></div></div>
+<div class="ttc" id="aclassLayerJournal_html"><div class="ttname"><a href="classLayerJournal.html">LayerJournal</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerJournal_8cs_source.html#l00003">LayerJournal.cs:4</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a88f3254faeb7458eea94753c61a98862"><div class="ttname"><a href="classQuestManager.html#a88f3254faeb7458eea94753c61a98862">QuestManager.Remove</a></div><div class="ttdeci">void Remove(Quest q)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00063">QuestManager.cs:63</a></div></div>
+<div class="ttc" id="aclassQuestTrackCraft_html"><div class="ttname"><a href="classQuestTrackCraft.html">QuestTrackCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestTrackCraft_8cs_source.html#l00005">QuestTrackCraft.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="LayerCraft_8cs_source.html#l00478">LayerCraft.Instance</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00087">Kill()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00103">quest</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="LayerCraft_8cs_source.html#l00373">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="QuestManager_8cs_source.html#l00063">QuestManager.Remove()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -248,6 +314,98 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>.<a class="code hl_variable" href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">track</a> || !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>.Contains(<span class="keyword">this</span>.quest))</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            this.<a class="code hl_function" href="classItemQuestTracker.html#a05d587f7b91caf599eaf420995cd64c7">Kill</a>();</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.Clear();</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>.<a class="code hl_variable" href="classQuest.html#a4cca13714da20fa2a37a597f23a0e0a8">deadline</a> &gt; 0 &amp;&amp; !<span class="keyword">this</span>.quest.UseInstanceZone)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.Append(<span class="stringliteral">&quot;- &quot;</span> + <span class="stringliteral">&quot;days1&quot;</span>.lang() + this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>.<a class="code hl_property" href="classQuest.html#a3545a8531e7050e47defad5784549ede">TextDeadline</a>);</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.Append(Environment.NewLine);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">string</span> value = this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>.<a class="code hl_function" href="classQuest.html#a4c122f6e2407f2531daf9e7bd75156b3">GetTrackerText</a>().TrimEnd(Environment.NewLine.ToCharArray());</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.Append(value);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">bool</span> enable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a> is <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a> questDeliver = this.quest as <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a>;</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!questDeliver.<a class="code hl_property" href="classQuestDestZone.html#a95cd2d4de1d2eaeb9953b51dd0b732c4">IsDeliver</a> || <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a> == questDeliver.<a class="code hl_property" href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">DestZone</a>)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <a class="code hl_class" href="classItemQuestTracker.html">ItemQuestTracker</a>.&lt;&gt;c__DisplayClass7_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classItemQuestTracker.html">ItemQuestTracker</a>.&lt;&gt;c__DisplayClass7_0();</div>
+<div class="line"><span class="lineno">   28</span>                <a class="code hl_class" href="classItemQuestTracker.html">ItemQuestTracker</a>.&lt;&gt;c__DisplayClass7_0 CS$&lt;&gt;8__locals2 = CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">   29</span>                <a class="code hl_class" href="classMap.html">Map</a> map = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>;</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordtype">int</span> uid;</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">if</span> (!questDeliver.<a class="code hl_property" href="classQuestDestZone.html#a95cd2d4de1d2eaeb9953b51dd0b732c4">IsDeliver</a>)</div>
+<div class="line"><span class="lineno">   32</span>                {</div>
+<div class="line"><span class="lineno">   33</span>                    <a class="code hl_class" href="classChara.html">Chara</a> chara = questDeliver.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>;</div>
+<div class="line"><span class="lineno">   34</span>                    uid = ((chara != <span class="keyword">null</span>) ? chara.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a> : 0);</div>
+<div class="line"><span class="lineno">   35</span>                }</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>                {</div>
+<div class="line"><span class="lineno">   38</span>                    uid = questDeliver.<a class="code hl_variable" href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">uidTarget</a>;</div>
+<div class="line"><span class="lineno">   39</span>                }</div>
+<div class="line"><span class="lineno">   40</span>                CS$&lt;&gt;8__locals2.tg = map.<a class="code hl_function" href="classMap.html#a12e741633a9867a460ce372592e59b3a">FindChara</a>(uid);</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.tg != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    enable = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>                    this.<a class="code hl_variable" href="classItemQuestTracker.html#a0966814ad8bd409bea458d03283998fc">buttonGoto</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   45</span>                    {</div>
+<div class="line"><span class="lineno">   46</span>                        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#ac3a94b99896802674865cfd6e4109e80">HasNoGoal</a>)</div>
+<div class="line"><span class="lineno">   47</span>                        {</div>
+<div class="line"><span class="lineno">   48</span>                            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   49</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   50</span>                        }</div>
+<div class="line"><span class="lineno">   51</span>                        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classChara.html#a8803bac7bbbae3b623894ad4433a430a">SetAIImmediate</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Goto.html">AI_Goto</a>(CS$&lt;&gt;8__locals1.tg, 1, <span class="keyword">false</span>, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   52</span>                    });</div>
+<div class="line"><span class="lineno">   53</span>                }</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#a0966814ad8bd409bea458d03283998fc">buttonGoto</a>.SetActive(enable);</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.Equals(<span class="keyword">this</span>.lastSb))</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        this.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   62</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#ae3ccc2c9ef004647b3e9f96a0ffd900f">textTitle</a>.SetText(this.<a class="code hl_variable" href="classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0">quest</a>.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>().TagColor(<span class="keyword">this</span>.colorTitle));</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#a8318a0648528b5130c7967865502ab53">text</a>.SetText(this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>.ToString());</div>
+<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classItemQuestTracker.html#a6af1720a0e1396f587a1ce929841340f">lastSb</a>.Set(this.<a class="code hl_variable" href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">sb</a>);</div>
+<div class="line"><span class="lineno">   65</span>        this.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassAI__Goto_html"><div class="ttname"><a href="classAI__Goto.html">AI_Goto</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Goto_8cs_source.html#l00005">AI_Goto.cs:6</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a8803bac7bbbae3b623894ad4433a430a"><div class="ttname"><a href="classChara.html#a8803bac7bbbae3b623894ad4433a430a">Chara.SetAIImmediate</a></div><div class="ttdeci">void SetAIImmediate(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07949">Chara.cs:7949</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a94b99896802674865cfd6e4109e80"><div class="ttname"><a href="classChara.html#ac3a94b99896802674865cfd6e4109e80">Chara.HasNoGoal</a></div><div class="ttdeci">bool HasNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00840">Chara.cs:841</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f5537c2acc423bdbc584f2e2a73629"><div class="ttname"><a href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">EMono._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00046">EMono.cs:47</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html"><div class="ttname"><a href="classItemQuestTracker.html">ItemQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00004">ItemQuestTracker.cs:5</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a0966814ad8bd409bea458d03283998fc"><div class="ttname"><a href="classItemQuestTracker.html#a0966814ad8bd409bea458d03283998fc">ItemQuestTracker.buttonGoto</a></div><div class="ttdeci">UIButton buttonGoto</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00109">ItemQuestTracker.cs:109</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a6af1720a0e1396f587a1ce929841340f"><div class="ttname"><a href="classItemQuestTracker.html#a6af1720a0e1396f587a1ce929841340f">ItemQuestTracker.lastSb</a></div><div class="ttdeci">FastString lastSb</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00099">ItemQuestTracker.cs:99</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a75f902b66b3f4650e8564ba19cb948d1"><div class="ttname"><a href="classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1">ItemQuestTracker.sb</a></div><div class="ttdeci">FastString sb</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00097">ItemQuestTracker.cs:97</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_a8318a0648528b5130c7967865502ab53"><div class="ttname"><a href="classItemQuestTracker.html#a8318a0648528b5130c7967865502ab53">ItemQuestTracker.text</a></div><div class="ttdeci">UIText text</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00105">ItemQuestTracker.cs:105</a></div></div>
+<div class="ttc" id="aclassItemQuestTracker_html_ae3ccc2c9ef004647b3e9f96a0ffd900f"><div class="ttname"><a href="classItemQuestTracker.html#ae3ccc2c9ef004647b3e9f96a0ffd900f">ItemQuestTracker.textTitle</a></div><div class="ttdeci">UIText textTitle</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuestTracker_8cs_source.html#l00107">ItemQuestTracker.cs:107</a></div></div>
+<div class="ttc" id="aclassMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00013">Map.cs:14</a></div></div>
+<div class="ttc" id="aclassMap_html_a12e741633a9867a460ce372592e59b3a"><div class="ttname"><a href="classMap.html#a12e741633a9867a460ce372592e59b3a">Map.FindChara</a></div><div class="ttdeci">Chara FindChara(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02623">Map.cs:2623</a></div></div>
+<div class="ttc" id="aclassPerson_html_af1c76454a0f955a04399ee141036afae"><div class="ttname"><a href="classPerson.html#af1c76454a0f955a04399ee141036afae">Person.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00016">Person.cs:17</a></div></div>
+<div class="ttc" id="aclassQuestDeliver_html"><div class="ttname"><a href="classQuestDeliver.html">QuestDeliver</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDeliver_8cs_source.html#l00006">QuestDeliver.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_a7020485ece1446f85ce13cbaca879673"><div class="ttname"><a href="classQuestDestZone.html#a7020485ece1446f85ce13cbaca879673">QuestDestZone.uidTarget</a></div><div class="ttdeci">int uidTarget</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00081">QuestDestZone.cs:81</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_a95cd2d4de1d2eaeb9953b51dd0b732c4"><div class="ttname"><a href="classQuestDestZone.html#a95cd2d4de1d2eaeb9953b51dd0b732c4">QuestDestZone.IsDeliver</a></div><div class="ttdeci">virtual bool IsDeliver</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00006">QuestDestZone.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestDestZone_html_af47591d2f0c501395a52ab0ca16940d3"><div class="ttname"><a href="classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3">QuestDestZone.DestZone</a></div><div class="ttdeci">Zone DestZone</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00014">QuestDestZone.cs:15</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00327">QuestManager.cs:327</a></div></div>
+<div class="ttc" id="aclassQuest_html_a3545a8531e7050e47defad5784549ede"><div class="ttname"><a href="classQuest.html#a3545a8531e7050e47defad5784549ede">Quest.TextDeadline</a></div><div class="ttdeci">string TextDeadline</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00108">Quest.cs:109</a></div></div>
+<div class="ttc" id="aclassQuest_html_a3a18469ccc4028a521bb770d10beaa31"><div class="ttname"><a href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">Quest.person</a></div><div class="ttdeci">Person person</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00811">Quest.cs:811</a></div></div>
+<div class="ttc" id="aclassQuest_html_a4c122f6e2407f2531daf9e7bd75156b3"><div class="ttname"><a href="classQuest.html#a4c122f6e2407f2531daf9e7bd75156b3">Quest.GetTrackerText</a></div><div class="ttdeci">virtual string GetTrackerText()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00664">Quest.cs:664</a></div></div>
+<div class="ttc" id="aclassQuest_html_a4cca13714da20fa2a37a597f23a0e0a8"><div class="ttname"><a href="classQuest.html#a4cca13714da20fa2a37a597f23a0e0a8">Quest.deadline</a></div><div class="ttdeci">int deadline</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00784">Quest.cs:784</a></div></div>
+<div class="ttc" id="aclassQuest_html_a893e87dd377c8e47b3927cb74e0f0b38"><div class="ttname"><a href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">Quest.GetTitle</a></div><div class="ttdeci">virtual string GetTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00654">Quest.cs:654</a></div></div>
+<div class="ttc" id="aclassQuest_html_aeaa8b4d53768b7c3ecb34c0a78f17b96"><div class="ttname"><a href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">Quest.track</a></div><div class="ttdeci">bool track</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00808">Quest.cs:808</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00109">buttonGoto</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.chara</a>, <a class="el" href="Quest_8cs_source.html#l00784">Quest.deadline</a>, <a class="el" href="QuestDestZone_8cs_source.html#l00015">QuestDestZone.DestZone</a>, <a class="el" href="Map_8cs_source.html#l02623">Map.FindChara()</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Quest_8cs_source.html#l00654">Quest.GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00664">Quest.GetTrackerText()</a>, <a class="el" href="Chara_8cs_source.html#l00841">Chara.HasNoGoal</a>, <a class="el" href="QuestDestZone_8cs_source.html#l00007">QuestDestZone.IsDeliver</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00087">Kill()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00099">lastSb</a>, <a class="el" href="QuestManager_8cs_source.html#l00327">QuestManager.list</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Quest_8cs_source.html#l00811">Quest.person</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00103">quest</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00097">sb</a>, <a class="el" href="Chara_8cs_source.html#l07949">Chara.SetAIImmediate()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00105">text</a>, <a class="el" href="Quest_8cs_source.html#l00109">Quest.TextDeadline</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00107">textTitle</a>, <a class="el" href="Quest_8cs_source.html#l00808">Quest.track</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, and <a class="el" href="QuestDestZone_8cs_source.html#l00081">QuestDestZone.uidTarget</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -265,6 +423,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00109">109</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -306,6 +466,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00099">99</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a0c61c50f219c065f62681db6484a1bd0" name="a0c61c50f219c065f62681db6484a1bd0"></a>
@@ -321,6 +483,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00103">103</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00068">OnClickClose()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>, and <a class="el" href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -346,6 +510,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00097">97</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a8318a0648528b5130c7967865502ab53" name="a8318a0648528b5130c7967865502ab53"></a>
@@ -361,6 +527,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00105">105</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -378,15 +546,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemQuestTracker_8cs_source.html#l00107">107</a> of file <a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemQuestTracker_8cs_source.html#l00006">Refresh()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ItemQuestTracker_8cs_source.html">ItemQuestTracker.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classItemQuestTracker.html">ItemQuestTracker</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

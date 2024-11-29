@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWorkSummary.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -215,6 +235,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00072">72</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        this.<a class="code hl_variable" href="classWorkSummary.html#a675239c31909a0134ea0f68b849f1a0e">things</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(t);</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00823">ActPlan.cs:823</a></div></div>
+<div class="ttc" id="aclassWorkSummary_html_a675239c31909a0134ea0f68b849f1a0e"><div class="ttname"><a href="classWorkSummary.html#a675239c31909a0134ea0f68b849f1a0e">WorkSummary.things</a></div><div class="ttdeci">List&lt; Thing &gt; things</div><div class="ttdef"><b>Definition:</b> <a href="WorkSummary_8cs_source.html#l00087">WorkSummary.cs:87</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00823">ActPlan.List.Add()</a>, and <a class="el" href="WorkSummary_8cs_source.html#l00087">things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AIWork_8cs_source.html#l00143">AIWork.AddDeliverable()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +271,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00067">67</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        this.progress = (this.money = (this.food = (this.knowledge = (this.material = 0))));</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -259,6 +291,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00084">84</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalWork_8cs_source.html#l00069">GoalWork.FindWork()</a>, <a class="el" href="Chara_8cs_source.html#l08170">Chara.TickWork()</a>, <a class="el" href="GoalWork_8cs_source.html#l00118">GoalWork.TryWork()</a>, and <a class="el" href="GoalWork_8cs_source.html#l00029">GoalWork.ValidateHobby()</a>.</p>
 
 </div>
 </div>
@@ -292,6 +326,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00087">87</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WorkSummary_8cs_source.html#l00072">AddThing()</a>.</p>
+
 </div>
 </div>
 <a id="a14e8853924b919396a5c421cddcb797e" name="a14e8853924b919396a5c421cddcb797e"></a>
@@ -307,6 +343,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00081">81</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIHomeInfo_8cs_source.html#l00244">UIHomeInfo.RefreshReport()</a>, and <a class="el" href="Chara_8cs_source.html#l08170">Chara.TickWork()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +370,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00031">31</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[6];</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[6] = value;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassWorkSummary_html_a8ad8f60e1907d3110ef8c110b165e447"><div class="ttname"><a href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">WorkSummary.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="WorkSummary_8cs_source.html#l00078">WorkSummary.cs:78</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a93b0a2ba12095d6d14d71af51bf43967" name="a93b0a2ba12095d6d14d71af51bf43967"></a>
@@ -356,7 +405,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00043">43</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[7];</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[7] = value;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17ca6012ba317ef97df9b93ad05a3cdc" name="a17ca6012ba317ef97df9b93ad05a3cdc"></a>
@@ -380,7 +439,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00055">55</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[8];</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[8] = value;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a60ed3f417a2ffd2ff42fa31c5be8713a" name="a60ed3f417a2ffd2ff42fa31c5be8713a"></a>
@@ -404,7 +473,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00019">19</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[5];</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[5] = value;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7bfe87e2f8a9df9c9729a7dcc96ce577" name="a7bfe87e2f8a9df9c9729a7dcc96ce577"></a>
@@ -428,6 +507,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WorkSummary_8cs_source.html#l00007">7</a> of file <a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[0];</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            this.<a class="code hl_variable" href="classWorkSummary.html#a8ad8f60e1907d3110ef8c110b165e447">ints</a>[0] = value;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Expedition_8cs_source.html#l00088">Expedition.End()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +526,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="WorkSummary_8cs_source.html">WorkSummary.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWorkSummary.html">WorkSummary</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

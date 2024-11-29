@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerSkinDeco.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -218,6 +238,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00147">147</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        actor.image.raycastTarget = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  150</span>        actor.transform.SetParent(base.transform, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  151</span>        UIDragPanel uidragPanel = actor.gameObject.AddComponent&lt;UIDragPanel&gt;();</div>
+<div class="line"><span class="lineno">  152</span>        uidragPanel.target = actor.Rect();</div>
+<div class="line"><span class="lineno">  153</span>        uidragPanel.bound = actor.Rect();</div>
+<div class="line"><span class="lineno">  154</span>        uidragPanel.clamp = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00038">OnUpdateInput()</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00028">SetWidget()</a>.</p>
 
 </div>
 </div>
@@ -245,7 +275,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        base.OnInit();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a66b5f52af3b8c5f7b40d7b2fdf23adda" name="a66b5f52af3b8c5f7b40d7b2fdf23adda"></a>
@@ -272,6 +305,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00157">157</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.transform.SetParent(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.transform, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">foreach</span> (SkinDeco skinDeco <span class="keywordflow">in</span> this.<a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>)</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            SkinDecoActor actor = skinDeco.actor;</div>
+<div class="line"><span class="lineno">  163</span>            actor.image.raycastTarget = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  164</span>            UnityEngine.Object.DestroyImmediate(actor.gameObject.GetComponent&lt;UIDragPanel&gt;());</div>
+<div class="line"><span class="lineno">  165</span>            actor.transform.SetParent(this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.transform, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  166</span>            skinDeco.x = (int)actor.Rect().anchoredPosition.x;</div>
+<div class="line"><span class="lineno">  167</span>            skinDeco.y = (int)actor.Rect().anchoredPosition.y;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerSkinDeco_html_a19d04415c274f56beb270b9d0364563d"><div class="ttname"><a href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">LayerSkinDeco.widget</a></div><div class="ttdeci">Widget widget</div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00172">LayerSkinDeco.cs:172</a></div></div>
+<div class="ttc" id="aclassLayerSkinDeco_html_ab0da6c64afe040f78bcf1711a095a101"><div class="ttname"><a href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">LayerSkinDeco.decos</a></div><div class="ttdeci">List&lt; SkinDeco &gt; decos</div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00007">LayerSkinDeco.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerSkinDeco_8cs_source.html#l00008">decos</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00172">widget</a>.</p>
 
 </div>
 </div>
@@ -299,6 +350,122 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (EInput.leftMouse.clicked)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (EInput.leftMouse.dragging)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            SkinDecoActor selected = InputModuleEX.GetComponentOf&lt;SkinDecoActor&gt;();</div>
+<div class="line"><span class="lineno">   47</span>            Vector3 clickPos = Input.mousePosition;</div>
+<div class="line"><span class="lineno">   48</span>            UIContextMenu m = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenu(<span class="stringliteral">&quot;ContextMenu&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (selected)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                SkinDeco deco = selected.owner;</div>
+<div class="line"><span class="lineno">   52</span>                Action&lt;PickerState, Color&gt; &lt;&gt;9__9;</div>
+<div class="line"><span class="lineno">   53</span>                m.AddButton(<span class="stringliteral">&quot;editColor&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">   56</span>                    <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = deco.color;</div>
+<div class="line"><span class="lineno">   57</span>                    <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> white = <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
+<div class="line"><span class="lineno">   58</span>                    Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__9) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>                    {</div>
+<div class="line"><span class="lineno">   61</span>                        onChangeColor = (&lt;&gt;9__9 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">   62</span>                        {</div>
+<div class="line"><span class="lineno">   63</span>                            deco.color = _c;</div>
+<div class="line"><span class="lineno">   64</span>                            selected.Refresh();</div>
+<div class="line"><span class="lineno">   65</span>                        });</div>
+<div class="line"><span class="lineno">   66</span>                    }</div>
+<div class="line"><span class="lineno">   67</span>                    layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(color, white, onChangeColor);</div>
+<div class="line"><span class="lineno">   68</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   69</span>                m.AddButton(<span class="stringliteral">&quot;bringToTop&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   70</span>                {</div>
+<div class="line"><span class="lineno">   71</span>                    this.<a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>.Remove(deco);</div>
+<div class="line"><span class="lineno">   72</span>                    this.<a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>.Add(deco);</div>
+<div class="line"><span class="lineno">   73</span>                    selected.transform.SetAsLastSibling();</div>
+<div class="line"><span class="lineno">   74</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   75</span>                m.AddSlider(<span class="stringliteral">&quot;rotation&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; (n * 45f).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)deco.rz, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    deco.rz = (int)a;</div>
+<div class="line"><span class="lineno">   78</span>                    selected.Refresh();</div>
+<div class="line"><span class="lineno">   79</span>                }, 0f, 7f, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   80</span>                m.AddSlider(<span class="stringliteral">&quot;size&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)Mathf.Abs(deco.sx), delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   81</span>                {</div>
+<div class="line"><span class="lineno">   82</span>                    deco.sx = (int)a * ((deco.sx &gt; 0) ? 1 : -1);</div>
+<div class="line"><span class="lineno">   83</span>                    deco.sy = (int)a * ((deco.sy &gt; 0) ? 1 : -1);</div>
+<div class="line"><span class="lineno">   84</span>                    selected.Refresh();</div>
+<div class="line"><span class="lineno">   85</span>                }, 10f, 400f, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   86</span>                m.AddToggle(<span class="stringliteral">&quot;shadow&quot;</span>, deco.shadow, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   87</span>                {</div>
+<div class="line"><span class="lineno">   88</span>                    deco.shadow = a;</div>
+<div class="line"><span class="lineno">   89</span>                    selected.Refresh();</div>
+<div class="line"><span class="lineno">   90</span>                });</div>
+<div class="line"><span class="lineno">   91</span>                m.AddToggle(<span class="stringliteral">&quot;reverse&quot;</span>, deco.reverse, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   92</span>                {</div>
+<div class="line"><span class="lineno">   93</span>                    deco.reverse = a;</div>
+<div class="line"><span class="lineno">   94</span>                    selected.Refresh();</div>
+<div class="line"><span class="lineno">   95</span>                });</div>
+<div class="line"><span class="lineno">   96</span>                m.AddButton(<span class="stringliteral">&quot;removeDeco&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   97</span>                {</div>
+<div class="line"><span class="lineno">   98</span>                    this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.<a class="code hl_function" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a>(selected.owner);</div>
+<div class="line"><span class="lineno">   99</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  100</span>            }</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                UIContextMenu parent = m.AddChild(<span class="stringliteral">&quot;addDeco&quot;</span>);</div>
+<div class="line"><span class="lineno">  104</span>                UIList uilist = Util.Instantiate&lt;UIList&gt;(<span class="stringliteral">&quot;UI/Element/List/ListImageGrid&quot;</span>, parent);</div>
+<div class="line"><span class="lineno">  105</span>                BaseList baseList = uilist;</div>
+<div class="line"><span class="lineno">  106</span>                UIList.Callback&lt;Sprite, UIButton&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;Sprite, UIButton&gt;();</div>
+<div class="line"><span class="lineno">  107</span>                callback.onInstantiate = delegate(Sprite a, UIButton _b)</div>
+<div class="line"><span class="lineno">  108</span>                {</div>
+<div class="line"><span class="lineno">  109</span>                    _b.icon.sprite = a;</div>
+<div class="line"><span class="lineno">  110</span>                };</div>
+<div class="line"><span class="lineno">  111</span>                callback.onClick = delegate(Sprite a, UIButton _b)</div>
+<div class="line"><span class="lineno">  112</span>                {</div>
+<div class="line"><span class="lineno">  113</span>                    SkinDeco skinDeco = <span class="keyword">new</span> SkinDeco</div>
+<div class="line"><span class="lineno">  114</span>                    {</div>
+<div class="line"><span class="lineno">  115</span>                        sx = 100,</div>
+<div class="line"><span class="lineno">  116</span>                        sy = 100,</div>
+<div class="line"><span class="lineno">  117</span>                        color = Color.white</div>
+<div class="line"><span class="lineno">  118</span>                    };</div>
+<div class="line"><span class="lineno">  119</span>                    skinDeco.id = <span class="keywordtype">int</span>.Parse(a.name.Remove(0, 4));</div>
+<div class="line"><span class="lineno">  120</span>                    this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.<a class="code hl_function" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a>(skinDeco);</div>
+<div class="line"><span class="lineno">  121</span>                    SkinDecoActor actor = skinDeco.actor;</div>
+<div class="line"><span class="lineno">  122</span>                    this.<a class="code hl_function" href="classLayerSkinDeco.html#a27801be629c0c92ae369790cf75d6c8f">Activate</a>(actor);</div>
+<div class="line"><span class="lineno">  123</span>                    actor.transform.position = clickPos;</div>
+<div class="line"><span class="lineno">  124</span>                    EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">  125</span>                    m.Hide();</div>
+<div class="line"><span class="lineno">  126</span>                };</div>
+<div class="line"><span class="lineno">  127</span>                baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">foreach</span> (Sprite o <span class="keywordflow">in</span> Resources.LoadAll&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/&quot;</span>))</div>
+<div class="line"><span class="lineno">  129</span>                {</div>
+<div class="line"><span class="lineno">  130</span>                    uilist.Add(o);</div>
+<div class="line"><span class="lineno">  131</span>                }</div>
+<div class="line"><span class="lineno">  132</span>                uilist.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>            m.Show();</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (EInput.rightMouse.down)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenu(<span class="stringliteral">&quot;ContextMenu&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;quitEdit&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                this.Close();</div>
+<div class="line"><span class="lineno">  142</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  143</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html_a7bef92c42fdcfea302d10f6efbb34713"><div class="ttname"><a href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">LayerColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.cs:8</a></div></div>
+<div class="ttc" id="aclassLayerSkinDeco_html_a27801be629c0c92ae369790cf75d6c8f"><div class="ttname"><a href="classLayerSkinDeco.html#a27801be629c0c92ae369790cf75d6c8f">LayerSkinDeco.Activate</a></div><div class="ttdeci">void Activate(SkinDecoActor actor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00147">LayerSkinDeco.cs:147</a></div></div>
+<div class="ttc" id="aclassWidget_html_a0469638a88c98fa33fbc8e9d2713d404"><div class="ttname"><a href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">Widget.RemoveDeco</a></div><div class="ttdeci">void RemoveDeco(SkinDeco deco)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00461">Widget.cs:461</a></div></div>
+<div class="ttc" id="aclassWidget_html_a14d3ca9a9c9b1081dc5371a38774e640"><div class="ttname"><a href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">Widget.AddDeco</a></div><div class="ttdeci">void AddDeco(SkinDeco deco)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00455">Widget.cs:455</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerSkinDeco_8cs_source.html#l00147">Activate()</a>, <a class="el" href="Widget_8cs_source.html#l00455">Widget.AddDeco()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00008">decos</a>, <a class="el" href="Widget_8cs_source.html#l00461">Widget.RemoveDeco()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.SetColor()</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00172">widget</a>.</p>
 
 </div>
 </div>
@@ -327,6 +494,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        this.widget = _widget;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">foreach</span> (SkinDeco skinDeco <span class="keywordflow">in</span> this.<a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            this.<a class="code hl_function" href="classLayerSkinDeco.html#a27801be629c0c92ae369790cf75d6c8f">Activate</a>(skinDeco.actor);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.transform.SetParent(this.<a class="code hl_variable" href="classLayerSkinDeco.html#a43fc0d3bc4c26db429ac8a44b46b556d">widgetHolder</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassLayerSkinDeco_html_a43fc0d3bc4c26db429ac8a44b46b556d"><div class="ttname"><a href="classLayerSkinDeco.html#a43fc0d3bc4c26db429ac8a44b46b556d">LayerSkinDeco.widgetHolder</a></div><div class="ttdeci">Transform widgetHolder</div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00174">LayerSkinDeco.cs:174</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerSkinDeco_8cs_source.html#l00147">Activate()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00008">decos</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00172">widget</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00174">widgetHolder</a>.</p>
 
 </div>
 </div>
@@ -345,6 +523,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00172">172</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00157">OnKill()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00038">OnUpdateInput()</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00028">SetWidget()</a>.</p>
+
 </div>
 </div>
 <a id="a43fc0d3bc4c26db429ac8a44b46b556d" name="a43fc0d3bc4c26db429ac8a44b46b556d"></a>
@@ -360,6 +540,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00174">174</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00028">SetWidget()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +567,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.<a class="code hl_property" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a>.skin;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassWidget_html_afcf78dd50f18f1569e1c2c64e2a7d935"><div class="ttname"><a href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">Widget.config</a></div><div class="ttdeci">Widget.Config config</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00025">Widget.cs:26</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab0da6c64afe040f78bcf1711a095a101" name="ab0da6c64afe040f78bcf1711a095a101"></a>
@@ -409,6 +598,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerSkinDeco_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.<a class="code hl_property" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a>.skin.decos;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00157">OnKill()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00038">OnUpdateInput()</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00028">SetWidget()</a>.</p>
 
 </div>
 </div>
@@ -416,9 +613,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="LayerSkinDeco_8cs_source.html">LayerSkinDeco.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerSkinDeco.html">LayerSkinDeco</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

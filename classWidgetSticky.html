@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetSticky.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -362,6 +382,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00047">47</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!sticky.<a class="code hl_property" href="classBaseSticky.html#a94f5a159e57ee04049db32db16f90582">AllowMultiple</a>)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            this.<a class="code hl_variable" href="classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248">list</a>.ForeachReverse(delegate(<a class="code hl_class" href="classBaseSticky.html">BaseSticky</a> i)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (i.GetType().Equals(sticky.GetType()))</div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    this._Remove(i);</div>
+<div class="line"><span class="lineno">   56</span>                }</div>
+<div class="line"><span class="lineno">   57</span>            });</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_variable" href="classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248">list</a>.Add(sticky);</div>
+<div class="line"><span class="lineno">   60</span>        UIItem uiitem = sticky.item = Util.Instantiate&lt;UIItem&gt;(this.<a class="code hl_variable" href="classWidgetSticky.html#a0f111bb6314c8e77b744ed6f21e9740d">mold</a>, this.<a class="code hl_variable" href="classWidgetSticky.html#a43364cd20ab2a27f06ba3a63186bff30">layout</a>);</div>
+<div class="line"><span class="lineno">   61</span>        uiitem.image1.transform.parent.SetActive(sticky.<a class="code hl_property" href="classBaseSticky.html#aa73ec36d4408086ff06d6228823653fb">animate</a>);</div>
+<div class="line"><span class="lineno">   62</span>        uiitem.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   63</span>        sticky.<a class="code hl_function" href="classBaseSticky.html#a546ed368ccc9b4c383edea3f123c6fba">RefreshButton</a>();</div>
+<div class="line"><span class="lineno">   64</span>        uiitem.transform.SetAsFirstSibling();</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classWidgetSticky.html#a43364cd20ab2a27f06ba3a63186bff30">layout</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (animate)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            this.<a class="code hl_variable" href="classWidgetSticky.html#a500a7bd10ef2766f9222e68e49403a99">anime</a>.Play(uiitem.button1.transform, <span class="keyword">null</span>, -1f, 0f);</div>
+<div class="line"><span class="lineno">   69</span>            SE.Play(sticky.<a class="code hl_property" href="classBaseSticky.html#a8619b7071d39e7e6a758a23ef894d15d">idSound</a>);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassBaseSticky_html"><div class="ttname"><a href="classBaseSticky.html">BaseSticky</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00004">BaseSticky.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseSticky_html_a546ed368ccc9b4c383edea3f123c6fba"><div class="ttname"><a href="classBaseSticky.html#a546ed368ccc9b4c383edea3f123c6fba">BaseSticky.RefreshButton</a></div><div class="ttdeci">virtual void RefreshButton()</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00099">BaseSticky.cs:99</a></div></div>
+<div class="ttc" id="aclassBaseSticky_html_a8619b7071d39e7e6a758a23ef894d15d"><div class="ttname"><a href="classBaseSticky.html#a8619b7071d39e7e6a758a23ef894d15d">BaseSticky.idSound</a></div><div class="ttdeci">virtual string idSound</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00006">BaseSticky.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseSticky_html_a94f5a159e57ee04049db32db16f90582"><div class="ttname"><a href="classBaseSticky.html#a94f5a159e57ee04049db32db16f90582">BaseSticky.AllowMultiple</a></div><div class="ttdeci">virtual bool AllowMultiple</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00062">BaseSticky.cs:63</a></div></div>
+<div class="ttc" id="aclassBaseSticky_html_aa73ec36d4408086ff06d6228823653fb"><div class="ttname"><a href="classBaseSticky.html#aa73ec36d4408086ff06d6228823653fb">BaseSticky.animate</a></div><div class="ttdeci">virtual bool animate</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00022">BaseSticky.cs:23</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a0f111bb6314c8e77b744ed6f21e9740d"><div class="ttname"><a href="classWidgetSticky.html#a0f111bb6314c8e77b744ed6f21e9740d">WidgetSticky.mold</a></div><div class="ttdeci">UIItem mold</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00126">WidgetSticky.cs:126</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a167f01aca89d3c2b4a1700e7c4a33248"><div class="ttname"><a href="classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248">WidgetSticky.list</a></div><div class="ttdeci">List&lt; BaseSticky &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00122">WidgetSticky.cs:122</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a43364cd20ab2a27f06ba3a63186bff30"><div class="ttname"><a href="classWidgetSticky.html#a43364cd20ab2a27f06ba3a63186bff30">WidgetSticky.layout</a></div><div class="ttdeci">LayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00120">WidgetSticky.cs:120</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a500a7bd10ef2766f9222e68e49403a99"><div class="ttname"><a href="classWidgetSticky.html#a500a7bd10ef2766f9222e68e49403a99">WidgetSticky.anime</a></div><div class="ttdeci">Anime anime</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00128">WidgetSticky.cs:128</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseSticky_8cs_source.html#l00063">BaseSticky.AllowMultiple</a>, <a class="el" href="BaseSticky_8cs_source.html#l00023">BaseSticky.animate</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00128">anime</a>, <a class="el" href="BaseSticky_8cs_source.html#l00007">BaseSticky.idSound</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00120">layout</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00122">list</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00126">mold</a>, and <a class="el" href="BaseSticky_8cs_source.html#l00099">BaseSticky.RefreshButton()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00038">Add()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00027">Init()</a>.</p>
 
 </div>
 </div>
@@ -390,6 +447,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00073">73</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        this.<a class="code hl_variable" href="classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248">list</a>.Remove(sticky);</div>
+<div class="line"><span class="lineno">   76</span>        UnityEngine.Object.Destroy(sticky.<a class="code hl_variable" href="classBaseSticky.html#a21b6b7ab5ffe837a57d98c9eeb03c770">item</a>.gameObject);</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassBaseSticky_html_a21b6b7ab5ffe837a57d98c9eeb03c770"><div class="ttname"><a href="classBaseSticky.html#a21b6b7ab5ffe837a57d98c9eeb03c770">BaseSticky.item</a></div><div class="ttdeci">UIItem item</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00151">BaseSticky.cs:151</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseSticky_8cs_source.html#l00151">BaseSticky.item</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00122">list</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseSticky_8cs_source.html#l00099">BaseSticky.RefreshButton()</a>.</p>
 
 </div>
 </div>
@@ -428,6 +494,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00038">38</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetSticky.html">WidgetSticky</a>.<a class="code hl_variable" href="classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c">Instance</a>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classWidgetSticky.html">WidgetSticky</a>.<a class="code hl_variable" href="classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c">Instance</a>.<a class="code hl_function" href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">_Add</a>(sticky, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassWidgetSticky_html"><div class="ttname"><a href="classWidgetSticky.html">WidgetSticky</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00006">WidgetSticky.cs:7</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a791ab74ca867d71f0982e186fa44f28c"><div class="ttname"><a href="classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c">WidgetSticky.Instance</a></div><div class="ttdeci">static WidgetSticky Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00118">WidgetSticky.cs:118</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_abd3a19a89e0375f342caf728c559314c"><div class="ttname"><a href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">WidgetSticky._Add</a></div><div class="ttdeci">void _Add(BaseSticky sticky, bool animate=true)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00047">WidgetSticky.cs:47</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00118">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +537,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00008">8</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetSticky.html">WidgetSticky</a>.<a class="code hl_class" href="classWidgetSticky_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassWidgetSticky_1_1Extra_html"><div class="ttname"><a href="classWidgetSticky_1_1Extra.html">WidgetSticky.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00130">WidgetSticky.cs:131</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46d8b8ce3e56a723db1368c530eee70b" name="a46d8b8ce3e56a723db1368c530eee70b"></a>
@@ -484,6 +568,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00027">27</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        WidgetSticky.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   30</span>        this.mold = this.<a class="code hl_variable" href="classWidgetSticky.html#a43364cd20ab2a27f06ba3a63186bff30">layout</a>.CreateMold(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   31</span>        this.<a class="code hl_function" href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">_Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classStickyMenu.html">StickyMenu</a>(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   32</span>        this.<a class="code hl_function" href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">_Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classStickyDate.html">StickyDate</a>(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_function" href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">_Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classStickyWelcome.html">StickyWelcome</a>(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_function" href="classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c">_Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classStickyGacha.html">StickyGacha</a>(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   35</span>        base.InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0f, 1f);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassStickyDate_html"><div class="ttname"><a href="classStickyDate.html">StickyDate</a></div><div class="ttdef"><b>Definition:</b> <a href="StickyDate_8cs_source.html#l00003">StickyDate.cs:4</a></div></div>
+<div class="ttc" id="aclassStickyGacha_html"><div class="ttname"><a href="classStickyGacha.html">StickyGacha</a></div><div class="ttdef"><b>Definition:</b> <a href="StickyGacha_8cs_source.html#l00003">StickyGacha.cs:4</a></div></div>
+<div class="ttc" id="aclassStickyMenu_html"><div class="ttname"><a href="classStickyMenu.html">StickyMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="StickyMenu_8cs_source.html#l00003">StickyMenu.cs:4</a></div></div>
+<div class="ttc" id="aclassStickyWelcome_html"><div class="ttname"><a href="classStickyWelcome.html">StickyWelcome</a></div><div class="ttdef"><b>Definition:</b> <a href="StickyWelcome_8cs_source.html#l00003">StickyWelcome.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00120">layout</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -513,6 +614,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        WidgetSticky.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_function" href="classWidgetSticky.html#a46d8b8ce3e56a723db1368c530eee70b">Init</a>();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassWidgetSticky_html_a46d8b8ce3e56a723db1368c530eee70b"><div class="ttname"><a href="classWidgetSticky.html#a46d8b8ce3e56a723db1368c530eee70b">WidgetSticky.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00027">WidgetSticky.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetSticky_8cs_source.html#l00027">Init()</a>.</p>
 
 </div>
 </div>
@@ -543,6 +651,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00092">92</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        UIContextMenu uicontextMenu = m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showDate&quot;</span>, this.<a class="code hl_property" href="classWidgetSticky.html#a7f7afdb5af46f18b67e9d5da4a1bc64a">extra</a>.showDate, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            this.extra.showDate = a;</div>
+<div class="line"><span class="lineno">   98</span>            this.<a class="code hl_function" href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">Refresh</a>();</div>
+<div class="line"><span class="lineno">   99</span>        });</div>
+<div class="line"><span class="lineno">  100</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showText&quot;</span>, this.<a class="code hl_property" href="classWidgetSticky.html#a7f7afdb5af46f18b67e9d5da4a1bc64a">extra</a>.showText, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            this.extra.showText = a;</div>
+<div class="line"><span class="lineno">  103</span>            this.<a class="code hl_function" href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">Refresh</a>();</div>
+<div class="line"><span class="lineno">  104</span>        });</div>
+<div class="line"><span class="lineno">  105</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showNerun&quot;</span>, this.<a class="code hl_property" href="classWidgetSticky.html#a7f7afdb5af46f18b67e9d5da4a1bc64a">extra</a>.showNerun, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            this.extra.showNerun = a;</div>
+<div class="line"><span class="lineno">  108</span>            this.<a class="code hl_function" href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">Refresh</a>();</div>
+<div class="line"><span class="lineno">  109</span>        });</div>
+<div class="line"><span class="lineno">  110</span>        m.AddChild(<span class="stringliteral">&quot;style&quot;</span>).AddSlider(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            base.config.skin.button = (int)a;</div>
+<div class="line"><span class="lineno">  113</span>            this.<a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">  114</span>        }, 0f, (float)(base.config.skin.Skin.buttons.Count - 1), <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  115</span>        base.SetBaseContextMenu(m);</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="ttc" id="aclassWidgetSticky_html_a7f7afdb5af46f18b67e9d5da4a1bc64a"><div class="ttname"><a href="classWidgetSticky.html#a7f7afdb5af46f18b67e9d5da4a1bc64a">WidgetSticky.extra</a></div><div class="ttdeci">WidgetSticky.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00013">WidgetSticky.cs:14</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_ac0f415f904673f5e01d70cc8e49826b0"><div class="ttname"><a href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">WidgetSticky.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00079">WidgetSticky.cs:79</a></div></div>
+<div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00425">Widget.cs:425</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00425">Widget.ApplySkin()</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00014">extra</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00079">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -570,6 +707,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00079">79</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseSticky.html">BaseSticky</a> baseSticky <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248">list</a>)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">bool</span> shouldShow = baseSticky.<a class="code hl_property" href="classBaseSticky.html#a9a8bb0deff5f79f4f3b61f5779c8434c">ShouldShow</a>;</div>
+<div class="line"><span class="lineno">   84</span>            baseSticky.<a class="code hl_variable" href="classBaseSticky.html#a21b6b7ab5ffe837a57d98c9eeb03c770">item</a>.SetActive(shouldShow);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (shouldShow)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                baseSticky.<a class="code hl_function" href="classBaseSticky.html#a23275219888c9b2a0478d847b9d15fea">Refresh</a>();</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassBaseSticky_html_a23275219888c9b2a0478d847b9d15fea"><div class="ttname"><a href="classBaseSticky.html#a23275219888c9b2a0478d847b9d15fea">BaseSticky.Refresh</a></div><div class="ttdeci">virtual void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00091">BaseSticky.cs:91</a></div></div>
+<div class="ttc" id="aclassBaseSticky_html_a9a8bb0deff5f79f4f3b61f5779c8434c"><div class="ttname"><a href="classBaseSticky.html#a9a8bb0deff5f79f4f3b61f5779c8434c">BaseSticky.ShouldShow</a></div><div class="ttdeci">virtual bool ShouldShow</div><div class="ttdef"><b>Definition:</b> <a href="BaseSticky_8cs_source.html#l00038">BaseSticky.cs:39</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseSticky_8cs_source.html#l00151">BaseSticky.item</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00122">list</a>, <a class="el" href="BaseSticky_8cs_source.html#l00091">BaseSticky.Refresh()</a>, and <a class="el" href="BaseSticky_8cs_source.html#l00039">BaseSticky.ShouldShow</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="StickyGacha_8cs_source.html#l00037">StickyGacha.OnClick()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00092">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -588,6 +742,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00128">128</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>.</p>
+
 </div>
 </div>
 <a id="a06ff10e81b6c8dff91d5cac8c753be7c" name="a06ff10e81b6c8dff91d5cac8c753be7c"></a>
@@ -603,6 +759,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00124">124</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseSticky_8cs_source.html#l00099">BaseSticky.RefreshButton()</a>.</p>
 
 </div>
 </div>
@@ -628,6 +786,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00118">118</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00038">Add()</a>, and <a class="el" href="BaseSticky_8cs_source.html#l00099">BaseSticky.RefreshButton()</a>.</p>
+
 </div>
 </div>
 <a id="a43364cd20ab2a27f06ba3a63186bff30" name="a43364cd20ab2a27f06ba3a63186bff30"></a>
@@ -643,6 +803,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00120">120</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00027">Init()</a>.</p>
 
 </div>
 </div>
@@ -660,6 +822,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00122">122</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00073">_Remove()</a>, and <a class="el" href="WidgetSticky_8cs_source.html#l00079">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a0f111bb6314c8e77b744ed6f21e9740d" name="a0f111bb6314c8e77b744ed6f21e9740d"></a>
@@ -675,6 +839,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00126">126</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00047">_Add()</a>.</p>
 
 </div>
 </div>
@@ -700,6 +866,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSticky_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetSticky.html">WidgetSticky</a>.<a class="code hl_class" href="classWidgetSticky_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetSticky_8cs_source.html#l00092">OnSetContextMenu()</a>, and <a class="el" href="BaseSticky_8cs_source.html#l00099">BaseSticky.RefreshButton()</a>.</p>
 
 </div>
 </div>
@@ -707,9 +881,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="WidgetSticky_8cs_source.html">WidgetSticky.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetSticky.html">WidgetSticky</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

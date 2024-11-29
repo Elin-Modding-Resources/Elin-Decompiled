@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('HomeResourceType_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -142,13 +158,53 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="HomeResourceType_8cs_source.html#l00003">3</a> of file <a class="el" href="HomeResourceType_8cs_source.html">HomeResourceType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca62506be34d574da4a0d158a67253ea99">food</a>,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">money</a>,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caa542e9b744bedcfd874129ab0f98c4ff">knowledge</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca77004ea213d5fc71acf74a8c9c6795fb">fun</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca3f7039a836c00d92ecf87fd7d338c4db">culture</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad9e5d212320e7d96e921831554be696d">medicine</a>,</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca94074ce331b5db47060fd2d8009503a8">industry</a>,</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca02a954aad29fc4f3eb2dff2334b4226a">tourism</a>,</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca381ff09422ad9d637f7c4677297b0303">safety</a>,</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca320feace9cefcab73c6b9de1f4f13512">karma</a>,</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad35264a8ba23c39dba57b6e37c0dc650">reknown</a>,</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca405aaff66082ffe7231d7c1f79926c17">nature</a>,</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad0bb80aabb8619b6e35113f02e72752b">education</a>,</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7">influence</a>,</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caabcf714c6f49bfc7a4c5468b4a0435e6">worth</a></div>
+<div class="line"><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca02a954aad29fc4f3eb2dff2334b4226a"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca02a954aad29fc4f3eb2dff2334b4226a">HomeResourceType.tourism</a></div><div class="ttdeci">@ tourism</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca320feace9cefcab73c6b9de1f4f13512"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca320feace9cefcab73c6b9de1f4f13512">HomeResourceType.karma</a></div><div class="ttdeci">@ karma</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca381ff09422ad9d637f7c4677297b0303"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca381ff09422ad9d637f7c4677297b0303">HomeResourceType.safety</a></div><div class="ttdeci">@ safety</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca3f7039a836c00d92ecf87fd7d338c4db"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca3f7039a836c00d92ecf87fd7d338c4db">HomeResourceType.culture</a></div><div class="ttdeci">@ culture</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca405aaff66082ffe7231d7c1f79926c17"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca405aaff66082ffe7231d7c1f79926c17">HomeResourceType.nature</a></div><div class="ttdeci">@ nature</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7">HomeResourceType.influence</a></div><div class="ttdeci">@ influence</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca62506be34d574da4a0d158a67253ea99"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca62506be34d574da4a0d158a67253ea99">HomeResourceType.food</a></div><div class="ttdeci">@ food</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca77004ea213d5fc71acf74a8c9c6795fb"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca77004ea213d5fc71acf74a8c9c6795fb">HomeResourceType.fun</a></div><div class="ttdeci">@ fun</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca94074ce331b5db47060fd2d8009503a8"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca94074ce331b5db47060fd2d8009503a8">HomeResourceType.industry</a></div><div class="ttdeci">@ industry</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">HomeResourceType.money</a></div><div class="ttdeci">@ money</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caa542e9b744bedcfd874129ab0f98c4ff"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caa542e9b744bedcfd874129ab0f98c4ff">HomeResourceType.knowledge</a></div><div class="ttdeci">@ knowledge</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caabcf714c6f49bfc7a4c5468b4a0435e6"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caabcf714c6f49bfc7a4c5468b4a0435e6">HomeResourceType.worth</a></div><div class="ttdeci">@ worth</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9cad0bb80aabb8619b6e35113f02e72752b"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad0bb80aabb8619b6e35113f02e72752b">HomeResourceType.education</a></div><div class="ttdeci">@ education</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9cad35264a8ba23c39dba57b6e37c0dc650"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad35264a8ba23c39dba57b6e37c0dc650">HomeResourceType.reknown</a></div><div class="ttdeci">@ reknown</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9cad9e5d212320e7d96e921831554be696d"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad9e5d212320e7d96e921831554be696d">HomeResourceType.medicine</a></div><div class="ttdeci">@ medicine</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">HomeResourceType.faith</a></div><div class="ttdeci">@ faith</div></div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">HomeResourceType.material</a></div><div class="ttdeci">@ material</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="HomeResourceType_8cs.html">HomeResourceType.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

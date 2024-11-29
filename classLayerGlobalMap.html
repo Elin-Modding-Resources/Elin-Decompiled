@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerGlobalMap.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -213,6 +233,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        this.<a class="code hl_function" href="classLayerGlobalMap.html#a923a64b338a159b9880d856bb6b2651a">RefreshSummary</a>();</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a923a64b338a159b9880d856bb6b2651a"><div class="ttname"><a href="classLayerGlobalMap.html#a923a64b338a159b9880d856bb6b2651a">LayerGlobalMap.RefreshSummary</a></div><div class="ttdeci">void RefreshSummary()</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00010">LayerGlobalMap.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -240,6 +266,45 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#a34bb3566fea0e017a94d756195c5ec7f">textName</a>.SetText(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">world</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>,</div>
+<div class="line"><span class="lineno">   15</span>            Environment.NewLine,</div>
+<div class="line"><span class="lineno">   16</span>            <span class="stringliteral">&quot;&lt;size=18&gt; (&quot;</span>,</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a>.<a class="code hl_property" href="classZone.html#ae866846af33c4a0044b0642efb5f8dc6">Region</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>,</div>
+<div class="line"><span class="lineno">   18</span>            <span class="stringliteral">&quot;)&lt;/size&gt;&quot;</span></div>
+<div class="line"><span class="lineno">   19</span>        }));</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#a51c66dd079acd35d53056779249d824f">textExplore</a>.SetText(<span class="stringliteral">&quot;0%&quot;</span>);</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#a344bb2b949dffa35dbc148254c579a42">textTerritory</a>.SetText(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7aedc36628179ffd3f097e1d99610840">Home</a>.<a class="code hl_function" href="classFaction.html#af35f27574f299d0ddb5e8cdc8e558538">CountTerritories</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#a738a6db93fba740ddccfecf712b03dd7">textRestore</a>.SetText(<span class="stringliteral">&quot;1 (0/20)&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#ad82e7d94fa46907d2ca14802527529ec">textWealth</a>.SetText(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7aedc36628179ffd3f097e1d99610840">Home</a>.<a class="code hl_function" href="classFaction.html#a265aa8961150171bd264372895d16eb3">CountWealth</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#a856808913ba6c8b9cc3b30f9e5f2cd42">textPopu</a>.SetText(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7aedc36628179ffd3f097e1d99610840">Home</a>.<a class="code hl_function" href="classFaction.html#a68b943cbe2a8a8f2816b37a720417226">CountMembers</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classLayerGlobalMap.html#af1d8cb4b855a19e9eb81e44b44b6afe0">textProgress</a>.SetText(<span class="stringliteral">&quot;_progress&quot;</span>.lang(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.days.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.sieges.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00056">Chara.cs:57</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a02d3cd5d8d5cb20fcda917f05d7f35c7"><div class="ttname"><a href="classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7">ELayer.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00134">ELayer.cs:135</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassELayer_html_a7aedc36628179ffd3f097e1d99610840"><div class="ttname"><a href="classELayer.html#a7aedc36628179ffd3f097e1d99610840">ELayer.Home</a></div><div class="ttdeci">static Faction Home</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00054">ELayer.cs:55</a></div></div>
+<div class="ttc" id="aclassFaction_html_a265aa8961150171bd264372895d16eb3"><div class="ttname"><a href="classFaction.html#a265aa8961150171bd264372895d16eb3">Faction.CountWealth</a></div><div class="ttdeci">int CountWealth()</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00086">Faction.2.cs:86</a></div></div>
+<div class="ttc" id="aclassFaction_html_a68b943cbe2a8a8f2816b37a720417226"><div class="ttname"><a href="classFaction.html#a68b943cbe2a8a8f2816b37a720417226">Faction.CountMembers</a></div><div class="ttdeci">int CountMembers()</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00116">Faction.2.cs:116</a></div></div>
+<div class="ttc" id="aclassFaction_html_af35f27574f299d0ddb5e8cdc8e558538"><div class="ttname"><a href="classFaction.html#af35f27574f299d0ddb5e8cdc8e558538">Faction.CountTerritories</a></div><div class="ttdeci">int CountTerritories()</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00100">Faction.2.cs:100</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a344bb2b949dffa35dbc148254c579a42"><div class="ttname"><a href="classLayerGlobalMap.html#a344bb2b949dffa35dbc148254c579a42">LayerGlobalMap.textTerritory</a></div><div class="ttdeci">UIText textTerritory</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00032">LayerGlobalMap.cs:32</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a34bb3566fea0e017a94d756195c5ec7f"><div class="ttname"><a href="classLayerGlobalMap.html#a34bb3566fea0e017a94d756195c5ec7f">LayerGlobalMap.textName</a></div><div class="ttdeci">UIText textName</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00028">LayerGlobalMap.cs:28</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a51c66dd079acd35d53056779249d824f"><div class="ttname"><a href="classLayerGlobalMap.html#a51c66dd079acd35d53056779249d824f">LayerGlobalMap.textExplore</a></div><div class="ttdeci">UIText textExplore</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00030">LayerGlobalMap.cs:30</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a738a6db93fba740ddccfecf712b03dd7"><div class="ttname"><a href="classLayerGlobalMap.html#a738a6db93fba740ddccfecf712b03dd7">LayerGlobalMap.textRestore</a></div><div class="ttdeci">UIText textRestore</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00038">LayerGlobalMap.cs:38</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_a856808913ba6c8b9cc3b30f9e5f2cd42"><div class="ttname"><a href="classLayerGlobalMap.html#a856808913ba6c8b9cc3b30f9e5f2cd42">LayerGlobalMap.textPopu</a></div><div class="ttdeci">UIText textPopu</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00034">LayerGlobalMap.cs:34</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_ad82e7d94fa46907d2ca14802527529ec"><div class="ttname"><a href="classLayerGlobalMap.html#ad82e7d94fa46907d2ca14802527529ec">LayerGlobalMap.textWealth</a></div><div class="ttdeci">UIText textWealth</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00036">LayerGlobalMap.cs:36</a></div></div>
+<div class="ttc" id="aclassLayerGlobalMap_html_af1d8cb4b855a19e9eb81e44b44b6afe0"><div class="ttname"><a href="classLayerGlobalMap.html#af1d8cb4b855a19e9eb81e44b44b6afe0">LayerGlobalMap.textProgress</a></div><div class="ttdeci">UIText textProgress</div><div class="ttdef"><b>Definition:</b> <a href="LayerGlobalMap_8cs_source.html#l00040">LayerGlobalMap.cs:40</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af7438d4a0a6aff5152f3122c9fc66d06"><div class="ttname"><a href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">Player.stats</a></div><div class="ttdeci">Player.Stats stats</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01455">Player.cs:1455</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
+<div class="ttc" id="aclassZone_html_ae866846af33c4a0044b0642efb5f8dc6"><div class="ttname"><a href="classZone.html#ae866846af33c4a0044b0642efb5f8dc6">Zone.Region</a></div><div class="ttdeci">Region Region</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00180">Zone.cs:181</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00116">Faction.CountMembers()</a>, <a class="el" href="Faction_82_8cs_source.html#l00100">Faction.CountTerritories()</a>, <a class="el" href="Faction_82_8cs_source.html#l00086">Faction.CountWealth()</a>, <a class="el" href="Chara_8cs_source.html#l00057">Chara.currentZone</a>, <a class="el" href="ELayer_8cs_source.html#l00055">ELayer.Home</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Zone_8cs_source.html#l00181">Zone.Region</a>, <a class="el" href="Player_8cs_source.html#l01455">Player.stats</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00030">textExplore</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00028">textName</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00034">textPopu</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00040">textProgress</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00038">textRestore</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00032">textTerritory</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00036">textWealth</a>, and <a class="el" href="ELayer_8cs_source.html#l00135">ELayer.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00005">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -258,6 +323,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00030">30</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
+
 </div>
 </div>
 <a id="a34bb3566fea0e017a94d756195c5ec7f" name="a34bb3566fea0e017a94d756195c5ec7f"></a>
@@ -273,6 +340,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -290,6 +359,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00034">34</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
+
 </div>
 </div>
 <a id="af1d8cb4b855a19e9eb81e44b44b6afe0" name="af1d8cb4b855a19e9eb81e44b44b6afe0"></a>
@@ -305,6 +376,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00040">40</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -322,6 +395,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
+
 </div>
 </div>
 <a id="a344bb2b949dffa35dbc148254c579a42" name="a344bb2b949dffa35dbc148254c579a42"></a>
@@ -337,6 +412,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00032">32</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -354,15 +431,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerGlobalMap_8cs_source.html#l00036">36</a> of file <a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">RefreshSummary()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerGlobalMap_8cs_source.html">LayerGlobalMap.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerGlobalMap.html">LayerGlobalMap</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

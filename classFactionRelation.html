@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classFactionRelation.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -221,7 +241,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00087">87</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_enumvalue" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafa7a1920d61156abc05a60135aefe8bc67">Default</a>,</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_enumvalue" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafab6f4a2ec6356bbd56d49f2096bf9d3d3">Owner</a>,</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_enumvalue" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafa858ba4765e53c712ef672a9570474b1d">Member</a></div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84cafa7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafa7a1920d61156abc05a60135aefe8bc67">FactionRelation.RelationType.Default</a></div><div class="ttdeci">@ Default</div></div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84cafa858ba4765e53c712ef672a9570474b1d"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafa858ba4765e53c712ef672a9570474b1d">FactionRelation.RelationType.Member</a></div><div class="ttdeci">@ Member</div></div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84cafab6f4a2ec6356bbd56d49f2096bf9d3d3"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafab6f4a2ec6356bbd56d49f2096bf9d3d3">FactionRelation.RelationType.Owner</a></div><div class="ttdeci">@ Owner</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -249,6 +277,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00023">23</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">type</a> != <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> this.rank * 100;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00005">FactionRelation.cs:6</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a0d76069230ee3e8be8e6b46267e943c0"><div class="ttname"><a href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">FactionRelation.type</a></div><div class="ttdeci">FactionRelation.RelationType type</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00083">FactionRelation.cs:83</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00087">FactionRelation.cs:88</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00083">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>, and <a class="el" href="Faction_82_8cs_source.html#l00353">Faction.GetFactionSalary()</a>.</p>
 
 </div>
 </div>
@@ -276,6 +318,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00040">40</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> (<span class="stringliteral">&quot;faction_&quot;</span> + this.<a class="code hl_variable" href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">type</a>.ToString()).lang();</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00083">type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIFactionInfo_8cs_source.html#l00033">UIFactionInfo.SetFaction()</a>.</p>
 
 </div>
 </div>
@@ -303,6 +352,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00060">60</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> this.type == FactionRelation.RelationType.Member || this.type == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Owner;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="FactionRelation_8cs_source.html#l00045">SetTextHostility()</a>.</p>
 
 </div>
 </div>
@@ -330,6 +384,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00065">65</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        this.exp -= this.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>;</div>
+<div class="line"><span class="lineno">   68</span>        this.<a class="code hl_variable" href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">rank</a>++;</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;faction_promote&quot;</span>);</div>
+<div class="line"><span class="lineno">   70</span>        SE.Play(<span class="stringliteral">&quot;questComplete&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassFactionRelation_html_a46b7a47fd2bdebbd83010310af4cc574"><div class="ttname"><a href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">FactionRelation.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00007">FactionRelation.cs:8</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a827af529ec3e0b535af676b52195ef52"><div class="ttname"><a href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">FactionRelation.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00080">FactionRelation.cs:80</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00008">ExpToNext</a>, <a class="el" href="FactionRelation_8cs_source.html#l00080">rank</a>, and <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00427">DramaOutcome.guild_promote()</a>.</p>
 
 </div>
 </div>
@@ -358,6 +426,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00045">45</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classFactionRelation.html#ae35f73ae532810c1cb789c462741c13a">IsMember</a>() || this.<a class="code hl_variable" href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">affinity</a> &gt; 100)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.SetText(<span class="stringliteral">&quot;reFriend&quot;</span>.lang(), FontColor.Good);</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">affinity</a> &lt; -100)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.SetText(<span class="stringliteral">&quot;reEnemy&quot;</span>.lang(), FontColor.Bad);</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.SetText(<span class="stringliteral">&quot;reNeutral&quot;</span>.lang(), FontColor.Passive);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a98730c36ad216a1eebc6c2b7e9215153"><div class="ttname"><a href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">FactionRelation.affinity</a></div><div class="ttdeci">int affinity</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00074">FactionRelation.cs:74</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_ae35f73ae532810c1cb789c462741c13a"><div class="ttname"><a href="classFactionRelation.html#ae35f73ae532810c1cb789c462741c13a">FactionRelation.IsMember</a></div><div class="ttdeci">bool IsMember()</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00060">FactionRelation.cs:60</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00074">affinity</a>, <a class="el" href="FactionRelation_8cs_source.html#l00060">IsMember()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFactions_8cs_source.html#l00026">LayerFactions.RefreshFactions()</a>, and <a class="el" href="ContentFaction_8cs_source.html#l00021">ContentFaction.RefreshFactions()</a>.</p>
 
 </div>
 </div>
@@ -376,6 +464,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00074">74</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00132">Faction.GetHostility()</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00045">SetTextHostility()</a>.</p>
+
 </div>
 </div>
 <a id="a205fc45d402d20291c0d125b957312c5" name="a205fc45d402d20291c0d125b957312c5"></a>
@@ -391,6 +481,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00077">77</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>, and <a class="el" href="QuestGuild_8cs_source.html#l00027">QuestGuild.GetTrackerText()</a>.</p>
 
 </div>
 </div>
@@ -424,6 +516,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00080">80</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>, <a class="el" href="CalcPlat_8cs_source.html#l00006">CalcPlat.Learn()</a>, <a class="el" href="FactionRelation_8cs_source.html#l00065">Promote()</a>, and <a class="el" href="CalcPlat_8cs_source.html#l00016">CalcPlat.Train()</a>.</p>
+
 </div>
 </div>
 <a id="a0d76069230ee3e8be8e6b46267e943c0" name="a0d76069230ee3e8be8e6b46267e943c0"></a>
@@ -439,6 +533,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00083">83</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00179">Faction.AddContribution()</a>, <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>, <a class="el" href="FactionRelation_8cs_source.html#l00023">GetSalary()</a>, <a class="el" href="FactionRelation_8cs_source.html#l00040">GetTextRelation()</a>, and <a class="el" href="QuestGuild_8cs_source.html#l00027">QuestGuild.GetTrackerText()</a>.</p>
 
 </div>
 </div>
@@ -464,6 +560,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00007">7</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> 100 + this.rank * this.rank * 100;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>, <a class="el" href="QuestGuild_8cs_source.html#l00027">QuestGuild.GetTrackerText()</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00065">Promote()</a>.</p>
 
 </div>
 </div>
@@ -488,7 +592,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00015">15</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a584972b646d98fbf03d75d3dbea570da" name="a584972b646d98fbf03d75d3dbea570da"></a>
@@ -512,6 +622,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="FactionRelation_8cs_source.html#l00032">32</a> of file <a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> Lang.GetList(<span class="stringliteral">&quot;guild_title&quot;</span>)[Mathf.Min(this.<a class="code hl_variable" href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">rank</a> / 2, 5)];</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameLang_8cs_source.html#l00006">GameLang.ConvertDrama()</a>, and <a class="el" href="QuestGuild_8cs_source.html#l00037">QuestGuild.GetDetailText()</a>.</p>
 
 </div>
 </div>
@@ -519,9 +637,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="FactionRelation_8cs_source.html">FactionRelation.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classFactionRelation.html">FactionRelation</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

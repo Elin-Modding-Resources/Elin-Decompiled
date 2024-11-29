@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classPlayer_1_1Flags.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classPlayer.html">Player</a></li><li class="navelem"><a class="el" href="classPlayer_1_1Flags.html">Flags</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -307,6 +323,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02152">2152</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2153</span>        {</div>
+<div class="line"><span class="lineno"> 2154</span>            this.bits.Bits = (uint)this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[0];</div>
+<div class="line"><span class="lineno"> 2155</span>        }</div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a3a4b47e1714f2e3191309e186b1925f9"><div class="ttname"><a href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">Player.Flags.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02285">Player.cs:2285</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02285">Player.Flags.ints</a>.</p>
 
 </div>
 </div>
@@ -335,6 +357,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02146">2146</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2147</span>        {</div>
+<div class="line"><span class="lineno"> 2148</span>            this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[0] = (int)this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>.Bits;</div>
+<div class="line"><span class="lineno"> 2149</span>        }</div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a3a12707ba9824967c8c519fe097c9c08"><div class="ttname"><a href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">Player.Flags.bits</a></div><div class="ttdeci">BitArray32 bits</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02299">Player.cs:2299</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02299">Player.Flags.bits</a>, and <a class="el" href="Player_8cs_source.html#l02285">Player.Flags.ints</a>.</p>
 
 </div>
 </div>
@@ -363,6 +391,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02236">2236</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2237</span>        {</div>
+<div class="line"><span class="lineno"> 2238</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">playedStories</a>.Contains(<span class="keywordtype">id</span>) &amp;&amp; !<span class="keyword">this</span>.availableStories.Contains(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno"> 2239</span>            {</div>
+<div class="line"><span class="lineno"> 2240</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a709b26f847bd5ac93380aae735445ab6">availableStories</a>.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno"> 2241</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;story_added&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2242</span>                SE.WriteJournal();</div>
+<div class="line"><span class="lineno"> 2243</span>            }</div>
+<div class="line"><span class="lineno"> 2244</span>        }</div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a709b26f847bd5ac93380aae735445ab6"><div class="ttname"><a href="classPlayer_1_1Flags.html#a709b26f847bd5ac93380aae735445ab6">Player.Flags.availableStories</a></div><div class="ttdeci">List&lt; int &gt; availableStories</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02291">Player.cs:2291</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_abade3aafcada0c7665add1976e454bb7"><div class="ttname"><a href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">Player.Flags.playedStories</a></div><div class="ttdeci">List&lt; int &gt; playedStories</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02288">Player.cs:2288</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02291">Player.Flags.availableStories</a>, <a class="el" href="Player_8cs_source.html#l02288">Player.Flags.playedStories</a>, and <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02246">Player.Flags.OnEnterZone()</a>.</p>
 
 </div>
 </div>
@@ -391,6 +435,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02202">2202</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2203</span>        {</div>
+<div class="line"><span class="lineno"> 2204</span>            ExcelData excelData = this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a>.TryGetValue(idBook, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno"> 2205</span>            <span class="keywordflow">if</span> (excelData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 2206</span>            {</div>
+<div class="line"><span class="lineno"> 2207</span>                excelData = <span class="keyword">new</span> ExcelData();</div>
+<div class="line"><span class="lineno"> 2208</span>                excelData.path = CorePath.DramaData + idBook + <span class="stringliteral">&quot;.xlsx&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2209</span>                excelData.BuildList(<span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2210</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a>.Add(idBook, excelData);</div>
+<div class="line"><span class="lineno"> 2211</span>            }</div>
+<div class="line"><span class="lineno"> 2212</span>            <span class="keywordflow">return</span> excelData;</div>
+<div class="line"><span class="lineno"> 2213</span>        }</div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a9f986cd1e9ca77d5ceeb22a141f9e5de"><div class="ttname"><a href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">Player.Flags.storyExcel</a></div><div class="ttdeci">Dictionary&lt; string, ExcelData &gt; storyExcel</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02301">Player.cs:2301</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02301">Player.Flags.storyExcel</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02190">Player.Flags.GetStoryRow()</a>, and <a class="el" href="Player_8cs_source.html#l02178">Player.Flags.GetStoryRowID()</a>.</p>
 
 </div>
 </div>
@@ -429,6 +489,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02190">2190</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2191</span>        {</div>
+<div class="line"><span class="lineno"> 2192</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; dictionary <span class="keywordflow">in</span> this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
+<div class="line"><span class="lineno"> 2193</span>            {</div>
+<div class="line"><span class="lineno"> 2194</span>                <span class="keywordflow">if</span> (dictionary[<span class="stringliteral">&quot;id&quot;</span>].ToInt() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno"> 2195</span>                {</div>
+<div class="line"><span class="lineno"> 2196</span>                    <span class="keywordflow">return</span> dictionary;</div>
+<div class="line"><span class="lineno"> 2197</span>                }</div>
+<div class="line"><span class="lineno"> 2198</span>            }</div>
+<div class="line"><span class="lineno"> 2199</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 2200</span>        }</div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a54dff5dd6b71d968c6b672cdc69f2280"><div class="ttname"><a href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">Player.Flags.GetStoryExcelData</a></div><div class="ttdeci">ExcelData GetStoryExcelData(string idBook)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02202">Player.cs:2202</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02202">Player.Flags.GetStoryExcelData()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>.</p>
 
 </div>
 </div>
@@ -467,6 +542,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02178">2178</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2179</span>        {</div>
+<div class="line"><span class="lineno"> 2180</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; dictionary <span class="keywordflow">in</span> this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
+<div class="line"><span class="lineno"> 2181</span>            {</div>
+<div class="line"><span class="lineno"> 2182</span>                <span class="keywordflow">if</span> (dictionary[<span class="stringliteral">&quot;step&quot;</span>] == idStep)</div>
+<div class="line"><span class="lineno"> 2183</span>                {</div>
+<div class="line"><span class="lineno"> 2184</span>                    <span class="keywordflow">return</span> dictionary[<span class="stringliteral">&quot;id&quot;</span>].ToInt();</div>
+<div class="line"><span class="lineno"> 2185</span>                }</div>
+<div class="line"><span class="lineno"> 2186</span>            }</div>
+<div class="line"><span class="lineno"> 2187</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 2188</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02202">Player.Flags.GetStoryExcelData()</a>.</p>
 
 </div>
 </div>
@@ -495,6 +582,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02173">2173</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2174</span>        {</div>
+<div class="line"><span class="lineno"> 2175</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">playedStories</a>.Contains(flag);</div>
+<div class="line"><span class="lineno"> 2176</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02288">Player.Flags.playedStories</a>.</p>
 
 </div>
 </div>
@@ -523,6 +615,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02165">2165</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2166</span>        {</div>
+<div class="line"><span class="lineno"> 2167</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classPlayer_1_1Flags.html#a811f17dd221ee4a0e113edfa28500892">build</a> == 0 &amp;&amp; r.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a> == <span class="stringliteral">&quot;workbench&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2168</span>            {</div>
+<div class="line"><span class="lineno"> 2169</span>                this.build = 1;</div>
+<div class="line"><span class="lineno"> 2170</span>            }</div>
+<div class="line"><span class="lineno"> 2171</span>        }</div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a811f17dd221ee4a0e113edfa28500892"><div class="ttname"><a href="classPlayer_1_1Flags.html#a811f17dd221ee4a0e113edfa28500892">Player.Flags.build</a></div><div class="ttdeci">int build</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02061">Player.cs:2062</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a040c3f5e15fef1caad347e061707d507"><div class="ttname"><a href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">Recipe.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00889">Recipe.cs:889</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02062">Player.Flags.build</a>, and <a class="el" href="Recipe_8cs_source.html#l00889">Recipe.id</a>.</p>
 
 </div>
 </div>
@@ -550,7 +652,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02157">2157</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2158</span>        {</div>
+<div class="line"><span class="lineno"> 2159</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a86424e33b47f24b20df37e202d691558" name="a86424e33b47f24b20df37e202d691558"></a>
@@ -577,7 +681,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02161">2161</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2162</span>        {</div>
+<div class="line"><span class="lineno"> 2163</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af4dce58c60f6b365871fc930dd823e8e" name="af4dce58c60f6b365871fc930dd823e8e"></a>
@@ -604,6 +710,46 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02246">2246</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2247</span>        {</div>
+<div class="line"><span class="lineno"> 2248</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="stringliteral">&quot;nymelle&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2249</span>            {</div>
+<div class="line"><span class="lineno"> 2250</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> == -1)</div>
+<div class="line"><span class="lineno"> 2251</span>                {</div>
+<div class="line"><span class="lineno"> 2252</span>                    this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a9bf99b7308f0fa3b89744658f9db141a">AddStory</a>(10);</div>
+<div class="line"><span class="lineno"> 2253</span>                }</div>
+<div class="line"><span class="lineno"> 2254</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> == -2)</div>
+<div class="line"><span class="lineno"> 2255</span>                {</div>
+<div class="line"><span class="lineno"> 2256</span>                    this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a9bf99b7308f0fa3b89744658f9db141a">AddStory</a>(20);</div>
+<div class="line"><span class="lineno"> 2257</span>                }</div>
+<div class="line"><span class="lineno"> 2258</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> == -3)</div>
+<div class="line"><span class="lineno"> 2259</span>                {</div>
+<div class="line"><span class="lineno"> 2260</span>                    this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a9bf99b7308f0fa3b89744658f9db141a">AddStory</a>(30);</div>
+<div class="line"><span class="lineno"> 2261</span>                }</div>
+<div class="line"><span class="lineno"> 2262</span>            }</div>
+<div class="line"><span class="lineno"> 2263</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classQuestMain.html">QuestMain</a>.<a class="code hl_property" href="classQuestMain.html#a962260767f32466abc424139b88fe7c2">Phase</a> == 700 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="stringliteral">&quot;lothria&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2264</span>            {</div>
+<div class="line"><span class="lineno"> 2265</span>                this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">PlayStory</a>(50, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2266</span>            }</div>
+<div class="line"><span class="lineno"> 2267</span>            <span class="keywordflow">if</span> ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Prologue</a>.<a class="code hl_variable" href="classPrologue.html#a2ffa5a83b86e36af131b5c1be89280f0">idStartZone</a>) &amp;&amp; <span class="keyword">this</span>.availableStories.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 2268</span>            {</div>
+<div class="line"><span class="lineno"> 2269</span>                this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">PlayStory</a>(this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a709b26f847bd5ac93380aae735445ab6">availableStories</a>[0], <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2270</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a709b26f847bd5ac93380aae735445ab6">availableStories</a>.RemoveAt(0);</div>
+<div class="line"><span class="lineno"> 2271</span>            }</div>
+<div class="line"><span class="lineno"> 2272</span>        }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassGame_html_a7e2d9e6c3760641fe15a4d5412e0524e"><div class="ttname"><a href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Game.Prologue</a></div><div class="ttdeci">Prologue Prologue</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00040">Game.cs:41</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a5c306733c6f758ae19d9e608e413a3fe"><div class="ttname"><a href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">Player.Flags.PlayStory</a></div><div class="ttdeci">bool PlayStory(string idBook, int id, bool fromBook=false)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02215">Player.cs:2215</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a9bf99b7308f0fa3b89744658f9db141a"><div class="ttname"><a href="classPlayer_1_1Flags.html#a9bf99b7308f0fa3b89744658f9db141a">Player.Flags.AddStory</a></div><div class="ttdeci">void AddStory(int id)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02236">Player.cs:2236</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a2ffa5a83b86e36af131b5c1be89280f0"><div class="ttname"><a href="classPrologue.html#a2ffa5a83b86e36af131b5c1be89280f0">Prologue.idStartZone</a></div><div class="ttdeci">string idStartZone</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00007">Prologue.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestMain_html"><div class="ttname"><a href="classQuestMain.html">QuestMain</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestMain_8cs_source.html#l00003">QuestMain.cs:4</a></div></div>
+<div class="ttc" id="aclassQuestMain_html_a962260767f32466abc424139b88fe7c2"><div class="ttname"><a href="classQuestMain.html#a962260767f32466abc424139b88fe7c2">QuestMain.Phase</a></div><div class="ttdeci">static int Phase</div><div class="ttdef"><b>Definition:</b> <a href="QuestMain_8cs_source.html#l00021">QuestMain.cs:22</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a12267d80d357d59863cbbcf3da43a458"><div class="ttname"><a href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">Spatial.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00122">Spatial.cs:123</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00842">Spatial.cs:842</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Player_8cs_source.html#l02236">Player.Flags.AddStory()</a>, <a class="el" href="Player_8cs_source.html#l02291">Player.Flags.availableStories</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Spatial_8cs_source.html#l00842">Spatial.id</a>, <a class="el" href="Prologue_8cs_source.html#l00007">Prologue.idStartZone</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="Spatial_8cs_source.html#l00123">Spatial.lv</a>, <a class="el" href="QuestMain_8cs_source.html#l00022">QuestMain.Phase</a>, <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>, and <a class="el" href="Game_8cs_source.html#l00041">Game.Prologue</a>.</p>
 
 </div>
 </div>
@@ -631,6 +777,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02274">2274</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2275</span>        {</div>
+<div class="line"><span class="lineno"> 2276</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classQuestMain.html">QuestMain</a>.<a class="code hl_property" href="classQuestMain.html#a962260767f32466abc424139b88fe7c2">Phase</a> == 700)</div>
+<div class="line"><span class="lineno"> 2277</span>            {</div>
+<div class="line"><span class="lineno"> 2278</span>                this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">PlayStory</a>(40, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2279</span>            }</div>
+<div class="line"><span class="lineno"> 2280</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestMain_8cs_source.html#l00022">QuestMain.Phase</a>, and <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>.</p>
 
 </div>
 </div>
@@ -669,6 +823,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02231">2231</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2232</span>        {</div>
+<div class="line"><span class="lineno"> 2233</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">PlayStory</a>(<span class="stringliteral">&quot;_main&quot;</span>, <span class="keywordtype">id</span>, fromBook);</div>
+<div class="line"><span class="lineno"> 2234</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>.</p>
 
 </div>
 </div>
@@ -713,6 +872,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02215">2215</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2216</span>        {</div>
+<div class="line"><span class="lineno"> 2217</span>            <span class="keywordflow">if</span> (!fromBook &amp;&amp; this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">playedStories</a>.Contains(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno"> 2218</span>            {</div>
+<div class="line"><span class="lineno"> 2219</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2220</span>            }</div>
+<div class="line"><span class="lineno"> 2221</span>            Dictionary&lt;string, string&gt; storyRow = this.<a class="code hl_function" href="classPlayer_1_1Flags.html#a415a071758cf87d5a043d96cca497b40">GetStoryRow</a>(idBook, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno"> 2222</span>            SoundManager.ForceBGM();</div>
+<div class="line"><span class="lineno"> 2223</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">Activate</a>(idBook, storyRow[<span class="stringliteral">&quot;sheet&quot;</span>], storyRow[<span class="stringliteral">&quot;step&quot;</span>], <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2224</span>            <span class="keywordflow">if</span> (!fromBook &amp;&amp; !this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">playedStories</a>.Contains(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno"> 2225</span>            {</div>
+<div class="line"><span class="lineno"> 2226</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7">playedStories</a>.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno"> 2227</span>            }</div>
+<div class="line"><span class="lineno"> 2228</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2229</span>        }</div>
+<div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a13117d5fd681016c717b59b5bf9823a9"><div class="ttname"><a href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">LayerDrama.Activate</a></div><div class="ttdeci">static LayerDrama Activate(string book, string idSheet, string idStep, Chara target=null, Card ref1=null, string tag=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00036">LayerDrama.cs:36</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Flags_html_a415a071758cf87d5a043d96cca497b40"><div class="ttname"><a href="classPlayer_1_1Flags.html#a415a071758cf87d5a043d96cca497b40">Player.Flags.GetStoryRow</a></div><div class="ttdeci">Dictionary&lt; string, string &gt; GetStoryRow(string idBook, int id)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02190">Player.cs:2190</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00036">LayerDrama.Activate()</a>, <a class="el" href="Player_8cs_source.html#l02190">Player.Flags.GetStoryRow()</a>, and <a class="el" href="Player_8cs_source.html#l02288">Player.Flags.playedStories</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02246">Player.Flags.OnEnterZone()</a>, <a class="el" href="Player_8cs_source.html#l02274">Player.Flags.OnLeaveZone()</a>, and <a class="el" href="Player_8cs_source.html#l02231">Player.Flags.PlayStory()</a>.</p>
 
 </div>
 </div>
@@ -731,6 +911,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02291">2291</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02236">Player.Flags.AddStory()</a>, and <a class="el" href="Player_8cs_source.html#l02246">Player.Flags.OnEnterZone()</a>.</p>
+
 </div>
 </div>
 <a id="a3a12707ba9824967c8c519fe097c9c08" name="a3a12707ba9824967c8c519fe097c9c08"></a>
@@ -747,6 +929,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02299">2299</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02146">Player.Flags._OnSerializing()</a>.</p>
+
 </div>
 </div>
 <a id="a3a4b47e1714f2e3191309e186b1925f9" name="a3a4b47e1714f2e3191309e186b1925f9"></a>
@@ -762,6 +946,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02285">2285</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02152">Player.Flags._OnDeserialized()</a>, and <a class="el" href="Player_8cs_source.html#l02146">Player.Flags._OnSerializing()</a>.</p>
 
 </div>
 </div>
@@ -802,6 +988,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02288">2288</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02236">Player.Flags.AddStory()</a>, <a class="el" href="Player_8cs_source.html#l02173">Player.Flags.IsStoryPlayed()</a>, and <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>.</p>
 
 </div>
 </div>
@@ -851,6 +1039,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02301">2301</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02202">Player.Flags.GetStoryExcelData()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -875,7 +1065,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01893">1893</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1894</span>        {</div>
+<div class="line"><span class="lineno"> 1895</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1896</span>            {</div>
+<div class="line"><span class="lineno"> 1897</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[9];</div>
+<div class="line"><span class="lineno"> 1898</span>            }</div>
+<div class="line"><span class="lineno"> 1899</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1900</span>            {</div>
+<div class="line"><span class="lineno"> 1901</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[9] = value;</div>
+<div class="line"><span class="lineno"> 1902</span>            }</div>
+<div class="line"><span class="lineno"> 1903</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae4bfabe331ca0829b8f5a1b091697c99" name="ae4bfabe331ca0829b8f5a1b091697c99"></a>
@@ -899,7 +1099,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01881">1881</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1882</span>        {</div>
+<div class="line"><span class="lineno"> 1883</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1884</span>            {</div>
+<div class="line"><span class="lineno"> 1885</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[8];</div>
+<div class="line"><span class="lineno"> 1886</span>            }</div>
+<div class="line"><span class="lineno"> 1887</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1888</span>            {</div>
+<div class="line"><span class="lineno"> 1889</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[8] = value;</div>
+<div class="line"><span class="lineno"> 1890</span>            }</div>
+<div class="line"><span class="lineno"> 1891</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a811f17dd221ee4a0e113edfa28500892" name="a811f17dd221ee4a0e113edfa28500892"></a>
@@ -923,6 +1133,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02061">2061</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2062</span>        {</div>
+<div class="line"><span class="lineno"> 2063</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2064</span>            {</div>
+<div class="line"><span class="lineno"> 2065</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[11];</div>
+<div class="line"><span class="lineno"> 2066</span>            }</div>
+<div class="line"><span class="lineno"> 2067</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2068</span>            {</div>
+<div class="line"><span class="lineno"> 2069</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[11] = value;</div>
+<div class="line"><span class="lineno"> 2070</span>            }</div>
+<div class="line"><span class="lineno"> 2071</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02165">Player.Flags.OnBuild()</a>.</p>
 
 </div>
 </div>
@@ -947,7 +1169,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01929">1929</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1930</span>        {</div>
+<div class="line"><span class="lineno"> 1931</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1932</span>            {</div>
+<div class="line"><span class="lineno"> 1933</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[12];</div>
+<div class="line"><span class="lineno"> 1934</span>            }</div>
+<div class="line"><span class="lineno"> 1935</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1936</span>            {</div>
+<div class="line"><span class="lineno"> 1937</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[12] = value;</div>
+<div class="line"><span class="lineno"> 1938</span>            }</div>
+<div class="line"><span class="lineno"> 1939</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae2b0b1959e0e87d8279a45536c31ee74" name="ae2b0b1959e0e87d8279a45536c31ee74"></a>
@@ -971,6 +1203,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02109">2109</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2110</span>        {</div>
+<div class="line"><span class="lineno"> 2111</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2112</span>            {</div>
+<div class="line"><span class="lineno"> 2113</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[16];</div>
+<div class="line"><span class="lineno"> 2114</span>            }</div>
+<div class="line"><span class="lineno"> 2115</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2116</span>            {</div>
+<div class="line"><span class="lineno"> 2117</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[16] = value;</div>
+<div class="line"><span class="lineno"> 2118</span>            }</div>
+<div class="line"><span class="lineno"> 2119</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00138">GameDate.AdvanceDay()</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1239,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02025">2025</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2026</span>        {</div>
+<div class="line"><span class="lineno"> 2027</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2028</span>            {</div>
+<div class="line"><span class="lineno"> 2029</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[20];</div>
+<div class="line"><span class="lineno"> 2030</span>            }</div>
+<div class="line"><span class="lineno"> 2031</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2032</span>            {</div>
+<div class="line"><span class="lineno"> 2033</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[20] = value;</div>
+<div class="line"><span class="lineno"> 2034</span>            }</div>
+<div class="line"><span class="lineno"> 2035</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac29eb4ec0213c206ff2b5622e0b17a86" name="ac29eb4ec0213c206ff2b5622e0b17a86"></a>
@@ -1019,7 +1273,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01905">1905</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1906</span>        {</div>
+<div class="line"><span class="lineno"> 1907</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1908</span>            {</div>
+<div class="line"><span class="lineno"> 1909</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[10];</div>
+<div class="line"><span class="lineno"> 1910</span>            }</div>
+<div class="line"><span class="lineno"> 1911</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1912</span>            {</div>
+<div class="line"><span class="lineno"> 1913</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[10] = value;</div>
+<div class="line"><span class="lineno"> 1914</span>            }</div>
+<div class="line"><span class="lineno"> 1915</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aded06c5f4f0388591401b14a1fb1e4a6" name="aded06c5f4f0388591401b14a1fb1e4a6"></a>
@@ -1043,7 +1307,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01833">1833</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1834</span>        {</div>
+<div class="line"><span class="lineno"> 1835</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1836</span>            {</div>
+<div class="line"><span class="lineno"> 1837</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[4];</div>
+<div class="line"><span class="lineno"> 1838</span>            }</div>
+<div class="line"><span class="lineno"> 1839</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1840</span>            {</div>
+<div class="line"><span class="lineno"> 1841</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[4] = value;</div>
+<div class="line"><span class="lineno"> 1842</span>            }</div>
+<div class="line"><span class="lineno"> 1843</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad562e8c3ff18d18ade5b1f883ca704d3" name="ad562e8c3ff18d18ade5b1f883ca704d3"></a>
@@ -1067,7 +1341,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01821">1821</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1822</span>        {</div>
+<div class="line"><span class="lineno"> 1823</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1824</span>            {</div>
+<div class="line"><span class="lineno"> 1825</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[3];</div>
+<div class="line"><span class="lineno"> 1826</span>            }</div>
+<div class="line"><span class="lineno"> 1827</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1828</span>            {</div>
+<div class="line"><span class="lineno"> 1829</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[3] = value;</div>
+<div class="line"><span class="lineno"> 1830</span>            }</div>
+<div class="line"><span class="lineno"> 1831</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3bcac4246cb62687ae8dd0940717e8ce" name="a3bcac4246cb62687ae8dd0940717e8ce"></a>
@@ -1091,7 +1375,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01797">1797</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1798</span>        {</div>
+<div class="line"><span class="lineno"> 1799</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1800</span>            {</div>
+<div class="line"><span class="lineno"> 1801</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[1];</div>
+<div class="line"><span class="lineno"> 1802</span>            }</div>
+<div class="line"><span class="lineno"> 1803</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1804</span>            {</div>
+<div class="line"><span class="lineno"> 1805</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[1] = value;</div>
+<div class="line"><span class="lineno"> 1806</span>            }</div>
+<div class="line"><span class="lineno"> 1807</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e5de12c4be974b9ba21190161d514e6" name="a0e5de12c4be974b9ba21190161d514e6"></a>
@@ -1115,7 +1409,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01989">1989</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1990</span>        {</div>
+<div class="line"><span class="lineno"> 1991</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1992</span>            {</div>
+<div class="line"><span class="lineno"> 1993</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[17];</div>
+<div class="line"><span class="lineno"> 1994</span>            }</div>
+<div class="line"><span class="lineno"> 1995</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1996</span>            {</div>
+<div class="line"><span class="lineno"> 1997</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[17] = value;</div>
+<div class="line"><span class="lineno"> 1998</span>            }</div>
+<div class="line"><span class="lineno"> 1999</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aade2c4bf438cde2bc5d80aac7f9bd8b8" name="aade2c4bf438cde2bc5d80aac7f9bd8b8"></a>
@@ -1139,7 +1443,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01917">1917</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1918</span>        {</div>
+<div class="line"><span class="lineno"> 1919</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1920</span>            {</div>
+<div class="line"><span class="lineno"> 1921</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[11];</div>
+<div class="line"><span class="lineno"> 1922</span>            }</div>
+<div class="line"><span class="lineno"> 1923</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1924</span>            {</div>
+<div class="line"><span class="lineno"> 1925</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[11] = value;</div>
+<div class="line"><span class="lineno"> 1926</span>            }</div>
+<div class="line"><span class="lineno"> 1927</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74a126baeb27da0fb77813e520e70da3" name="a74a126baeb27da0fb77813e520e70da3"></a>
@@ -1163,7 +1477,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01845">1845</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1846</span>        {</div>
+<div class="line"><span class="lineno"> 1847</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1848</span>            {</div>
+<div class="line"><span class="lineno"> 1849</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[5];</div>
+<div class="line"><span class="lineno"> 1850</span>            }</div>
+<div class="line"><span class="lineno"> 1851</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1852</span>            {</div>
+<div class="line"><span class="lineno"> 1853</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[5] = value;</div>
+<div class="line"><span class="lineno"> 1854</span>            }</div>
+<div class="line"><span class="lineno"> 1855</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afede34f5fce7d68e3b31ebf3f59d6c04" name="afede34f5fce7d68e3b31ebf3f59d6c04"></a>
@@ -1187,7 +1511,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01869">1869</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1870</span>        {</div>
+<div class="line"><span class="lineno"> 1871</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1872</span>            {</div>
+<div class="line"><span class="lineno"> 1873</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[7];</div>
+<div class="line"><span class="lineno"> 1874</span>            }</div>
+<div class="line"><span class="lineno"> 1875</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1876</span>            {</div>
+<div class="line"><span class="lineno"> 1877</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[7] = value;</div>
+<div class="line"><span class="lineno"> 1878</span>            }</div>
+<div class="line"><span class="lineno"> 1879</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0865b4a2e04fdc5ca76200d9b7c835b2" name="a0865b4a2e04fdc5ca76200d9b7c835b2"></a>
@@ -1211,7 +1545,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01941">1941</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1942</span>        {</div>
+<div class="line"><span class="lineno"> 1943</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1944</span>            {</div>
+<div class="line"><span class="lineno"> 1945</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[13];</div>
+<div class="line"><span class="lineno"> 1946</span>            }</div>
+<div class="line"><span class="lineno"> 1947</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1948</span>            {</div>
+<div class="line"><span class="lineno"> 1949</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[13] = value;</div>
+<div class="line"><span class="lineno"> 1950</span>            }</div>
+<div class="line"><span class="lineno"> 1951</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a926bbf254a0a11260ee94551074192d1" name="a926bbf254a0a11260ee94551074192d1"></a>
@@ -1235,7 +1579,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02121">2121</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2122</span>        {</div>
+<div class="line"><span class="lineno"> 2123</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2124</span>            {</div>
+<div class="line"><span class="lineno"> 2125</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[17];</div>
+<div class="line"><span class="lineno"> 2126</span>            }</div>
+<div class="line"><span class="lineno"> 2127</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2128</span>            {</div>
+<div class="line"><span class="lineno"> 2129</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[17] = value;</div>
+<div class="line"><span class="lineno"> 2130</span>            }</div>
+<div class="line"><span class="lineno"> 2131</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefeb6e9d52e378c8a49a0d5fefe6f7f3" name="aefeb6e9d52e378c8a49a0d5fefe6f7f3"></a>
@@ -1259,7 +1613,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01977">1977</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1978</span>        {</div>
+<div class="line"><span class="lineno"> 1979</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1980</span>            {</div>
+<div class="line"><span class="lineno"> 1981</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[16];</div>
+<div class="line"><span class="lineno"> 1982</span>            }</div>
+<div class="line"><span class="lineno"> 1983</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1984</span>            {</div>
+<div class="line"><span class="lineno"> 1985</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[16] = value;</div>
+<div class="line"><span class="lineno"> 1986</span>            }</div>
+<div class="line"><span class="lineno"> 1987</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acc7b8ca489691a8526d34707525cd9ef" name="acc7b8ca489691a8526d34707525cd9ef"></a>
@@ -1283,7 +1647,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01965">1965</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1966</span>        {</div>
+<div class="line"><span class="lineno"> 1967</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1968</span>            {</div>
+<div class="line"><span class="lineno"> 1969</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[15];</div>
+<div class="line"><span class="lineno"> 1970</span>            }</div>
+<div class="line"><span class="lineno"> 1971</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1972</span>            {</div>
+<div class="line"><span class="lineno"> 1973</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[15] = value;</div>
+<div class="line"><span class="lineno"> 1974</span>            }</div>
+<div class="line"><span class="lineno"> 1975</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a23289c953b5d00e073bcb379e7efd421" name="a23289c953b5d00e073bcb379e7efd421"></a>
@@ -1307,7 +1681,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02001">2001</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2002</span>        {</div>
+<div class="line"><span class="lineno"> 2003</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2004</span>            {</div>
+<div class="line"><span class="lineno"> 2005</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[18];</div>
+<div class="line"><span class="lineno"> 2006</span>            }</div>
+<div class="line"><span class="lineno"> 2007</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2008</span>            {</div>
+<div class="line"><span class="lineno"> 2009</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[18] = value;</div>
+<div class="line"><span class="lineno"> 2010</span>            }</div>
+<div class="line"><span class="lineno"> 2011</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae90e608b09597b709bc72706172c887c" name="ae90e608b09597b709bc72706172c887c"></a>
@@ -1331,6 +1715,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02133">2133</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2134</span>        {</div>
+<div class="line"><span class="lineno"> 2135</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2136</span>            {</div>
+<div class="line"><span class="lineno"> 2137</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[18];</div>
+<div class="line"><span class="lineno"> 2138</span>            }</div>
+<div class="line"><span class="lineno"> 2139</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2140</span>            {</div>
+<div class="line"><span class="lineno"> 2141</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[18] = value;</div>
+<div class="line"><span class="lineno"> 2142</span>            }</div>
+<div class="line"><span class="lineno"> 2143</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1751,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02097">2097</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2098</span>        {</div>
+<div class="line"><span class="lineno"> 2099</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2100</span>            {</div>
+<div class="line"><span class="lineno"> 2101</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[15];</div>
+<div class="line"><span class="lineno"> 2102</span>            }</div>
+<div class="line"><span class="lineno"> 2103</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2104</span>            {</div>
+<div class="line"><span class="lineno"> 2105</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[15] = value;</div>
+<div class="line"><span class="lineno"> 2106</span>            }</div>
+<div class="line"><span class="lineno"> 2107</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a162b7b621a261de0baaa5d7cd3337e89" name="a162b7b621a261de0baaa5d7cd3337e89"></a>
@@ -1379,7 +1785,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02037">2037</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2038</span>        {</div>
+<div class="line"><span class="lineno"> 2039</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2040</span>            {</div>
+<div class="line"><span class="lineno"> 2041</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[21];</div>
+<div class="line"><span class="lineno"> 2042</span>            }</div>
+<div class="line"><span class="lineno"> 2043</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2044</span>            {</div>
+<div class="line"><span class="lineno"> 2045</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[21] = value;</div>
+<div class="line"><span class="lineno"> 2046</span>            }</div>
+<div class="line"><span class="lineno"> 2047</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3dfc167c9e36aab9b7bd9af3d0de093f" name="a3dfc167c9e36aab9b7bd9af3d0de093f"></a>
@@ -1403,7 +1819,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02073">2073</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2074</span>        {</div>
+<div class="line"><span class="lineno"> 2075</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2076</span>            {</div>
+<div class="line"><span class="lineno"> 2077</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[13];</div>
+<div class="line"><span class="lineno"> 2078</span>            }</div>
+<div class="line"><span class="lineno"> 2079</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2080</span>            {</div>
+<div class="line"><span class="lineno"> 2081</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[13] = value;</div>
+<div class="line"><span class="lineno"> 2082</span>            }</div>
+<div class="line"><span class="lineno"> 2083</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af478a3f834f95c71c3e79d0f2f03225d" name="af478a3f834f95c71c3e79d0f2f03225d"></a>
@@ -1427,7 +1853,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01857">1857</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1858</span>        {</div>
+<div class="line"><span class="lineno"> 1859</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1860</span>            {</div>
+<div class="line"><span class="lineno"> 1861</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[6];</div>
+<div class="line"><span class="lineno"> 1862</span>            }</div>
+<div class="line"><span class="lineno"> 1863</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1864</span>            {</div>
+<div class="line"><span class="lineno"> 1865</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[6] = value;</div>
+<div class="line"><span class="lineno"> 1866</span>            }</div>
+<div class="line"><span class="lineno"> 1867</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a56be341f71376da615f18635efc20be1" name="a56be341f71376da615f18635efc20be1"></a>
@@ -1451,7 +1887,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02049">2049</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2050</span>        {</div>
+<div class="line"><span class="lineno"> 2051</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2052</span>            {</div>
+<div class="line"><span class="lineno"> 2053</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[10];</div>
+<div class="line"><span class="lineno"> 2054</span>            }</div>
+<div class="line"><span class="lineno"> 2055</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2056</span>            {</div>
+<div class="line"><span class="lineno"> 2057</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[10] = value;</div>
+<div class="line"><span class="lineno"> 2058</span>            }</div>
+<div class="line"><span class="lineno"> 2059</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac752e751c68fed05d32dc9432c0f8486" name="ac752e751c68fed05d32dc9432c0f8486"></a>
@@ -1475,7 +1921,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01953">1953</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1954</span>        {</div>
+<div class="line"><span class="lineno"> 1955</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1956</span>            {</div>
+<div class="line"><span class="lineno"> 1957</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[14];</div>
+<div class="line"><span class="lineno"> 1958</span>            }</div>
+<div class="line"><span class="lineno"> 1959</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1960</span>            {</div>
+<div class="line"><span class="lineno"> 1961</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[14] = value;</div>
+<div class="line"><span class="lineno"> 1962</span>            }</div>
+<div class="line"><span class="lineno"> 1963</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a84f6a6d4937597697626388aa307243c" name="a84f6a6d4937597697626388aa307243c"></a>
@@ -1499,7 +1955,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02085">2085</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2086</span>        {</div>
+<div class="line"><span class="lineno"> 2087</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2088</span>            {</div>
+<div class="line"><span class="lineno"> 2089</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[14];</div>
+<div class="line"><span class="lineno"> 2090</span>            }</div>
+<div class="line"><span class="lineno"> 2091</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2092</span>            {</div>
+<div class="line"><span class="lineno"> 2093</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[14] = value;</div>
+<div class="line"><span class="lineno"> 2094</span>            }</div>
+<div class="line"><span class="lineno"> 2095</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1ddf8b634e2bf98b569e26d98d6e1143" name="a1ddf8b634e2bf98b569e26d98d6e1143"></a>
@@ -1523,7 +1989,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02013">2013</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 2014</span>        {</div>
+<div class="line"><span class="lineno"> 2015</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 2016</span>            {</div>
+<div class="line"><span class="lineno"> 2017</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[19];</div>
+<div class="line"><span class="lineno"> 2018</span>            }</div>
+<div class="line"><span class="lineno"> 2019</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 2020</span>            {</div>
+<div class="line"><span class="lineno"> 2021</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[19] = value;</div>
+<div class="line"><span class="lineno"> 2022</span>            }</div>
+<div class="line"><span class="lineno"> 2023</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae528e64957ae5b285b7ae15b043e322e" name="ae528e64957ae5b285b7ae15b043e322e"></a>
@@ -1547,16 +2023,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01809">1809</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1810</span>        {</div>
+<div class="line"><span class="lineno"> 1811</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno"> 1812</span>            {</div>
+<div class="line"><span class="lineno"> 1813</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[2];</div>
+<div class="line"><span class="lineno"> 1814</span>            }</div>
+<div class="line"><span class="lineno"> 1815</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno"> 1816</span>            {</div>
+<div class="line"><span class="lineno"> 1817</span>                this.<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>[2] = value;</div>
+<div class="line"><span class="lineno"> 1818</span>            }</div>
+<div class="line"><span class="lineno"> 1819</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Player_8cs_source.html">Player.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classPlayer.html">Player</a></li><li class="navelem"><a class="el" href="classPlayer_1_1Flags.html">Flags</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

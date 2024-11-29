@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceFood.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -155,7 +175,59 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFood_8cs_source.html#l00007">7</a> of file <a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceFood_1_1Row2.html">SourceFood.Row2</a></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">   12</span>            _origin = SourceData.GetString(1),</div>
+<div class="line"><span class="lineno">   13</span>            name_JP = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   14</span>            unit_JP = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">   15</span>            name = SourceData.GetString(4),</div>
+<div class="line"><span class="lineno">   16</span>            unit = SourceData.GetString(5),</div>
+<div class="line"><span class="lineno">   17</span>            name2_JP = SourceData.GetStringArray(6),</div>
+<div class="line"><span class="lineno">   18</span>            name2 = SourceData.GetStringArray(7),</div>
+<div class="line"><span class="lineno">   19</span>            tiles = SourceData.GetIntArray(8),</div>
+<div class="line"><span class="lineno">   20</span>            parse = SourceData.GetStringArray(9),</div>
+<div class="line"><span class="lineno">   21</span>            vals = SourceData.GetStringArray(10),</div>
+<div class="line"><span class="lineno">   22</span>            trait = SourceData.GetStringArray(11),</div>
+<div class="line"><span class="lineno">   23</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(12, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   24</span>            idTaste = SourceData.GetString(14),</div>
+<div class="line"><span class="lineno">   25</span>            TST = SourceData.GetInt(15),</div>
+<div class="line"><span class="lineno">   26</span>            NUT = SourceData.GetInt(16),</div>
+<div class="line"><span class="lineno">   27</span>            STR = SourceData.GetInt(17),</div>
+<div class="line"><span class="lineno">   28</span>            STR2 = SourceData.GetInt(18),</div>
+<div class="line"><span class="lineno">   29</span>            END = SourceData.GetInt(19),</div>
+<div class="line"><span class="lineno">   30</span>            END2 = SourceData.GetInt(20),</div>
+<div class="line"><span class="lineno">   31</span>            DEX = SourceData.GetInt(21),</div>
+<div class="line"><span class="lineno">   32</span>            DEX2 = SourceData.GetInt(22),</div>
+<div class="line"><span class="lineno">   33</span>            PER = SourceData.GetInt(23),</div>
+<div class="line"><span class="lineno">   34</span>            PER2 = SourceData.GetInt(24),</div>
+<div class="line"><span class="lineno">   35</span>            LER = SourceData.GetInt(25),</div>
+<div class="line"><span class="lineno">   36</span>            LER2 = SourceData.GetInt(26),</div>
+<div class="line"><span class="lineno">   37</span>            WIL = SourceData.GetInt(27),</div>
+<div class="line"><span class="lineno">   38</span>            WIL2 = SourceData.GetInt(28),</div>
+<div class="line"><span class="lineno">   39</span>            MAG = SourceData.GetInt(29),</div>
+<div class="line"><span class="lineno">   40</span>            MAG2 = SourceData.GetInt(30),</div>
+<div class="line"><span class="lineno">   41</span>            CHA = SourceData.GetInt(31),</div>
+<div class="line"><span class="lineno">   42</span>            CHA2 = SourceData.GetInt(32),</div>
+<div class="line"><span class="lineno">   43</span>            LV = SourceData.GetInt(34),</div>
+<div class="line"><span class="lineno">   44</span>            chance = SourceData.GetInt(35),</div>
+<div class="line"><span class="lineno">   45</span>            value = SourceData.GetInt(36),</div>
+<div class="line"><span class="lineno">   46</span>            weight = SourceData.GetInt(37),</div>
+<div class="line"><span class="lineno">   47</span>            recipeKey = SourceData.GetStringArray(38),</div>
+<div class="line"><span class="lineno">   48</span>            factory = SourceData.GetStringArray(39),</div>
+<div class="line"><span class="lineno">   49</span>            components = SourceData.GetStringArray(40),</div>
+<div class="line"><span class="lineno">   50</span>            defMat = SourceData.GetString(41),</div>
+<div class="line"><span class="lineno">   51</span>            category = SourceData.GetString(42),</div>
+<div class="line"><span class="lineno">   52</span>            tag = SourceData.GetStringArray(43),</div>
+<div class="line"><span class="lineno">   53</span>            detail_JP = SourceData.GetString(44),</div>
+<div class="line"><span class="lineno">   54</span>            detail = SourceData.GetString(45)</div>
+<div class="line"><span class="lineno">   55</span>        };</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00645">Core.cs:645</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html"><div class="ttname"><a href="classSourceFood_1_1Row2.html">SourceFood.Row2</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00111">SourceFood.cs:112</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af20da1653b61c12d835799944465f304" name="af20da1653b61c12d835799944465f304"></a>
@@ -199,6 +271,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFood_8cs_source.html#l00091">91</a> of file <a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        A_2.list.Add(ele);</div>
+<div class="line"><span class="lineno">   94</span>        A_2.list.Add(a);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourceFood_8cs_source.html#l00098">g__Parse()</a>, and <a class="el" href="SourceFood_8cs_source.html#l00063">OnImportRow()</a>.</p>
 
 </div>
 </div>
@@ -255,6 +333,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFood_8cs_source.html#l00098">98</a> of file <a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (raw != 0)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af20da1653b61c12d835799944465f304">g__Add</a>|3_0(ele, raw, ref A_4);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (raw2 != 0)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af20da1653b61c12d835799944465f304">g__Add</a>|3_0(ele2, raw2, ref A_4);</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclassSourceFood_html"><div class="ttname"><a href="classSourceFood.html">SourceFood</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00005">SourceFood.cs:6</a></div></div>
+<div class="ttc" id="aclassSourceFood_html_a30073caa3934618c524c1c9a658c5649"><div class="ttname"><a href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">SourceFood.OnImportRow</a></div><div class="ttdeci">override void OnImportRow(SourceThingV.Row _r, SourceThing.Row c)</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00063">SourceFood.cs:63</a></div></div>
+<div class="ttc" id="aclassSourceFood_html_af20da1653b61c12d835799944465f304"><div class="ttname"><a href="classSourceFood.html#af20da1653b61c12d835799944465f304">SourceFood.g__Add</a></div><div class="ttdeci">static void&lt; OnImportRow &gt; g__Add(int ele, int a, ref SourceFood.&lt;&gt;c__DisplayClass3_0 A_2)</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00091">SourceFood.cs:91</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceFood_8cs_source.html#l00091">g__Add()</a>, and <a class="el" href="SourceFood_8cs_source.html#l00063">OnImportRow()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceFood_8cs_source.html#l00063">OnImportRow()</a>.</p>
 
 </div>
 </div>
@@ -295,6 +390,57 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classSourceThingV.html#a3e6c9c1cf3e408b0b43075008da411f4">SourceThingV</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SourceFood_8cs_source.html#l00063">63</a> of file <a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;&gt;c__DisplayClass3_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">   66</span>        CS$&lt;&gt;8__locals1.list = <span class="keyword">new</span> List&lt;int&gt;(c.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>);</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_class" href="classSourceFood_1_1Row2.html">SourceFood.Row2</a> row = _r as <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.<a class="code hl_class" href="classSourceFood_1_1Row2.html">Row2</a>;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af20da1653b61c12d835799944465f304">g__Add</a>|3_0(10, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a368bcf1bfcff214d1e0f353fa63573d7">NUT</a>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a6962f084b4174c0655d39f17d8fbd35a">STR</a>, 70, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a2a54bea517929836eab918e23d1ce89f">STR2</a>, 440, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a43a97396e0005525fbb52477d280b29c">END</a>, 71, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a08266b4b0ef26fd84ce917faff669039">END2</a>, 441, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#ac71c801dcc123c5109a2099e98fa7286">DEX</a>, 72, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a23fc71e0f5faac2708264397556accbe">DEX2</a>, 442, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#ae277949c8016a1a5bbda5c14d260be48">PER</a>, 73, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#ac3851a11143aa2bb46c8023016c1242f">PER2</a>, 443, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a29dd0cedce687593921a08255821ee02">LER</a>, 74, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#adcba9b22ae0b9da2081704c1a96627e1">LER2</a>, 444, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#af7155280f3f2dbd84ab4bbf1c9f55b4b">WIL</a>, 75, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a4812b3cf7bb3db692d58738beb2c8881">WIL2</a>, 445, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a82a7291a47f445aa415b804ada0cfd48">MAG</a>, 76, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a6d07684e1f89c7b1b0161a1444565207">MAG2</a>, 446, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">g__Parse</a>|3_1(row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#ac5dc6eb686e0d753ccaa5b596a2239c1">CHA</a>, 77, row.<a class="code hl_variable" href="classSourceFood_1_1Row2.html#a0960fd05829133b037c6884512b30745">CHA2</a>, 447, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>.Length; i += 2)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_class" href="classSourceFood.html">SourceFood</a>.&lt;<a class="code hl_function" href="classSourceFood.html#a30073caa3934618c524c1c9a658c5649">OnImportRow</a>&gt;<a class="code hl_function" href="classSourceFood.html#af20da1653b61c12d835799944465f304">g__Add</a>|3_0(_r.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>[i], row.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>[i + 1], ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        c.elements = CS$&lt;&gt;8__locals1.list.ToArray();</div>
+<div class="line"><span class="lineno">   82</span>        c.name2 = row.<a class="code hl_variable" href="classCardRow.html#a9c0ff7040c6c5e6a9a1fef1b3d83ee8b">name2</a>;</div>
+<div class="line"><span class="lineno">   83</span>        c.name2_JP = row.<a class="code hl_variable" href="classCardRow.html#a9ebb9f7de28ae61d18e6a0e919fb67ae">name2_JP</a>;</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (!row.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a1241557f2d517a1cc337ae87772209f0">unit_JP</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            c.unit_JP = row.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a1241557f2d517a1cc337ae87772209f0">unit_JP</a>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a43b9c7857c1d3a76e37178bdeed9e502"><div class="ttname"><a href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">CardRow.elements</a></div><div class="ttdeci">int[] elements</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00137">CardRow.cs:137</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a9c0ff7040c6c5e6a9a1fef1b3d83ee8b"><div class="ttname"><a href="classCardRow.html#a9c0ff7040c6c5e6a9a1fef1b3d83ee8b">CardRow.name2</a></div><div class="ttdeci">string[] name2</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00155">CardRow.cs:155</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a9ebb9f7de28ae61d18e6a0e919fb67ae"><div class="ttname"><a href="classCardRow.html#a9ebb9f7de28ae61d18e6a0e919fb67ae">CardRow.name2_JP</a></div><div class="ttdeci">string[] name2_JP</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00157">CardRow.cs:157</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a08266b4b0ef26fd84ce917faff669039"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a08266b4b0ef26fd84ce917faff669039">SourceFood.Row2.END2</a></div><div class="ttdeci">int END2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00141">SourceFood.cs:141</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a0960fd05829133b037c6884512b30745"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a0960fd05829133b037c6884512b30745">SourceFood.Row2.CHA2</a></div><div class="ttdeci">int CHA2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00165">SourceFood.cs:165</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a23fc71e0f5faac2708264397556accbe"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a23fc71e0f5faac2708264397556accbe">SourceFood.Row2.DEX2</a></div><div class="ttdeci">int DEX2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00145">SourceFood.cs:145</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a29dd0cedce687593921a08255821ee02"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a29dd0cedce687593921a08255821ee02">SourceFood.Row2.LER</a></div><div class="ttdeci">int LER</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00151">SourceFood.cs:151</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a2a54bea517929836eab918e23d1ce89f"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a2a54bea517929836eab918e23d1ce89f">SourceFood.Row2.STR2</a></div><div class="ttdeci">int STR2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00137">SourceFood.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a368bcf1bfcff214d1e0f353fa63573d7"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a368bcf1bfcff214d1e0f353fa63573d7">SourceFood.Row2.NUT</a></div><div class="ttdeci">int NUT</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00133">SourceFood.cs:133</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a43a97396e0005525fbb52477d280b29c"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a43a97396e0005525fbb52477d280b29c">SourceFood.Row2.END</a></div><div class="ttdeci">int END</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00139">SourceFood.cs:139</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a4812b3cf7bb3db692d58738beb2c8881"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a4812b3cf7bb3db692d58738beb2c8881">SourceFood.Row2.WIL2</a></div><div class="ttdeci">int WIL2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00157">SourceFood.cs:157</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a6962f084b4174c0655d39f17d8fbd35a"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a6962f084b4174c0655d39f17d8fbd35a">SourceFood.Row2.STR</a></div><div class="ttdeci">int STR</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00135">SourceFood.cs:135</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a6d07684e1f89c7b1b0161a1444565207"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a6d07684e1f89c7b1b0161a1444565207">SourceFood.Row2.MAG2</a></div><div class="ttdeci">int MAG2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00161">SourceFood.cs:161</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_a82a7291a47f445aa415b804ada0cfd48"><div class="ttname"><a href="classSourceFood_1_1Row2.html#a82a7291a47f445aa415b804ada0cfd48">SourceFood.Row2.MAG</a></div><div class="ttdeci">int MAG</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00159">SourceFood.cs:159</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_ac3851a11143aa2bb46c8023016c1242f"><div class="ttname"><a href="classSourceFood_1_1Row2.html#ac3851a11143aa2bb46c8023016c1242f">SourceFood.Row2.PER2</a></div><div class="ttdeci">int PER2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00149">SourceFood.cs:149</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_ac5dc6eb686e0d753ccaa5b596a2239c1"><div class="ttname"><a href="classSourceFood_1_1Row2.html#ac5dc6eb686e0d753ccaa5b596a2239c1">SourceFood.Row2.CHA</a></div><div class="ttdeci">int CHA</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00163">SourceFood.cs:163</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_ac71c801dcc123c5109a2099e98fa7286"><div class="ttname"><a href="classSourceFood_1_1Row2.html#ac71c801dcc123c5109a2099e98fa7286">SourceFood.Row2.DEX</a></div><div class="ttdeci">int DEX</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00143">SourceFood.cs:143</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_adcba9b22ae0b9da2081704c1a96627e1"><div class="ttname"><a href="classSourceFood_1_1Row2.html#adcba9b22ae0b9da2081704c1a96627e1">SourceFood.Row2.LER2</a></div><div class="ttdeci">int LER2</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00153">SourceFood.cs:153</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_ae277949c8016a1a5bbda5c14d260be48"><div class="ttname"><a href="classSourceFood_1_1Row2.html#ae277949c8016a1a5bbda5c14d260be48">SourceFood.Row2.PER</a></div><div class="ttdeci">int PER</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00147">SourceFood.cs:147</a></div></div>
+<div class="ttc" id="aclassSourceFood_1_1Row2_html_af7155280f3f2dbd84ab4bbf1c9f55b4b"><div class="ttname"><a href="classSourceFood_1_1Row2.html#af7155280f3f2dbd84ab4bbf1c9f55b4b">SourceFood.Row2.WIL</a></div><div class="ttdeci">int WIL</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00155">SourceFood.cs:155</a></div></div>
+<div class="ttc" id="aclassSourceFood_html_af5ff31127b989d2e0ab89d7e1e9faed3"><div class="ttname"><a href="classSourceFood.html#af5ff31127b989d2e0ab89d7e1e9faed3">SourceFood.g__Parse</a></div><div class="ttdeci">static void&lt; OnImportRow &gt; g__Parse(int raw, int ele, int raw2, int ele2, ref SourceFood.&lt;&gt;c__DisplayClass3_0 A_4)</div><div class="ttdef"><b>Definition:</b> <a href="SourceFood_8cs_source.html#l00098">SourceFood.cs:98</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_a1241557f2d517a1cc337ae87772209f0"><div class="ttname"><a href="classSourceThing_1_1Row.html#a1241557f2d517a1cc337ae87772209f0">SourceThing.Row.unit_JP</a></div><div class="ttdeci">string unit_JP</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00201">SourceThing.cs:201</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceFood_8cs_source.html#l00163">SourceFood.Row2.CHA</a>, <a class="el" href="SourceFood_8cs_source.html#l00165">SourceFood.Row2.CHA2</a>, <a class="el" href="SourceFood_8cs_source.html#l00143">SourceFood.Row2.DEX</a>, <a class="el" href="SourceFood_8cs_source.html#l00145">SourceFood.Row2.DEX2</a>, <a class="el" href="CardRow_8cs_source.html#l00137">CardRow.elements</a>, <a class="el" href="SourceFood_8cs_source.html#l00139">SourceFood.Row2.END</a>, <a class="el" href="SourceFood_8cs_source.html#l00141">SourceFood.Row2.END2</a>, <a class="el" href="SourceFood_8cs_source.html#l00091">g__Add()</a>, <a class="el" href="SourceFood_8cs_source.html#l00098">g__Parse()</a>, <a class="el" href="SourceFood_8cs_source.html#l00151">SourceFood.Row2.LER</a>, <a class="el" href="SourceFood_8cs_source.html#l00153">SourceFood.Row2.LER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00159">SourceFood.Row2.MAG</a>, <a class="el" href="SourceFood_8cs_source.html#l00161">SourceFood.Row2.MAG2</a>, <a class="el" href="CardRow_8cs_source.html#l00155">CardRow.name2</a>, <a class="el" href="CardRow_8cs_source.html#l00157">CardRow.name2_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00133">SourceFood.Row2.NUT</a>, <a class="el" href="SourceFood_8cs_source.html#l00063">OnImportRow()</a>, <a class="el" href="SourceFood_8cs_source.html#l00147">SourceFood.Row2.PER</a>, <a class="el" href="SourceFood_8cs_source.html#l00149">SourceFood.Row2.PER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00135">SourceFood.Row2.STR</a>, <a class="el" href="SourceFood_8cs_source.html#l00137">SourceFood.Row2.STR2</a>, <a class="el" href="SourceThing_8cs_source.html#l00201">SourceThing.Row.unit_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00155">SourceFood.Row2.WIL</a>, and <a class="el" href="SourceFood_8cs_source.html#l00157">SourceFood.Row2.WIL2</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceFood_8cs_source.html#l00098">g__Parse()</a>, and <a class="el" href="SourceFood_8cs_source.html#l00063">OnImportRow()</a>.</p>
 
 </div>
 </div>
@@ -323,16 +469,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceFood_8cs_source.html#l00058">58</a> of file <a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        this.map[r.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>] = r;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceFood_8cs_source.html">SourceFood.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceFood.html">SourceFood</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

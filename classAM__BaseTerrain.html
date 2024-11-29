@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__BaseTerrain.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -564,6 +584,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a03fa9dcca10a8f7914aec55c2c438030">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00066">66</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -604,6 +633,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#ac7b649874fcfb6c6f2fc9c558b97cd89">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00071">71</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            point = this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> base.HitTest(point, start);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
+<div class="ttc" id="aclassAM__BaseTerrain_html_ad34525c196161376cf58244b901102dd"><div class="ttname"><a href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">AM_BaseTerrain.lastPoint</a></div><div class="ttdeci">Point lastPoint</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00129">AM_BaseTerrain.cs:129</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, and <a class="el" href="AM__BaseTerrain_8cs_source.html#l00129">lastPoint</a>.</p>
 
 </div>
 </div>
@@ -644,7 +689,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a96ac66fb5fdbdb9d2b3301da7f1468ec">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00118">118</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        this.firstClick = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a91417c38e96cc85869ef694fe883d68c" name="a91417c38e96cc85869ef694fe883d68c"></a>
@@ -690,6 +738,38 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#ae90f3e8c472c5f56606e093826a18b4c">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00084">84</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            point = this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        this.timer += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (!Input.GetMouseButton(0))</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            this.firstClick = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(point.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, point.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, (<span class="keywordtype">float</span>)<span class="keyword">this</span>.brushRadius, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">  100</span>                {</div>
+<div class="line"><span class="lineno">  101</span>                    this.&lt;&gt;n__0(p, result, dir);</div>
+<div class="line"><span class="lineno">  102</span>                }</div>
+<div class="line"><span class="lineno">  103</span>            });</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        base.OnRenderTile(point, result, dir);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00693">Core.cs:693</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_a09c1df49e3d0b39ff98627b436211ab1"><div class="ttname"><a href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">Map.ForeachSphere</a></div><div class="ttdeci">void ForeachSphere(int _x, int _z, float r, Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02430">Map.cs:2430</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02430">Map.ForeachSphere()</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="AM__BaseTerrain_8cs_source.html#l00129">lastPoint</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -719,6 +799,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4025ab325b17507860ed9192c0b79769">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00109">109</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        base.OnUpdateInput();</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classAM__BaseTerrain.html#a0e496646005f9a11fc3670af92e64b8f">FixedPointer</a> &amp;&amp; (!EInput.leftMouse.pressing || EInput.leftMouse.dragging))</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            this.lastPoint = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="ttc" id="aclassAM__BaseTerrain_html_a0e496646005f9a11fc3670af92e64b8f"><div class="ttname"><a href="classAM__BaseTerrain.html#a0e496646005f9a11fc3670af92e64b8f">AM_BaseTerrain.FixedPointer</a></div><div class="ttdeci">virtual bool FixedPointer</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00054">AM_BaseTerrain.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__BaseTerrain_8cs_source.html#l00055">FixedPointer</a>.</p>
 
 </div>
 </div>
@@ -748,7 +838,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a94402569e1155504b547417608e7ef43">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00062">62</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -782,6 +874,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00129">129</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__BaseTerrain_8cs_source.html#l00071">HitTest()</a>, <a class="el" href="AM__Terrain_8cs_source.html#l00041">AM_Terrain.OnProcessTiles()</a>, and <a class="el" href="AM__BaseTerrain_8cs_source.html#l00084">OnRenderTile()</a>.</p>
+
 </div>
 </div>
 <a id="ae4c877534d8aa51859a69bf30eb6cc25" name="ae4c877534d8aa51859a69bf30eb6cc25"></a>
@@ -814,6 +908,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00125">125</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Populate_8cs_source.html#l00028">AM_Populate.OnProcessTiles()</a>, and <a class="el" href="AM__Terrain_8cs_source.html#l00041">AM_Terrain.OnProcessTiles()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -838,7 +934,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00038">38</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e496646005f9a11fc3670af92e64b8f" name="a0e496646005f9a11fc3670af92e64b8f"></a>
@@ -862,6 +964,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00054">54</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__BaseTerrain_8cs_source.html#l00109">OnUpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -886,7 +996,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00046">46</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a1fb7819dc89a6da14d98ec25dae4ba" name="a5a1fb7819dc89a6da14d98ec25dae4ba"></a>
@@ -910,7 +1026,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00006">6</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.Single;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_a126c209eb9b08ada2549a86c6fc6dd1f"><div class="ttname"><a href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">BaseTileSelector.SelectType</a></div><div class="ttdeci">SelectType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00517">BaseTileSelector.cs:518</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35be37dfa1981d7a89fe553d26a79b9e" name="a35be37dfa1981d7a89fe553d26a79b9e"></a>
@@ -934,7 +1058,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00030">30</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa325566e94c7f01f00917047c3ad0de4" name="aa325566e94c7f01f00917047c3ad0de4"></a>
@@ -958,7 +1088,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00014">14</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afd12a25db7be94f8ac5fa7477df7216b" name="afd12a25db7be94f8ac5fa7477df7216b"></a>
@@ -982,16 +1118,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__BaseTerrain_8cs_source.html#l00022">22</a> of file <a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__BaseTerrain_8cs_source.html">AM_BaseTerrain.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__BaseTerrain.html">AM_BaseTerrain</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

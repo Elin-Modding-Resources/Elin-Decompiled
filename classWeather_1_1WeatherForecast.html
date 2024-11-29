@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWeather_1_1WeatherForecast.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classWeather.html">Weather</a></li><li class="navelem"><a class="el" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -134,6 +150,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00319">319</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>        {</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>.ContainsKey(con))</div>
+<div class="line"><span class="lineno">  322</span>            {</div>
+<div class="line"><span class="lineno">  323</span>                Dictionary&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>, <span class="keywordtype">int</span>&gt; dictionary = this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>;</div>
+<div class="line"><span class="lineno">  324</span>                dictionary[con] += h;</div>
+<div class="line"><span class="lineno">  325</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>            this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>[con] = h;</div>
+<div class="line"><span class="lineno">  328</span>        }</div>
+<div class="ttc" id="aclassWeather_1_1WeatherForecast_html_a6cea6a9408c5f8d5a2cd3519b407b74e"><div class="ttname"><a href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">Weather.WeatherForecast.cons</a></div><div class="ttdeci">Dictionary&lt; Weather.Condition, int &gt; cons</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00348">Weather.cs:348</a></div></div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00006">Weather.cs:7</a></div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1c"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a></div><div class="ttdeci">Condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00304">Weather.cs:305</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00348">Weather.WeatherForecast.cons</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">Weather.GetWeatherForecast()</a>.</p>
 
 </div>
 </div>
@@ -161,6 +193,24 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00330">330</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  331</span>        {</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  333</span>            {</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  335</span>            }</div>
+<div class="line"><span class="lineno">  336</span>            <span class="keywordtype">int</span> num = this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>.Sum((KeyValuePair&lt;Weather.Condition, int&gt; c) =&gt; c.Value);</div>
+<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno">  338</span>            {</div>
+<div class="line"><span class="lineno">  339</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a> key in <span class="keyword">this</span>.cons.Keys.ToList&lt;<a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>&gt;())</div>
+<div class="line"><span class="lineno">  340</span>                {</div>
+<div class="line"><span class="lineno">  341</span>                    this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>[key] = this.<a class="code hl_variable" href="classWeather_1_1WeatherForecast.html#a6cea6a9408c5f8d5a2cd3519b407b74e">cons</a>[key] * 100 / num;</div>
+<div class="line"><span class="lineno">  342</span>                }</div>
+<div class="line"><span class="lineno">  343</span>            }</div>
+<div class="line"><span class="lineno">  344</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Weather_8cs_source.html#l00348">Weather.WeatherForecast.cons</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">Weather.GetWeatherForecast()</a>.</p>
 
 </div>
 </div>
@@ -179,6 +229,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00348">348</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00319">Weather.WeatherForecast.Add()</a>, and <a class="el" href="Weather_8cs_source.html#l00330">Weather.WeatherForecast.Finish()</a>.</p>
+
 </div>
 </div>
 <a id="a491a8bf7feb30d0dba889836e1dac856" name="a491a8bf7feb30d0dba889836e1dac856"></a>
@@ -195,15 +247,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Weather_8cs_source.html#l00346">346</a> of file <a class="el" href="Weather_8cs_source.html">Weather.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00135">Weather.GetWeatherForecast()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Weather_8cs_source.html">Weather.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWeather.html">Weather</a></li><li class="navelem"><a class="el" href="classWeather_1_1WeatherForecast.html">WeatherForecast</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCrawler.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -176,7 +196,13 @@ Static Public Attributes</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00196">196</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_enumvalue" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceaaa0d528ba11ea1485d466dfe1ea40819">Surface</a>,</div>
+<div class="line"><span class="lineno">  199</span>        <a class="code hl_enumvalue" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceae1e4c8c9ccd9fc39c391da4bcd093fb2">Block</a></div>
+<div class="line"><span class="lineno">  200</span>    }</div>
+<div class="ttc" id="aclassCrawler_html_a1d70e0fe8698956c23946e01196254ceaaa0d528ba11ea1485d466dfe1ea40819"><div class="ttname"><a href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceaaa0d528ba11ea1485d466dfe1ea40819">Crawler.MoveType.Surface</a></div><div class="ttdeci">@ Surface</div></div>
+<div class="ttc" id="aclassCrawler_html_a1d70e0fe8698956c23946e01196254ceae1e4c8c9ccd9fc39c391da4bcd093fb2"><div class="ttname"><a href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceae1e4c8c9ccd9fc39c391da4bcd093fb2">Crawler.MoveType.Block</a></div><div class="ttdeci">@ Block</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae96bb2ae0a7dd1f2f6f7a2479b3ad689" name="ae96bb2ae0a7dd1f2f6f7a2479b3ad689"></a>
@@ -196,7 +222,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00202">202</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  203</span>    {</div>
+<div class="line"><span class="lineno">  204</span>        <a class="code hl_enumvalue" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceaaa0d528ba11ea1485d466dfe1ea40819">Surface</a>,</div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_enumvalue" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ceae1e4c8c9ccd9fc39c391da4bcd093fb2">Block</a></div>
+<div class="line"><span class="lineno">  206</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -225,6 +255,28 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00059">59</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">while</span> ((<span class="keywordtype">float</span>)num &lt; map.<a class="code hl_property" href="classMap.html#a9f8ad26078a4abc49ab53d20b7931517">sizeModifier</a> * (<span class="keywordtype">float</span>)<span class="keyword">this</span>.repeat + 1f)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_function" href="classCrawler.html#a4bc110fbc39e4db9330c5cc0daa6764a">Crawl</a>(map, map.<a class="code hl_function" href="classMapBounds.html#a7ab1f846065e7f55108ec1400e532467">GetRandomSurface</a>(<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>), delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a5ee355446dce77cb46674a1651c9c604">biome</a>.<a class="code hl_function" href="classBiomeProfile.html#ab93966d1d10cdaa3a4fe5651583ced0d">Populate</a>(p, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   67</span>            });</div>
+<div class="line"><span class="lineno">   68</span>            num++;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassBiomeProfile_html_ab93966d1d10cdaa3a4fe5651583ced0d"><div class="ttname"><a href="classBiomeProfile.html#ab93966d1d10cdaa3a4fe5651583ced0d">BiomeProfile.Populate</a></div><div class="ttdeci">void Populate(Point point, bool interior=false)</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00055">BiomeProfile.cs:55</a></div></div>
+<div class="ttc" id="aclassCell_html_a5ee355446dce77cb46674a1651c9c604"><div class="ttname"><a href="classCell.html#a5ee355446dce77cb46674a1651c9c604">Cell.biome</a></div><div class="ttdeci">BiomeProfile biome</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01190">Cell.cs:1191</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a4bc110fbc39e4db9330c5cc0daa6764a"><div class="ttname"><a href="classCrawler.html#a4bc110fbc39e4db9330c5cc0daa6764a">Crawler.Crawl</a></div><div class="ttdeci">void Crawl(Map map)</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00059">Crawler.cs:59</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a7ab1f846065e7f55108ec1400e532467"><div class="ttname"><a href="classMapBounds.html#a7ab1f846065e7f55108ec1400e532467">MapBounds.GetRandomSurface</a></div><div class="ttdeci">Point GetRandomSurface(int x, int z, int radius, bool walkable=true, bool allowWater=false)</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00183">MapBounds.cs:183</a></div></div>
+<div class="ttc" id="aclassMap_html_a9f8ad26078a4abc49ab53d20b7931517"><div class="ttname"><a href="classMap.html#a9f8ad26078a4abc49ab53d20b7931517">Map.sizeModifier</a></div><div class="ttdeci">float sizeModifier</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00051">Map.cs:52</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01191">Cell.biome</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Crawler_8cs_source.html#l00059">Crawl()</a>, <a class="el" href="MapBounds_8cs_source.html#l00183">MapBounds.GetRandomSurface()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00055">BiomeProfile.Populate()</a>, and <a class="el" href="Map_8cs_source.html#l00052">Map.sizeModifier</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00059">Crawl()</a>, and <a class="el" href="Crawler_8cs_source.html#l00007">CrawlUntil()</a>.</p>
 
 </div>
 </div>
@@ -269,6 +321,115 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00072">72</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCrawler.html#aa1553fff8a4b0ac1bcc4fddd0f3ef4cc">members</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classCrawler.html#adb94f69c4475730befee57e8b72bac7c">member</a>; i++)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                this.<a class="code hl_variable" href="classCrawler.html#aa1553fff8a4b0ac1bcc4fddd0f3ef4cc">members</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_class" href="classCrawler_1_1Member.html">Member</a>());</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = _start.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">   82</span>        point.<a class="code hl_function" href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Clamp</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_class" href="classCrawler_1_1Result.html">Crawler.Result</a> result = <span class="keyword">new</span> <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_class" href="classCrawler_1_1Result.html">Result</a>();</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a> biome = point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a5ee355446dce77cb46674a1651c9c604">biome</a>;</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a0d91578a7469b4f182100aa24da06899">sync</a>++;</div>
+<div class="line"><span class="lineno">   86</span>        this.Size = map.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>;</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">int</span> num = this.skipBorder ? 2 : 0;</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">int</span> num2 = this.skipBorder ? (this.Size - 2) : this.<a class="code hl_variable" href="classCrawler.html#a893966ecf0502fad8bee62accbb19123">Size</a>;</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a68494cc07c8946f89bbb44f50cef9527">mapping</a>.Length != <span class="keyword">this</span>.Size)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            Crawler.mapping = <span class="keyword">new</span> <span class="keywordtype">int</span>[map.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>, map.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>];</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_class" href="classCrawler_1_1Member.html">Member</a> <a class="code hl_variable" href="classCrawler.html#adb94f69c4475730befee57e8b72bac7c">member</a> in <span class="keyword">this</span>.members)</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="classCrawler.html#adb94f69c4475730befee57e8b72bac7c">member</a>.pos.Set(point);</div>
+<div class="line"><span class="lineno">   96</span>            member.life = this.<a class="code hl_variable" href="classCrawler.html#a2a4a37168659194e21bccb11aae313ee">life</a>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; this.<a class="code hl_variable" href="classCrawler.html#a2a4a37168659194e21bccb11aae313ee">life</a>; j++)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; this.<a class="code hl_variable" href="classCrawler.html#aa1553fff8a4b0ac1bcc4fddd0f3ef4cc">members</a>.Count; k++)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_class" href="classCrawler_1_1Member.html">Crawler.Member</a> member2 = this.<a class="code hl_variable" href="classCrawler.html#aa1553fff8a4b0ac1bcc4fddd0f3ef4cc">members</a>[k];</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordtype">int</span> num3 = <a class="code hl_class" href="classEScriptable.html">EScriptable</a>.<a class="code hl_function" href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">rnd</a>(3) - 1;</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordtype">int</span> num4 = <a class="code hl_class" href="classEScriptable.html">EScriptable</a>.<a class="code hl_function" href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">rnd</a>(3) - 1;</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordtype">int</span> num5 = member2.pos.x + num3;</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordtype">int</span> num6 = member2.pos.z + num4;</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (point.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(num5, num6) &lt;= this.radius &amp;&amp; num5 &gt;= num &amp;&amp; num6 &gt;= num &amp;&amp; num5 &lt; num2 &amp;&amp; num6 &lt; num2)</div>
+<div class="line"><span class="lineno">  108</span>                {</div>
+<div class="line"><span class="lineno">  109</span>                    <a class="code hl_class" href="classCell.html">Cell</a> cell = map.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[num5, num6];</div>
+<div class="line"><span class="lineno">  110</span>                    <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCrawler.html#ad9a061f672233378f8bff173adfd5af2">stickToStartBiome</a> || !(cell.<a class="code hl_property" href="classCell.html#a5ee355446dce77cb46674a1651c9c604">biome</a> != biome))</div>
+<div class="line"><span class="lineno">  111</span>                    {</div>
+<div class="line"><span class="lineno">  112</span>                        <a class="code hl_enumeration" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ce">Crawler.MoveType</a> <a class="code hl_variable" href="classCrawler.html#abd579ad92cd8b63d74e9dd170623ee4d">moveType</a> = this.<a class="code hl_variable" href="classCrawler.html#abd579ad92cd8b63d74e9dd170623ee4d">moveType</a>;</div>
+<div class="line"><span class="lineno">  113</span>                        <span class="keywordflow">if</span> (moveType != <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_enumeration" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ce">MoveType</a>.Surface)</div>
+<div class="line"><span class="lineno">  114</span>                        {</div>
+<div class="line"><span class="lineno">  115</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCrawler.html#abd579ad92cd8b63d74e9dd170623ee4d">moveType</a> == <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_enumeration" href="classCrawler.html#a1d70e0fe8698956c23946e01196254ce">MoveType</a>.Block)</div>
+<div class="line"><span class="lineno">  116</span>                            {</div>
+<div class="line"><span class="lineno">  117</span>                                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">_block</a> == 0 || !cell.<a class="code hl_property" href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">sourceBlock</a>.tileType.IsFullBlock || cell.<a class="code hl_property" href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Installed</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>                                {</div>
+<div class="line"><span class="lineno">  119</span>                                    <span class="keywordflow">goto</span> IL_269;</div>
+<div class="line"><span class="lineno">  120</span>                                }</div>
+<div class="line"><span class="lineno">  121</span>                            }</div>
+<div class="line"><span class="lineno">  122</span>                        }</div>
+<div class="line"><span class="lineno">  123</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  124</span>                        {</div>
+<div class="line"><span class="lineno">  125</span>                            <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">_block</a> != 0)</div>
+<div class="line"><span class="lineno">  126</span>                            {</div>
+<div class="line"><span class="lineno">  127</span>                                <span class="keywordflow">goto</span> IL_269;</div>
+<div class="line"><span class="lineno">  128</span>                            }</div>
+<div class="line"><span class="lineno">  129</span>                            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a>)</div>
+<div class="line"><span class="lineno">  130</span>                            {</div>
+<div class="line"><span class="lineno">  131</span>                                <span class="keywordflow">goto</span> IL_269;</div>
+<div class="line"><span class="lineno">  132</span>                            }</div>
+<div class="line"><span class="lineno">  133</span>                        }</div>
+<div class="line"><span class="lineno">  134</span>                        member2.<a class="code hl_variable" href="classCrawler_1_1Member.html#ac5d3a07a40bd28194e83cfcb9e994f1e">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(num5, num6);</div>
+<div class="line"><span class="lineno">  135</span>                        <span class="keywordflow">if</span> (<a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a68494cc07c8946f89bbb44f50cef9527">mapping</a>[num5, num6] != <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a0d91578a7469b4f182100aa24da06899">sync</a>)</div>
+<div class="line"><span class="lineno">  136</span>                        {</div>
+<div class="line"><span class="lineno">  137</span>                            <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a68494cc07c8946f89bbb44f50cef9527">mapping</a>[num5, num6] = <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_variable" href="classCrawler.html#a0d91578a7469b4f182100aa24da06899">sync</a>;</div>
+<div class="line"><span class="lineno">  138</span>                            <a class="code hl_class" href="classPoint.html">Point</a> point2 = member2.<a class="code hl_variable" href="classCrawler_1_1Member.html#ac5d3a07a40bd28194e83cfcb9e994f1e">pos</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">  139</span>                            result.<a class="code hl_variable" href="classCrawler_1_1Result.html#adcc9de8c72c08e9bdf3f5315b15ef3a5">points</a>.Add(point2);</div>
+<div class="line"><span class="lineno">  140</span>                            <span class="keywordflow">if</span> (onNewVisit != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  141</span>                            {</div>
+<div class="line"><span class="lineno">  142</span>                                onNewVisit(point2);</div>
+<div class="line"><span class="lineno">  143</span>                            }</div>
+<div class="line"><span class="lineno">  144</span>                        }</div>
+<div class="line"><span class="lineno">  145</span>                    }</div>
+<div class="line"><span class="lineno">  146</span>                }</div>
+<div class="line"><span class="lineno">  147</span>                IL_269:;</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a00dcc9aa5469cc15cabbfcb6c3d4e329"><div class="ttname"><a href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">Cell._block</a></div><div class="ttdeci">byte _block</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01812">Cell.cs:1812</a></div></div>
+<div class="ttc" id="aclassCell_html_a0eb7a933fea2fd077f321a2d5bdbce1a"><div class="ttname"><a href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">Cell.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01137">Cell.cs:1138</a></div></div>
+<div class="ttc" id="aclassCell_html_a6be59ecc0ed1cc25c8973bb993eeae36"><div class="ttname"><a href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Cell.Installed</a></div><div class="ttdeci">Thing Installed</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01014">Cell.cs:1015</a></div></div>
+<div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00657">Cell.cs:658</a></div></div>
+<div class="ttc" id="aclassCrawler_1_1Member_html"><div class="ttname"><a href="classCrawler_1_1Member.html">Crawler.Member</a></div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00184">Crawler.cs:185</a></div></div>
+<div class="ttc" id="aclassCrawler_1_1Member_html_ac5d3a07a40bd28194e83cfcb9e994f1e"><div class="ttname"><a href="classCrawler_1_1Member.html#ac5d3a07a40bd28194e83cfcb9e994f1e">Crawler.Member.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00186">Crawler.cs:186</a></div></div>
+<div class="ttc" id="aclassCrawler_1_1Result_html"><div class="ttname"><a href="classCrawler_1_1Result.html">Crawler.Result</a></div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00191">Crawler.cs:192</a></div></div>
+<div class="ttc" id="aclassCrawler_1_1Result_html_adcc9de8c72c08e9bdf3f5315b15ef3a5"><div class="ttname"><a href="classCrawler_1_1Result.html#adcc9de8c72c08e9bdf3f5315b15ef3a5">Crawler.Result.points</a></div><div class="ttdeci">List&lt; Point &gt; points</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00193">Crawler.cs:193</a></div></div>
+<div class="ttc" id="aclassCrawler_html"><div class="ttname"><a href="classCrawler.html">Crawler</a></div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00005">Crawler.cs:6</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a0d91578a7469b4f182100aa24da06899"><div class="ttname"><a href="classCrawler.html#a0d91578a7469b4f182100aa24da06899">Crawler.sync</a></div><div class="ttdeci">static int sync</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00160">Crawler.cs:160</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a1d70e0fe8698956c23946e01196254ce"><div class="ttname"><a href="classCrawler.html#a1d70e0fe8698956c23946e01196254ce">Crawler.MoveType</a></div><div class="ttdeci">MoveType</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00196">Crawler.cs:197</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a2a4a37168659194e21bccb11aae313ee"><div class="ttname"><a href="classCrawler.html#a2a4a37168659194e21bccb11aae313ee">Crawler.life</a></div><div class="ttdeci">int life</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00162">Crawler.cs:162</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a68494cc07c8946f89bbb44f50cef9527"><div class="ttname"><a href="classCrawler.html#a68494cc07c8946f89bbb44f50cef9527">Crawler.mapping</a></div><div class="ttdeci">static int[,] mapping</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00158">Crawler.cs:158</a></div></div>
+<div class="ttc" id="aclassCrawler_html_a893966ecf0502fad8bee62accbb19123"><div class="ttname"><a href="classCrawler.html#a893966ecf0502fad8bee62accbb19123">Crawler.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00179">Crawler.cs:179</a></div></div>
+<div class="ttc" id="aclassCrawler_html_aa1553fff8a4b0ac1bcc4fddd0f3ef4cc"><div class="ttname"><a href="classCrawler.html#aa1553fff8a4b0ac1bcc4fddd0f3ef4cc">Crawler.members</a></div><div class="ttdeci">List&lt; Crawler.Member &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00182">Crawler.cs:182</a></div></div>
+<div class="ttc" id="aclassCrawler_html_abd579ad92cd8b63d74e9dd170623ee4d"><div class="ttname"><a href="classCrawler.html#abd579ad92cd8b63d74e9dd170623ee4d">Crawler.moveType</a></div><div class="ttdeci">Crawler.MoveType moveType</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00176">Crawler.cs:176</a></div></div>
+<div class="ttc" id="aclassCrawler_html_ad9a061f672233378f8bff173adfd5af2"><div class="ttname"><a href="classCrawler.html#ad9a061f672233378f8bff173adfd5af2">Crawler.stickToStartBiome</a></div><div class="ttdeci">bool stickToStartBiome</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00170">Crawler.cs:170</a></div></div>
+<div class="ttc" id="aclassCrawler_html_adb94f69c4475730befee57e8b72bac7c"><div class="ttname"><a href="classCrawler.html#adb94f69c4475730befee57e8b72bac7c">Crawler.member</a></div><div class="ttdeci">int member</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00164">Crawler.cs:164</a></div></div>
+<div class="ttc" id="aclassEScriptable_html"><div class="ttname"><a href="classEScriptable.html">EScriptable</a></div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00004">EScriptable.cs:5</a></div></div>
+<div class="ttc" id="aclassEScriptable_html_a7e82765e268f34ed86f8407036038ac2"><div class="ttname"><a href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">EScriptable.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00006">EScriptable.cs:6</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
+<div class="ttc" id="aclassMap_html_aa1a8a360aeea7dda2537485e30fea299"><div class="ttname"><a href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">Map.cells</a></div><div class="ttdeci">Cell[,] cells</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02887">Map.cs:2887</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00565">Point.cs:565</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01054">Point.cs:1054</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf369f86fc7eba0d290a45cf8c8f54c5"><div class="ttname"><a href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Point.Clamp</a></div><div class="ttdeci">Point Clamp(bool useBounds=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01069">Point.cs:1069</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01812">Cell._block</a>, <a class="el" href="Cell_8cs_source.html#l01191">Cell.biome</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="Point_8cs_source.html#l01069">Point.Clamp()</a>, <a class="el" href="Point_8cs_source.html#l00565">Point.Copy()</a>, <a class="el" href="Point_8cs_source.html#l01054">Point.Distance()</a>, <a class="el" href="Cell_8cs_source.html#l01015">Cell.Installed</a>, <a class="el" href="Cell_8cs_source.html#l00658">Cell.IsTopWater</a>, <a class="el" href="Crawler_8cs_source.html#l00162">life</a>, <a class="el" href="Crawler_8cs_source.html#l00158">mapping</a>, <a class="el" href="Crawler_8cs_source.html#l00164">member</a>, <a class="el" href="Crawler_8cs_source.html#l00182">members</a>, <a class="el" href="Crawler_8cs_source.html#l00176">moveType</a>, <a class="el" href="Crawler_8cs_source.html#l00193">Crawler.Result.points</a>, <a class="el" href="Crawler_8cs_source.html#l00186">Crawler.Member.pos</a>, <a class="el" href="EScriptable_8cs_source.html#l00006">EScriptable.rnd()</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Crawler_8cs_source.html#l00179">Size</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="Cell_8cs_source.html#l01138">Cell.sourceBlock</a>, <a class="el" href="Crawler_8cs_source.html#l00170">stickToStartBiome</a>, and <a class="el" href="Crawler_8cs_source.html#l00160">sync</a>.</p>
 
 </div>
 </div>
@@ -325,6 +486,65 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00007">7</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (tries &lt;= 0)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tries; i++)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 100; j++)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                <a class="code hl_class" href="classPoint.html">Point</a> point = onStart();</div>
+<div class="line"><span class="lineno">   19</span>                <a class="code hl_enumeration" href="classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689">Crawler.StartType</a> <a class="code hl_variable" href="classCrawler.html#ab71c372c837f470487a6d246d44fdfcc">startType</a> = this.<a class="code hl_variable" href="classCrawler.html#ab71c372c837f470487a6d246d44fdfcc">startType</a>;</div>
+<div class="line"><span class="lineno">   20</span>                <span class="keywordflow">if</span> (startType != <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_enumeration" href="classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689">StartType</a>.Surface)</div>
+<div class="line"><span class="lineno">   21</span>                {</div>
+<div class="line"><span class="lineno">   22</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCrawler.html#ab71c372c837f470487a6d246d44fdfcc">startType</a> == <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_enumeration" href="classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689">StartType</a>.Block)</div>
+<div class="line"><span class="lineno">   23</span>                    {</div>
+<div class="line"><span class="lineno">   24</span>                        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.IsFullBlock &amp;&amp; point.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>                        {</div>
+<div class="line"><span class="lineno">   26</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>                        }</div>
+<div class="line"><span class="lineno">   28</span>                    }</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>)</div>
+<div class="line"><span class="lineno">   31</span>                {</div>
+<div class="line"><span class="lineno">   32</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>                }</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                <a class="code hl_class" href="classCrawler_1_1Result.html">Crawler.Result</a> arg = this.<a class="code hl_function" href="classCrawler.html#a4bc110fbc39e4db9330c5cc0daa6764a">Crawl</a>(map, onStart(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span> (canComplete(arg))</div>
+<div class="line"><span class="lineno">   39</span>                {</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordflow">if</span> (i &gt; 0)</div>
+<div class="line"><span class="lineno">   41</span>                    {</div>
+<div class="line"><span class="lineno">   42</span>                        Debug.Log(<span class="stringliteral">&quot;CrawlUntil Complete:&quot;</span> + i.ToString());</div>
+<div class="line"><span class="lineno">   43</span>                    }</div>
+<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   45</span>                }</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (onFail != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            Debug.Log(<span class="stringliteral">&quot;CrawlUntil Fail&quot;</span> + tries.ToString());</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (onFail != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                onFail();</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassCrawler_html_ab71c372c837f470487a6d246d44fdfcc"><div class="ttname"><a href="classCrawler.html#ab71c372c837f470487a6d246d44fdfcc">Crawler.startType</a></div><div class="ttdeci">Crawler.StartType startType</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00174">Crawler.cs:174</a></div></div>
+<div class="ttc" id="aclassCrawler_html_ae96bb2ae0a7dd1f2f6f7a2479b3ad689"><div class="ttname"><a href="classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689">Crawler.StartType</a></div><div class="ttdeci">StartType</div><div class="ttdef"><b>Definition:</b> <a href="Crawler_8cs_source.html#l00202">Crawler.cs:203</a></div></div>
+<div class="ttc" id="aclassPoint_html_a010eb501d90a00f1f9ccab4fbeee945e"><div class="ttname"><a href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Point.Installed</a></div><div class="ttdeci">Thing Installed</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00444">Point.cs:445</a></div></div>
+<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00074">Point.cs:75</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf88acccb063c764604ddcd520fe332d"><div class="ttname"><a href="classPoint.html#adf88acccb063c764604ddcd520fe332d">Point.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00265">Point.cs:266</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Crawler_8cs_source.html#l00059">Crawl()</a>, <a class="el" href="Point_8cs_source.html#l00266">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00445">Point.Installed</a>, <a class="el" href="Point_8cs_source.html#l00075">Point.sourceBlock</a>, and <a class="el" href="Crawler_8cs_source.html#l00174">startType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, and <a class="el" href="Zone_8cs_source.html#l02722">Zone.TryGenerateOre()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +573,11 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00153">153</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> ResourceCache.Load&lt;<a class="code hl_class" href="classCrawler.html">Crawler</a>&gt;(<span class="stringliteral">&quot;World/Map/Crawler/crawler &quot;</span> + id);</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, and <a class="el" href="Zone_8cs_source.html#l02722">Zone.TryGenerateOre()</a>.</p>
 
 </div>
 </div>
@@ -370,6 +595,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00162">162</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
 
 </div>
 </div>
@@ -395,6 +622,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00158">158</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
+
 </div>
 </div>
 <a id="adb94f69c4475730befee57e8b72bac7c" name="adb94f69c4475730befee57e8b72bac7c"></a>
@@ -410,6 +639,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00164">164</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
 
 </div>
 </div>
@@ -427,6 +658,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00182">182</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
+
 </div>
 </div>
 <a id="abd579ad92cd8b63d74e9dd170623ee4d" name="abd579ad92cd8b63d74e9dd170623ee4d"></a>
@@ -442,6 +675,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00176">176</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
 
 </div>
 </div>
@@ -491,6 +726,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00179">179</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
+
 </div>
 </div>
 <a id="a3e898c8a4183cca39a88d023b98f54bf" name="a3e898c8a4183cca39a88d023b98f54bf"></a>
@@ -523,6 +760,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00174">174</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00007">CrawlUntil()</a>.</p>
+
 </div>
 </div>
 <a id="ad9a061f672233378f8bff173adfd5af2" name="ad9a061f672233378f8bff173adfd5af2"></a>
@@ -538,6 +777,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00170">170</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
 
 </div>
 </div>
@@ -563,15 +804,21 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Crawler_8cs_source.html#l00160">160</a> of file <a class="el" href="Crawler_8cs_source.html">Crawler.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Crawler_8cs_source.html#l00072">Crawl()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Crawler_8cs_source.html">Crawler.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCrawler.html">Crawler</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

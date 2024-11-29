@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTerrainMenu.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -183,6 +203,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TerrainMenu_8cs_source.html#l00038">38</a> of file <a class="el" href="TerrainMenu_8cs_source.html">TerrainMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        this.am.brushRadius = (int)a;</div>
+<div class="line"><span class="lineno">   41</span>        this.sliderRadius.textMain.text = <span class="stringliteral">&quot;radius&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_variable" href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">brushRadius</a>.ToString();</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassActionMode_html_afbd86defe6dc3ded79dd62c0460915a3"><div class="ttname"><a href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">ActionMode.brushRadius</a></div><div class="ttdeci">int brushRadius</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01789">ActionMode.cs:1789</a></div></div>
+<div class="ttc" id="aclassTerrainMenu_html_a8b28773c33000a5c8ef3e16e85c0da81"><div class="ttname"><a href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">TerrainMenu.am</a></div><div class="ttdeci">ActionMode am</div><div class="ttdef"><b>Definition:</b> <a href="TerrainMenu_8cs_source.html#l00046">TerrainMenu.cs:46</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TerrainMenu_8cs_source.html#l00046">am</a>, and <a class="el" href="ActionMode_8cs_source.html#l01789">ActionMode.brushRadius</a>.</p>
 
 </div>
 </div>
@@ -211,6 +239,48 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TerrainMenu_8cs_source.html#l00005">5</a> of file <a class="el" href="TerrainMenu_8cs_source.html">TerrainMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">bool</span> useSubMenu = _am.<a class="code hl_property" href="classActionMode.html#a81d1105e6fe8105f48730e6782c00deb">UseSubMenu</a>;</div>
+<div class="line"><span class="lineno">    8</span>        this.am = _am;</div>
+<div class="line"><span class="lineno">    9</span>        base.gameObject.SetActive(useSubMenu);</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (!useSubMenu)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>        this.sliderRadius.value = (float)this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_variable" href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">brushRadius</a>;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">this</span>.sliderRadius.transform.parent.SetActive(<span class="keyword">this</span>.am.UseSubMenuSlider);</div>
+<div class="line"><span class="lineno">   16</span>        this.group.checkbox = !this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_property" href="classActionMode.html#ae4e539364553dbb6e14671275de69e99">SubMenuAsGroup</a>;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">foreach</span> (UIButton c <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e">group</a>.GetComponentsInDirectChildren(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            c.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_variable" href="classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e">group</a>.Init(this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_property" href="classActionMode.html#a2d6e34263a36174a3f2487dbced46816">SubMenuModeIndex</a>, delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_function" href="classActionMode.html#a95db80ea12b025725cb7fe1879accdc5">OnClickSubMenu</a>(a);</div>
+<div class="line"><span class="lineno">   24</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e">group</a>.list.Count; i++)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            UIButton uibutton = this.<a class="code hl_variable" href="classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e">group</a>.list[i];</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_variable" href="classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81">am</a>.<a class="code hl_function" href="classActionMode.html#a95513a63eb15e1071607d58cfa6db04c">OnSetSubMenuButton</a>(i, uibutton);</div>
+<div class="line"><span class="lineno">   29</span>            uibutton.SetActive(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                uibutton.mainText.SetText(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.lang());</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a2d6e34263a36174a3f2487dbced46816"><div class="ttname"><a href="classActionMode.html#a2d6e34263a36174a3f2487dbced46816">ActionMode.SubMenuModeIndex</a></div><div class="ttdeci">virtual int SubMenuModeIndex</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00455">ActionMode.cs:456</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a81d1105e6fe8105f48730e6782c00deb"><div class="ttname"><a href="classActionMode.html#a81d1105e6fe8105f48730e6782c00deb">ActionMode.UseSubMenu</a></div><div class="ttdeci">virtual bool UseSubMenu</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00426">ActionMode.cs:427</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a95513a63eb15e1071607d58cfa6db04c"><div class="ttname"><a href="classActionMode.html#a95513a63eb15e1071607d58cfa6db04c">ActionMode.OnSetSubMenuButton</a></div><div class="ttdeci">virtual string OnSetSubMenuButton(int a, UIButton b)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00467">ActionMode.cs:467</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a95db80ea12b025725cb7fe1879accdc5"><div class="ttname"><a href="classActionMode.html#a95db80ea12b025725cb7fe1879accdc5">ActionMode.OnClickSubMenu</a></div><div class="ttdeci">virtual void OnClickSubMenu(int a)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00463">ActionMode.cs:463</a></div></div>
+<div class="ttc" id="aclassActionMode_html_ae4e539364553dbb6e14671275de69e99"><div class="ttname"><a href="classActionMode.html#ae4e539364553dbb6e14671275de69e99">ActionMode.SubMenuAsGroup</a></div><div class="ttdeci">virtual bool SubMenuAsGroup</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00442">ActionMode.cs:443</a></div></div>
+<div class="ttc" id="aclassTerrainMenu_html_ab9a549ee98f635063ccc50e8f269211e"><div class="ttname"><a href="classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e">TerrainMenu.group</a></div><div class="ttdeci">UISelectableGroup group</div><div class="ttdef"><b>Definition:</b> <a href="TerrainMenu_8cs_source.html#l00048">TerrainMenu.cs:48</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TerrainMenu_8cs_source.html#l00046">am</a>, <a class="el" href="ActionMode_8cs_source.html#l01789">ActionMode.brushRadius</a>, <a class="el" href="TerrainMenu_8cs_source.html#l00048">group</a>, <a class="el" href="ActionMode_8cs_source.html#l00463">ActionMode.OnClickSubMenu()</a>, <a class="el" href="ActionMode_8cs_source.html#l00467">ActionMode.OnSetSubMenuButton()</a>, <a class="el" href="ActionMode_8cs_source.html#l00443">ActionMode.SubMenuAsGroup</a>, <a class="el" href="ActionMode_8cs_source.html#l00456">ActionMode.SubMenuModeIndex</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="ActionMode_8cs_source.html#l00427">ActionMode.UseSubMenu</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>.</p>
 
 </div>
 </div>
@@ -229,6 +299,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TerrainMenu_8cs_source.html#l00046">46</a> of file <a class="el" href="TerrainMenu_8cs_source.html">TerrainMenu.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TerrainMenu_8cs_source.html#l00038">OnChangeRadius()</a>, and <a class="el" href="TerrainMenu_8cs_source.html#l00005">Show()</a>.</p>
+
 </div>
 </div>
 <a id="ab9a549ee98f635063ccc50e8f269211e" name="ab9a549ee98f635063ccc50e8f269211e"></a>
@@ -244,6 +316,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TerrainMenu_8cs_source.html#l00048">48</a> of file <a class="el" href="TerrainMenu_8cs_source.html">TerrainMenu.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TerrainMenu_8cs_source.html#l00005">Show()</a>.</p>
 
 </div>
 </div>
@@ -283,9 +357,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TerrainMenu_8cs_source.html">TerrainMenu.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTerrainMenu.html">TerrainMenu</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

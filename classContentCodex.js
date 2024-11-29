@@ -1,0 +1,25 @@
+var classContentCodex =
+[
+    [ "Collect", "classContentCodex.html#a31956b743c882e5eec0c7da891c71643", null ],
+    [ "OnClickAddCards", "classContentCodex.html#aa81330c7a7873ed89bdf5c1b2768d04a", null ],
+    [ "OnClickGetCard", "classContentCodex.html#abde31379cb24deca66391db0a6190462", null ],
+    [ "OnSwitchContent", "classContentCodex.html#a62e21ef8c54b3165408263ba054e5b4f", null ],
+    [ "RefreshInfo", "classContentCodex.html#a5ab4cb87a77ff0fd4115ebc556590780", null ],
+    [ "RefreshList", "classContentCodex.html#a91dc72f11713b875df883f718b0f488e", null ],
+    [ "buttonAddCards", "classContentCodex.html#a70214fbb99f1164a49ef384401325d61", null ],
+    [ "buttonTake", "classContentCodex.html#a72ce08695835b235356da896f053f077", null ],
+    [ "buttonToggleCollect", "classContentCodex.html#aa1e98356933bfd2524bdb1674c71e95e", null ],
+    [ "currentCodex", "classContentCodex.html#a82e940ef12daa46bd9229ec15b0febde", null ],
+    [ "list", "classContentCodex.html#af588fca309e35a38ca0aa86011c462ce", null ],
+    [ "localPos", "classContentCodex.html#a007eb841fa4ad581a0b7c79c75a8e459", null ],
+    [ "note", "classContentCodex.html#a3f787f7de4f0238d3373f005658d5610", null ],
+    [ "pivot", "classContentCodex.html#ac6aa5b8001088a37fd7b5c0bf102abec", null ],
+    [ "textBonus", "classContentCodex.html#a447f01fc6f53cf285c4502b82fed78d9", null ],
+    [ "textKills", "classContentCodex.html#ae929533acdfbbb3b5538c02fca9ff848", null ],
+    [ "textName", "classContentCodex.html#afdc968d2b50c353b9b344bbb45c3e77c", null ],
+    [ "textOwn", "classContentCodex.html#aef5d12328c9f16a1e8fb8acc7608a057", null ],
+    [ "textSpawns", "classContentCodex.html#a9237ac1e7fe251d4041c3e86b5a93bc3", null ],
+    [ "textValue", "classContentCodex.html#a3636c903855e3187c44dca1e0bebad2f", null ],
+    [ "textWeakspot", "classContentCodex.html#abe459355fd00f15e7ee90fad41ae5400", null ],
+    [ "transInfo", "classContentCodex.html#aabb37a63d1c6cd83f81e402852f19ccb", null ]
+];

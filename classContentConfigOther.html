@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classContentConfigOther.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -174,6 +194,92 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00006">6</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#aea016405521b7d426f9c3e44f3f54ee1">ddSnap</a>.SetList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14be">ScreenSnapType</a>&gt;((int)base.config.fix.snapType, Util.EnumToList&lt;<a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14be">ScreenSnapType</a>&gt;(), (<a class="code hl_enumeration" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14be">CoreConfig.ScreenSnapType</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_enumeration" href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14be">ScreenSnapType</a> b)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            base.config.fix.snapType = b;</div>
+<div class="line"><span class="lineno">   11</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   12</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#ac18633f8f5d728296a3b523b96fc3af1">ddDivider</a>.SetList&lt;<a class="code hl_class" href="classCameraSupport.html">CameraSupport</a>.<a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>&gt;((int)base.config.fix.divider, Util.EnumToList&lt;<a class="code hl_class" href="classCameraSupport.html">CameraSupport</a>.<a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>&gt;(), (<a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">CameraSupport.Divider</a> a, <span class="keywordtype">int</span> b) =&gt; a.ToString().lang(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classCameraSupport.html">CameraSupport</a>.<a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a> b)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            base.config.fix.divider = b;</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.screen.RefreshScreenSize();</div>
+<div class="line"><span class="lineno">   16</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   17</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigOther.html#a06192f5a50ff81ab0911a7f10ed2394c">sliderMissClick</a>, (<span class="keywordtype">float</span>)base.config.other.antiMissClick, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            base.config.other.antiMissClick = (int)a;</div>
+<div class="line"><span class="lineno">   20</span>            EInput.antiMissClick = 0.1f * a;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;antiMissClick&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + (0.1f * a).ToString() + <span class="stringliteral">&quot;s)&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>        });</div>
+<div class="line"><span class="lineno">   23</span>        base.SetSlider(this.<a class="code hl_variable" href="classContentConfigOther.html#ac5d0624a0b45c0c343925cce4a92863c">sliderBGMInterval</a>, base.config.other.bgmInterval, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            base.config.other.bgmInterval = (float)((<span class="keywordtype">int</span>)a);</div>
+<div class="line"><span class="lineno">   26</span>            base.config.ApplyVolume();</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> Lang.Get(<span class="stringliteral">&quot;bgmInterval&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + (a * 5f).ToString() + <span class="stringliteral">&quot;sec)&quot;</span>;</div>
+<div class="line"><span class="lineno">   28</span>        });</div>
+<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a4df5827c7341b8dc550a57ca93e68767">toggleSyncMod</a>.SetToggle(base.config.other.syncMods, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            base.config.other.syncMods = on;</div>
+<div class="line"><span class="lineno">   32</span>        });</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#ad67202a1ca2cd5f003acd025a4ea3337">toggleDisableMods</a>.SetToggle(base.config.other.disableMods, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            base.config.other.disableMods = on;</div>
+<div class="line"><span class="lineno">   36</span>        });</div>
+<div class="line"><span class="lineno">   37</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a35d84ba633774fad8c99eda951240d2c">toggleNoCensor</a>.SetToggle(base.config.other.noCensor, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            base.config.other.noCensor = on;</div>
+<div class="line"><span class="lineno">   40</span>            base.config.Apply();</div>
+<div class="line"><span class="lineno">   41</span>        });</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a8116a0a42e1c339508a579ce8f84dbab">toggleRunBackground</a>.SetToggle(base.config.other.runBackground, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            base.config.other.runBackground = on;</div>
+<div class="line"><span class="lineno">   45</span>            base.config.Apply();</div>
+<div class="line"><span class="lineno">   46</span>        });</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a0aecd7a8448d7b8b8b3b28e363e2d8d3">toggleMuteBackground</a>.SetToggle(base.config.other.muteBackground, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            base.config.other.muteBackground = on;</div>
+<div class="line"><span class="lineno">   50</span>            base.config.Apply();</div>
+<div class="line"><span class="lineno">   51</span>        });</div>
+<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a86cd80485202be55c74b39eb11b442ee">toggleAltInv</a>.SetToggle(base.config.game.altInv, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            base.config.game.altInv = on;</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.layerFloat.RemoveLayers(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>        });</div>
+<div class="line"><span class="lineno">   57</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a20fda8388f5713a23218f81cf80bc2ac">toggleAltAbility</a>.SetToggle(base.config.game.altAbility, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            base.config.game.altAbility = on;</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.layerFloat.RemoveLayers(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>        });</div>
+<div class="line"><span class="lineno">   62</span>        this.<a class="code hl_variable" href="classContentConfigOther.html#a77bea5ac9f219d4073546b4c07d1e62d">toggleTest</a>.SetToggle(base.config.other.showTestOptions, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            base.config.other.showTestOptions = on;</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerConfig.html">LayerConfig</a>&gt;(<span class="keyword">false</span>).Close();</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerConfig.html">LayerConfig</a>&gt;();</div>
+<div class="line"><span class="lineno">   67</span>        });</div>
+<div class="line"><span class="lineno">   68</span>        this.<a class="code hl_function" href="classContentConfigOther.html#a71cee4557b943d73d32a1565995ebc11">RefreshRewardCode</a>();</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassCameraSupport_html"><div class="ttname"><a href="classCameraSupport.html">CameraSupport</a></div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00007">CameraSupport.cs:8</a></div></div>
+<div class="ttc" id="aclassCameraSupport_html_a764fe3119d6b3264c4981f01836076ec"><div class="ttname"><a href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">CameraSupport.Divider</a></div><div class="ttdeci">Divider</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00071">CameraSupport.cs:72</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a06192f5a50ff81ab0911a7f10ed2394c"><div class="ttname"><a href="classContentConfigOther.html#a06192f5a50ff81ab0911a7f10ed2394c">ContentConfigOther.sliderMissClick</a></div><div class="ttdeci">Slider sliderMissClick</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00150">ContentConfigOther.cs:150</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a0aecd7a8448d7b8b8b3b28e363e2d8d3"><div class="ttname"><a href="classContentConfigOther.html#a0aecd7a8448d7b8b8b3b28e363e2d8d3">ContentConfigOther.toggleMuteBackground</a></div><div class="ttdeci">UIButton toggleMuteBackground</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00134">ContentConfigOther.cs:134</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a20fda8388f5713a23218f81cf80bc2ac"><div class="ttname"><a href="classContentConfigOther.html#a20fda8388f5713a23218f81cf80bc2ac">ContentConfigOther.toggleAltAbility</a></div><div class="ttdeci">UIButton toggleAltAbility</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00140">ContentConfigOther.cs:140</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a35d84ba633774fad8c99eda951240d2c"><div class="ttname"><a href="classContentConfigOther.html#a35d84ba633774fad8c99eda951240d2c">ContentConfigOther.toggleNoCensor</a></div><div class="ttdeci">UIButton toggleNoCensor</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00130">ContentConfigOther.cs:130</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a4df5827c7341b8dc550a57ca93e68767"><div class="ttname"><a href="classContentConfigOther.html#a4df5827c7341b8dc550a57ca93e68767">ContentConfigOther.toggleSyncMod</a></div><div class="ttdeci">UIButton toggleSyncMod</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00128">ContentConfigOther.cs:128</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a71cee4557b943d73d32a1565995ebc11"><div class="ttname"><a href="classContentConfigOther.html#a71cee4557b943d73d32a1565995ebc11">ContentConfigOther.RefreshRewardCode</a></div><div class="ttdeci">void RefreshRewardCode()</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00119">ContentConfigOther.cs:119</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a77bea5ac9f219d4073546b4c07d1e62d"><div class="ttname"><a href="classContentConfigOther.html#a77bea5ac9f219d4073546b4c07d1e62d">ContentConfigOther.toggleTest</a></div><div class="ttdeci">UIButton toggleTest</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00136">ContentConfigOther.cs:136</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a8116a0a42e1c339508a579ce8f84dbab"><div class="ttname"><a href="classContentConfigOther.html#a8116a0a42e1c339508a579ce8f84dbab">ContentConfigOther.toggleRunBackground</a></div><div class="ttdeci">UIButton toggleRunBackground</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00132">ContentConfigOther.cs:132</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_a86cd80485202be55c74b39eb11b442ee"><div class="ttname"><a href="classContentConfigOther.html#a86cd80485202be55c74b39eb11b442ee">ContentConfigOther.toggleAltInv</a></div><div class="ttdeci">UIButton toggleAltInv</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00138">ContentConfigOther.cs:138</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_ac18633f8f5d728296a3b523b96fc3af1"><div class="ttname"><a href="classContentConfigOther.html#ac18633f8f5d728296a3b523b96fc3af1">ContentConfigOther.ddDivider</a></div><div class="ttdeci">UIDropdown ddDivider</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00148">ContentConfigOther.cs:148</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_ac5d0624a0b45c0c343925cce4a92863c"><div class="ttname"><a href="classContentConfigOther.html#ac5d0624a0b45c0c343925cce4a92863c">ContentConfigOther.sliderBGMInterval</a></div><div class="ttdeci">Slider sliderBGMInterval</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00152">ContentConfigOther.cs:152</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_ad67202a1ca2cd5f003acd025a4ea3337"><div class="ttname"><a href="classContentConfigOther.html#ad67202a1ca2cd5f003acd025a4ea3337">ContentConfigOther.toggleDisableMods</a></div><div class="ttdeci">UIButton toggleDisableMods</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00144">ContentConfigOther.cs:144</a></div></div>
+<div class="ttc" id="aclassContentConfigOther_html_aea016405521b7d426f9c3e44f3f54ee1"><div class="ttname"><a href="classContentConfigOther.html#aea016405521b7d426f9c3e44f3f54ee1">ContentConfigOther.ddSnap</a></div><div class="ttdeci">UIDropdown ddSnap</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00146">ContentConfigOther.cs:146</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html"><div class="ttname"><a href="classCoreConfig.html">CoreConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00011">CoreConfig.cs:12</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_af8cefaa44a42f8eaa135aacb9dfc14be"><div class="ttname"><a href="classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14be">CoreConfig.ScreenSnapType</a></div><div class="ttdeci">ScreenSnapType</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00508">CoreConfig.cs:509</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerConfig_html"><div class="ttname"><a href="classLayerConfig.html">LayerConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerConfig_8cs_source.html#l00008">LayerConfig.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00148">ddDivider</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00146">ddSnap</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00119">RefreshRewardCode()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00152">sliderBGMInterval</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00150">sliderMissClick</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00140">toggleAltAbility</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00138">toggleAltInv</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00144">toggleDisableMods</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00134">toggleMuteBackground</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00130">toggleNoCensor</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00132">toggleRunBackground</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00128">toggleSyncMod</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00136">toggleTest</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -201,7 +307,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00076">76</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        Util.ShowExplorer(CorePath.RootSave + <span class="stringliteral">&quot;config.txt&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1aaeffba945d89ae752eb21f77c51b30" name="a1aaeffba945d89ae752eb21f77c51b30"></a>
@@ -228,6 +337,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00099">99</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">InputName</a>(<span class="stringliteral">&quot;dialogBackerCode&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (!cancel)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (ElinEncoder.IsValid(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>))</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    base.config.rewardCode = text;</div>
+<div class="line"><span class="lineno">  108</span>                    SE.Change();</div>
+<div class="line"><span class="lineno">  109</span>                }</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  111</span>                {</div>
+<div class="line"><span class="lineno">  112</span>                    Dialog.Ok(<span class="stringliteral">&quot;invalidRewardCode&quot;</span>.lang(text, null, null, null, null), null);</div>
+<div class="line"><span class="lineno">  113</span>                }</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keyword">this</span>.RefreshRewardCode();</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>        }, <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_enumeration" href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">InputType</a>.Default);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a9d8fe2e80662df6a6c323599b5eb1257"><div class="ttname"><a href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">Dialog.InputName</a></div><div class="ttdeci">static Dialog InputName(string langDetail, string text, Action&lt; bool, string &gt; onClose, Dialog.InputType inputType=Dialog.InputType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00469">Dialog.cs:469</a></div></div>
+<div class="ttc" id="aclassDialog_html_aaf9f0f8f050b7944063f51a1b9cf878a"><div class="ttname"><a href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">Dialog.InputType</a></div><div class="ttdeci">InputType</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00538">Dialog.cs:539</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Dialog_8cs_source.html#l00469">Dialog.InputName()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
 
 </div>
 </div>
@@ -255,7 +388,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00071">71</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        Util.ShowExplorer(CorePath.RootSave, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7582d64ed7ddaac1e0f0eac3afee9c39" name="a7582d64ed7ddaac1e0f0eac3afee9c39"></a>
@@ -282,7 +418,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00081">81</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        Util.ShowExplorer(CorePath.rootMod + <span class="stringliteral">&quot;_Elona&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9389d94803a2dec4699ef259685de4d5" name="a9389d94803a2dec4699ef259685de4d5"></a>
@@ -309,7 +448,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00086">86</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        Util.ShowExplorer(CorePath.user + <span class="stringliteral">&quot;PCC&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a71cee4557b943d73d32a1565995ebc11" name="a71cee4557b943d73d32a1565995ebc11"></a>
@@ -336,6 +478,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00119">119</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        this.buttonBackerCode.interactable = (!base.config.HasBackerRewardCode() || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (base.config.HasBackerRewardCode())</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            this.<a class="code hl_variable" href="classContentConfigOther.html#af747bd69637e25278fe87d20fb89e444">buttonBackerCode</a>.mainText.SetText(<span class="stringliteral">&quot;rewardCodeActive&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassContentConfigOther_html_af747bd69637e25278fe87d20fb89e444"><div class="ttname"><a href="classContentConfigOther.html#af747bd69637e25278fe87d20fb89e444">ContentConfigOther.buttonBackerCode</a></div><div class="ttdeci">UIButton buttonBackerCode</div><div class="ttdef"><b>Definition:</b> <a href="ContentConfigOther_8cs_source.html#l00142">ContentConfigOther.cs:142</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ContentConfigOther_8cs_source.html#l00142">buttonBackerCode</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, and <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -363,6 +519,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00091">91</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(<span class="stringliteral">&quot;dialogResetWindow&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            Window.dictData.Clear();</div>
+<div class="line"><span class="lineno">   96</span>        }, <span class="keyword">null</span>, <span class="stringliteral">&quot;yes&quot;</span>, <span class="stringliteral">&quot;no&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00204">Dialog.cs:204</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Dialog_8cs_source.html#l00204">Dialog.YesNo()</a>.</p>
 
 </div>
 </div>
@@ -381,6 +546,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00142">142</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00119">RefreshRewardCode()</a>.</p>
+
 </div>
 </div>
 <a id="ac18633f8f5d728296a3b523b96fc3af1" name="ac18633f8f5d728296a3b523b96fc3af1"></a>
@@ -396,6 +563,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00148">148</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -413,6 +582,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00146">146</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="ac5d0624a0b45c0c343925cce4a92863c" name="ac5d0624a0b45c0c343925cce4a92863c"></a>
@@ -429,6 +600,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00152">152</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a06192f5a50ff81ab0911a7f10ed2394c" name="a06192f5a50ff81ab0911a7f10ed2394c"></a>
@@ -444,6 +617,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00150">150</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -477,6 +652,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00140">140</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a86cd80485202be55c74b39eb11b442ee" name="a86cd80485202be55c74b39eb11b442ee"></a>
@@ -492,6 +669,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00138">138</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -509,6 +688,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00144">144</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a0aecd7a8448d7b8b8b3b28e363e2d8d3" name="a0aecd7a8448d7b8b8b3b28e363e2d8d3"></a>
@@ -524,6 +705,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00134">134</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -541,6 +724,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00130">130</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a8116a0a42e1c339508a579ce8f84dbab" name="a8116a0a42e1c339508a579ce8f84dbab"></a>
@@ -556,6 +741,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00132">132</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -573,6 +760,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00128">128</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <a id="a77bea5ac9f219d4073546b4c07d1e62d" name="a77bea5ac9f219d4073546b4c07d1e62d"></a>
@@ -589,15 +778,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentConfigOther_8cs_source.html#l00136">136</a> of file <a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ContentConfigOther_8cs_source.html#l00006">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ContentConfigOther_8cs_source.html">ContentConfigOther.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classContentConfigOther.html">ContentConfigOther</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

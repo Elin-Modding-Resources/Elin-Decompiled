@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerFeedback.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -275,6 +295,114 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00148">148</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        ReportTitle.ignore = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  151</span>        ReportTitle.strAdd = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span>        TextField.strAddText = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordtype">string</span> str = Application.persistentDataPath + <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = str + <span class="stringliteral">&quot;_temp&quot;</span>;</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordtype">string</span> text2 = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/log.zip&quot;</span>;</div>
+<div class="line"><span class="lineno">  156</span>        IO.CreateDirectory(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  157</span>        IO.Copy(str + <span class="stringliteral">&quot;Player.log&quot;</span>, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  158</span>        IO.Copy(str + <span class="stringliteral">&quot;Player-prev.log&quot;</span>, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  159</span>        IO.SaveText(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/System.txt&quot;</span>, this.<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>());</div>
+<div class="line"><span class="lineno">  160</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;&gt;c__DisplayClass27_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  161</span>        CS$&lt;&gt;8__locals1.errors = 0;</div>
+<div class="line"><span class="lineno">  162</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3">CollectFiles</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#ab022743b8e8bc93e45c6248ec057c68f">g__ParseLog</a>|27_0(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/Player.log&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3">CollectFiles</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#ab022743b8e8bc93e45c6248ec057c68f">g__ParseLog</a>|27_0(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/Player-prev.log&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  164</span>        ReportTitle.strAdd = ((CS$&lt;&gt;8__locals1.errors == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;(&quot;</span> + CS$&lt;&gt;8__locals1.errors.ToString() + <span class="stringliteral">&quot;)&quot;</span>));</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            ReportTitle.strAdd += <span class="stringliteral">&quot;(debug)&quot;</span>;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordtype">string</span> text3 = this.<a class="code hl_variable" href="classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a">inputDetail</a>.text;</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> c <span class="keywordflow">in</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            <span class="stringliteral">&quot;シーラカンス&quot;</span>,</div>
+<div class="line"><span class="lineno">  174</span>            <span class="stringliteral">&quot;ナーフ&quot;</span>,</div>
+<div class="line"><span class="lineno">  175</span>            <span class="stringliteral">&quot;つまらない&quot;</span>,</div>
+<div class="line"><span class="lineno">  176</span>            <span class="stringliteral">&quot;面白くない&quot;</span>,</div>
+<div class="line"><span class="lineno">  177</span>            <span class="stringliteral">&quot;不合理&quot;</span>,</div>
+<div class="line"><span class="lineno">  178</span>            <span class="stringliteral">&quot;やめて&quot;</span>,</div>
+<div class="line"><span class="lineno">  179</span>            <span class="stringliteral">&quot;無駄&quot;</span>,</div>
+<div class="line"><span class="lineno">  180</span>            <span class="stringliteral">&quot;弱体化&quot;</span>,</div>
+<div class="line"><span class="lineno">  181</span>            <span class="stringliteral">&quot;不親切&quot;</span>,</div>
+<div class="line"><span class="lineno">  182</span>            <span class="stringliteral">&quot;クソ&quot;</span>,</div>
+<div class="line"><span class="lineno">  183</span>            <span class="stringliteral">&quot;糞&quot;</span>,</div>
+<div class="line"><span class="lineno">  184</span>            <span class="stringliteral">&quot;バカ&quot;</span>,</div>
+<div class="line"><span class="lineno">  185</span>            <span class="stringliteral">&quot;馬鹿&quot;</span>,</div>
+<div class="line"><span class="lineno">  186</span>            <span class="stringliteral">&quot;coelacanth&quot;</span>,</div>
+<div class="line"><span class="lineno">  187</span>            <span class="stringliteral">&quot;nerf&quot;</span>,</div>
+<div class="line"><span class="lineno">  188</span>            <span class="stringliteral">&quot;boring&quot;</span>,</div>
+<div class="line"><span class="lineno">  189</span>            <span class="stringliteral">&quot;please don&#39;t&quot;</span>,</div>
+<div class="line"><span class="lineno">  190</span>            <span class="stringliteral">&quot;waste&quot;</span>,</div>
+<div class="line"><span class="lineno">  191</span>            <span class="stringliteral">&quot;fuck&quot;</span>,</div>
+<div class="line"><span class="lineno">  192</span>            <span class="stringliteral">&quot;suck&quot;</span>,</div>
+<div class="line"><span class="lineno">  193</span>            <span class="stringliteral">&quot;tbh&quot;</span>,</div>
+<div class="line"><span class="lineno">  194</span>            <span class="stringliteral">&quot;shit&quot;</span>,</div>
+<div class="line"><span class="lineno">  195</span>            <span class="stringliteral">&quot;stupid&quot;</span></div>
+<div class="line"><span class="lineno">  196</span>        })</div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            num += <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3">CollectFiles</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a4266bda31a7f43244ad2d7ff3910e307">g__CountString</a>|27_1(text3, c);</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            ReportTitle.strAdd = <span class="stringliteral">&quot;[ignore:&quot;</span> + num.ToString() + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">  203</span>            ReportTitle.strAdd = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                ReportTitle.strAdd,</div>
+<div class="line"><span class="lineno">  206</span>                <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><span class="lineno">  207</span>                <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#a8f35ab358f2359f8eca9515e434f04fd">steamName</a>,</div>
+<div class="line"><span class="lineno">  208</span>                <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#ad3b9074fb4b92b58e7b4b20b4603d9f1">userName</a>,</div>
+<div class="line"><span class="lineno">  210</span>                <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  211</span>                LayerFeedback.backerId</div>
+<div class="line"><span class="lineno">  212</span>            });</div>
+<div class="line"><span class="lineno">  213</span>            ReportTitle.ignore = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keyword">using</span> (ZipFile zipFile = <span class="keyword">new</span> ZipFile())</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            zipFile.ExtractExistingFile = ExtractExistingFileAction.OverwriteSilently;</div>
+<div class="line"><span class="lineno">  218</span>            zipFile.AddDirectory(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  219</span>            zipFile.Save(text2);</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.CurrentReport.AttachFile(<span class="stringliteral">&quot;log.zip&quot;</span>, File.ReadAllBytes(text2));</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerFeedback.html#af2d59e0bc1aa9b682378922f8f6040e8">toggleSave</a>.isOn)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordtype">string</span> text4 = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;/save.zip&quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keyword">using</span> (ZipFile zipFile2 = <span class="keyword">new</span> ZipFile())</div>
+<div class="line"><span class="lineno">  226</span>            {</div>
+<div class="line"><span class="lineno">  227</span>                zipFile2.ExtractExistingFile = ExtractExistingFileAction.OverwriteSilently;</div>
+<div class="line"><span class="lineno">  228</span>                zipFile2.AddDirectory(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a> + <span class="keyword">this</span>.saveIndex.id);</div>
+<div class="line"><span class="lineno">  229</span>                zipFile2.Save(text4);</div>
+<div class="line"><span class="lineno">  230</span>            }</div>
+<div class="line"><span class="lineno">  231</span>            this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.CurrentReport.AttachFile(this.<a class="code hl_variable" href="classLayerFeedback.html#a73f1da08933928568d5dd45a89d94088">saveIndex</a>.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a> + <span class="stringliteral">&quot;.zip&quot;</span>, File.ReadAllBytes(text4));</div>
+<div class="line"><span class="lineno">  232</span>        }</div>
+<div class="line"><span class="lineno">  233</span>        IO.DeleteDirectory(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
+<div class="ttc" id="aclassGameIO_html"><div class="ttname"><a href="classGameIO.html">GameIO</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00009">GameIO.cs:10</a></div></div>
+<div class="ttc" id="aclassGameIO_html_abdddfbd6d6dfdf14c1c1846b61a7e6b5"><div class="ttname"><a href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">GameIO.pathSaveRoot</a></div><div class="ttdeci">static string pathSaveRoot</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00019">GameIO.cs:20</a></div></div>
+<div class="ttc" id="aclassGameIndex_html_a3de95db1434ea4398f1fb551066fe9c9"><div class="ttname"><a href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">GameIndex.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00088">GameIndex.cs:88</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html"><div class="ttname"><a href="classLayerFeedback.html">LayerFeedback</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00014">LayerFeedback.cs:15</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a4266bda31a7f43244ad2d7ff3910e307"><div class="ttname"><a href="classLayerFeedback.html#a4266bda31a7f43244ad2d7ff3910e307">LayerFeedback.g__CountString</a></div><div class="ttdeci">static int&lt; CollectFiles &gt; g__CountString(string s, string c)</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00342">LayerFeedback.cs:342</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a45c0176bd46d37dac4aea42936efd4b3"><div class="ttname"><a href="classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3">LayerFeedback.CollectFiles</a></div><div class="ttdeci">void CollectFiles()</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00148">LayerFeedback.cs:148</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a73f1da08933928568d5dd45a89d94088"><div class="ttname"><a href="classLayerFeedback.html#a73f1da08933928568d5dd45a89d94088">LayerFeedback.saveIndex</a></div><div class="ttdeci">GameIndex saveIndex</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00392">LayerFeedback.cs:392</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a8f35ab358f2359f8eca9515e434f04fd"><div class="ttname"><a href="classLayerFeedback.html#a8f35ab358f2359f8eca9515e434f04fd">LayerFeedback.steamName</a></div><div class="ttdeci">static string steamName</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00358">LayerFeedback.cs:358</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a918d1752edbdd8e216c37594b76a1a0a"><div class="ttname"><a href="classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a">LayerFeedback.inputDetail</a></div><div class="ttdeci">InputField inputDetail</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00378">LayerFeedback.cs:378</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a9af847a596fcbfa1dfbc24e0352eac8d"><div class="ttname"><a href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">LayerFeedback.GetSystemText</a></div><div class="ttdeci">string GetSystemText()</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00285">LayerFeedback.cs:285</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_ab022743b8e8bc93e45c6248ec057c68f"><div class="ttname"><a href="classLayerFeedback.html#ab022743b8e8bc93e45c6248ec057c68f">LayerFeedback.g__ParseLog</a></div><div class="ttdeci">static void&lt; CollectFiles &gt; g__ParseLog(string path, ref LayerFeedback.&lt;&gt;c__DisplayClass27_0 A_1)</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00312">LayerFeedback.cs:312</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_acda012f00f94545c3a82dbcf651ae3b6"><div class="ttname"><a href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">LayerFeedback.form</a></div><div class="ttdeci">FeedbackForm form</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00380">LayerFeedback.cs:380</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_ad3b9074fb4b92b58e7b4b20b4603d9f1"><div class="ttname"><a href="classLayerFeedback.html#ad3b9074fb4b92b58e7b4b20b4603d9f1">LayerFeedback.userName</a></div><div class="ttdeci">static string userName</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00360">LayerFeedback.cs:360</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_af2d59e0bc1aa9b682378922f8f6040e8"><div class="ttname"><a href="classLayerFeedback.html#af2d59e0bc1aa9b682378922f8f6040e8">LayerFeedback.toggleSave</a></div><div class="ttdeci">Toggle toggleSave</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00388">LayerFeedback.cs:388</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00380">form</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00342">g__CountString()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00312">g__ParseLog()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00285">GetSystemText()</a>, <a class="el" href="GameIndex_8cs_source.html#l00088">GameIndex.id</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00378">inputDetail</a>, <a class="el" href="GameIO_8cs_source.html#l00020">GameIO.pathSaveRoot</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00392">saveIndex</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00358">steamName</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00388">toggleSave</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00360">userName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -313,7 +441,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00349">349</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>        A_1.txt = A_1.txt + s + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  352</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a49f7a64b9e03e6e566806cc92abd037f" name="a49f7a64b9e03e6e566806cc92abd037f"></a>
@@ -351,6 +482,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00303">303</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>    {</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  306</span>        {</div>
+<div class="line"><span class="lineno">  307</span>            A_1.s = A_1.s + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00285">GetSystemText()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -389,6 +530,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00342">342</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  343</span>    {</div>
+<div class="line"><span class="lineno">  344</span>        <span class="keywordtype">string</span> newValue = c.Substring(0, c.Length - 1);</div>
+<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> s.Length - s.Replace(c, newValue).Length;</div>
+<div class="line"><span class="lineno">  346</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>.</p>
 
 </div>
 </div>
@@ -427,6 +574,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00312">312</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  313</span>    {</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
+<div class="line"><span class="lineno">  315</span>        {</div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> <span class="keywordflow">in</span> IO.LoadTextArray(path))</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;InvalidOperationException: Steamworks is not initialized.&quot;</span>))</div>
+<div class="line"><span class="lineno">  321</span>            {</div>
+<div class="line"><span class="lineno">  322</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;InvalidOperationException: Collection was modified; enumeration operation may not execute.&quot;</span> || <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;NullReferenceException: Object reference not set to an instance of an object&quot;</span>)</div>
+<div class="line"><span class="lineno">  323</span>                {</div>
+<div class="line"><span class="lineno">  324</span>                    <span class="keywordtype">int</span> errors = A_1.errors;</div>
+<div class="line"><span class="lineno">  325</span>                    A_1.errors = errors + 1;</div>
+<div class="line"><span class="lineno">  326</span>                }</div>
+<div class="line"><span class="lineno">  327</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Contains(<span class="stringliteral">&quot;exception&quot;</span>))</div>
+<div class="line"><span class="lineno">  328</span>                {</div>
+<div class="line"><span class="lineno">  329</span>                    <span class="keywordtype">int</span> errors = A_1.errors;</div>
+<div class="line"><span class="lineno">  330</span>                    A_1.errors = errors + 1;</div>
+<div class="line"><span class="lineno">  331</span>                }</div>
+<div class="line"><span class="lineno">  332</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Contains(<span class="stringliteral">&quot;Exception&quot;</span>))</div>
+<div class="line"><span class="lineno">  333</span>                {</div>
+<div class="line"><span class="lineno">  334</span>                    <span class="keywordtype">int</span> errors = A_1.errors;</div>
+<div class="line"><span class="lineno">  335</span>                    A_1.errors = errors + 1;</div>
+<div class="line"><span class="lineno">  336</span>                }</div>
+<div class="line"><span class="lineno">  337</span>            }</div>
+<div class="line"><span class="lineno">  338</span>        }</div>
+<div class="line"><span class="lineno">  339</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>.</p>
 
 </div>
 </div>
@@ -454,6 +632,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00285">285</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  286</span>    {</div>
+<div class="line"><span class="lineno">  287</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;&gt;c__DisplayClass31_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  288</span>        CS$&lt;&gt;8__locals1.txt = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  289</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;OS: &quot;</span> + SystemInfo.operatingSystem, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  290</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Processor: &quot;</span> + SystemInfo.processorType, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  291</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Memory: &quot;</span> + SystemInfo.systemMemorySize.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  292</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Graphics API: &quot;</span> + SystemInfo.graphicsDeviceType.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  293</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Graphics Processor: &quot;</span> + SystemInfo.graphicsDeviceName, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Graphics Memory: &quot;</span> + SystemInfo.graphicsMemorySize.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  295</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Graphics Vendor: &quot;</span> + SystemInfo.graphicsDeviceVendor, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Quality Level: &quot;</span> + QualitySettings.names[QualitySettings.GetQualityLevel()], ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  297</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Resolution: &quot;</span> + Screen.width.ToString() + <span class="stringliteral">&quot;x&quot;</span> + Screen.height.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d">GetSystemText</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|31_0(<span class="stringliteral">&quot;Full Screen: &quot;</span> + Screen.fullScreen.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">return</span> CS$&lt;&gt;8__locals1.txt;</div>
+<div class="line"><span class="lineno">  300</span>    }</div>
+<div class="ttc" id="aclassLayerFeedback_html_a49f7a64b9e03e6e566806cc92abd037f"><div class="ttname"><a href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">LayerFeedback.g__Append</a></div><div class="ttdeci">static void&lt; OnInit &gt; g__Append(string text, ref LayerFeedback.&lt;&gt;c__DisplayClass25_0 A_1)</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00303">LayerFeedback.cs:303</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerFeedback_8cs_source.html#l00303">g__Append()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00285">GetSystemText()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00285">GetSystemText()</a>.</p>
 
 </div>
 </div>
@@ -481,6 +679,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00236">236</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        LayerFeedback.lastDetail = this.<a class="code hl_variable" href="classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a">inputDetail</a>.text;</div>
+<div class="line"><span class="lineno">  239</span>        LayerFeedback.lastSummary = this.<a class="code hl_variable" href="classLayerFeedback.html#a2fc0c91de990034b4a48652cf4914a7a">inputSummary</a>.text;</div>
+<div class="line"><span class="lineno">  240</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.Clean();</div>
+<div class="line"><span class="lineno">  241</span>        this.Close();</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
+<div class="ttc" id="aclassLayerFeedback_html_a2fc0c91de990034b4a48652cf4914a7a"><div class="ttname"><a href="classLayerFeedback.html#a2fc0c91de990034b4a48652cf4914a7a">LayerFeedback.inputSummary</a></div><div class="ttdeci">InputField inputSummary</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00376">LayerFeedback.cs:376</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerFeedback_8cs_source.html#l00380">form</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00378">inputDetail</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00376">inputSummary</a>.</p>
 
 </div>
 </div>
@@ -508,6 +715,151 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        this.inputVersion.text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.version.GetText(),</div>
+<div class="line"><span class="lineno">   21</span>            <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#aa1b21097831b581be4b734571e8e296d">lang</a>,</div>
+<div class="line"><span class="lineno">   23</span>            <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#a8f35ab358f2359f8eca9515e434f04fd">steamName</a>,</div>
+<div class="line"><span class="lineno">   25</span>            <span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#ad3b9074fb4b92b58e7b4b20b4603d9f1">userName</a>,</div>
+<div class="line"><span class="lineno">   27</span>            <span class="stringliteral">&quot; hours:&quot;</span>,</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#aa4ab110e1eb8f0f8df1dee56d39942a0">playedHours</a>.ToString(),</div>
+<div class="line"><span class="lineno">   29</span>            <span class="stringliteral">&quot; backer:&quot;</span>,</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#a9300b055d3a504b06c91e879e5515292">backerId</a></div>
+<div class="line"><span class="lineno">   31</span>        });</div>
+<div class="line"><span class="lineno">   32</span>        TextField.onAddEmail = delegate()</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;&gt;c__DisplayClass25_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">   35</span>            CS$&lt;&gt;8__locals1.s = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">foreach</span> (BaseModPackage baseModPackage <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.packages)</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span> (!baseModPackage.builtin)</div>
+<div class="line"><span class="lineno">   39</span>                {</div>
+<div class="line"><span class="lineno">   40</span>                    <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(baseModPackage.id + <span class="stringliteral">&quot;/&quot;</span> + baseModPackage.activated.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   41</span>                }</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;&quot;</span>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Save Path: &quot;</span> + CorePath.RootSave, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;EXE Path: &quot;</span> + CorePath.rootExe, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;OS: &quot;</span> + SystemInfo.operatingSystem, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Processor: &quot;</span> + SystemInfo.processorType, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Memory: &quot;</span> + SystemInfo.systemMemorySize.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Graphics API: &quot;</span> + SystemInfo.graphicsDeviceType.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Graphics Processor: &quot;</span> + SystemInfo.graphicsDeviceName, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Graphics Memory: &quot;</span> + SystemInfo.graphicsMemorySize.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Graphics Vendor: &quot;</span> + SystemInfo.graphicsDeviceVendor, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Quality Level: &quot;</span> + QualitySettings.names[QualitySettings.GetQualityLevel()], ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Resolution: &quot;</span> + Screen.width.ToString() + <span class="stringliteral">&quot;x&quot;</span> + Screen.height.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;Full Screen: &quot;</span> + Screen.fullScreen.ToString(), ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;regionName: &quot;</span> + RegionInfo.CurrentRegion.Name, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;cultureName: &quot;</span> + CultureInfo.CurrentCulture.Name, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;cname: &quot;</span> + Thread.CurrentThread.CurrentCulture.Name, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   59</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;uiname: &quot;</span> + Thread.CurrentThread.CurrentUICulture.Name, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.&lt;<a class="code hl_function" href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">OnInit</a>&gt;<a class="code hl_function" href="classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f">g__Append</a>|25_8(<span class="stringliteral">&quot;device identifier: &quot;</span> + SystemInfo.deviceUniqueIdentifier, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">return</span> Environment.NewLine + Environment.NewLine + CS$&lt;&gt;8__locals1.s;</div>
+<div class="line"><span class="lineno">   62</span>        };</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#aa426a11ea37e5c24788e19e59a640e5e">buttonLinkFAQ</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;general&quot;</span>, <span class="stringliteral">&quot;FAQ&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>        });</div>
+<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#aa05c93813e57056d9def270f0aa8dfcf">buttonLinkDiscord</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            SE.Click();</div>
+<div class="line"><span class="lineno">   70</span>            Application.OpenURL(<span class="stringliteral">&quot;https://discord.gg/elona&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>        });</div>
+<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a79a1b312847cc25e021745ffdbdd3cef">transUpload</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   73</span>        this.buttonSubmit.interactable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a4b8319aa23826bf4eb1b8fa9e9faaccc">nameReport</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            this.inputName.text = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a4b8319aa23826bf4eb1b8fa9e9faaccc">nameReport</a>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            this.inputName.text = <span class="stringliteral">&quot;nameBraced&quot;</span>.lang(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Aka</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a6b2fe411ad4d69c8d4b7d83cb5af8ecf">emailReport</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            this.inputEmail.text = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a6b2fe411ad4d69c8d4b7d83cb5af8ecf">emailReport</a>;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        this.inputLang.text = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#aa1b21097831b581be4b734571e8e296d">lang</a>;</div>
+<div class="line"><span class="lineno">   87</span>        this.inputDetail.text = <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#af9734944a13f9dd5388c5f5a1ddf0b91">lastDetail</a>;</div>
+<div class="line"><span class="lineno">   88</span>        this.inputSummary.text = <a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>.<a class="code hl_variable" href="classLayerFeedback.html#a300bcbedd024c37f5bdede061984f895">lastSummary</a>;</div>
+<div class="line"><span class="lineno">   89</span>        this.collector.onSubmit = delegate()</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            this.<a class="code hl_function" href="classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3">CollectFiles</a>();</div>
+<div class="line"><span class="lineno">   92</span>        };</div>
+<div class="line"><span class="lineno">   93</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a80a3be0af3f8667ae2bf9f6cd41011b0">category</a>.Init((<span class="keywordtype">string</span> s) =&gt; (<span class="stringliteral">&quot;form_&quot;</span> + s).lang());</div>
+<div class="line"><span class="lineno">   94</span>        List&lt;GameIndex&gt; gameList = <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GetGameList</a>(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#abdddfbd6d6dfdf14c1c1846b61a7e6b5">pathSaveRoot</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (gameList.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><span class="lineno">   98</span>            this.saveIndex = gameList[0];</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; gameList.Count; i++)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted &amp;&amp; gameList[i].id == <a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a5863738013b90cbe2e863df446667210">id</a>)</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    index = i;</div>
+<div class="line"><span class="lineno">  104</span>                    this.saveIndex = gameList[i];</div>
+<div class="line"><span class="lineno">  105</span>                }</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            this.<a class="code hl_variable" href="classLayerFeedback.html#a1ea99394568f669217fe0fb110574e19">ddSave</a>.SetList&lt;<a class="code hl_class" href="classGameIndex.html">GameIndex</a>&gt;(index, gameList, (<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <span class="keywordtype">int</span> b) =&gt; ((<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted &amp;&amp; a.id == <a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a5863738013b90cbe2e863df446667210">id</a>) ? <span class="stringliteral">&quot;currentSave&quot;</span>.lang() : <span class="stringliteral">&quot;&quot;</span>) + a.FormTitle, delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                this.saveIndex = b;</div>
+<div class="line"><span class="lineno">  110</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            this.<a class="code hl_variable" href="classLayerFeedback.html#af2d59e0bc1aa9b682378922f8f6040e8">toggleSave</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#af2d59e0bc1aa9b682378922f8f6040e8">toggleSave</a>.onValueChanged.AddListener(delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            this.<a class="code hl_variable" href="classLayerFeedback.html#a1ea99394568f669217fe0fb110574e19">ddSave</a>.SetActive(a);</div>
+<div class="line"><span class="lineno">  119</span>        });</div>
+<div class="line"><span class="lineno">  120</span>        this.toggleSave.isOn = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  121</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a1ea99394568f669217fe0fb110574e19">ddSave</a>.SetActive(this.<a class="code hl_variable" href="classLayerFeedback.html#af2d59e0bc1aa9b682378922f8f6040e8">toggleSave</a>.isOn);</div>
+<div class="line"><span class="lineno">  122</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.Init();</div>
+<div class="line"><span class="lineno">  123</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a">inputDetail</a>.onValueChanged.AddListener(delegate(<span class="keywordtype">string</span> a)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            this.<a class="code hl_function" href="classLayerFeedback.html#a5c2d21afcbe14a838c9a6fd2e620dc17">Validate</a>();</div>
+<div class="line"><span class="lineno">  126</span>        });</div>
+<div class="line"><span class="lineno">  127</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a2fc0c91de990034b4a48652cf4914a7a">inputSummary</a>.onValueChanged.AddListener(delegate(<span class="keywordtype">string</span> a)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            this.<a class="code hl_function" href="classLayerFeedback.html#a5c2d21afcbe14a838c9a6fd2e620dc17">Validate</a>();</div>
+<div class="line"><span class="lineno">  130</span>        });</div>
+<div class="line"><span class="lineno">  131</span>        this.<a class="code hl_function" href="classLayerFeedback.html#a5c2d21afcbe14a838c9a6fd2e620dc17">Validate</a>();</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02179">Card.cs:2180</a></div></div>
+<div class="ttc" id="aclassChara_html_a8d4d12cb1ff927b90512ff98e14d1ec5"><div class="ttname"><a href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Chara.Aka</a></div><div class="ttdeci">string Aka</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00012">Chara.cs:13</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a4b8319aa23826bf4eb1b8fa9e9faaccc"><div class="ttname"><a href="classCoreConfig.html#a4b8319aa23826bf4eb1b8fa9e9faaccc">CoreConfig.nameReport</a></div><div class="ttdeci">string nameReport</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00418">CoreConfig.cs:418</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a6b2fe411ad4d69c8d4b7d83cb5af8ecf"><div class="ttname"><a href="classCoreConfig.html#a6b2fe411ad4d69c8d4b7d83cb5af8ecf">CoreConfig.emailReport</a></div><div class="ttdeci">string emailReport</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00420">CoreConfig.cs:420</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aa1b21097831b581be4b734571e8e296d"><div class="ttname"><a href="classCoreConfig.html#aa1b21097831b581be4b734571e8e296d">CoreConfig.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00416">CoreConfig.cs:416</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassELayer_html_a6ce5e3c8bbab020ab68e9fa4c2d63683"><div class="ttname"><a href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">ELayer.config</a></div><div class="ttdeci">static CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00102">ELayer.cs:103</a></div></div>
+<div class="ttc" id="aclassGameIO_html_ae74458c2df2444d74127d927a4af828f"><div class="ttname"><a href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GameIO.GetGameList</a></div><div class="ttdeci">static List&lt; GameIndex &gt; GetGameList(string path, bool sortByName=false)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00216">GameIO.cs:216</a></div></div>
+<div class="ttc" id="aclassGameIndex_html"><div class="ttname"><a href="classGameIndex.html">GameIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIndex_8cs_source.html#l00006">GameIndex.cs:7</a></div></div>
+<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00008">Game.cs:9</a></div></div>
+<div class="ttc" id="aclassGame_html_a5863738013b90cbe2e863df446667210"><div class="ttname"><a href="classGame.html#a5863738013b90cbe2e863df446667210">Game.id</a></div><div class="ttdeci">static string id</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00782">Game.cs:782</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a1ea99394568f669217fe0fb110574e19"><div class="ttname"><a href="classLayerFeedback.html#a1ea99394568f669217fe0fb110574e19">LayerFeedback.ddSave</a></div><div class="ttdeci">UIDropdown ddSave</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00386">LayerFeedback.cs:386</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a300bcbedd024c37f5bdede061984f895"><div class="ttname"><a href="classLayerFeedback.html#a300bcbedd024c37f5bdede061984f895">LayerFeedback.lastSummary</a></div><div class="ttdeci">static string lastSummary</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00354">LayerFeedback.cs:354</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a5c2d21afcbe14a838c9a6fd2e620dc17"><div class="ttname"><a href="classLayerFeedback.html#a5c2d21afcbe14a838c9a6fd2e620dc17">LayerFeedback.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00134">LayerFeedback.cs:134</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a79a1b312847cc25e021745ffdbdd3cef"><div class="ttname"><a href="classLayerFeedback.html#a79a1b312847cc25e021745ffdbdd3cef">LayerFeedback.transUpload</a></div><div class="ttdeci">Transform transUpload</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00384">LayerFeedback.cs:384</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a7e9582d4278a23f8c78822a3ec12d7e9"><div class="ttname"><a href="classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9">LayerFeedback.OnInit</a></div><div class="ttdeci">override void OnInit()</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.cs:16</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a80a3be0af3f8667ae2bf9f6cd41011b0"><div class="ttname"><a href="classLayerFeedback.html#a80a3be0af3f8667ae2bf9f6cd41011b0">LayerFeedback.category</a></div><div class="ttdeci">CategoryDropdown category</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00396">LayerFeedback.cs:396</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a9300b055d3a504b06c91e879e5515292"><div class="ttname"><a href="classLayerFeedback.html#a9300b055d3a504b06c91e879e5515292">LayerFeedback.backerId</a></div><div class="ttdeci">static string backerId</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00362">LayerFeedback.cs:362</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_aa05c93813e57056d9def270f0aa8dfcf"><div class="ttname"><a href="classLayerFeedback.html#aa05c93813e57056d9def270f0aa8dfcf">LayerFeedback.buttonLinkDiscord</a></div><div class="ttdeci">UIButton buttonLinkDiscord</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00402">LayerFeedback.cs:402</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_aa426a11ea37e5c24788e19e59a640e5e"><div class="ttname"><a href="classLayerFeedback.html#aa426a11ea37e5c24788e19e59a640e5e">LayerFeedback.buttonLinkFAQ</a></div><div class="ttdeci">UIButton buttonLinkFAQ</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00400">LayerFeedback.cs:400</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_aa4ab110e1eb8f0f8df1dee56d39942a0"><div class="ttname"><a href="classLayerFeedback.html#aa4ab110e1eb8f0f8df1dee56d39942a0">LayerFeedback.playedHours</a></div><div class="ttdeci">static int playedHours</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00364">LayerFeedback.cs:364</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_af9734944a13f9dd5388c5f5a1ddf0b91"><div class="ttname"><a href="classLayerFeedback.html#af9734944a13f9dd5388c5f5a1ddf0b91">LayerFeedback.lastDetail</a></div><div class="ttdeci">static string lastDetail</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00356">LayerFeedback.cs:356</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html"><div class="ttname"><a href="classLayerHelp.html">LayerHelp</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00003">LayerHelp.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_a8c2b68bab7fee455dcd42a72525d2799"><div class="ttname"><a href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">LayerHelp.Toggle</a></div><div class="ttdeci">static void Toggle(string idFile, string idTopic=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00028">LayerHelp.cs:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00013">Chara.Aka</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00362">backerId</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00402">buttonLinkDiscord</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00400">buttonLinkFAQ</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00396">category</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, <a class="el" href="ELayer_8cs_source.html#l00103">ELayer.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00386">ddSave</a>, <a class="el" href="CoreConfig_8cs_source.html#l00420">CoreConfig.emailReport</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00380">form</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00303">g__Append()</a>, <a class="el" href="GameIO_8cs_source.html#l00216">GameIO.GetGameList()</a>, <a class="el" href="Game_8cs_source.html#l00782">Game.id</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00378">inputDetail</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00376">inputSummary</a>, <a class="el" href="CoreConfig_8cs_source.html#l00416">CoreConfig.lang</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00356">lastDetail</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00354">lastSummary</a>, <a class="el" href="CoreConfig_8cs_source.html#l00418">CoreConfig.nameReport</a>, <a class="el" href="Card_8cs_source.html#l02180">Card.NameSimple</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>, <a class="el" href="GameIO_8cs_source.html#l00020">GameIO.pathSaveRoot</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00364">playedHours</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00358">steamName</a>, <a class="el" href="LayerHelp_8cs_source.html#l00028">LayerHelp.Toggle()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00388">toggleSave</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00384">transUpload</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00360">userName</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00134">Validate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -535,6 +887,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00267">267</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  268</span>    {</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerFeedback.html#a4801f6c6c3801ec979e6b39b4ca243a5">inputEmail</a>.text.IsEmpty())</div>
+<div class="line"><span class="lineno">  270</span>        {</div>
+<div class="line"><span class="lineno">  271</span>            ELayer.config.emailReport = this.<a class="code hl_variable" href="classLayerFeedback.html#a4801f6c6c3801ec979e6b39b4ca243a5">inputEmail</a>.text;</div>
+<div class="line"><span class="lineno">  272</span>        }</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerFeedback.html#a23ff0cd0586735eefcc410da2d5f04c7">inputName</a>.text.IsEmpty())</div>
+<div class="line"><span class="lineno">  274</span>        {</div>
+<div class="line"><span class="lineno">  275</span>            ELayer.config.nameReport = this.<a class="code hl_variable" href="classLayerFeedback.html#a23ff0cd0586735eefcc410da2d5f04c7">inputName</a>.text;</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#a79a1b312847cc25e021745ffdbdd3cef">transUpload</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  278</span>        this.form.IncludeScreenshot = this.<a class="code hl_variable" href="classLayerFeedback.html#a1eaa9b7f7e65a3bfc97bebd2b5d32494">toggleScreenshot</a>.isOn;</div>
+<div class="line"><span class="lineno">  279</span>        this.cgForm.alpha = 0.5f;</div>
+<div class="line"><span class="lineno">  280</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.transform.SetParent(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.transform, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  281</span>        this.Close();</div>
+<div class="line"><span class="lineno">  282</span>        LayerFeedback.lastDetail = (LayerFeedback.lastSummary = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a1eaa9b7f7e65a3bfc97bebd2b5d32494"><div class="ttname"><a href="classLayerFeedback.html#a1eaa9b7f7e65a3bfc97bebd2b5d32494">LayerFeedback.toggleScreenshot</a></div><div class="ttdeci">Toggle toggleScreenshot</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00390">LayerFeedback.cs:390</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a23ff0cd0586735eefcc410da2d5f04c7"><div class="ttname"><a href="classLayerFeedback.html#a23ff0cd0586735eefcc410da2d5f04c7">LayerFeedback.inputName</a></div><div class="ttdeci">InputField inputName</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00370">LayerFeedback.cs:370</a></div></div>
+<div class="ttc" id="aclassLayerFeedback_html_a4801f6c6c3801ec979e6b39b4ca243a5"><div class="ttname"><a href="classLayerFeedback.html#a4801f6c6c3801ec979e6b39b4ca243a5">LayerFeedback.inputEmail</a></div><div class="ttdeci">InputField inputEmail</div><div class="ttdef"><b>Definition:</b> <a href="LayerFeedback_8cs_source.html#l00372">LayerFeedback.cs:372</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerFeedback_8cs_source.html#l00380">form</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00372">inputEmail</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00370">inputName</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00390">toggleScreenshot</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00384">transUpload</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -562,6 +936,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00244">244</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>    {</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">foreach</span> (BaseModPackage baseModPackage <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.packages)</div>
+<div class="line"><span class="lineno">  248</span>        {</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">if</span> (!baseModPackage.builtin &amp;&amp; baseModPackage.activated)</div>
+<div class="line"><span class="lineno">  250</span>            {</div>
+<div class="line"><span class="lineno">  251</span>                num++;</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(<span class="stringliteral">&quot;warn_mod&quot;</span>.lang(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), delegate</div>
+<div class="line"><span class="lineno">  257</span>            {</div>
+<div class="line"><span class="lineno">  258</span>            }, delegate</div>
+<div class="line"><span class="lineno">  259</span>            {</div>
+<div class="line"><span class="lineno">  260</span>                this.form.Submit();</div>
+<div class="line"><span class="lineno">  261</span>            }, <span class="stringliteral">&quot;warn_mod_yes&quot;</span>, <span class="stringliteral">&quot;warn_mod_no&quot;</span>);</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>        this.<a class="code hl_variable" href="classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6">form</a>.Submit();</div>
+<div class="line"><span class="lineno">  265</span>    }</div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00204">Dialog.cs:204</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00380">form</a>, and <a class="el" href="Dialog_8cs_source.html#l00204">Dialog.YesNo()</a>.</p>
 
 </div>
 </div>
@@ -589,6 +988,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00134">134</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">bool</span> interactable = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerFeedback.html#a2fc0c91de990034b4a48652cf4914a7a">inputSummary</a>.text.Length &lt; 4)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            interactable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a">inputDetail</a>.text.Length &lt; 4)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            interactable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        this.buttonSubmit.interactable = interactable;</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerFeedback_8cs_source.html#l00378">inputDetail</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00376">inputSummary</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -615,6 +1030,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00362">362</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="aa05c93813e57056d9def270f0aa8dfcf" name="aa05c93813e57056d9def270f0aa8dfcf"></a>
@@ -631,6 +1048,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00402">402</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="aa426a11ea37e5c24788e19e59a640e5e" name="aa426a11ea37e5c24788e19e59a640e5e"></a>
@@ -646,6 +1065,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00400">400</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -678,6 +1099,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00396">396</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -727,6 +1150,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00386">386</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="acda012f00f94545c3a82dbcf651ae3b6" name="acda012f00f94545c3a82dbcf651ae3b6"></a>
@@ -742,6 +1167,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00380">380</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00236">OnCancel()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00267">OnSubmit()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00244">Submit()</a>.</p>
 
 </div>
 </div>
@@ -759,6 +1186,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00378">378</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00236">OnCancel()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00134">Validate()</a>.</p>
+
 </div>
 </div>
 <a id="a4801f6c6c3801ec979e6b39b4ca243a5" name="a4801f6c6c3801ec979e6b39b4ca243a5"></a>
@@ -774,6 +1203,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00372">372</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00267">OnSubmit()</a>.</p>
 
 </div>
 </div>
@@ -807,6 +1238,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00370">370</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00267">OnSubmit()</a>.</p>
+
 </div>
 </div>
 <a id="a2fc0c91de990034b4a48652cf4914a7a" name="a2fc0c91de990034b4a48652cf4914a7a"></a>
@@ -822,6 +1255,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00376">376</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00236">OnCancel()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00134">Validate()</a>.</p>
 
 </div>
 </div>
@@ -863,6 +1298,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00356">356</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a300bcbedd024c37f5bdede061984f895" name="a300bcbedd024c37f5bdede061984f895"></a>
@@ -886,6 +1323,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00354">354</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -911,6 +1350,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00364">364</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a73f1da08933928568d5dd45a89d94088" name="a73f1da08933928568d5dd45a89d94088"></a>
@@ -926,6 +1367,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00392">392</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>.</p>
 
 </div>
 </div>
@@ -950,6 +1393,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00358">358</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -983,6 +1428,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00388">388</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a1eaa9b7f7e65a3bfc97bebd2b5d32494" name="a1eaa9b7f7e65a3bfc97bebd2b5d32494"></a>
@@ -999,6 +1446,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00390">390</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00267">OnSubmit()</a>.</p>
+
 </div>
 </div>
 <a id="a79a1b312847cc25e021745ffdbdd3cef" name="a79a1b312847cc25e021745ffdbdd3cef"></a>
@@ -1014,6 +1463,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00384">384</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00267">OnSubmit()</a>.</p>
 
 </div>
 </div>
@@ -1039,15 +1490,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerFeedback_8cs_source.html#l00360">360</a> of file <a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00148">CollectFiles()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00016">OnInit()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerFeedback_8cs_source.html">LayerFeedback.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerFeedback.html">LayerFeedback</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

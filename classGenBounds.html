@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGenBounds.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -244,6 +264,35 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00107">107</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_class" href="classMapBounds.html">MapBounds</a> bounds = z.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>;</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classGenBounds.html">GenBounds</a></div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> = z,</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a> = z.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>,</div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> = bounds.<a class="code hl_variable" href="classMapBounds.html#a9a8b831368b2ec4671f8db8eef221ef3">x</a>,</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> = bounds.<a class="code hl_variable" href="classMapBounds.html#a004d02381f91f6eb59fb70cd3efa2e51">z</a>,</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> = bounds.<a class="code hl_property" href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">Width</a>,</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> = bounds.Height</div>
+<div class="line"><span class="lineno">  118</span>        };</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassGenBounds_html"><div class="ttname"><a href="classGenBounds.html">GenBounds</a></div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00005">GenBounds.cs:6</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a15a9cd4da52ef5039981300b88e7a5d5"><div class="ttname"><a href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">GenBounds.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00206">GenBounds.cs:206</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a6004ead0830ca7d5ab4fd26b51476220"><div class="ttname"><a href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">GenBounds.y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00202">GenBounds.cs:202</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a675dac829df0bcca9a76cb35c9a6dbc9"><div class="ttname"><a href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">GenBounds.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00204">GenBounds.cs:204</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a6b1ebb8ff2af742f37e086e7daf70486"><div class="ttname"><a href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">GenBounds.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00200">GenBounds.cs:200</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_ab644bef117d94cfea7fb56215c0803b6"><div class="ttname"><a href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">GenBounds.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00196">GenBounds.cs:196</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_adf2bff5b09ee53bbc398d000088bf14e"><div class="ttname"><a href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">GenBounds.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00194">GenBounds.cs:194</a></div></div>
+<div class="ttc" id="aclassMapBounds_html"><div class="ttname"><a href="classMapBounds.html">MapBounds</a></div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00005">MapBounds.cs:6</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a004d02381f91f6eb59fb70cd3efa2e51"><div class="ttname"><a href="classMapBounds.html#a004d02381f91f6eb59fb70cd3efa2e51">MapBounds.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00319">MapBounds.cs:319</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a99534a5f7331b6dae01f07e565accad7"><div class="ttname"><a href="classMapBounds.html#a99534a5f7331b6dae01f07e565accad7">MapBounds.Width</a></div><div class="ttdeci">int Width</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00023">MapBounds.cs:24</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a9a8b831368b2ec4671f8db8eef221ef3"><div class="ttname"><a href="classMapBounds.html#a9a8b831368b2ec4671f8db8eef221ef3">MapBounds.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00316">MapBounds.cs:316</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassZone_html_afa0007971eaad96b106d4004690b5ed7"><div class="ttname"><a href="classZone.html#afa0007971eaad96b106d4004690b5ed7">Zone.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03875">Zone.cs:3875</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="GenBounds_8cs_source.html#l00206">height</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, <a class="el" href="Zone_8cs_source.html#l03875">Zone.map</a>, <a class="el" href="GenBounds_8cs_source.html#l00204">width</a>, <a class="el" href="MapBounds_8cs_source.html#l00024">MapBounds.Width</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, <a class="el" href="MapBounds_8cs_source.html#l00316">MapBounds.x</a>, <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>, <a class="el" href="MapBounds_8cs_source.html#l00319">MapBounds.z</a>, and <a class="el" href="GenBounds_8cs_source.html#l00196">zone</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneEventHarvest_8cs_source.html#l00032">ZoneEventHarvest.OnVisit()</a>, and <a class="el" href="ZoneEventMusic_8cs_source.html#l00032">ZoneEventMusic.OnVisit()</a>.</p>
 
 </div>
 </div>
@@ -288,6 +337,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00121">121</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classGenBounds.html#a39e1ebea591891342ecc73ee3076bb8c">GetBounds</a>(this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>, this.<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>, this.<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, this.<a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a>, this.<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a>, this.<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a>, w, h, ignoreBlock);</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassGenBounds_html_a39e1ebea591891342ecc73ee3076bb8c"><div class="ttname"><a href="classGenBounds.html#a39e1ebea591891342ecc73ee3076bb8c">GenBounds.GetBounds</a></div><div class="ttdeci">GenBounds GetBounds(int w, int h, bool ignoreBlock)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00121">GenBounds.cs:121</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00206">height</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, <a class="el" href="GenBounds_8cs_source.html#l00204">width</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>, and <a class="el" href="GenBounds_8cs_source.html#l00196">zone</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00167">TryAddMapPiece()</a>.</p>
 
 </div>
 </div>
@@ -368,6 +425,52 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00126">126</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (dw &gt;= <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> || dh &gt;= <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a>)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_class" href="classGenBounds.html">GenBounds</a> genBounds = <span class="keyword">new</span> <a class="code hl_class" href="classGenBounds.html">GenBounds</a></div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> = <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>,</div>
+<div class="line"><span class="lineno">  135</span>            <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> = <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a>,</div>
+<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> = dw,</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> = dh,</div>
+<div class="line"><span class="lineno">  138</span>            <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a> = <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>,</div>
+<div class="line"><span class="lineno">  139</span>            <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> = <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>,</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_variable" href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">marginPartial</a> = this.<a class="code hl_variable" href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">marginPartial</a>,</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="classGenBounds.html#a62e22c041b19c5af5204791ef61ad59f">FuncCheckEmpty</a> = this.FuncCheckEmpty</div>
+<div class="line"><span class="lineno">  142</span>        };</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (ignoreBlock)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                genBounds.x = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> - dw) + <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> - dw / 2;</div>
+<div class="line"><span class="lineno">  148</span>                genBounds.y = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> - dh) + <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> - dh / 2;</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (genBounds.<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> &gt; 0 &amp;&amp; genBounds.<a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  150</span>                {</div>
+<div class="line"><span class="lineno">  151</span>                    <span class="keywordflow">return</span> genBounds;</div>
+<div class="line"><span class="lineno">  152</span>                }</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                genBounds.x = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> - dw) + <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>;</div>
+<div class="line"><span class="lineno">  157</span>                genBounds.y = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> - dh) + <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a>;</div>
+<div class="line"><span class="lineno">  158</span>                <span class="keywordflow">if</span> (genBounds.<a class="code hl_function" href="classGenBounds.html#a87d313b56d6297576275f4e5451f554b">IsEmpty</a>())</div>
+<div class="line"><span class="lineno">  159</span>                {</div>
+<div class="line"><span class="lineno">  160</span>                    <span class="keywordflow">return</span> genBounds;</div>
+<div class="line"><span class="lineno">  161</span>                }</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a62e22c041b19c5af5204791ef61ad59f"><div class="ttname"><a href="classGenBounds.html#a62e22c041b19c5af5204791ef61ad59f">GenBounds.FuncCheckEmpty</a></div><div class="ttdeci">Func&lt; Cell, bool &gt; FuncCheckEmpty</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00210">GenBounds.cs:210</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a87d313b56d6297576275f4e5451f554b"><div class="ttname"><a href="classGenBounds.html#a87d313b56d6297576275f4e5451f554b">GenBounds.IsEmpty</a></div><div class="ttdeci">bool IsEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00052">GenBounds.cs:52</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_ab9002e12b8d5a39d7155cc6c306f7a84"><div class="ttname"><a href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">GenBounds.marginPartial</a></div><div class="ttdeci">int marginPartial</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00208">GenBounds.cs:208</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00210">FuncCheckEmpty</a>, <a class="el" href="GenBounds_8cs_source.html#l00206">height</a>, <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, <a class="el" href="GenBounds_8cs_source.html#l00208">marginPartial</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="GenBounds_8cs_source.html#l00204">width</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>, and <a class="el" href="GenBounds_8cs_source.html#l00196">zone</a>.</p>
 
 </div>
 </div>
@@ -395,6 +498,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00052">52</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this.<a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> - this.<a class="code hl_variable" href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">marginPartial</a>; i &lt; this.y + this.height + this.<a class="code hl_variable" href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">marginPartial</a>; i++)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (i &lt; 0 || i &gt;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = this.<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> - this.marginPartial; j &lt; this.x + this.width + this.<a class="code hl_variable" href="classGenBounds.html#ab9002e12b8d5a39d7155cc6c306f7a84">marginPartial</a>; j++)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (j &lt; 0 || j &gt;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   65</span>                }</div>
+<div class="line"><span class="lineno">   66</span>                <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[j, i];</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGenBounds.html#a62e22c041b19c5af5204791ef61ad59f">FuncCheckEmpty</a> != <span class="keyword">null</span> &amp;&amp; !this.<a class="code hl_variable" href="classGenBounds.html#a62e22c041b19c5af5204791ef61ad59f">FuncCheckEmpty</a>(cell))</div>
+<div class="line"><span class="lineno">   68</span>                {</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">blocked</a> || cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a> || cell.<a class="code hl_property" href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Installed</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   72</span>                {</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>                }</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassAlgorithms_1_1WeightCell_html_a2c5ee336064b309bc73a1db233757553"><div class="ttname"><a href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">Algorithms.WeightCell.blocked</a></div><div class="ttdeci">bool blocked</div><div class="ttdef"><b>Definition:</b> <a href="WeightCell_8cs_source.html#l00012">WeightCell.cs:12</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a1c9c4cee0dcd497d8af3378d29214943"><div class="ttname"><a href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">Cell.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00592">Cell.cs:593</a></div></div>
+<div class="ttc" id="aclassCell_html_a6be59ecc0ed1cc25c8973bb993eeae36"><div class="ttname"><a href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Cell.Installed</a></div><div class="ttdeci">Thing Installed</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01014">Cell.cs:1015</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
+<div class="ttc" id="aclassMap_html_aa1a8a360aeea7dda2537485e30fea299"><div class="ttname"><a href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">Map.cells</a></div><div class="ttdeci">Cell[,] cells</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02887">Map.cs:2887</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="WeightCell_8cs_source.html#l00012">Algorithms.WeightCell.blocked</a>, <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="GenBounds_8cs_source.html#l00210">FuncCheckEmpty</a>, <a class="el" href="Cell_8cs_source.html#l00593">Cell.HasBlock</a>, <a class="el" href="Cell_8cs_source.html#l01015">Cell.Installed</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, <a class="el" href="GenBounds_8cs_source.html#l00208">marginPartial</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, and <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00126">GetBounds()</a>.</p>
 
 </div>
 </div>
@@ -439,6 +579,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00007">7</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_enumeration" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">BiomeProfile.BaseTile.SubType</a> subType = g.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#af3d319351ae2c3afd8bf8a1b367ac35b">subType</a>;</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">switch</span> (subType)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a>.<a class="code hl_class" href="classBiomeProfile_1_1BaseTile.html">BaseTile</a>.<a class="code hl_enumeration" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">SubType</a>.Rnd5:</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a>.<a class="code hl_class" href="classBiomeProfile_1_1BaseTile.html">BaseTile</a>.<a class="code hl_enumeration" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">SubType</a>.Rnd10:</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10) == 0;</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a>.<a class="code hl_class" href="classBiomeProfile_1_1BaseTile.html">BaseTile</a>.<a class="code hl_enumeration" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">SubType</a>.Rnd20:</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20) == 0;</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> subType == BiomeProfile.BaseTile.SubType.Pattern &amp;&amp; (<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a> + <a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a> % 2) % 2 == 0;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html">BiomeProfile.BaseTile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00179">BiomeProfile.cs:180</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69b"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">BiomeProfile.BaseTile.SubType</a></div><div class="ttdeci">SubType</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00345">BiomeProfile.cs:346</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_af3d319351ae2c3afd8bf8a1b367ac35b"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#af3d319351ae2c3afd8bf8a1b367ac35b">BiomeProfile.Tile.subType</a></div><div class="ttdeci">BiomeProfile.BaseTile.SubType subType</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00416">BiomeProfile.cs:416</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, and <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00029">SetBlock()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00023">SetFloor()</a>.</p>
 
 </div>
 </div>
@@ -466,6 +628,39 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00080">80</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        List&lt;Point&gt; list = <span class="keyword">new</span> List&lt;Point&gt;();</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this.<a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a>; i &lt; this.y + this.<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a>; i++)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (i &gt;= 0 &amp;&amp; i &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = this.<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>; j &lt; this.x + this.<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a>; j++)</div>
+<div class="line"><span class="lineno">   88</span>                {</div>
+<div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (j &gt;= 0 &amp;&amp; j &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">   90</span>                    {</div>
+<div class="line"><span class="lineno">   91</span>                        <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[j, i];</div>
+<div class="line"><span class="lineno">   92</span>                        <span class="keywordflow">if</span> (!cell.<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">blocked</a> &amp;&amp; !cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a> &amp;&amp; (cell.<a class="code hl_property" href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Installed</a> == <span class="keyword">null</span> || !cell.<a class="code hl_property" href="classCell.html#a6be59ecc0ed1cc25c8973bb993eeae36">Installed</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a0826d316a7a09a58676e12ce3b24030f">IsBlockPath</a>))</div>
+<div class="line"><span class="lineno">   93</span>                        {</div>
+<div class="line"><span class="lineno">   94</span>                            <a class="code hl_class" href="classPoint.html">Point</a> point = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(j, i);</div>
+<div class="line"><span class="lineno">   95</span>                            <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">HasChara</a>)</div>
+<div class="line"><span class="lineno">   96</span>                            {</div>
+<div class="line"><span class="lineno">   97</span>                                list.Add(point);</div>
+<div class="line"><span class="lineno">   98</span>                            }</div>
+<div class="line"><span class="lineno">   99</span>                        }</div>
+<div class="line"><span class="lineno">  100</span>                    }</div>
+<div class="line"><span class="lineno">  101</span>                }</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_af4f53c5ef543798320ca855aa873dc46"><div class="ttname"><a href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">Point.HasChara</a></div><div class="ttdeci">bool HasChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00364">Point.cs:365</a></div></div>
+<div class="ttc" id="aclassTrait_html_a0826d316a7a09a58676e12ce3b24030f"><div class="ttname"><a href="classTrait.html#a0826d316a7a09a58676e12ce3b24030f">Trait.IsBlockPath</a></div><div class="ttdeci">virtual bool IsBlockPath</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00076">Trait.cs:77</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="WeightCell_8cs_source.html#l00012">Algorithms.WeightCell.blocked</a>, <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="Cell_8cs_source.html#l00593">Cell.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00365">Point.HasChara</a>, <a class="el" href="GenBounds_8cs_source.html#l00206">height</a>, <a class="el" href="Cell_8cs_source.html#l01015">Cell.Installed</a>, <a class="el" href="Trait_8cs_source.html#l00077">Trait.IsBlockPath</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>, <a class="el" href="GenBounds_8cs_source.html#l00204">width</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, and <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneEventHarvest_8cs_source.html#l00032">ZoneEventHarvest.OnVisit()</a>, and <a class="el" href="ZoneEventMusic_8cs_source.html#l00032">ZoneEventMusic.OnVisit()</a>.</p>
 
 </div>
 </div>
@@ -510,6 +705,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00029">29</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">bool</span> flag = this.<a class="code hl_function" href="classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943">IsSub</a>(t, <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z);</div>
+<div class="line"><span class="lineno">   32</span>        this.<a class="code hl_function" href="classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc">SetBlock</a>(<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">matSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">mat</a>, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">id</a>, 0);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a6cc5ce0d0bfd86581f4a8679c6955225"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">BiomeProfile.Tile.mat</a></div><div class="ttdeci">int mat</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00408">BiomeProfile.cs:408</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a762961914009f2c293c711c603475360"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">BiomeProfile.Tile.idSub</a></div><div class="ttdeci">int idSub</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00411">BiomeProfile.cs:411</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a9e84d5f037423d8aead3414947faec81"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">BiomeProfile.Tile.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00405">BiomeProfile.cs:405</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a9f25f93e246ab2df8d439b24055ee0f7"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">BiomeProfile.Tile.matSub</a></div><div class="ttdeci">int matSub</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00414">BiomeProfile.cs:414</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_add6f8c9d43aa5da0adffb03135318bdc"><div class="ttname"><a href="classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc">GenBounds.SetBlock</a></div><div class="ttdeci">void SetBlock(BiomeProfile.Tile t, int x, int z)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00029">GenBounds.cs:29</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_af2b2ee3b0222ce1d895b77171a9ce943"><div class="ttname"><a href="classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943">GenBounds.IsSub</a></div><div class="ttdeci">bool IsSub(BiomeProfile.Tile g, int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00007">GenBounds.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00007">IsSub()</a>, <a class="el" href="GenBounds_8cs_source.html#l00029">SetBlock()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00029">SetBlock()</a>.</p>
 
 </div>
 </div>
@@ -566,6 +775,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00043">43</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z];</div>
+<div class="line"><span class="lineno">   46</span>        cell._blockMat = (byte)idMat;</div>
+<div class="line"><span class="lineno">   47</span>        cell._block = (byte)idBlock;</div>
+<div class="line"><span class="lineno">   48</span>        cell.blockDir = direction;</div>
+<div class="line"><span class="lineno">   49</span>        cell.effect = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, and <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>.</p>
 
 </div>
 </div>
@@ -610,6 +828,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00023">23</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">bool</span> flag = this.<a class="code hl_function" href="classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943">IsSub</a>(t, <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z);</div>
+<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">matSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">mat</a>, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">id</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(8) + 1));</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassGenBounds_html_af25058aec70f18f04698c0425d977cdb"><div class="ttname"><a href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">GenBounds.SetFloor</a></div><div class="ttdeci">void SetFloor(BiomeProfile.Tile t, int x, int z)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00023">GenBounds.cs:23</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00007">IsSub()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="GenBounds_8cs_source.html#l00023">SetFloor()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00023">SetFloor()</a>.</p>
 
 </div>
 </div>
@@ -666,6 +893,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00035">35</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = this.<a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z];</div>
+<div class="line"><span class="lineno">   38</span>        cell._floorMat = (byte)idMat;</div>
+<div class="line"><span class="lineno">   39</span>        cell._floor = (byte)idFloor;</div>
+<div class="line"><span class="lineno">   40</span>        cell.floorDir = direction;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="GenBounds_8cs_source.html#l00194">map</a>, and <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>.</p>
 
 </div>
 </div>
@@ -716,6 +951,46 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00167">167</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>    {</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (ruin == -1f)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            ruin = this.<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#a86e3aac2e4b870ad68133138e227ed35">RuinChance</a>;</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_class" href="classPartialMap.html">PartialMap</a> partialMap = <a class="code hl_class" href="classMapPiece.html">MapPiece</a>.<a class="code hl_property" href="classMapPiece.html#a2f81c36b914a68531a851f9e4e5858f5">Instance</a>.<a class="code hl_function" href="classMapPiece.html#ae68d3276558dcfbd8c72fc025d289763">GetMap</a>(type, tags.IsEmpty(<span class="keyword">this</span>.zone.biome.tags), ruin);</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (partialMap == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            Debug.Log(<span class="stringliteral">&quot;TryAddMap Piece: no map&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">bool</span> flag = partialMap.dir == 1 || partialMap.dir == 3;</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_class" href="classGenBounds.html">GenBounds</a> bounds = this.<a class="code hl_function" href="classGenBounds.html#a39e1ebea591891342ecc73ee3076bb8c">GetBounds</a>(flag ? partialMap.<a class="code hl_variable" href="classPartialMap.html#a794dadead7535bb0dedfa03076813a4a">h</a> : partialMap.<a class="code hl_variable" href="classPartialMap.html#a75129f1547912fb4e15571b047bf898a">w</a>, flag ? partialMap.<a class="code hl_variable" href="classPartialMap.html#a75129f1547912fb4e15571b047bf898a">w</a> : partialMap.<a class="code hl_variable" href="classPartialMap.html#a794dadead7535bb0dedfa03076813a4a">h</a>, partialMap.<a class="code hl_variable" href="classPartialMap.html#a961fe6999383e127a5214187d7b02e3b">ignoreBlock</a>);</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (bounds == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  182</span>        {</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        partialMap.<a class="code hl_function" href="classPartialMap.html#af981ebfe97ea82218680ac0e93a78ed4">Apply</a>(<span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(bounds.<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, bounds.<a class="code hl_variable" href="classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220">y</a>), <a class="code hl_class" href="classPartialMap.html">PartialMap</a>.<a class="code hl_enumeration" href="classPartialMap.html#a845a72bfb177eaaef400ee175e28b06b">ApplyMode</a>.Apply);</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (onCreate != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            onCreate(partialMap, bounds);</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>        Debug.Log(partialMap.<a class="code hl_variable" href="classPartialMap.html#a4b2fcba285a46b0549c957c14c424e1a">path</a>);</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> partialMap;</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+<div class="ttc" id="aclassMapPiece_html"><div class="ttname"><a href="classMapPiece.html">MapPiece</a></div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00006">MapPiece.cs:7</a></div></div>
+<div class="ttc" id="aclassMapPiece_html_a2f81c36b914a68531a851f9e4e5858f5"><div class="ttname"><a href="classMapPiece.html#a2f81c36b914a68531a851f9e4e5858f5">MapPiece.Instance</a></div><div class="ttdeci">static MapPiece Instance</div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00008">MapPiece.cs:9</a></div></div>
+<div class="ttc" id="aclassMapPiece_html_ae68d3276558dcfbd8c72fc025d289763"><div class="ttname"><a href="classMapPiece.html#ae68d3276558dcfbd8c72fc025d289763">MapPiece.GetMap</a></div><div class="ttdeci">PartialMap GetMap(MapPiece.Type type, string tag, float ruin)</div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00029">MapPiece.cs:29</a></div></div>
+<div class="ttc" id="aclassPartialMap_html"><div class="ttname"><a href="classPartialMap.html">PartialMap</a></div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00009">PartialMap.cs:10</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a4b2fcba285a46b0549c957c14c424e1a"><div class="ttname"><a href="classPartialMap.html#a4b2fcba285a46b0549c957c14c424e1a">PartialMap.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00535">PartialMap.cs:535</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a75129f1547912fb4e15571b047bf898a"><div class="ttname"><a href="classPartialMap.html#a75129f1547912fb4e15571b047bf898a">PartialMap.w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00504">PartialMap.cs:504</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a794dadead7535bb0dedfa03076813a4a"><div class="ttname"><a href="classPartialMap.html#a794dadead7535bb0dedfa03076813a4a">PartialMap.h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00507">PartialMap.cs:507</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a845a72bfb177eaaef400ee175e28b06b"><div class="ttname"><a href="classPartialMap.html#a845a72bfb177eaaef400ee175e28b06b">PartialMap.ApplyMode</a></div><div class="ttdeci">ApplyMode</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00553">PartialMap.cs:554</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_a961fe6999383e127a5214187d7b02e3b"><div class="ttname"><a href="classPartialMap.html#a961fe6999383e127a5214187d7b02e3b">PartialMap.ignoreBlock</a></div><div class="ttdeci">bool ignoreBlock</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00525">PartialMap.cs:525</a></div></div>
+<div class="ttc" id="aclassPartialMap_html_af981ebfe97ea82218680ac0e93a78ed4"><div class="ttname"><a href="classPartialMap.html#af981ebfe97ea82218680ac0e93a78ed4">PartialMap.Apply</a></div><div class="ttdeci">unsafe void Apply(Point _point, PartialMap.ApplyMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00055">PartialMap.cs:55</a></div></div>
+<div class="ttc" id="aclassZone_html_a86e3aac2e4b870ad68133138e227ed35"><div class="ttname"><a href="classZone.html#a86e3aac2e4b870ad68133138e227ed35">Zone.RuinChance</a></div><div class="ttdeci">virtual float RuinChance</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00480">Zone.cs:481</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PartialMap_8cs_source.html#l00055">PartialMap.Apply()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="MapPiece_8cs_source.html#l00029">MapPiece.GetMap()</a>, <a class="el" href="PartialMap_8cs_source.html#l00507">PartialMap.h</a>, <a class="el" href="PartialMap_8cs_source.html#l00525">PartialMap.ignoreBlock</a>, <a class="el" href="MapPiece_8cs_source.html#l00009">MapPiece.Instance</a>, <a class="el" href="PartialMap_8cs_source.html#l00535">PartialMap.path</a>, <a class="el" href="Zone_8cs_source.html#l00481">Zone.RuinChance</a>, <a class="el" href="PartialMap_8cs_source.html#l00504">PartialMap.w</a>, <a class="el" href="GenBounds_8cs_source.html#l00200">x</a>, <a class="el" href="GenBounds_8cs_source.html#l00202">y</a>, and <a class="el" href="GenBounds_8cs_source.html#l00196">zone</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone__CaveMonster_8cs_source.html#l00013">Zone_CaveMonster.OnGenerateRooms()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00032">ZoneEventHarvest.OnVisit()</a>, and <a class="el" href="ZoneEventMusic_8cs_source.html#l00032">ZoneEventMusic.OnVisit()</a>.</p>
 
 </div>
 </div>
@@ -734,6 +1009,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00210">210</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00126">GetBounds()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>.</p>
+
 </div>
 </div>
 <a id="a15a9cd4da52ef5039981300b88e7a5d5" name="a15a9cd4da52ef5039981300b88e7a5d5"></a>
@@ -749,6 +1026,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00206">206</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00261">MapGenDungen.g__SetRoom()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenRoom_8cs_source.html#l00031">GenRoom.Init()</a>, <a class="el" href="GenBounds_8cs_source.html#l00080">ListEmptyPoint()</a>, <a class="el" href="MapGen_8cs_source.html#l00395">MapGen.ModifyHeight()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, and <a class="el" href="GenRoom_8cs_source.html#l00049">GenRoom.Populate()</a>.</p>
 
 </div>
 </div>
@@ -766,6 +1045,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00194">194</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00261">MapGenDungen.g__SetRoom()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00080">ListEmptyPoint()</a>, <a class="el" href="MapGen_8cs_source.html#l00395">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00020">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00127">GenRoom.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00035">SetFloor()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00014">BaseMapGen.SetSize()</a>.</p>
+
 </div>
 </div>
 <a id="ab9002e12b8d5a39d7155cc6c306f7a84" name="ab9002e12b8d5a39d7155cc6c306f7a84"></a>
@@ -781,6 +1062,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00208">208</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00126">GetBounds()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>.</p>
 
 </div>
 </div>
@@ -798,6 +1081,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00198">198</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, <a class="el" href="MapGen_8cs_source.html#l00341">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00358">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00395">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00020">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00127">GenRoom.OnPopulate()</a>, <a class="el" href="GenRoomMonsterHouse_8cs_source.html#l00005">GenRoomMonsterHouse.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00014">BaseMapGen.SetSize()</a>.</p>
+
 </div>
 </div>
 <a id="a675dac829df0bcca9a76cb35c9a6dbc9" name="a675dac829df0bcca9a76cb35c9a6dbc9"></a>
@@ -813,6 +1098,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00204">204</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00261">MapGenDungen.g__SetRoom()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00080">ListEmptyPoint()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, and <a class="el" href="GenRoom_8cs_source.html#l00049">GenRoom.Populate()</a>.</p>
 
 </div>
 </div>
@@ -830,6 +1117,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00200">200</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00007">IsSub()</a>, <a class="el" href="GenBounds_8cs_source.html#l00080">ListEmptyPoint()</a>, <a class="el" href="GenRoom_8cs_source.html#l00049">GenRoom.Populate()</a>, <a class="el" href="GenBounds_8cs_source.html#l00029">SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00023">SetFloor()</a>, <a class="el" href="GenBounds_8cs_source.html#l00167">TryAddMapPiece()</a>, and <a class="el" href="MapGen_8cs_source.html#l00534">MapGen.TryMakeRiver()</a>.</p>
+
 </div>
 </div>
 <a id="a6004ead0830ca7d5ab4fd26b51476220" name="a6004ead0830ca7d5ab4fd26b51476220"></a>
@@ -845,6 +1134,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00202">202</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00052">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00007">IsSub()</a>, <a class="el" href="GenBounds_8cs_source.html#l00080">ListEmptyPoint()</a>, <a class="el" href="GenRoom_8cs_source.html#l00049">GenRoom.Populate()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00167">TryAddMapPiece()</a>.</p>
 
 </div>
 </div>
@@ -862,15 +1153,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00196">196</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00107">Create()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00261">MapGenDungen.g__SetRoom()</a>, <a class="el" href="GenBounds_8cs_source.html#l00121">GetBounds()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00022">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00020">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00127">GenRoom.OnPopulate()</a>, <a class="el" href="GenRoom_8cs_source.html#l00049">GenRoom.Populate()</a>, <a class="el" href="GenRoom_8cs_source.html#l00118">GenRoom.SpawnMob()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00167">TryAddMapPiece()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGenBounds.html">GenBounds</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

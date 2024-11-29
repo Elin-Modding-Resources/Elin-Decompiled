@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourcePrefInspector.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -222,6 +242,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00024">24</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        SourcePrefInspector.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   27</span>        ShadowData.Instance = this.<a class="code hl_variable" href="classSourcePrefInspector.html#a2814fc01ef69b7cf6bc3619e176f53d6">shadowData</a>;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassSourcePrefInspector_html_a2814fc01ef69b7cf6bc3619e176f53d6"><div class="ttname"><a href="classSourcePrefInspector.html#a2814fc01ef69b7cf6bc3619e176f53d6">SourcePrefInspector.shadowData</a></div><div class="ttdeci">ShadowData shadowData</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00075">SourcePrefInspector.cs:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePrefInspector_8cs_source.html#l00075">shadowData</a>.</p>
 
 </div>
 </div>
@@ -249,7 +276,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00052">52</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af163347caeb7239037d615b027b34635" name="af163347caeb7239037d615b027b34635"></a>
@@ -276,6 +305,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00030">30</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourcePrefInspector.html#a9df92ecbd7442a00ad1eefb01cb7e277">card</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classSourcePrefInspector.html#a9df92ecbd7442a00ad1eefb01cb7e277">card</a>.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            this.card.isFloating = this.<a class="code hl_variable" href="classSourcePrefInspector.html#a9df92ecbd7442a00ad1eefb01cb7e277">card</a>.<a class="code hl_property" href="classCard.html#a7defb8a972dddfd622028676c19d3b8d">Pref</a>.<a class="code hl_property" href="classSourcePref.html#a80470e33705f660efedf6a3d5716a473">Float</a>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassCard_html_a7defb8a972dddfd622028676c19d3b8d"><div class="ttname"><a href="classCard.html#a7defb8a972dddfd622028676c19d3b8d">Card.Pref</a></div><div class="ttdeci">virtual SourcePref Pref</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02091">Card.cs:2092</a></div></div>
+<div class="ttc" id="aclassSourcePrefInspector_html_a9df92ecbd7442a00ad1eefb01cb7e277"><div class="ttname"><a href="classSourcePrefInspector.html#a9df92ecbd7442a00ad1eefb01cb7e277">SourcePrefInspector.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00071">SourcePrefInspector.cs:71</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_a80470e33705f660efedf6a3d5716a473"><div class="ttname"><a href="classSourcePref.html#a80470e33705f660efedf6a3d5716a473">SourcePref.Float</a></div><div class="ttdeci">bool Float</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00313">SourcePref.cs:314</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePrefInspector_8cs_source.html#l00071">card</a>, <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="SourcePref_8cs_source.html#l00314">SourcePref.Float</a>, and <a class="el" href="Card_8cs_source.html#l02092">Card.Pref</a>.</p>
 
 </div>
 </div>
@@ -303,6 +344,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">6</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classSourcePrefInspector.html#af299b2f570538ec2f75f5db12c99cde4">CanToggleUsePref</a>)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>        (this.target as <a class="code hl_class" href="classCardRow.html">CardRow</a>).<a class="code hl_variable" href="classSourcePrefInspector.html#a96a376e67bfe1cf1edc8473cf4020e72">pref</a>.<a class="code hl_property" href="classSourcePref.html#ab159ab314b866628631fb4f6464f8801">flags</a> |= <a class="code hl_enumeration" href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a>.UsePref;</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aPrefFlag_8cs_html_ac9c3f3d0eb1ed76dfc3b1896775718d3"><div class="ttname"><a href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a></div><div class="ttdeci">PrefFlag</div><div class="ttdef"><b>Definition:</b> <a href="PrefFlag_8cs_source.html#l00004">PrefFlag.cs:5</a></div></div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassSourcePrefInspector_html_a96a376e67bfe1cf1edc8473cf4020e72"><div class="ttname"><a href="classSourcePrefInspector.html#a96a376e67bfe1cf1edc8473cf4020e72">SourcePrefInspector.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00061">SourcePrefInspector.cs:61</a></div></div>
+<div class="ttc" id="aclassSourcePrefInspector_html_af299b2f570538ec2f75f5db12c99cde4"><div class="ttname"><a href="classSourcePrefInspector.html#af299b2f570538ec2f75f5db12c99cde4">SourcePrefInspector.CanToggleUsePref</a></div><div class="ttdeci">bool CanToggleUsePref</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00015">SourcePrefInspector.cs:16</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_ab159ab314b866628631fb4f6464f8801"><div class="ttname"><a href="classSourcePref.html#ab159ab314b866628631fb4f6464f8801">SourcePref.flags</a></div><div class="ttdeci">PrefFlag flags</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00017">SourcePref.cs:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourcePrefInspector_8cs_source.html#l00016">CanToggleUsePref</a>, <a class="el" href="SourcePref_8cs_source.html#l00018">SourcePref.flags</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00061">pref</a>.</p>
 
 </div>
 </div>
@@ -330,6 +385,34 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00038">38</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        EMono.debug.validatePref = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a5016191eaf33a8f147b32e5d22f35c95">foods</a>.<a class="code hl_function" href="classSourceThingV.html#aff0111b19538e5afe462ddacdba21c9c">ValidatePref</a>();</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2b65d7893ce9efd2215d725e636018c3">thingV</a>.<a class="code hl_function" href="classSourceThingV.html#aff0111b19538e5afe462ddacdba21c9c">ValidatePref</a>();</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.ValidatePref();</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.<a class="code hl_function" href="classSourceChara.html#a794d6ca819020f2cd9545ed95d850ff4">ValidatePref</a>();</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.<a class="code hl_function" href="classSourceObj.html#ae5e311075cb9810094c2ad191e909126">ValidatePref</a>();</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShadowData.html">ShadowData</a>.<a class="code hl_class" href="classShadowData_1_1Item.html">Item</a> item in <span class="keyword">this</span>.shadowData.items)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            item.Validate();</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_afaf9020addda94e6bab3a114be10e563"><div class="ttname"><a href="classEMono.html#afaf9020addda94e6bab3a114be10e563">EMono.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00142">EMono.cs:143</a></div></div>
+<div class="ttc" id="aclassShadowData_1_1Item_html"><div class="ttname"><a href="classShadowData_1_1Item.html">ShadowData.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ShadowData_8cs_source.html#l00011">ShadowData.cs:12</a></div></div>
+<div class="ttc" id="aclassShadowData_html"><div class="ttname"><a href="classShadowData.html">ShadowData</a></div><div class="ttdef"><b>Definition:</b> <a href="ShadowData_8cs_source.html#l00004">ShadowData.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceChara_html_a794d6ca819020f2cd9545ed95d850ff4"><div class="ttname"><a href="classSourceChara.html#a794d6ca819020f2cd9545ed95d850ff4">SourceChara.ValidatePref</a></div><div class="ttdeci">override void ValidatePref()</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00086">SourceChara.cs:86</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2b65d7893ce9efd2215d725e636018c3"><div class="ttname"><a href="classSourceManager.html#a2b65d7893ce9efd2215d725e636018c3">SourceManager.thingV</a></div><div class="ttdeci">SourceThingV thingV</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00211">SourceManager.cs:211</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a38f1a362e2021aef4516d1b34101d179"><div class="ttname"><a href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">SourceManager.objs</a></div><div class="ttdeci">SourceObj objs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00183">SourceManager.cs:183</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00161">SourceManager.cs:161</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a5016191eaf33a8f147b32e5d22f35c95"><div class="ttname"><a href="classSourceManager.html#a5016191eaf33a8f147b32e5d22f35c95">SourceManager.foods</a></div><div class="ttdeci">SourceFood foods</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00213">SourceManager.cs:213</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00153">SourceManager.cs:153</a></div></div>
+<div class="ttc" id="aclassSourceObj_html_ae5e311075cb9810094c2ad191e909126"><div class="ttname"><a href="classSourceObj.html#ae5e311075cb9810094c2ad191e909126">SourceObj.ValidatePref</a></div><div class="ttdeci">override void ValidatePref()</div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00068">SourceObj.cs:68</a></div></div>
+<div class="ttc" id="aclassSourceThingV_html_aff0111b19538e5afe462ddacdba21c9c"><div class="ttname"><a href="classSourceThingV.html#aff0111b19538e5afe462ddacdba21c9c">SourceThingV.ValidatePref</a></div><div class="ttdeci">override void ValidatePref()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00072">SourceThingV.cs:72</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00153">SourceManager.charas</a>, <a class="el" href="SourceManager_8cs_source.html#l00213">SourceManager.foods</a>, <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.objs</a>, <a class="el" href="EMono_8cs_source.html#l00143">EMono.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>, <a class="el" href="SourceManager_8cs_source.html#l00211">SourceManager.thingV</a>, <a class="el" href="SourceChara_8cs_source.html#l00086">SourceChara.ValidatePref()</a>, <a class="el" href="SourceObj_8cs_source.html#l00068">SourceObj.ValidatePref()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00072">SourceThingV.ValidatePref()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00453">Core.Init()</a>.</p>
 
 </div>
 </div>
@@ -355,6 +438,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00071">71</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourcePrefInspector_8cs_source.html#l00030">OnValidate()</a>.</p>
 
 </div>
 </div>
@@ -444,6 +529,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00056">56</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00453">Core.Init()</a>.</p>
+
 </div>
 </div>
 <a id="a625a5fc0927d12dd44567acb8e2b5115" name="a625a5fc0927d12dd44567acb8e2b5115"></a>
@@ -532,6 +619,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00061">61</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">ToggleUsePref()</a>.</p>
+
 </div>
 </div>
 <a id="a52493d6d91b48f7ab28240626c32508d" name="a52493d6d91b48f7ab28240626c32508d"></a>
@@ -563,6 +652,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00075">75</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourcePrefInspector_8cs_source.html#l00024">Awake()</a>.</p>
 
 </div>
 </div>
@@ -612,6 +703,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourcePrefInspector_8cs_source.html#l00015">15</a> of file <a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = this.target as <a class="code hl_class" href="classCardRow.html">CardRow</a>;</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> cardRow != <span class="keyword">null</span> &amp;&amp; cardRow.origin != <span class="keyword">null</span> &amp;&amp; !cardRow.<a class="code hl_variable" href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">pref</a>.<a class="code hl_property" href="classSourcePref.html#a671f07012e399f3f0a210eae4ac114b2">UsePref</a>;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassRenderRow_html_a51d3045368a420940208487ea3ed1d63"><div class="ttname"><a href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">RenderRow.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00495">RenderRow.cs:495</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_a671f07012e399f3f0a210eae4ac114b2"><div class="ttname"><a href="classSourcePref.html#a671f07012e399f3f0a210eae4ac114b2">SourcePref.UsePref</a></div><div class="ttdeci">bool UsePref</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00305">SourcePref.cs:306</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">ToggleUsePref()</a>.</p>
 
 </div>
 </div>
@@ -619,9 +721,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="SourcePrefInspector_8cs_source.html">SourcePrefInspector.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourcePrefInspector.html">SourcePrefInspector</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

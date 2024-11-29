@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structAM__Picker_1_1Result.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classAM__Picker.html">AM_Picker</a></li><li class="navelem"><a class="el" href="structAM__Picker_1_1Result.html">Result</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -131,6 +147,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Picker_8cs_source.html#l00186">186</a> of file <a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  189</span>            {</div>
+<div class="line"><span class="lineno">  190</span>                this.<a class="code hl_variable" href="structAM__Picker_1_1Result.html#ae40243c092840686a33168e9c2ff1f0e">source</a>.<a class="code hl_property" href="classRecipeSource.html#af505d7e0a3fd033fa5a0c4723681ec13">Name</a>,</div>
+<div class="line"><span class="lineno">  191</span>                EClass.debug.showExtra ? (<span class="stringliteral">&quot;:&quot;</span> + this.<a class="code hl_variable" href="structAM__Picker_1_1Result.html#ae40243c092840686a33168e9c2ff1f0e">source</a>.<a class="code hl_variable" href="classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0">id</a>) : <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  192</span>                <span class="stringliteral">&quot;(&quot;</span>,</div>
+<div class="line"><span class="lineno">  193</span>                this.<a class="code hl_variable" href="structAM__Picker_1_1Result.html#a5b1a125a7a1e36e5b357360aec2d86e9">mat</a>.GetName(),</div>
+<div class="line"><span class="lineno">  194</span>                EClass.debug.showExtra ? (<span class="stringliteral">&quot;:&quot;</span> + this.<a class="code hl_variable" href="structAM__Picker_1_1Result.html#a5b1a125a7a1e36e5b357360aec2d86e9">mat</a>.id.ToString()) : <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  195</span>                <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  196</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_function" href="classRecipeManager.html#a31d21cfdafbd1d03ddbe16cd4d9ec9d5">IsKnown</a>(<span class="keyword">this</span>.source.id) ? <span class="stringliteral">&quot;&quot;</span> : (Environment.NewLine + <span class="stringliteral">&quot;noRecipe&quot;</span>.lang())</div>
+<div class="line"><span class="lineno">  197</span>            });</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01536">Player.cs:1536</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a31d21cfdafbd1d03ddbe16cd4d9ec9d5"><div class="ttname"><a href="classRecipeManager.html#a31d21cfdafbd1d03ddbe16cd4d9ec9d5">RecipeManager.IsKnown</a></div><div class="ttdeci">bool IsKnown(string id)</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00123">RecipeManager.cs:123</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a010a0bba2369bc5af000bf68245b33d0"><div class="ttname"><a href="classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0">RecipeSource.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00197">RecipeSource.cs:197</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_af505d7e0a3fd033fa5a0c4723681ec13"><div class="ttname"><a href="classRecipeSource.html#af505d7e0a3fd033fa5a0c4723681ec13">RecipeSource.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00023">RecipeSource.cs:24</a></div></div>
+<div class="ttc" id="astructAM__Picker_1_1Result_html_a5b1a125a7a1e36e5b357360aec2d86e9"><div class="ttname"><a href="structAM__Picker_1_1Result.html#a5b1a125a7a1e36e5b357360aec2d86e9">AM_Picker.Result.mat</a></div><div class="ttdeci">SourceMaterial.Row mat</div><div class="ttdef"><b>Definition:</b> <a href="AM__Picker_8cs_source.html#l00210">AM_Picker.cs:210</a></div></div>
+<div class="ttc" id="astructAM__Picker_1_1Result_html_ae40243c092840686a33168e9c2ff1f0e"><div class="ttname"><a href="structAM__Picker_1_1Result.html#ae40243c092840686a33168e9c2ff1f0e">AM_Picker.Result.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="AM__Picker_8cs_source.html#l00208">AM_Picker.cs:208</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RecipeSource_8cs_source.html#l00197">RecipeSource.id</a>, <a class="el" href="RecipeManager_8cs_source.html#l00123">RecipeManager.IsKnown()</a>, <a class="el" href="AM__Picker_8cs_source.html#l00210">AM_Picker.Result.mat</a>, <a class="el" href="RecipeSource_8cs_source.html#l00024">RecipeSource.Name</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01536">Player.recipes</a>, and <a class="el" href="AM__Picker_8cs_source.html#l00208">AM_Picker.Result.source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileSelector_8cs_source.html#l00388">BaseTileSelector.RefreshMouseInfo()</a>.</p>
 
 </div>
 </div>
@@ -149,6 +189,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Picker_8cs_source.html#l00210">210</a> of file <a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Picker_8cs_source.html#l00186">AM_Picker.Result.GetText()</a>.</p>
+
 </div>
 </div>
 <a id="ae40243c092840686a33168e9c2ff1f0e" name="ae40243c092840686a33168e9c2ff1f0e"></a>
@@ -164,6 +206,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Picker_8cs_source.html#l00208">208</a> of file <a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Picker_8cs_source.html#l00186">AM_Picker.Result.GetText()</a>.</p>
 
 </div>
 </div>
@@ -205,7 +249,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Picker_8cs_source.html#l00200">200</a> of file <a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  203</span>            {</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="structAM__Picker_1_1Result.html#ae40243c092840686a33168e9c2ff1f0e">source</a>.<a class="code hl_property" href="classRecipeSource.html#a3ad10d18700cb89ae0c6319ac5a7bf1f">recipeCat</a>;</div>
+<div class="line"><span class="lineno">  205</span>            }</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="ttc" id="aclassRecipeSource_html_a3ad10d18700cb89ae0c6319ac5a7bf1f"><div class="ttname"><a href="classRecipeSource.html#a3ad10d18700cb89ae0c6319ac5a7bf1f">RecipeSource.recipeCat</a></div><div class="ttdeci">string recipeCat</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00006">RecipeSource.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8adc3dfeb7927be2722ae024f1197d16" name="a8adc3dfeb7927be2722ae024f1197d16"></a>
@@ -229,6 +280,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Picker_8cs_source.html#l00178">178</a> of file <a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  181</span>            {</div>
+<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">return</span> this.source != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="InspectGroupBlock_8cs_source.html#l00013">InspectGroupBlock.OnSetActions()</a>, <a class="el" href="InspectGroupThing_8cs_source.html#l00013">InspectGroupThing.OnSetActions()</a>, <a class="el" href="BaseTileSelector_8cs_source.html#l00388">BaseTileSelector.RefreshMouseInfo()</a>, and <a class="el" href="AM__Picker_8cs_source.html#l00105">AM_Picker.Test()</a>.</p>
 
 </div>
 </div>
@@ -236,9 +295,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="AM__Picker_8cs_source.html">AM_Picker.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Picker.html">AM_Picker</a></li><li class="navelem"><a class="el" href="structAM__Picker_1_1Result.html">Result</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

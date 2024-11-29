@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitCauldron.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -788,7 +808,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a2c3194e6082d54219d469ab26bc27ee7">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCauldron_8cs_source.html#l00023">23</a> of file <a class="el" href="TraitCauldron_8cs_source.html">TraitCauldron.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;cauldron&quot;</span> || r.idFactory == <span class="stringliteral">&quot;camppot&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46d3d071f3390b12f0ed9a35f0d0afb9" name="a46d3d071f3390b12f0ed9a35f0d0afb9"></a>
@@ -818,6 +841,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTraitCrafter.html#a03658ac83b7d8b4c0fb6a7535ace561b">TraitCrafter</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCauldron_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitCauldron_8cs_source.html">TraitCauldron.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = r.row as <a class="code hl_class" href="classCardRow.html">CardRow</a>;</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">string</span> result;</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!(((cardRow != <span class="keyword">null</span>) ? cardRow.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a> : <span class="keyword">null</span>) == <span class="stringliteral">&quot;dish&quot;</span>))</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> ((result = base.GetParam(1, <span class="keyword">null</span>)) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;handicraft&quot;</span>;</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            result = <span class="stringliteral">&quot;cooking&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a898f4f59778bd1120e31aa5768ec4f3d"><div class="ttname"><a href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">CardRow._origin</a></div><div class="ttdeci">string _origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00131">CardRow.cs:131</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardRow_8cs_source.html#l00131">CardRow._origin</a>.</p>
 
 </div>
 </div>
@@ -825,9 +868,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitCauldron_8cs_source.html">TraitCauldron.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitCauldron.html">TraitCauldron</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

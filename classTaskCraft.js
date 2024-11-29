@@ -1,0 +1,26 @@
+var classTaskCraft =
+[
+    [ "_CanPerformTask", "classTaskCraft.html#a506799dfe78905d8a1c576c64a51e877", null ],
+    [ "CanManualCancel", "classTaskCraft.html#a59d420aff4354ed8658c2304cebe40cc", null ],
+    [ "CanProgress", "classTaskCraft.html#a86d594048c31f6e66e8b3e68d0f225f7", null ],
+    [ "IsIngredientsValid", "classTaskCraft.html#aad744773c8b2da6f8ee7ae975904260c", null ],
+    [ "OnBeforeProgress", "classTaskCraft.html#a85d75f752cb8d8133ac35a7582e00988", null ],
+    [ "OnCreateProgress", "classTaskCraft.html#a244dc6cb1ff89f60057ff520e5047020", null ],
+    [ "OnProgress", "classTaskCraft.html#aad3b2850aae023887a059383ddeb6d2b", null ],
+    [ "OnProgressComplete", "classTaskCraft.html#a607918eff9586d11a4de8bd20c2fea02", null ],
+    [ "PutOutResources", "classTaskCraft.html#a6072100d0eb8162cc64199df7d7be537", null ],
+    [ "ResetReq", "classTaskCraft.html#a00292a3bbb3aa611476f851eb2cb2ccb", null ],
+    [ "Run", "classTaskCraft.html#a7d636645b53ba77248821f826180f73c", null ],
+    [ "blessed", "classTaskCraft.html#a0d717bd179ab810f667da4bfe6e0f401", null ],
+    [ "costSP", "classTaskCraft.html#a987b8ccc58e15e194ae9619f9e2a156c", null ],
+    [ "factory", "classTaskCraft.html#a79339b48f3823f058399ea2e67b8623e", null ],
+    [ "floatMode", "classTaskCraft.html#a400db612738428780a2f682a6740b68d", null ],
+    [ "layer", "classTaskCraft.html#a92bcdaf1cd914f54bf07c805713ed535", null ],
+    [ "num", "classTaskCraft.html#a856fa238c5546700c400c0e035e077ca", null ],
+    [ "recipe", "classTaskCraft.html#ad8479f1fde2944b43e95302a03d3e968", null ],
+    [ "repeat", "classTaskCraft.html#ad8057717fb85591f82d011588078905f", null ],
+    [ "reqs", "classTaskCraft.html#a5ff77727afd9263f0bbcefa0e50cd334", null ],
+    [ "resources", "classTaskCraft.html#a62d09e2acf9a079d0fdb5e298bd54cc5", null ],
+    [ "CraftPos", "classTaskCraft.html#ad5ea229762fbca94da1368c61ec6b018", null ],
+    [ "MaxRestart", "classTaskCraft.html#a552e5e046b35510d23da92dd45c18e20", null ]
+];

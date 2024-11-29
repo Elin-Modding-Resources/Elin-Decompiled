@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Massage.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -683,6 +703,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00069">69</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        Debug.Log(<span class="stringliteral">&quot;Canceled massage&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> base.Cancel();</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>.</p>
 
 </div>
 </div>
@@ -727,6 +753,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00058">58</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;ticket_finish&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   61</span>        cc.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love, 0f, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   62</span>        tc.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love, 0f, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   63</span>        tc.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;heal&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   64</span>        tc.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;heal_stamina&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   65</span>        tc.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(tc.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a> * stamina / 100);</div>
+<div class="line"><span class="lineno">   66</span>        tc.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;feelgood&quot;</span>, tc, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00003">Emo.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06060">Card.cs:6060</a></div></div>
+<div class="ttc" id="aclassCard_html_a9381cbefabfa31e73a65c0046c3256d9"><div class="ttname"><a href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">Card.ShowEmo</a></div><div class="ttdeci">void ShowEmo(Emo _emo=Emo.none, float duration=0f, bool skipSame=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05482">Card.cs:5482</a></div></div>
+<div class="ttc" id="aclassCard_html_aa4f63069a839c4050b4d56de4e7918c4"><div class="ttname"><a href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">Card.PlayEffect</a></div><div class="ttdeci">unsafe Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05554">Card.cs:5554</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08248">Chara.cs:8249</a></div></div>
+<div class="ttc" id="aclassStats_html_a2972d0d69579f77f16a038c181357c20"><div class="ttname"><a href="classStats.html#a2972d0d69579f77f16a038c181357c20">Stats.Mod</a></div><div class="ttdeci">virtual void Mod(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00112">Stats.cs:112</a></div></div>
+<div class="ttc" id="aclassStats_html_af3f73e47b0645cc644d07700c65d95d4"><div class="ttname"><a href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">Stats.max</a></div><div class="ttdeci">virtual int max</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00023">Stats.cs:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00024">Stats.max</a>, <a class="el" href="Stats_8cs_source.html#l00112">Stats.Mod()</a>, <a class="el" href="Card_8cs_source.html#l05554">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l05482">Card.ShowEmo()</a>, <a class="el" href="Chara_8cs_source.html#l08249">Chara.stamina</a>, and <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>.</p>
 
 </div>
 </div>
@@ -756,6 +802,46 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00031">31</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;massage_start&quot;</span>, this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   34</span>        this.isFail = (() =&gt; !this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> || <span class="keyword">this</span>.owner.Dist(<span class="keyword">this</span>.target) &gt; 3);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> num;</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 30; i = num + 1)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConWait.html">ConWait</a>&gt;(30, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   39</span>            yield <span class="keywordflow">return</span> base.DoGoto(this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, 1, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   40</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>);</div>
+<div class="line"><span class="lineno">   41</span>            this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (i % 3 == 0)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Attack, <span class="keyword">this</span>.owner);</div>
+<div class="line"><span class="lineno">   45</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver, <span class="keywordflow">default</span>(Vector3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0)</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;goodBoy&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>            num = i;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;massage_end&quot;</span>, this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_enumvalue" href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4aa20ddccbb6f808ec42cd66323e6c6061">Finish</a>(this.<a class="code hl_variable" href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">target</a>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, 20);</div>
+<div class="line"><span class="lineno">   55</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aAttackSource_8cs_html_a94a286604244a15021d28571897475a4aa20ddccbb6f808ec42cd66323e6c6061"><div class="ttname"><a href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4aa20ddccbb6f808ec42cd66323e6c6061">AttackSource.Finish</a></div><div class="ttdeci">@ Finish</div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAI__Massage_html_a2e3c640874ac8c2e3ac048eba4361ddd"><div class="ttname"><a href="classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd">AI_Massage.target</a></div><div class="ttdeci">Chara target</div><div class="ttdef"><b>Definition:</b> <a href="AI__Massage_8cs_source.html#l00075">AI_Massage.cs:75</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a06d351f92c327d70f1ae22553c1d0ace"><div class="ttname"><a href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">CardRenderer.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00442">CardRenderer.cs:442</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:452</a></div></div>
+<div class="ttc" id="aclassChara_html_a31d9d4007deda6846d34ae070a3efaae"><div class="ttname"><a href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">Chara.AddCondition</a></div><div class="ttdeci">Condition AddCondition(string id, int p=100, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08326">Chara.cs:8326</a></div></div>
+<div class="ttc" id="aclassChara_html_adfc4e346a21e435fbd52582af3788692"><div class="ttname"><a href="classChara.html#adfc4e346a21e435fbd52582af3788692">Chara.LookAt</a></div><div class="ttdeci">override void LookAt(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03048">Chara.cs:3048</a></div></div>
+<div class="ttc" id="aclassConWait_html"><div class="ttname"><a href="classConWait.html">ConWait</a></div><div class="ttdef"><b>Definition:</b> <a href="ConWait_8cs_source.html#l00003">ConWait.cs:4</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08326">Chara.AddCondition()</a>, <a class="el" href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4aa20ddccbb6f808ec42cd66323e6c6061">Finish</a>, <a class="el" href="Chara_8cs_source.html#l00452">Chara.IsAliveInCurrentZone</a>, <a class="el" href="Chara_8cs_source.html#l03048">Chara.LookAt()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="CardRenderer_8cs_source.html#l00442">CardRenderer.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>, and <a class="el" href="AI__Massage_8cs_source.html#l00075">target</a>.</p>
 
 </div>
 </div>
@@ -773,6 +859,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00075">75</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__ArmPillow_8cs_source.html#l00006">AI_ArmPillow.Run()</a>, and <a class="el" href="AI__Massage_8cs_source.html#l00031">Run()</a>.</p>
 
 </div>
 </div>
@@ -798,7 +886,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00015">15</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3f94ce998042516adb64b7d3eff3a28a" name="a3f94ce998042516adb64b7d3eff3a28a"></a>
@@ -822,7 +916,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefcefa016978355cf380aff8e6e6d3d3" name="aefcefa016978355cf380aff8e6e6d3d3"></a>
@@ -846,16 +946,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Massage_8cs_source.html#l00023">23</a> of file <a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#abc0a3ab07b89466b44be340ecc482fd3">Chara</a>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassTargetType_html"><div class="ttname"><a href="classTargetType.html">TargetType</a></div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00004">TargetType.cs:5</a></div></div>
+<div class="ttc" id="aclassTargetType_html_abc0a3ab07b89466b44be340ecc482fd3"><div class="ttname"><a href="classTargetType.html#abc0a3ab07b89466b44be340ecc482fd3">TargetType.Chara</a></div><div class="ttdeci">static TargetTypeChara Chara</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00106">TargetType.cs:106</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Massage_8cs_source.html">AI_Massage.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Massage.html">AI_Massage</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

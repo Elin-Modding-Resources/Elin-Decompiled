@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classMapGenVariation.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -137,7 +157,10 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00007">7</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> base.name;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -155,6 +178,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00020">20</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="ad21f4715811a8e3ebf24dc5b0f3b02ab" name="ad21f4715811a8e3ebf24dc5b0f3b02ab"></a>
@@ -171,6 +196,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00022">22</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="aefbddb1b9b0fd90166345d8da35d9a0b" name="aefbddb1b9b0fd90166345d8da35d9a0b"></a>
@@ -186,6 +213,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00024">24</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -219,6 +248,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00018">18</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="a979da1f4b9791b47e8afa3692bcd5c06" name="a979da1f4b9791b47e8afa3692bcd5c06"></a>
@@ -234,6 +265,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00012">12</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -251,6 +284,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00014">14</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="a6666364efc7990097eb7c171b8cc7a94" name="a6666364efc7990097eb7c171b8cc7a94"></a>
@@ -266,6 +301,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00016">16</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -283,15 +320,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapGenVariation_8cs_source.html#l00026">26</a> of file <a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="MapGenVariation_8cs_source.html">MapGenVariation.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classMapGenVariation.html">MapGenVariation</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemThing.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -211,6 +231,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00024">24</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">thing</a>.<a class="code hl_function" href="classCard.html#a733cdee9bff2ab630c6200ec98ae039f">GetImageSprite</a>();</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassCard_html_a733cdee9bff2ab630c6200ec98ae039f"><div class="ttname"><a href="classCard.html#a733cdee9bff2ab630c6200ec98ae039f">Card.GetImageSprite</a></div><div class="ttdeci">virtual Sprite GetImageSprite()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05462">Card.cs:5462</a></div></div>
+<div class="ttc" id="aclassHotItemThing_html_a5dab29fe8066039e8ee0ba9861c4d169"><div class="ttname"><a href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">HotItemThing.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="HotItemThing_8cs_source.html#l00064">HotItemThing.cs:64</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05462">Card.GetImageSprite()</a>, and <a class="el" href="HotItemThing_8cs_source.html#l00064">thing</a>.</p>
 
 </div>
 </div>
@@ -241,6 +268,12 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotItem.html#a5235e1399f78eedc0600c8406fec31cc">HotItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00053">53</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">thing</a>.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(icon);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05467">Card.cs:5467</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05467">Card.SetImage()</a>, and <a class="el" href="HotItemThing_8cs_source.html#l00064">thing</a>.</p>
 
 </div>
 </div>
@@ -269,6 +302,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00058">58</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">thing</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a15f92ba5eb5da6d5f4ea350658938e90">SetMainText</a>(t, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassTrait_html_a15f92ba5eb5da6d5f4ea350658938e90"><div class="ttname"><a href="classTrait.html#a15f92ba5eb5da6d5f4ea350658938e90">Trait.SetMainText</a></div><div class="ttdeci">virtual void SetMainText(UIText t, bool hotitem)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01769">Trait.cs:1769</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l01769">Trait.SetMainText()</a>, <a class="el" href="HotItemThing_8cs_source.html#l00064">thing</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -287,6 +327,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00069">69</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00094">HotItemHeld.GetAct()</a>.</p>
+
 </div>
 </div>
 <a id="a2a62e26f407f0931d84632116825c5c3" name="a2a62e26f407f0931d84632116825c5c3"></a>
@@ -303,6 +345,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00067">67</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00138">HotItemHeld.GetSelfAct()</a>.</p>
+
 </div>
 </div>
 <a id="a5dab29fe8066039e8ee0ba9861c4d169" name="a5dab29fe8066039e8ee0ba9861c4d169"></a>
@@ -318,6 +362,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00064">64</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00094">HotItemHeld.GetAct()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00138">HotItemHeld.GetSelfAct()</a>, <a class="el" href="HotItemThing_8cs_source.html#l00024">GetSprite()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00058">HotItemHeld.OnSetCurrentItem()</a>, <a class="el" href="HotItemThing_8cs_source.html#l00053">SetImage()</a>, <a class="el" href="HotItemThing_8cs_source.html#l00058">SetSubText()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00168">HotItemHeld.TrySetAct()</a>, and <a class="el" href="HotItemHeld_8cs_source.html#l00306">HotItemHeld.TrySetToolAct()</a>.</p>
 
 </div>
 </div>
@@ -343,7 +389,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00008">8</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemThing.html#a8d3cd4dfb180184e34eddf797ed0bc15">_act</a>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassHotItemThing_html_a8d3cd4dfb180184e34eddf797ed0bc15"><div class="ttname"><a href="classHotItemThing.html#a8d3cd4dfb180184e34eddf797ed0bc15">HotItemThing._act</a></div><div class="ttdeci">Act _act</div><div class="ttdef"><b>Definition:</b> <a href="HotItemThing_8cs_source.html#l00069">HotItemThing.cs:69</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad549be5cac2b4376c90b5f714fd8007" name="aad549be5cac2b4376c90b5f714fd8007"></a>
@@ -367,7 +420,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00029">29</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> !this.<a class="code hl_variable" href="classHotItemThing.html#a2a62e26f407f0931d84632116825c5c3">lost</a>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassHotItemThing_html_a2a62e26f407f0931d84632116825c5c3"><div class="ttname"><a href="classHotItemThing.html#a2a62e26f407f0931d84632116825c5c3">HotItemThing.lost</a></div><div class="ttdeci">bool lost</div><div class="ttdef"><b>Definition:</b> <a href="HotItemThing_8cs_source.html#l00067">HotItemThing.cs:67</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6d4b99931a6687e0c1e4486e4148d1f0" name="a6d4b99931a6687e0c1e4486e4148d1f0"></a>
@@ -391,7 +451,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00016">16</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">thing</a>.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02171">Card.cs:2172</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3fb4b1c3396d408c03d37b8cbdd61ca7" name="a3fb4b1c3396d408c03d37b8cbdd61ca7"></a>
@@ -415,6 +482,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00037">37</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169">thing</a>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01025">Player.SetCurrentHotItem()</a>.</p>
 
 </div>
 </div>
@@ -439,16 +514,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemThing_8cs_source.html#l00045">45</a> of file <a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemThing_8cs_source.html">HotItemThing.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemThing.html">HotItemThing</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classStickyGacha.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -238,6 +258,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseSticky.html#aa323cd93f8ba79025443c77db0f9e1c8">BaseSticky</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="StickyGacha_8cs_source.html#l00037">37</a> of file <a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerGacha.html">LayerGacha</a>&gt;();</div>
+<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_property" href="classStickyGacha.html#a3ca58935e9d910892e67ff54ecbeddad">widget</a>.<a class="code hl_function" href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">Refresh</a>();</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerGacha_html"><div class="ttname"><a href="classLayerGacha.html">LayerGacha</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerGacha_8cs_source.html#l00005">LayerGacha.cs:6</a></div></div>
+<div class="ttc" id="aclassStickyGacha_html_a3ca58935e9d910892e67ff54ecbeddad"><div class="ttname"><a href="classStickyGacha.html#a3ca58935e9d910892e67ff54ecbeddad">StickyGacha.widget</a></div><div class="ttdeci">new WidgetSticky widget</div><div class="ttdef"><b>Definition:</b> <a href="StickyGacha_8cs_source.html#l00021">StickyGacha.cs:22</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_ac0f415f904673f5e01d70cc8e49826b0"><div class="ttname"><a href="classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0">WidgetSticky.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00079">WidgetSticky.cs:79</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetSticky_8cs_source.html#l00079">WidgetSticky.Refresh()</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, and <a class="el" href="StickyGacha_8cs_source.html#l00022">widget</a>.</p>
 
 </div>
 </div>
@@ -263,7 +294,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="StickyGacha_8cs_source.html#l00005">5</a> of file <a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d68cf110d3dd36053286d440e40138d" name="a9d68cf110d3dd36053286d440e40138d"></a>
@@ -287,7 +324,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="StickyGacha_8cs_source.html#l00013">13</a> of file <a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;sticky_gacha&quot;</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3911c215441cdfc8ca1db7debbeaed8b" name="a3911c215441cdfc8ca1db7debbeaed8b"></a>
@@ -311,7 +354,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="StickyGacha_8cs_source.html#l00029">29</a> of file <a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerGacha.html">LayerGacha</a>&gt;(<span class="keyword">false</span>) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a7ecd8955e35506e0c8d0fdc65d5b7b99">dailyGacha</a>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a7ecd8955e35506e0c8d0fdc65d5b7b99"><div class="ttname"><a href="classPlayer.html#a7ecd8955e35506e0c8d0fdc65d5b7b99">Player.dailyGacha</a></div><div class="ttdeci">bool dailyGacha</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01422">Player.cs:1422</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3ca58935e9d910892e67ff54ecbeddad" name="a3ca58935e9d910892e67ff54ecbeddad"></a>
@@ -335,6 +386,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="StickyGacha_8cs_source.html#l00021">21</a> of file <a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classWidgetSticky.html">WidgetSticky</a>.<a class="code hl_variable" href="classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c">Instance</a>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassWidgetSticky_html"><div class="ttname"><a href="classWidgetSticky.html">WidgetSticky</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00006">WidgetSticky.cs:7</a></div></div>
+<div class="ttc" id="aclassWidgetSticky_html_a791ab74ca867d71f0982e186fa44f28c"><div class="ttname"><a href="classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c">WidgetSticky.Instance</a></div><div class="ttdeci">static WidgetSticky Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSticky_8cs_source.html#l00118">WidgetSticky.cs:118</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="StickyGacha_8cs_source.html#l00037">OnClick()</a>.</p>
 
 </div>
 </div>
@@ -342,9 +403,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="StickyGacha_8cs_source.html">StickyGacha.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classStickyGacha.html">StickyGacha</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Paint.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -555,6 +575,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4f9772ef40238c15ad2020c0e819883b">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00047">47</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        this.srRect = Util.Instantiate&lt;SpriteRenderer&gt;(<span class="stringliteral">&quot;Media/Graphics/paintRect&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   50</span>        this.completed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>((this.<a class="code hl_variable" href="classAM__Paint.html#a12e5e9045b964012b7564ff47ddc194e">painter</a>.<a class="code hl_property" href="classTraitPainter.html#ab4bf688df0ef64a73ce26f735fab2e49">PaintType</a> == <a class="code hl_class" href="classTraitPainter.html">TraitPainter</a>.<a class="code hl_enumeration" href="classTraitPainter.html#a804454fa49e9e95eb60096914c11a747">Type</a>.Camera) ? <span class="stringliteral">&quot;askPhoto&quot;</span> : <span class="stringliteral">&quot;askPaint&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassAM__Paint_html_a12e5e9045b964012b7564ff47ddc194e"><div class="ttname"><a href="classAM__Paint.html#a12e5e9045b964012b7564ff47ddc194e">AM_Paint.painter</a></div><div class="ttdeci">TraitPainter painter</div><div class="ttdef"><b>Definition:</b> <a href="AM__Paint_8cs_source.html#l00117">AM_Paint.cs:117</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html"><div class="ttname"><a href="classTraitPainter.html">TraitPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00004">TraitPainter.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html_a804454fa49e9e95eb60096914c11a747"><div class="ttname"><a href="classTraitPainter.html#a804454fa49e9e95eb60096914c11a747">TraitPainter.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00035">TraitPainter.cs:36</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html_ab4bf688df0ef64a73ce26f735fab2e49"><div class="ttname"><a href="classTraitPainter.html#ab4bf688df0ef64a73ce26f735fab2e49">TraitPainter.PaintType</a></div><div class="ttdeci">virtual TraitPainter.Type PaintType</div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00006">TraitPainter.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Paint_8cs_source.html#l00117">painter</a>, <a class="el" href="TraitPainter_8cs_source.html#l00007">TraitPainter.PaintType</a>, and <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>.</p>
 
 </div>
 </div>
@@ -584,6 +617,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a60169ef780ec579954fa93da38febf23">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00054">54</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        UnityEngine.Object.Destroy(this.<a class="code hl_variable" href="classAM__Paint.html#a63648de961d9e6bda2dc7b9f9be680f0">srRect</a>.gameObject);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassAM__Paint_html_a63648de961d9e6bda2dc7b9f9be680f0"><div class="ttname"><a href="classAM__Paint.html#a63648de961d9e6bda2dc7b9f9be680f0">AM_Paint.srRect</a></div><div class="ttdeci">SpriteRenderer srRect</div><div class="ttdef"><b>Definition:</b> <a href="AM__Paint_8cs_source.html#l00115">AM_Paint.cs:115</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Paint_8cs_source.html#l00115">srRect</a>.</p>
 
 </div>
 </div>
@@ -613,6 +652,74 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4025ab325b17507860ed9192c0b79769">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00065">65</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Paint.html#a3d741a40a05a157d0d3b65d94b19e954">completed</a>)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_class" href="classTraitCanvas.html">TraitCanvas</a> canvas = this.<a class="code hl_variable" href="classAM__Paint.html#a12e5e9045b964012b7564ff47ddc194e">painter</a>.<a class="code hl_function" href="classTraitPainter.html#a8b7e5ff264f235305b816cd9012687e4">GetCanvas</a>();</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.isPointerOverUI)</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        this.srRect.color = (flag ? Color.green : <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.red);</div>
+<div class="line"><span class="lineno">   78</span>        Vector3 mousePosition = Input.mousePosition;</div>
+<div class="line"><span class="lineno">   79</span>        this.srRect.transform.position = Camera.main.ScreenToWorldPoint(mousePosition).SetZ(-100f);</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> num = 0.02f / <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>;</div>
+<div class="line"><span class="lineno">   81</span>        Sprite sprite = canvas.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a9425ca0f611875f348af4f663829b963">GetSprite</a>(0);</div>
+<div class="line"><span class="lineno">   82</span>        this.srRect.transform.localScale = <span class="keyword">new</span> Vector3((<span class="keywordtype">float</span>)sprite.texture.width * num, (<span class="keywordtype">float</span>)sprite.texture.height * num, 1f);</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (EInput.leftMouse.clicked)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                SE.Beep();</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>            this.srRect.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   91</span>            this.completed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   92</span>            Action &lt;&gt;9__1;</div>
+<div class="line"><span class="lineno">   93</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                List&lt;Action&gt; actionsNextFrame = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame;</div>
+<div class="line"><span class="lineno">   96</span>                Action item;</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">if</span> ((item = &lt;&gt;9__1) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   98</span>                {</div>
+<div class="line"><span class="lineno">   99</span>                    item = (&lt;&gt;9__1 = delegate()</div>
+<div class="line"><span class="lineno">  100</span>                    {</div>
+<div class="line"><span class="lineno">  101</span>                        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">DefaultMode</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  102</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Paint.html">AI_Paint</a></div>
+<div class="line"><span class="lineno">  103</span>                        {</div>
+<div class="line"><span class="lineno">  104</span>                            <a class="code hl_variable" href="classAM__Paint.html#a12e5e9045b964012b7564ff47ddc194e">painter</a> = this.<a class="code hl_variable" href="classAM__Paint.html#a12e5e9045b964012b7564ff47ddc194e">painter</a>,</div>
+<div class="line"><span class="lineno">  105</span>                            canvas = canvas,</div>
+<div class="line"><span class="lineno">  106</span>                            data = canvas.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#ae567f1608dbb916c3b084845df487dca">GetPaintData</a>()</div>
+<div class="line"><span class="lineno">  107</span>                        });</div>
+<div class="line"><span class="lineno">  108</span>                    });</div>
+<div class="line"><span class="lineno">  109</span>                }</div>
+<div class="line"><span class="lineno">  110</span>                actionsNextFrame.Add(item);</div>
+<div class="line"><span class="lineno">  111</span>            });</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassAI__Paint_html"><div class="ttname"><a href="classAI__Paint.html">AI_Paint</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Paint_8cs_source.html#l00005">AI_Paint.cs:6</a></div></div>
+<div class="ttc" id="aclassAM__Paint_html_a3d741a40a05a157d0d3b65d94b19e954"><div class="ttname"><a href="classAM__Paint.html#a3d741a40a05a157d0d3b65d94b19e954">AM_Paint.completed</a></div><div class="ttdeci">bool completed</div><div class="ttdef"><b>Definition:</b> <a href="AM__Paint_8cs_source.html#l00119">AM_Paint.cs:119</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a776e1f7a04431da5c37b476b46fe053d"><div class="ttname"><a href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">ActionMode.DefaultMode</a></div><div class="ttdeci">static ActionMode DefaultMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01691">ActionMode.cs:1691</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00516">ActionMode.cs:516</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a4e8e32bd3b4aece0b4f2da253f99477e"><div class="ttname"><a href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">BaseGameScreen.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00833">BaseGameScreen.cs:833</a></div></div>
+<div class="ttc" id="aclassCard_html_a9425ca0f611875f348af4f663829b963"><div class="ttname"><a href="classCard.html#a9425ca0f611875f348af4f663829b963">Card.GetSprite</a></div><div class="ttdeci">virtual Sprite GetSprite(int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05452">Card.cs:5452</a></div></div>
+<div class="ttc" id="aclassCard_html_ae567f1608dbb916c3b084845df487dca"><div class="ttname"><a href="classCard.html#ae567f1608dbb916c3b084845df487dca">Card.GetPaintData</a></div><div class="ttdeci">byte[] GetPaintData()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06389">Card.cs:6389</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07915">Chara.cs:7915</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassTraitCanvas_html"><div class="ttname"><a href="classTraitCanvas.html">TraitCanvas</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCanvas_8cs_source.html#l00005">TraitCanvas.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitPainter_html_a8b7e5ff264f235305b816cd9012687e4"><div class="ttname"><a href="classTraitPainter.html#a8b7e5ff264f235305b816cd9012687e4">TraitPainter.GetCanvas</a></div><div class="ttdeci">TraitCanvas GetCanvas()</div><div class="ttdef"><b>Definition:</b> <a href="TraitPainter_8cs_source.html#l00025">TraitPainter.cs:25</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="AM__Paint_8cs_source.html#l00119">completed</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="ActionMode_8cs_source.html#l01691">ActionMode.DefaultMode</a>, <a class="el" href="TraitPainter_8cs_source.html#l00025">TraitPainter.GetCanvas()</a>, <a class="el" href="Card_8cs_source.html#l06389">Card.GetPaintData()</a>, <a class="el" href="Card_8cs_source.html#l05452">Card.GetSprite()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="AM__Paint_8cs_source.html#l00117">painter</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="Chara_8cs_source.html#l07915">Chara.SetAI()</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00833">BaseGameScreen.Zoom</a>.</p>
 
 </div>
 </div>
@@ -641,6 +748,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00059">59</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        this.painter = p;</div>
+<div class="line"><span class="lineno">   62</span>        base.Activate(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitPainter_8cs_source.html#l00019">TraitPainter.OnUse()</a>.</p>
 
 </div>
 </div>
@@ -667,6 +780,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00119">119</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Paint_8cs_source.html#l00065">OnUpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a12e5e9045b964012b7564ff47ddc194e" name="a12e5e9045b964012b7564ff47ddc194e"></a>
@@ -683,6 +798,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00117">117</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Paint_8cs_source.html#l00047">OnActivate()</a>, and <a class="el" href="AM__Paint_8cs_source.html#l00065">OnUpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a63648de961d9e6bda2dc7b9f9be680f0" name="a63648de961d9e6bda2dc7b9f9be680f0"></a>
@@ -698,6 +815,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00115">115</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Paint_8cs_source.html#l00054">OnDeactivate()</a>.</p>
 
 </div>
 </div>
@@ -723,7 +842,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00031">31</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abb62f2f5d9119cf517193e041443c32e" name="abb62f2f5d9119cf517193e041443c32e"></a>
@@ -747,7 +872,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00007">7</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.None;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_a126c209eb9b08ada2549a86c6fc6dd1f"><div class="ttname"><a href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">BaseTileSelector.SelectType</a></div><div class="ttdeci">SelectType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00517">BaseTileSelector.cs:518</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adad4d2466bb1569ab3c9e8c4c340da7e" name="adad4d2466bb1569ab3c9e8c4c340da7e"></a>
@@ -771,7 +904,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00015">15</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a648f8f344dde4531f9e6800506cdd248" name="a648f8f344dde4531f9e6800506cdd248"></a>
@@ -795,7 +934,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00039">39</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7a609894282177cef1ff29349797305c" name="a7a609894282177cef1ff29349797305c"></a>
@@ -819,16 +964,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Paint_8cs_source.html#l00023">23</a> of file <a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Paint_8cs_source.html">AM_Paint.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Paint.html">AM_Paint</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

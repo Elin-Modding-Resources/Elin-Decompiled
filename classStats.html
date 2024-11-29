@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classStats.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -302,6 +322,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseStats.html#ada56836d099082939f930e209732a9db">BaseStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00080">80</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> g.Evaluate((<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> / (<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclassStats_html_ac5ab607149d0e76d6f1692e5f05c622f"><div class="ttname"><a href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">Stats.value</a></div><div class="ttdeci">virtual int value</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00011">Stats.cs:12</a></div></div>
+<div class="ttc" id="aclassStats_html_af3f73e47b0645cc644d07700c65d95d4"><div class="ttname"><a href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">Stats.max</a></div><div class="ttdeci">virtual int max</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00023">Stats.cs:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00024">max</a>, and <a class="el" href="Stats_8cs_source.html#l00012">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00173">WindowChara.AddNeeds()</a>.</p>
 
 </div>
 </div>
@@ -333,6 +362,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classStatsBurden.html#a29bc5415ae149e68909cf584a82382dc">StatsBurden</a>, and <a class="el" href="classStatsStamina.html#ac9e43b59e611cc22dfcb22855fb6c223">StatsStamina</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00093">93</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> base.source.phase[(int)Mathf.Clamp(10f * (<span class="keywordtype">float</span>)this.value / (float)this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>, 0f, 9f)];</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00024">max</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="Chara_8cs_source.html#l00904">Chara.CanSleep()</a>, <a class="el" href="Stats_8cs_source.html#l00070">GetText()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00029">TraitMoongate.LoadMap()</a>, <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l01514">Chara.RefreshSpeed()</a>, <a class="el" href="Chara_8cs_source.html#l03411">Chara.Tick()</a>, <a class="el" href="ConSleep_8cs_source.html#l00055">ConSleep.Tick()</a>, and <a class="el" href="Stats_8cs_source.html#l00058">ToString()</a>.</p>
 
 </div>
 </div>
@@ -362,6 +398,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9">BaseStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00070">70</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = base.source.GetTextArray(<span class="stringliteral">&quot;strPhase&quot;</span>)[this.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>()];</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (!(text == <span class="stringliteral">&quot;#&quot;</span>))</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassStats_html_a45b380a6cf18d7b29e4a8d46048e4df4"><div class="ttname"><a href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">Stats.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00093">Stats.cs:93</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00093">GetPhase()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00173">WindowChara.AddNeeds()</a>.</p>
 
 </div>
 </div>
@@ -391,6 +441,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseStats.html#af81b6746cd272e165340377c78f84b88">BaseStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00006">6</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00012">value</a>.</p>
 
 </div>
 </div>
@@ -421,6 +476,54 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classStatsMana.html#a64d348c6710c69010c4e72d1131f3e63">StatsMana</a>, and <a class="el" href="classStatsStamina.html#add1c9f063d3d8f95d421e5e920c7d085">StatsStamina</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00112">112</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBaseStats.html">BaseStats</a>.<a class="code hl_variable" href="classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63">CC</a>.<a class="code hl_property" href="classCard.html#a1eda330f282d318eb87192335e491bbc">IsAgent</a>)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#a75c52fafcee47e73a7d89addb296c3f8">TrackPhaseChange</a>)</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordtype">int</span> phase = this.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>();</div>
+<div class="line"><span class="lineno">  121</span>            this.value += a;</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &lt; this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>)</div>
+<div class="line"><span class="lineno">  123</span>            {</div>
+<div class="line"><span class="lineno">  124</span>                this.value = this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>;</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &gt; this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>)</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                this.value = this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordtype">int</span> phase2 = this.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>();</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (phase2 != phase)</div>
+<div class="line"><span class="lineno">  132</span>            {</div>
+<div class="line"><span class="lineno">  133</span>                this.<a class="code hl_function" href="classStats.html#aac43d733ba4d84c1d0003807530b70d5">OnChangePhase</a>(phase2, phase);</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  135</span>            }</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            this.value += a;</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &lt; this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>)</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                this.value = this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>;</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &gt; this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                this.value = this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>;</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="ttc" id="aclassBaseStats_html"><div class="ttname"><a href="classBaseStats.html">BaseStats</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00006">BaseStats.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseStats_html_a4f4f7d9a5d99b11556a64e2f83144f63"><div class="ttname"><a href="classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63">BaseStats.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00158">BaseStats.cs:158</a></div></div>
+<div class="ttc" id="aclassCard_html_a1eda330f282d318eb87192335e491bbc"><div class="ttname"><a href="classCard.html#a1eda330f282d318eb87192335e491bbc">Card.IsAgent</a></div><div class="ttdeci">bool IsAgent</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02362">Card.cs:2363</a></div></div>
+<div class="ttc" id="aclassStats_html_a75c52fafcee47e73a7d89addb296c3f8"><div class="ttname"><a href="classStats.html#a75c52fafcee47e73a7d89addb296c3f8">Stats.TrackPhaseChange</a></div><div class="ttdeci">virtual bool TrackPhaseChange</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00042">Stats.cs:43</a></div></div>
+<div class="ttc" id="aclassStats_html_a8e763cafb47b57d729f4d00d207540ce"><div class="ttname"><a href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">Stats.min</a></div><div class="ttdeci">virtual int min</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00050">Stats.cs:51</a></div></div>
+<div class="ttc" id="aclassStats_html_aac43d733ba4d84c1d0003807530b70d5"><div class="ttname"><a href="classStats.html#aac43d733ba4d84c1d0003807530b70d5">Stats.OnChangePhase</a></div><div class="ttdeci">virtual void OnChangePhase(int phase, int lastPhase)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00152">Stats.cs:152</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseStats_8cs_source.html#l00158">BaseStats.CC</a>, <a class="el" href="Stats_8cs_source.html#l00093">GetPhase()</a>, <a class="el" href="Card_8cs_source.html#l02363">Card.IsAgent</a>, <a class="el" href="Stats_8cs_source.html#l00024">max</a>, <a class="el" href="Stats_8cs_source.html#l00051">min</a>, <a class="el" href="Stats_8cs_source.html#l00152">OnChangePhase()</a>, <a class="el" href="Stats_8cs_source.html#l00043">TrackPhaseChange</a>, and <a class="el" href="Stats_8cs_source.html#l00012">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="AI__PracticeDummy_8cs_source.html#l00034">AI_PracticeDummy.CreateProgress()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00521">AI_PlayMusic.Evaluate()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00407">AI_Fish.ProgressFish.Fail()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00148">AI_Fuck.Finish()</a>, <a class="el" href="AI__Massage_8cs_source.html#l00058">AI_Massage.Finish()</a>, <a class="el" href="ActPray_8cs_source.html#l00133">ActPray.g__Heal()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00048">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00039">TaskPlow.OnCreateProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00040">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="MiniGame_8cs_source.html#l00105">MiniGame.OnPlay()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00346">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00122">TaskCraft.OnProgressComplete()</a>, <a class="el" href="TaskDig_8cs_source.html#l00171">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00175">TaskMine.OnProgressComplete()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00021">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="ActRanged_8cs_source.html#l00070">ActRanged.Perform()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00119">TraitBaseSpellbook.ReadFailEffect()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, <a class="el" href="AI__OpenGambleChest_8cs_source.html#l00020">AI_OpenGambleChest.Run()</a>, <a class="el" href="AI__PassTime_8cs_source.html#l00090">AI_PassTime.Run()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00046">AI_PlayMusic.Run()</a>, <a class="el" href="AI__Shear_8cs_source.html#l00025">AI_Shear.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00047">AI_Steal.Run()</a>, <a class="el" href="Zone_8cs_source.html#l01469">Zone.Simulate()</a>, <a class="el" href="ActThrow_8cs_source.html#l00117">ActThrow.Throw()</a>, <a class="el" href="ConSleep_8cs_source.html#l00055">ConSleep.Tick()</a>, <a class="el" href="Trait_8cs_source.html#l01071">Trait.TryOpenLock()</a>, and <a class="el" href="TraitBroom_8cs_source.html#l00013">TraitBroom.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -459,6 +562,35 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00152">152</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">bool</span> flag = phase &gt; lastPhase;</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (base.source.invert)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            flag = !flag;</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordtype">string</span>[] array = (flag ? base.source.GetText(<span class="stringliteral">&quot;textPhase&quot;</span>, <span class="keyword">false</span>) : base.source.GetText(<span class="stringliteral">&quot;textPhase2&quot;</span>, <span class="keyword">false</span>)).Split(Environment.NewLine.ToCharArray());</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (array.Length &lt;= phase)</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">SetColor</a>(<span class="stringliteral">&quot;negative&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_class" href="classBaseStats.html">BaseStats</a>.<a class="code hl_variable" href="classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63">CC</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(array[phase].Split(<span class="charliteral">&#39;|&#39;</span>, StringSplitOptions.None).RandomItem&lt;<span class="keywordtype">string</span>&gt;(), <a class="code hl_class" href="classBaseStats.html">BaseStats</a>.<a class="code hl_variable" href="classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63">CC</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBaseStats.html">BaseStats</a>.<a class="code hl_variable" href="classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63">CC</a>.<a class="code hl_property" href="classCard.html#ad67c53c170ca82f0d4f773d9cb4279bb">ShouldShowMsg</a>)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            base.PopText();</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="ttc" id="aclassCard_html_ad67c53c170ca82f0d4f773d9cb4279bb"><div class="ttname"><a href="classCard.html#ad67c53c170ca82f0d4f773d9cb4279bb">Card.ShouldShowMsg</a></div><div class="ttdeci">bool ShouldShowMsg</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06162">Card.cs:6163</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_afb750c35eea77e527ebbe43d7fb085ef"><div class="ttname"><a href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">Msg.SetColor</a></div><div class="ttdeci">static void SetColor()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00031">Msg.cs:31</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseStats_8cs_source.html#l00158">BaseStats.CC</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Msg_8cs_source.html#l00031">Msg.SetColor()</a>, and <a class="el" href="Card_8cs_source.html#l06163">Card.ShouldShowMsg</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>.</p>
 
 </div>
 </div>
@@ -487,6 +619,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00098">98</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        this.value = a;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &lt; this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            this.value = this.<a class="code hl_property" href="classStats.html#a8e763cafb47b57d729f4d00d207540ce">min</a>;</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &gt; this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            this.value = this.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00024">max</a>, <a class="el" href="Stats_8cs_source.html#l00051">min</a>, and <a class="el" href="Stats_8cs_source.html#l00012">value</a>.</p>
 
 </div>
 </div>
@@ -531,6 +677,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00085">85</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        this.raw = _raw;</div>
+<div class="line"><span class="lineno">   88</span>        this.rawIndex = _rawIndex;</div>
+<div class="line"><span class="lineno">   89</span>        BaseStats.CC = _CC;</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01461">Chara.CalcBurden()</a>, and <a class="el" href="Game_8cs_source.html#l00449">Game.StartNewGame()</a>.</p>
 
 </div>
 </div>
@@ -558,6 +712,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00058">58</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            this.<a class="code hl_property" href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">name</a>,</div>
+<div class="line"><span class="lineno">   63</span>            <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>.ToString(),</div>
+<div class="line"><span class="lineno">   65</span>            <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><span class="lineno">   66</span>            this.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>().<a class="code hl_function" href="classStats.html#a5e7875510a50b2501ec61228cc59854a">ToString</a>()</div>
+<div class="line"><span class="lineno">   67</span>        });</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassStats_html_a5e7875510a50b2501ec61228cc59854a"><div class="ttname"><a href="classStats.html#a5e7875510a50b2501ec61228cc59854a">Stats.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00058">Stats.cs:58</a></div></div>
+<div class="ttc" id="aclassStats_html_a713e709fb391ac176cac0b9d77b743b8"><div class="ttname"><a href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">Stats.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00034">Stats.cs:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Stats_8cs_source.html#l00093">GetPhase()</a>, <a class="el" href="Stats_8cs_source.html#l00035">name</a>, <a class="el" href="Stats_8cs_source.html#l00058">ToString()</a>, and <a class="el" href="Stats_8cs_source.html#l00012">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Stats_8cs_source.html#l00058">ToString()</a>.</p>
 
 </div>
 </div>
@@ -875,6 +1045,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00023">23</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> 100;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01102">FactionBranch.AddMemeber()</a>, <a class="el" href="WindowChara_8cs_source.html#l00173">WindowChara.AddNeeds()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00148">AI_Fuck.Finish()</a>, <a class="el" href="AI__Massage_8cs_source.html#l00058">AI_Massage.Finish()</a>, <a class="el" href="Stats_8cs_source.html#l00080">GetColor()</a>, <a class="el" href="Stats_8cs_source.html#l00093">GetPhase()</a>, <a class="el" href="Chara_8cs_source.html#l01382">Chara.HealAll()</a>, <a class="el" href="Chara_8cs_source.html#l00487">Chara.IsCriticallyWounded()</a>, <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00037">CoreDebug.QuickStart()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00119">TraitBaseSpellbook.ReadFailEffect()</a>, <a class="el" href="WidgetHP_8cs_source.html#l00034">WidgetHP.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, <a class="el" href="Stats_8cs_source.html#l00098">Set()</a>, <a class="el" href="Card_8cs_source.html#l02987">Card.SetLv()</a>, <a class="el" href="Zone_8cs_source.html#l01469">Zone.Simulate()</a>, <a class="el" href="Game_8cs_source.html#l00449">Game.StartNewGame()</a>, and <a class="el" href="Chara_8cs_source.html#l01476">Chara.Stumble()</a>.</p>
 
 </div>
 </div>
@@ -899,6 +1080,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00050">50</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>, and <a class="el" href="Stats_8cs_source.html#l00098">Set()</a>.</p>
 
 </div>
 </div>
@@ -923,6 +1112,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00034">34</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> base.source.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">HappinessSummary.GetText()</a>, and <a class="el" href="Stats_8cs_source.html#l00058">ToString()</a>.</p>
 
 </div>
 </div>
@@ -947,6 +1144,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00042">42</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>.</p>
 
 </div>
 </div>
@@ -971,6 +1176,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Stats_8cs_source.html#l00011">11</a> of file <a class="el" href="Stats_8cs_source.html">Stats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classStats.html#a65151cfb68d3fb89796f768153e64f8d">raw</a>[this.<a class="code hl_variable" href="classStats.html#a98d344bdca880ed7469785085fd3dcd8">rawIndex</a>];</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            this.<a class="code hl_variable" href="classStats.html#a65151cfb68d3fb89796f768153e64f8d">raw</a>[this.<a class="code hl_variable" href="classStats.html#a98d344bdca880ed7469785085fd3dcd8">rawIndex</a>] = <a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassStats_html_a65151cfb68d3fb89796f768153e64f8d"><div class="ttname"><a href="classStats.html#a65151cfb68d3fb89796f768153e64f8d">Stats.raw</a></div><div class="ttdeci">int[] raw</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00222">Stats.cs:222</a></div></div>
+<div class="ttc" id="aclassStats_html_a98d344bdca880ed7469785085fd3dcd8"><div class="ttname"><a href="classStats.html#a98d344bdca880ed7469785085fd3dcd8">Stats.rawIndex</a></div><div class="ttdeci">int rawIndex</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00220">Stats.cs:220</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01102">FactionBranch.AddMemeber()</a>, <a class="el" href="WindowChara_8cs_source.html#l00173">WindowChara.AddNeeds()</a>, <a class="el" href="AI__PracticeDummy_8cs_source.html#l00034">AI_PracticeDummy.CreateProgress()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="Chara_8cs_source.html#l01417">Chara.Duplicate()</a>, <a class="el" href="Stats_8cs_source.html#l00080">GetColor()</a>, <a class="el" href="StatsBurden_8cs_source.html#l00021">StatsBurden.GetPhase()</a>, <a class="el" href="StatsStamina_8cs_source.html#l00059">StatsStamina.GetPhase()</a>, <a class="el" href="Stats_8cs_source.html#l00006">GetValue()</a>, <a class="el" href="GoalAutoCombat_8cs_source.html#l00046">GoalAutoCombat.GoalAutoCombat()</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00006">HappinessSummary.HappinessSummary()</a>, <a class="el" href="Stats_8cs_source.html#l00112">Mod()</a>, <a class="el" href="StatsMana_8cs_source.html#l00022">StatsMana.Mod()</a>, <a class="el" href="StatsStamina_8cs_source.html#l00029">StatsStamina.Mod()</a>, <a class="el" href="ActRanged_8cs_source.html#l00070">ActRanged.Perform()</a>, <a class="el" href="Religion_8cs_source.html#l00672">Religion.PunishTakeOver()</a>, <a class="el" href="WidgetHP_8cs_source.html#l00034">WidgetHP.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00118">UIRecipeInfo.RefreshBalance()</a>, <a class="el" href="WindowChara_8cs_source.html#l00223">WindowChara.RefreshProfile()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, <a class="el" href="GoalNeeds_8cs_source.html#l00006">GoalNeeds.Run()</a>, <a class="el" href="Stats_8cs_source.html#l00098">Set()</a>, <a class="el" href="Zone_8cs_source.html#l01469">Zone.Simulate()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00161">ButtonAbility.SpecialHoldAction()</a>, <a class="el" href="Chara_8cs_source.html#l03411">Chara.Tick()</a>, and <a class="el" href="Stats_8cs_source.html#l00058">ToString()</a>.</p>
 
 </div>
 </div>
@@ -978,9 +1197,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="Stats_8cs_source.html">Stats.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classStats.html">Stats</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

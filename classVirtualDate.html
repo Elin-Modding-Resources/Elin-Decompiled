@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classVirtualDate.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -334,6 +354,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00015">15</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>.Length; i++)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            this.<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>[i] = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>[i];</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        base.min = 0;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">while</span> (elapsedHours &gt; 0)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordtype">int</span> num = base.hour;</div>
+<div class="line"><span class="lineno">   25</span>            base.hour = num - 1;</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (base.hour &lt; 0)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                base.hour = 23;</div>
+<div class="line"><span class="lineno">   29</span>                num = base.day;</div>
+<div class="line"><span class="lineno">   30</span>                base.day = num - 1;</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">if</span> (base.day &lt;= 0)</div>
+<div class="line"><span class="lineno">   32</span>                {</div>
+<div class="line"><span class="lineno">   33</span>                    base.day = 30;</div>
+<div class="line"><span class="lineno">   34</span>                    num = base.month;</div>
+<div class="line"><span class="lineno">   35</span>                    base.month = num - 1;</div>
+<div class="line"><span class="lineno">   36</span>                    <span class="keywordflow">if</span> (base.month &lt;= 0)</div>
+<div class="line"><span class="lineno">   37</span>                    {</div>
+<div class="line"><span class="lineno">   38</span>                        base.month = 12;</div>
+<div class="line"><span class="lineno">   39</span>                        num = base.year;</div>
+<div class="line"><span class="lineno">   40</span>                        base.year = num - 1;</div>
+<div class="line"><span class="lineno">   41</span>                    }</div>
+<div class="line"><span class="lineno">   42</span>                }</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            elapsedHours--;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassDate_html_a8878ce68add11a7d76eb315ca0d7c7a4"><div class="ttname"><a href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">Date.raw</a></div><div class="ttdeci">int[] raw</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00437">Date.cs:437</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="Date_8cs_source.html#l00437">Date.raw</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
 
 </div>
 </div>
@@ -362,6 +419,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00058">58</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        Debug.Log(<span class="stringliteral">&quot;Building Sunmap&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>        this.sunMap = <span class="keyword">new</span> HashSet&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classTrait.html">Trait</a> trait <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">props</a>.<a class="code hl_variable" href="classPropsManager.html#a0c5a47eaa47ab2bd2b8347e3ff3437a3">installed</a>.<a class="code hl_variable" href="classProps.html#a1c5931be6c7072dc75aa63dedca36552">traits</a>.<a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.Values)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> point <span class="keywordflow">in</span> trait.<a class="code hl_function" href="classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d">ListPoints</a>(<span class="keyword">null</span>, <span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                this.<a class="code hl_variable" href="classVirtualDate.html#ad68e6f510ce1df2e43e95598bd544e94">sunMap</a>.Add(point.<a class="code hl_property" href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">index</a>);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_a7bbfb1c119ff730ece5cb7a046449ed1"><div class="ttname"><a href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">Map.props</a></div><div class="ttdeci">PropsManager props</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02893">Map.cs:2893</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a0ca407a11b2419684bb28adee73363cf"><div class="ttname"><a href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">Point.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00018">Point.cs:19</a></div></div>
+<div class="ttc" id="aclassPropsManager_html_a0c5a47eaa47ab2bd2b8347e3ff3437a3"><div class="ttname"><a href="classPropsManager.html#a0c5a47eaa47ab2bd2b8347e3ff3437a3">PropsManager.installed</a></div><div class="ttdeci">PropsInstalled installed</div><div class="ttdef"><b>Definition:</b> <a href="PropsManager_8cs_source.html#l00134">PropsManager.cs:134</a></div></div>
+<div class="ttc" id="aclassProps_html_a1c5931be6c7072dc75aa63dedca36552"><div class="ttname"><a href="classProps.html#a1c5931be6c7072dc75aa63dedca36552">Props.traits</a></div><div class="ttdeci">TraitManager traits</div><div class="ttdef"><b>Definition:</b> <a href="Props_8cs_source.html#l00412">Props.cs:412</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_ad6340f0bc4e247da25cb0e2a1ddc965f"><div class="ttname"><a href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">TraitManager.suns</a></div><div class="ttdeci">TraitMap suns</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00104">TraitManager.cs:104</a></div></div>
+<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00007">Trait.cs:8</a></div></div>
+<div class="ttc" id="aclassTrait_html_a18c0e1c78039242bdb2c7a4719783a2d"><div class="ttname"><a href="classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d">Trait.ListPoints</a></div><div class="ttdeci">virtual List&lt; Point &gt; ListPoints(Point center=null, bool onlyPassable=true)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00922">Trait.cs:922</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_ad68e6f510ce1df2e43e95598bd544e94"><div class="ttname"><a href="classVirtualDate.html#ad68e6f510ce1df2e43e95598bd544e94">VirtualDate.sunMap</a></div><div class="ttdeci">HashSet&lt; int &gt; sunMap</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00117">VirtualDate.cs:117</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Point_8cs_source.html#l00019">Point.index</a>, <a class="el" href="PropsManager_8cs_source.html#l00134">PropsManager.installed</a>, <a class="el" href="Trait_8cs_source.html#l00922">Trait.ListPoints()</a>, <a class="el" href="Map_8cs_source.html#l02893">Map.props</a>, <a class="el" href="VirtualDate_8cs_source.html#l00117">sunMap</a>, <a class="el" href="TraitManager_8cs_source.html#l00104">TraitManager.suns</a>, and <a class="el" href="Props_8cs_source.html#l00412">Props.traits</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GrowSystem_8cs_source.html#l00315">GrowSystem.CanGrow()</a>.</p>
 
 </div>
 </div>
@@ -389,6 +471,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00048">48</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classVirtualDate.html#adb39e98c6d64b59086e86ce07f7625be">branchMap</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.branchMap = <span class="keyword">new</span> <a class="code hl_class" href="classBranchMap.html">BranchMap</a>();</div>
+<div class="line"><span class="lineno">   53</span>            this.<a class="code hl_variable" href="classVirtualDate.html#adb39e98c6d64b59086e86ce07f7625be">branchMap</a>.<a class="code hl_function" href="classBranchMap.html#a6cec9be77c04fa44f3afecd6f3e36777">Refresh</a>();</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classVirtualDate.html#adb39e98c6d64b59086e86ce07f7625be">branchMap</a>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassBranchMap_html"><div class="ttname"><a href="classBranchMap.html">BranchMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BranchMap_8cs_source.html#l00004">BranchMap.cs:5</a></div></div>
+<div class="ttc" id="aclassBranchMap_html_a6cec9be77c04fa44f3afecd6f3e36777"><div class="ttname"><a href="classBranchMap.html#a6cec9be77c04fa44f3afecd6f3e36777">BranchMap.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="BranchMap_8cs_source.html#l00006">BranchMap.cs:6</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_adb39e98c6d64b59086e86ce07f7625be"><div class="ttname"><a href="classVirtualDate.html#adb39e98c6d64b59086e86ce07f7625be">VirtualDate.branchMap</a></div><div class="ttdeci">BranchMap branchMap</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00119">VirtualDate.cs:119</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="VirtualDate_8cs_source.html#l00119">branchMap</a>, and <a class="el" href="BranchMap_8cs_source.html#l00006">BranchMap.Refresh()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00448">FactionBranch.OnSimulateDay()</a>.</p>
 
 </div>
 </div>
@@ -416,6 +513,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00083">83</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">int</span> <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> = base.day;</div>
+<div class="line"><span class="lineno">   86</span>        base.day = <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + 1;</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (base.day &gt; 30)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            base.day = 1;</div>
+<div class="line"><span class="lineno">   90</span>            this.<a class="code hl_function" href="classVirtualDate.html#af9fe9097187dc50b359b4aadde2af5e8">SimulateMonth</a>();</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a31c1b40c97a90d277dcd54a0a95135d5">OnSimulateDay</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00030">Date.cs:31</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_af9fe9097187dc50b359b4aadde2af5e8"><div class="ttname"><a href="classVirtualDate.html#af9fe9097187dc50b359b4aadde2af5e8">VirtualDate.SimulateMonth</a></div><div class="ttdeci">void SimulateMonth()</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00095">VirtualDate.cs:95</a></div></div>
+<div class="ttc" id="aclassZone_html_a31c1b40c97a90d277dcd54a0a95135d5"><div class="ttname"><a href="classZone.html#a31c1b40c97a90d277dcd54a0a95135d5">Zone.OnSimulateDay</a></div><div class="ttdeci">void OnSimulateDay(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03400">Zone.cs:3400</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Date_8cs_source.html#l00031">Date.day</a>, <a class="el" href="Zone_8cs_source.html#l03400">Zone.OnSimulateDay()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00095">SimulateMonth()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00071">SimulateHour()</a>.</p>
 
 </div>
 </div>
@@ -443,6 +558,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00071">71</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> = base.hour;</div>
+<div class="line"><span class="lineno">   74</span>        base.hour = <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + 1;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (base.hour &gt;= 24)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            base.hour = 0;</div>
+<div class="line"><span class="lineno">   78</span>            this.<a class="code hl_function" href="classVirtualDate.html#a1711a5c19fc2b40850586f935555ca9e">SimulateDay</a>();</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a9ab982be55566aee1ce1e871624d6ef3">OnSimulateHour</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassDate_html_a4fbc0c424e43ae001a65ba38f3f11dc7"><div class="ttname"><a href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">Date.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00042">Date.cs:43</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_a1711a5c19fc2b40850586f935555ca9e"><div class="ttname"><a href="classVirtualDate.html#a1711a5c19fc2b40850586f935555ca9e">VirtualDate.SimulateDay</a></div><div class="ttdeci">void SimulateDay()</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00083">VirtualDate.cs:83</a></div></div>
+<div class="ttc" id="aclassZone_html_a9ab982be55566aee1ce1e871624d6ef3"><div class="ttname"><a href="classZone.html#a9ab982be55566aee1ce1e871624d6ef3">Zone.OnSimulateHour</a></div><div class="ttdeci">void OnSimulateHour(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03342">Zone.cs:3342</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Date_8cs_source.html#l00043">Date.hour</a>, <a class="el" href="Zone_8cs_source.html#l03342">Zone.OnSimulateHour()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00083">SimulateDay()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>, and <a class="el" href="Zone_8cs_source.html#l01469">Zone.Simulate()</a>.</p>
 
 </div>
 </div>
@@ -470,6 +602,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00095">95</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">int</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> = base.month;</div>
+<div class="line"><span class="lineno">   98</span>        base.month = <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> + 1;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (base.month &gt; 12)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            base.month = 1;</div>
+<div class="line"><span class="lineno">  102</span>            this.<a class="code hl_function" href="classVirtualDate.html#a6005e2d010af3920bd1cf5b909f06ff3">SimulateYear</a>();</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a862391c560d1f87e711325affc2ebf95">OnSimulateMonth</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclassDate_html_a801e79ba9d915b15ddbd13aaa4b09020"><div class="ttname"><a href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">Date.month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00018">Date.cs:19</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_a6005e2d010af3920bd1cf5b909f06ff3"><div class="ttname"><a href="classVirtualDate.html#a6005e2d010af3920bd1cf5b909f06ff3">VirtualDate.SimulateYear</a></div><div class="ttdeci">void SimulateYear()</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00107">VirtualDate.cs:107</a></div></div>
+<div class="ttc" id="aclassZone_html_a862391c560d1f87e711325affc2ebf95"><div class="ttname"><a href="classZone.html#a862391c560d1f87e711325affc2ebf95">Zone.OnSimulateMonth</a></div><div class="ttdeci">void OnSimulateMonth(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03408">Zone.cs:3408</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Date_8cs_source.html#l00019">Date.month</a>, <a class="el" href="Zone_8cs_source.html#l03408">Zone.OnSimulateMonth()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00107">SimulateYear()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00083">SimulateDay()</a>.</p>
 
 </div>
 </div>
@@ -497,6 +646,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00107">107</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">int</span> <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> = base.year;</div>
+<div class="line"><span class="lineno">  110</span>        base.year = <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> + 1;</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="ttc" id="aclassDate_html_a8d8552788241d94c4731cb078a625a6f"><div class="ttname"><a href="classDate.html#a8d8552788241d94c4731cb078a625a6f">Date.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00006">Date.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00007">Date.year</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00095">SimulateMonth()</a>.</p>
 
 </div>
 </div>
@@ -514,6 +672,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00119">119</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00048">GetBranchMap()</a>.</p>
 
 </div>
 </div>
@@ -555,6 +715,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00115">115</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MeetingManager_8cs_source.html#l00031">MeetingManager.Add()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00448">FactionBranch.OnSimulateDay()</a>, <a class="el" href="Card_8cs_source.html#l05954">Card.OnSimulateHour()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00253">FactionBranch.OnSimulateHour()</a>, <a class="el" href="TraitClock_8cs_source.html#l00005">TraitClock.OnSimulateHour()</a>, <a class="el" href="TraitFertilizer_8cs_source.html#l00022">TraitFertilizer.OnSimulateHour()</a>, <a class="el" href="TraitGenerator_8cs_source.html#l00042">TraitGenerator.OnSimulateHour()</a>, <a class="el" href="TraitPhone_8cs_source.html#l00005">TraitPhone.OnSimulateHour()</a>, <a class="el" href="Zone_8cs_source.html#l03342">Zone.OnSimulateHour()</a>, <a class="el" href="Zone_8cs_source.html#l03408">Zone.OnSimulateMonth()</a>, and <a class="el" href="Chara_8cs_source.html#l08170">Chara.TickWork()</a>.</p>
+
 </div>
 </div>
 <a id="ad68e6f510ce1df2e43e95598bd544e94" name="ad68e6f510ce1df2e43e95598bd544e94"></a>
@@ -570,6 +732,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00117">117</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00058">BuildSunMap()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00315">GrowSystem.CanGrow()</a>.</p>
 
 </div>
 </div>
@@ -595,6 +759,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="VirtualDate_8cs_source.html#l00007">7</a> of file <a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> VirtualDate.current != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ElementContainerCard_8cs_source.html#l00082">ElementContainerCard.OnLevelUp()</a>, and <a class="el" href="ElementContainerZone_8cs_source.html#l00011">ElementContainerZone.OnLevelUp()</a>.</p>
 
 </div>
 </div>
@@ -602,9 +774,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="VirtualDate_8cs_source.html">VirtualDate.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classVirtualDate.html">VirtualDate</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

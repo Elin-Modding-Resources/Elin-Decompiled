@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitItem.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -701,6 +721,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitLoytelMart.html#a557cbbf9da138a89bdf9ffafccaa73e5">TraitLoytelMart</a>, <a class="el" href="classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea">TraitPainter</a>, <a class="el" href="classTraitPhone.html#a53928cb9b367df41094aba39e66ae737">TraitPhone</a>, <a class="el" href="classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17">TraitPowerStatue</a>, and <a class="el" href="classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628">TraitSlotMachine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitItem_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitItem_8cs_source.html">TraitItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> (this.<a class="code hl_property" href="classTraitItem.html#a67c970376a20a76d3abfa1ba8382d8ac">CanUseFromInventory</a> || this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>) &amp;&amp; (this.CanUseInUserZone || !EClass._zone.IsUserZone || !this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>) &amp;&amp; (this.<a class="code hl_property" href="classTrait.html#aaea5f045bee932aa78a2d0f869e964e1">Electricity</a> &gt;= 0 || this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>);</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="aclassCard_html_a26108155cef3dd565735e6d8e3bc6322"><div class="ttname"><a href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">Card.isNPCProperty</a></div><div class="ttdeci">bool isNPCProperty</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00487">Card.cs:488</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+<div class="ttc" id="aclassTraitItem_html_a67c970376a20a76d3abfa1ba8382d8ac"><div class="ttname"><a href="classTraitItem.html#a67c970376a20a76d3abfa1ba8382d8ac">TraitItem.CanUseFromInventory</a></div><div class="ttdeci">virtual bool CanUseFromInventory</div><div class="ttdef"><b>Definition:</b> <a href="TraitItem_8cs_source.html#l00005">TraitItem.cs:6</a></div></div>
+<div class="ttc" id="aclassTrait_html_aaea5f045bee932aa78a2d0f869e964e1"><div class="ttname"><a href="classTrait.html#aaea5f045bee932aa78a2d0f869e964e1">Trait.Electricity</a></div><div class="ttdeci">virtual int Electricity</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00204">Trait.cs:205</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitItem_8cs_source.html#l00006">CanUseFromInventory</a>, <a class="el" href="Trait_8cs_source.html#l00205">Trait.Electricity</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00488">Card.isNPCProperty</a>, <a class="el" href="Card_8cs_source.html#l00476">Card.isOn</a>, and <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -741,6 +772,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a306f5ddbb9273ba3177f72b1018f52cf">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitItem_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitItem_8cs_source.html">TraitItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            n.Space(20, 1);</div>
+<div class="line"><span class="lineno">   31</span>            n.AddText(this.<a class="code hl_property" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a>.lang(), FontColor.Good);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassTrait_html_a5403dc0110848cbb7e18de734186502c"><div class="ttname"><a href="classTrait.html#a5403dc0110848cbb7e18de734186502c">Trait.langNote</a></div><div class="ttdeci">virtual string langNote</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00391">Trait.cs:392</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00392">Trait.langNote</a>.</p>
 
 </div>
 </div>
@@ -766,6 +807,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitItem_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitItem_8cs_source.html">TraitItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitItem_8cs_source.html#l00021">CanUse()</a>.</p>
 
 </div>
 </div>
@@ -790,16 +839,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitItem_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitItem_8cs_source.html">TraitItem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> !this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitItem_8cs_source.html">TraitItem.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitItem.html">TraitItem</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

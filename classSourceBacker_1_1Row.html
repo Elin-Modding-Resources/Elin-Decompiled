@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceBacker_1_1Row.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classSourceBacker.html">SourceBacker</a></li><li class="navelem"><a class="el" href="classSourceBacker_1_1Row.html">Row</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -171,6 +187,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00153">153</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>.</p>
+
 </div>
 </div>
 <a id="a91c6663bafa918e1830f4efc415926ba" name="a91c6663bafa918e1830f4efc415926ba"></a>
@@ -203,6 +221,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00149">149</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>.</p>
+
 </div>
 </div>
 <a id="ae84e82f57e12ceb845403c5ad3646ed9" name="ae84e82f57e12ceb845403c5ad3646ed9"></a>
@@ -219,6 +239,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00135">135</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00863">Zone.Activate()</a>, <a class="el" href="Map_8cs_source.html#l01538">Map.AddBackerTree()</a>, <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>, <a class="el" href="Map_8cs_source.html#l01582">Map.ApplyBackerObj()</a>, <a class="el" href="Zone__Casino_8cs_source.html#l00030">Zone_Casino.OnActivate()</a>, <a class="el" href="Chara_8cs_source.html#l01153">Chara.OnCreate()</a>, <a class="el" href="TraitSpecialLantern_8cs_source.html#l00021">TraitSpecialLantern.OnCreate()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="ActionMode_8cs_source.html#l00594">ActionMode.RefreshTexts()</a>, and <a class="el" href="Zone_8cs_source.html#l02622">Zone.TrySpawnFollower()</a>.</p>
+
 </div>
 </div>
 <a id="ac04691ab1e20b9ea57f2981310394626" name="ac04691ab1e20b9ea57f2981310394626"></a>
@@ -234,6 +256,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00159">159</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SerializedCards_8cs_source.html#l00010">SerializedCards.Add()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00594">ActionMode.RefreshTexts()</a>.</p>
 
 </div>
 </div>
@@ -282,6 +306,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00157">157</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -347,6 +373,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00147">147</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>, and <a class="el" href="Map_8cs_source.html#l01582">Map.ApplyBackerObj()</a>.</p>
+
 </div>
 </div>
 <a id="afba67e93bf7ef871df51e42608763e8b" name="afba67e93bf7ef871df51e42608763e8b"></a>
@@ -395,6 +423,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00151">151</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l01538">Map.AddBackerTree()</a>.</p>
+
 </div>
 </div>
 <a id="abf56fc6b676f2505f1ba20e97e95464d" name="abf56fc6b676f2505f1ba20e97e95464d"></a>
@@ -410,6 +440,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00145">145</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06328">Card.ApplyBacker()</a>.</p>
 
 </div>
 </div>
@@ -451,7 +483,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00107">107</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;n&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a02612a48f4b2fefa94fdfcb5b4ad1cd7" name="a02612a48f4b2fefa94fdfcb5b4ad1cd7"></a>
@@ -475,6 +513,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00115">115</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBackerContent.html">BackerContent</a>.<a class="code hl_function" href="classBackerContent.html#ac0f85b70dad22b468610ffe67c75e4fd">ConvertName</a>((Lang.langCode == <span class="stringliteral">&quot;CN&quot;</span>) ? base.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>) : <span class="keyword">this</span>.name);</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="ttc" id="aclassBackerContent_html"><div class="ttname"><a href="classBackerContent.html">BackerContent</a></div><div class="ttdef"><b>Definition:</b> <a href="BackerContent_8cs_source.html#l00003">BackerContent.cs:4</a></div></div>
+<div class="ttc" id="aclassBackerContent_html_ac0f85b70dad22b468610ffe67c75e4fd"><div class="ttname"><a href="classBackerContent.html#ac0f85b70dad22b468610ffe67c75e4fd">BackerContent.ConvertName</a></div><div class="ttdeci">static string ConvertName(string s)</div><div class="ttdef"><b>Definition:</b> <a href="BackerContent_8cs_source.html#l00005">BackerContent.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01631">Cell.GetObjName()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00594">ActionMode.RefreshTexts()</a>.</p>
 
 </div>
 </div>
@@ -499,6 +547,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00123">123</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span> (!(Lang.langCode == <span class="stringliteral">&quot;CN&quot;</span>))</div>
+<div class="line"><span class="lineno">  128</span>                {</div>
+<div class="line"><span class="lineno">  129</span>                    <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourceBacker_1_1Row.html#afba67e93bf7ef871df51e42608763e8b">text</a>;</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">return</span> base.GetText(<span class="stringliteral">&quot;text&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="ttc" id="aclassSourceBacker_1_1Row_html_afba67e93bf7ef871df51e42608763e8b"><div class="ttname"><a href="classSourceBacker_1_1Row.html#afba67e93bf7ef871df51e42608763e8b">SourceBacker.Row.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="SourceBacker_8cs_source.html#l00143">SourceBacker.cs:143</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00221">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TraitSpecialLantern_8cs_source.html#l00033">TraitSpecialLantern.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -523,16 +584,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceBacker_8cs_source.html#l00099">99</a> of file <a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceBacker_8cs_source.html">SourceBacker.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceBacker.html">SourceBacker</a></li><li class="navelem"><a class="el" href="classSourceBacker_1_1Row.html">Row</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

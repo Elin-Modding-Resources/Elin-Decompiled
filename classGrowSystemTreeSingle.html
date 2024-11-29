@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGrowSystemTreeSingle.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -393,7 +413,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGrowSystemTree.html#a84d5380a61f5ff6737f614ed43c512ea">GrowSystemTree</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemTreeSingle_8cs_source.html#l00005">5</a> of file <a class="el" href="GrowSystemTreeSingle_8cs_source.html">GrowSystemTreeSingle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> 33;</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a267ef52885fee6ef2360df9fed0c9b3c" name="a267ef52885fee6ef2360df9fed0c9b3c"></a>
@@ -423,6 +446,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGrowSystemTree.html#ae2ae5de3156e43a4fa6023c0c9126abc">GrowSystemTree</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GrowSystemTreeSingle_8cs_source.html#l00010">10</a> of file <a class="el" href="GrowSystemTreeSingle_8cs_source.html">GrowSystemTreeSingle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        s.renderData = this.<a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>.renderData;</div>
+<div class="line"><span class="lineno">   13</span>        s.<a class="code hl_function" href="classGrowSystem_1_1Stage.html#acb367e63cd28051c647f051a8b8a91f9">SetTile</a>(0, this.<a class="code hl_variable" href="classGrowSystem.html#a34fa0189b5b21ec531053235246b53ad">baseTiles</a>);</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassGrowSystem_1_1Stage_html_acb367e63cd28051c647f051a8b8a91f9"><div class="ttname"><a href="classGrowSystem_1_1Stage.html#acb367e63cd28051c647f051a8b8a91f9">GrowSystem.Stage.SetTile</a></div><div class="ttdeci">void SetTile(int _tile)</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00781">GrowSystem.cs:781</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_a34fa0189b5b21ec531053235246b53ad"><div class="ttname"><a href="classGrowSystem.html#a34fa0189b5b21ec531053235246b53ad">GrowSystem.baseTiles</a></div><div class="ttdeci">int[] baseTiles</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00771">GrowSystem.cs:771</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00767">GrowSystem.cs:767</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00771">GrowSystem.baseTiles</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00767">GrowSystem.source</a>.</p>
 
 </div>
 </div>
@@ -430,9 +462,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GrowSystemTreeSingle_8cs_source.html">GrowSystemTreeSingle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGrowSystemTreeSingle.html">GrowSystemTreeSingle</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

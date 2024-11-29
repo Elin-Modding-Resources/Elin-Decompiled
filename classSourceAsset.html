@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceAsset.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -158,6 +178,36 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00055">55</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        IO.CopyAs(<a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_property" href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">PrefPath</a> + <span class="keywordtype">id</span>, <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_property" href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">PrefPath</a> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_loadbk&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classSourceAsset_1_1Prefs.html">SourceAsset.Prefs</a> prefs = IO.LoadFile&lt;<a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_class" href="classSourceAsset_1_1Prefs.html">Prefs</a>&gt;(SourceAsset.PrefPath + id, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (prefs.<a class="code hl_variable" href="classSourceAsset_1_1Prefs.html#af2d0ad82d63b96efa647def51faab33e">things</a>.dict.ContainsKey(row.id))</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                row.pref = prefs.<a class="code hl_variable" href="classSourceAsset_1_1Prefs.html#af2d0ad82d63b96efa647def51faab33e">things</a>.dict[row.id];</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (prefs.<a class="code hl_variable" href="classSourceAsset_1_1Prefs.html#a9f24e6a599cdd5c27e0f6a2033e0f3fc">version</a> == 0)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                row.pref.y = 0f;</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        Debug.Log(<span class="stringliteral">&quot;Imported Prefs:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceAsset_1_1Prefs_html"><div class="ttname"><a href="classSourceAsset_1_1Prefs.html">SourceAsset.Prefs</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00082">SourceAsset.cs:83</a></div></div>
+<div class="ttc" id="aclassSourceAsset_1_1Prefs_html_a9f24e6a599cdd5c27e0f6a2033e0f3fc"><div class="ttname"><a href="classSourceAsset_1_1Prefs.html#a9f24e6a599cdd5c27e0f6a2033e0f3fc">SourceAsset.Prefs.version</a></div><div class="ttdeci">int version</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00084">SourceAsset.cs:84</a></div></div>
+<div class="ttc" id="aclassSourceAsset_1_1Prefs_html_af2d0ad82d63b96efa647def51faab33e"><div class="ttname"><a href="classSourceAsset_1_1Prefs.html#af2d0ad82d63b96efa647def51faab33e">SourceAsset.Prefs.things</a></div><div class="ttdeci">SourceAsset.PrefData things</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00086">SourceAsset.cs:86</a></div></div>
+<div class="ttc" id="aclassSourceAsset_html"><div class="ttname"><a href="classSourceAsset.html">SourceAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00005">SourceAsset.cs:6</a></div></div>
+<div class="ttc" id="aclassSourceAsset_html_a6afdd31624426525be4bdf1c9b6430ae"><div class="ttname"><a href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">SourceAsset.PrefPath</a></div><div class="ttdeci">static string PrefPath</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00007">SourceAsset.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00161">SourceManager.cs:161</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00099">SourceThing.cs:100</a></div></div>
+<div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceAsset_8cs_source.html#l00008">PrefPath</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="SourceAsset_8cs_source.html#l00086">SourceAsset.Prefs.things</a>, <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00084">SourceAsset.Prefs.version</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceAsset_8cs_source.html#l00045">LoadPrefs()</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00050">LoadPrefs_bk()</a>.</p>
 
 </div>
 </div>
@@ -186,6 +236,29 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00024">24</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        IO.CopyAs(<a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_property" href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">PrefPath</a> + <span class="keywordtype">id</span>, <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_property" href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">PrefPath</a> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_bk&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="classSourceAsset_1_1Prefs.html">SourceAsset.Prefs</a> prefs = <span class="keyword">new</span> <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_class" href="classSourceAsset_1_1Prefs.html">Prefs</a>();</div>
+<div class="line"><span class="lineno">   28</span>        prefs.version = 2;</div>
+<div class="line"><span class="lineno">   29</span>        Debug.Log(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.Count);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (prefs.<a class="code hl_variable" href="classSourceAsset_1_1Prefs.html#af2d0ad82d63b96efa647def51faab33e">things</a>.dict.ContainsKey(row.id))</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                Debug.LogError(<span class="stringliteral">&quot;exception: duplicate id:&quot;</span> + row.id + <span class="stringliteral">&quot;/&quot;</span> + row.name);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                prefs.<a class="code hl_variable" href="classSourceAsset_1_1Prefs.html#af2d0ad82d63b96efa647def51faab33e">things</a>.dict.Add(row.id, row.pref);</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        IO.SaveFile(<a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_property" href="classSourceAsset.html#a6afdd31624426525be4bdf1c9b6430ae">PrefPath</a> + <span class="keywordtype">id</span>, prefs, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   42</span>        Debug.Log(<span class="stringliteral">&quot;Exported Prefs:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceAsset_8cs_source.html#l00008">PrefPath</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="SourceAsset_8cs_source.html#l00086">SourceAsset.Prefs.things</a>, and <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceAsset_8cs_source.html#l00019">SavePrefs()</a>.</p>
 
 </div>
 </div>
@@ -213,7 +286,9 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00015">15</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6f05168c913f89265c605044f9f84aa1" name="a6f05168c913f89265c605044f9f84aa1"></a>
@@ -240,6 +315,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00045">45</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_function" href="classSourceAsset.html#ab01aaa72e5b5139e6678499bc3588dc0">_LoadPrefs</a>(this.<a class="code hl_variable" href="classSourceAsset.html#a61e20630c2f972f933080ce20aee71a2">idLoad</a>);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassSourceAsset_html_a61e20630c2f972f933080ce20aee71a2"><div class="ttname"><a href="classSourceAsset.html#a61e20630c2f972f933080ce20aee71a2">SourceAsset.idLoad</a></div><div class="ttdeci">string idLoad</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00073">SourceAsset.cs:73</a></div></div>
+<div class="ttc" id="aclassSourceAsset_html_ab01aaa72e5b5139e6678499bc3588dc0"><div class="ttname"><a href="classSourceAsset.html#ab01aaa72e5b5139e6678499bc3588dc0">SourceAsset._LoadPrefs</a></div><div class="ttdeci">static void _LoadPrefs(string id=&quot;prefs&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00055">SourceAsset.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceAsset_8cs_source.html#l00055">_LoadPrefs()</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00073">idLoad</a>.</p>
 
 </div>
 </div>
@@ -267,6 +349,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00050">50</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_function" href="classSourceAsset.html#ab01aaa72e5b5139e6678499bc3588dc0">_LoadPrefs</a>(this.<a class="code hl_variable" href="classSourceAsset.html#a61e20630c2f972f933080ce20aee71a2">idLoad</a>);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceAsset_8cs_source.html#l00055">_LoadPrefs()</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00073">idLoad</a>.</p>
 
 </div>
 </div>
@@ -295,6 +382,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00019">19</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classSourceAsset.html">SourceAsset</a>.<a class="code hl_function" href="classSourceAsset.html#a82648f12e9038d523131c4b635db4421">_SavePrefs</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassSourceAsset_html_a82648f12e9038d523131c4b635db4421"><div class="ttname"><a href="classSourceAsset.html#a82648f12e9038d523131c4b635db4421">SourceAsset._SavePrefs</a></div><div class="ttdeci">static void _SavePrefs(string id=&quot;prefs&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="SourceAsset_8cs_source.html#l00024">SourceAsset.cs:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceAsset_8cs_source.html#l00024">_SavePrefs()</a>.</p>
 
 </div>
 </div>
@@ -313,6 +406,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00073">73</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceAsset_8cs_source.html#l00045">LoadPrefs()</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00050">LoadPrefs_bk()</a>.</p>
+
 </div>
 </div>
 <a id="a05e2333628ef8477a69d2b150d0c34ae" name="a05e2333628ef8477a69d2b150d0c34ae"></a>
@@ -328,6 +423,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00075">75</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +450,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceAsset_8cs_source.html#l00007">7</a> of file <a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> Application.dataPath + <span class="stringliteral">&quot;/Resources/Data/Export/&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourceAsset_8cs_source.html#l00055">_LoadPrefs()</a>, and <a class="el" href="SourceAsset_8cs_source.html#l00024">_SavePrefs()</a>.</p>
 
 </div>
 </div>
@@ -360,9 +465,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="SourceAsset_8cs_source.html">SourceAsset.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceAsset.html">SourceAsset</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

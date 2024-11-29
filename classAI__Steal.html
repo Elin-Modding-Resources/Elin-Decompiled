@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Steal.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -694,7 +714,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00036">36</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> Act.TC != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae64590a43b91f1f99943dce61c832e20" name="ae64590a43b91f1f99943dce61c832e20"></a>
@@ -724,6 +747,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#a5814db229a2618652d8cc9149434e36b">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00015">15</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> !EClass._zone.IsUserZone &amp;&amp; !(c.isThing &amp; EClass._zone is <a class="code hl_class" href="classZone__LittleGarden.html">Zone_LittleGarden</a>) &amp;&amp; (c.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a> || !c.<a class="code hl_property" href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">isThing</a>) &amp;&amp; c.trait.CanBeStolen &amp;&amp; c.c_lockLv &lt;= 0 &amp;&amp; (c.isThing || !c.<a class="code hl_property" href="classCard.html#ac6e6b02d77f312cfcc73660827250a90">IsPCFaction</a>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassCard_html_a13bf61f1e3434cc60f1dd50e743c6e6b"><div class="ttname"><a href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">Card.isThing</a></div><div class="ttdeci">virtual bool isThing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02027">Card.cs:2028</a></div></div>
+<div class="ttc" id="aclassCard_html_a26108155cef3dd565735e6d8e3bc6322"><div class="ttname"><a href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">Card.isNPCProperty</a></div><div class="ttdeci">bool isNPCProperty</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00487">Card.cs:488</a></div></div>
+<div class="ttc" id="aclassCard_html_ac6e6b02d77f312cfcc73660827250a90"><div class="ttname"><a href="classCard.html#ac6e6b02d77f312cfcc73660827250a90">Card.IsPCFaction</a></div><div class="ttdeci">virtual bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02402">Card.cs:2403</a></div></div>
+<div class="ttc" id="aclassZone__LittleGarden_html"><div class="ttname"><a href="classZone__LittleGarden.html">Zone_LittleGarden</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__LittleGarden_8cs_source.html#l00003">Zone_LittleGarden.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00488">Card.isNPCProperty</a>, <a class="el" href="Card_8cs_source.html#l02403">Card.IsPCFaction</a>, and <a class="el" href="Card_8cs_source.html#l02028">Card.isThing</a>.</p>
 
 </div>
 </div>
@@ -753,6 +785,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00041">41</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        this.target = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> base.Perform();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassAct_html_a2bbe355c1c37f1ac7958c5f1040400db"><div class="ttname"><a href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">Act.TC</a></div><div class="ttdeci">static Card TC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00558">Act.2.cs:558</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00558">Act.TC</a>.</p>
 
 </div>
 </div>
@@ -782,6 +822,223 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00047">47</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.target = chara.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a0e94fffa1b0b17d1c68645e3cdd3be53">FindStealable</a>();</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a> == <span class="keyword">null</span> &amp;&amp; chara.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(30, <span class="keyword">null</span>) &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(0))</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    this.target = chara.<a class="code hl_function" href="classCard.html#a55d885cb83d08143f87b0406cbfef035">AddThing</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;money&quot;</span>, -1, -1).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> * 10)), <span class="keyword">true</span>, -1, -1);</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    this.target = chara.<a class="code hl_function" href="classCard.html#a55d885cb83d08143f87b0406cbfef035">AddThing</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">CreateFromFilter</a>(<span class="stringliteral">&quot;steal&quot;</span>, chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>), <span class="keyword">true</span>, -1, -1);</div>
+<div class="line"><span class="lineno">   62</span>                    chara.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(30, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(0) + 1440);</div>
+<div class="line"><span class="lineno">   63</span>                }</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;steal_chara_nothing&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, chara, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   68</span>                yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;steal_chara&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, chara, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a0e94fffa1b0b17d1c68645e3cdd3be53">FindStealable</a>();</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   78</span>                {</div>
+<div class="line"><span class="lineno">   79</span>                    this.target = thing;</div>
+<div class="line"><span class="lineno">   80</span>                }</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;steal_thing&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_interface" href="interfaceICardParent.html">ICardParent</a> targetParent = this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a>;</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classCard.html">Card</a> card = chara;</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (card == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            card = this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_class" href="classCard.html">Card</a> root = card.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>();</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> progress_Custom = <span class="keyword">new</span> <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a>();</div>
+<div class="line"><span class="lineno">   92</span>        progress_Custom.canProgress = (() =&gt; this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a> == targetParent &amp;&amp; (chara == <span class="keyword">null</span> || chara.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a>));</div>
+<div class="line"><span class="lineno">   93</span>        progress_Custom.onProgressBegin = delegate()</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>        };</div>
+<div class="line"><span class="lineno">   96</span>        Func&lt;Chara, bool&gt; &lt;&gt;9__4;</div>
+<div class="line"><span class="lineno">   97</span>        progress_Custom.onProgress = delegate(<a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> p)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(root);</div>
+<div class="line"><span class="lineno">  100</span>            this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;steal&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  101</span>            root.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver, <span class="keywordflow">default</span>(Vector3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a0455627201978881f346eef856587e04">godMode</a>)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(chara) &gt; 1)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a85b6b9e1fa6e28234389f0b2eb4e1b5d">TryMoveTowards</a>(chara.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  111</span>                {</div>
+<div class="line"><span class="lineno">  112</span>                    p.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  113</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  114</span>                }</div>
+<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">if</span> (chara != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(chara) &gt; 1)</div>
+<div class="line"><span class="lineno">  116</span>                {</div>
+<div class="line"><span class="lineno">  117</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;targetTooFar&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  118</span>                    p.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  120</span>                }</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#adf10469ca7be135b6b9563fd59f707f4">ChildrenAndSelfWeight</a> &gt; <span class="keyword">this</span>.owner.Evalue(281) * 200 + <span class="keyword">this</span>.owner.STR * 100 + 1000)</div>
+<div class="line"><span class="lineno">  123</span>            {</div>
+<div class="line"><span class="lineno">  124</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;tooHeavy&quot;</span>, this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  125</span>                p.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">int</span> count = this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a1307ed7565e6b669ebd14a4dd08a74da">ListWitnesses</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, 4, <a class="code hl_enumeration" href="WitnessType_8cs.html#a980cec38d848b7c84413db97adeca8bf">WitnessType</a>.crime, chara).Count;</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_class" href="classPoint.html">Point</a> pos = this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>;</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> = this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>;</div>
+<div class="line"><span class="lineno">  131</span>            chara = chara;</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordtype">int</span> radius = 4;</div>
+<div class="line"><span class="lineno">  133</span>            Func&lt;Chara, bool&gt; funcWitness;</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> ((funcWitness = &lt;&gt;9__4) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  135</span>            {</div>
+<div class="line"><span class="lineno">  136</span>                funcWitness = (&lt;&gt;9__4 = delegate(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
+<div class="line"><span class="lineno">  137</span>                {</div>
+<div class="line"><span class="lineno">  138</span>                    <span class="keywordtype">int</span> num = c.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(this.owner) ? 0 : 30;</div>
+<div class="line"><span class="lineno">  139</span>                    <span class="keywordtype">int</span> num2 = c.PER * 250 / 100;</div>
+<div class="line"><span class="lineno">  140</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">isThing</a> &amp;&amp; (<span class="keyword">this</span>.target.Thing.isEquipped || <span class="keyword">this</span>.target.IsRangedWeapon || <span class="keyword">this</span>.target.IsThrownWeapon))</div>
+<div class="line"><span class="lineno">  141</span>                    {</div>
+<div class="line"><span class="lineno">  142</span>                        num2 *= 2;</div>
+<div class="line"><span class="lineno">  143</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &gt;= <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Legendary)</div>
+<div class="line"><span class="lineno">  144</span>                        {</div>
+<div class="line"><span class="lineno">  145</span>                            num2 *= 2;</div>
+<div class="line"><span class="lineno">  146</span>                        }</div>
+<div class="line"><span class="lineno">  147</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &gt;= <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Artifact)</div>
+<div class="line"><span class="lineno">  148</span>                        {</div>
+<div class="line"><span class="lineno">  149</span>                            num2 *= 2;</div>
+<div class="line"><span class="lineno">  150</span>                        }</div>
+<div class="line"><span class="lineno">  151</span>                    }</div>
+<div class="line"><span class="lineno">  152</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">IsUnique</a>)</div>
+<div class="line"><span class="lineno">  153</span>                    {</div>
+<div class="line"><span class="lineno">  154</span>                        num2 *= 2;</div>
+<div class="line"><span class="lineno">  155</span>                    }</div>
+<div class="line"><span class="lineno">  156</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(num2) &gt; this.owner.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(281) + this.owner.DEX + num;</div>
+<div class="line"><span class="lineno">  157</span>                });</div>
+<div class="line"><span class="lineno">  158</span>            }</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (pos.<a class="code hl_function" href="classPoint.html#a9919945fc33a79bc888be7ba5fb79913">TryWitnessCrime</a>(<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, chara, radius, funcWitness))</div>
+<div class="line"><span class="lineno">  160</span>            {</div>
+<div class="line"><span class="lineno">  161</span>                p.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  163</span>            }</div>
+<div class="line"><span class="lineno">  164</span>            this.owner.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ModExp</a>(281, Mathf.Min(count * 5 + 5, 25), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  165</span>        };</div>
+<div class="line"><span class="lineno">  166</span>        progress_Custom.onProgressComplete = delegate()</div>
+<div class="line"><span class="lineno">  167</span>        {</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">isThing</a> &amp;&amp; <span class="keyword">this</span>.target.IsInstalled)</div>
+<div class="line"><span class="lineno">  169</span>            {</div>
+<div class="line"><span class="lineno">  170</span>                this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_function" href="classCard.html#a2078dce74f6fb65155bd11d5311ce06b">SetPlaceState</a>(<a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.roaming, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>            this.owner.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;steal_end&quot;</span>, this.owner, this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span> &amp;&amp; (chara.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> || chara.<a class="code hl_property" href="classChara.html#a16a8614d744fb716390159b086dc6da4">OriginalHostility</a> &gt;= <a class="code hl_enumeration" href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a>.Friend))</div>
+<div class="line"><span class="lineno">  174</span>            {</div>
+<div class="line"><span class="lineno">  175</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a3a7361209d6c489bc52cfadf55ec933f">ModKarma</a>(-1);</div>
+<div class="line"><span class="lineno">  176</span>            }</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chara == <span class="keyword">null</span> || chara.<a class="code hl_property" href="classChara.html#ad72ee7f579ea03c3db826fc626ba2691">hostility</a> &gt; <a class="code hl_enumeration" href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a>.Enemy)</div>
+<div class="line"><span class="lineno">  178</span>            {</div>
+<div class="line"><span class="lineno">  179</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a3a7361209d6c489bc52cfadf55ec933f">ModKarma</a>(-1);</div>
+<div class="line"><span class="lineno">  180</span>            }</div>
+<div class="line"><span class="lineno">  181</span>            this.target.isNPCProperty = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(<span class="stringliteral">&quot;currency&quot;</span>))</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                this.target.isStolen = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  185</span>            }</div>
+<div class="line"><span class="lineno">  186</span>            this.owner.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(this.<a class="code hl_variable" href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">target</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  187</span>            this.owner.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ModExp</a>(281, 50, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  189</span>            {</div>
+<div class="line"><span class="lineno">  190</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>        };</div>
+<div class="line"><span class="lineno">  193</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> seq = progress_Custom.<a class="code hl_function" href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">SetDuration</a>(20, 4);</div>
+<div class="line"><span class="lineno">  194</span>        yield <span class="keywordflow">return</span> base.<a class="code hl_function" href="classAIAct.html#a50e701a7456f00e7e0eeb70a5e7b98fc">Do</a>(seq, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  195</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aHostility_8cs_html_abf5e46daccde02afce5e19cb6a74c500"><div class="ttname"><a href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a></div><div class="ttdeci">Hostility</div><div class="ttdef"><b>Definition:</b> <a href="Hostility_8cs_source.html#l00003">Hostility.cs:4</a></div></div>
+<div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00003">PlaceState.cs:4</a></div></div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a></div><div class="ttdeci">Rarity</div><div class="ttdef"><b>Definition:</b> <a href="Rarity_8cs_source.html#l00003">Rarity.cs:4</a></div></div>
+<div class="ttc" id="aWitnessType_8cs_html_a980cec38d848b7c84413db97adeca8bf"><div class="ttname"><a href="WitnessType_8cs.html#a980cec38d848b7c84413db97adeca8bf">WitnessType</a></div><div class="ttdeci">WitnessType</div><div class="ttdef"><b>Definition:</b> <a href="WitnessType_8cs_source.html#l00003">WitnessType.cs:4</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a50e701a7456f00e7e0eeb70a5e7b98fc"><div class="ttname"><a href="classAIAct.html#a50e701a7456f00e7e0eeb70a5e7b98fc">AIAct.Do</a></div><div class="ttdeci">AIAct.Status Do(AIAct _seq, Func&lt; AIAct.Status &gt; _onChildFail=null)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00503">AIAct.cs:503</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
+<div class="ttc" id="aclassAI__TargetCard_html_a0d0edf51fcd59e6ce1e557539fadc7e7"><div class="ttname"><a href="classAI__TargetCard.html#a0d0edf51fcd59e6ce1e557539fadc7e7">AI_TargetCard.target</a></div><div class="ttdeci">Card target</div><div class="ttdef"><b>Definition:</b> <a href="AI__TargetCard_8cs_source.html#l00069">AI_TargetCard.cs:69</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00017">BaseCard.cs:17</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00032">BaseCard.cs:32</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a06d351f92c327d70f1ae22553c1d0ace"><div class="ttname"><a href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">CardRenderer.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00442">CardRenderer.cs:442</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
+<div class="ttc" id="aclassCard_html_a2078dce74f6fb65155bd11d5311ce06b"><div class="ttname"><a href="classCard.html#a2078dce74f6fb65155bd11d5311ce06b">Card.SetPlaceState</a></div><div class="ttdeci">void SetPlaceState(PlaceState newState, bool byPlayer=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03596">Card.cs:3596</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a273e02936a4fd9011e84fdef0bd1189d"><div class="ttname"><a href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">Card.IsUnique</a></div><div class="ttdeci">bool IsUnique</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02067">Card.cs:2068</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a55d885cb83d08143f87b0406cbfef035"><div class="ttname"><a href="classCard.html#a55d885cb83d08143f87b0406cbfef035">Card.AddThing</a></div><div class="ttdeci">Thing AddThing(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03149">Card.cs:3149</a></div></div>
+<div class="ttc" id="aclassCard_html_a5977c43f14d376055d2ab4e8009c31d4"><div class="ttname"><a href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">Card.rarity</a></div><div class="ttdeci">Rarity rarity</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00259">Card.cs:260</a></div></div>
+<div class="ttc" id="aclassCard_html_a5fdd419eccae9c9ab3af2c954091692c"><div class="ttname"><a href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">Card.parent</a></div><div class="ttdeci">ICardParent parent</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07300">Card.cs:7300</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03467">Card.cs:3467</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07283">Card.cs:7283</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02003">Card.cs:2004</a></div></div>
+<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03401">Card.cs:3401</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01964">Card.cs:1964</a></div></div>
+<div class="ttc" id="aclassCard_html_abd6b223dc61955d492fc2c2e17f3cf61"><div class="ttname"><a href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Card.Dist</a></div><div class="ttdeci">int Dist(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07008">Card.cs:7008</a></div></div>
+<div class="ttc" id="aclassCard_html_adf10469ca7be135b6b9563fd59f707f4"><div class="ttname"><a href="classCard.html#adf10469ca7be135b6b9563fd59f707f4">Card.ChildrenAndSelfWeight</a></div><div class="ttdeci">int ChildrenAndSelfWeight</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01898">Card.cs:1899</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1dbde98a747856add8519bb4e7cc688"><div class="ttname"><a href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">Card.category</a></div><div class="ttdeci">SourceCategory.Row category</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01930">Card.cs:1931</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00331">Card.cs:332</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a16a8614d744fb716390159b086dc6da4"><div class="ttname"><a href="classChara.html#a16a8614d744fb716390159b086dc6da4">Chara.OriginalHostility</a></div><div class="ttdeci">Hostility OriginalHostility</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00328">Chara.cs:329</a></div></div>
+<div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00556">Chara.cs:557</a></div></div>
+<div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00714">Chara.cs:714</a></div></div>
+<div class="ttc" id="aclassChara_html_a85b6b9e1fa6e28234389f0b2eb4e1b5d"><div class="ttname"><a href="classChara.html#a85b6b9e1fa6e28234389f0b2eb4e1b5d">Chara.TryMoveTowards</a></div><div class="ttdeci">Card.MoveResult TryMoveTowards(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02180">Chara.cs:2180</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08248">Chara.cs:8249</a></div></div>
+<div class="ttc" id="aclassChara_html_ad72ee7f579ea03c3db826fc626ba2691"><div class="ttname"><a href="classChara.html#ad72ee7f579ea03c3db826fc626ba2691">Chara.hostility</a></div><div class="ttdeci">Hostility hostility</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00092">Chara.cs:93</a></div></div>
+<div class="ttc" id="aclassChara_html_adfc4e346a21e435fbd52582af3788692"><div class="ttname"><a href="classChara.html#adfc4e346a21e435fbd52582af3788692">Chara.LookAt</a></div><div class="ttdeci">override void LookAt(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03048">Chara.cs:3048</a></div></div>
+<div class="ttc" id="aclassChara_html_ae543d364c9735273f1fc52d6585df722"><div class="ttname"><a href="classChara.html#ae543d364c9735273f1fc52d6585df722">Chara.Pick</a></div><div class="ttdeci">Thing Pick(Thing t, bool msg=true, bool tryStack=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03718">Chara.cs:3718</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a0455627201978881f346eef856587e04"><div class="ttname"><a href="classCoreDebug.html#a0455627201978881f346eef856587e04">CoreDebug.godMode</a></div><div class="ttdeci">bool godMode</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02186">CoreDebug.cs:2186</a></div></div>
+<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00324">Date.cs:324</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aa1c3ae499520ab53bda341dd23fa0702"><div class="ttname"><a href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ElementContainer.ModExp</a></div><div class="ttdeci">void ModExp(int ele, int a, bool chain=false)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00295">ElementContainer.cs:295</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a3a7361209d6c489bc52cfadf55ec933f"><div class="ttname"><a href="classPlayer.html#a3a7361209d6c489bc52cfadf55ec933f">Player.ModKarma</a></div><div class="ttdeci">void ModKarma(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01255">Player.cs:1255</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a1307ed7565e6b669ebd14a4dd08a74da"><div class="ttname"><a href="classPoint.html#a1307ed7565e6b669ebd14a4dd08a74da">Point.ListWitnesses</a></div><div class="ttdeci">List&lt; Chara &gt; ListWitnesses(Chara criminal, int radius=4, WitnessType type=WitnessType.crime, Chara target=null)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00893">Point.cs:893</a></div></div>
+<div class="ttc" id="aclassPoint_html_a9919945fc33a79bc888be7ba5fb79913"><div class="ttname"><a href="classPoint.html#a9919945fc33a79bc888be7ba5fb79913">Point.TryWitnessCrime</a></div><div class="ttdeci">bool TryWitnessCrime(Chara criminal, Chara target=null, int radius=4, Func&lt; Chara, bool &gt; funcWitness=null)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00950">Point.cs:950</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html"><div class="ttname"><a href="classProgress__Custom.html">Progress_Custom</a></div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00003">Progress_Custom.cs:4</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html_a9c399dedace1a2eb051b2aadc687ce06"><div class="ttname"><a href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">Progress_Custom.SetDuration</a></div><div class="ttdeci">Progress_Custom SetDuration(int max, int _interval=2)</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.cs:99</a></div></div>
+<div class="ttc" id="aclassStats_html_a2972d0d69579f77f16a038c181357c20"><div class="ttname"><a href="classStats.html#a2972d0d69579f77f16a038c181357c20">Stats.Mod</a></div><div class="ttdeci">virtual void Mod(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00112">Stats.cs:112</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a0e94fffa1b0b17d1c68645e3cdd3be53"><div class="ttname"><a href="classThingContainer.html#a0e94fffa1b0b17d1c68645e3cdd3be53">ThingContainer.FindStealable</a></div><div class="ttdeci">Thing FindStealable()</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00552">ThingContainer.cs:552</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
+<div class="ttc" id="aclassThingGen_html_a281cc475b772addc30ebe918809aaa30"><div class="ttname"><a href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">ThingGen.CreateFromFilter</a></div><div class="ttdeci">static Thing CreateFromFilter(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00069">ThingGen.cs:69</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+<div class="ttc" id="ainterfaceICardParent_html"><div class="ttname"><a href="interfaceICardParent.html">ICardParent</a></div><div class="ttdef"><b>Definition:</b> <a href="ICardParent_8cs_source.html#l00003">ICardParent.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03149">Card.AddThing()</a>, <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="Chara_8cs_source.html#l00714">Chara.CanSee()</a>, <a class="el" href="Card_8cs_source.html#l01931">Card.category</a>, <a class="el" href="Card_8cs_source.html#l02016">Card.Chara</a>, <a class="el" href="Card_8cs_source.html#l01899">Card.ChildrenAndSelfWeight</a>, <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00069">ThingGen.CreateFromFilter()</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="Card_8cs_source.html#l07008">Card.Dist()</a>, <a class="el" href="AIAct_8cs_source.html#l00503">AIAct.Do()</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l01964">Card.Evalue()</a>, <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="ThingContainer_8cs_source.html#l00552">ThingContainer.FindStealable()</a>, <a class="el" href="BaseCard_8cs_source.html#l00017">BaseCard.GetInt()</a>, <a class="el" href="Date_8cs_source.html#l00324">Date.GetRaw()</a>, <a class="el" href="Card_8cs_source.html#l03401">Card.GetRootCard()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02186">CoreDebug.godMode</a>, <a class="el" href="Chara_8cs_source.html#l00093">Chara.hostility</a>, <a class="el" href="Chara_8cs_source.html#l00557">Chara.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l02028">Card.isThing</a>, <a class="el" href="Card_8cs_source.html#l02068">Card.IsUnique</a>, <a class="el" href="Point_8cs_source.html#l00893">Point.ListWitnesses()</a>, <a class="el" href="Chara_8cs_source.html#l03048">Chara.LookAt()</a>, <a class="el" href="Card_8cs_source.html#l00332">Card.LV</a>, <a class="el" href="Stats_8cs_source.html#l00112">Stats.Mod()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00295">ElementContainer.ModExp()</a>, <a class="el" href="Player_8cs_source.html#l01255">Player.ModKarma()</a>, <a class="el" href="Chara_8cs_source.html#l00329">Chara.OriginalHostility</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l07300">Card.parent</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03718">Chara.Pick()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00442">CardRenderer.PlayAnime()</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l00260">Card.rarity</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.SetDuration()</a>, <a class="el" href="BaseCard_8cs_source.html#l00032">BaseCard.SetInt()</a>, <a class="el" href="Card_8cs_source.html#l03467">Card.SetNum()</a>, <a class="el" href="Card_8cs_source.html#l03596">Card.SetPlaceState()</a>, <a class="el" href="Chara_8cs_source.html#l08249">Chara.stamina</a>, <a class="el" href="AI__TargetCard_8cs_source.html#l00069">AI_TargetCard.target</a>, <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>, <a class="el" href="Card_8cs_source.html#l07283">Card.things</a>, <a class="el" href="Chara_8cs_source.html#l02180">Chara.TryMoveTowards()</a>, <a class="el" href="Point_8cs_source.html#l00950">Point.TryWitnessCrime()</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
 
 </div>
 </div>
@@ -807,7 +1064,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00028">28</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6a207d2a803cc6768dbcfd71245a732e" name="a6a207d2a803cc6768dbcfd71245a732e"></a>
@@ -831,7 +1094,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00020">20</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abbc7d1d1f9b03299fbe9ce7096675110" name="abbc7d1d1f9b03299fbe9ce7096675110"></a>
@@ -855,16 +1124,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Steal_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a52a23a608e0950265bb7d54c22a33adb">SelfAndNeighbor</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassTargetType_html"><div class="ttname"><a href="classTargetType.html">TargetType</a></div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00004">TargetType.cs:5</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a52a23a608e0950265bb7d54c22a33adb"><div class="ttname"><a href="classTargetType.html#a52a23a608e0950265bb7d54c22a33adb">TargetType.SelfAndNeighbor</a></div><div class="ttdeci">static TargetTypeSelfAndNeighbor SelfAndNeighbor</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00102">TargetType.cs:102</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Steal_8cs_source.html">AI_Steal.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Steal.html">AI_Steal</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

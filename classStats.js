@@ -1,0 +1,28 @@
+var classStats =
+[
+    [ "GetColor", "classStats.html#a60b789086009f21606d0496326748200", null ],
+    [ "GetPhase", "classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4", null ],
+    [ "GetText", "classStats.html#a4bae06e48320d5d0388ccfc9fcb4ee80", null ],
+    [ "GetValue", "classStats.html#a272581c184ff82852476db0e26571c73", null ],
+    [ "Mod", "classStats.html#a2972d0d69579f77f16a038c181357c20", null ],
+    [ "OnChangePhase", "classStats.html#aac43d733ba4d84c1d0003807530b70d5", null ],
+    [ "Set", "classStats.html#abde35b2f49f5638bd47d2c79ff2b6766", null ],
+    [ "Set", "classStats.html#a3e0bf3f654efb73ec6ab989119317cdc", null ],
+    [ "ToString", "classStats.html#a5e7875510a50b2501ec61228cc59854a", null ],
+    [ "Bladder", "classStats.html#afe9cc4e64d3e96c3c61267ead11d9965", null ],
+    [ "Burden", "classStats.html#a2fd603d82369cb63e193b53225a59b7c", null ],
+    [ "Depression", "classStats.html#ac7a09b91e697ac88ddf21570adeb4b6c", null ],
+    [ "Hunger", "classStats.html#aebdc96e3a2ce1408d6164cca6b443785", null ],
+    [ "Hygiene", "classStats.html#a4fa58c0d35ce6e38a14f6d81ba171fb2", null ],
+    [ "Mana", "classStats.html#aacb9126f3f066a64d9f6715f4a214494", null ],
+    [ "raw", "classStats.html#a65151cfb68d3fb89796f768153e64f8d", null ],
+    [ "rawIndex", "classStats.html#a98d344bdca880ed7469785085fd3dcd8", null ],
+    [ "SAN", "classStats.html#a12082b15f705c3071892c1205637dc5d", null ],
+    [ "Sleepiness", "classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e", null ],
+    [ "Stamina", "classStats.html#ac75962eacd5011c799dd9c986468902e", null ],
+    [ "max", "classStats.html#af3f73e47b0645cc644d07700c65d95d4", null ],
+    [ "min", "classStats.html#a8e763cafb47b57d729f4d00d207540ce", null ],
+    [ "name", "classStats.html#a713e709fb391ac176cac0b9d77b743b8", null ],
+    [ "TrackPhaseChange", "classStats.html#a75c52fafcee47e73a7d89addb296c3f8", null ],
+    [ "value", "classStats.html#ac5ab607149d0e76d6f1692e5f05c622f", null ]
+];

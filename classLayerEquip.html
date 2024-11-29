@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerEquip.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -225,6 +245,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        this.windows[0].layer = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (!Window.dictData.ContainsKey(<span class="keyword">this</span>.windows[0].idWindow) &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.GetWidget(<span class="stringliteral">&quot;BottomBar&quot;</span>))</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            RectTransform rectTransform = this.windows[0].Rect();</div>
+<div class="line"><span class="lineno">   17</span>            this.windows[0].Rect().anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.anchoredPosition.x, 45f);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        this.chara = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>;</div>
+<div class="line"><span class="lineno">   20</span>        LayerEquip.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_function" href="classLayerEquip.html#ad12726cf579788835f3ddb93baef2fab">Rebuild</a>();</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassLayerEquip_html_ad12726cf579788835f3ddb93baef2fab"><div class="ttname"><a href="classLayerEquip.html#ad12726cf579788835f3ddb93baef2fab">LayerEquip.Rebuild</a></div><div class="ttdeci">void Rebuild()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00024">LayerEquip.cs:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="LayerEquip_8cs_source.html#l00024">Rebuild()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -252,6 +289,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_function" href="classLayerEquip.html#aebf8de79df755b9f15463104fa73a9bf">RefreshEquipment</a>(this.<a class="code hl_variable" href="classLayerEquip.html#a075cf4d75cb7ec81e0f93d551483a162">listMain</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_function" href="classLayerEquip.html#aebf8de79df755b9f15463104fa73a9bf">RefreshEquipment</a>(this.<a class="code hl_variable" href="classLayerEquip.html#a589d783d1b7780243edad5b6e69dbd74">listEtc</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>        this.<a class="code hl_function" href="classLayerEquip.html#a0a735264976aef43f70e7d264a5d1a8c">RefreshToolBelt</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   29</span>        this.windows[0].RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   30</span>        LayerEquip.dirty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassLayerEquip_html_a075cf4d75cb7ec81e0f93d551483a162"><div class="ttname"><a href="classLayerEquip.html#a075cf4d75cb7ec81e0f93d551483a162">LayerEquip.listMain</a></div><div class="ttdeci">UIList listMain</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00088">LayerEquip.cs:88</a></div></div>
+<div class="ttc" id="aclassLayerEquip_html_a0a735264976aef43f70e7d264a5d1a8c"><div class="ttname"><a href="classLayerEquip.html#a0a735264976aef43f70e7d264a5d1a8c">LayerEquip.RefreshToolBelt</a></div><div class="ttdeci">void RefreshToolBelt(bool rebuildLayout=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00040">LayerEquip.cs:40</a></div></div>
+<div class="ttc" id="aclassLayerEquip_html_a589d783d1b7780243edad5b6e69dbd74"><div class="ttname"><a href="classLayerEquip.html#a589d783d1b7780243edad5b6e69dbd74">LayerEquip.listEtc</a></div><div class="ttdeci">UIList listEtc</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00090">LayerEquip.cs:90</a></div></div>
+<div class="ttc" id="aclassLayerEquip_html_aebf8de79df755b9f15463104fa73a9bf"><div class="ttname"><a href="classLayerEquip.html#aebf8de79df755b9f15463104fa73a9bf">LayerEquip.RefreshEquipment</a></div><div class="ttdeci">void RefreshEquipment(UIList list, bool etc=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00044">LayerEquip.cs:44</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEquip_8cs_source.html#l00090">listEtc</a>, <a class="el" href="LayerEquip_8cs_source.html#l00088">listMain</a>, <a class="el" href="LayerEquip_8cs_source.html#l00044">RefreshEquipment()</a>, and <a class="el" href="LayerEquip_8cs_source.html#l00040">RefreshToolBelt()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00011">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -279,6 +331,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00033">33</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        LayerEquip.dirty = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_variable" href="classLayerEquip.html#a075cf4d75cb7ec81e0f93d551483a162">listMain</a>.Redraw();</div>
+<div class="line"><span class="lineno">   37</span>        this.<a class="code hl_variable" href="classLayerEquip.html#a589d783d1b7780243edad5b6e69dbd74">listEtc</a>.Redraw();</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerEquip_8cs_source.html#l00090">listEtc</a>, and <a class="el" href="LayerEquip_8cs_source.html#l00088">listMain</a>.</p>
 
 </div>
 </div>
@@ -317,6 +376,58 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00044">44</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        list.Clear();</div>
+<div class="line"><span class="lineno">   47</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classBodySlot.html">BodySlot</a>, <a class="code hl_class" href="classButtonGridDrag.html">ButtonGridDrag</a>&gt;</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            onInstantiate = delegate(<a class="code hl_class" href="classBodySlot.html">BodySlot</a> a, <a class="code hl_class" href="classButtonGridDrag.html">ButtonGridDrag</a> b)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                b.<a class="code hl_function" href="classButtonGrid.html#abb04e7e8ef0ed6073086b6ef0e0d3b9f">SetBodySlot</a>(a, <span class="keyword">new</span> <a class="code hl_class" href="classInvOwnerEquip.html">InvOwnerEquip</a>(this.<a class="code hl_variable" href="classLayerEquip.html#a44160ddc1dd0d0990329678ce35f75e5">chara</a>, a, <span class="keyword">null</span>, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.None), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   52</span>            },</div>
+<div class="line"><span class="lineno">   53</span>            onRedraw = delegate(<a class="code hl_class" href="classBodySlot.html">BodySlot</a> a, <a class="code hl_class" href="classButtonGridDrag.html">ButtonGridDrag</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                b.<a class="code hl_function" href="classButtonGrid.html#abb04e7e8ef0ed6073086b6ef0e0d3b9f">SetBodySlot</a>(a, <span class="keyword">new</span> <a class="code hl_class" href="classInvOwnerEquip.html">InvOwnerEquip</a>(this.<a class="code hl_variable" href="classLayerEquip.html#a44160ddc1dd0d0990329678ce35f75e5">chara</a>, a, <span class="keyword">null</span>, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.None), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>            },</div>
+<div class="line"><span class="lineno">   57</span>            onSort = ((<a class="code hl_class" href="classBodySlot.html">BodySlot</a> a, UIList.SortMode b) =&gt; this.<a class="code hl_variable" href="classLayerEquip.html#a44160ddc1dd0d0990329678ce35f75e5">chara</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#aa9ff820ba11082738c171b45e8f1287b">GetSortVal</a>(a)),</div>
+<div class="line"><span class="lineno">   58</span>            onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBodySlot.html">BodySlot</a> bodySlot <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classLayerEquip.html#a44160ddc1dd0d0990329678ce35f75e5">chara</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>)</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    <span class="keywordflow">if</span> (bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> != 44)</div>
+<div class="line"><span class="lineno">   63</span>                    {</div>
+<div class="line"><span class="lineno">   64</span>                        <span class="keywordflow">if</span> (bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 36 || bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 31 || bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 37 || bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 45)</div>
+<div class="line"><span class="lineno">   65</span>                        {</div>
+<div class="line"><span class="lineno">   66</span>                            <span class="keywordflow">if</span> (!etc)</div>
+<div class="line"><span class="lineno">   67</span>                            {</div>
+<div class="line"><span class="lineno">   68</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   69</span>                            }</div>
+<div class="line"><span class="lineno">   70</span>                        }</div>
+<div class="line"><span class="lineno">   71</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (etc)</div>
+<div class="line"><span class="lineno">   72</span>                        {</div>
+<div class="line"><span class="lineno">   73</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   74</span>                        }</div>
+<div class="line"><span class="lineno">   75</span>                        list.Add(bodySlot);</div>
+<div class="line"><span class="lineno">   76</span>                    }</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>        };</div>
+<div class="line"><span class="lineno">   80</span>        list.sortMode = UIList.SortMode.ByNumber;</div>
+<div class="line"><span class="lineno">   81</span>        list.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+<div class="ttc" id="aclassBodySlot_html"><div class="ttname"><a href="classBodySlot.html">BodySlot</a></div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00004">BodySlot.cs:5</a></div></div>
+<div class="ttc" id="aclassBodySlot_html_a267347d222852c4a9c677c1b46b4987b"><div class="ttname"><a href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">BodySlot.elementId</a></div><div class="ttdeci">int elementId</div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00028">BodySlot.cs:28</a></div></div>
+<div class="ttc" id="aclassButtonGridDrag_html"><div class="ttname"><a href="classButtonGridDrag.html">ButtonGridDrag</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGridDrag_8cs_source.html#l00004">ButtonGridDrag.cs:5</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_abb04e7e8ef0ed6073086b6ef0e0d3b9f"><div class="ttname"><a href="classButtonGrid.html#abb04e7e8ef0ed6073086b6ef0e0d3b9f">ButtonGrid.SetBodySlot</a></div><div class="ttdeci">void SetBodySlot(BodySlot b, InvOwner owner, bool showIndex=false)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00109">ButtonGrid.cs:109</a></div></div>
+<div class="ttc" id="aclassCharaBody_html_a6c3cd67d9056d79512ab74fa55bf64ba"><div class="ttname"><a href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">CharaBody.slots</a></div><div class="ttdeci">List&lt; BodySlot &gt; slots</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00521">CharaBody.cs:521</a></div></div>
+<div class="ttc" id="aclassCharaBody_html_aa9ff820ba11082738c171b45e8f1287b"><div class="ttname"><a href="classCharaBody.html#aa9ff820ba11082738c171b45e8f1287b">CharaBody.GetSortVal</a></div><div class="ttdeci">int GetSortVal(BodySlot slot)</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00468">CharaBody.cs:468</a></div></div>
+<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09410">Chara.cs:9410</a></div></div>
+<div class="ttc" id="aclassInvOwnerEquip_html"><div class="ttname"><a href="classInvOwnerEquip.html">InvOwnerEquip</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerEquip_8cs_source.html#l00003">InvOwnerEquip.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerEquip_html_a44160ddc1dd0d0990329678ce35f75e5"><div class="ttname"><a href="classLayerEquip.html#a44160ddc1dd0d0990329678ce35f75e5">LayerEquip.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="LayerEquip_8cs_source.html#l00092">LayerEquip.cs:92</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09410">Chara.body</a>, <a class="el" href="LayerEquip_8cs_source.html#l00092">chara</a>, <a class="el" href="BodySlot_8cs_source.html#l00028">BodySlot.elementId</a>, <a class="el" href="CharaBody_8cs_source.html#l00468">CharaBody.GetSortVal()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00109">ButtonGrid.SetBodySlot()</a>, and <a class="el" href="CharaBody_8cs_source.html#l00521">CharaBody.slots</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00024">Rebuild()</a>.</p>
 
 </div>
 </div>
@@ -345,6 +456,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00040">40</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00024">Rebuild()</a>.</p>
 
 </div>
 </div>
@@ -372,7 +487,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        LayerEquip.dirty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -389,6 +507,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00092">92</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00044">RefreshEquipment()</a>.</p>
 
 </div>
 </div>
@@ -454,6 +574,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00090">90</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00024">Rebuild()</a>, and <a class="el" href="LayerEquip_8cs_source.html#l00033">Redraw()</a>.</p>
+
 </div>
 </div>
 <a id="a075cf4d75cb7ec81e0f93d551483a162" name="a075cf4d75cb7ec81e0f93d551483a162"></a>
@@ -470,15 +592,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEquip_8cs_source.html#l00088">88</a> of file <a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerEquip_8cs_source.html#l00024">Rebuild()</a>, and <a class="el" href="LayerEquip_8cs_source.html#l00033">Redraw()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerEquip_8cs_source.html">LayerEquip.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerEquip.html">LayerEquip</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classZoneBlueprint.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -233,6 +253,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00018">18</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_function" href="classZoneBlueprint.html#a96567d815d8369feb894218b15ecbc11">OnCreate</a>();</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassZoneBlueprint_html_a96567d815d8369feb894218b15ecbc11"><div class="ttname"><a href="classZoneBlueprint.html#a96567d815d8369feb894218b15ecbc11">ZoneBlueprint.OnCreate</a></div><div class="ttdeci">virtual void OnCreate()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00023">ZoneBlueprint.cs:23</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneBlueprint_8cs_source.html#l00023">OnCreate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02574">Zone.CreateBP()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00011">ZoneProfile.Generate()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00303">UIMapPreview.GenThread.Init()</a>.</p>
 
 </div>
 </div>
@@ -261,6 +289,71 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">27</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        this.zone = <a class="code hl_variable" href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">zone</a>;</div>
+<div class="line"><span class="lineno">   30</span>        this.idDebug = <a class="code hl_class" href="classZoneBlueprint.html">ZoneBlueprint</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ac30093ee25d155cb9c7edb54cc23389c">debugCount</a>;</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classZoneBlueprint.html">ZoneBlueprint</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ac30093ee25d155cb9c7edb54cc23389c">debugCount</a>++;</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">map</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            this.map = <span class="keyword">new</span> <a class="code hl_class" href="classMap.html">Map</a>();</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        zone.map = this.<a class="code hl_variable" href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">map</a>;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">zoneProfile</a>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            this.zoneProfile = <a class="code hl_variable" href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">zone</a>.<a class="code hl_function" href="classZone.html#a227d3d119721c0d24783a1b66c762401">GetProfile</a>();</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">genSetting</a>.variation)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            this.genSetting.variation = this.<a class="code hl_variable" href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">zoneProfile</a>.<a class="code hl_variable" href="classZoneProfile.html#ac3588449ce8bd6d2b57b747fba9604f2">variation</a>.Instantiate&lt;<a class="code hl_class" href="classMapGenVariation.html">MapGenVariation</a>&gt;();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        this.genSetting.seed = ((this.zoneProfile.seeds.height == -1) ? (Rand.rnd(10000) + 1) : this.<a class="code hl_variable" href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">zoneProfile</a>.<a class="code hl_variable" href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">seeds</a>.<a class="code hl_variable" href="classZoneProfile.html#acc95029310654847c926795775d609d8">height</a>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">zone</a>.<a class="code hl_property" href="classZone.html#a39e8c77c3d95c5aefb6d08aaea9731ae">IDGenerator</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_class" href="classMapGenDungen.html">MapGenDungen</a>.<a class="code hl_property" href="classMapGenDungen.html#ad59dd58bfad874a2042b41a3d09588b0">Instance</a>.<a class="code hl_function" href="classBaseMapGen.html#ad5e808ee2170c4b8dc295c5894297fa9">Generate</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_class" href="classMapGenRegion.html">MapGenRegion</a>.<a class="code hl_property" href="classMapGenRegion.html#ad008731809459f3b74a3959984cfc28a">Instance</a>.<a class="code hl_function" href="classBaseMapGen.html#ad5e808ee2170c4b8dc295c5894297fa9">Generate</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_class" href="classMapGen.html">MapGen</a>.<a class="code hl_property" href="classMapGen.html#a8fe25944a432b3ab02859c1a7e53ac84">Instance</a>.<a class="code hl_function" href="classBaseMapGen.html#ad5e808ee2170c4b8dc295c5894297fa9">Generate</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">map</a>.<a class="code hl_function" href="classMap.html#a4bb0a0e4ecbd6cd6939a2153dd6adf95">SetZone</a>(zone);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="classMapGen.html">MapGen</a>.<a class="code hl_property" href="classMapGen.html#a8fe25944a432b3ab02859c1a7e53ac84">Instance</a>.<a class="code hl_function" href="classMapGen.html#ad89db27b868a05827a5016f8d8d31c5f">Populate</a>(this.<a class="code hl_variable" href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">map</a>);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassBaseMapGen_html_ad5e808ee2170c4b8dc295c5894297fa9"><div class="ttname"><a href="classBaseMapGen.html#ad5e808ee2170c4b8dc295c5894297fa9">BaseMapGen.Generate</a></div><div class="ttdeci">void Generate(ZoneBlueprint _bp)</div><div class="ttdef"><b>Definition:</b> <a href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.cs:24</a></div></div>
+<div class="ttc" id="aclassMapGenDungen_html"><div class="ttname"><a href="classMapGenDungen.html">MapGenDungen</a></div><div class="ttdef"><b>Definition:</b> <a href="MapGenDungen_8cs_source.html#l00007">MapGenDungen.cs:8</a></div></div>
+<div class="ttc" id="aclassMapGenDungen_html_ad59dd58bfad874a2042b41a3d09588b0"><div class="ttname"><a href="classMapGenDungen.html#ad59dd58bfad874a2042b41a3d09588b0">MapGenDungen.Instance</a></div><div class="ttdeci">static MapGenDungen Instance</div><div class="ttdef"><b>Definition:</b> <a href="MapGenDungen_8cs_source.html#l00009">MapGenDungen.cs:10</a></div></div>
+<div class="ttc" id="aclassMapGenRegion_html"><div class="ttname"><a href="classMapGenRegion.html">MapGenRegion</a></div><div class="ttdef"><b>Definition:</b> <a href="MapGenRegion_8cs_source.html#l00005">MapGenRegion.cs:6</a></div></div>
+<div class="ttc" id="aclassMapGenRegion_html_ad008731809459f3b74a3959984cfc28a"><div class="ttname"><a href="classMapGenRegion.html#ad008731809459f3b74a3959984cfc28a">MapGenRegion.Instance</a></div><div class="ttdeci">static MapGenRegion Instance</div><div class="ttdef"><b>Definition:</b> <a href="MapGenRegion_8cs_source.html#l00007">MapGenRegion.cs:8</a></div></div>
+<div class="ttc" id="aclassMapGenVariation_html"><div class="ttname"><a href="classMapGenVariation.html">MapGenVariation</a></div><div class="ttdef"><b>Definition:</b> <a href="MapGenVariation_8cs_source.html#l00005">MapGenVariation.cs:6</a></div></div>
+<div class="ttc" id="aclassMapGen_html"><div class="ttname"><a href="classMapGen.html">MapGen</a></div><div class="ttdef"><b>Definition:</b> <a href="MapGen_8cs_source.html#l00006">MapGen.cs:7</a></div></div>
+<div class="ttc" id="aclassMapGen_html_a8fe25944a432b3ab02859c1a7e53ac84"><div class="ttname"><a href="classMapGen.html#a8fe25944a432b3ab02859c1a7e53ac84">MapGen.Instance</a></div><div class="ttdeci">static MapGen Instance</div><div class="ttdef"><b>Definition:</b> <a href="MapGen_8cs_source.html#l00008">MapGen.cs:9</a></div></div>
+<div class="ttc" id="aclassMapGen_html_ad89db27b868a05827a5016f8d8d31c5f"><div class="ttname"><a href="classMapGen.html#ad89db27b868a05827a5016f8d8d31c5f">MapGen.Populate</a></div><div class="ttdeci">void Populate(Map _map)</div><div class="ttdef"><b>Definition:</b> <a href="MapGen_8cs_source.html#l00588">MapGen.cs:588</a></div></div>
+<div class="ttc" id="aclassMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00013">Map.cs:14</a></div></div>
+<div class="ttc" id="aclassMap_html_a4bb0a0e4ecbd6cd6939a2153dd6adf95"><div class="ttname"><a href="classMap.html#a4bb0a0e4ecbd6cd6939a2153dd6adf95">Map.SetZone</a></div><div class="ttdeci">void SetZone(Zone _zone)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00135">Map.cs:135</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html"><div class="ttname"><a href="classZoneBlueprint.html">ZoneBlueprint</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00004">ZoneBlueprint.cs:5</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a07924fae194eda4e1e5676605547eef1"><div class="ttname"><a href="classZoneBlueprint.html#a07924fae194eda4e1e5676605547eef1">ZoneBlueprint.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00069">ZoneBlueprint.cs:69</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a0fce92a63ff6b9da8da955beead72cbe"><div class="ttname"><a href="classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe">ZoneBlueprint.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00067">ZoneBlueprint.cs:67</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a5071f0cd6b4337a5993bf1ab222d352b"><div class="ttname"><a href="classZoneBlueprint.html#a5071f0cd6b4337a5993bf1ab222d352b">ZoneBlueprint.zoneProfile</a></div><div class="ttdeci">ZoneProfile zoneProfile</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00071">ZoneBlueprint.cs:71</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_ac30093ee25d155cb9c7edb54cc23389c"><div class="ttname"><a href="classZoneBlueprint.html#ac30093ee25d155cb9c7edb54cc23389c">ZoneBlueprint.debugCount</a></div><div class="ttdeci">static int debugCount</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00083">ZoneBlueprint.cs:83</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_ac3dc8d5b6a318868945cc4f96b699e59"><div class="ttname"><a href="classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59">ZoneBlueprint.genSetting</a></div><div class="ttdeci">ZoneBlueprint.MapGenSetting genSetting</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00077">ZoneBlueprint.cs:77</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_a85d810f30ee61936507e1cefad7d777c"><div class="ttname"><a href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">ZoneProfile.seeds</a></div><div class="ttdeci">ZoneProfile.Seeds seeds</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00043">ZoneProfile.cs:43</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_ac3588449ce8bd6d2b57b747fba9604f2"><div class="ttname"><a href="classZoneProfile.html#ac3588449ce8bd6d2b57b747fba9604f2">ZoneProfile.variation</a></div><div class="ttdeci">MapGenVariation variation</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00039">ZoneProfile.cs:39</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_acc95029310654847c926795775d609d8"><div class="ttname"><a href="classZoneProfile.html#acc95029310654847c926795775d609d8">ZoneProfile.height</a></div><div class="ttdeci">MapHeight height</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00041">ZoneProfile.cs:41</a></div></div>
+<div class="ttc" id="aclassZone_html_a227d3d119721c0d24783a1b66c762401"><div class="ttname"><a href="classZone.html#a227d3d119721c0d24783a1b66c762401">Zone.GetProfile</a></div><div class="ttdeci">ZoneProfile GetProfile()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02534">Zone.cs:2534</a></div></div>
+<div class="ttc" id="aclassZone_html_a39e8c77c3d95c5aefb6d08aaea9731ae"><div class="ttname"><a href="classZone.html#a39e8c77c3d95c5aefb6d08aaea9731ae">Zone.IDGenerator</a></div><div class="ttdeci">virtual string IDGenerator</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00096">Zone.cs:97</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneBlueprint_8cs_source.html#l00083">debugCount</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00077">genSetting</a>, <a class="el" href="Zone_8cs_source.html#l02534">Zone.GetProfile()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00041">ZoneProfile.height</a>, <a class="el" href="Zone_8cs_source.html#l00097">Zone.IDGenerator</a>, <a class="el" href="MapGen_8cs_source.html#l00009">MapGen.Instance</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00010">MapGenDungen.Instance</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00008">MapGenRegion.Instance</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00067">map</a>, <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00043">ZoneProfile.seeds</a>, <a class="el" href="Map_8cs_source.html#l00135">Map.SetZone()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00039">ZoneProfile.variation</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00069">zone</a>, and <a class="el" href="ZoneBlueprint_8cs_source.html#l00071">zoneProfile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02586">Zone.Generate()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00011">ZoneProfile.Generate()</a>.</p>
 
 </div>
 </div>
@@ -290,6 +383,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGameBlueprint.html#afae2d34c810b2af91ae9d529ec68e5c2">GameBlueprint</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00023">23</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ZoneBlueprint_8cs_source.html#l00018">Create()</a>.</p>
 
 </div>
 </div>
@@ -307,6 +404,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00073">73</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEmbark_8cs_source.html#l00203">LayerEmbark.GetAlias()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00160">LayerEmbark.RefreshMembers()</a>, <a class="el" href="GameBlueprint_8cs_source.html#l00010">GameBlueprint.RerollChara()</a>, and <a class="el" href="LayerEmbark_8cs_source.html#l00190">LayerEmbark.RerollPC()</a>.</p>
 
 </div>
 </div>
@@ -348,6 +447,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00083">83</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">GenerateMap()</a>.</p>
+
 </div>
 </div>
 <a id="ac3dc8d5b6a318868945cc4f96b699e59" name="ac3dc8d5b6a318868945cc4f96b699e59"></a>
@@ -363,6 +464,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00077">77</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">GenerateMap()</a>, and <a class="el" href="UIMapPreview_8cs_source.html#l00017">UIMapPreview.GenerateMap()</a>.</p>
 
 </div>
 </div>
@@ -412,6 +515,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00067">67</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02586">Zone.Generate()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">GenerateMap()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00024">LayerEmbark.OnAfterAddLayer()</a>, and <a class="el" href="LayerEmbark_8cs_source.html#l00152">LayerEmbark.OnClickPreview()</a>.</p>
+
 </div>
 </div>
 <a id="ad4c97cebcbbd83385da71e25455e8cc3" name="ad4c97cebcbbd83385da71e25455e8cc3"></a>
@@ -427,6 +532,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00081">81</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02534">Zone.GetProfile()</a>, <a class="el" href="MapGen_8cs_source.html#l00341">MapGen.MakeNeighbor()</a>, and <a class="el" href="MapGen_8cs_source.html#l00358">MapGen.MakeNeighbor_old()</a>.</p>
 
 </div>
 </div>
@@ -460,6 +567,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00069">69</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, and <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">GenerateMap()</a>.</p>
+
 </div>
 </div>
 <a id="a5071f0cd6b4337a5993bf1ab222d352b" name="a5071f0cd6b4337a5993bf1ab222d352b"></a>
@@ -475,6 +584,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00071">71</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">GenerateMap()</a>, <a class="el" href="UIMapPreview_8cs_source.html#l00017">UIMapPreview.GenerateMap()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
 
 </div>
 </div>
@@ -500,6 +611,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneBlueprint_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   11</span>            {</div>
+<div class="line"><span class="lineno">   12</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   13</span>            }</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[1, 1];</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassZoneBlueprint_html_ad4c97cebcbbd83385da71e25455e8cc3"><div class="ttname"><a href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">ZoneBlueprint.surrounding</a></div><div class="ttdeci">EloMap.TileInfo[,] surrounding</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00081">ZoneBlueprint.cs:81</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00370">MapGen.MakeRoad()</a>.</p>
 
 </div>
 </div>
@@ -507,9 +631,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="ZoneBlueprint_8cs_source.html">ZoneBlueprint.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classZoneBlueprint.html">ZoneBlueprint</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLiquidProfile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -150,6 +170,29 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00017">17</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classLiquidProfile.html">LiquidProfile</a>.&lt;&gt;c__DisplayClass6_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">   20</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   21</span>        CS$&lt;&gt;8__locals1.previewColor = previewColor;</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a> tileMap = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">screenElin</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>;</div>
+<div class="line"><span class="lineno">   23</span>        this.&lt;<a class="code hl_function" href="classLiquidProfile.html#a4fc4f849ac13be5eea48a151749b0e29">Apply</a>&gt;<a class="code hl_function" href="classLiquidProfile.html#a152c671e64bc36cb40b6bd9c39cfb3e0">g__Set</a>|6_0(tileMap.<a class="code hl_variable" href="classBaseTileMap.html#ab6d341a4f6b54e73e76ac106192a4447">passLiquid</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   24</span>        this.&lt;<a class="code hl_function" href="classLiquidProfile.html#a4fc4f849ac13be5eea48a151749b0e29">Apply</a>&gt;<a class="code hl_function" href="classLiquidProfile.html#a152c671e64bc36cb40b6bd9c39cfb3e0">g__Set</a>|6_0(tileMap.<a class="code hl_variable" href="classBaseTileMap.html#a7fe8e3c2c22b687a57f1c2e58b7bc216">passFloorWater</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   25</span>        this.&lt;<a class="code hl_function" href="classLiquidProfile.html#a4fc4f849ac13be5eea48a151749b0e29">Apply</a>&gt;<a class="code hl_function" href="classLiquidProfile.html#a152c671e64bc36cb40b6bd9c39cfb3e0">g__Set</a>|6_0(tileMap.<a class="code hl_variable" href="classBaseTileMap.html#a6095d46adc233e9ebc30d800c206fcda">passAutoTileWater</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.cs:857</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00006">BaseTileMap.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a6095d46adc233e9ebc30d800c206fcda"><div class="ttname"><a href="classBaseTileMap.html#a6095d46adc233e9ebc30d800c206fcda">BaseTileMap.passAutoTileWater</a></div><div class="ttdeci">MeshPass passAutoTileWater</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03532">BaseTileMap.cs:3532</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a7fe8e3c2c22b687a57f1c2e58b7bc216"><div class="ttname"><a href="classBaseTileMap.html#a7fe8e3c2c22b687a57f1c2e58b7bc216">BaseTileMap.passFloorWater</a></div><div class="ttdeci">MeshPass passFloorWater</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03520">BaseTileMap.cs:3520</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_ab6d341a4f6b54e73e76ac106192a4447"><div class="ttname"><a href="classBaseTileMap.html#ab6d341a4f6b54e73e76ac106192a4447">BaseTileMap.passLiquid</a></div><div class="ttdeci">MeshPass passLiquid</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03490">BaseTileMap.cs:3490</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html"><div class="ttname"><a href="classLiquidProfile.html">LiquidProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00005">LiquidProfile.cs:6</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html_a152c671e64bc36cb40b6bd9c39cfb3e0"><div class="ttname"><a href="classLiquidProfile.html#a152c671e64bc36cb40b6bd9c39cfb3e0">LiquidProfile.g__Set</a></div><div class="ttdeci">void&lt; Apply &gt; g__Set(Material mat, ref LiquidProfile.&lt;&gt;c__DisplayClass6_0 A_2)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00034">LiquidProfile.cs:34</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html_a4fc4f849ac13be5eea48a151749b0e29"><div class="ttname"><a href="classLiquidProfile.html#a4fc4f849ac13be5eea48a151749b0e29">LiquidProfile.Apply</a></div><div class="ttdeci">static void Apply(string id)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00012">LiquidProfile.cs:12</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a867e46b34b801aa583aa5257121d4902"><div class="ttname"><a href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">MeshPass.mat</a></div><div class="ttdeci">Material mat</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00431">MeshPass.cs:431</a></div></div>
+<div class="ttc" id="aclassScene_html_a47f3ab81d509c86e6cd3cc438651725f"><div class="ttname"><a href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">Scene.screenElin</a></div><div class="ttdeci">GameScreen screenElin</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01061">Scene.cs:1061</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LiquidProfile_8cs_source.html#l00012">Apply()</a>, <a class="el" href="LiquidProfile_8cs_source.html#l00034">g__Set()</a>, <a class="el" href="MeshPass_8cs_source.html#l00431">MeshPass.mat</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03532">BaseTileMap.passAutoTileWater</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03520">BaseTileMap.passFloorWater</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03490">BaseTileMap.passLiquid</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l01061">Scene.screenElin</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>.</p>
 
 </div>
 </div>
@@ -178,6 +221,14 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00012">12</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <a class="code hl_class" href="classLiquidProfile.html">LiquidProfile</a>.<a class="code hl_function" href="classLiquidProfile.html#abf044226861efdc2686c943ae33c0c8e">Get</a>(<span class="keywordtype">id</span>).<a class="code hl_function" href="classLiquidProfile.html#a4fc4f849ac13be5eea48a151749b0e29">Apply</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassLiquidProfile_html_abf044226861efdc2686c943ae33c0c8e"><div class="ttname"><a href="classLiquidProfile.html#abf044226861efdc2686c943ae33c0c8e">LiquidProfile.Get</a></div><div class="ttdeci">static LiquidProfile Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00007">LiquidProfile.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LiquidProfile_8cs_source.html#l00012">Apply()</a>, and <a class="el" href="LiquidProfile_8cs_source.html#l00007">Get()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00012">Apply()</a>, <a class="el" href="Scene_8cs_source.html#l00684">Scene.ApplyZoneConfig()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00080">WidgetSceneCustomizer.ShowPicker()</a>.</p>
 
 </div>
 </div>
@@ -205,6 +256,14 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00028">28</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        this.modColor = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a813cde5a1e6209ab7cf0f6ae58bee672">colorLiquid</a>.Get();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a813cde5a1e6209ab7cf0f6ae58bee672"><div class="ttname"><a href="classMapConfig.html#a813cde5a1e6209ab7cf0f6ae58bee672">MapConfig.colorLiquid</a></div><div class="ttdeci">SerializableColor colorLiquid</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00073">MapConfig.cs:73</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="MapConfig_8cs_source.html#l00073">MapConfig.colorLiquid</a>, and <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>.</p>
 
 </div>
 </div>
@@ -243,6 +302,33 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00034">34</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        mat.SetFloat(<span class="stringliteral">&quot;_Transparency&quot;</span>, this.<a class="code hl_variable" href="classLiquidProfile.html#af607848beb2f778cc517440d5c5f8723">transparency</a>);</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">string</span> name = <span class="stringliteral">&quot;_ModColor&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>? previewColor = A_2.previewColor;</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> value;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (previewColor == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            SerializableColor colorLiquid = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a813cde5a1e6209ab7cf0f6ae58bee672">colorLiquid</a>;</div>
+<div class="line"><span class="lineno">   43</span>            value = ((colorLiquid != <span class="keyword">null</span>) ? colorLiquid.Get() : this.<a class="code hl_variable" href="classLiquidProfile.html#a046491f211b4d287fac974a802276f2f">modColor</a>);</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            value = previewColor.GetValueOrDefault();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        mat.SetColor(name, value);</div>
+<div class="line"><span class="lineno">   50</span>        mat.SetVector(<span class="stringliteral">&quot;_SurfaceAnime&quot;</span>, this.<a class="code hl_variable" href="classLiquidProfile.html#ac36c3fc586560466d6c48ee0e1fefeac">surfaceAnime</a>);</div>
+<div class="line"><span class="lineno">   51</span>        mat.SetTexture(<span class="stringliteral">&quot;_SurfaceTex&quot;</span>, this.<a class="code hl_variable" href="classLiquidProfile.html#a100f326fa61bdecb43d83aceae9b363d">surface</a>);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassLiquidProfile_html_a046491f211b4d287fac974a802276f2f"><div class="ttname"><a href="classLiquidProfile.html#a046491f211b4d287fac974a802276f2f">LiquidProfile.modColor</a></div><div class="ttdeci">Color modColor</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00054">LiquidProfile.cs:54</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html_a100f326fa61bdecb43d83aceae9b363d"><div class="ttname"><a href="classLiquidProfile.html#a100f326fa61bdecb43d83aceae9b363d">LiquidProfile.surface</a></div><div class="ttdeci">Texture2D surface</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00058">LiquidProfile.cs:58</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html_ac36c3fc586560466d6c48ee0e1fefeac"><div class="ttname"><a href="classLiquidProfile.html#ac36c3fc586560466d6c48ee0e1fefeac">LiquidProfile.surfaceAnime</a></div><div class="ttdeci">Vector4 surfaceAnime</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00060">LiquidProfile.cs:60</a></div></div>
+<div class="ttc" id="aclassLiquidProfile_html_af607848beb2f778cc517440d5c5f8723"><div class="ttname"><a href="classLiquidProfile.html#af607848beb2f778cc517440d5c5f8723">LiquidProfile.transparency</a></div><div class="ttdeci">float transparency</div><div class="ttdef"><b>Definition:</b> <a href="LiquidProfile_8cs_source.html#l00056">LiquidProfile.cs:56</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="MapConfig_8cs_source.html#l00073">MapConfig.colorLiquid</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="LiquidProfile_8cs_source.html#l00054">modColor</a>, <a class="el" href="LiquidProfile_8cs_source.html#l00058">surface</a>, <a class="el" href="LiquidProfile_8cs_source.html#l00060">surfaceAnime</a>, and <a class="el" href="LiquidProfile_8cs_source.html#l00056">transparency</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00017">Apply()</a>.</p>
 
 </div>
 </div>
@@ -271,6 +357,11 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00007">7</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> Resources.Load&lt;<a class="code hl_class" href="classLiquidProfile.html">LiquidProfile</a>&gt;(<span class="stringliteral">&quot;Scene/Profile/Liquid/&quot;</span> + id);</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00012">Apply()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00102">WidgetSceneCustomizer.RefreshColor()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00080">WidgetSceneCustomizer.ShowPicker()</a>.</p>
 
 </div>
 </div>
@@ -289,6 +380,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00054">54</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00034">g__Set()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00102">WidgetSceneCustomizer.RefreshColor()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00080">WidgetSceneCustomizer.ShowPicker()</a>.</p>
+
 </div>
 </div>
 <a id="a100f326fa61bdecb43d83aceae9b363d" name="a100f326fa61bdecb43d83aceae9b363d"></a>
@@ -304,6 +397,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00058">58</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00034">g__Set()</a>.</p>
 
 </div>
 </div>
@@ -321,6 +416,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00060">60</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00034">g__Set()</a>.</p>
+
 </div>
 </div>
 <a id="af607848beb2f778cc517440d5c5f8723" name="af607848beb2f778cc517440d5c5f8723"></a>
@@ -337,15 +434,21 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LiquidProfile_8cs_source.html#l00056">56</a> of file <a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00034">g__Set()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LiquidProfile_8cs_source.html">LiquidProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLiquidProfile.html">LiquidProfile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

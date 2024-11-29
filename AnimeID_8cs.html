@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('AnimeID_8cs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a>  </div>
@@ -157,13 +173,67 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="AnimeID_8cs_source.html#l00003">3</a> of file <a class="el" href="AnimeID_8cs_source.html">AnimeID.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da0cbc6611f5540bd0809a388dc95a615b">Test</a>,</div>
+<div class="line"><span class="lineno">    7</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da101f693f72287a2819a364f64ca1c0ed">Jump</a>,</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da05724a8ebfca9551585fcbea223967ee">JumpSmall</a>,</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daa45e1d32f46ddbe98028bcb9df1387d8">JumpDown</a>,</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>,</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da84c1f72005ef1d65871a159e459e82b2">Shiver</a>,</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dabd26b44bdadb13511edfa8e95455a43f">Eat</a>,</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da720b88f90caa40caf0425beb49ceeb1c">HitObj</a>,</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac74c1f42f141c011ca6bd8b1114fc3d0">Build</a>,</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac64c84c88b991458b38eeaaa0bbd44cb">Quake</a>,</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafb34369d75850f95670125cb259dbd38">Fishing</a>,</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da11c3eff89f16757c6f9bf785a488d544">Dig</a>,</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da34b1a9c383a8cb1e1e02b9e76dab79ac">Lvup</a>,</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da58fa788345ab5ac21c2cef38907d4580">Fall</a>,</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da7b9cf007806ed854cd12ab800c8a982b">Place</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6794e7b16f55b952b04e118ec3a7cc78">Loot</a>,</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daade0d77472db3456ad417565c9f1680f">FallSky</a>,</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da0dd0876ebb0b78dcaebb35411b7d02e3">Attack_Place</a>,</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da954601796c16fa224b98f54b380855c7">Rush</a>,</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6ca2900b1deccf76e749097e0b5a2330">Hop</a>,</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>,</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6f13850d3346c949c10c7bae79479ebd">Truck</a>,</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da3ca5198311a43109b20147e063a288b0">PlayMusic</a></div>
+<div class="line"><span class="lineno">   29</span>}</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da05724a8ebfca9551585fcbea223967ee"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da05724a8ebfca9551585fcbea223967ee">AnimeID.JumpSmall</a></div><div class="ttdeci">@ JumpSmall</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da0cbc6611f5540bd0809a388dc95a615b"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da0cbc6611f5540bd0809a388dc95a615b">AnimeID.Test</a></div><div class="ttdeci">@ Test</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da0dd0876ebb0b78dcaebb35411b7d02e3"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da0dd0876ebb0b78dcaebb35411b7d02e3">AnimeID.Attack_Place</a></div><div class="ttdeci">@ Attack_Place</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da101f693f72287a2819a364f64ca1c0ed"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da101f693f72287a2819a364f64ca1c0ed">AnimeID.Jump</a></div><div class="ttdeci">@ Jump</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da11c3eff89f16757c6f9bf785a488d544"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da11c3eff89f16757c6f9bf785a488d544">AnimeID.Dig</a></div><div class="ttdeci">@ Dig</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da34b1a9c383a8cb1e1e02b9e76dab79ac"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da34b1a9c383a8cb1e1e02b9e76dab79ac">AnimeID.Lvup</a></div><div class="ttdeci">@ Lvup</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da3ca5198311a43109b20147e063a288b0"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da3ca5198311a43109b20147e063a288b0">AnimeID.PlayMusic</a></div><div class="ttdeci">@ PlayMusic</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da58fa788345ab5ac21c2cef38907d4580"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da58fa788345ab5ac21c2cef38907d4580">AnimeID.Fall</a></div><div class="ttdeci">@ Fall</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da6794e7b16f55b952b04e118ec3a7cc78"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6794e7b16f55b952b04e118ec3a7cc78">AnimeID.Loot</a></div><div class="ttdeci">@ Loot</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6adf97f83acf6453d4a6a4b1070f3754">AnimeID.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da6ca2900b1deccf76e749097e0b5a2330"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6ca2900b1deccf76e749097e0b5a2330">AnimeID.Hop</a></div><div class="ttdeci">@ Hop</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da6f13850d3346c949c10c7bae79479ebd"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6f13850d3346c949c10c7bae79479ebd">AnimeID.Truck</a></div><div class="ttdeci">@ Truck</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da720b88f90caa40caf0425beb49ceeb1c"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da720b88f90caa40caf0425beb49ceeb1c">AnimeID.HitObj</a></div><div class="ttdeci">@ HitObj</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da7b9cf007806ed854cd12ab800c8a982b"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da7b9cf007806ed854cd12ab800c8a982b">AnimeID.Place</a></div><div class="ttdeci">@ Place</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da84c1f72005ef1d65871a159e459e82b2"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da84c1f72005ef1d65871a159e459e82b2">AnimeID.Shiver</a></div><div class="ttdeci">@ Shiver</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2da954601796c16fa224b98f54b380855c7"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da954601796c16fa224b98f54b380855c7">AnimeID.Rush</a></div><div class="ttdeci">@ Rush</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2daa45e1d32f46ddbe98028bcb9df1387d8"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daa45e1d32f46ddbe98028bcb9df1387d8">AnimeID.JumpDown</a></div><div class="ttdeci">@ JumpDown</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2daade0d77472db3456ad417565c9f1680f"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daade0d77472db3456ad417565c9f1680f">AnimeID.FallSky</a></div><div class="ttdeci">@ FallSky</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dabd26b44bdadb13511edfa8e95455a43f"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dabd26b44bdadb13511edfa8e95455a43f">AnimeID.Eat</a></div><div class="ttdeci">@ Eat</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dac64c84c88b991458b38eeaaa0bbd44cb"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac64c84c88b991458b38eeaaa0bbd44cb">AnimeID.Quake</a></div><div class="ttdeci">@ Quake</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dac74c1f42f141c011ca6bd8b1114fc3d0"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac74c1f42f141c011ca6bd8b1114fc3d0">AnimeID.Build</a></div><div class="ttdeci">@ Build</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">AnimeID.Attack</a></div><div class="ttdeci">@ Attack</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dafb34369d75850f95670125cb259dbd38"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafb34369d75850f95670125cb259dbd38">AnimeID.Fishing</a></div><div class="ttdeci">@ Fishing</div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">AnimeID.Ride</a></div><div class="ttdeci">@ Ride</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4ebf4838943f22de71ca1372348cb95b.html">Elin</a></li><li class="navelem"><a class="el" href="AnimeID_8cs.html">AnimeID.cs</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

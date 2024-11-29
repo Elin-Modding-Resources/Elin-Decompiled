@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBiomeProfile_1_1ClusterObj.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1ClusterObj.html">ClusterObj</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -152,6 +168,50 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBiomeProfile_1_1Cluster.html#aaf7a2358af9eb319c1cd0c9b7a89d15b">BiomeProfile.Cluster</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00758">758</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  759</span>        {</div>
+<div class="line"><span class="lineno">  760</span>            <a class="code hl_class" href="classBiomeProfile_1_1Cluster_1_1Item.html">BiomeProfile.Cluster.Item</a> item = this.<a class="code hl_variable" href="classBiomeProfile_1_1ClusterObj.html#a0104eefbc9f4e1bd46e798abe149f8a6">items</a>.RandomItem&lt;<a class="code hl_class" href="classBiomeProfile.html">BiomeProfile</a>.<a class="code hl_class" href="classBiomeProfile_1_1Cluster.html">Cluster</a>.<a class="code hl_class" href="classBiomeProfile_1_1Cluster_1_1Item.html">Item</a>&gt;();</div>
+<div class="line"><span class="lineno">  761</span>            <span class="keywordflow">if</span> (Rand.Range(0f, 1f) &gt; item.<a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a6813b339d9b520c06f6fbc562e12aed4">chance</a>)</div>
+<div class="line"><span class="lineno">  762</span>            {</div>
+<div class="line"><span class="lineno">  763</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  764</span>            }</div>
+<div class="line"><span class="lineno">  765</span>            <a class="code hl_class" href="classCell.html">Cell</a> cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  766</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  767</span>            {</div>
+<div class="line"><span class="lineno">  768</span>                <span class="keywordflow">if</span> (!item.<a class="code hl_property" href="classBiomeProfile_1_1Cluster_1_1Item.html#ad21b328c67044f3970af9930b5c2d1c6">IsSpawnOnBlock</a>)</div>
+<div class="line"><span class="lineno">  769</span>                {</div>
+<div class="line"><span class="lineno">  770</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  771</span>                }</div>
+<div class="line"><span class="lineno">  772</span>            }</div>
+<div class="line"><span class="lineno">  773</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classBiomeProfile_1_1Cluster_1_1Item.html#ad21b328c67044f3970af9930b5c2d1c6">IsSpawnOnBlock</a>)</div>
+<div class="line"><span class="lineno">  774</span>            {</div>
+<div class="line"><span class="lineno">  775</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  776</span>            }</div>
+<div class="line"><span class="lineno">  777</span>            p.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>(item.<a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1Item.html#ae6ae5209d1df385470280818ac775f1a">idObj</a>, 1, 0);</div>
+<div class="line"><span class="lineno">  778</span>            cell.objDir = <a class="code hl_class" href="classEScriptable.html">EScriptable</a>.<a class="code hl_function" href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">rnd</a>(8);</div>
+<div class="line"><span class="lineno">  779</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.HasGrowth &amp;&amp; cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id != 103)</div>
+<div class="line"><span class="lineno">  780</span>            {</div>
+<div class="line"><span class="lineno">  781</span>                cell.<a class="code hl_property" href="classCell.html#a868961183d859a6abe2e6cd41089167f">growth</a>.<a class="code hl_function" href="classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f">SetRandomStage</a>();</div>
+<div class="line"><span class="lineno">  782</span>            }</div>
+<div class="line"><span class="lineno">  783</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  784</span>        }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1ClusterObj_html_a0104eefbc9f4e1bd46e798abe149f8a6"><div class="ttname"><a href="classBiomeProfile_1_1ClusterObj.html#a0104eefbc9f4e1bd46e798abe149f8a6">BiomeProfile.ClusterObj.items</a></div><div class="ttdeci">List&lt; BiomeProfile.Cluster.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00786">BiomeProfile.cs:786</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1BaseItem_html_a6813b339d9b520c06f6fbc562e12aed4"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a6813b339d9b520c06f6fbc562e12aed4">BiomeProfile.Cluster.BaseItem.chance</a></div><div class="ttdeci">float chance</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00699">BiomeProfile.cs:699</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1Item_html"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1Item.html">BiomeProfile.Cluster.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00703">BiomeProfile.cs:704</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1Item_html_ad21b328c67044f3970af9930b5c2d1c6"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1Item.html#ad21b328c67044f3970af9930b5c2d1c6">BiomeProfile.Cluster.Item.IsSpawnOnBlock</a></div><div class="ttdeci">override bool IsSpawnOnBlock</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00705">BiomeProfile.cs:706</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1Item_html_ae6ae5209d1df385470280818ac775f1a"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1Item.html#ae6ae5209d1df385470280818ac775f1a">BiomeProfile.Cluster.Item.idObj</a></div><div class="ttdeci">int idObj</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00733">BiomeProfile.cs:733</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_html"><div class="ttname"><a href="classBiomeProfile_1_1Cluster.html">BiomeProfile.Cluster</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00660">BiomeProfile.cs:661</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a1c9c4cee0dcd497d8af3378d29214943"><div class="ttname"><a href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">Cell.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00592">Cell.cs:593</a></div></div>
+<div class="ttc" id="aclassCell_html_a868961183d859a6abe2e6cd41089167f"><div class="ttname"><a href="classCell.html#a868961183d859a6abe2e6cd41089167f">Cell.growth</a></div><div class="ttdeci">GrowSystem growth</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00167">Cell.cs:168</a></div></div>
+<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01182">Cell.cs:1183</a></div></div>
+<div class="ttc" id="aclassEScriptable_html"><div class="ttname"><a href="classEScriptable.html">EScriptable</a></div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00004">EScriptable.cs:5</a></div></div>
+<div class="ttc" id="aclassEScriptable_html_a7e82765e268f34ed86f8407036038ac2"><div class="ttname"><a href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">EScriptable.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00006">EScriptable.cs:6</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_ab1b371c9b7bcec41814c9b256028e20f"><div class="ttname"><a href="classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f">GrowSystem.SetRandomStage</a></div><div class="ttdeci">void SetRandomStage()</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00296">GrowSystem.cs:296</a></div></div>
+<div class="ttc" id="aclassPoint_html_a1b776a5c157ff23d2c418ba134448d74"><div class="ttname"><a href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">Point.SetObj</a></div><div class="ttdeci">void SetObj(int id=0, int value=1, int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01003">Point.cs:1003</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00699">BiomeProfile.Cluster.BaseItem.chance</a>, <a class="el" href="Cell_8cs_source.html#l00168">Cell.growth</a>, <a class="el" href="Cell_8cs_source.html#l00593">Cell.HasBlock</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00733">BiomeProfile.Cluster.Item.idObj</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00706">BiomeProfile.Cluster.Item.IsSpawnOnBlock</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00786">BiomeProfile.ClusterObj.items</a>, <a class="el" href="EScriptable_8cs_source.html#l00006">EScriptable.rnd()</a>, <a class="el" href="Point_8cs_source.html#l01003">Point.SetObj()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00296">GrowSystem.SetRandomStage()</a>, and <a class="el" href="Cell_8cs_source.html#l01183">Cell.sourceObj</a>.</p>
 
 </div>
 </div>
@@ -170,15 +230,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00786">786</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00758">BiomeProfile.ClusterObj.TryCreate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1ClusterObj.html">ClusterObj</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

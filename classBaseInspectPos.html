@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBaseInspectPos.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -165,7 +185,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f">IInspect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00006">6</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a44ec963eef18b2b9e6aa84edcba38ed1" name="a44ec963eef18b2b9e6aa84edcba38ed1"></a>
@@ -219,7 +241,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classBlockInfo.html#a17ea6d132b6b4af6e714b5fa50dca519">BlockInfo</a>, and <a class="el" href="classObjInfo.html#a870c0bbf15b0d56fc3824ce73e90267c">ObjInfo</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00042">42</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -236,6 +260,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00046">46</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BlockInfo_8cs_source.html#l00029">BlockInfo._CanInspect()</a>, <a class="el" href="ObjInfo_8cs_source.html#l00033">ObjInfo._CanInspect()</a>, <a class="el" href="BlockInfo_8cs_source.html#l00005">BlockInfo.GetTemp()</a>, <a class="el" href="ObjInfo_8cs_source.html#l00005">ObjInfo.GetTemp()</a>, <a class="el" href="BlockInfo_8cs_source.html#l00011">BlockInfo.GetTempList()</a>, <a class="el" href="ObjInfo_8cs_source.html#l00015">ObjInfo.GetTempList()</a>, <a class="el" href="InspectGroupBlock_8cs_source.html#l00013">InspectGroupBlock.OnSetActions()</a>, <a class="el" href="InspectGroupObj_8cs_source.html#l00013">InspectGroupObj.OnSetActions()</a>, and <a class="el" href="BlockInfo_8cs_source.html#l00050">BlockInfo.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +289,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f">IInspect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00026">26</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classBaseInspectPos.html#a5667f68966910a2840ecb6ec2ebd8565">pos</a>.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassBaseInspectPos_html_a5667f68966910a2840ecb6ec2ebd8565"><div class="ttname"><a href="classBaseInspectPos.html#a5667f68966910a2840ecb6ec2ebd8565">BaseInspectPos.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="BaseInspectPos_8cs_source.html#l00046">BaseInspectPos.cs:46</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf88acccb063c764604ddcd520fe332d"><div class="ttname"><a href="classPoint.html#adf88acccb063c764604ddcd520fe332d">Point.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00265">Point.cs:266</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8dad48efa1633b30abaf5012f8bd11e8" name="a8dad48efa1633b30abaf5012f8bd11e8"></a>
@@ -289,7 +323,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIInspect.html#aae89fd529e6603011da5cc9a070fc9e3">IInspect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00034">34</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;BaseInspectPos&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad6156388185d0e309661c03073469df7" name="ad6156388185d0e309661c03073469df7"></a>
@@ -315,7 +355,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e">IInspect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00010">10</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classBaseInspectPos.html#a5667f68966910a2840ecb6ec2ebd8565">pos</a>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa647e6ef1b7e15dc7b3b55a22cb152d4" name="aa647e6ef1b7e15dc7b3b55a22cb152d4"></a>
@@ -341,16 +387,27 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIInspect.html#ac1ff8db98a0e48a20ab4b46bdd6e1be3">IInspect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseInspectPos_8cs_source.html#l00018">18</a> of file <a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> *this.<a class="code hl_variable" href="classBaseInspectPos.html#a5667f68966910a2840ecb6ec2ebd8565">pos</a>.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BaseInspectPos_8cs_source.html">BaseInspectPos.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBaseInspectPos.html">BaseInspectPos</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

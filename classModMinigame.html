@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classModMinigame.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -189,6 +209,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ModMinigame_8cs_source.html#l00022">22</a> of file <a class="el" href="ModMinigame_8cs_source.html">ModMinigame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        UnityEngine.Object.Destroy(this.<a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>);</div>
+<div class="line"><span class="lineno">   25</span>        this.game = <span class="keywordflow">default</span>(T);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a>)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a>.Unload(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassMiniGame_html_a029cc7803f3adfd89b4e736136cbda00"><div class="ttname"><a href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">MiniGame.go</a></div><div class="ttdeci">GameObject go</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00151">MiniGame.cs:151</a></div></div>
+<div class="ttc" id="aclassMiniGame_html_a5984df8380fd9f404bdd311f798aefda"><div class="ttname"><a href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">MiniGame.asset</a></div><div class="ttdeci">AssetBundle asset</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00153">MiniGame.cs:153</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00153">MiniGame.asset</a>, and <a class="el" href="MiniGame_8cs_source.html#l00151">MiniGame.go</a>.</p>
 
 </div>
 </div>
@@ -216,6 +248,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ModMinigame_8cs_source.html#l00006">6</a> of file <a class="el" href="ModMinigame_8cs_source.html">ModMinigame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        Debug.Log(this.<a class="code hl_variable" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a>);</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            this.asset = AssetBundle.LoadFromFile(this.<a class="code hl_variable" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a> + <span class="stringliteral">&quot;/Asset_&quot;</span> + this.<span class="keywordtype">id</span> + <span class="stringliteral">&quot;/asset&quot;</span>);</div>
+<div class="line"><span class="lineno">   12</span>            UnityEngine.Object @<span class="keywordtype">object</span> = this.<a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a>.LoadAsset(this.<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   13</span>            Debug.Log(@<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   14</span>            this.go = (UnityEngine.Object.Instantiate(@<span class="keywordtype">object</span>) as GameObject);</div>
+<div class="line"><span class="lineno">   15</span>            Debug.Log(this.<a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>);</div>
+<div class="line"><span class="lineno">   16</span>            this.game = this.<a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>.GetComponentInChildren&lt;T&gt;();</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>        base.SetAudioMixer(this.<a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>);</div>
+<div class="line"><span class="lineno">   19</span>        Debug.Log(this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>);</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassMiniGame_html_a131b3e551cd419f283fd224cdd266401"><div class="ttname"><a href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">MiniGame.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00155">MiniGame.cs:155</a></div></div>
+<div class="ttc" id="aclassModMinigame_html_a0c2512181f347ccc48e966d285225aac"><div class="ttname"><a href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">ModMinigame.game</a></div><div class="ttdeci">T game</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00032">ModMinigame.cs:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00153">MiniGame.asset</a>, <a class="el" href="ModMinigame_8cs_source.html#l00032">ModMinigame&lt; T &gt;.game</a>, <a class="el" href="MiniGame_8cs_source.html#l00151">MiniGame.go</a>, and <a class="el" href="MiniGame_8cs_source.html#l00155">MiniGame.path</a>.</p>
 
 </div>
 </div>
@@ -234,15 +284,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModMinigame_8cs_source.html#l00032">32</a> of file <a class="el" href="ModMinigame_8cs_source.html">ModMinigame.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ModMinigame_8cs_source.html#l00006">ModMinigame&lt; T &gt;.Load()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ModMinigame_8cs_source.html">ModMinigame.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classModMinigame.html">ModMinigame</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

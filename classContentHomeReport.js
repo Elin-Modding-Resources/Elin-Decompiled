@@ -1,0 +1,25 @@
+var classContentHomeReport =
+[
+    [ "GetTextHappiness", "classContentHomeReport.html#ae2305e51e7dd5c20a3aa309b37503cb6", null ],
+    [ "OnSwitchContent", "classContentHomeReport.html#a0bc9a2993f726480a6bfed8e8591a15c", null ],
+    [ "RefreshInfo", "classContentHomeReport.html#aa59781082ed772baaea20c42a7184540", null ],
+    [ "RefreshResources", "classContentHomeReport.html#aa136c2611368365fb195d26568a849a4", null ],
+    [ "branch", "classContentHomeReport.html#a1d2ddc2262aa8afb0f932b87f8179def", null ],
+    [ "buttonHappinessLivestock", "classContentHomeReport.html#a9f730e347461ead73513524948789faa", null ],
+    [ "buttonHappinessResident", "classContentHomeReport.html#aae01e5ce86c3673f5e75bcb2d1423952", null ],
+    [ "faction", "classContentHomeReport.html#a48fb618372960dd2922ae69b339151f5", null ],
+    [ "listCurrencies", "classContentHomeReport.html#a55e687beb52e67046be70f15ed994013", null ],
+    [ "listResources", "classContentHomeReport.html#a02a688d4f3977465b6790780a7572309", null ],
+    [ "textHeaderReport", "classContentHomeReport.html#aaf34f990a345febc000a5d142dcf499a", null ],
+    [ "textHearth", "classContentHomeReport.html#a758073494f26c469a9541c25c77c651d", null ],
+    [ "textInfluence", "classContentHomeReport.html#a09d1661110b6fc47a989437ecc78aef5", null ],
+    [ "textKarma", "classContentHomeReport.html#abf7e3c7eff9d7bfd6246f1c8eb5a9285", null ],
+    [ "textKnowledge", "classContentHomeReport.html#a60030b7ea3ecbe59ce46fbd8fd263f05", null ],
+    [ "textName", "classContentHomeReport.html#a4135b261f9ce1c9e092d2a3f22edcb13", null ],
+    [ "textPopu", "classContentHomeReport.html#a38be0750c6e2934aaa6c7f0c1cd57f44", null ],
+    [ "textRank", "classContentHomeReport.html#ad53851fc4109090f45e7cd6a749b228e", null ],
+    [ "textReknown", "classContentHomeReport.html#afbe54f951f75ca379e5ee1d3f67a42b8", null ],
+    [ "textWealth", "classContentHomeReport.html#a3b264b4240069ea59150f682539be5d7", null ],
+    [ "zone", "classContentHomeReport.html#a78d1825da72c8276ae2e968d8298affe", null ],
+    [ "tabResearch", "classContentHomeReport.html#a53214b2e2f77a34edb771548b6554222", null ]
+];

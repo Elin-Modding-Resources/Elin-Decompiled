@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classEmbarkActor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -208,6 +228,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00051">51</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        this.isDestroying = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span>        this.show = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   55</span>        this.ps.emission.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   56</span>        DOTween.To(() =&gt; this.<a class="code hl_variable" href="classEmbarkActor.html#a564d4ec95b4e81cce7fa919bf527cda7">tiltShift</a>.blurArea, delegate(<span class="keywordtype">float</span> x)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            this.tiltShift.blurArea = x;</div>
+<div class="line"><span class="lineno">   59</span>        }, 0f, this.<a class="code hl_variable" href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">fadeTime</a>);</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a10b21634784e43d484d3cc42b04930ab">sr2</a>.DOFade(0f, this.<a class="code hl_variable" href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">fadeTime</a> - 0.1f);</div>
+<div class="line"><span class="lineno">   61</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#aeaa09469456cbde1beedeb97a9ca2e62">sr</a>.DOFade(0f, this.<a class="code hl_variable" href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">fadeTime</a>).OnComplete(delegate</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classEmbarkActor.html#a77e7d79cebc4df3aa98f9ccfb0ab55c5">crystal</a>)</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                UnityEngine.Object.Destroy(base.gameObject);</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>        });</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassEmbarkActor_html_a10b21634784e43d484d3cc42b04930ab"><div class="ttname"><a href="classEmbarkActor.html#a10b21634784e43d484d3cc42b04930ab">EmbarkActor.sr2</a></div><div class="ttdeci">SpriteRenderer sr2</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00078">EmbarkActor.cs:78</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a564d4ec95b4e81cce7fa919bf527cda7"><div class="ttname"><a href="classEmbarkActor.html#a564d4ec95b4e81cce7fa919bf527cda7">EmbarkActor.tiltShift</a></div><div class="ttdeci">TiltShift tiltShift</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00072">EmbarkActor.cs:72</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a665f5e8fcc10ea753d2e110ee49e0d38"><div class="ttname"><a href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">EmbarkActor.fadeTime</a></div><div class="ttdeci">float fadeTime</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00088">EmbarkActor.cs:88</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a77e7d79cebc4df3aa98f9ccfb0ab55c5"><div class="ttname"><a href="classEmbarkActor.html#a77e7d79cebc4df3aa98f9ccfb0ab55c5">EmbarkActor.crystal</a></div><div class="ttdeci">bool crystal</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00094">EmbarkActor.cs:94</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_aeaa09469456cbde1beedeb97a9ca2e62"><div class="ttname"><a href="classEmbarkActor.html#aeaa09469456cbde1beedeb97a9ca2e62">EmbarkActor.sr</a></div><div class="ttdeci">SpriteRenderer sr</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00076">EmbarkActor.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EmbarkActor_8cs_source.html#l00094">crystal</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00088">fadeTime</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00076">sr</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00078">sr2</a>, and <a class="el" href="EmbarkActor_8cs_source.html#l00072">tiltShift</a>.</p>
 
 </div>
 </div>
@@ -235,6 +279,57 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00010">10</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classEmbarkActor.html#a38588fdb355d0e82508a92ded700e1e8">isDestroying</a>)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classEmbarkActor.html#a77e7d79cebc4df3aa98f9ccfb0ab55c5">crystal</a>)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            this.show = !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.IsGameStarted;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classEmbarkActor.html#ae3a729a25b35bc51bb7815c60243dd1f">show</a>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            this.<a class="code hl_variable" href="classEmbarkActor.html#aeaa09469456cbde1beedeb97a9ca2e62">sr</a>.DOFade(this.<a class="code hl_variable" href="classEmbarkActor.html#a8aae2d031048a79f2a94561b0ddd4d98">targetFade</a>, this.<a class="code hl_variable" href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">fadeTime</a>);</div>
+<div class="line"><span class="lineno">   23</span>            this.skyLevel += Core.delta * this.<a class="code hl_variable" href="classEmbarkActor.html#a801350b423cfd3dd50e63a25e89343b9">speedSky</a>;</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a">skyLevel</a> &gt; this.<a class="code hl_variable" href="classEmbarkActor.html#a8aae2d031048a79f2a94561b0ddd4d98">targetFade</a>)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                this.skyLevel = this.<a class="code hl_variable" href="classEmbarkActor.html#a8aae2d031048a79f2a94561b0ddd4d98">targetFade</a>;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classEmbarkActor.html#acd57acbd1b0fdc47630ab2c92fdb07e6">anim</a>.DOPlay();</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classEmbarkActor.html#a77e7d79cebc4df3aa98f9ccfb0ab55c5">crystal</a>)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                this.<a class="code hl_variable" href="classEmbarkActor.html#aeaa09469456cbde1beedeb97a9ca2e62">sr</a>.DOFade(0f, this.<a class="code hl_variable" href="classEmbarkActor.html#a665f5e8fcc10ea753d2e110ee49e0d38">fadeTime</a>);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            this.skyLevel -= Core.delta * this.<a class="code hl_variable" href="classEmbarkActor.html#a801350b423cfd3dd50e63a25e89343b9">speedSky</a>;</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a">skyLevel</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                this.skyLevel = 0f;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            this.<a class="code hl_variable" href="classEmbarkActor.html#acd57acbd1b0fdc47630ab2c92fdb07e6">anim</a>.DOPause();</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.material.SetFloat(<span class="stringliteral">&quot;_SkyLevel&quot;</span>, this.<a class="code hl_variable" href="classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a">skyLevel</a>);</div>
+<div class="line"><span class="lineno">   44</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.material.SetFloat(<span class="stringliteral">&quot;_ViewHeight&quot;</span>, 20f);</div>
+<div class="line"><span class="lineno">   45</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.material.SetVector(<span class="stringliteral">&quot;_ScreenPos&quot;</span>, Vector3.zero);</div>
+<div class="line"><span class="lineno">   46</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.material.SetVector(<span class="stringliteral">&quot;_Position&quot;</span>, this.<a class="code hl_variable" href="classEmbarkActor.html#a3ac4a08ebd7353eaf1f302ca035d4c6b">cam</a>.transform.position * <span class="keyword">this</span>.speed);</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.material.SetVector(<span class="stringliteral">&quot;_Offset&quot;</span>, Vector3.zero);</div>
+<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">grading</a>.SetGrading();</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a2ab3573c002bffa91624511b4c281685"><div class="ttname"><a href="classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685">EmbarkActor.grading</a></div><div class="ttdeci">ScreenGrading grading</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00074">EmbarkActor.cs:74</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a38588fdb355d0e82508a92ded700e1e8"><div class="ttname"><a href="classEmbarkActor.html#a38588fdb355d0e82508a92ded700e1e8">EmbarkActor.isDestroying</a></div><div class="ttdeci">bool isDestroying</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00096">EmbarkActor.cs:96</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a3ac4a08ebd7353eaf1f302ca035d4c6b"><div class="ttname"><a href="classEmbarkActor.html#a3ac4a08ebd7353eaf1f302ca035d4c6b">EmbarkActor.cam</a></div><div class="ttdeci">Camera cam</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00070">EmbarkActor.cs:70</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a801350b423cfd3dd50e63a25e89343b9"><div class="ttname"><a href="classEmbarkActor.html#a801350b423cfd3dd50e63a25e89343b9">EmbarkActor.speedSky</a></div><div class="ttdeci">float speedSky</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00084">EmbarkActor.cs:84</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_a8aae2d031048a79f2a94561b0ddd4d98"><div class="ttname"><a href="classEmbarkActor.html#a8aae2d031048a79f2a94561b0ddd4d98">EmbarkActor.targetFade</a></div><div class="ttdeci">float targetFade</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00090">EmbarkActor.cs:90</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_acd57acbd1b0fdc47630ab2c92fdb07e6"><div class="ttname"><a href="classEmbarkActor.html#acd57acbd1b0fdc47630ab2c92fdb07e6">EmbarkActor.anim</a></div><div class="ttdeci">DOTweenAnimation anim</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00098">EmbarkActor.cs:98</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_ae3a729a25b35bc51bb7815c60243dd1f"><div class="ttname"><a href="classEmbarkActor.html#ae3a729a25b35bc51bb7815c60243dd1f">EmbarkActor.show</a></div><div class="ttdeci">bool show</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00092">EmbarkActor.cs:92</a></div></div>
+<div class="ttc" id="aclassEmbarkActor_html_ae3c7e98a147e39fb9dcaa8cddee7cb9a"><div class="ttname"><a href="classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a">EmbarkActor.skyLevel</a></div><div class="ttdeci">float skyLevel</div><div class="ttdef"><b>Definition:</b> <a href="EmbarkActor_8cs_source.html#l00086">EmbarkActor.cs:86</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EmbarkActor_8cs_source.html#l00098">anim</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00070">cam</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00094">crystal</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00088">fadeTime</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00074">grading</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00096">isDestroying</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00092">show</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00086">skyLevel</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00084">speedSky</a>, <a class="el" href="EmbarkActor_8cs_source.html#l00076">sr</a>, and <a class="el" href="EmbarkActor_8cs_source.html#l00090">targetFade</a>.</p>
 
 </div>
 </div>
@@ -253,6 +348,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00098">98</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a3ac4a08ebd7353eaf1f302ca035d4c6b" name="a3ac4a08ebd7353eaf1f302ca035d4c6b"></a>
@@ -268,6 +365,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00070">70</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -285,6 +384,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00094">94</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00051">Hide()</a>, and <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a665f5e8fcc10ea753d2e110ee49e0d38" name="a665f5e8fcc10ea753d2e110ee49e0d38"></a>
@@ -300,6 +401,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00088">88</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00051">Hide()</a>, and <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -317,6 +420,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00074">74</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a38588fdb355d0e82508a92ded700e1e8" name="a38588fdb355d0e82508a92ded700e1e8"></a>
@@ -332,6 +437,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00096">96</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -365,6 +472,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00092">92</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
+
 </div>
 </div>
 <a id="ae3c7e98a147e39fb9dcaa8cddee7cb9a" name="ae3c7e98a147e39fb9dcaa8cddee7cb9a"></a>
@@ -380,6 +489,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00086">86</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -413,6 +524,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00084">84</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
+
 </div>
 </div>
 <a id="aeaa09469456cbde1beedeb97a9ca2e62" name="aeaa09469456cbde1beedeb97a9ca2e62"></a>
@@ -428,6 +541,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00076">76</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00051">Hide()</a>, and <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -445,6 +560,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00078">78</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00051">Hide()</a>.</p>
+
 </div>
 </div>
 <a id="a8aae2d031048a79f2a94561b0ddd4d98" name="a8aae2d031048a79f2a94561b0ddd4d98"></a>
@@ -460,6 +577,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00090">90</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00010">Update()</a>.</p>
 
 </div>
 </div>
@@ -477,15 +596,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EmbarkActor_8cs_source.html#l00072">72</a> of file <a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EmbarkActor_8cs_source.html#l00051">Hide()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="EmbarkActor_8cs_source.html">EmbarkActor.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classEmbarkActor.html">EmbarkActor</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

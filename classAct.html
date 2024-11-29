@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAct.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -512,7 +532,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00568">568</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  569</span>    {</div>
+<div class="line"><span class="lineno">  570</span>        <a class="code hl_enumvalue" href="classAct.html#a0756316fcd4405ff0d88cde345a290c1a6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  571</span>        <a class="code hl_enumvalue" href="classAct.html#a0756316fcd4405ff0d88cde345a290c1ac90a918b859bd1e56cf99af6246b128e">MP</a>,</div>
+<div class="line"><span class="lineno">  572</span>        <a class="code hl_enumvalue" href="classAct.html#a0756316fcd4405ff0d88cde345a290c1a674769e3326f8cf937af4282f2815c02">SP</a></div>
+<div class="line"><span class="lineno">  573</span>    }</div>
+<div class="ttc" id="aclassAct_html_a0756316fcd4405ff0d88cde345a290c1a674769e3326f8cf937af4282f2815c02"><div class="ttname"><a href="classAct.html#a0756316fcd4405ff0d88cde345a290c1a674769e3326f8cf937af4282f2815c02">Act.CostType.SP</a></div><div class="ttdeci">@ SP</div></div>
+<div class="ttc" id="aclassAct_html_a0756316fcd4405ff0d88cde345a290c1a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classAct.html#a0756316fcd4405ff0d88cde345a290c1a6adf97f83acf6453d4a6a4b1070f3754">Act.CostType.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassAct_html_a0756316fcd4405ff0d88cde345a290c1ac90a918b859bd1e56cf99af6246b128e"><div class="ttname"><a href="classAct.html#a0756316fcd4405ff0d88cde345a290c1ac90a918b859bd1e56cf99af6246b128e">Act.CostType.MP</a></div><div class="ttdeci">@ MP</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -542,6 +570,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActBash.html#a3c263fd7d37fee8619cf006957dcf46f">ActBash</a>, <a class="el" href="classActDrawWater.html#a4df5725e2c8be07b37245b9e7796f6bb">ActDrawWater</a>, <a class="el" href="classActItem.html#ab6a813d0c738680177249bba57ff0632">ActItem</a>, <a class="el" href="classActKick.html#ac9bfe069056ec11abdef1f9d78052bab">ActKick</a>, <a class="el" href="classActMelee.html#a54278893460b3f759aed4076f9b39859">ActMelee</a>, <a class="el" href="classActPick.html#a8e59c65f208fd657c52145cf2602d0f5">ActPick</a>, <a class="el" href="classActRanged.html#af0fc59d29d72d32b9630bd57625f1b84">ActRanged</a>, <a class="el" href="classActRestrain.html#adc830bbb76e1a14a129fb23c3e144c9e">ActRestrain</a>, <a class="el" href="classActRush.html#ae2689a832aefc83c6378bec085bd3b49">ActRush</a>, <a class="el" href="classActThrow.html#a9fc4e94381ebaac7ab9affb857ea92be">ActThrow</a>, <a class="el" href="classActWater.html#add157b1bf508543215994cae2b588e66">ActWater</a>, <a class="el" href="classAI__Fish.html#a2fa8ec25729a0766b9a51a8c30eab5db">AI_Fish</a>, <a class="el" href="classAI__Steal.html#a040ad3580a90f3b3c4914bebf28ee022">AI_Steal</a>, <a class="el" href="classTaskCullLife.html#a86df0fcc11ab846b8ae771812f6a01af">TaskCullLife</a>, <a class="el" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">TaskPoint</a>, and <a class="el" href="classTaskWater.html#ab6f2691fb572e7b2d606e3a30f259ef3">TaskWater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00435">435</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>    {</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  438</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>, <a class="el" href="Act_82_8cs_source.html#l00440">Perform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00203">ActPlan.TrySetAct()</a>, <a class="el" href="HotItemAct_8cs_source.html#l00081">HotItemAct.TrySetAct()</a>, and <a class="el" href="TraitCatalyst_8cs_source.html#l00041">TraitCatalyst.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -586,6 +619,97 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00445">445</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>    {</div>
+<div class="line"><span class="lineno">  447</span>        <a class="code hl_class" href="classAct.html">Act</a>.&lt;&gt;c__DisplayClass82_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classAct.html">Act</a>.&lt;&gt;c__DisplayClass82_0();</div>
+<div class="line"><span class="lineno">  448</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  449</span>        Act.CC = _cc;</div>
+<div class="line"><span class="lineno">  450</span>        Act.TC = _tc;</div>
+<div class="line"><span class="lineno">  451</span>        <a class="code hl_class" href="classPoint.html">Point</a> tp = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>;</div>
+<div class="line"><span class="lineno">  452</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = _tp;</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span> (_tp == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  454</span>        {</div>
+<div class="line"><span class="lineno">  455</span>            <a class="code hl_class" href="classCard.html">Card</a> tc = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>;</div>
+<div class="line"><span class="lineno">  456</span>            point = (((tc != <span class="keyword">null</span>) ? tc.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a> : <span class="keyword">null</span>) ?? <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  457</span>        }</div>
+<div class="line"><span class="lineno">  458</span>        tp.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point);</div>
+<div class="line"><span class="lineno">  459</span>        CS$&lt;&gt;8__locals1.tt = this.<a class="code hl_property" href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">TargetType</a>;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a8e57c15f7a6c45035be1f0ae087543f8">forcePt</a> &amp;&amp; CS$&lt;&gt;8__locals1.tt.Range == <a class="code hl_enumeration" href="TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5">TargetRange</a>.Self &amp;&amp; !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  461</span>        {</div>
+<div class="line"><span class="lineno">  462</span>            CS$&lt;&gt;8__locals1.tt = <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#abc0a3ab07b89466b44be340ecc482fd3">Chara</a>;</div>
+<div class="line"><span class="lineno">  463</span>        }</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classAct.html#a500995532864367830e20593687d4fde">LocalAct</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>)</div>
+<div class="line"><span class="lineno">  465</span>        {</div>
+<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  467</span>        }</div>
+<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.tt.Range == <a class="code hl_enumeration" href="TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5">TargetRange</a>.Self)</div>
+<div class="line"><span class="lineno">  469</span>        {</div>
+<div class="line"><span class="lineno">  470</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  471</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>();</div>
+<div class="line"><span class="lineno">  472</span>        }</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.game.shiftToUseNegativeAbilityOnSelf)</div>
+<div class="line"><span class="lineno">  474</span>        {</div>
+<div class="line"><span class="lineno">  475</span>            <a class="code hl_class" href="classChara.html">Chara</a> firstChara = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>;</div>
+<div class="line"><span class="lineno">  476</span>            <span class="keywordflow">if</span> (firstChara != <span class="keyword">null</span> &amp;&amp; firstChara.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a>)</div>
+<div class="line"><span class="lineno">  477</span>            {</div>
+<div class="line"><span class="lineno">  478</span>                <span class="keywordtype">bool</span> flag = base.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.tag.Contains(<span class="stringliteral">&quot;neg&quot;</span>);</div>
+<div class="line"><span class="lineno">  479</span>                <span class="keywordflow">if</span> (base.source.id != 6011 &amp;&amp; flag &amp;&amp; !EInput.isShiftDown)</div>
+<div class="line"><span class="lineno">  480</span>                {</div>
+<div class="line"><span class="lineno">  481</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  482</span>                }</div>
+<div class="line"><span class="lineno">  483</span>            }</div>
+<div class="line"><span class="lineno">  484</span>        }</div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span> (!(<span class="keyword">this</span> is <a class="code hl_class" href="classActMelee.html">ActMelee</a>) &amp;&amp; CS$&lt;&gt;8__locals1.tt.Range == <a class="code hl_enumeration" href="TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5">TargetRange</a>.Chara &amp;&amp; (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <span class="keyword">null</span> || !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>)))</div>
+<div class="line"><span class="lineno">  486</span>        {</div>
+<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  488</span>        }</div>
+<div class="line"><span class="lineno">  489</span>        CS$&lt;&gt;8__locals1.distCheck = CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>&gt;g__DistCheck|0(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>);</div>
+<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">if</span> (!CS$&lt;&gt;8__locals1.distCheck &amp;&amp; (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">IsMultisize</a> || (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a0e7c89c955500ed272f9389f073f4358">IsMultisize</a>)))</div>
+<div class="line"><span class="lineno">  491</span>        {</div>
+<div class="line"><span class="lineno">  492</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">IsMultisize</a>)</div>
+<div class="line"><span class="lineno">  493</span>            {</div>
+<div class="line"><span class="lineno">  494</span>                <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">ForeachPoint</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">  495</span>                {</div>
+<div class="line"><span class="lineno">  496</span>                    base.&lt;<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>&gt;g__DistCheckMulti|1(p, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>);</div>
+<div class="line"><span class="lineno">  497</span>                });</div>
+<div class="line"><span class="lineno">  498</span>            }</div>
+<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  500</span>            {</div>
+<div class="line"><span class="lineno">  501</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>&gt;g__DistCheckMulti|1(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>);</div>
+<div class="line"><span class="lineno">  502</span>            }</div>
+<div class="line"><span class="lineno">  503</span>        }</div>
+<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">return</span> CS$&lt;&gt;8__locals1.distCheck &amp;&amp; this.<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>();</div>
+<div class="line"><span class="lineno">  505</span>    }</div>
+<div class="ttc" id="aTargetRange_8cs_html_a4886aeb5c3dd1f73f1cfb8caa22afcc5"><div class="ttname"><a href="TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5">TargetRange</a></div><div class="ttdeci">TargetRange</div><div class="ttdef"><b>Definition:</b> <a href="TargetRange_8cs_source.html#l00003">TargetRange.cs:4</a></div></div>
+<div class="ttc" id="aclassActMelee_html"><div class="ttname"><a href="classActMelee.html">ActMelee</a></div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00005">ActMelee.cs:6</a></div></div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassAct_html_a2bbe355c1c37f1ac7958c5f1040400db"><div class="ttname"><a href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">Act.TC</a></div><div class="ttdeci">static Card TC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00558">Act.2.cs:558</a></div></div>
+<div class="ttc" id="aclassAct_html_a500995532864367830e20593687d4fde"><div class="ttname"><a href="classAct.html#a500995532864367830e20593687d4fde">Act.LocalAct</a></div><div class="ttdeci">virtual bool LocalAct</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00349">Act.2.cs:350</a></div></div>
+<div class="ttc" id="aclassAct_html_a87d86f3edab9b6107a74d29921b81d32"><div class="ttname"><a href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">Act.TP</a></div><div class="ttdeci">static Point TP</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00560">Act.2.cs:560</a></div></div>
+<div class="ttc" id="aclassAct_html_a8e57c15f7a6c45035be1f0ae087543f8"><div class="ttname"><a href="classAct.html#a8e57c15f7a6c45035be1f0ae087543f8">Act.forcePt</a></div><div class="ttdeci">static bool forcePt</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00566">Act.2.cs:566</a></div></div>
+<div class="ttc" id="aclassAct_html_aa3b011668766e36997dcf0a9fd1483ec"><div class="ttname"><a href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">Act.TargetType</a></div><div class="ttdeci">virtual TargetType TargetType</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00271">Act.2.cs:272</a></div></div>
+<div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00556">Act.2.cs:556</a></div></div>
+<div class="ttc" id="aclassAct_html_adc0a2efd2fefeb21d959bf4fcaa12e38"><div class="ttname"><a href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">Act.CanPerform</a></div><div class="ttdeci">virtual bool CanPerform()</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00435">Act.2.cs:435</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02410">Card.cs:2411</a></div></div>
+<div class="ttc" id="aclassCard_html_a0e7c89c955500ed272f9389f073f4358"><div class="ttname"><a href="classCard.html#a0e7c89c955500ed272f9389f073f4358">Card.IsMultisize</a></div><div class="ttdeci">virtual bool IsMultisize</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02266">Card.cs:2267</a></div></div>
+<div class="ttc" id="aclassCard_html_a6c22bc720e969bf7b5160a2b5280951e"><div class="ttname"><a href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">Card.ForeachPoint</a></div><div class="ttdeci">void ForeachPoint(Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07146">Card.cs:7146</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00714">Chara.cs:714</a></div></div>
+<div class="ttc" id="aclassChara_html_a9622b36b4e46eae03ff4363bf2cd355e"><div class="ttname"><a href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">Chara.source</a></div><div class="ttdeci">SourceChara.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09462">Chara.cs:9462</a></div></div>
+<div class="ttc" id="aclassChara_html_ac79ea3f84d4bf288927e3cb3e7933de2"><div class="ttname"><a href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">Chara.IsMultisize</a></div><div class="ttdeci">override bool IsMultisize</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00604">Chara.cs:605</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_adc2028a1488786ea6d4e75c42fdaec5c"><div class="ttname"><a href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">Point.FirstChara</a></div><div class="ttdeci">Chara FirstChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00390">Point.cs:391</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassTargetType_html"><div class="ttname"><a href="classTargetType.html">TargetType</a></div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00004">TargetType.cs:5</a></div></div>
+<div class="ttc" id="aclassTargetType_html_abc0a3ab07b89466b44be340ecc482fd3"><div class="ttname"><a href="classTargetType.html#abc0a3ab07b89466b44be340ecc482fd3">TargetType.Chara</a></div><div class="ttdeci">static TargetTypeChara Chara</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00106">TargetType.cs:106</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Act_82_8cs_source.html#l00435">CanPerform()</a>, <a class="el" href="Chara_8cs_source.html#l00714">Chara.CanSee()</a>, <a class="el" href="Act_82_8cs_source.html#l00556">CC</a>, <a class="el" href="TargetType_8cs_source.html#l00106">TargetType.Chara</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Point_8cs_source.html#l00391">Point.FirstChara</a>, <a class="el" href="Act_82_8cs_source.html#l00566">forcePt</a>, <a class="el" href="Card_8cs_source.html#l07146">Card.ForeachPoint()</a>, <a class="el" href="Card_8cs_source.html#l02267">Card.IsMultisize</a>, <a class="el" href="Chara_8cs_source.html#l00605">Chara.IsMultisize</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l02411">Card.IsPCFactionOrMinion</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="Act_82_8cs_source.html#l00350">LocalAct</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Chara_8cs_source.html#l09462">Chara.source</a>, <a class="el" href="Act_82_8cs_source.html#l00272">TargetType</a>, <a class="el" href="Act_82_8cs_source.html#l00558">TC</a>, and <a class="el" href="Act_82_8cs_source.html#l00560">TP</a>.</p>
 
 </div>
 </div>
@@ -615,6 +739,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGoalAutoCombat.html#aa4109fac2e0133d69bba55b6f6b8ce83">GoalAutoCombat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00381">381</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  382</span>    {</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classAct.html#a8c1986f83f7c97b2984fe21439659c0f">IsCrime</a>)</div>
+<div class="line"><span class="lineno">  384</span>        {</div>
+<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#aedf78c28f8a4e6a479f5c072726394a0">colorAct</a>;</div>
+<div class="line"><span class="lineno">  386</span>        }</div>
+<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#aa0acf0ddc890ed18fd630e9fa56505c9">colorHostileAct</a>;</div>
+<div class="line"><span class="lineno">  388</span>    }</div>
+<div class="ttc" id="aclassAct_html_a8c1986f83f7c97b2984fe21439659c0f"><div class="ttname"><a href="classAct.html#a8c1986f83f7c97b2984fe21439659c0f">Act.IsCrime</a></div><div class="ttdeci">virtual bool IsCrime</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00390">Act.2.cs:391</a></div></div>
+<div class="ttc" id="aclassColorProfile_html_aa0acf0ddc890ed18fd630e9fa56505c9"><div class="ttname"><a href="classColorProfile.html#aa0acf0ddc890ed18fd630e9fa56505c9">ColorProfile.colorHostileAct</a></div><div class="ttdeci">Color colorHostileAct</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00100">ColorProfile.cs:100</a></div></div>
+<div class="ttc" id="aclassColorProfile_html_aedf78c28f8a4e6a479f5c072726394a0"><div class="ttname"><a href="classColorProfile.html#aedf78c28f8a4e6a479f5c072726394a0">ColorProfile.colorAct</a></div><div class="ttdeci">Color colorAct</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00094">ColorProfile.cs:94</a></div></div>
+<div class="ttc" id="aclassEClass_html_a0803a3f94e106e7d65031cb5c9f23ebe"><div class="ttname"><a href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">EClass.Colors</a></div><div class="ttdeci">static ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00127">EClass.cs:128</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ColorProfile_8cs_source.html#l00094">ColorProfile.colorAct</a>, <a class="el" href="ColorProfile_8cs_source.html#l00100">ColorProfile.colorHostileAct</a>, <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, and <a class="el" href="Act_82_8cs_source.html#l00391">IsCrime</a>.</p>
 
 </div>
 </div>
@@ -645,6 +782,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActMelee.html#a4571f273d7184f68476ea71f4088a166">ActMelee</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00031">31</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classAct.html#a139eb5308fbfdfeb8b2f9caf68ff9568">CursorIcon</a>;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassAct_html_a139eb5308fbfdfeb8b2f9caf68ff9568"><div class="ttname"><a href="classAct.html#a139eb5308fbfdfeb8b2f9caf68ff9568">Act.CursorIcon</a></div><div class="ttdeci">virtual CursorInfo CursorIcon</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00036">Act.2.cs:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00037">CursorIcon</a>.</p>
 
 </div>
 </div>
@@ -675,6 +818,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActMelee.html#a6db1bd0c673ce9427062370c0f4f6113">ActMelee</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00216">216</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>    {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAct.html#ad78fda455786213d477bf3acfd262968">GetText</a>(str);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="ttc" id="aclassAct_html_ad78fda455786213d477bf3acfd262968"><div class="ttname"><a href="classAct.html#ad78fda455786213d477bf3acfd262968">Act.GetText</a></div><div class="ttdeci">virtual string GetText(string str=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00221">Act.2.cs:221</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00221">GetText()</a>.</p>
 
 </div>
 </div>
@@ -704,6 +853,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classElement.html#a0d205d7d575ee861ed54c8be0b0760cf">Element</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00049">49</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> base.source.GetSprite();</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HotItemAct_8cs_source.html#l00037">HotItemAct.GetSprite()</a>, <a class="el" href="Card_8cs_source.html#l05452">Card.GetSprite()</a>, and <a class="el" href="Act_82_8cs_source.html#l00524">SetImage()</a>.</p>
 
 </div>
 </div>
@@ -733,7 +887,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classAI__PassTime.html#abf0d99be158e259232b123e0eaa79fe4">AI_PassTime</a>, and <a class="el" href="classAIAct.html#abaedd9923fc3703e8e973adc7ee0e453">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00044">44</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad78fda455786213d477bf3acfd262968" name="ad78fda455786213d477bf3acfd262968"></a>
@@ -763,6 +920,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActRanged.html#ae64c0e92fa6f553899a2a0475d12cb54">ActRanged</a>, <a class="el" href="classActThrow.html#ab07f9918672dcd30c19045f4867862de">ActThrow</a>, <a class="el" href="classAI__Shear.html#ac1a9d6ee117c0e056134e2691c562ba4">AI_Shear</a>, <a class="el" href="classBaseTaskHarvest.html#ae0b5b698587cc3f9f8e4fa2a197b6d3e">BaseTaskHarvest</a>, <a class="el" href="classDynamicAct.html#a7e86a39badacb7644b369c4ce9f347d5">DynamicAct</a>, <a class="el" href="classDynamicAIAct.html#a5c81cecbe4f83345e58d18054f5a2faa">DynamicAIAct</a>, <a class="el" href="classTaskBuild.html#acdc75c73c9eba1276a060d319f075e11">TaskBuild</a>, and <a class="el" href="classTaskWater.html#a5ff4ab3282fd82f5528255c74bdd7ce4">TaskWater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00221">221</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (base.source != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            this.id = base.source.id;</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (this.<span class="keywordtype">id</span> != 0)</div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">return</span> Lang.ParseRaw(base.source.GetName(), str, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!Lang.Has(<span class="keyword">this</span>.ToString()))</div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[5];</div>
+<div class="line"><span class="lineno">  234</span>            array[0] = this.ToString();</div>
+<div class="line"><span class="lineno">  235</span>            array[1] = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordtype">int</span> num = 2;</div>
+<div class="line"><span class="lineno">  237</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> <a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a> = base.source;</div>
+<div class="line"><span class="lineno">  238</span>            array[num] = ((<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a> != <span class="keyword">null</span>) ? <a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.ToString() : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  239</span>            array[3] = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">  240</span>            array[4] = this.<span class="keywordtype">id</span>.ToString();</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(array);</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> Lang.Get(this.ToString());</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Act_82_8cs_source.html#l00216">GetHintText()</a>, <a class="el" href="ActPlan_8cs_source.html#l00850">ActPlan.Item.GetText()</a>, <a class="el" href="ActPlan_8cs_source.html#l00855">ActPlan.Item.GetTextContext()</a>, and <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>.</p>
 
 </div>
 </div>
@@ -793,6 +979,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActMelee.html#a5f8ea1e1aa0b239ae845edabd2c4ac28">ActMelee</a>, <a class="el" href="classBaseTaskHarvest.html#a4f16b561204aa009727f568d7062acf9">BaseTaskHarvest</a>, <a class="el" href="classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1">TaskDig</a>, <a class="el" href="classTaskHarvest.html#a1e71abfde9afe71cf2353d43b59761bb">TaskHarvest</a>, and <a class="el" href="classTaskMine.html#ac549640d3b6d13583da99f308c979b5b">TaskMine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00246">246</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (c == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  249</span>        {</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">return</span> c.Name + c.<a class="code hl_function" href="classCard.html#a0d7d0d7fa0a379e07e7f708e466ea53c">GetExtraName</a>();</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+<div class="ttc" id="aclassCard_html_a0d7d0d7fa0a379e07e7f708e466ea53c"><div class="ttname"><a href="classCard.html#a0d7d0d7fa0a379e07e7f708e466ea53c">Card.GetExtraName</a></div><div class="ttdeci">virtual string GetExtraName()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02200">Card.cs:2200</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02200">Card.GetExtraName()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActPlan_8cs_source.html#l00850">ActPlan.Item.GetText()</a>.</p>
 
 </div>
 </div>
@@ -822,6 +1020,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classAIAct.html#abf6d9c709de705113d2c00c9b705b3ad">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00514">514</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  515</span>    {</div>
+<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">return</span> Act.CC == EClass.pc &amp;&amp; Act.TOOL != <span class="keyword">null</span> &amp;&amp; Act.TOOL.parent == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
+<div class="line"><span class="lineno">  517</span>    }</div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -852,6 +1056,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classAI__Shear.html#ac632355231793429e9361bb1f1851827">AI_Shear</a>, and <a class="el" href="classAI__Steal.html#ae64590a43b91f1f99943dce61c832e20">AI_Steal</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00211">211</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>    {</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> c.isChara || c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a>;</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassTrait_html_a0f1f1194906b32b083c352d0a4a3c3f4"><div class="ttname"><a href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">Trait.CanBeAttacked</a></div><div class="ttdeci">virtual bool CanBeAttacked</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00375">Trait.cs:376</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00376">Trait.CanBeAttacked</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -881,6 +1092,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActRush.html#acdaa1c8b0844e1677d289eb32d43bd26">ActRush</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00539">539</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  540</span>    {</div>
+<div class="line"><span class="lineno">  541</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, (<span class="keywordtype">float</span>)base.act.MaxRadius, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">  542</span>        {</div>
+<div class="line"><span class="lineno">  543</span>            <span class="keywordflow">if</span> (!p.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a> &amp;&amp; <span class="keyword">this</span>.ShouldMapHighlight(p))</div>
+<div class="line"><span class="lineno">  544</span>            {</div>
+<div class="line"><span class="lineno">  545</span>                p.cell.highlight = 8;</div>
+<div class="line"><span class="lineno">  546</span>                EClass.player.lastMarkedHighlights.Add(p.Copy());</div>
+<div class="line"><span class="lineno">  547</span>            }</div>
+<div class="line"><span class="lineno">  548</span>        });</div>
+<div class="line"><span class="lineno">  549</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_a09c1df49e3d0b39ff98627b436211ab1"><div class="ttname"><a href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">Map.ForeachSphere</a></div><div class="ttdeci">void ForeachSphere(int _x, int _z, float r, Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02430">Map.cs:2430</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf88acccb063c764604ddcd520fe332d"><div class="ttname"><a href="classPoint.html#adf88acccb063c764604ddcd520fe332d">Point.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00265">Point.cs:266</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02430">Map.ForeachSphere()</a>, <a class="el" href="Point_8cs_source.html#l00266">Point.HasBlock</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemGameAction_8cs_source.html#l00031">HotItemGameAction.OnMarkMapHighlights()</a>.</p>
 
 </div>
 </div>
@@ -910,6 +1140,58 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActBash.html#a83b37c1eae905d51673df4259d086f49">ActBash</a>, <a class="el" href="classActChat.html#a77fe1ad9b0fcf065965acec21f3bd643">ActChat</a>, <a class="el" href="classActDrawWater.html#a017e40e33d11dcecf3bbbd872e23dea4">ActDrawWater</a>, <a class="el" href="classActDreamBug.html#adfab6195ef0f06f5b668cba7c4486252">ActDreamBug</a>, <a class="el" href="classActItem.html#ac66dc2968bb48fedd42211aa2e5baeca">ActItem</a>, <a class="el" href="classActKick.html#a632643c002ecdfdffc8b6d684d388937">ActKick</a>, <a class="el" href="classActMelee.html#a5f5c1ef56dae21eb09507566edcc4f15">ActMelee</a>, <a class="el" href="classActPick.html#a1511ee4ffd4df71e25af86c09d8da01f">ActPick</a>, <a class="el" href="classActPray.html#aff54cfcf9f76a2c16db38007a3808d69">ActPray</a>, <a class="el" href="classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59">ActQuickCraft</a>, <a class="el" href="classActRanged.html#a49e18d617477d5a0f8c15f144f246cc9">ActRanged</a>, <a class="el" href="classActRestrain.html#af748a0d763546c2512b63fe349c2a57c">ActRestrain</a>, <a class="el" href="classActRide.html#a28ba2eb19315998756fd18b1c41ac47e">ActRide</a>, <a class="el" href="classActRush.html#a04255a90bb02fc95621f2044253e17e8">ActRush</a>, <a class="el" href="classActSummonGuard.html#a17fb58c2f7ac46f41168858d5f78bd0c">ActSummonGuard</a>, <a class="el" href="classActThrow.html#aa005af517216f663957191b90d6231ad">ActThrow</a>, <a class="el" href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">ActWait</a>, <a class="el" href="classActWater.html#a6adf659fdcbb4eb5aee98378f435bbd1">ActWater</a>, <a class="el" href="classActZap.html#a5f0cd2eee4bfff25546399cdc7a4e65a">ActZap</a>, <a class="el" href="classAI__Shear.html#a7a248f30aa4fd497a644edfbed45f538">AI_Shear</a>, <a class="el" href="classAI__Steal.html#a47bfbf515178ad5cb94c2598d0de546e">AI_Steal</a>, <a class="el" href="classAIAct.html#a20e6b5800ce4af521458d369ec4792de">AIAct</a>, <a class="el" href="classDynamicAct.html#a9acd5b458a1b4efb21932b43aaf2dc30">DynamicAct</a>, and <a class="el" href="classDynamicAIAct.html#a49c9f6d1353b566489cde34b3fec9da3">DynamicAIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00398">398</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = this.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>;</div>
+<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">id</span> == 8230 || <span class="keywordtype">id</span> == 8232) &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">isThing</a>)</div>
+<div class="line"><span class="lineno">  402</span>        {</div>
+<div class="line"><span class="lineno">  403</span>            <span class="keywordtype">int</span> power = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(base.source.id).<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>) * Act.powerMod / 100;</div>
+<div class="line"><span class="lineno">  404</span>            <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">Proc</a>(base.source.proc[0].ToEnum(<span class="keyword">true</span>), power, <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <span class="keywordflow">default</span>(<a class="code hl_struct" href="structActRef.html">ActRef</a>));</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span> (base.source.proc.Length != 0)</div>
+<div class="line"><span class="lineno">  408</span>        {</div>
+<div class="line"><span class="lineno">  409</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = base.source.aliasRef.IsEmpty(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a15384c2049fdc6bb19f558ae904dac7a">MainElement</a>.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias);</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keywordtype">string</span> a = base.source.proc[0];</div>
+<div class="line"><span class="lineno">  411</span>            <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;LulwyTrick&quot;</span> || a == <span class="stringliteral">&quot;BuffStats&quot;</span>)</div>
+<div class="line"><span class="lineno">  412</span>            {</div>
+<div class="line"><span class="lineno">  413</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = base.source.proc[1];</div>
+<div class="line"><span class="lineno">  414</span>            }</div>
+<div class="line"><span class="lineno">  415</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;mold&quot;</span>)</div>
+<div class="line"><span class="lineno">  416</span>            {</div>
+<div class="line"><span class="lineno">  417</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a15384c2049fdc6bb19f558ae904dac7a">MainElement</a>.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias;</div>
+<div class="line"><span class="lineno">  418</span>            }</div>
+<div class="line"><span class="lineno">  419</span>            <span class="keywordflow">if</span> (this.<a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_property" href="classTargetType.html#ac27a8bc6850a943c9bb309bc28fc54d5">Range</a> == <a class="code hl_enumeration" href="TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5">TargetRange</a>.Self &amp;&amp; !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a8e57c15f7a6c45035be1f0ae087543f8">forcePt</a>)</div>
+<div class="line"><span class="lineno">  420</span>            {</div>
+<div class="line"><span class="lineno">  421</span>                Act.TC = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>;</div>
+<div class="line"><span class="lineno">  422</span>                <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  423</span>            }</div>
+<div class="line"><span class="lineno">  424</span>            <span class="keywordtype">int</span> power2 = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(base.source.id).<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>) * Act.powerMod / 100;</div>
+<div class="line"><span class="lineno">  425</span>            <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ProcAt</a>(base.source.proc[0].ToEnum(<span class="keyword">true</span>), power2, <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>, base.source.tag.Contains(<span class="stringliteral">&quot;neg&quot;</span>), <span class="keyword">new</span> <a class="code hl_struct" href="structActRef.html">ActRef</a></div>
+<div class="line"><span class="lineno">  426</span>            {</div>
+<div class="line"><span class="lineno">  427</span>                n1 = base.source.proc.TryGet(1, true),</div>
+<div class="line"><span class="lineno">  428</span>                aliasEle = text,</div>
+<div class="line"><span class="lineno">  429</span>                act = this</div>
+<div class="line"><span class="lineno">  430</span>            });</div>
+<div class="line"><span class="lineno">  431</span>        }</div>
+<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  433</span>    }</div>
+<div class="ttc" id="aBlessedState_8cs_html_aa145ad1e6170ce299d75ff3b3bee93e8"><div class="ttname"><a href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a></div><div class="ttdeci">BlessedState</div><div class="ttdef"><b>Definition:</b> <a href="BlessedState_8cs_source.html#l00003">BlessedState.cs:4</a></div></div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassActEffect_html"><div class="ttname"><a href="classActEffect.html">ActEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00006">ActEffect.cs:7</a></div></div>
+<div class="ttc" id="aclassActEffect_html_aa11e7453203f08185bc4d9db277254a7"><div class="ttname"><a href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">ActEffect.Proc</a></div><div class="ttdeci">static void Proc(EffectId id, Card cc, Card tc=null, int power=100, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00816">ActEffect.cs:816</a></div></div>
+<div class="ttc" id="aclassActEffect_html_ad702ac411d9d8f839e7fd335b6581d43"><div class="ttname"><a href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ActEffect.ProcAt</a></div><div class="ttdeci">static void ProcAt(EffectId id, int power, BlessedState state, Card cc, Card tc, Point tp, bool isNeg, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00369">ActEffect.cs:369</a></div></div>
+<div class="ttc" id="aclassCard_html_a13bf61f1e3434cc60f1dd50e743c6e6b"><div class="ttname"><a href="classCard.html#a13bf61f1e3434cc60f1dd50e743c6e6b">Card.isThing</a></div><div class="ttdeci">virtual bool isThing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02027">Card.cs:2028</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassChara_html_a15384c2049fdc6bb19f558ae904dac7a"><div class="ttname"><a href="classChara.html#a15384c2049fdc6bb19f558ae904dac7a">Chara.MainElement</a></div><div class="ttdeci">Element MainElement</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00644">Chara.cs:645</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_ad913c083fdb7f408381e27eb59835267"><div class="ttname"><a href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">ElementContainer.GetOrCreateElement</a></div><div class="ttdeci">Element GetOrCreateElement(Element ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00541">ElementContainer.cs:541</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a68cfe23ce1ce41da21b7ce89d260ea73"><div class="ttname"><a href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">Element.GetPower</a></div><div class="ttdeci">virtual int GetPower(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00733">Element.2.cs:733</a></div></div>
+<div class="ttc" id="aclassTargetType_html_ac27a8bc6850a943c9bb309bc28fc54d5"><div class="ttname"><a href="classTargetType.html#ac27a8bc6850a943c9bb309bc28fc54d5">TargetType.Range</a></div><div class="ttdeci">virtual TargetRange Range</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00006">TargetType.cs:7</a></div></div>
+<div class="ttc" id="astructActRef_html"><div class="ttname"><a href="structActRef.html">ActRef</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRef_8cs_source.html#l00003">ActRef.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00556">CC</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Act_82_8cs_source.html#l00566">forcePt</a>, <a class="el" href="ElementContainer_8cs_source.html#l00541">ElementContainer.GetOrCreateElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00733">Element.GetPower()</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="Card_8cs_source.html#l02028">Card.isThing</a>, <a class="el" href="Chara_8cs_source.html#l00645">Chara.MainElement</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="ActEffect_8cs_source.html#l00816">ActEffect.Proc()</a>, <a class="el" href="ActEffect_8cs_source.html#l00369">ActEffect.ProcAt()</a>, <a class="el" href="TargetType_8cs_source.html#l00007">TargetType.Range</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="Act_82_8cs_source.html#l00558">TC</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="Act_82_8cs_source.html#l00560">TP</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l01885">Thing.DoAct()</a>, <a class="el" href="UIInventory_8cs_source.html#l00300">UIInventory.DoAct()</a>, <a class="el" href="ActMelee_8cs_source.html#l00208">ActMelee.g__Attack()</a>, <a class="el" href="AM__MoveInstalled_8cs_source.html#l00257">AM_MoveInstalled.OnProcessTiles()</a>, <a class="el" href="ActItem_8cs_source.html#l00042">ActItem.Perform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>, and <a class="el" href="Act_82_8cs_source.html#l00440">Perform()</a>.</p>
 
 </div>
 </div>
@@ -954,6 +1236,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00440">440</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  441</span>    {</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>(_cc, _tc, _tp) &amp;&amp; this.<a class="code hl_function" href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Perform</a>();</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+<div class="ttc" id="aclassAct_html_a16165bf29ed263491e1e1ac5903ee738"><div class="ttname"><a href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Act.Perform</a></div><div class="ttdeci">virtual bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00398">Act.2.cs:398</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00435">CanPerform()</a>, and <a class="el" href="Act_82_8cs_source.html#l00398">Perform()</a>.</p>
 
 </div>
 </div>
@@ -982,6 +1270,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00524">524</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  525</span>    {</div>
+<div class="line"><span class="lineno">  526</span>        image.sprite = (this.<a class="code hl_function" href="classAct.html#a541b4d4c2b661167e1ad2cf312d81254">GetSprite</a>() ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.defaultAbility);</div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">if</span> (!base.source.aliasRef.IsEmpty())</div>
+<div class="line"><span class="lineno">  528</span>        {</div>
+<div class="line"><span class="lineno">  529</span>            image.color = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#afdc8bf4470b117ddaa2703587e52149a">elements</a>[base.source.aliasRef].colorSprite;</div>
+<div class="line"><span class="lineno">  530</span>        }</div>
+<div class="line"><span class="lineno">  531</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  532</span>        {</div>
+<div class="line"><span class="lineno">  533</span>            image.color = <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
+<div class="line"><span class="lineno">  534</span>        }</div>
+<div class="line"><span class="lineno">  535</span>        image.rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  536</span>        image.SetNativeSize();</div>
+<div class="line"><span class="lineno">  537</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassAct_html_a541b4d4c2b661167e1ad2cf312d81254"><div class="ttname"><a href="classAct.html#a541b4d4c2b661167e1ad2cf312d81254">Act.GetSprite</a></div><div class="ttdeci">override Sprite GetSprite()</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00049">Act.2.cs:49</a></div></div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_afdc8bf4470b117ddaa2703587e52149a"><div class="ttname"><a href="classGameSetting.html#afdc8bf4470b117ddaa2703587e52149a">GameSetting.elements</a></div><div class="ttdeci">UD_String_ElementRef elements</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00041">GameSetting.cs:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="GameSetting_8cs_source.html#l00041">GameSetting.elements</a>, <a class="el" href="Act_82_8cs_source.html#l00049">GetSprite()</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">ButtonAbility.SetAct()</a>, and <a class="el" href="HotItemAct_8cs_source.html#l00076">HotItemAct.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -1026,6 +1335,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00507">507</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  508</span>    {</div>
+<div class="line"><span class="lineno">  509</span>        Act.CC = _cc;</div>
+<div class="line"><span class="lineno">  510</span>        Act.TC = _tc;</div>
+<div class="line"><span class="lineno">  511</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(_tp ?? <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  512</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Act_82_8cs_source.html#l00558">TC</a>, and <a class="el" href="Act_82_8cs_source.html#l00560">TP</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1370,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00519">519</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  520</span>    {</div>
+<div class="line"><span class="lineno">  521</span>        Act.TOOL = t;</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa770e74e4b54c29dcd0ac1c418393b02" name="aa770e74e4b54c29dcd0ac1c418393b02"></a>
@@ -1082,6 +1401,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00551">551</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  552</span>    {</div>
+<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">return</span> base.act.TargetType.ShowMapHighlight &amp;&amp; base.act.ShowMapHighlight &amp;&amp; base.act.CanPerform(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <span class="keyword">null</span>, p);</div>
+<div class="line"><span class="lineno">  554</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1436,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActMelee.html#af6157d89fe35f11db3810c102af185bf">ActMelee</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00126">126</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -1138,6 +1465,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00556">556</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00097">ActMelee.Attack()</a>, <a class="el" href="ActBash_8cs_source.html#l00005">ActBash.CanPerform()</a>, <a class="el" href="ActKick_8cs_source.html#l00021">ActKick.CanPerform()</a>, <a class="el" href="ActMelee_8cs_source.html#l00068">ActMelee.CanPerform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00053">ActRanged.CanPerform()</a>, <a class="el" href="ActRush_8cs_source.html#l00031">ActRush.CanPerform()</a>, <a class="el" href="ActThrow_8cs_source.html#l00040">ActThrow.CanPerform()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00053">TaskPoint.CanPerform()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="ActMelee_8cs_source.html#l00208">ActMelee.g__Attack()</a>, <a class="el" href="Act_82_8cs_source.html#l00398">Perform()</a>, <a class="el" href="ActBash_8cs_source.html#l00010">ActBash.Perform()</a>, <a class="el" href="ActDrawWater_8cs_source.html#l00026">ActDrawWater.Perform()</a>, <a class="el" href="ActDreamBug_8cs_source.html#l00005">ActDreamBug.Perform()</a>, <a class="el" href="ActItem_8cs_source.html#l00042">ActItem.Perform()</a>, <a class="el" href="ActKick_8cs_source.html#l00026">ActKick.Perform()</a>, <a class="el" href="ActPick_8cs_source.html#l00026">ActPick.Perform()</a>, <a class="el" href="ActPray_8cs_source.html#l00024">ActPray.Perform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00070">ActRanged.Perform()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00043">ActRestrain.Perform()</a>, <a class="el" href="ActRide_8cs_source.html#l00014">ActRide.Perform()</a>, <a class="el" href="ActRush_8cs_source.html#l00054">ActRush.Perform()</a>, <a class="el" href="ActSummonGuard_8cs_source.html#l00015">ActSummonGuard.Perform()</a>, <a class="el" href="ActThrow_8cs_source.html#l00049">ActThrow.Perform()</a>, <a class="el" href="ActWait_8cs_source.html#l00021">ActWait.Perform()</a>, <a class="el" href="ActWater_8cs_source.html#l00026">ActWater.Perform()</a>, <a class="el" href="ActZap_8cs_source.html#l00030">ActZap.Perform()</a>, <a class="el" href="AIAct_8cs_source.html#l00313">AIAct.Perform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>, <a class="el" href="ActPray_8cs_source.html#l00094">ActPray.Pray()</a>, <a class="el" href="ActThrow_8cs_source.html#l00117">ActThrow.Throw()</a>, and <a class="el" href="ActRanged_8cs_source.html#l00273">ActRanged.TryReload()</a>.</p>
+
 </div>
 </div>
 <a id="a8e57c15f7a6c45035be1f0ae087543f8" name="a8e57c15f7a6c45035be1f0ae087543f8"></a>
@@ -1161,6 +1490,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00566">566</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, and <a class="el" href="Act_82_8cs_source.html#l00398">Perform()</a>.</p>
 
 </div>
 </div>
@@ -1210,6 +1541,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00558">558</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00097">ActMelee.Attack()</a>, <a class="el" href="ActKick_8cs_source.html#l00021">ActKick.CanPerform()</a>, <a class="el" href="ActMelee_8cs_source.html#l00068">ActMelee.CanPerform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00053">ActRanged.CanPerform()</a>, <a class="el" href="ActRush_8cs_source.html#l00031">ActRush.CanPerform()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="ActMelee_8cs_source.html#l00208">ActMelee.g__Attack()</a>, <a class="el" href="Act_82_8cs_source.html#l00398">Perform()</a>, <a class="el" href="ActChat_8cs_source.html#l00029">ActChat.Perform()</a>, <a class="el" href="ActDreamBug_8cs_source.html#l00005">ActDreamBug.Perform()</a>, <a class="el" href="ActKick_8cs_source.html#l00026">ActKick.Perform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00070">ActRanged.Perform()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00043">ActRestrain.Perform()</a>, <a class="el" href="ActRush_8cs_source.html#l00054">ActRush.Perform()</a>, <a class="el" href="ActSummonGuard_8cs_source.html#l00015">ActSummonGuard.Perform()</a>, <a class="el" href="AI__Shear_8cs_source.html#l00019">AI_Shear.Perform()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00041">AI_Steal.Perform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>, <a class="el" href="Act_82_8cs_source.html#l00507">SetReference()</a>, and <a class="el" href="ActThrow_8cs_source.html#l00117">ActThrow.Throw()</a>.</p>
+
 </div>
 </div>
 <a id="ac098779ac5e990a7229293a86d0312dd" name="ac098779ac5e990a7229293a86d0312dd"></a>
@@ -1233,6 +1566,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00562">562</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskCut_8cs_source.html#l00049">TaskCut.OnProgress()</a>.</p>
 
 </div>
 </div>
@@ -1258,6 +1593,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00560">560</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00097">ActMelee.Attack()</a>, <a class="el" href="ActBash_8cs_source.html#l00005">ActBash.CanPerform()</a>, <a class="el" href="ActDrawWater_8cs_source.html#l00021">ActDrawWater.CanPerform()</a>, <a class="el" href="ActKick_8cs_source.html#l00021">ActKick.CanPerform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00053">ActRanged.CanPerform()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00037">ActRestrain.CanPerform()</a>, <a class="el" href="ActRush_8cs_source.html#l00031">ActRush.CanPerform()</a>, <a class="el" href="ActThrow_8cs_source.html#l00040">ActThrow.CanPerform()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00028">AI_Fish.CanPerform()</a>, <a class="el" href="TaskCullLife_8cs_source.html#l00012">TaskCullLife.CanPerform()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00053">TaskPoint.CanPerform()</a>, <a class="el" href="TaskWater_8cs_source.html#l00034">TaskWater.CanPerform()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="ActMelee_8cs_source.html#l00208">ActMelee.g__Attack()</a>, <a class="el" href="Act_82_8cs_source.html#l00398">Perform()</a>, <a class="el" href="ActBash_8cs_source.html#l00010">ActBash.Perform()</a>, <a class="el" href="ActPick_8cs_source.html#l00026">ActPick.Perform()</a>, <a class="el" href="ActRanged_8cs_source.html#l00070">ActRanged.Perform()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00043">ActRestrain.Perform()</a>, <a class="el" href="ActRide_8cs_source.html#l00014">ActRide.Perform()</a>, <a class="el" href="ActRush_8cs_source.html#l00054">ActRush.Perform()</a>, <a class="el" href="ActThrow_8cs_source.html#l00049">ActThrow.Perform()</a>, <a class="el" href="ActWater_8cs_source.html#l00026">ActWater.Perform()</a>, <a class="el" href="ActZap_8cs_source.html#l00030">ActZap.Perform()</a>, <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00071">TaskPoint.Run()</a>, <a class="el" href="Act_82_8cs_source.html#l00507">SetReference()</a>, and <a class="el" href="ActThrow_8cs_source.html#l00117">ActThrow.Throw()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -1282,7 +1619,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00155">155</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3904dac5500300280de88d081e9b057a" name="a3904dac5500300280de88d081e9b057a"></a>
@@ -1306,6 +1649,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00147">147</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ActPlan_8cs_source.html#l00118">ActPlan.GetAction()</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1681,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00357">357</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  358</span>    {</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  362</span>        }</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a24321dd5a246c6f5fa0665fde86002ac" name="a24321dd5a246c6f5fa0665fde86002ac"></a>
@@ -1354,7 +1711,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00078">78</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a139eb5308fbfdfeb8b2f9caf68ff9568" name="a139eb5308fbfdfeb8b2f9caf68ff9568"></a>
@@ -1378,6 +1741,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00036">36</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> CursorSystem.Action;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Act_82_8cs_source.html#l00031">GetCursorIcon()</a>.</p>
 
 </div>
 </div>
@@ -1402,6 +1773,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00139">139</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AIAct_8cs_source.html#l00284">AIAct.Start()</a>.</p>
 
 </div>
 </div>
@@ -1426,6 +1805,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00102">102</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> base.source.eleP;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00021">ActEffect.DamageEle()</a>.</p>
 
 </div>
 </div>
@@ -1450,6 +1837,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00195">195</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  198</span>        {</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">return</span> this.<a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_property" href="classTargetType.html#ae4bce62f24ea76e979d8eababf3806fe">CanSelectParty</a>;</div>
+<div class="line"><span class="lineno">  200</span>        }</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
+<div class="ttc" id="aclassTargetType_html_ae4bce62f24ea76e979d8eababf3806fe"><div class="ttname"><a href="classTargetType.html#ae4bce62f24ea76e979d8eababf3806fe">TargetType.CanSelectParty</a></div><div class="ttdeci">virtual bool CanSelectParty</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00062">TargetType.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00468">Element._WriteNote()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00101">ButtonAbility.TryUse()</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1870,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00187">187</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  188</span>    {</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab23b897b03c141fb81b2914efb87408a" name="ab23b897b03c141fb81b2914efb87408a"></a>
@@ -1498,7 +1900,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00054">54</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> base.source.alias;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a672ab1d9d656ac8cfe8b1cf60db02270" name="a672ab1d9d656ac8cfe8b1cf60db02270"></a>
@@ -1522,6 +1930,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00062">62</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l01885">Thing.DoAct()</a>, <a class="el" href="UIInventory_8cs_source.html#l00300">UIInventory.DoAct()</a>, and <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>.</p>
 
 </div>
 </div>
@@ -1546,6 +1962,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00390">390</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  391</span>    {</div>
+<div class="line"><span class="lineno">  392</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  393</span>        {</div>
+<div class="line"><span class="lineno">  394</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aea5e9ee4a39d295c4b86be353ca64799">IsCrime</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  395</span>        }</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
+<div class="ttc" id="aclassZone_html_aea5e9ee4a39d295c4b86be353ca64799"><div class="ttname"><a href="classZone.html#aea5e9ee4a39d295c4b86be353ca64799">Zone.IsCrime</a></div><div class="ttdeci">bool IsCrime(Chara c, Act act)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03497">Zone.cs:3497</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Act_82_8cs_source.html#l00381">GetActPlanColor()</a>.</p>
 
 </div>
 </div>
@@ -1570,7 +1995,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00179">179</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  180</span>    {</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  182</span>        {</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac1f87f9f06c2d1fe1020db8c745141a9" name="ac1f87f9f06c2d1fe1020db8c745141a9"></a>
@@ -1594,6 +2025,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00086">86</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AIAct_8cs_source.html#l00284">AIAct.Start()</a>.</p>
 
 </div>
 </div>
@@ -1618,6 +2057,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00349">349</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  352</span>        {</div>
+<div class="line"><span class="lineno">  353</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  354</span>        }</div>
+<div class="line"><span class="lineno">  355</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00468">Element._WriteNote()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00216">ButtonAbility.CanAutoUse()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00031">TraitCatalyst.CanUse()</a>, <a class="el" href="Thing_8cs_source.html#l01885">Thing.DoAct()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00300">UIInventory.DoAct()</a>.</p>
 
 </div>
 </div>
@@ -1642,7 +2089,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00263">263</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  264</span>    {</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">return</span> 99;</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a985f7c8cc115dc1dc412a24b554a073c" name="a985f7c8cc115dc1dc412a24b554a073c"></a>
@@ -1666,6 +2119,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00255">255</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>    {</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  258</span>        {</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ActPlan_8cs_source.html#l00860">ActPlan.Item.Perform()</a>.</p>
 
 </div>
 </div>
@@ -1690,6 +2151,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00131">131</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AIAct_8cs_source.html#l00284">AIAct.Start()</a>.</p>
 
 </div>
 </div>
@@ -1714,7 +2183,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00203">203</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  204</span>    {</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">return</span> base.source.radius;</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acdf795224d8935bcf4a0b447d1396886" name="acdf795224d8935bcf4a0b447d1396886"></a>
@@ -1738,7 +2213,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00365">365</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  366</span>    {</div>
+<div class="line"><span class="lineno">  367</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  368</span>        {</div>
+<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">return</span> 0.2f;</div>
+<div class="line"><span class="lineno">  370</span>        }</div>
+<div class="line"><span class="lineno">  371</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af12202f571b71c7c84a24673ff86c7e6" name="af12202f571b71c7c84a24673ff86c7e6"></a>
@@ -1762,7 +2243,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00171">171</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed2346babcab195d05adba634b22c7ac" name="aed2346babcab195d05adba634b22c7ac"></a>
@@ -1786,7 +2273,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00163">163</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a6bec2a89ab31933d46f72de2be42a0" name="a8a6bec2a89ab31933d46f72de2be42a0"></a>
@@ -1810,6 +2303,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00094">94</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AIAct_8cs_source.html#l00284">AIAct.Start()</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +2335,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00373">373</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  374</span>    {</div>
+<div class="line"><span class="lineno">  375</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  376</span>        {</div>
+<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  378</span>        }</div>
+<div class="line"><span class="lineno">  379</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6cf09c7b4e8dff2c81a72cd2056cfc7b" name="a6cf09c7b4e8dff2c81a72cd2056cfc7b"></a>
@@ -1858,7 +2365,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00110">110</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a54c5e837ccf53aba7533bd9344d4a9c8" name="a54c5e837ccf53aba7533bd9344d4a9c8"></a>
@@ -1882,7 +2395,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00118">118</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ace351a7886b31f50686d8309e0216669" name="ace351a7886b31f50686d8309e0216669"></a>
@@ -1906,7 +2425,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00007">7</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6a7ada09d3385883cf9c7ab69d3fb21" name="ac6a7ada09d3385883cf9c7ab69d3fb21"></a>
@@ -1930,7 +2455,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00023">23</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3b011668766e36997dcf0a9fd1483ec" name="aa3b011668766e36997dcf0a9fd1483ec"></a>
@@ -1954,6 +2485,92 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00271">271</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>    {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  274</span>        {</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">if</span> (!base.source.target.IsEmpty())</div>
+<div class="line"><span class="lineno">  276</span>            {</div>
+<div class="line"><span class="lineno">  277</span>                <span class="keywordtype">string</span> target = base.source.target;</div>
+<div class="line"><span class="lineno">  278</span>                uint num = &lt;PrivateImplementationDetails&gt;.ComputeStringHash(target);</div>
+<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">if</span> (num &lt;= 1049176909U)</div>
+<div class="line"><span class="lineno">  280</span>                {</div>
+<div class="line"><span class="lineno">  281</span>                    <span class="keywordflow">if</span> (num &lt;= 850565431U)</div>
+<div class="line"><span class="lineno">  282</span>                    {</div>
+<div class="line"><span class="lineno">  283</span>                        <span class="keywordflow">if</span> (num != 333403860U)</div>
+<div class="line"><span class="lineno">  284</span>                        {</div>
+<div class="line"><span class="lineno">  285</span>                            <span class="keywordflow">if</span> (num == 850565431U)</div>
+<div class="line"><span class="lineno">  286</span>                            {</div>
+<div class="line"><span class="lineno">  287</span>                                <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Party&quot;</span>)</div>
+<div class="line"><span class="lineno">  288</span>                                {</div>
+<div class="line"><span class="lineno">  289</span>                                    <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a618b878132f3de6549daa3cbb875a3d6">Party</a>;</div>
+<div class="line"><span class="lineno">  290</span>                                }</div>
+<div class="line"><span class="lineno">  291</span>                            }</div>
+<div class="line"><span class="lineno">  292</span>                        }</div>
+<div class="line"><span class="lineno">  293</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Chara&quot;</span>)</div>
+<div class="line"><span class="lineno">  294</span>                        {</div>
+<div class="line"><span class="lineno">  295</span>                            <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#abc0a3ab07b89466b44be340ecc482fd3">Chara</a>;</div>
+<div class="line"><span class="lineno">  296</span>                        }</div>
+<div class="line"><span class="lineno">  297</span>                    }</div>
+<div class="line"><span class="lineno">  298</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num != 1004962635U)</div>
+<div class="line"><span class="lineno">  299</span>                    {</div>
+<div class="line"><span class="lineno">  300</span>                        <span class="keywordflow">if</span> (num == 1049176909U)</div>
+<div class="line"><span class="lineno">  301</span>                        {</div>
+<div class="line"><span class="lineno">  302</span>                            <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Select&quot;</span>)</div>
+<div class="line"><span class="lineno">  303</span>                            {</div>
+<div class="line"><span class="lineno">  304</span>                                <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a385cf69faf4e7733501498540b560dba">Select</a>;</div>
+<div class="line"><span class="lineno">  305</span>                            }</div>
+<div class="line"><span class="lineno">  306</span>                        }</div>
+<div class="line"><span class="lineno">  307</span>                    }</div>
+<div class="line"><span class="lineno">  308</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Enemy&quot;</span>)</div>
+<div class="line"><span class="lineno">  309</span>                    {</div>
+<div class="line"><span class="lineno">  310</span>                        <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#aa0e0c028984089d7a8346a647e0be012">Enemy</a>;</div>
+<div class="line"><span class="lineno">  311</span>                    }</div>
+<div class="line"><span class="lineno">  312</span>                }</div>
+<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &lt;= 2648502281U)</div>
+<div class="line"><span class="lineno">  314</span>                {</div>
+<div class="line"><span class="lineno">  315</span>                    <span class="keywordflow">if</span> (num != 1480824651U)</div>
+<div class="line"><span class="lineno">  316</span>                    {</div>
+<div class="line"><span class="lineno">  317</span>                        <span class="keywordflow">if</span> (num == 2648502281U)</div>
+<div class="line"><span class="lineno">  318</span>                        {</div>
+<div class="line"><span class="lineno">  319</span>                            <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;SelfParty&quot;</span>)</div>
+<div class="line"><span class="lineno">  320</span>                            {</div>
+<div class="line"><span class="lineno">  321</span>                                <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a676da547d5dde78131336cbbea80d115">SelfParty</a>;</div>
+<div class="line"><span class="lineno">  322</span>                            }</div>
+<div class="line"><span class="lineno">  323</span>                        }</div>
+<div class="line"><span class="lineno">  324</span>                    }</div>
+<div class="line"><span class="lineno">  325</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Neighbor&quot;</span>)</div>
+<div class="line"><span class="lineno">  326</span>                    {</div>
+<div class="line"><span class="lineno">  327</span>                        <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a52a23a608e0950265bb7d54c22a33adb">SelfAndNeighbor</a>;</div>
+<div class="line"><span class="lineno">  328</span>                    }</div>
+<div class="line"><span class="lineno">  329</span>                }</div>
+<div class="line"><span class="lineno">  330</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num != 3803529630U)</div>
+<div class="line"><span class="lineno">  331</span>                {</div>
+<div class="line"><span class="lineno">  332</span>                    <span class="keywordflow">if</span> (num == 3834216855U)</div>
+<div class="line"><span class="lineno">  333</span>                    {</div>
+<div class="line"><span class="lineno">  334</span>                        <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Self&quot;</span>)</div>
+<div class="line"><span class="lineno">  335</span>                        {</div>
+<div class="line"><span class="lineno">  336</span>                            <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a046e95e5c766351eaa12c37f122e9c25">Self</a>;</div>
+<div class="line"><span class="lineno">  337</span>                        }</div>
+<div class="line"><span class="lineno">  338</span>                    }</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (target == <span class="stringliteral">&quot;Ground&quot;</span>)</div>
+<div class="line"><span class="lineno">  341</span>                {</div>
+<div class="line"><span class="lineno">  342</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#a132f574a471ae094e6b4166382977758">Ground</a>;</div>
+<div class="line"><span class="lineno">  343</span>                }</div>
+<div class="line"><span class="lineno">  344</span>            }</div>
+<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTargetType.html">TargetType</a>.<a class="code hl_variable" href="classTargetType.html#af1c7e3b04c71c23083fdbab2f5700aae">Any</a>;</div>
+<div class="line"><span class="lineno">  346</span>        }</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+<div class="ttc" id="aclassTargetType_html_a046e95e5c766351eaa12c37f122e9c25"><div class="ttname"><a href="classTargetType.html#a046e95e5c766351eaa12c37f122e9c25">TargetType.Self</a></div><div class="ttdeci">static TargetTypeSelf Self</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00096">TargetType.cs:96</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a132f574a471ae094e6b4166382977758"><div class="ttname"><a href="classTargetType.html#a132f574a471ae094e6b4166382977758">TargetType.Ground</a></div><div class="ttdeci">static TargetTypeGround Ground</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00104">TargetType.cs:104</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a385cf69faf4e7733501498540b560dba"><div class="ttname"><a href="classTargetType.html#a385cf69faf4e7733501498540b560dba">TargetType.Select</a></div><div class="ttdeci">static TargetTypeSelect Select</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00100">TargetType.cs:100</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a52a23a608e0950265bb7d54c22a33adb"><div class="ttname"><a href="classTargetType.html#a52a23a608e0950265bb7d54c22a33adb">TargetType.SelfAndNeighbor</a></div><div class="ttdeci">static TargetTypeSelfAndNeighbor SelfAndNeighbor</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00102">TargetType.cs:102</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a618b878132f3de6549daa3cbb875a3d6"><div class="ttname"><a href="classTargetType.html#a618b878132f3de6549daa3cbb875a3d6">TargetType.Party</a></div><div class="ttdeci">static TargetTypeParty Party</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00112">TargetType.cs:112</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a676da547d5dde78131336cbbea80d115"><div class="ttname"><a href="classTargetType.html#a676da547d5dde78131336cbbea80d115">TargetType.SelfParty</a></div><div class="ttdeci">static TargetTypeSelfParty SelfParty</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00098">TargetType.cs:98</a></div></div>
+<div class="ttc" id="aclassTargetType_html_aa0e0c028984089d7a8346a647e0be012"><div class="ttname"><a href="classTargetType.html#aa0e0c028984089d7a8346a647e0be012">TargetType.Enemy</a></div><div class="ttdeci">static TargetTypeEnemy Enemy</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00108">TargetType.cs:108</a></div></div>
+<div class="ttc" id="aclassTargetType_html_af1c7e3b04c71c23083fdbab2f5700aae"><div class="ttname"><a href="classTargetType.html#af1c7e3b04c71c23083fdbab2f5700aae">TargetType.Any</a></div><div class="ttdeci">static TargetTypeAny Any</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00094">TargetType.cs:94</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00542">Element._WriteNote()</a>, <a class="el" href="Act_82_8cs_source.html#l00445">CanPerform()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00031">TraitCatalyst.CanUse()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00008">ButtonAbility.SetAct()</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +2595,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00015">15</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa273cbc8aa3f7068d871c1b4a36ec5af" name="aa273cbc8aa3f7068d871c1b4a36ec5af"></a>
@@ -2002,16 +2625,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Act_82_8cs_source.html#l00070">70</a> of file <a class="el" href="Act_82_8cs_source.html">Act.2.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Act_82_8cs_source.html">Act.2.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAct.html">Act</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

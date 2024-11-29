@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemWidget.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -196,6 +216,42 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotItem.html#a70fde84034309bd884c98d694fc58444">HotItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemWidget_8cs_source.html#l00022">22</a> of file <a class="el" href="HotItemWidget_8cs_source.html">HotItemWidget.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (this.<span class="keywordtype">id</span> == <span class="stringliteral">&quot;QuestTracker&quot;</span>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a4a1b5ecc8497e06ebf50b4358ccc542a">questTracker</a>)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                EClass.player.questTracker = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>                SE.Tab();</div>
+<div class="line"><span class="lineno">   30</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;QuestTracker&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                EClass.player.questTracker = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>                <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_function" href="classWidgetQuestTracker.html#a9923ea0b27ee4c78f7c23eb98574061f">TryShow</a>();</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            SE.Tab();</div>
+<div class="line"><span class="lineno">   38</span>            b.<a class="code hl_function" href="classButtonHotItem.html#a1674bdcb510634d1af3c7779b1667d5c">RefreshItem</a>();</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classWidget.html">Widget</a> widget = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.widgets.Toggle(this.<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (widget == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        widget.<a class="code hl_function" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a>();</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassButtonHotItem_html_a1674bdcb510634d1af3c7779b1667d5c"><div class="ttname"><a href="classButtonHotItem.html#a1674bdcb510634d1af3c7779b1667d5c">ButtonHotItem.RefreshItem</a></div><div class="ttdeci">override void RefreshItem()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00015">ButtonHotItem.cs:15</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a4a1b5ecc8497e06ebf50b4358ccc542a"><div class="ttname"><a href="classPlayer.html#a4a1b5ecc8497e06ebf50b4358ccc542a">Player.questTracker</a></div><div class="ttdeci">bool questTracker</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01434">Player.cs:1434</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00005">WidgetQuestTracker.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a9923ea0b27ee4c78f7c23eb98574061f"><div class="ttname"><a href="classWidgetQuestTracker.html#a9923ea0b27ee4c78f7c23eb98574061f">WidgetQuestTracker.TryShow</a></div><div class="ttdeci">static bool TryShow()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00072">WidgetQuestTracker.cs:72</a></div></div>
+<div class="ttc" id="aclassWidget_html"><div class="ttname"><a href="classWidget.html">Widget</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00007">Widget.cs:8</a></div></div>
+<div class="ttc" id="aclassWidget_html_ac6533dcab2a91d1122bc393e017d9f44"><div class="ttname"><a href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">Widget.SoundActivate</a></div><div class="ttdeci">void SoundActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00629">Widget.cs:629</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01434">Player.questTracker</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00015">ButtonHotItem.RefreshItem()</a>, <a class="el" href="Widget_8cs_source.html#l00629">Widget.SoundActivate()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00072">WidgetQuestTracker.TryShow()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -213,6 +269,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemWidget_8cs_source.html#l00050">50</a> of file <a class="el" href="HotItemWidget_8cs_source.html">HotItemWidget.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00098">WidgetCodex.Update()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +296,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemWidget_8cs_source.html#l00006">6</a> of file <a class="el" href="HotItemWidget_8cs_source.html">HotItemWidget.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> (<span class="stringliteral">&quot;Widget&quot;</span> + this.<span class="keywordtype">id</span>).lang();</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8ec5a89dee4732633e73ec0ac81decc6" name="a8ec5a89dee4732633e73ec0ac81decc6"></a>
@@ -262,16 +326,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemWidget_8cs_source.html#l00014">14</a> of file <a class="el" href="HotItemWidget_8cs_source.html">HotItemWidget.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_&quot;</span> + this.id + ((this.id == <span class="stringliteral">&quot;QuestTracker&quot;</span> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a4a1b5ecc8497e06ebf50b4358ccc542a">questTracker</a>) ? <span class="stringliteral">&quot;_inactive&quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemWidget_8cs_source.html">HotItemWidget.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemWidget.html">HotItemWidget</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

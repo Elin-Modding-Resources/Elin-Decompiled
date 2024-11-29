@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classPortrait.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -196,6 +216,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00076">76</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">modPortraits</a>.dict.ContainsKey(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00008">Portrait.cs:9</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a71c6dec896e9f7e2c5a83144a54775ce"><div class="ttname"><a href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">Portrait.modPortraits</a></div><div class="ttdeci">static ModItemList&lt; Sprite &gt; modPortraits</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00228">Portrait.cs:228</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00228">modPortraits</a>.</p>
 
 </div>
 </div>
@@ -234,6 +261,22 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00211">211</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>    {</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (!s || !A_2.isPortrait)</div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>        s.texture.wrapMode = TextureWrapMode.Clamp;</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (s.texture.filterMode != <span class="keyword">this</span>.filter)</div>
+<div class="line"><span class="lineno">  219</span>        {</div>
+<div class="line"><span class="lineno">  220</span>            s.texture.filterMode = this.<a class="code hl_variable" href="classPortrait.html#a6e693e68fa642404dffbde2f4ed117af">filter</a>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
+<div class="ttc" id="aclassPortrait_html_a6e693e68fa642404dffbde2f4ed117af"><div class="ttname"><a href="classPortrait.html#a6e693e68fa642404dffbde2f4ed117af">Portrait.filter</a></div><div class="ttdeci">FilterMode filter</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00262">Portrait.cs:262</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00262">filter</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00175">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -272,6 +315,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00071">71</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(gender, cat).RandomItem&lt;ModItem&lt;Sprite&gt;&gt;().<span class="keywordtype">id</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassPortrait_html_a2d9b53ffbff9fc593ece5684a10e119c"><div class="ttname"><a href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">Portrait.ListPortraits</a></div><div class="ttdeci">static List&lt; ModItem&lt; Sprite &gt; &gt; ListPortraits(string idDict)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00020">Portrait.cs:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00020">ListPortraits()</a>.</p>
 
 </div>
 </div>
@@ -300,6 +349,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00066">66</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(idDict).RandomItem&lt;ModItem&lt;Sprite&gt;&gt;().<span class="keywordtype">id</span>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00020">ListPortraits()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01644">Chara.ApplyEditorTags()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00375">UICharaMaker.ListGender()</a>, and <a class="el" href="Biography_8cs_source.html#l00481">Biography.SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -338,6 +394,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00010">10</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(gender, <span class="stringliteral">&quot;c&quot;</span>).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(gender, <span class="stringliteral">&quot;guard&quot;</span>)).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(gender, <span class="stringliteral">&quot;special&quot;</span>)).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(gender, <span class="stringliteral">&quot;foxfolk&quot;</span>)).ToList&lt;ModItem&lt;Sprite&gt;&gt;();</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (nullPortrait)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            list.Insert(0, <span class="keyword">new</span> ModItem&lt;Sprite&gt;(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00020">ListPortraits()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00130">LayerEditPCC.SetPortraitSlider()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00404">UICharaMaker.SetPortraitSlider()</a>.</p>
 
 </div>
 </div>
@@ -376,6 +444,35 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00038">38</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (cat.IsEmpty())</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            cat = <span class="stringliteral">&quot;c&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">string</span> key = cat + gender.ToString();</div>
+<div class="line"><span class="lineno">   45</span>        List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a">dictList</a>.TryGetValue(key, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (list == <span class="keyword">null</span> || list.Count == 0)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            list = <span class="keyword">new</span> List&lt;ModItem&lt;Sprite&gt;&gt;();</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">foreach</span> (ModItem&lt;Sprite&gt; modItem <span class="keywordflow">in</span> <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">modPortraits</a>.list)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordtype">string</span>[] array = modItem.id.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0].Split(<span class="charliteral">&#39;_&#39;</span>, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (!(array[0] != cat))</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    <span class="keywordtype">int</span> num = (array.Length &gt; 1) ? ((array[1] == <span class="stringliteral">&quot;m&quot;</span>) ? 2 : ((array[1] == <span class="stringliteral">&quot;f&quot;</span>) ? 1 : 0)) : 0;</div>
+<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">if</span> (num == 0 || gender == 0 || gender == num)</div>
+<div class="line"><span class="lineno">   56</span>                    {</div>
+<div class="line"><span class="lineno">   57</span>                        list.Add(modItem);</div>
+<div class="line"><span class="lineno">   58</span>                    }</div>
+<div class="line"><span class="lineno">   59</span>                }</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a">dictList</a>.Add(key, list);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassPortrait_html_a5623a5a1ed74ec3961c2b238a13e513a"><div class="ttname"><a href="classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a">Portrait.dictList</a></div><div class="ttdeci">static Dictionary&lt; string, List&lt; ModItem&lt; Sprite &gt; &gt; &gt; dictList</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00234">Portrait.cs:234</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00234">dictList</a>, and <a class="el" href="Portrait_8cs_source.html#l00228">modPortraits</a>.</p>
 
 </div>
 </div>
@@ -404,6 +501,26 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00020">20</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a">dictList</a>.TryGetValue(idDict, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (list == <span class="keyword">null</span> || list.Count == 0)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            list = <span class="keyword">new</span> List&lt;ModItem&lt;Sprite&gt;&gt;();</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">foreach</span> (ModItem&lt;Sprite&gt; modItem <span class="keywordflow">in</span> <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">modPortraits</a>.list)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">if</span> (modItem.id.Contains(idDict))</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    list.Add(modItem);</div>
+<div class="line"><span class="lineno">   31</span>                }</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a">dictList</a>.Add(idDict, list);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00234">dictList</a>, and <a class="el" href="Portrait_8cs_source.html#l00228">modPortraits</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00066">GetRandomPortrait()</a>, and <a class="el" href="Portrait_8cs_source.html#l00010">ListPlayerPortraits()</a>.</p>
 
 </div>
 </div>
@@ -442,6 +559,99 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00098">98</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        this.portrait.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>        this.overlay.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#a966b7593d2d3aa7c2db2be19048ddb5b">imageChara</a>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            this.imageChara.sprite = c.<a class="code hl_function" href="classChara.html#a31e3607407ceca2ee3efda372846f647">GetSprite</a>(0);</div>
+<div class="line"><span class="lineno">  105</span>            this.<a class="code hl_variable" href="classPortrait.html#a966b7593d2d3aa7c2db2be19048ddb5b">imageChara</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#a4303f71a047c4523e52967d1f056e493">fixSpritePos</a>)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                this.imageChara.transform.localScale = (c.IsPCC ? <span class="keyword">new</span> Vector3(1.3f, 1.4f, 1f) : new Vector3(1f, 1f, 1f)) * this.<a class="code hl_variable" href="classPortrait.html#aa1956585ac18ef116e06058981e04d10">charaScale</a>;</div>
+<div class="line"><span class="lineno">  109</span>                this.imageChara.rectTransform.pivot = (c.IsPCC ? <span class="keyword">new</span> Vector2(0.5f, 0.4f) : new Vector2(0.5f, 0.2f));</div>
+<div class="line"><span class="lineno">  110</span>                this.imageChara.rectTransform.anchoredPosition = (c.IsPCC ? <span class="keyword">new</span> Vector2(-25f, 20f) : new Vector2(-25f, 20f));</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#a57840e843523c61fa3087f0f2624e2d2">imageFaith</a>)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            this.imageFaith.sprite = c.<a class="code hl_property" href="classChara.html#ac3123758210191c800b2d93178d521c4">faith</a>.<a class="code hl_function" href="classReligion.html#aa33fae656eeba673f7276f240fddc01b">GetSprite</a>();</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_function" href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">GetIdPortrait</a>().IsEmpty() &amp;&amp; <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">modPortraits</a>.GetItem(c.<a class="code hl_function" href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">GetIdPortrait</a>(), <span class="keyword">true</span>) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (pccData == <span class="keyword">null</span> &amp;&amp; c.<a class="code hl_property" href="classChara.html#a8cb247fc5bb52c33dc793b4ef367426d">isChara</a>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                pccData = c.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>;</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> colorOverlay = (pccData != <span class="keyword">null</span>) ? pccData.GetHairColor(<span class="keyword">true</span>) : <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
+<div class="line"><span class="lineno">  124</span>            this.overlay.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (pccData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(105, <span class="keyword">null</span>) != 0)</div>
+<div class="line"><span class="lineno">  128</span>                {</div>
+<div class="line"><span class="lineno">  129</span>                    colorOverlay = IntColor.FromInt(c.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(105, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    Rand.SetSeed(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
+<div class="line"><span class="lineno">  134</span>                    colorOverlay = PCCManager.current.GetBodySet(<span class="stringliteral">&quot;female&quot;</span>).map[<span class="stringliteral">&quot;hair&quot;</span>].GetRandomColor();</div>
+<div class="line"><span class="lineno">  135</span>                    Rand.SetSeed(-1);</div>
+<div class="line"><span class="lineno">  136</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;shojo&quot;</span>)</div>
+<div class="line"><span class="lineno">  137</span>                    {</div>
+<div class="line"><span class="lineno">  138</span>                        this.overlay.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  139</span>                    }</div>
+<div class="line"><span class="lineno">  140</span>                }</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span>            this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(c.<a class="code hl_function" href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">GetIdPortrait</a>(), colorOverlay);</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#a6e10599b20d98eafe256d9b43102bf14">hideIfNoPortrait</a>)</div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            this.portrait.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  148</span>            this.overlay.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  150</span>        }</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#a3b80692a0194947b55f0054f6287d095">spriteNoPortrait</a>)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(<span class="keyword">false</span>, this.<a class="code hl_variable" href="classPortrait.html#a3b80692a0194947b55f0054f6287d095">spriteNoPortrait</a>, <span class="keyword">null</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(<span class="keyword">false</span>, c.<a class="code hl_function" href="classChara.html#a31e3607407ceca2ee3efda372846f647">GetSprite</a>(0), <span class="keyword">null</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  157</span>        c.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>);</div>
+<div class="line"><span class="lineno">  158</span>        this.portrait.transform.localScale = <span class="keyword">new</span> Vector3(1f, 1f, 1f);</div>
+<div class="line"><span class="lineno">  159</span>        this.portrait.preserveAspect = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  160</span>        this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">  161</span>        this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>.Rect().SetAnchor(0.5f, 0f, 0.5f, 0f);</div>
+<div class="line"><span class="lineno">  162</span>        this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>.Rect().SetPivot(0.5f, 0f);</div>
+<div class="line"><span class="lineno">  163</span>        this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(0f, 0f);</div>
+<div class="line"><span class="lineno">  164</span>        this.portrait.material = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.matUIPortraitChara;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00017">BaseCard.cs:17</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05467">Card.cs:5467</a></div></div>
+<div class="ttc" id="aclassChara_html_a31e3607407ceca2ee3efda372846f647"><div class="ttname"><a href="classChara.html#a31e3607407ceca2ee3efda372846f647">Chara.GetSprite</a></div><div class="ttdeci">override Sprite GetSprite(int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05945">Chara.cs:5945</a></div></div>
+<div class="ttc" id="aclassChara_html_a8cb247fc5bb52c33dc793b4ef367426d"><div class="ttname"><a href="classChara.html#a8cb247fc5bb52c33dc793b4ef367426d">Chara.isChara</a></div><div class="ttdeci">override bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00580">Chara.cs:581</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3123758210191c800b2d93178d521c4"><div class="ttname"><a href="classChara.html#ac3123758210191c800b2d93178d521c4">Chara.faith</a></div><div class="ttdeci">Religion faith</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00262">Chara.cs:263</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a0d547b42414135e4f3f721f4602d8"><div class="ttname"><a href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">Chara.GetIdPortrait</a></div><div class="ttdeci">string GetIdPortrait()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07220">Chara.cs:7220</a></div></div>
+<div class="ttc" id="aclassChara_html_ae316a7097e7b696f2f018df973b16224"><div class="ttname"><a href="classChara.html#ae316a7097e7b696f2f018df973b16224">Chara.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09383">Chara.cs:9383</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a3b80692a0194947b55f0054f6287d095"><div class="ttname"><a href="classPortrait.html#a3b80692a0194947b55f0054f6287d095">Portrait.spriteNoPortrait</a></div><div class="ttdeci">Sprite spriteNoPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00250">Portrait.cs:250</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a4303f71a047c4523e52967d1f056e493"><div class="ttname"><a href="classPortrait.html#a4303f71a047c4523e52967d1f056e493">Portrait.fixSpritePos</a></div><div class="ttdeci">bool fixSpritePos</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00256">Portrait.cs:256</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a57840e843523c61fa3087f0f2624e2d2"><div class="ttname"><a href="classPortrait.html#a57840e843523c61fa3087f0f2624e2d2">Portrait.imageFaith</a></div><div class="ttdeci">Image imageFaith</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00244">Portrait.cs:244</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a6357c084c9ade6420ea5f572af2d1fa8"><div class="ttname"><a href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">Portrait.portrait</a></div><div class="ttdeci">Image portrait</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00238">Portrait.cs:238</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a6e10599b20d98eafe256d9b43102bf14"><div class="ttname"><a href="classPortrait.html#a6e10599b20d98eafe256d9b43102bf14">Portrait.hideIfNoPortrait</a></div><div class="ttdeci">bool hideIfNoPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00254">Portrait.cs:254</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a966b7593d2d3aa7c2db2be19048ddb5b"><div class="ttname"><a href="classPortrait.html#a966b7593d2d3aa7c2db2be19048ddb5b">Portrait.imageChara</a></div><div class="ttdeci">Image imageChara</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00242">Portrait.cs:242</a></div></div>
+<div class="ttc" id="aclassPortrait_html_aa1956585ac18ef116e06058981e04d10"><div class="ttname"><a href="classPortrait.html#aa1956585ac18ef116e06058981e04d10">Portrait.charaScale</a></div><div class="ttdeci">float charaScale</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00260">Portrait.cs:260</a></div></div>
+<div class="ttc" id="aclassPortrait_html_ad9403f77aaa725cf008a85c1b7558f14"><div class="ttname"><a href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">Portrait.SetPortrait</a></div><div class="ttdeci">void SetPortrait(string id, Color colorOverlay=default(Color))</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00167">Portrait.cs:167</a></div></div>
+<div class="ttc" id="aclassReligion_html_aa33fae656eeba673f7276f240fddc01b"><div class="ttname"><a href="classReligion.html#aa33fae656eeba673f7276f240fddc01b">Religion.GetSprite</a></div><div class="ttdeci">Sprite GetSprite()</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00143">Religion.cs:143</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02016">Card.Chara</a>, <a class="el" href="Portrait_8cs_source.html#l00260">charaScale</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Chara_8cs_source.html#l00263">Chara.faith</a>, <a class="el" href="Portrait_8cs_source.html#l00256">fixSpritePos</a>, <a class="el" href="Chara_8cs_source.html#l07220">Chara.GetIdPortrait()</a>, <a class="el" href="BaseCard_8cs_source.html#l00017">BaseCard.GetInt()</a>, <a class="el" href="Religion_8cs_source.html#l00143">Religion.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l05945">Chara.GetSprite()</a>, <a class="el" href="Portrait_8cs_source.html#l00254">hideIfNoPortrait</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.id</a>, <a class="el" href="Portrait_8cs_source.html#l00242">imageChara</a>, <a class="el" href="Portrait_8cs_source.html#l00244">imageFaith</a>, <a class="el" href="Chara_8cs_source.html#l00581">Chara.isChara</a>, <a class="el" href="Portrait_8cs_source.html#l00228">modPortraits</a>, <a class="el" href="Chara_8cs_source.html#l09383">Chara.pccData</a>, <a class="el" href="Portrait_8cs_source.html#l00238">portrait</a>, <a class="el" href="Card_8cs_source.html#l05467">Card.SetImage()</a>, <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>, <a class="el" href="Portrait_8cs_source.html#l00250">spriteNoPortrait</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00375">UICharaMaker.ListGender()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00426">UICharaMaker.RerollHair()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00419">UICharaMaker.RerollPCC()</a>, <a class="el" href="ButtonGeneral_8cs_source.html#l00006">ButtonGeneral.SetCard()</a>, <a class="el" href="ButtonRoster_8cs_source.html#l00016">ButtonRoster.SetChara()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00007">ButtonChara.SetChara()</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00008">ItemGachaResult.SetChara()</a>, <a class="el" href="Portrait_8cs_source.html#l00081">SetPerson()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">LayerEditPCC.SetPortraitSlider()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00404">UICharaMaker.SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00108">LayerEditPCC.Update()</a>.</p>
 
 </div>
 </div>
@@ -470,6 +680,31 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00081">81</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPerson.html#a2b4f80c4f959f19f3acd1c84cde8005d">hasChara</a>)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            this.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(p.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (!p.<a class="code hl_variable" href="classPerson.html#a189b5a854df35af35737d6742881d5d5">idPortrait</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            Rand.SetSeed(p.<a class="code hl_variable" href="classPerson.html#a48ead807524929387f07c9651cc199d0">uidChara</a>);</div>
+<div class="line"><span class="lineno">   91</span>            this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(p.<a class="code hl_variable" href="classPerson.html#a189b5a854df35af35737d6742881d5d5">idPortrait</a>, PCCManager.current.GetBodySet(<span class="stringliteral">&quot;female&quot;</span>).map[<span class="stringliteral">&quot;hair&quot;</span>].GetRandomColor());</div>
+<div class="line"><span class="lineno">   92</span>            Rand.SetSeed(-1);</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(p.<a class="code hl_property" href="classPerson.html#a1635bde36b950ccede881e57334f826f">source</a>.portrait, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>));</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aclassPerson_html_a1635bde36b950ccede881e57334f826f"><div class="ttname"><a href="classPerson.html#a1635bde36b950ccede881e57334f826f">Person.source</a></div><div class="ttdeci">SourcePerson.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00008">Person.cs:9</a></div></div>
+<div class="ttc" id="aclassPerson_html_a189b5a854df35af35737d6742881d5d5"><div class="ttname"><a href="classPerson.html#a189b5a854df35af35737d6742881d5d5">Person.idPortrait</a></div><div class="ttdeci">string idPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00200">Person.cs:200</a></div></div>
+<div class="ttc" id="aclassPerson_html_a2b4f80c4f959f19f3acd1c84cde8005d"><div class="ttname"><a href="classPerson.html#a2b4f80c4f959f19f3acd1c84cde8005d">Person.hasChara</a></div><div class="ttdeci">bool hasChara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00024">Person.cs:25</a></div></div>
+<div class="ttc" id="aclassPerson_html_a48ead807524929387f07c9651cc199d0"><div class="ttname"><a href="classPerson.html#a48ead807524929387f07c9651cc199d0">Person.uidChara</a></div><div class="ttdeci">int uidChara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00209">Person.cs:209</a></div></div>
+<div class="ttc" id="aclassPerson_html_af1c76454a0f955a04399ee141036afae"><div class="ttname"><a href="classPerson.html#af1c76454a0f955a04399ee141036afae">Person.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00016">Person.cs:17</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00098">Portrait.cs:98</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Person_8cs_source.html#l00017">Person.chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Person_8cs_source.html#l00025">Person.hasChara</a>, <a class="el" href="Person_8cs_source.html#l00200">Person.idPortrait</a>, <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>, <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>, <a class="el" href="Person_8cs_source.html#l00009">Person.source</a>, and <a class="el" href="Person_8cs_source.html#l00209">Person.uidChara</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">ContentQuest.SelectQuest()</a>, <a class="el" href="ItemQuest_8cs_source.html#l00006">ItemQuest.SetQuest()</a>, and <a class="el" href="DramaActor_8cs_source.html#l00024">DramaActor.Talk()</a>.</p>
 
 </div>
 </div>
@@ -526,6 +761,50 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00175">175</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>    {</div>
+<div class="line"><span class="lineno">  177</span>        <a class="code hl_class" href="classPortrait.html">Portrait</a>.&lt;&gt;c__DisplayClass29_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  178</span>        CS$&lt;&gt;8__locals1.isPortrait = isPortrait;</div>
+<div class="line"><span class="lineno">  179</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  180</span>        this.filter = ((CS$&lt;&gt;8__locals1.isPortrait &amp;&amp; <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">test</a>.aaPortrait) ? FilterMode.Bilinear : FilterMode.Point);</div>
+<div class="line"><span class="lineno">  181</span>        this.portrait.rectTransform.anchorMin = this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>.rectTransform.anchorMin;</div>
+<div class="line"><span class="lineno">  182</span>        this.portrait.rectTransform.anchorMax = this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>.rectTransform.anchorMax;</div>
+<div class="line"><span class="lineno">  183</span>        this.portrait.rectTransform.sizeDelta = this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>.rectTransform.sizeDelta;</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (spritePortrait)</div>
+<div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            this.portrait.sprite = spritePortrait;</div>
+<div class="line"><span class="lineno">  187</span>            this.&lt;<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>&gt;<a class="code hl_function" href="classPortrait.html#a9fd36e32fb86d6fb2a7b446d4f475e24">g__FixTexture</a>|29_0(spritePortrait, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>)</div>
+<div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            this.&lt;<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>&gt;<a class="code hl_function" href="classPortrait.html#a9fd36e32fb86d6fb2a7b446d4f475e24">g__FixTexture</a>|29_0(spriteOverlay, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  192</span>            this.overlay.sprite = spriteOverlay;</div>
+<div class="line"><span class="lineno">  193</span>            this.overlay.color = <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(colorOverlay.r * 1.1f, colorOverlay.g * 1.1f, colorOverlay.b * 1.1f, colorOverlay.a);</div>
+<div class="line"><span class="lineno">  194</span>            this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>.SetActive(spriteOverlay);</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPortrait.html#af6b4340b5c9d59557ecb534c8c26d0e5">enableFull</a> &amp;&amp; this.<a class="code hl_variable" href="classPortrait.html#aefb1064e6f6b06b3c09b9d1c3b0d3b47">imageFull</a>)</div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            this.&lt;<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>&gt;<a class="code hl_function" href="classPortrait.html#a9fd36e32fb86d6fb2a7b446d4f475e24">g__FixTexture</a>|29_0(spriteFull, ref CS$&lt;&gt;8__locals1);</div>
+<div class="line"><span class="lineno">  199</span>            this.imageFull.sprite = spriteFull;</div>
+<div class="line"><span class="lineno">  200</span>            base.gameObject.SetActive(!spriteFull);</div>
+<div class="line"><span class="lineno">  201</span>            this.<a class="code hl_variable" href="classPortrait.html#aefb1064e6f6b06b3c09b9d1c3b0d3b47">imageFull</a>.SetActive(spriteFull);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classPortrait.html#a6553d9b1a0cc36d0f889676e553a95ae">showPortrait</a>)</div>
+<div class="line"><span class="lineno">  204</span>        {</div>
+<div class="line"><span class="lineno">  205</span>            this.<a class="code hl_variable" href="classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8">portrait</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  206</span>            this.<a class="code hl_variable" href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">overlay</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a3473cfb2e2f51c663a6f620302fb2014"><div class="ttname"><a href="classCoreConfig.html#a3473cfb2e2f51c663a6f620302fb2014">CoreConfig.test</a></div><div class="ttdeci">CoreConfig.Test test</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00454">CoreConfig.cs:454</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
+<div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00744">Core.cs:744</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a6553d9b1a0cc36d0f889676e553a95ae"><div class="ttname"><a href="classPortrait.html#a6553d9b1a0cc36d0f889676e553a95ae">Portrait.showPortrait</a></div><div class="ttdeci">bool showPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00258">Portrait.cs:258</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a9fd36e32fb86d6fb2a7b446d4f475e24"><div class="ttname"><a href="classPortrait.html#a9fd36e32fb86d6fb2a7b446d4f475e24">Portrait.g__FixTexture</a></div><div class="ttdeci">void&lt; SetPortrait &gt; g__FixTexture(Sprite s, ref Portrait.&lt;&gt;c__DisplayClass29_0 A_2)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00211">Portrait.cs:211</a></div></div>
+<div class="ttc" id="aclassPortrait_html_aefb1064e6f6b06b3c09b9d1c3b0d3b47"><div class="ttname"><a href="classPortrait.html#aefb1064e6f6b06b3c09b9d1c3b0d3b47">Portrait.imageFull</a></div><div class="ttdeci">Image imageFull</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00246">Portrait.cs:246</a></div></div>
+<div class="ttc" id="aclassPortrait_html_af6b4340b5c9d59557ecb534c8c26d0e5"><div class="ttname"><a href="classPortrait.html#af6b4340b5c9d59557ecb534c8c26d0e5">Portrait.enableFull</a></div><div class="ttdeci">bool enableFull</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00252">Portrait.cs:252</a></div></div>
+<div class="ttc" id="aclassPortrait_html_af76ca65889dbcee633baa2e5756c0d53"><div class="ttname"><a href="classPortrait.html#af76ca65889dbcee633baa2e5756c0d53">Portrait.overlay</a></div><div class="ttdeci">Image overlay</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00240">Portrait.cs:240</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Portrait_8cs_source.html#l00252">enableFull</a>, <a class="el" href="Portrait_8cs_source.html#l00211">g__FixTexture()</a>, <a class="el" href="Portrait_8cs_source.html#l00246">imageFull</a>, <a class="el" href="Portrait_8cs_source.html#l00240">overlay</a>, <a class="el" href="Portrait_8cs_source.html#l00238">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>, and <a class="el" href="Portrait_8cs_source.html#l00258">showPortrait</a>.</p>
 
 </div>
 </div>
@@ -564,6 +843,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00167">167</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>    {</div>
+<div class="line"><span class="lineno">  169</span>        Sprite @<span class="keywordtype">object</span> = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a71c6dec896e9f7e2c5a83144a54775ce">modPortraits</a>.GetItem(<span class="keywordtype">id</span>, <span class="keyword">false</span>).GetObject(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  170</span>        Sprite object2 = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#a70d7127c05c1cb0feded1729703d29c9">modOverlays</a>.GetObject(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;-overlay&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  171</span>        Sprite spriteFull = (this.enableFull &amp;&amp; this.<a class="code hl_variable" href="classPortrait.html#aefb1064e6f6b06b3c09b9d1c3b0d3b47">imageFull</a>) ? <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_variable" href="classPortrait.html#aa853dca9a42c976efd791778749f0727">modFull</a>.GetObject(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;-full&quot;</span>, <span class="keyword">null</span>) : <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  172</span>        this.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(<span class="keyword">true</span>, @<span class="keywordtype">object</span>, object2, colorOverlay, spriteFull);</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="ttc" id="aclassPortrait_html_a70d7127c05c1cb0feded1729703d29c9"><div class="ttname"><a href="classPortrait.html#a70d7127c05c1cb0feded1729703d29c9">Portrait.modOverlays</a></div><div class="ttdeci">static ModItemList&lt; Sprite &gt; modOverlays</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00230">Portrait.cs:230</a></div></div>
+<div class="ttc" id="aclassPortrait_html_aa853dca9a42c976efd791778749f0727"><div class="ttname"><a href="classPortrait.html#aa853dca9a42c976efd791778749f0727">Portrait.modFull</a></div><div class="ttdeci">static ModItemList&lt; Sprite &gt; modFull</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00232">Portrait.cs:232</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Portrait_8cs_source.html#l00246">imageFull</a>, <a class="el" href="Portrait_8cs_source.html#l00232">modFull</a>, <a class="el" href="Portrait_8cs_source.html#l00230">modOverlays</a>, <a class="el" href="Portrait_8cs_source.html#l00228">modPortraits</a>, and <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>, <a class="el" href="Portrait_8cs_source.html#l00081">SetPerson()</a>, and <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -590,6 +881,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00236">236</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07220">Chara.GetIdPortrait()</a>, and <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>.</p>
+
 </div>
 </div>
 <a id="aa1956585ac18ef116e06058981e04d10" name="aa1956585ac18ef116e06058981e04d10"></a>
@@ -605,6 +898,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00260">260</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -630,6 +925,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00234">234</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00020">ListPortraits()</a>.</p>
+
 </div>
 </div>
 <a id="af6b4340b5c9d59557ecb534c8c26d0e5" name="af6b4340b5c9d59557ecb534c8c26d0e5"></a>
@@ -645,6 +942,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00252">252</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00175">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -670,6 +969,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00262">262</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00211">g__FixTexture()</a>.</p>
+
 </div>
 </div>
 <a id="a4303f71a047c4523e52967d1f056e493" name="a4303f71a047c4523e52967d1f056e493"></a>
@@ -685,6 +986,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00256">256</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -702,6 +1005,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00254">254</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="a966b7593d2d3aa7c2db2be19048ddb5b" name="a966b7593d2d3aa7c2db2be19048ddb5b"></a>
@@ -718,6 +1023,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00242">242</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="a57840e843523c61fa3087f0f2624e2d2" name="a57840e843523c61fa3087f0f2624e2d2"></a>
@@ -733,6 +1040,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00244">244</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -766,6 +1075,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00246">246</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
+
 </div>
 </div>
 <a id="aa853dca9a42c976efd791778749f0727" name="aa853dca9a42c976efd791778749f0727"></a>
@@ -789,6 +1100,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00232">232</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>, and <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -814,6 +1127,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00230">230</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>, and <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
+
 </div>
 </div>
 <a id="a0de72798be328261c73607c51a1ac540" name="a0de72798be328261c73607c51a1ac540"></a>
@@ -837,6 +1152,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00224">224</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00081">WindowChara.SetPortraitFrame()</a>.</p>
 
 </div>
 </div>
@@ -862,6 +1179,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00226">226</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>, <a class="el" href="WindowChara_8cs_source.html#l00112">WindowChara.RefreshStatic()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00069">WindowChara.SetPortraitBG()</a>.</p>
+
 </div>
 </div>
 <a id="a71c6dec896e9f7e2c5a83144a54775ce" name="a71c6dec896e9f7e2c5a83144a54775ce"></a>
@@ -886,6 +1205,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00228">228</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00076">Exists()</a>, <a class="el" href="Portrait_8cs_source.html#l00020">ListPortraits()</a>, <a class="el" href="ModManager_8cs_source.html#l00376">ModManager.ParseExtra()</a>, <a class="el" href="Person_8cs_source.html#l00099">Person.Person()</a>, <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>, and <a class="el" href="Portrait_8cs_source.html#l00167">SetPortrait()</a>.</p>
+
 </div>
 </div>
 <a id="af76ca65889dbcee633baa2e5756c0d53" name="af76ca65889dbcee633baa2e5756c0d53"></a>
@@ -901,6 +1222,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00240">240</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00175">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -918,6 +1241,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00238">238</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>, and <a class="el" href="Portrait_8cs_source.html#l00175">SetPortrait()</a>.</p>
+
 </div>
 </div>
 <a id="a6553d9b1a0cc36d0f889676e553a95ae" name="a6553d9b1a0cc36d0f889676e553a95ae"></a>
@@ -933,6 +1258,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00258">258</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00175">SetPortrait()</a>.</p>
 
 </div>
 </div>
@@ -950,15 +1277,21 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Portrait_8cs_source.html#l00250">250</a> of file <a class="el" href="Portrait_8cs_source.html">Portrait.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Portrait_8cs_source.html#l00098">SetChara()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Portrait_8cs_source.html">Portrait.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classPortrait.html">Portrait</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

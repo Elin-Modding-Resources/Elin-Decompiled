@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Select.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -533,6 +553,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00015">15</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (!base.IsActive)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">using</span> (List&lt;InspectGroup&gt;.Enumerator enumerator = base.Summary.groups.GetEnumerator())</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> (enumerator.Current is <a class="code hl_class" href="classInspectGroupBlock.html">InspectGroupBlock</a>)</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   28</span>                }</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassInspectGroupBlock_html"><div class="ttname"><a href="classInspectGroupBlock.html">InspectGroupBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="InspectGroupBlock_8cs_source.html#l00003">InspectGroupBlock.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
 
 </div>
 </div>
@@ -579,6 +619,52 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a3fd4c23e2b136a91c8ff5accb7942ef4">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00058">58</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#a156a0afded1c66563745baa397261a4a">IsSeen</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">foreach</span> (<a class="code hl_interface" href="interfaceIInspect.html">IInspect</a> inspect <span class="keywordflow">in</span> point.<a class="code hl_function" href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">ListInspectorTargets</a>())</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (!(inspect is <a class="code hl_class" href="classArea.html">Area</a>) &amp;&amp; inspect.<a class="code hl_property" href="interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f">CanInspect</a>)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                Type type = inspect.GetType();</div>
+<div class="line"><span class="lineno">   69</span>                <a class="code hl_class" href="classInspectGroup.html">InspectGroup</a> inspectGroup = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classInspectGroup.html">InspectGroup</a> inspectGroup2 <span class="keywordflow">in</span> summary.<a class="code hl_variable" href="classHitSummary.html#a8a06ee66876b1c6a96115b4d3108ad54">groups</a>)</div>
+<div class="line"><span class="lineno">   71</span>                {</div>
+<div class="line"><span class="lineno">   72</span>                    <span class="keywordflow">if</span> (inspectGroup2.<a class="code hl_variable" href="classInspectGroup.html#a9605303211fdabb3f3633f29c3c70443">type</a>.Equals(type))</div>
+<div class="line"><span class="lineno">   73</span>                    {</div>
+<div class="line"><span class="lineno">   74</span>                        inspectGroup = inspectGroup2;</div>
+<div class="line"><span class="lineno">   75</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   76</span>                    }</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (inspectGroup == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   79</span>                {</div>
+<div class="line"><span class="lineno">   80</span>                    inspectGroup = <a class="code hl_class" href="classInspectGroup.html">InspectGroup</a>.<a class="code hl_function" href="classInspectGroup.html#adabacf0d555972b4fd33fe9f1d98b5c4">Create</a>(inspect);</div>
+<div class="line"><span class="lineno">   81</span>                    summary.<a class="code hl_variable" href="classHitSummary.html#a8a06ee66876b1c6a96115b4d3108ad54">groups</a>.Add(inspectGroup);</div>
+<div class="line"><span class="lineno">   82</span>                }</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!inspectGroup.<a class="code hl_function" href="classInspectGroup.html#a2bb5f8bb305510884ae22010e8f444a0">Contains</a>(inspect))</div>
+<div class="line"><span class="lineno">   84</span>                {</div>
+<div class="line"><span class="lineno">   85</span>                    inspectGroup.<a class="code hl_variable" href="classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438">targets</a>.Add(inspect);</div>
+<div class="line"><span class="lineno">   86</span>                }</div>
+<div class="line"><span class="lineno">   87</span>                summary.<a class="code hl_variable" href="classHitSummary.html#ab0b589d98b899681981aba3fa37d5ed9">targets</a>.Add(inspect);</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassArea_html"><div class="ttname"><a href="classArea.html">Area</a></div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00004">Area.cs:5</a></div></div>
+<div class="ttc" id="aclassHitSummary_html_a8a06ee66876b1c6a96115b4d3108ad54"><div class="ttname"><a href="classHitSummary.html#a8a06ee66876b1c6a96115b4d3108ad54">HitSummary.groups</a></div><div class="ttdeci">List&lt; InspectGroup &gt; groups</div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00111">HitSummary.cs:111</a></div></div>
+<div class="ttc" id="aclassHitSummary_html_ab0b589d98b899681981aba3fa37d5ed9"><div class="ttname"><a href="classHitSummary.html#ab0b589d98b899681981aba3fa37d5ed9">HitSummary.targets</a></div><div class="ttdeci">List&lt; IInspect &gt; targets</div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00109">HitSummary.cs:109</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html"><div class="ttname"><a href="classInspectGroup.html">InspectGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_82_8cs_source.html#l00003">InspectGroup.2.cs:4</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a2bb5f8bb305510884ae22010e8f444a0"><div class="ttname"><a href="classInspectGroup.html#a2bb5f8bb305510884ae22010e8f444a0">InspectGroup.Contains</a></div><div class="ttdeci">virtual bool Contains(IInspect t)</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00070">InspectGroup.cs:70</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a9605303211fdabb3f3633f29c3c70443"><div class="ttname"><a href="classInspectGroup.html#a9605303211fdabb3f3633f29c3c70443">InspectGroup.type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00096">InspectGroup.cs:96</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_ac91fc16b2a17aba61c1341cbfea77438"><div class="ttname"><a href="classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438">InspectGroup.targets</a></div><div class="ttdeci">List&lt; IInspect &gt; targets</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00100">InspectGroup.cs:100</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_adabacf0d555972b4fd33fe9f1d98b5c4"><div class="ttname"><a href="classInspectGroup.html#adabacf0d555972b4fd33fe9f1d98b5c4">InspectGroup.Create</a></div><div class="ttdeci">static InspectGroup Create(IInspect t)</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00022">InspectGroup.cs:22</a></div></div>
+<div class="ttc" id="aclassPoint_html_a156a0afded1c66563745baa397261a4a"><div class="ttname"><a href="classPoint.html#a156a0afded1c66563745baa397261a4a">Point.IsSeen</a></div><div class="ttdeci">bool IsSeen</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00472">Point.cs:473</a></div></div>
+<div class="ttc" id="aclassPoint_html_a4c05463f4ffe9ed95d182ef08212f951"><div class="ttname"><a href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">Point.ListInspectorTargets</a></div><div class="ttdeci">List&lt; IInspect &gt; ListInspectorTargets()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01400">Point.cs:1400</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html"><div class="ttname"><a href="interfaceIInspect.html">IInspect</a></div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00004">IInspect.cs:5</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_ac021b1fbf3aee07a35d65d436a4bcd4f"><div class="ttname"><a href="interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f">IInspect.CanInspect</a></div><div class="ttdeci">bool CanInspect</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00006">IInspect.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_82_8cs_source.html#l00023">InspectGroup&lt; T &gt;.Add()</a>, <a class="el" href="IInspect_8cs_source.html#l00006">IInspect.CanInspect</a>, <a class="el" href="InspectGroup_8cs_source.html#l00022">InspectGroup&lt; T &gt;.Create()</a>, <a class="el" href="Point_8cs_source.html#l00473">Point.IsSeen</a>, <a class="el" href="InspectGroup_8cs_source.html#l00100">InspectGroup&lt; T &gt;.targets</a>, and <a class="el" href="InspectGroup_8cs_source.html#l00096">InspectGroup&lt; T &gt;.type</a>.</p>
 
 </div>
 </div>
@@ -608,6 +694,29 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a4025ab325b17507860ed9192c0b79769">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00034">34</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_function" href="classAM__Select.html#a18d9a1b82077600f13be7eed97f55419">RenderHighlights</a>();</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (EInput.rightMouse.down)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            base.Deactivate();</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!Input.GetMouseButton(0) &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.isPointerOverUI)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (base.Summary.groups.Count &gt; 0 &amp;&amp; base.Summary.groups.Count != 1)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenu(<span class="stringliteral">&quot;ContextMenu&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>                uicontextMenu.onUpdate = <span class="keyword">new</span> Action(this.<a class="code hl_function" href="classAM__Select.html#a18d9a1b82077600f13be7eed97f55419">RenderHighlights</a>);</div>
+<div class="line"><span class="lineno">   48</span>                uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            base.Deactivate();</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassAM__Select_html_a18d9a1b82077600f13be7eed97f55419"><div class="ttname"><a href="classAM__Select.html#a18d9a1b82077600f13be7eed97f55419">AM_Select.RenderHighlights</a></div><div class="ttdeci">void RenderHighlights()</div><div class="ttdef"><b>Definition:</b> <a href="AM__Select_8cs_source.html#l00054">AM_Select.cs:54</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Select_8cs_source.html#l00054">RenderHighlights()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -635,6 +744,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00054">54</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Select_8cs_source.html#l00034">OnUpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -665,6 +778,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#aac0f7a0c0c8cf9656d211a5d4209ed59">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00092">92</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classInspectGroup.html">InspectGroup</a> inspectGroup <span class="keywordflow">in</span> base.Summary.groups)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            s = s + inspectGroup.<a class="code hl_function" href="classInspectGroup.html#a9ab1fd64ecde12ba4c9a13ba4b262a18">GetName</a>() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> base.SetMouseInfo(ref s);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassInspectGroup_html_a9ab1fd64ecde12ba4c9a13ba4b262a18"><div class="ttname"><a href="classInspectGroup.html#a9ab1fd64ecde12ba4c9a13ba4b262a18">InspectGroup.GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00075">InspectGroup.cs:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_8cs_source.html#l00075">InspectGroup&lt; T &gt;.GetName()</a>.</p>
 
 </div>
 </div>
@@ -690,16 +813,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Select_8cs_source.html#l00007">7</a> of file <a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Select_8cs_source.html">AM_Select.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Select.html">AM_Select</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

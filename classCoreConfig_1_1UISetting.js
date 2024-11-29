@@ -1,0 +1,26 @@
+var classCoreConfig_1_1UISetting =
+[
+    [ "animeWindow", "classCoreConfig_1_1UISetting.html#a7682f525c4af4ef15664c29bae21b08b", null ],
+    [ "autoFocusWindow", "classCoreConfig_1_1UISetting.html#a3ed0ae929a1d2254b3dc855fe097dfec", null ],
+    [ "autoscale", "classCoreConfig_1_1UISetting.html#a7f5d706be06f587d3b0a4ce5bd19a1fd", null ],
+    [ "balloonBG", "classCoreConfig_1_1UISetting.html#a7a074a03aaeed8a05834c0e9e91c47c3", null ],
+    [ "baseScrollSens", "classCoreConfig_1_1UISetting.html#a11b5c179326dcf16849a58946661ab01", null ],
+    [ "blur", "classCoreConfig_1_1UISetting.html#a70bd5539bf1b14987db2032fb13cf18b", null ],
+    [ "blurSize", "classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74", null ],
+    [ "brightness", "classCoreConfig_1_1UISetting.html#a31f5cc07d64d5859fcb869d2c801d4ac", null ],
+    [ "closePopupOnMouseLeave", "classCoreConfig_1_1UISetting.html#ad82d50a86dd3c0d93e904f41ddf25169", null ],
+    [ "contrast", "classCoreConfig_1_1UISetting.html#abf7c51941d4db0fc9eeaecd7558ca8d2", null ],
+    [ "cornerHoard", "classCoreConfig_1_1UISetting.html#ad513b374f43b6e4dbaf1f542ac1ae998", null ],
+    [ "defaultTheme", "classCoreConfig_1_1UISetting.html#a1910f238c7a657d899096e24eb178338", null ],
+    [ "dynamicBrightness", "classCoreConfig_1_1UISetting.html#ad8932634a630c94c46f526d206303b49", null ],
+    [ "dynamicBrightnessMod", "classCoreConfig_1_1UISetting.html#a1a496712bbae62495e0eda86669b05e4", null ],
+    [ "mouseDragMargin", "classCoreConfig_1_1UISetting.html#a2374b60e26ce8dd95be2768eb31e553e", null ],
+    [ "openLastTab", "classCoreConfig_1_1UISetting.html#abb81ec9073fd7e06a58445df95402e82", null ],
+    [ "outlineAlpha", "classCoreConfig_1_1UISetting.html#aa8ca49b829e5b0244c73606cd12421cc", null ],
+    [ "rightClickClose", "classCoreConfig_1_1UISetting.html#a85d417426e5de4dbc40e905d9457e160", null ],
+    [ "scale", "classCoreConfig_1_1UISetting.html#a10f31e15e8a22b0e953c55c322b90322", null ],
+    [ "scrollSens", "classCoreConfig_1_1UISetting.html#a4c2192d1bd1584ac8802c7c3f391df0b", null ],
+    [ "secureMinWidth", "classCoreConfig_1_1UISetting.html#a5fb84482121405e05f1b98606f27c11d", null ],
+    [ "showFloatButtons", "classCoreConfig_1_1UISetting.html#a8cfbe5f0446d017fe3d4c4451c709ea1", null ],
+    [ "ScrollSensitivity", "classCoreConfig_1_1UISetting.html#a5f5faca97887fef8bc3e57ab0cbf053c", null ]
+];

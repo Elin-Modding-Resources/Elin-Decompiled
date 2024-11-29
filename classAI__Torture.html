@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAI__Torture.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -692,7 +712,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a0fc638accd60819daab652193aad04ca">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00023">23</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6f424584c46f3e4104c623bdaea8f268" name="a6f424584c46f3e4104c623bdaea8f268"></a>
@@ -721,6 +744,81 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a8b1dd5f45c4dc32fbe1cbed0316e2211">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00048">48</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> progress_Custom = <span class="keyword">new</span> <a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a>();</div>
+<div class="line"><span class="lineno">   51</span>        progress_Custom.canProgress = (() =&gt; !this.<a class="code hl_variable" href="classAIAct.html#aa5d0f85974b41ac8e5f85cb63b5cee8f">isFail</a>());</div>
+<div class="line"><span class="lineno">   52</span>        progress_Custom.onProgressBegin = delegate()</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>        };</div>
+<div class="line"><span class="lineno">   55</span>        progress_Custom.onProgress = delegate(<a class="code hl_class" href="classProgress__Custom.html">Progress_Custom</a> p)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classAIProgress.html#a6839cb804b6a013053000f4a9466b3a2">progress</a> % 8 == 0)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(this.<a class="code hl_variable" href="classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2">shackle</a>.<a class="code hl_property" href="classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3">animeId</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20) == 0)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;restrained&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            List&lt;Chara&gt; list = <span class="keyword">new</span> List&lt;Chara&gt;();</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> (!chara.<a class="code hl_property" href="classChara.html#a5baabf25717e4393f49227ee45f01726">IsDisabled</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; chara != <span class="keyword">this</span>.owner &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; !chara.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; chara.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a> == <span class="keyword">null</span> &amp;&amp; !chara.<a class="code hl_property" href="classCard.html#aabd8a2e2f6cc6379907018758b3211a4">noMove</a> &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a4ffdc6e8db1ff1f0dbefe4979299b8dc">IsInCombat</a>)</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    list.Add(chara);</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            list.Sort((<a class="code hl_class" href="classChara.html">Chara</a> a, <a class="code hl_class" href="classChara.html">Chara</a> b) =&gt; this.&lt;<a class="code hl_function" href="classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268">CreateProgress</a>&gt;<a class="code hl_function" href="classAI__Torture.html#ac56e1da70d8c5f1a7ef025c37c327c59">g__SortVal</a>|10_4(a) - this.&lt;<a class="code hl_function" href="classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268">CreateProgress</a>&gt;<a class="code hl_function" href="classAI__Torture.html#ac56e1da70d8c5f1a7ef025c37c327c59">g__SortVal</a>|10_4(b));</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordtype">int</span> num = 1 + EClass.Branch.members.Count / 5;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara2 <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 &amp;&amp; chara2.<a class="code hl_function" href="classChara.html#a7affac91921edc284f0feae38e2bd1ae">HasAccess</a>(<span class="keyword">this</span>.owner.pos))</div>
+<div class="line"><span class="lineno">   79</span>                {</div>
+<div class="line"><span class="lineno">   80</span>                    chara2.<a class="code hl_function" href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">SetEnemy</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">   81</span>                }</div>
+<div class="line"><span class="lineno">   82</span>                num2++;</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span> (num2 &gt;= num)</div>
+<div class="line"><span class="lineno">   84</span>                {</div>
+<div class="line"><span class="lineno">   85</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>                }</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>        };</div>
+<div class="line"><span class="lineno">   89</span>        progress_Custom.onProgressComplete = delegate()</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>        };</div>
+<div class="line"><span class="lineno">   92</span>        progress_Custom.cancelWhenDamaged = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> progress_Custom.<a class="code hl_function" href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">SetDuration</a>(10000, 2);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aa5d0f85974b41ac8e5f85cb63b5cee8f"><div class="ttname"><a href="classAIAct.html#aa5d0f85974b41ac8e5f85cb63b5cee8f">AIAct.isFail</a></div><div class="ttdeci">Func&lt; bool &gt; isFail</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00725">AIAct.cs:725</a></div></div>
+<div class="ttc" id="aclassAIProgress_html_a6839cb804b6a013053000f4a9466b3a2"><div class="ttname"><a href="classAIProgress.html#a6839cb804b6a013053000f4a9466b3a2">AIProgress.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="AIProgress_8cs_source.html#l00111">AIProgress.cs:111</a></div></div>
+<div class="ttc" id="aclassAI__Torture_html_a624ee4dd4b38e70c7da95848b0d8d7e2"><div class="ttname"><a href="classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2">AI_Torture.shackle</a></div><div class="ttdeci">TraitShackle shackle</div><div class="ttdef"><b>Definition:</b> <a href="AI__Torture_8cs_source.html#l00120">AI_Torture.cs:120</a></div></div>
+<div class="ttc" id="aclassAI__Torture_html_a6f424584c46f3e4104c623bdaea8f268"><div class="ttname"><a href="classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268">AI_Torture.CreateProgress</a></div><div class="ttdeci">override AIProgress CreateProgress()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Torture_8cs_source.html#l00048">AI_Torture.cs:48</a></div></div>
+<div class="ttc" id="aclassAI__Torture_html_ac56e1da70d8c5f1a7ef025c37c327c59"><div class="ttname"><a href="classAI__Torture.html#ac56e1da70d8c5f1a7ef025c37c327c59">AI_Torture.g__SortVal</a></div><div class="ttdeci">int&lt; CreateProgress &gt; g__SortVal(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="AI__Torture_8cs_source.html#l00115">AI_Torture.cs:115</a></div></div>
+<div class="ttc" id="aclassCard_html_a330dfeedb08c341b8f9337fec2e3af64"><div class="ttname"><a href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">Card.isRestrained</a></div><div class="ttdeci">bool isRestrained</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00499">Card.cs:500</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06060">Card.cs:6060</a></div></div>
+<div class="ttc" id="aclassCard_html_aabd8a2e2f6cc6379907018758b3211a4"><div class="ttname"><a href="classCard.html#aabd8a2e2f6cc6379907018758b3211a4">Card.noMove</a></div><div class="ttdeci">bool noMove</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00703">Card.cs:704</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1b2bd10695eb7422474797d6dbe222f"><div class="ttname"><a href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">Card.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05539">Card.cs:5539</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a3c197d8c22ab97a78707b03dcb28a12e"><div class="ttname"><a href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">Chara.host</a></div><div class="ttdeci">Chara host</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09352">Chara.cs:9352</a></div></div>
+<div class="ttc" id="aclassChara_html_a4ffdc6e8db1ff1f0dbefe4979299b8dc"><div class="ttname"><a href="classChara.html#a4ffdc6e8db1ff1f0dbefe4979299b8dc">Chara.IsInCombat</a></div><div class="ttdeci">bool IsInCombat</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00824">Chara.cs:825</a></div></div>
+<div class="ttc" id="aclassChara_html_a5baabf25717e4393f49227ee45f01726"><div class="ttname"><a href="classChara.html#a5baabf25717e4393f49227ee45f01726">Chara.IsDisabled</a></div><div class="ttdeci">override bool IsDisabled</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00467">Chara.cs:468</a></div></div>
+<div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00556">Chara.cs:557</a></div></div>
+<div class="ttc" id="aclassChara_html_a7affac91921edc284f0feae38e2bd1ae"><div class="ttname"><a href="classChara.html#a7affac91921edc284f0feae38e2bd1ae">Chara.HasAccess</a></div><div class="ttdeci">bool HasAccess(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00760">Chara.cs:760</a></div></div>
+<div class="ttc" id="aclassChara_html_ac876d378dc012d462a73f0d80ba4ab07"><div class="ttname"><a href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">Chara.SetEnemy</a></div><div class="ttdeci">Chara SetEnemy(Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05572">Chara.cs:5572</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html"><div class="ttname"><a href="classProgress__Custom.html">Progress_Custom</a></div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00003">Progress_Custom.cs:4</a></div></div>
+<div class="ttc" id="aclassProgress__Custom_html_a9c399dedace1a2eb051b2aadc687ce06"><div class="ttname"><a href="classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06">Progress_Custom.SetDuration</a></div><div class="ttdeci">Progress_Custom SetDuration(int max, int _interval=2)</div><div class="ttdef"><b>Definition:</b> <a href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.cs:99</a></div></div>
+<div class="ttc" id="aclassTraitShackle_html_a15d46448b2dc3ebcd67dba416f64c1e3"><div class="ttname"><a href="classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3">TraitShackle.animeId</a></div><div class="ttdeci">virtual AnimeID animeId</div><div class="ttdef"><b>Definition:</b> <a href="TraitShackle_8cs_source.html#l00014">TraitShackle.cs:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="TraitShackle_8cs_source.html#l00015">TraitShackle.animeId</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="AI__Torture_8cs_source.html#l00048">CreateProgress()</a>, <a class="el" href="AI__Torture_8cs_source.html#l00115">g__SortVal()</a>, <a class="el" href="Chara_8cs_source.html#l00760">Chara.HasAccess()</a>, <a class="el" href="Chara_8cs_source.html#l09352">Chara.host</a>, <a class="el" href="Chara_8cs_source.html#l00468">Chara.IsDisabled</a>, <a class="el" href="AIAct_8cs_source.html#l00725">AIAct.isFail</a>, <a class="el" href="Chara_8cs_source.html#l00825">Chara.IsInCombat</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l00557">Chara.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l00500">Card.isRestrained</a>, <a class="el" href="Card_8cs_source.html#l00704">Card.noMove</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05539">Card.PlayAnime()</a>, <a class="el" href="AIProgress_8cs_source.html#l00111">AIProgress.progress</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Progress__Custom_8cs_source.html#l00099">Progress_Custom.SetDuration()</a>, <a class="el" href="Chara_8cs_source.html#l05572">Chara.SetEnemy()</a>, <a class="el" href="AI__Torture_8cs_source.html#l00120">shackle</a>, and <a class="el" href="Card_8cs_source.html#l06060">Card.Talk()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Torture_8cs_source.html#l00048">CreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -749,6 +847,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00115">115</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(c);</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="ttc" id="aclassCard_html_abd6b223dc61955d492fc2c2e17f3cf61"><div class="ttname"><a href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Card.Dist</a></div><div class="ttdeci">int Dist(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07008">Card.cs:7008</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07008">Card.Dist()</a>, and <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Torture_8cs_source.html#l00048">CreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -778,6 +884,31 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a305a1b8ca75e630e9feba2c481a7962f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00096">96</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAI__Torture.html#a81213afb155f9a4c487b9b1a9b8d77f0">_owner</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <span class="keywordflow">if</span> (chara != this.<a class="code hl_variable" href="classAI__Torture.html#a81213afb155f9a4c487b9b1a9b8d77f0">_owner</a> &amp;&amp; (chara.<a class="code hl_variable" href="classChara.html#ac4913a45c4e313bfab59ade7b93e7c6e">enemy</a> == <span class="keyword">this</span>._owner || chara.<a class="code hl_variable" href="classChara.html#ac4913a45c4e313bfab59ade7b93e7c6e">enemy</a> == <span class="keyword">this</span>._owner.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> || chara.<a class="code hl_variable" href="classChara.html#ac4913a45c4e313bfab59ade7b93e7c6e">enemy</a> == <span class="keyword">this</span>._owner.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>))</div>
+<div class="line"><span class="lineno">  103</span>                {</div>
+<div class="line"><span class="lineno">  104</span>                    chara.<a class="code hl_function" href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">SetEnemy</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  105</span>                    <span class="keywordflow">if</span> (!(chara.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__Torture.html">AI_Torture</a>))</div>
+<div class="line"><span class="lineno">  106</span>                    {</div>
+<div class="line"><span class="lineno">  107</span>                        chara.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  108</span>                    }</div>
+<div class="line"><span class="lineno">  109</span>                }</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
+<div class="ttc" id="aclassAI__Torture_html"><div class="ttname"><a href="classAI__Torture.html">AI_Torture</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Torture_8cs_source.html#l00005">AI_Torture.cs:6</a></div></div>
+<div class="ttc" id="aclassAI__Torture_html_a81213afb155f9a4c487b9b1a9b8d77f0"><div class="ttname"><a href="classAI__Torture.html#a81213afb155f9a4c487b9b1a9b8d77f0">AI_Torture._owner</a></div><div class="ttdeci">Chara _owner</div><div class="ttdef"><b>Definition:</b> <a href="AI__Torture_8cs_source.html#l00122">AI_Torture.cs:122</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09506">Chara.cs:9506</a></div></div>
+<div class="ttc" id="aclassChara_html_aa8259f2ad32636b6813004383ed0ce32"><div class="ttname"><a href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">Chara.parasite</a></div><div class="ttdeci">Chara parasite</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09349">Chara.cs:9349</a></div></div>
+<div class="ttc" id="aclassChara_html_aacacd9208c527916a9562aa7ad2b32ef"><div class="ttname"><a href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">Chara.ride</a></div><div class="ttdeci">Chara ride</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09346">Chara.cs:9346</a></div></div>
+<div class="ttc" id="aclassChara_html_ac4913a45c4e313bfab59ade7b93e7c6e"><div class="ttname"><a href="classChara.html#ac4913a45c4e313bfab59ade7b93e7c6e">Chara.enemy</a></div><div class="ttdeci">Chara enemy</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09402">Chara.cs:9402</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="AI__Torture_8cs_source.html#l00122">_owner</a>, <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="Chara_8cs_source.html#l09402">Chara.enemy</a>, <a class="el" href="Chara_8cs_source.html#l09349">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l09346">Chara.ride</a>, and <a class="el" href="Chara_8cs_source.html#l05572">Chara.SetEnemy()</a>.</p>
 
 </div>
 </div>
@@ -807,6 +938,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00036">36</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        this._owner = this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>;</div>
+<div class="line"><span class="lineno">   39</span>        this.isFail = (() =&gt; this.<a class="code hl_variable" href="classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2">shackle</a> == <span class="keyword">null</span> || !this.<a class="code hl_variable" href="classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2">shackle</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> || !<span class="keyword">this</span>.owner.isRestrained || !<span class="keyword">this</span>.shackle.owner.pos.Equals(<span class="keyword">this</span>.owner.pos) || this.owner.stamina.value &lt;= 0);</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">while</span> (!this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <span class="keyword">this</span>.owner.stamina.value &lt; <span class="keyword">this</span>.owner.stamina.max * 4 / 5)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            yield <span class="keywordflow">return</span> base.KeepRunning();</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        yield <span class="keywordflow">return</span> base.DoProgress();</div>
+<div class="line"><span class="lineno">   45</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="AI__Torture_8cs_source.html#l00120">shackle</a>.</p>
 
 </div>
 </div>
@@ -825,6 +970,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00122">122</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AI__Torture_8cs_source.html#l00096">OnCancelOrSuccess()</a>.</p>
+
 </div>
 </div>
 <a id="a624ee4dd4b38e70c7da95848b0d8d7e2" name="a624ee4dd4b38e70c7da95848b0d8d7e2"></a>
@@ -840,6 +987,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00120">120</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Torture_8cs_source.html#l00048">CreateProgress()</a>, and <a class="el" href="AI__Torture_8cs_source.html#l00036">Run()</a>.</p>
 
 </div>
 </div>
@@ -865,7 +1014,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00028">28</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5040dcfb96a85fcdab262e30f0a92e4f" name="a5040dcfb96a85fcdab262e30f0a92e4f"></a>
@@ -889,7 +1044,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00007">7</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> CursorSystem.IconMelee;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2b1313f9ad04927a973dfbe065a29277" name="a2b1313f9ad04927a973dfbe065a29277"></a>
@@ -913,16 +1074,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AI__Torture_8cs_source.html#l00015">15</a> of file <a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AI__Torture_8cs_source.html">AI_Torture.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAI__Torture.html">AI_Torture</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

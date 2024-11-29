@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGridItem.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -195,6 +215,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGridItemCard.html#a6d2f7e3d6aa10f5c87955395febda7ca">GridItemCard</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItem_8cs_source.html#l00014">14</a> of file <a class="el" href="GridItem_8cs_source.html">GridItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Dialog_8cs_source.html#l00379">Dialog.Gift()</a>.</p>
 
 </div>
 </div>
@@ -225,6 +249,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGridItemCard.html#a3dddb47f587321458778deee2e334721">GridItemCard</a>, and <a class="el" href="classGridItemRecipe.html#aa397da91e9a2ffb43534bdeaad261276">GridItemRecipe</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItem_8cs_source.html#l00010">10</a> of file <a class="el" href="GridItem_8cs_source.html">GridItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00018">DropdownGrid.Build()</a>, and <a class="el" href="Dialog_8cs_source.html#l00008">Dialog.OnAfterInit()</a>.</p>
 
 </div>
 </div>
@@ -255,6 +283,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGridItemCard.html#ae247c51d0e192b67347a4206f854beab">GridItemCard</a>, <a class="el" href="classGridItemCardSource.html#aff1f65aa73f2e55e79fdedb65dbe3298">GridItemCardSource</a>, and <a class="el" href="classGridItemRecipe.html#a641f8762c647515c54d3694e31e536fa">GridItemRecipe</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GridItem_8cs_source.html#l00005">5</a> of file <a class="el" href="GridItem_8cs_source.html">GridItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        b.<a class="code hl_function" href="classButtonGrid.html#ac67fe8c23ff5e471085602244ef75514">SetDummy</a>();</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html_ac67fe8c23ff5e471085602244ef75514"><div class="ttname"><a href="classButtonGrid.html#ac67fe8c23ff5e471085602244ef75514">ButtonGrid.SetDummy</a></div><div class="ttdeci">void SetDummy()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00409">ButtonGrid.cs:409</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00409">ButtonGrid.SetDummy()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00018">DropdownGrid.Build()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00389">ButtonGrid.SetItem()</a>.</p>
 
 </div>
 </div>
@@ -262,9 +298,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GridItem_8cs_source.html">GridItem.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGridItem.html">GridItem</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

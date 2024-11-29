@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetMemo.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -345,6 +365,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00022">22</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        this.input.text = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a6cbd253420008666ef350e81e71854e1">memo</a>;</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classWidgetMemo.html#a07abc1c03a7239efcc92a432df7350e4">buttonEdit</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            this.<a class="code hl_function" href="classWidgetMemo.html#a6b72fb2d3e3c2ebfebc03e9696f18c1f">ToggleInput</a>(!this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.isFocused);</div>
+<div class="line"><span class="lineno">   28</span>        });</div>
+<div class="line"><span class="lineno">   29</span>        WidgetMemo.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a6cbd253420008666ef350e81e71854e1"><div class="ttname"><a href="classPlayer.html#a6cbd253420008666ef350e81e71854e1">Player.memo</a></div><div class="ttdeci">string memo</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01449">Player.cs:1449</a></div></div>
+<div class="ttc" id="aclassWidgetMemo_html_a07abc1c03a7239efcc92a432df7350e4"><div class="ttname"><a href="classWidgetMemo.html#a07abc1c03a7239efcc92a432df7350e4">WidgetMemo.buttonEdit</a></div><div class="ttdeci">UIButton buttonEdit</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMemo_8cs_source.html#l00082">WidgetMemo.cs:82</a></div></div>
+<div class="ttc" id="aclassWidgetMemo_html_a6b72fb2d3e3c2ebfebc03e9696f18c1f"><div class="ttname"><a href="classWidgetMemo.html#a6b72fb2d3e3c2ebfebc03e9696f18c1f">WidgetMemo.ToggleInput</a></div><div class="ttdeci">void ToggleInput(bool enable)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMemo_8cs_source.html#l00037">WidgetMemo.cs:37</a></div></div>
+<div class="ttc" id="aclassWidgetMemo_html_a8d8eaf86957034edcb8efd090f8a612b"><div class="ttname"><a href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">WidgetMemo.input</a></div><div class="ttdeci">InputField input</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMemo_8cs_source.html#l00072">WidgetMemo.cs:72</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMemo_8cs_source.html#l00082">buttonEdit</a>, <a class="el" href="WidgetMemo_8cs_source.html#l00072">input</a>, <a class="el" href="Player_8cs_source.html#l01449">Player.memo</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, and <a class="el" href="WidgetMemo_8cs_source.html#l00037">ToggleInput()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +410,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ac04f73a172b0fa4102ce2c701805b417">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00032">32</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        EMono.player.memo = this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.text;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMemo_8cs_source.html#l00072">input</a>.</p>
 
 </div>
 </div>
@@ -403,6 +444,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#aa18f1b3409fa2df4d7e7075fe7641bd0">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00049">49</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        EMono.player.memo = this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.text;</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMemo_8cs_source.html#l00072">input</a>.</p>
 
 </div>
 </div>
@@ -431,6 +477,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00037">37</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        this.input.interactable = enable;</div>
+<div class="line"><span class="lineno">   40</span>        this.bgInput.enabled = enable;</div>
+<div class="line"><span class="lineno">   41</span>        this.textInput.raycastTarget = enable;</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classWidgetMemo.html#a8fa81b29889d9a2252e1faa24177e924">buttonClose</a>.SetActive(enable);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (enable)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.Select();</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassWidgetMemo_html_a8fa81b29889d9a2252e1faa24177e924"><div class="ttname"><a href="classWidgetMemo.html#a8fa81b29889d9a2252e1faa24177e924">WidgetMemo.buttonClose</a></div><div class="ttdeci">UIButton buttonClose</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMemo_8cs_source.html#l00080">WidgetMemo.cs:80</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMemo_8cs_source.html#l00080">buttonClose</a>, and <a class="el" href="WidgetMemo_8cs_source.html#l00072">input</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMemo_8cs_source.html#l00022">OnActivate()</a>, and <a class="el" href="WidgetMemo_8cs_source.html#l00054">Update()</a>.</p>
 
 </div>
 </div>
@@ -458,6 +519,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00054">54</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.isFocused)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMemo.html#a8d8eaf86957034edcb8efd090f8a612b">input</a>.interactable &amp;&amp; !InputModuleEX.IsPointerChildOf(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                this.<a class="code hl_function" href="classWidgetMemo.html#a6b72fb2d3e3c2ebfebc03e9696f18c1f">ToggleInput</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classWidgetMemo.html#ad4373ea56cf3087133fd18f67efca4a8">bgInput</a>.enabled)</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            this.<a class="code hl_function" href="classWidgetMemo.html#a6b72fb2d3e3c2ebfebc03e9696f18c1f">ToggleInput</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassWidgetMemo_html_ad4373ea56cf3087133fd18f67efca4a8"><div class="ttname"><a href="classWidgetMemo.html#ad4373ea56cf3087133fd18f67efca4a8">WidgetMemo.bgInput</a></div><div class="ttdeci">Image bgInput</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMemo_8cs_source.html#l00076">WidgetMemo.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMemo_8cs_source.html#l00076">bgInput</a>, <a class="el" href="WidgetMemo_8cs_source.html#l00072">input</a>, and <a class="el" href="WidgetMemo_8cs_source.html#l00037">ToggleInput()</a>.</p>
 
 </div>
 </div>
@@ -476,6 +554,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00076">76</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMemo_8cs_source.html#l00054">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a8fa81b29889d9a2252e1faa24177e924" name="a8fa81b29889d9a2252e1faa24177e924"></a>
@@ -491,6 +571,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00080">80</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMemo_8cs_source.html#l00037">ToggleInput()</a>.</p>
 
 </div>
 </div>
@@ -508,6 +590,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00082">82</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetMemo_8cs_source.html#l00022">OnActivate()</a>.</p>
+
 </div>
 </div>
 <a id="a8d8eaf86957034edcb8efd090f8a612b" name="a8d8eaf86957034edcb8efd090f8a612b"></a>
@@ -523,6 +607,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00072">72</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMemo_8cs_source.html#l00022">OnActivate()</a>, <a class="el" href="WidgetMemo_8cs_source.html#l00032">OnDeactivate()</a>, <a class="el" href="WidgetMemo_8cs_source.html#l00049">OnUpdateConfig()</a>, <a class="el" href="WidgetMemo_8cs_source.html#l00037">ToggleInput()</a>, and <a class="el" href="WidgetMemo_8cs_source.html#l00054">Update()</a>.</p>
 
 </div>
 </div>
@@ -604,7 +690,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeb2aaf24180dc70f538292bbff2951b8" name="aeb2aaf24180dc70f538292bbff2951b8"></a>
@@ -628,16 +720,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMemo_8cs_source.html#l00014">14</a> of file <a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> typeof(<a class="code hl_class" href="classWidgetSideScreen.html">WidgetSideScreen</a>);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassWidgetSideScreen_html"><div class="ttname"><a href="classWidgetSideScreen.html">WidgetSideScreen</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00005">WidgetSideScreen.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetMemo_8cs_source.html">WidgetMemo.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetMemo.html">WidgetMemo</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

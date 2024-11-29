@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCharaRenderer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -450,6 +470,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#ae9255b49c30b567e899581bf03962b08">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00047">47</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        base.Draw(p, ref v, drawShadow);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classZone.html">Zone</a>.<a class="code hl_variable" href="classZone.html#ab158d39fd811c485a6ba4a4568cd7327">sourceHat</a> != <span class="keyword">null</span> &amp;&amp; <span class="keyword">this</span>.owner.Pref.hatY != 0f &amp;&amp; <span class="keyword">this</span>.owner.host == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            this.<a class="code hl_function" href="classCharaRenderer.html#a8e41306066f667a1dc420d4528a631ba">DrawHat</a>();</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a> != <span class="keyword">null</span> &amp;&amp; !<span class="keyword">this</span>.owner.<a class="code hl_property" href="classCard.html#a68493061f44a5233980a8143eea660c0">IsDeadOrSleeping</a> &amp;&amp; (!<span class="keyword">this</span>.owner.held.trait.ShowAsTool || <a class="code hl_class" href="classHotItemHeld.html">HotItemHeld</a>.<a class="code hl_variable" href="classHotItemHeld.html#af06177f021d8c15cf6d219dd85977b09">disableTool</a>))</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                this.<a class="code hl_function" href="classCharaRenderer.html#af595e613634a92003b3166e699f784ed">DrawHeld</a>();</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a> != <span class="keyword">null</span> &amp;&amp; !<span class="keyword">this</span>.owner.<a class="code hl_property" href="classCard.html#a68493061f44a5233980a8143eea660c0">IsDeadOrSleeping</a> &amp;&amp; !<span class="keyword">this</span>.owner.held.trait.ShowAsTool)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_function" href="classCharaRenderer.html#af595e613634a92003b3166e699f784ed">DrawHeld</a>();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassCard_html_a68493061f44a5233980a8143eea660c0"><div class="ttname"><a href="classCard.html#a68493061f44a5233980a8143eea660c0">Card.IsDeadOrSleeping</a></div><div class="ttdeci">virtual bool IsDeadOrSleeping</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02099">Card.cs:2100</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a8e41306066f667a1dc420d4528a631ba"><div class="ttname"><a href="classCharaRenderer.html#a8e41306066f667a1dc420d4528a631ba">CharaRenderer.DrawHat</a></div><div class="ttdeci">void DrawHat()</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00270">CharaRenderer.cs:270</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_ae266de1e0af71611fbf7618287bc3766"><div class="ttname"><a href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">CharaRenderer.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00402">CharaRenderer.cs:402</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_af595e613634a92003b3166e699f784ed"><div class="ttname"><a href="classCharaRenderer.html#af595e613634a92003b3166e699f784ed">CharaRenderer.DrawHeld</a></div><div class="ttdeci">override void DrawHeld()</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00293">CharaRenderer.cs:293</a></div></div>
+<div class="ttc" id="aclassChara_html_a1a07bdf34edac20229f9c2ac895e83f8"><div class="ttname"><a href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">Chara.held</a></div><div class="ttdeci">Card held</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09386">Chara.cs:9386</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassHotItemHeld_html"><div class="ttname"><a href="classHotItemHeld.html">HotItemHeld</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemHeld_8cs_source.html#l00004">HotItemHeld.cs:5</a></div></div>
+<div class="ttc" id="aclassHotItemHeld_html_af06177f021d8c15cf6d219dd85977b09"><div class="ttname"><a href="classHotItemHeld.html#af06177f021d8c15cf6d219dd85977b09">HotItemHeld.disableTool</a></div><div class="ttdeci">static bool disableTool</div><div class="ttdef"><b>Definition:</b> <a href="HotItemHeld_8cs_source.html#l00472">HotItemHeld.cs:472</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<div class="ttc" id="aclassZone_html_ab158d39fd811c485a6ba4a4568cd7327"><div class="ttname"><a href="classZone.html#ab158d39fd811c485a6ba4a4568cd7327">Zone.sourceHat</a></div><div class="ttdeci">static CardRow sourceHat</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03847">Zone.cs:3847</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HotItemHeld_8cs_source.html#l00472">HotItemHeld.disableTool</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00270">DrawHat()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00293">DrawHeld()</a>, <a class="el" href="Chara_8cs_source.html#l09386">Chara.held</a>, <a class="el" href="Card_8cs_source.html#l02100">Card.IsDeadOrSleeping</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, and <a class="el" href="Zone_8cs_source.html#l03847">Zone.sourceHat</a>.</p>
 
 </div>
 </div>
@@ -477,6 +528,48 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00270">270</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>    {</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#af5964f8467f67492896f03b246c6f36c">pccData</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">IsDeadOrSleeping</a>)</div>
+<div class="line"><span class="lineno">  273</span>        {</div>
+<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+<div class="line"><span class="lineno">  276</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> sourceHat = <a class="code hl_class" href="classZone.html">Zone</a>.<a class="code hl_variable" href="classZone.html#ab158d39fd811c485a6ba4a4568cd7327">sourceHat</a>;</div>
+<div class="line"><span class="lineno">  277</span>        <a class="code hl_class" href="classSourcePref.html">SourcePref</a> pref = sourceHat.<a class="code hl_variable" href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">pref</a>;</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordtype">bool</span> flag = this.currentDir == 1 || this.currentDir == 3;</div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordtype">int</span> liquidLv = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classRenderParam.html#a155648baf36e4dfaa9b1cee340ea777f">liquidLv</a>;</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordtype">float</span> num = (this.replacer != <span class="keyword">null</span>) ? this.<a class="code hl_variable" href="classCardRenderer.html#a34515658bc46e9ac7a96778b72645ff2">replacer</a>.<a class="code hl_variable" href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">pref</a>.<a class="code hl_property" href="classSourcePref.html#af67e02842a49ab3c996a057f9ed8dca3">hatY</a> : <span class="keyword">this</span>.owner.Pref.hatY;</div>
+<div class="line"><span class="lineno">  281</span>        if (this.<a class="code hl_variable" href="classCharaRenderer.html#af5964f8467f67492896f03b246c6f36c">pccData</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  282</span>        {</div>
+<div class="line"><span class="lineno">  283</span>            num += <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#aec448cf5d44c1545fc17b3b6f87fa397">renderSetting</a>.hatPos[this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#afca7223622148571924caf39529c0226">GetFrame</a>()].y;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="line"><span class="lineno">  285</span>        RenderObject.currentParam.liquidLv = 0;</div>
+<div class="line"><span class="lineno">  286</span>        RenderObject.currentParam.y += num;</div>
+<div class="line"><span class="lineno">  287</span>        RenderObject.currentParam.tile = (float)(sourceHat.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[<span class="keyword">this</span>.owner.uid % sourceHat.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length] * (flag ? -1 : 1));</div>
+<div class="line"><span class="lineno">  288</span>        sourceHat.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_function" href="classRenderData.html#a337df6bccf7eb5af3e793530018cf0db">Draw</a>(<a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>);</div>
+<div class="line"><span class="lineno">  289</span>        RenderObject.currentParam.y -= num;</div>
+<div class="line"><span class="lineno">  290</span>        RenderObject.currentParam.liquidLv = liquidLv;</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
+<div class="ttc" id="aclassCardActor_html_afca7223622148571924caf39529c0226"><div class="ttname"><a href="classCardActor.html#afca7223622148571924caf39529c0226">CardActor.GetFrame</a></div><div class="ttdeci">virtual int GetFrame()</div><div class="ttdef"><b>Definition:</b> <a href="CardActor_8cs_source.html#l00077">CardActor.cs:77</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a34515658bc46e9ac7a96778b72645ff2"><div class="ttname"><a href="classCardRenderer.html#a34515658bc46e9ac7a96778b72645ff2">CardRenderer.replacer</a></div><div class="ttdeci">RendererReplacer replacer</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00724">CardRenderer.cs:724</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_abf46e21d661df68d794956e085d5ba84"><div class="ttname"><a href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">CardRenderer.actor</a></div><div class="ttdeci">CardActor actor</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00706">CardRenderer.cs:706</a></div></div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_af5964f8467f67492896f03b246c6f36c"><div class="ttname"><a href="classCharaRenderer.html#af5964f8467f67492896f03b246c6f36c">CharaRenderer.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00418">CharaRenderer.cs:418</a></div></div>
+<div class="ttc" id="aclassChara_html_a8d5d9a7d9eeaee31ed0efed30fedc4e6"><div class="ttname"><a href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">Chara.IsDeadOrSleeping</a></div><div class="ttdeci">override bool IsDeadOrSleeping</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00459">Chara.cs:460</a></div></div>
+<div class="ttc" id="aclassRenderData_html_a337df6bccf7eb5af3e793530018cf0db"><div class="ttname"><a href="classRenderData.html#a337df6bccf7eb5af3e793530018cf0db">RenderData.Draw</a></div><div class="ttdeci">void Draw(RenderParam p, int tile)</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00109">RenderData.cs:109</a></div></div>
+<div class="ttc" id="aclassRenderObject_html"><div class="ttname"><a href="classRenderObject.html">RenderObject</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00005">RenderObject.cs:6</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a21df7558c07003f48df2bf69eed7db23"><div class="ttname"><a href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">RenderObject.currentParam</a></div><div class="ttdeci">static RenderParam currentParam</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00047">RenderObject.cs:47</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_aec448cf5d44c1545fc17b3b6f87fa397"><div class="ttname"><a href="classRenderObject.html#aec448cf5d44c1545fc17b3b6f87fa397">RenderObject.renderSetting</a></div><div class="ttdeci">static GameSetting.RenderSetting renderSetting</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00043">RenderObject.cs:43</a></div></div>
+<div class="ttc" id="aclassRenderParam_html_a155648baf36e4dfaa9b1cee340ea777f"><div class="ttname"><a href="classRenderParam.html#a155648baf36e4dfaa9b1cee340ea777f">RenderParam.liquidLv</a></div><div class="ttdeci">int liquidLv</div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00041">RenderParam.cs:41</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a2a871b97e038c6b15e02a011aa4d27b4"><div class="ttname"><a href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">RenderRow.renderData</a></div><div class="ttdeci">RenderData renderData</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00498">RenderRow.cs:498</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a51d3045368a420940208487ea3ed1d63"><div class="ttname"><a href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">RenderRow.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00495">RenderRow.cs:495</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00441">RenderRow.cs:441</a></div></div>
+<div class="ttc" id="aclassRendererReplacer_html_a08c872144159c8e182f95783dfa633b3"><div class="ttname"><a href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">RendererReplacer.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00020">RendererReplacer.cs:20</a></div></div>
+<div class="ttc" id="aclassSourcePref_html"><div class="ttname"><a href="classSourcePref.html">SourcePref</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00006">SourcePref.cs:7</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_af67e02842a49ab3c996a057f9ed8dca3"><div class="ttname"><a href="classSourcePref.html#af67e02842a49ab3c996a057f9ed8dca3">SourcePref.hatY</a></div><div class="ttdeci">float hatY</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00077">SourcePref.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00441">RenderRow._tiles</a>, <a class="el" href="CardRenderer_8cs_source.html#l00706">CardRenderer.actor</a>, <a class="el" href="RenderObject_8cs_source.html#l00047">RenderObject.currentParam</a>, <a class="el" href="RenderData_8cs_source.html#l00109">RenderData.Draw()</a>, <a class="el" href="CardActor_8cs_source.html#l00077">CardActor.GetFrame()</a>, <a class="el" href="SourcePref_8cs_source.html#l00078">SourcePref.hatY</a>, <a class="el" href="Chara_8cs_source.html#l00460">Chara.IsDeadOrSleeping</a>, <a class="el" href="RenderParam_8cs_source.html#l00041">RenderParam.liquidLv</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00418">pccData</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00020">RendererReplacer.pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00495">RenderRow.pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00498">RenderRow.renderData</a>, <a class="el" href="RenderObject_8cs_source.html#l00043">RenderObject.renderSetting</a>, <a class="el" href="CardRenderer_8cs_source.html#l00724">CardRenderer.replacer</a>, and <a class="el" href="Zone_8cs_source.html#l03847">Zone.sourceHat</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00047">Draw()</a>.</p>
 
 </div>
 </div>
@@ -506,6 +599,94 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a169c585c2e45d6d57c8c417439734bef">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00293">293</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordtype">int</span> <a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a> = this.<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>;</div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_class" href="classRenderData.html">RenderData</a> <a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a> = this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a>;</div>
+<div class="line"><span class="lineno">  297</span>        <a class="code hl_class" href="classSourcePref.html">SourcePref</a> pref = this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_property" href="classCard.html#a7defb8a972dddfd622028676c19d3b8d">Pref</a>;</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a> == 1 || <a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a> == 3;</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_property" href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">isChara</a>)</div>
+<div class="line"><span class="lineno">  300</span>        {</div>
+<div class="line"><span class="lineno">  301</span>            Vector3[] array = EClass.player.altHeldPos ? RenderObject.renderSetting.heldPosChara2 : <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#aec448cf5d44c1545fc17b3b6f87fa397">renderSetting</a>.heldPosChara;</div>
+<div class="line"><span class="lineno">  302</span>            RenderObject.currentParam.x += array[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].x;</div>
+<div class="line"><span class="lineno">  303</span>            RenderObject.currentParam.y += array[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].y;</div>
+<div class="line"><span class="lineno">  304</span>            RenderObject.currentParam.z += array[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].z + this.data.offset.z - <a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a>.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z;</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#af469dc130e6e1ae724769754172ea736">altHeldPos</a>)</div>
+<div class="line"><span class="lineno">  306</span>            {</div>
+<div class="line"><span class="lineno">  307</span>                this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_function" href="classCard.html#a472ae5645d6387627381724fb1bb565d">SetDir</a>((this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 0) ? 2 : ((<span class="keyword">this</span>.owner.dir == 1) ? 1 : ((<span class="keyword">this</span>.owner.dir == 2) ? 0 : 3)));</div>
+<div class="line"><span class="lineno">  308</span>            }</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_function" href="classCard.html#a472ae5645d6387627381724fb1bb565d">SetDir</a>((this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 0) ? 2 : <span class="keyword">this</span>.owner.dir);</div>
+<div class="line"><span class="lineno">  312</span>            }</div>
+<div class="line"><span class="lineno">  313</span>        }</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  315</span>        {</div>
+<div class="line"><span class="lineno">  316</span>            Vector3[] heldPos = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#aec448cf5d44c1545fc17b3b6f87fa397">renderSetting</a>.heldPos;</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">hasActor</a>)</div>
+<div class="line"><span class="lineno">  318</span>            {</div>
+<div class="line"><span class="lineno">  319</span>                RenderObject.currentParam.x += heldPos[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].x;</div>
+<div class="line"><span class="lineno">  320</span>                RenderObject.currentParam.y += heldPos[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].y + 0.02f * (float)(this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#afca7223622148571924caf39529c0226">GetFrame</a>() % 2);</div>
+<div class="line"><span class="lineno">  321</span>                RenderObject.currentParam.z += heldPos[<a class="code hl_property" href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">currentDir</a>].z + this.data.offset.z - <a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a>.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z;</div>
+<div class="line"><span class="lineno">  322</span>            }</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  324</span>            {</div>
+<div class="line"><span class="lineno">  325</span>                RenderObject.currentParam.x += heldPos[4].x;</div>
+<div class="line"><span class="lineno">  326</span>                RenderObject.currentParam.y += heldPos[4].y;</div>
+<div class="line"><span class="lineno">  327</span>                RenderObject.currentParam.z += heldPos[4].z + this.data.offset.z - <a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a>.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z;</div>
+<div class="line"><span class="lineno">  328</span>            }</div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a654dbdca51dc4525768048c27d0d6030">NoHeldDir</a> || !<span class="keyword">this</span>.owner.held.sourceCard.ContainsTag(<span class="stringliteral">&quot;noHeldDir&quot;</span>))</div>
+<div class="line"><span class="lineno">  330</span>            {</div>
+<div class="line"><span class="lineno">  331</span>                this.owner.held.dir = (this.owner.flipX ? 1 : 0);</div>
+<div class="line"><span class="lineno">  332</span>            }</div>
+<div class="line"><span class="lineno">  333</span>        }</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#ae094b46c8b0ed575bdc1e342c6c2bdb3">sourceSurface</a>.tileType.IsDeepWater)</div>
+<div class="line"><span class="lineno">  335</span>        {</div>
+<div class="line"><span class="lineno">  336</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  337</span>        }</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordtype">int</span> liquidLv = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classRenderParam.html#a155648baf36e4dfaa9b1cee340ea777f">liquidLv</a>;</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_property" href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">isChara</a>)</div>
+<div class="line"><span class="lineno">  340</span>        {</div>
+<div class="line"><span class="lineno">  341</span>            RenderObject.currentParam.liquidLv = 0;</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>        this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>.<a class="code hl_function" href="classCard.html#a8d4d8d4e82d09ac047c61b2c74129b9c">SetRenderParam</a>(<a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>);</div>
+<div class="line"><span class="lineno">  344</span>        RenderObject.currentParam.x += data.heldPos.x - data.offset.x + (flag ? 0.01f : -0.01f) * (<span class="keywordtype">float</span>)pref.<a class="code hl_property" href="classSourcePref.html#aedf586b8cb10d343c68fe65161709391">equipX</a>;</div>
+<div class="line"><span class="lineno">  345</span>        RenderObject.currentParam.y += data.heldPos.y - data.offset.y + 0.01f * (float)pref.<a class="code hl_property" href="classSourcePref.html#a562ee95073038282b6e7e63216abcd54">equipY</a>;</div>
+<div class="line"><span class="lineno">  346</span>        <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classMeshPassParam.html#a410187328526ad72d7be76912b396947">z</a> += <a class="code hl_variable" href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">data</a>.<a class="code hl_variable" href="classRenderData.html#aea6a73e55d8bb105b11e07772a00c270">heldPos</a>.z;</div>
+<div class="line"><span class="lineno">  347</span>        <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a1320323236a2c82992be99ee3fd7d5dc">tempV</a>.x = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classMeshPassParam.html#aecda2267d3fe03d0fe1afe85ce280da4">x</a>;</div>
+<div class="line"><span class="lineno">  348</span>        <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a1320323236a2c82992be99ee3fd7d5dc">tempV</a>.y = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classMeshPassParam.html#af76a9d9bf03724439dacb291b393ee7b">y</a>;</div>
+<div class="line"><span class="lineno">  349</span>        <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a1320323236a2c82992be99ee3fd7d5dc">tempV</a>.z = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>.<a class="code hl_variable" href="classMeshPassParam.html#a410187328526ad72d7be76912b396947">z</a>;</div>
+<div class="line"><span class="lineno">  350</span>        <span class="keyword">this</span>.owner.held.renderer.Draw(<a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a21df7558c07003f48df2bf69eed7db23">currentParam</a>, ref <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a1320323236a2c82992be99ee3fd7d5dc">tempV</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  351</span>        RenderObject.currentParam.liquidLv = liquidLv;</div>
+<div class="line"><span class="lineno">  352</span>    }</div>
+<div class="ttc" id="aclassCardRenderer_html_ada2b1b89a728d6ddef531c8703c5044d"><div class="ttname"><a href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">CardRenderer.hasActor</a></div><div class="ttdeci">bool hasActor</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00708">CardRenderer.cs:708</a></div></div>
+<div class="ttc" id="aclassCard_html_a472ae5645d6387627381724fb1bb565d"><div class="ttname"><a href="classCard.html#a472ae5645d6387627381724fb1bb565d">Card.SetDir</a></div><div class="ttdeci">virtual void SetDir(int d)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05574">Card.cs:5574</a></div></div>
+<div class="ttc" id="aclassCard_html_a7defb8a972dddfd622028676c19d3b8d"><div class="ttname"><a href="classCard.html#a7defb8a972dddfd622028676c19d3b8d">Card.Pref</a></div><div class="ttdeci">virtual SourcePref Pref</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02091">Card.cs:2092</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d4d8d4e82d09ac047c61b2c74129b9c"><div class="ttname"><a href="classCard.html#a8d4d8d4e82d09ac047c61b2c74129b9c">Card.SetRenderParam</a></div><div class="ttdeci">virtual void SetRenderParam(RenderParam p)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05365">Card.cs:5365</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassCard_html_ab75ffdacfe8891e42eec65abdc40648c"><div class="ttname"><a href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">Card.isChara</a></div><div class="ttdeci">virtual bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02035">Card.cs:2036</a></div></div>
+<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01995">Card.cs:1996</a></div></div>
+<div class="ttc" id="aclassCard_html_acead09796e17d25d2c320e10c7da820a"><div class="ttname"><a href="classCard.html#acead09796e17d25d2c320e10c7da820a">Card.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00103">Card.cs:104</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassCell_html_ae094b46c8b0ed575bdc1e342c6c2bdb3"><div class="ttname"><a href="classCell.html#ae094b46c8b0ed575bdc1e342c6c2bdb3">Cell.sourceSurface</a></div><div class="ttdeci">SourceFloor.Row sourceSurface</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01161">Cell.cs:1162</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a5bfd8138fed2c8c455bf5196b15d4127"><div class="ttname"><a href="classCharaRenderer.html#a5bfd8138fed2c8c455bf5196b15d4127">CharaRenderer.currentDir</a></div><div class="ttdeci">int currentDir</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00006">CharaRenderer.cs:7</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_a410187328526ad72d7be76912b396947"><div class="ttname"><a href="classMeshPassParam.html#a410187328526ad72d7be76912b396947">MeshPassParam.z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00009">MeshPassParam.cs:9</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_aecda2267d3fe03d0fe1afe85ce280da4"><div class="ttname"><a href="classMeshPassParam.html#aecda2267d3fe03d0fe1afe85ce280da4">MeshPassParam.x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00005">MeshPassParam.cs:5</a></div></div>
+<div class="ttc" id="aclassMeshPassParam_html_af76a9d9bf03724439dacb291b393ee7b"><div class="ttname"><a href="classMeshPassParam.html#af76a9d9bf03724439dacb291b393ee7b">MeshPassParam.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="MeshPassParam_8cs_source.html#l00007">MeshPassParam.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af469dc130e6e1ae724769754172ea736"><div class="ttname"><a href="classPlayer.html#af469dc130e6e1ae724769754172ea736">Player.altHeldPos</a></div><div class="ttdeci">bool altHeldPos</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01589">Player.cs:1589</a></div></div>
+<div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
+<div class="ttc" id="aclassRenderData_html_ab0c24dab311f1c22c8b109f201135029"><div class="ttname"><a href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">RenderData.offset</a></div><div class="ttdeci">Vector3 offset</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00268">RenderData.cs:268</a></div></div>
+<div class="ttc" id="aclassRenderData_html_aea6a73e55d8bb105b11e07772a00c270"><div class="ttname"><a href="classRenderData.html#aea6a73e55d8bb105b11e07772a00c270">RenderData.heldPos</a></div><div class="ttdeci">Vector3 heldPos</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00274">RenderData.cs:274</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a1320323236a2c82992be99ee3fd7d5dc"><div class="ttname"><a href="classRenderObject.html#a1320323236a2c82992be99ee3fd7d5dc">RenderObject.tempV</a></div><div class="ttdeci">static Vector3 tempV</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00049">RenderObject.cs:49</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a6ce63f2d9e435bf68d875ca43b9b966c"><div class="ttname"><a href="classRenderObject.html#a6ce63f2d9e435bf68d875ca43b9b966c">RenderObject.data</a></div><div class="ttdeci">RenderData data</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00063">RenderObject.cs:63</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_a562ee95073038282b6e7e63216abcd54"><div class="ttname"><a href="classSourcePref.html#a562ee95073038282b6e7e63216abcd54">SourcePref.equipY</a></div><div class="ttdeci">int equipY</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00269">SourcePref.cs:270</a></div></div>
+<div class="ttc" id="aclassSourcePref_html_aedf586b8cb10d343c68fe65161709391"><div class="ttname"><a href="classSourcePref.html#aedf586b8cb10d343c68fe65161709391">SourcePref.equipX</a></div><div class="ttdeci">int equipX</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00257">SourcePref.cs:258</a></div></div>
+<div class="ttc" id="aclassTrait_html_a654dbdca51dc4525768048c27d0d6030"><div class="ttname"><a href="classTrait.html#a654dbdca51dc4525768048c27d0d6030">Trait.NoHeldDir</a></div><div class="ttdeci">virtual bool NoHeldDir</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00739">Trait.cs:740</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardRenderer_8cs_source.html#l00706">CardRenderer.actor</a>, <a class="el" href="Player_8cs_source.html#l01589">Player.altHeldPos</a>, <a class="el" href="Card_8cs_source.html#l01996">Card.Cell</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00007">currentDir</a>, <a class="el" href="RenderObject_8cs_source.html#l00047">RenderObject.currentParam</a>, <a class="el" href="RenderObject_8cs_source.html#l00063">RenderObject.data</a>, <a class="el" href="Card_8cs_source.html#l00104">Card.dir</a>, <a class="el" href="SourcePref_8cs_source.html#l00258">SourcePref.equipX</a>, <a class="el" href="SourcePref_8cs_source.html#l00270">SourcePref.equipY</a>, <a class="el" href="CardActor_8cs_source.html#l00077">CardActor.GetFrame()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00708">CardRenderer.hasActor</a>, <a class="el" href="Chara_8cs_source.html#l09386">Chara.held</a>, <a class="el" href="RenderData_8cs_source.html#l00274">RenderData.heldPos</a>, <a class="el" href="Card_8cs_source.html#l02036">Card.isChara</a>, <a class="el" href="RenderParam_8cs_source.html#l00041">RenderParam.liquidLv</a>, <a class="el" href="Trait_8cs_source.html#l00740">Trait.NoHeldDir</a>, <a class="el" href="RenderData_8cs_source.html#l00268">RenderData.offset</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l02092">Card.Pref</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="RenderObject_8cs_source.html#l00043">RenderObject.renderSetting</a>, <a class="el" href="Card_8cs_source.html#l05574">Card.SetDir()</a>, <a class="el" href="Card_8cs_source.html#l05365">Card.SetRenderParam()</a>, <a class="el" href="Cell_8cs_source.html#l01162">Cell.sourceSurface</a>, <a class="el" href="RenderObject_8cs_source.html#l00049">RenderObject.tempV</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00005">MeshPassParam.x</a>, <a class="el" href="MeshPassParam_8cs_source.html#l00007">MeshPassParam.y</a>, and <a class="el" href="MeshPassParam_8cs_source.html#l00009">MeshPassParam.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00047">Draw()</a>.</p>
 
 </div>
 </div>
@@ -535,6 +716,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a5e0f1301c474412bd664e354db2e8745">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00068">68</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        base.NextFrame();</div>
+<div class="line"><span class="lineno">   71</span>        this.owner.idleTimer = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.idleTime;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassRenderObject_html_a91727d127ff9d7646434e251ce71dab8"><div class="ttname"><a href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">RenderObject.animeSetting</a></div><div class="ttdeci">static GameSetting.RenderSetting.AnimeSetting animeSetting</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00041">RenderObject.cs:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RenderObject_8cs_source.html#l00041">RenderObject.animeSetting</a>.</p>
 
 </div>
 </div>
@@ -564,6 +752,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a86e3d538b0807869ac819bae82ced469">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00032">32</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        base.OnEnterScreen();</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCharaRenderer.html#adbab7d3b4dd480ef9ae0e048e6132399">ignoreFirst</a>)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        this.ignoreFirst = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span>        this.nextframeTimer = 0f;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.game.haltOnSpotEnemy &amp;&amp; <span class="keyword">this</span>.owner.ExistsOnMap &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a> &amp;&amp; <span class="keyword">this</span>.owner.IsHostile())</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            EClass.player.enemySpotted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassCharaRenderer_html_adbab7d3b4dd480ef9ae0e048e6132399"><div class="ttname"><a href="classCharaRenderer.html#adbab7d3b4dd480ef9ae0e048e6132399">CharaRenderer.ignoreFirst</a></div><div class="ttdeci">bool ignoreFirst</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00412">CharaRenderer.cs:412</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00412">ignoreFirst</a>, and <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>.</p>
 
 </div>
 </div>
@@ -593,7 +800,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#ada10d2f62ac33e040b5d8c283add69ba">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00398">398</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a19a184e0e1037f635ab7090f2735658c" name="a19a184e0e1037f635ab7090f2735658c"></a>
@@ -622,6 +831,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a65ed18379e57b036b79a734c9919eb64">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00354">354</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  355</span>    {</div>
+<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classRenderObject.html#aae53a826ee851ae65cb059a1cf6a0cfc">isSynced</a>)</div>
+<div class="line"><span class="lineno">  357</span>        {</div>
+<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  359</span>        }</div>
+<div class="line"><span class="lineno">  360</span>        <a class="code hl_class" href="classTCState.html">TCState</a> tcstate = base.GetTC&lt;<a class="code hl_class" href="classTCState.html">TCState</a>&gt;();</div>
+<div class="line"><span class="lineno">  361</span>        <a class="code hl_class" href="classMultiSprite.html">MultiSprite</a> stateIcon = this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_function" href="classAIAct.html#abaedd9923fc3703e8e973adc7ee0e453">GetStateIcon</a>();</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">if</span> (stateIcon == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  363</span>        {</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (tcstate)</div>
+<div class="line"><span class="lineno">  365</span>            {</div>
+<div class="line"><span class="lineno">  366</span>                base.RemoveTC(tcstate);</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  369</span>        }</div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (!tcstate)</div>
+<div class="line"><span class="lineno">  371</span>        {</div>
+<div class="line"><span class="lineno">  372</span>            tcstate = base.AddTC&lt;<a class="code hl_class" href="classTCState.html">TCState</a>&gt;(PoolManager.Spawn&lt;<a class="code hl_class" href="classTCState.html">TCState</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.tcs.state, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">  373</span>        }</div>
+<div class="line"><span class="lineno">  374</span>        tcstate.<a class="code hl_function" href="classTCState.html#aa634bb2c7aa235fe49d1ca4fed2e74a8">SetSprite</a>(stateIcon);</div>
+<div class="line"><span class="lineno">  375</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_abaedd9923fc3703e8e973adc7ee0e453"><div class="ttname"><a href="classAIAct.html#abaedd9923fc3703e8e973adc7ee0e453">AIAct.GetStateIcon</a></div><div class="ttdeci">override MultiSprite GetStateIcon()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00188">AIAct.cs:188</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09506">Chara.cs:9506</a></div></div>
+<div class="ttc" id="aclassMultiSprite_html"><div class="ttname"><a href="classMultiSprite.html">MultiSprite</a></div><div class="ttdef"><b>Definition:</b> <a href="MultiSprite_8cs_source.html#l00005">MultiSprite.cs:6</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_aae53a826ee851ae65cb059a1cf6a0cfc"><div class="ttname"><a href="classRenderObject.html#aae53a826ee851ae65cb059a1cf6a0cfc">RenderObject.isSynced</a></div><div class="ttdeci">bool isSynced</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00059">RenderObject.cs:59</a></div></div>
+<div class="ttc" id="aclassTCState_html"><div class="ttname"><a href="classTCState.html">TCState</a></div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00004">TCState.cs:5</a></div></div>
+<div class="ttc" id="aclassTCState_html_aa634bb2c7aa235fe49d1ca4fed2e74a8"><div class="ttname"><a href="classTCState.html#aa634bb2c7aa235fe49d1ca4fed2e74a8">TCState.SetSprite</a></div><div class="ttdeci">void SetSprite(MultiSprite _sprites)</div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00014">TCState.cs:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="AIAct_8cs_source.html#l00188">AIAct.GetStateIcon()</a>, <a class="el" href="RenderObject_8cs_source.html#l00059">RenderObject.isSynced</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, and <a class="el" href="TCState_8cs_source.html#l00014">TCState.SetSprite()</a>.</p>
 
 </div>
 </div>
@@ -652,6 +890,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a157240fba068aaba7d0fbd5bc43b18a4">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00377">377</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  378</span>    {</div>
+<div class="line"><span class="lineno">  379</span>        this.first = <a class="code hl_variable" href="classCharaRenderer.html#ac57981f18494ccb6c22e48d445f4e73d">first</a>;</div>
+<div class="line"><span class="lineno">  380</span>        this.ignoreFirst = !<a class="code hl_variable" href="classCharaRenderer.html#ac57981f18494ccb6c22e48d445f4e73d">first</a>;</div>
+<div class="line"><span class="lineno">  381</span>    }</div>
+<div class="ttc" id="aclassCharaRenderer_html_ac57981f18494ccb6c22e48d445f4e73d"><div class="ttname"><a href="classCharaRenderer.html#ac57981f18494ccb6c22e48d445f4e73d">CharaRenderer.first</a></div><div class="ttdeci">bool first</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00410">CharaRenderer.cs:410</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CharaRenderer_8cs_source.html#l00410">first</a>.</p>
 
 </div>
 </div>
@@ -692,6 +937,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a9bc9aa72be7ba15887aa0f4cdf3d202b">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00383">383</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  384</span>    {</div>
+<div class="line"><span class="lineno">  385</span>        this.first = <a class="code hl_variable" href="classCharaRenderer.html#ac57981f18494ccb6c22e48d445f4e73d">first</a>;</div>
+<div class="line"><span class="lineno">  386</span>        this.ignoreFirst = !<a class="code hl_variable" href="classCharaRenderer.html#ac57981f18494ccb6c22e48d445f4e73d">first</a>;</div>
+<div class="line"><span class="lineno">  387</span>        this.position = pos;</div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  389</span>        {</div>
+<div class="line"><span class="lineno">  390</span>            EClass.player.position = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">  391</span>        }</div>
+<div class="line"><span class="lineno">  392</span>        this.<a class="code hl_variable" href="classCharaRenderer.html#af792505ab1fbbca396359772911de87e">movePoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  393</span>        this.step = 9999999;</div>
+<div class="line"><span class="lineno">  394</span>        this.isMoving = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  395</span>        this.moveTimer = 0f;</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
+<div class="ttc" id="aclassCardRenderer_html_a3a3912cba4c1650d7445416067e3ff0e"><div class="ttname"><a href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">CardRenderer.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00716">CardRenderer.cs:716</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_af792505ab1fbbca396359772911de87e"><div class="ttname"><a href="classCharaRenderer.html#af792505ab1fbbca396359772911de87e">CharaRenderer.movePoint</a></div><div class="ttdeci">Point movePoint</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00414">CharaRenderer.cs:414</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CharaRenderer_8cs_source.html#l00410">first</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00414">movePoint</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="CardRenderer_8cs_source.html#l00716">CardRenderer.position</a>, and <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>.</p>
 
 </div>
 </div>
@@ -722,6 +986,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#a91d3162e3a895a25ffbd03587121b153">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00022">22</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        this.owner = (c as <a class="code hl_class" href="classChara.html">Chara</a>);</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#af5964f8467f67492896f03b246c6f36c">pccData</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            this.data = ((this.<a class="code hl_variable" href="classCharaRenderer.html#af5964f8467f67492896f03b246c6f36c">pccData</a>.GetBodySet2().id == <span class="stringliteral">&quot;unique&quot;</span>) ? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.renderers.pcc_L : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.renderers.pcc);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        base.SetOwner(c);</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00418">pccData</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05901">Chara._CreateRenderer()</a>.</p>
 
 </div>
 </div>
@@ -762,6 +1039,223 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classCardRenderer.html#aaf15c3a477a151397acdb775b7ee92c6">CardRenderer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00082">82</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">bool</span> isPC = this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>;</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">int</span> num = isPC ? CharaRenderer._animeFramePC : (this.hasActor ? CharaRenderer._animeFramePCC : <a class="code hl_class" href="classCharaRenderer.html">CharaRenderer</a>.<a class="code hl_variable" href="classCharaRenderer.html#af1881cef70711323e1676dc86fa3ee47">_animeFrame</a>);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">bool</span> flag = isPC || num &gt;= 10;</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (num == 0 || <a class="code hl_class" href="classScene.html">Scene</a>.<a class="code hl_variable" href="classScene.html#a06ab49a84cff07d72a8797770c7f4c5e">skipAnime</a> || <span class="keyword">this</span>.first || !<span class="keyword">this</span>.data.animate || (<span class="keyword">this</span>.owner.IsDeadOrSleeping &amp;&amp; <span class="keyword">this</span>.pccData != <span class="keyword">null</span> &amp;&amp; !<span class="keyword">this</span>.owner.IsPC))</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            this.first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   90</span>            this.position = destPos;</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (isPC)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                EClass.player.position = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            this.<a class="code hl_variable" href="classCharaRenderer.html#af792505ab1fbbca396359772911de87e">movePoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   96</span>            this.step = 9999999;</div>
+<div class="line"><span class="lineno">   97</span>            this.isMoving = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   98</span>            this.moveTimer = 0f;</div>
+<div class="line"><span class="lineno">   99</span>            base.RefreshSprite();</div>
+<div class="line"><span class="lineno">  100</span>            p.x = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>.x;</div>
+<div class="line"><span class="lineno">  101</span>            p.y = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>.y;</div>
+<div class="line"><span class="lineno">  102</span>            p.z = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>.z;</div>
+<div class="line"><span class="lineno">  103</span>            this.lastShadowFix = (this.lastShadowFix2 = p.<a class="code hl_variable" href="classRenderParam.html#a4784fbb182d600f74f78c47a74bcebc8">shadowFix</a>);</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<span class="keyword">this</span>.movePoint))</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a73cf32e03a0ffe8dd05b6e03ff2ee625">gameSpeed</a> &gt; 1f)</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                p.shadowFix = (this.lastShadowFix = 0f);</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                p.shadowFix = (this.lastShadowFix = this.<a class="code hl_variable" href="classCharaRenderer.html#a554e1d90400e0696f6c97944d0c360fc">lastShadowFix2</a>);</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            this.<a class="code hl_variable" href="classCharaRenderer.html#af792505ab1fbbca396359772911de87e">movePoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  117</span>            this.orgPos = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">  118</span>            this.actTime = this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a8328675f0d3911b2f0f21d6d559119c4">actTime</a>;</div>
+<div class="line"><span class="lineno">  119</span>            base.RefreshSprite();</div>
+<div class="line"><span class="lineno">  120</span>            this.step = 1;</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCharaRenderer.html#acee670655c803bd16662b9ab197e76e3">isMoving</a>)</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                this.isMoving = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  124</span>                this.nextframeTimer = (RenderObject.animeSetting.nextFrameInterval + this.actTime / 4f) / 2f;</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            this.moveTimer = 0f;</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (num &lt; 100)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            num = (int)((<span class="keywordtype">float</span>)num / 0.3f * this.<a class="code hl_variable" href="classCharaRenderer.html#af77c3fd6b54205d1c27e66734bc6f6a8">actTime</a>);</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> num2 = (this.actTime + ((!isPC &amp;&amp; this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a>) ? <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.animeExtraTimeParty : <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.animeExtraTime) * <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a73cf32e03a0ffe8dd05b6e03ff2ee625">gameSpeed</a>) / (<span class="keywordtype">float</span>)num;</div>
+<div class="line"><span class="lineno">  133</span>        this.moveTimer += <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">gameDelta</a>;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#a67b344a0450fee1741c71845b8cbb912">step</a> &gt;= num)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a> == destPos)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#acee670655c803bd16662b9ab197e76e3">isMoving</a> &amp;&amp; isPC)</div>
+<div class="line"><span class="lineno">  139</span>                {</div>
+<div class="line"><span class="lineno">  140</span>                    EClass.player.position = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">  141</span>                }</div>
+<div class="line"><span class="lineno">  142</span>                this.isMoving = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  143</span>                this.moveTimer = 0f;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                this.position = destPos;</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#a31d4443746aeda4a94313d10625d2c1c">moveTimer</a> &gt;= num2)</div>
+<div class="line"><span class="lineno">  150</span>            {</div>
+<div class="line"><span class="lineno">  151</span>                <span class="keywordtype">int</span> num3 = (int)(this.<a class="code hl_variable" href="classCharaRenderer.html#a31d4443746aeda4a94313d10625d2c1c">moveTimer</a> / num2);</div>
+<div class="line"><span class="lineno">  152</span>                this.moveTimer -= (float)num3 * num2;</div>
+<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">if</span> (Vector3.Distance(<span class="keyword">this</span>.position, destPos) &lt; <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.destRadius)</div>
+<div class="line"><span class="lineno">  154</span>                {</div>
+<div class="line"><span class="lineno">  155</span>                    this.position = destPos;</div>
+<div class="line"><span class="lineno">  156</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#acee670655c803bd16662b9ab197e76e3">isMoving</a> &amp;&amp; isPC)</div>
+<div class="line"><span class="lineno">  157</span>                    {</div>
+<div class="line"><span class="lineno">  158</span>                        EClass.player.position = this.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">  159</span>                    }</div>
+<div class="line"><span class="lineno">  160</span>                    this.isMoving = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  161</span>                }</div>
+<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  163</span>                {</div>
+<div class="line"><span class="lineno">  164</span>                    this.position.z = destPos.z;</div>
+<div class="line"><span class="lineno">  165</span>                    Vector3 <a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a> = Vector3.MoveTowards(this.position, destPos, (<span class="keywordtype">float</span>)num3 * RenderObject.animeSetting.slowSpeed / (float)this.<a class="code hl_variable" href="classCharaRenderer.html#a67b344a0450fee1741c71845b8cbb912">step</a>);</div>
+<div class="line"><span class="lineno">  166</span>                    this.position = <a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">  167</span>                }</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1dd13be4094c7d948172adfa43bb90a4">idleTimer</a> &gt; 0f)</div>
+<div class="line"><span class="lineno">  170</span>            {</div>
+<div class="line"><span class="lineno">  171</span>                this.owner.idleTimer -= <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">gameDelta</a>;</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">if</span> (flag &amp;&amp; this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1dd13be4094c7d948172adfa43bb90a4">idleTimer</a> &lt;= 0f)</div>
+<div class="line"><span class="lineno">  173</span>                {</div>
+<div class="line"><span class="lineno">  174</span>                    this.<a class="code hl_function" href="classCardRenderer.html#aafe3c1d688863af67e89d951cfb5f0ca">IdleFrame</a>();</div>
+<div class="line"><span class="lineno">  175</span>                    this.nextframeTimer = 0f;</div>
+<div class="line"><span class="lineno">  176</span>                }</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            p.x = this.position.x;</div>
+<div class="line"><span class="lineno">  179</span>            p.y = this.position.y;</div>
+<div class="line"><span class="lineno">  180</span>            p.z = this.position.z;</div>
+<div class="line"><span class="lineno">  181</span>            this.lastShadowFix = (this.lastShadowFix2 = p.<a class="code hl_variable" href="classRenderParam.html#a4784fbb182d600f74f78c47a74bcebc8">shadowFix</a>);</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (isPC)</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                <a class="code hl_class" href="classCellDetail.html">CellDetail</a> detail = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_variable" href="classCell.html#a8ae6e83a67061ee373662062596013c9">detail</a>;</div>
+<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">if</span> (detail == <span class="keyword">null</span> || detail.<a class="code hl_variable" href="classCellDetail.html#ab04cda19fec586803fcac6bbfcb2ba5b">anime</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  186</span>                {</div>
+<div class="line"><span class="lineno">  187</span>                    this.position.z = destPos.z;</div>
+<div class="line"><span class="lineno">  188</span>                    Vector3 position2 = Vector3.MoveTowards(this.position, destPos, 0.1f);</div>
+<div class="line"><span class="lineno">  189</span>                    this.position = position2;</div>
+<div class="line"><span class="lineno">  190</span>                    EClass.player.position = Vector3.Lerp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#af9d138839a33333ff640599034e289a2">position</a>, <span class="keyword">this</span>.position, 0.6f);</div>
+<div class="line"><span class="lineno">  191</span>                }</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#a31d4443746aeda4a94313d10625d2c1c">moveTimer</a> &gt;= num2)</div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">int</span> num4 = (int)(this.<a class="code hl_variable" href="classCharaRenderer.html#a31d4443746aeda4a94313d10625d2c1c">moveTimer</a> / num2);</div>
+<div class="line"><span class="lineno">  198</span>            this.step += num4;</div>
+<div class="line"><span class="lineno">  199</span>            this.moveTimer -= (float)num4 * num2;</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#a67b344a0450fee1741c71845b8cbb912">step</a> &gt;= num)</div>
+<div class="line"><span class="lineno">  201</span>            {</div>
+<div class="line"><span class="lineno">  202</span>                this.step = num;</div>
+<div class="line"><span class="lineno">  203</span>            }</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>        this.owner.idleTimer = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.idleTime;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordtype">float</span> num5 = (float)this.<a class="code hl_variable" href="classCharaRenderer.html#a67b344a0450fee1741c71845b8cbb912">step</a> / (<span class="keywordtype">float</span>)num;</div>
+<div class="line"><span class="lineno">  207</span>        p.shadowFix = p.shadowFix * num5 + this.lastShadowFix * (1f - num5);</div>
+<div class="line"><span class="lineno">  208</span>        this.lastShadowFix2 = p.<a class="code hl_variable" href="classRenderParam.html#a4784fbb182d600f74f78c47a74bcebc8">shadowFix</a>;</div>
+<div class="line"><span class="lineno">  209</span>        Vector3 position3 = this.orgPos + (destPos - this.<a class="code hl_variable" href="classCharaRenderer.html#a8910ecfb8e7af2ad245ffd9bacd17aba">orgPos</a>) * num5 * ((flag &amp;&amp; <a class="code hl_class" href="classCharaRenderer.html">CharaRenderer</a>.<a class="code hl_variable" href="classCharaRenderer.html#aebdc75c5a0a1db2d55ff7e7a9e398b52">smoothmove</a>) ? RenderObject.animeSetting.fixedMove : 1f);</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (destPos.z &lt; <span class="keyword">this</span>.orgPos.z)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            position3.z = this.orgPos.z + (destPos.z - this.<a class="code hl_variable" href="classCharaRenderer.html#a8910ecfb8e7af2ad245ffd9bacd17aba">orgPos</a>.z) * <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.gradientZForward.Evaluate(num5);</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            position3.z = this.orgPos.z + (destPos.z - this.<a class="code hl_variable" href="classCharaRenderer.html#a8910ecfb8e7af2ad245ffd9bacd17aba">orgPos</a>.z) * <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.gradientZBack.Evaluate(num5);</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>        this.position = position3;</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">hasActor</a>)</div>
+<div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.graphic.spriteFrameMode == 0)</div>
+<div class="line"><span class="lineno">  222</span>            {</div>
+<div class="line"><span class="lineno">  223</span>                this.nextframeTimer += RenderObject.gameDelta * 0.5f;</div>
+<div class="line"><span class="lineno">  224</span>                <span class="keywordtype">float</span> nextFrameInterval = <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.nextFrameInterval;</div>
+<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#afd70db2c9ab1c42644e2b6e1e36cd51d">nextframeTimer</a> &gt; nextFrameInterval)</div>
+<div class="line"><span class="lineno">  226</span>                {</div>
+<div class="line"><span class="lineno">  227</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>)</div>
+<div class="line"><span class="lineno">  228</span>                    {</div>
+<div class="line"><span class="lineno">  229</span>                        this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#abbe67a3fcf3ce15e22ad8eecd1a868ff">IdleFrame</a>();</div>
+<div class="line"><span class="lineno">  230</span>                    }</div>
+<div class="line"><span class="lineno">  231</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  232</span>                    {</div>
+<div class="line"><span class="lineno">  233</span>                        this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#a838138484e8d21777e22268fef4a3e77">NextFrame</a>();</div>
+<div class="line"><span class="lineno">  234</span>                    }</div>
+<div class="line"><span class="lineno">  235</span>                    this.nextframeTimer -= nextFrameInterval;</div>
+<div class="line"><span class="lineno">  236</span>                }</div>
+<div class="line"><span class="lineno">  237</span>            }</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  239</span>            {</div>
+<div class="line"><span class="lineno">  240</span>                this.nextframeTimer += <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">gameDelta</a>;</div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordtype">float</span> num6 = RenderObject.animeSetting.nextFrameInterval + this.actTime / 4f * (0.5f + RenderObject.gameSpeed / 2f);</div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#afd70db2c9ab1c42644e2b6e1e36cd51d">nextframeTimer</a> &gt; num6)</div>
+<div class="line"><span class="lineno">  243</span>                {</div>
+<div class="line"><span class="lineno">  244</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__Trolley.html">AI_Trolley</a>)</div>
+<div class="line"><span class="lineno">  245</span>                    {</div>
+<div class="line"><span class="lineno">  246</span>                        this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#abbe67a3fcf3ce15e22ad8eecd1a868ff">IdleFrame</a>();</div>
+<div class="line"><span class="lineno">  247</span>                    }</div>
+<div class="line"><span class="lineno">  248</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  249</span>                    {</div>
+<div class="line"><span class="lineno">  250</span>                        this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_function" href="classCardActor.html#a838138484e8d21777e22268fef4a3e77">NextFrame</a>();</div>
+<div class="line"><span class="lineno">  251</span>                    }</div>
+<div class="line"><span class="lineno">  252</span>                    this.nextframeTimer -= num6;</div>
+<div class="line"><span class="lineno">  253</span>                }</div>
+<div class="line"><span class="lineno">  254</span>            }</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span>        p.x = this.position.x;</div>
+<div class="line"><span class="lineno">  257</span>        p.y = this.position.y;</div>
+<div class="line"><span class="lineno">  258</span>        p.z = this.position.z;</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (isPC)</div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            EClass.player.position = position3;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">hasActor</a> &amp;&amp; num &gt;= 5 &amp;&amp; this.<a class="code hl_variable" href="classCharaRenderer.html#a25f0020eee83bb0ee1a70d700dfab007">hopCurve</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  265</span>        {</div>
+<div class="line"><span class="lineno">  266</span>            p.y += this.<a class="code hl_variable" href="classCharaRenderer.html#a25f0020eee83bb0ee1a70d700dfab007">hopCurve</a>.Evaluate(num5) * <a class="code hl_class" href="classRenderObject.html">RenderObject</a>.<a class="code hl_variable" href="classRenderObject.html#a91727d127ff9d7646434e251ce71dab8">animeSetting</a>.hopStrength;</div>
+<div class="line"><span class="lineno">  267</span>        }</div>
+<div class="line"><span class="lineno">  268</span>    }</div>
+<div class="ttc" id="aclassAI__Trolley_html"><div class="ttname"><a href="classAI__Trolley.html">AI_Trolley</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Trolley_8cs_source.html#l00005">AI_Trolley.cs:6</a></div></div>
+<div class="ttc" id="aclassCardActor_html_a838138484e8d21777e22268fef4a3e77"><div class="ttname"><a href="classCardActor.html#a838138484e8d21777e22268fef4a3e77">CardActor.NextFrame</a></div><div class="ttdeci">virtual void NextFrame()</div><div class="ttdef"><b>Definition:</b> <a href="CardActor_8cs_source.html#l00069">CardActor.cs:69</a></div></div>
+<div class="ttc" id="aclassCardActor_html_abbe67a3fcf3ce15e22ad8eecd1a868ff"><div class="ttname"><a href="classCardActor.html#abbe67a3fcf3ce15e22ad8eecd1a868ff">CardActor.IdleFrame</a></div><div class="ttdeci">virtual void IdleFrame()</div><div class="ttdef"><b>Definition:</b> <a href="CardActor_8cs_source.html#l00065">CardActor.cs:65</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_aafe3c1d688863af67e89d951cfb5f0ca"><div class="ttname"><a href="classCardRenderer.html#aafe3c1d688863af67e89d951cfb5f0ca">CardRenderer.IdleFrame</a></div><div class="ttdeci">virtual void IdleFrame()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00485">CardRenderer.cs:485</a></div></div>
+<div class="ttc" id="aclassCellDetail_html"><div class="ttname"><a href="classCellDetail.html">CellDetail</a></div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00004">CellDetail.cs:5</a></div></div>
+<div class="ttc" id="aclassCellDetail_html_ab04cda19fec586803fcac6bbfcb2ba5b"><div class="ttname"><a href="classCellDetail.html#ab04cda19fec586803fcac6bbfcb2ba5b">CellDetail.anime</a></div><div class="ttdeci">TransAnime anime</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00088">CellDetail.cs:88</a></div></div>
+<div class="ttc" id="aclassCell_html_a8ae6e83a67061ee373662062596013c9"><div class="ttname"><a href="classCell.html#a8ae6e83a67061ee373662062596013c9">Cell.detail</a></div><div class="ttdeci">CellDetail detail</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01874">Cell.cs:1874</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html"><div class="ttname"><a href="classCharaRenderer.html">CharaRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00004">CharaRenderer.cs:5</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a25f0020eee83bb0ee1a70d700dfab007"><div class="ttname"><a href="classCharaRenderer.html#a25f0020eee83bb0ee1a70d700dfab007">CharaRenderer.hopCurve</a></div><div class="ttdeci">AnimationCurve hopCurve</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00416">CharaRenderer.cs:416</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a31d4443746aeda4a94313d10625d2c1c"><div class="ttname"><a href="classCharaRenderer.html#a31d4443746aeda4a94313d10625d2c1c">CharaRenderer.moveTimer</a></div><div class="ttdeci">float moveTimer</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00406">CharaRenderer.cs:406</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a554e1d90400e0696f6c97944d0c360fc"><div class="ttname"><a href="classCharaRenderer.html#a554e1d90400e0696f6c97944d0c360fc">CharaRenderer.lastShadowFix2</a></div><div class="ttdeci">float lastShadowFix2</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00424">CharaRenderer.cs:424</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a67b344a0450fee1741c71845b8cbb912"><div class="ttname"><a href="classCharaRenderer.html#a67b344a0450fee1741c71845b8cbb912">CharaRenderer.step</a></div><div class="ttdeci">int step</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00426">CharaRenderer.cs:426</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_a8910ecfb8e7af2ad245ffd9bacd17aba"><div class="ttname"><a href="classCharaRenderer.html#a8910ecfb8e7af2ad245ffd9bacd17aba">CharaRenderer.orgPos</a></div><div class="ttdeci">Vector3 orgPos</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00404">CharaRenderer.cs:404</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_acee670655c803bd16662b9ab197e76e3"><div class="ttname"><a href="classCharaRenderer.html#acee670655c803bd16662b9ab197e76e3">CharaRenderer.isMoving</a></div><div class="ttdeci">bool isMoving</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00428">CharaRenderer.cs:428</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_aebdc75c5a0a1db2d55ff7e7a9e398b52"><div class="ttname"><a href="classCharaRenderer.html#aebdc75c5a0a1db2d55ff7e7a9e398b52">CharaRenderer.smoothmove</a></div><div class="ttdeci">static bool smoothmove</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00436">CharaRenderer.cs:436</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_af1881cef70711323e1676dc86fa3ee47"><div class="ttname"><a href="classCharaRenderer.html#af1881cef70711323e1676dc86fa3ee47">CharaRenderer._animeFrame</a></div><div class="ttdeci">static int _animeFrame</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00434">CharaRenderer.cs:434</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_af77c3fd6b54205d1c27e66734bc6f6a8"><div class="ttname"><a href="classCharaRenderer.html#af77c3fd6b54205d1c27e66734bc6f6a8">CharaRenderer.actTime</a></div><div class="ttdeci">float actTime</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00420">CharaRenderer.cs:420</a></div></div>
+<div class="ttc" id="aclassCharaRenderer_html_afd70db2c9ab1c42644e2b6e1e36cd51d"><div class="ttname"><a href="classCharaRenderer.html#afd70db2c9ab1c42644e2b6e1e36cd51d">CharaRenderer.nextframeTimer</a></div><div class="ttdeci">float nextframeTimer</div><div class="ttdef"><b>Definition:</b> <a href="CharaRenderer_8cs_source.html#l00408">CharaRenderer.cs:408</a></div></div>
+<div class="ttc" id="aclassChara_html_a1dd13be4094c7d948172adfa43bb90a4"><div class="ttname"><a href="classChara.html#a1dd13be4094c7d948172adfa43bb90a4">Chara.idleTimer</a></div><div class="ttdeci">float idleTimer</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09436">Chara.cs:9436</a></div></div>
+<div class="ttc" id="aclassChara_html_a4312c7c0a71d9e4709fdfa8b163ebda1"><div class="ttname"><a href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">Chara.IsPCParty</a></div><div class="ttdeci">override bool IsPCParty</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00524">Chara.cs:525</a></div></div>
+<div class="ttc" id="aclassChara_html_a8328675f0d3911b2f0f21d6d559119c4"><div class="ttname"><a href="classChara.html#a8328675f0d3911b2f0f21d6d559119c4">Chara.actTime</a></div><div class="ttdeci">float actTime</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09482">Chara.cs:9482</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af9d138839a33333ff640599034e289a2"><div class="ttname"><a href="classPlayer.html#af9d138839a33333ff640599034e289a2">Player.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01647">Player.cs:1647</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a505fb1d614f9379a31d0e77f1296e268"><div class="ttname"><a href="classRenderObject.html#a505fb1d614f9379a31d0e77f1296e268">RenderObject.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00035">RenderObject.cs:35</a></div></div>
+<div class="ttc" id="aclassRenderObject_html_a73cf32e03a0ffe8dd05b6e03ff2ee625"><div class="ttname"><a href="classRenderObject.html#a73cf32e03a0ffe8dd05b6e03ff2ee625">RenderObject.gameSpeed</a></div><div class="ttdeci">static float gameSpeed</div><div class="ttdef"><b>Definition:</b> <a href="RenderObject_8cs_source.html#l00037">RenderObject.cs:37</a></div></div>
+<div class="ttc" id="aclassRenderParam_html_a4784fbb182d600f74f78c47a74bcebc8"><div class="ttname"><a href="classRenderParam.html#a4784fbb182d600f74f78c47a74bcebc8">RenderParam.shadowFix</a></div><div class="ttdeci">float shadowFix</div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00055">RenderParam.cs:55</a></div></div>
+<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00008">Scene.cs:9</a></div></div>
+<div class="ttc" id="aclassScene_html_a06ab49a84cff07d72a8797770c7f4c5e"><div class="ttname"><a href="classScene.html#a06ab49a84cff07d72a8797770c7f4c5e">Scene.skipAnime</a></div><div class="ttdeci">static bool skipAnime</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00997">Scene.cs:997</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CharaRenderer_8cs_source.html#l00434">_animeFrame</a>, <a class="el" href="CardRenderer_8cs_source.html#l00706">CardRenderer.actor</a>, <a class="el" href="Chara_8cs_source.html#l09482">Chara.actTime</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00420">actTime</a>, <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="CellDetail_8cs_source.html#l00088">CellDetail.anime</a>, <a class="el" href="RenderObject_8cs_source.html#l00041">RenderObject.animeSetting</a>, <a class="el" href="Card_8cs_source.html#l01996">Card.Cell</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Cell_8cs_source.html#l01874">Cell.detail</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="RenderObject_8cs_source.html#l00035">RenderObject.gameDelta</a>, <a class="el" href="RenderObject_8cs_source.html#l00037">RenderObject.gameSpeed</a>, <a class="el" href="CardRenderer_8cs_source.html#l00708">CardRenderer.hasActor</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00416">hopCurve</a>, <a class="el" href="CardActor_8cs_source.html#l00065">CardActor.IdleFrame()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00485">CardRenderer.IdleFrame()</a>, <a class="el" href="Chara_8cs_source.html#l09436">Chara.idleTimer</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00428">isMoving</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l00525">Chara.IsPCParty</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00424">lastShadowFix2</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00414">movePoint</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00406">moveTimer</a>, <a class="el" href="CardActor_8cs_source.html#l00069">CardActor.NextFrame()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00408">nextframeTimer</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00404">orgPos</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00402">owner</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="CardRenderer_8cs_source.html#l00716">CardRenderer.position</a>, <a class="el" href="Player_8cs_source.html#l01647">Player.position</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="RenderParam_8cs_source.html#l00055">RenderParam.shadowFix</a>, <a class="el" href="Scene_8cs_source.html#l00997">Scene.skipAnime</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00436">smoothmove</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00426">step</a>.</p>
 
 </div>
 </div>
@@ -787,6 +1281,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00434">434</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -860,6 +1356,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00420">420</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="ac57981f18494ccb6c22e48d445f4e73d" name="ac57981f18494ccb6c22e48d445f4e73d"></a>
@@ -875,6 +1373,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00410">410</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00377">SetFirst()</a>.</p>
 
 </div>
 </div>
@@ -892,6 +1392,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00416">416</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="adbab7d3b4dd480ef9ae0e048e6132399" name="adbab7d3b4dd480ef9ae0e048e6132399"></a>
@@ -908,6 +1410,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00412">412</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00032">OnEnterScreen()</a>.</p>
+
 </div>
 </div>
 <a id="acee670655c803bd16662b9ab197e76e3" name="acee670655c803bd16662b9ab197e76e3"></a>
@@ -923,6 +1427,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00428">428</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -972,6 +1478,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00424">424</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="af792505ab1fbbca396359772911de87e" name="af792505ab1fbbca396359772911de87e"></a>
@@ -987,6 +1495,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00414">414</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00383">SetFirst()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -1012,6 +1522,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00406">406</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="afd70db2c9ab1c42644e2b6e1e36cd51d" name="afd70db2c9ab1c42644e2b6e1e36cd51d"></a>
@@ -1036,6 +1548,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00408">408</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="a8910ecfb8e7af2ad245ffd9bacd17aba" name="a8910ecfb8e7af2ad245ffd9bacd17aba"></a>
@@ -1051,6 +1565,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00404">404</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -1068,6 +1584,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00402">402</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00047">Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00270">DrawHat()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00293">DrawHeld()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00354">RefreshStateIcon()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00383">SetFirst()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="af5964f8467f67492896f03b246c6f36c" name="af5964f8467f67492896f03b246c6f36c"></a>
@@ -1083,6 +1601,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00418">418</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05901">Chara._CreateRenderer()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00270">DrawHat()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00022">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -1108,6 +1628,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00436">436</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
+
 </div>
 </div>
 <a id="a67b344a0450fee1741c71845b8cbb912" name="a67b344a0450fee1741c71845b8cbb912"></a>
@@ -1123,6 +1645,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00426">426</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00082">UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -1148,6 +1672,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00006">6</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">hasActor</a>)</div>
+<div class="line"><span class="lineno">   11</span>            {</div>
+<div class="line"><span class="lineno">   12</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classCardRenderer.html#abf46e21d661df68d794956e085d5ba84">actor</a>.<a class="code hl_property" href="classCardActor.html#a4051d5751cbcccd1b303d4f365b62032">currentDir</a>;</div>
+<div class="line"><span class="lineno">   13</span>            }</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCharaRenderer.html#ae266de1e0af71611fbf7618287bc3766">owner</a>.<a class="code hl_property" href="classChara.html#a77617f7e5dda52ecd6fea582766033a4">flipX</a>)</div>
+<div class="line"><span class="lineno">   15</span>            {</div>
+<div class="line"><span class="lineno">   16</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   17</span>            }</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassCardActor_html_a4051d5751cbcccd1b303d4f365b62032"><div class="ttname"><a href="classCardActor.html#a4051d5751cbcccd1b303d4f365b62032">CardActor.currentDir</a></div><div class="ttdeci">virtual int currentDir</div><div class="ttdef"><b>Definition:</b> <a href="CardActor_8cs_source.html#l00014">CardActor.cs:15</a></div></div>
+<div class="ttc" id="aclassChara_html_a77617f7e5dda52ecd6fea582766033a4"><div class="ttname"><a href="classChara.html#a77617f7e5dda52ecd6fea582766033a4">Chara.flipX</a></div><div class="ttdeci">override bool flipX</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00435">Chara.cs:436</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00293">DrawHeld()</a>.</p>
 
 </div>
 </div>
@@ -1172,16 +1714,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CharaRenderer_8cs_source.html#l00074">74</a> of file <a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classCharaRenderer.html#acee670655c803bd16662b9ab197e76e3">isMoving</a>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="CharaRenderer_8cs_source.html">CharaRenderer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCharaRenderer.html">CharaRenderer</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

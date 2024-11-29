@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitCatalyst.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -686,6 +706,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> (!this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>.<a class="code hl_property" href="classAct.html#a500995532864367830e20593687d4fde">LocalAct</a> || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>) &amp;&amp; this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>.<a class="code hl_property" href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">TargetType</a>.<a class="code hl_property" href="classTargetType.html#a216bdb54aaec889053846464c2302982">CanSelectSelf</a>;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassAct_html_a500995532864367830e20593687d4fde"><div class="ttname"><a href="classAct.html#a500995532864367830e20593687d4fde">Act.LocalAct</a></div><div class="ttdeci">virtual bool LocalAct</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00349">Act.2.cs:350</a></div></div>
+<div class="ttc" id="aclassAct_html_aa3b011668766e36997dcf0a9fd1483ec"><div class="ttname"><a href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">Act.TargetType</a></div><div class="ttdeci">virtual TargetType TargetType</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00271">Act.2.cs:272</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a216bdb54aaec889053846464c2302982"><div class="ttname"><a href="classTargetType.html#a216bdb54aaec889053846464c2302982">TargetType.CanSelectSelf</a></div><div class="ttdeci">virtual bool CanSelectSelf</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00054">TargetType.cs:55</a></div></div>
+<div class="ttc" id="aclassTraitCatalyst_html_a99e66cca228fa05452d36568a7943dd9"><div class="ttname"><a href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">TraitCatalyst.act</a></div><div class="ttdeci">Act act</div><div class="ttdef"><b>Definition:</b> <a href="TraitCatalyst_8cs_source.html#l00005">TraitCatalyst.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00006">act</a>, <a class="el" href="TargetType_8cs_source.html#l00055">TargetType.CanSelectSelf</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="Act_82_8cs_source.html#l00350">Act.LocalAct</a>, and <a class="el" href="Act_82_8cs_source.html#l00272">Act.TargetType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00223">WidgetCurrentTool.Select()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00185">ButtonGrid.SetCard()</a>.</p>
 
 </div>
 </div>
@@ -715,6 +749,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitAbility.html#a3badd2ca0e7d5fb05b21ccfe4f61b46a">TraitAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classACT.html">ACT</a>.<a class="code hl_function" href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">Create</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>.<a class="code hl_property" href="classThing.html#adc4bb311dba09b52f82071adbe7f1654">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#af637f81a3d1c0840017f9b35231fd61d">vals</a>[0].IsEmpty(<span class="stringliteral">&quot;AI_SelfHarm&quot;</span>));</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassACT_html"><div class="ttname"><a href="classACT.html">ACT</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00004">ACT.cs:5</a></div></div>
+<div class="ttc" id="aclassACT_html_ac02237de965af1a9ce4c5f088f0e62c2"><div class="ttname"><a href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">ACT.Create</a></div><div class="ttdeci">static Act Create(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00017">ACT.cs:17</a></div></div>
+<div class="ttc" id="aclassCardRow_html_af637f81a3d1c0840017f9b35231fd61d"><div class="ttname"><a href="classCardRow.html#af637f81a3d1c0840017f9b35231fd61d">CardRow.vals</a></div><div class="ttdeci">string[] vals</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00153">CardRow.cs:153</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02003">Card.cs:2004</a></div></div>
+<div class="ttc" id="aclassThing_html_adc4bb311dba09b52f82071adbe7f1654"><div class="ttname"><a href="classThing.html#adc4bb311dba09b52f82071adbe7f1654">Thing.sourceCard</a></div><div class="ttdeci">override CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00054">Thing.cs:55</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00017">ACT.Create()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Thing_8cs_source.html#l00055">Thing.sourceCard</a>, <a class="el" href="Card_8cs_source.html#l02004">Card.Thing</a>, and <a class="el" href="CardRow_8cs_source.html#l00153">CardRow.vals</a>.</p>
 
 </div>
 </div>
@@ -745,6 +790,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00036">36</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_function" href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">TryUse</a>(this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html"><div class="ttname"><a href="classButtonAbility.html">ButtonAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00006">ButtonAbility.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_aa5a7387f40975e2615d4e696357ddb4e"><div class="ttname"><a href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">ButtonAbility.TryUse</a></div><div class="ttdeci">static bool TryUse(Act act, Card tg=null, Point pos=null, Card catalyst=null, bool first=true, bool mouse=true)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00101">ButtonAbility.cs:101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitCatalyst_8cs_source.html#l00006">act</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00101">ButtonAbility.TryUse()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00223">WidgetCurrentTool.Select()</a>.</p>
 
 </div>
 </div>
@@ -775,6 +829,55 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00041">41</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_class" href="classCard.html">Card</a> tg = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   44</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>(<span class="keyword">false</span>).ForeachReverse(delegate(<a class="code hl_class" href="classCard.html">Card</a> a)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(a) &amp;&amp; !a.<a class="code hl_property" href="classCard.html#ac960565370f4e1bb110e1db83f16dea2">HasHost</a> &amp;&amp; <span class="keyword">this</span>.act.IsValidTC(a))</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                tg = a;</div>
+<div class="line"><span class="lineno">   49</span>                return true;</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   52</span>        });</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>.<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, tg, p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.GetName(), delegate()</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (tg != <span class="keyword">null</span> &amp;&amp; !tg.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a>)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                return false;</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="classPoint.html">Point</a> point = (tg != <span class="keyword">null</span> &amp;&amp; tg.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a>) ? tg.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a> : p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>;</div>
+<div class="line"><span class="lineno">   64</span>            if (!this.<a class="code hl_property" href="classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9">act</a>.<a class="code hl_function" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">CanPerform</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, tg, point))</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                return false;</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            if (p.<a class="code hl_variable" href="classActPlan.html#afc990320a293400fce1308110f1472dd">performed</a> &amp;&amp; <span class="keyword">this</span>.act.CanPressRepeat)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                return EClass.pc.UseAbility(this.act.source.alias, tg, point, false);</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_function" href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">TryUse</a>(<span class="keyword">this</span>.act, tg, point, <span class="keyword">this</span>.owner, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>        }, tg, <span class="keyword">null</span>, -1, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aea5e9ee4a39d295c4b86be353ca64799">IsCrime</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <span class="keyword">this</span>.act), <span class="keyword">this</span>.act.LocalAct, <span class="keyword">this</span>.act.CanPressRepeat);</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00797">ActPlan.cs:797</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassActPlan_html_afc990320a293400fce1308110f1472dd"><div class="ttname"><a href="classActPlan.html#afc990320a293400fce1308110f1472dd">ActPlan.performed</a></div><div class="ttdeci">bool performed</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00801">ActPlan.cs:801</a></div></div>
+<div class="ttc" id="aclassAct_html_adc0a2efd2fefeb21d959bf4fcaa12e38"><div class="ttname"><a href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">Act.CanPerform</a></div><div class="ttdeci">virtual bool CanPerform()</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00435">Act.2.cs:435</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_ac960565370f4e1bb110e1db83f16dea2"><div class="ttname"><a href="classCard.html#ac960565370f4e1bb110e1db83f16dea2">Card.HasHost</a></div><div class="ttdeci">virtual bool HasHost</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02757">Card.cs:2758</a></div></div>
+<div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00714">Chara.cs:714</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a256787e4a6e7438db25289f56e618463"><div class="ttname"><a href="classPoint.html#a256787e4a6e7438db25289f56e618463">Point.ListCards</a></div><div class="ttdeci">List&lt; Card &gt; ListCards(bool includeMasked=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01112">Point.cs:1112</a></div></div>
+<div class="ttc" id="aclassZone_html_aea5e9ee4a39d295c4b86be353ca64799"><div class="ttname"><a href="classZone.html#aea5e9ee4a39d295c4b86be353ca64799">Zone.IsCrime</a></div><div class="ttdeci">bool IsCrime(Chara c, Act act)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03497">Zone.cs:3497</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00006">act</a>, <a class="el" href="Act_82_8cs_source.html#l00435">Act.CanPerform()</a>, <a class="el" href="Chara_8cs_source.html#l00714">Chara.CanSee()</a>, <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="Card_8cs_source.html#l02758">Card.HasHost</a>, <a class="el" href="Zone_8cs_source.html#l03497">Zone.IsCrime()</a>, <a class="el" href="Point_8cs_source.html#l01112">Point.ListCards()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="ActPlan_8cs_source.html#l00801">ActPlan.performed</a>, <a class="el" href="ActPlan_8cs_source.html#l00797">ActPlan.pos</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00101">ButtonAbility.TryUse()</a>.</p>
 
 </div>
 </div>
@@ -825,6 +928,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <a class="code hl_class" href="classAct.html">Act</a> result;</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">if</span> ((result = this.<a class="code hl_variable" href="classTraitCatalyst.html#a68c0c579c7c2d15f6350565b831b1c2d">_act</a>) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   11</span>            {</div>
+<div class="line"><span class="lineno">   12</span>                result = (this._act = this.<a class="code hl_function" href="classTraitCatalyst.html#a5d315e8c2b7c8e8c9fe358627223432e">CreateAct</a>());</div>
+<div class="line"><span class="lineno">   13</span>            }</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitCatalyst_html_a5d315e8c2b7c8e8c9fe358627223432e"><div class="ttname"><a href="classTraitCatalyst.html#a5d315e8c2b7c8e8c9fe358627223432e">TraitCatalyst.CreateAct</a></div><div class="ttdeci">virtual Act CreateAct()</div><div class="ttdef"><b>Definition:</b> <a href="TraitCatalyst_8cs_source.html#l00026">TraitCatalyst.cs:26</a></div></div>
+<div class="ttc" id="aclassTraitCatalyst_html_a68c0c579c7c2d15f6350565b831b1c2d"><div class="ttname"><a href="classTraitCatalyst.html#a68c0c579c7c2d15f6350565b831b1c2d">TraitCatalyst._act</a></div><div class="ttdeci">Act _act</div><div class="ttdef"><b>Definition:</b> <a href="TraitCatalyst_8cs_source.html#l00076">TraitCatalyst.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00031">CanUse()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00036">OnUse()</a>, and <a class="el" href="TraitCatalyst_8cs_source.html#l00041">TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -849,16 +968,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitCatalyst_8cs_source.html#l00018">18</a> of file <a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitCatalyst_8cs_source.html">TraitCatalyst.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitCatalyst.html">TraitCatalyst</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

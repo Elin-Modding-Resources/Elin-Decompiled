@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestInstance.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -456,6 +476,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classQuestDefenseGame.html#ac80947d3d8b47cc223d386e68f225b05">QuestDefenseGame</a>, <a class="el" href="classQuestHarvest.html#a8ea61ee6d76cdfe528add524b793d566">QuestHarvest</a>, <a class="el" href="classQuestMusic.html#ab1b3facc740e520a57bfbc89dcce6b6b">QuestMusic</a>, and <a class="el" href="classQuestSubdue.html#a13e2b5d782c5203e8a29c7c759adbbc6">QuestSubdue</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00047">47</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneEventQuest.html">ZoneEventQuest</a>();</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassZoneEventQuest_html"><div class="ttname"><a href="classZoneEventQuest.html">ZoneEventQuest</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventQuest_8cs_source.html#l00005">ZoneEventQuest.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestInstance_8cs_source.html#l00057">CreateInstanceZone()</a>.</p>
 
 </div>
 </div>
@@ -485,6 +511,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classQuestDefenseGame.html#aa99bffe9473ce269dbab915f55553245">QuestDefenseGame</a>, <a class="el" href="classQuestMusic.html#ad6f8b85fd301afbbe0562c303a573e16">QuestMusic</a>, and <a class="el" href="classQuestSubdue.html#acab3c41de33bb44326c51245dd8cf688">QuestSubdue</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00052">52</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneInstanceRandomQuest.html">ZoneInstanceRandomQuest</a>();</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassZoneInstanceRandomQuest_html"><div class="ttname"><a href="classZoneInstanceRandomQuest.html">ZoneInstanceRandomQuest</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceRandomQuest_8cs_source.html#l00004">ZoneInstanceRandomQuest.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestInstance_8cs_source.html#l00057">CreateInstanceZone()</a>.</p>
 
 </div>
 </div>
@@ -515,6 +547,41 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#ae6161450c1a3daeceed6508a2f2d94c1">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00057">57</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_class" href="classZoneEventQuest.html">ZoneEventQuest</a> zoneEventQuest = this.<a class="code hl_function" href="classQuestInstance.html#ab0851714e0444cf013953761907dc014">CreateEvent</a>();</div>
+<div class="line"><span class="lineno">   60</span>        zoneEventQuest.uidQuest = this.<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>;</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_class" href="classZoneInstanceRandomQuest.html">ZoneInstanceRandomQuest</a> zoneInstanceRandomQuest = this.<a class="code hl_function" href="classQuestInstance.html#ae9000f657901528c780313ade8ff5e63">CreateInstance</a>();</div>
+<div class="line"><span class="lineno">   62</span>        zoneInstanceRandomQuest.uidClient = c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">   63</span>        zoneInstanceRandomQuest.uidQuest = this.<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>;</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classSpatialGen.html">SpatialGen</a>.<a class="code hl_function" href="classSpatialGen.html#a3ba5bf78488ddd87eb9ae0599c5f2e4a">CreateInstance</a>(this.<a class="code hl_property" href="classQuestInstance.html#a3d721333e13e6cb33d3d7bd1e041c812">IdZone</a>, zoneInstanceRandomQuest);</div>
+<div class="line"><span class="lineno">   65</span>        this.deadline = 0;</div>
+<div class="line"><span class="lineno">   66</span>        zone.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.<a class="code hl_function" href="classZoneEventManager.html#ab26f444a09dfedc075d8eaab6a15e48d">Add</a>(zoneEventQuest, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[6];</div>
+<div class="line"><span class="lineno">   68</span>        array[0] = <span class="stringliteral">&quot;Creating QuestInstance:&quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>        array[1] = ((<span class="keyword">this</span> != <span class="keyword">null</span>) ? this.ToString() : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   70</span>        array[2] = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">int</span> num = 3;</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_class" href="classQuest.html">Quest</a> quest = c.<a class="code hl_variable" href="classChara.html#ac731ec9388e7e2e4cc28f929d9206b24">quest</a>;</div>
+<div class="line"><span class="lineno">   73</span>        array[num] = ((quest != <span class="keyword">null</span>) ? quest.ToString() : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   74</span>        array[4] = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   75</span>        array[5] = (c.quest == <span class="keyword">this</span>).ToString();</div>
+<div class="line"><span class="lineno">   76</span>        Debug.Log(<span class="keywordtype">string</span>.Concat(array));</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> zone;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassChara_html_ac731ec9388e7e2e4cc28f929d9206b24"><div class="ttname"><a href="classChara.html#ac731ec9388e7e2e4cc28f929d9206b24">Chara.quest</a></div><div class="ttdeci">Quest quest</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09343">Chara.cs:9343</a></div></div>
+<div class="ttc" id="aclassQuestInstance_html_a3d721333e13e6cb33d3d7bd1e041c812"><div class="ttname"><a href="classQuestInstance.html#a3d721333e13e6cb33d3d7bd1e041c812">QuestInstance.IdZone</a></div><div class="ttdeci">virtual string IdZone</div><div class="ttdef"><b>Definition:</b> <a href="QuestInstance_8cs_source.html#l00006">QuestInstance.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestInstance_html_ab0851714e0444cf013953761907dc014"><div class="ttname"><a href="classQuestInstance.html#ab0851714e0444cf013953761907dc014">QuestInstance.CreateEvent</a></div><div class="ttdeci">virtual ZoneEventQuest CreateEvent()</div><div class="ttdef"><b>Definition:</b> <a href="QuestInstance_8cs_source.html#l00047">QuestInstance.cs:47</a></div></div>
+<div class="ttc" id="aclassQuestInstance_html_ae9000f657901528c780313ade8ff5e63"><div class="ttname"><a href="classQuestInstance.html#ae9000f657901528c780313ade8ff5e63">QuestInstance.CreateInstance</a></div><div class="ttdeci">virtual ZoneInstanceRandomQuest CreateInstance()</div><div class="ttdef"><b>Definition:</b> <a href="QuestInstance_8cs_source.html#l00052">QuestInstance.cs:52</a></div></div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_a217a870eaef419b26ab35fc5b0805910"><div class="ttname"><a href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">Quest.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00772">Quest.cs:772</a></div></div>
+<div class="ttc" id="aclassSpatialGen_html"><div class="ttname"><a href="classSpatialGen.html">SpatialGen</a></div><div class="ttdef"><b>Definition:</b> <a href="SpatialGen_8cs_source.html#l00003">SpatialGen.cs:4</a></div></div>
+<div class="ttc" id="aclassSpatialGen_html_a3ba5bf78488ddd87eb9ae0599c5f2e4a"><div class="ttname"><a href="classSpatialGen.html#a3ba5bf78488ddd87eb9ae0599c5f2e4a">SpatialGen.CreateInstance</a></div><div class="ttdeci">static Zone CreateInstance(string id, ZoneInstance instance)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialGen_8cs_source.html#l00044">SpatialGen.cs:44</a></div></div>
+<div class="ttc" id="aclassZoneEventManager_html_ab26f444a09dfedc075d8eaab6a15e48d"><div class="ttname"><a href="classZoneEventManager.html#ab26f444a09dfedc075d8eaab6a15e48d">ZoneEventManager.Add</a></div><div class="ttdeci">void Add(ZoneEvent e, bool allowDuplicate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventManager_8cs_source.html#l00022">ZoneEventManager.cs:22</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03858">Zone.cs:3858</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneEventManager_8cs_source.html#l00022">ZoneEventManager.Add()</a>, <a class="el" href="QuestInstance_8cs_source.html#l00047">CreateEvent()</a>, <a class="el" href="QuestInstance_8cs_source.html#l00052">CreateInstance()</a>, <a class="el" href="SpatialGen_8cs_source.html#l00044">SpatialGen.CreateInstance()</a>, <a class="el" href="Zone_8cs_source.html#l03858">Zone.events</a>, <a class="el" href="QuestInstance_8cs_source.html#l00007">IdZone</a>, <a class="el" href="Chara_8cs_source.html#l09343">Chara.quest</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, and <a class="el" href="Quest_8cs_source.html#l00772">Quest.uid</a>.</p>
 
 </div>
 </div>
@@ -540,7 +607,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> EClass._zone.instance == <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3d721333e13e6cb33d3d7bd1e041c812" name="a3d721333e13e6cb33d3d7bd1e041c812"></a>
@@ -564,6 +637,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;instance_arena&quot;</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="QuestInstance_8cs_source.html#l00057">CreateInstanceZone()</a>.</p>
 
 </div>
 </div>
@@ -588,7 +669,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00039">39</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a76f61260733a3aab0fa01e9b4fdfd6cd" name="a76f61260733a3aab0fa01e9b4fdfd6cd"></a>
@@ -612,7 +699,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00030">30</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_class" href="classZone.html">Zone</a> clientZone = base.ClientZone;</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> ((clientZone != <span class="keyword">null</span>) ? clientZone.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a> : <span class="keyword">null</span>) ?? <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab08e6217237e395d11fb643a82559ae5" name="ab08e6217237e395d11fb643a82559ae5"></a>
@@ -636,16 +731,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestInstance_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestInstance_8cs_source.html">QuestInstance.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestInstance.html">QuestInstance</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

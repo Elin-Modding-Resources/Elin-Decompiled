@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitMapBoard.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -666,6 +686,176 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitMapBoard_8cs_source.html#l00017">17</a> of file <a class="el" href="TraitMapBoard_8cs_source.html">TraitMapBoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeHomeIcon&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   26</span>            GridLayoutGroup parent = uicontextMenu.AddGridLayout();</div>
+<div class="line"><span class="lineno">   27</span>            HashSet&lt;int&gt; hashSet = <span class="keyword">new</span> HashSet&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> spatial <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Values)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">if</span> (spatial.<a class="code hl_property" href="classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce">icon</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   31</span>                {</div>
+<div class="line"><span class="lineno">   32</span>                    hashSet.Add(spatial.<a class="code hl_property" href="classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce">icon</a>);</div>
+<div class="line"><span class="lineno">   33</span>                }</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num <span class="keywordflow">in</span> hashSet)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                UIButton uibutton = Util.Instantiate&lt;UIButton&gt;(<span class="stringliteral">&quot;UI/Element/Button/ButtonContainerIcon&quot;</span>, parent);</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordtype">int</span> _i = num;</div>
+<div class="line"><span class="lineno">   39</span>                uibutton.icon.sprite = TilemapUtils.GetOrCreateTileSprite(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_property" href="classScene.html#ac69cb156b9ecdcb3b83fbf4ed528c6fe">elomap</a>.<a class="code hl_variable" href="classEloMap.html#a607fa7d62103e50b1c496886215cfa50">actor</a>.<a class="code hl_variable" href="classEloMapActor.html#ac21f803c4a0f0c2e9f1162dd8c6090ac">tileset</a>, num, 0f);</div>
+<div class="line"><span class="lineno">   40</span>                uibutton.icon.Rect().localScale = <span class="keyword">new</span> Vector3(2f, 2f, 1f);</div>
+<div class="line"><span class="lineno">   41</span>                uibutton.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    SE.Click();</div>
+<div class="line"><span class="lineno">   44</span>                    EClass._zone.icon = _i;</div>
+<div class="line"><span class="lineno">   45</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.contextMenu.currentMenu.Hide();</div>
+<div class="line"><span class="lineno">   46</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_property" href="classScene.html#ac69cb156b9ecdcb3b83fbf4ed528c6fe">elomap</a>.<a class="code hl_function" href="classEloMap.html#a4dbd7fae501c5a98bb473568d32f8072">SetZone</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#af8df28fd32e0eb5c0fc25a68cb2c8035">x</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ac91ab5f2967837520d40a341ce0ede79">y</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   47</span>                });</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   52</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeBlockHeight&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   55</span>            uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a7eb4f0bf0ea58a1e68f76ff569cfccf5">blockHeight</a> * 10f, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                EClass._map.config.blockHeight = b * 0.1f;</div>
+<div class="line"><span class="lineno">   58</span>            }, 0f, 40f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   59</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   61</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   62</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeSkyBlockHeight&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   65</span>            uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5">skyBlockHeight</a>, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                EClass._map.config.skyBlockHeight = (int)b;</div>
+<div class="line"><span class="lineno">   68</span>            }, 1f, 20f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   69</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   72</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeMapBG&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_class" href="classLayerList.html">LayerList</a> layerList = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetSize(400f, -1f);</div>
+<div class="line"><span class="lineno">   75</span>            List&lt;MapBG&gt; list = Util.EnumToList&lt;<a class="code hl_enumeration" href="MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcf">MapBG</a>&gt;();</div>
+<div class="line"><span class="lineno">   76</span>            Action&lt;int&gt; &lt;&gt;9__13;</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_class" href="classLayerList.html">LayerList</a> layerList2 = layerList;</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordtype">string</span> lang = list[i].ToString();</div>
+<div class="line"><span class="lineno">   81</span>                Action&lt;int&gt; action;</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">if</span> ((action = &lt;&gt;9__13) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   83</span>                {</div>
+<div class="line"><span class="lineno">   84</span>                    action = (&lt;&gt;9__13 = delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">   85</span>                    {</div>
+<div class="line"><span class="lineno">   86</span>                        EClass._map.config.bg = list[a];</div>
+<div class="line"><span class="lineno">   87</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a28af10ed8fc2c08cdc6b1cb0db6006c0">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">   88</span>                    });</div>
+<div class="line"><span class="lineno">   89</span>                }</div>
+<div class="line"><span class="lineno">   90</span>                layerList2.<a class="code hl_function" href="classLayerList.html#aa9ef66f60da84050068849b769cfbe24">Add</a>(lang, action);</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span>            layerList.<a class="code hl_function" href="classLayerList.html#a78e53c8ea95747f240b8aef05ce990a3">Show</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   95</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeShadowStrength&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   98</span>            uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() + <span class="stringliteral">&quot;%&quot;</span>, EClass._map.config.shadowStrength * 100f, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                EClass._map.config.shadowStrength = b * 0.01f;</div>
+<div class="line"><span class="lineno">  101</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">  102</span>            }, 0f, 400f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  103</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  106</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeFogDensity&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_class" href="classLayerList.html">LayerList</a> layerList = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetSize(400f, -1f);</div>
+<div class="line"><span class="lineno">  109</span>            List&lt;FogType&gt; list = Util.EnumToList&lt;<a class="code hl_enumeration" href="FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4">FogType</a>&gt;();</div>
+<div class="line"><span class="lineno">  110</span>            Action&lt;int&gt; &lt;&gt;9__16;</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                <a class="code hl_class" href="classLayerList.html">LayerList</a> layerList2 = layerList;</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordtype">string</span> lang = list[i].ToString();</div>
+<div class="line"><span class="lineno">  115</span>                Action&lt;int&gt; action;</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> ((action = &lt;&gt;9__16) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    action = (&lt;&gt;9__16 = delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  119</span>                    {</div>
+<div class="line"><span class="lineno">  120</span>                        EClass._map.config.fog = list[a];</div>
+<div class="line"><span class="lineno">  121</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">  122</span>                    });</div>
+<div class="line"><span class="lineno">  123</span>                }</div>
+<div class="line"><span class="lineno">  124</span>                layerList2.<a class="code hl_function" href="classLayerList.html#aa9ef66f60da84050068849b769cfbe24">Add</a>(lang, action);</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            layerList.<a class="code hl_function" href="classLayerList.html#a78e53c8ea95747f240b8aef05ce990a3">Show</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  128</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  129</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeSkyColor&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a89a476e6fee05fbf4f0fa14a9ccf37c7">colorScreen</a>.Get(), <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(0f, 0f, 0f, 0f), delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  132</span>            {</div>
+<div class="line"><span class="lineno">  133</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a89a476e6fee05fbf4f0fa14a9ccf37c7">colorScreen</a>.Set(_c);</div>
+<div class="line"><span class="lineno">  134</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483">RefreshGrading</a>();</div>
+<div class="line"><span class="lineno">  135</span>            });</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  138</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeSeaColor&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a38f9878894d33f899ef6450b251afca6">colorSea</a>.Get(), <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(0f, 0f, 0f, 0f), delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#a38f9878894d33f899ef6450b251afca6">colorSea</a>.Set(_c);</div>
+<div class="line"><span class="lineno">  143</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483">RefreshGrading</a>();</div>
+<div class="line"><span class="lineno">  144</span>            });</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  146</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aFogType_8cs_html_a42f27fc284c47c506b5e3515cf11e2c4"><div class="ttname"><a href="FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4">FogType</a></div><div class="ttdeci">FogType</div><div class="ttdef"><b>Definition:</b> <a href="FogType_8cs_source.html#l00003">FogType.cs:4</a></div></div>
+<div class="ttc" id="aMapBG_8cs_html_a35f8d808141b7cd0027802c3c54f9fcf"><div class="ttname"><a href="MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcf">MapBG</a></div><div class="ttdeci">MapBG</div><div class="ttdef"><b>Definition:</b> <a href="MapBG_8cs_source.html#l00003">MapBG.cs:4</a></div></div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a92379235a4d6fbca6fc53ebdc9131bd7"><div class="ttname"><a href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">BaseGameScreen.RefreshAll</a></div><div class="ttdeci">void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.cs:395</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_abf1d6bcfc2e596bda0f8716f08037483"><div class="ttname"><a href="classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483">BaseGameScreen.RefreshGrading</a></div><div class="ttdeci">void RefreshGrading()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.cs:548</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassEloMapActor_html_ac21f803c4a0f0c2e9f1162dd8c6090ac"><div class="ttname"><a href="classEloMapActor.html#ac21f803c4a0f0c2e9f1162dd8c6090ac">EloMapActor.tileset</a></div><div class="ttdeci">Tileset tileset</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00105">EloMapActor.cs:105</a></div></div>
+<div class="ttc" id="aclassEloMap_html_a4dbd7fae501c5a98bb473568d32f8072"><div class="ttname"><a href="classEloMap.html#a4dbd7fae501c5a98bb473568d32f8072">EloMap.SetZone</a></div><div class="ttdeci">void SetZone(int gx, int gy, Zone z, bool updateMesh=false)</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00137">EloMap.cs:137</a></div></div>
+<div class="ttc" id="aclassEloMap_html_a607fa7d62103e50b1c496886215cfa50"><div class="ttname"><a href="classEloMap.html#a607fa7d62103e50b1c496886215cfa50">EloMap.actor</a></div><div class="ttdeci">EloMapActor actor</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00440">EloMap.cs:440</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00006">LayerList.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerList_html_a78e53c8ea95747f240b8aef05ce990a3"><div class="ttname"><a href="classLayerList.html#a78e53c8ea95747f240b8aef05ce990a3">LayerList.Show</a></div><div class="ttdeci">void Show(bool autoClose=true)</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00316">LayerList.cs:316</a></div></div>
+<div class="ttc" id="aclassLayerList_html_aa9ef66f60da84050068849b769cfbe24"><div class="ttname"><a href="classLayerList.html#aa9ef66f60da84050068849b769cfbe24">LayerList.Add</a></div><div class="ttdeci">void Add(string lang, Action&lt; int &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00302">LayerList.cs:302</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a38f9878894d33f899ef6450b251afca6"><div class="ttname"><a href="classMapConfig.html#a38f9878894d33f899ef6450b251afca6">MapConfig.colorSea</a></div><div class="ttdeci">SerializableColor colorSea</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00121">MapConfig.cs:121</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a6975da84308f50dfa79dfa41abea2bb5"><div class="ttname"><a href="classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5">MapConfig.skyBlockHeight</a></div><div class="ttdeci">int skyBlockHeight</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00112">MapConfig.cs:112</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a7eb4f0bf0ea58a1e68f76ff569cfccf5"><div class="ttname"><a href="classMapConfig.html#a7eb4f0bf0ea58a1e68f76ff569cfccf5">MapConfig.blockHeight</a></div><div class="ttdeci">float blockHeight</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00091">MapConfig.cs:91</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_a89a476e6fee05fbf4f0fa14a9ccf37c7"><div class="ttname"><a href="classMapConfig.html#a89a476e6fee05fbf4f0fa14a9ccf37c7">MapConfig.colorScreen</a></div><div class="ttdeci">SerializableColor colorScreen</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00118">MapConfig.cs:118</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+<div class="ttc" id="aclassScene_html_a28af10ed8fc2c08cdc6b1cb0db6006c0"><div class="ttname"><a href="classScene.html#a28af10ed8fc2c08cdc6b1cb0db6006c0">Scene.RefreshBG</a></div><div class="ttdeci">void RefreshBG()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00658">Scene.cs:658</a></div></div>
+<div class="ttc" id="aclassScene_html_ac69cb156b9ecdcb3b83fbf4ed528c6fe"><div class="ttname"><a href="classScene.html#ac69cb156b9ecdcb3b83fbf4ed528c6fe">Scene.elomap</a></div><div class="ttdeci">EloMap elomap</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00010">Scene.cs:11</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a54dc5f41115039fd65cd42c74e43025d"><div class="ttname"><a href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">SpatialManager.map</a></div><div class="ttdeci">SpatialManager.GlobalSpatialList map</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00097">SpatialManager.cs:97</a></div></div>
+<div class="ttc" id="aclassSpatial_html"><div class="ttname"><a href="classSpatial.html">Spatial</a></div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00008">Spatial.cs:9</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a4eba294dd1fc5a221a599e58354ca8ce"><div class="ttname"><a href="classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce">Spatial.icon</a></div><div class="ttdeci">int icon</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00062">Spatial.cs:63</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ac91ab5f2967837520d40a341ce0ede79"><div class="ttname"><a href="classSpatial.html#ac91ab5f2967837520d40a341ce0ede79">Spatial.y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00086">Spatial.cs:87</a></div></div>
+<div class="ttc" id="aclassSpatial_html_af8df28fd32e0eb5c0fc25a68cb2c8035"><div class="ttname"><a href="classSpatial.html#af8df28fd32e0eb5c0fc25a68cb2c8035">Spatial.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00074">Spatial.cs:75</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="EloMap_8cs_source.html#l00440">EloMap.actor</a>, <a class="el" href="LayerList_8cs_source.html#l00302">LayerList.Add()</a>, <a class="el" href="MapConfig_8cs_source.html#l00091">MapConfig.blockHeight</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="MapConfig_8cs_source.html#l00118">MapConfig.colorScreen</a>, <a class="el" href="MapConfig_8cs_source.html#l00121">MapConfig.colorSea</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="Scene_8cs_source.html#l00011">Scene.elomap</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Spatial_8cs_source.html#l00063">Spatial.icon</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="SpatialManager_8cs_source.html#l00097">SpatialManager.map</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.RefreshAll()</a>, <a class="el" href="Scene_8cs_source.html#l00658">Scene.RefreshBG()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="EloMap_8cs_source.html#l00137">EloMap.SetZone()</a>, <a class="el" href="LayerList_8cs_source.html#l00316">LayerList.Show()</a>, <a class="el" href="MapConfig_8cs_source.html#l00112">MapConfig.skyBlockHeight</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, <a class="el" href="EloMapActor_8cs_source.html#l00105">EloMapActor.tileset</a>, <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, <a class="el" href="Spatial_8cs_source.html#l00075">Spatial.x</a>, and <a class="el" href="Spatial_8cs_source.html#l00087">Spatial.y</a>.</p>
 
 </div>
 </div>
@@ -691,16 +881,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitMapBoard_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitMapBoard_8cs_source.html">TraitMapBoard.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitMapBoard_8cs_source.html">TraitMapBoard.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitMapBoard.html">TraitMapBoard</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

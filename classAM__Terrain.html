@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Terrain.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -580,7 +600,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00117">117</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_enumvalue" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10">Flatten</a>,</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_enumvalue" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a258f49887ef8d14ac268c92b02503aaa">Up</a>,</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_enumvalue" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a08a38277b0309070706f6652eeae9a53">Down</a></div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="aclassAM__Terrain_html_afe47c4bf51cba44aa9822cb8c4b31289a08a38277b0309070706f6652eeae9a53"><div class="ttname"><a href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a08a38277b0309070706f6652eeae9a53">AM_Terrain.Mode.Down</a></div><div class="ttdeci">@ Down</div></div>
+<div class="ttc" id="aclassAM__Terrain_html_afe47c4bf51cba44aa9822cb8c4b31289a258f49887ef8d14ac268c92b02503aaa"><div class="ttname"><a href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a258f49887ef8d14ac268c92b02503aaa">AM_Terrain.Mode.Up</a></div><div class="ttdeci">@ Up</div></div>
+<div class="ttc" id="aclassAM__Terrain_html_afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10"><div class="ttname"><a href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10">AM_Terrain.Mode.Flatten</a></div><div class="ttdeci">@ Flatten</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -611,7 +639,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a95db80ea12b025725cb7fe1879accdc5">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00036">36</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        this.mode = a.ToEnum&lt;<a class="code hl_class" href="classAM__Terrain.html">AM_Terrain</a>.<a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>&gt;();</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassAM__Terrain_html"><div class="ttname"><a href="classAM__Terrain.html">AM_Terrain</a></div><div class="ttdef"><b>Definition:</b> <a href="AM__Terrain_8cs_source.html#l00004">AM_Terrain.cs:5</a></div></div>
+<div class="ttc" id="aclassAM__Terrain_html_afe47c4bf51cba44aa9822cb8c4b31289"><div class="ttname"><a href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">AM_Terrain.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="AM__Terrain_8cs_source.html#l00117">AM_Terrain.cs:118</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9b38fa01d61994bf7da6e38b7abd08e2" name="a9b38fa01d61994bf7da6e38b7abd08e2"></a>
@@ -651,6 +684,98 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#afdba5ef3a1ea3b111b32e46ecfe5eaa8">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00041">41</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061">timer</a> &lt; 0.1f)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            point = this.<a class="code hl_variable" href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">lastPoint</a>;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            this.lastPoint = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(point);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        this.timer = 0f;</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(point.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, point.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, (<span class="keywordtype">float</span>)<span class="keyword">this</span>.brushRadius, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">int</span> num = p.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(point);</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Terrain.html#ab2ff1c6b3781067e5587e2669cb08e6a">mode</a> == <a class="code hl_class" href="classAM__Terrain.html">AM_Terrain</a>.<a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Flatten)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                Cell cell;</div>
+<div class="line"><span class="lineno">   63</span>                if (p.cell.IsFloorWater != cell.IsFloorWater)</div>
+<div class="line"><span class="lineno">   64</span>                {</div>
+<div class="line"><span class="lineno">   65</span>                    return;</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordtype">int</span> num2 = (<span class="keywordtype">int</span>)(p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> - cell.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a>);</div>
+<div class="line"><span class="lineno">   68</span>                if (!EInput.isShiftDown)</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    num2 = ((num2 &gt;= 0) ? Mathf.Clamp(this.brushRadius - num, 1, num2) : Mathf.Clamp((this.brushRadius - num) * -1, num2, -1));</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>                cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">   73</span>                cell.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> -= (<span class="keywordtype">byte</span>)num2;</div>
+<div class="line"><span class="lineno">   74</span>                if (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
+<div class="line"><span class="lineno">   75</span>                {</div>
+<div class="line"><span class="lineno">   76</span>                    Cell cell2 = p.cell;</div>
+<div class="line"><span class="lineno">   77</span>                    cell2.bridgeHeight -= (byte)num2;</div>
+<div class="line"><span class="lineno">   78</span>                }</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordtype">int</span> num3 = this.brushRadius - num;</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span> (EInput.isShiftDown)</div>
+<div class="line"><span class="lineno">   84</span>                {</div>
+<div class="line"><span class="lineno">   85</span>                    num3 = 1;</div>
+<div class="line"><span class="lineno">   86</span>                }</div>
+<div class="line"><span class="lineno">   87</span>                if (this.<a class="code hl_variable" href="classAM__Terrain.html#ab2ff1c6b3781067e5587e2669cb08e6a">mode</a> == <a class="code hl_class" href="classAM__Terrain.html">AM_Terrain</a>.<a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Down)</div>
+<div class="line"><span class="lineno">   88</span>                {</div>
+<div class="line"><span class="lineno">   89</span>                    num3 *= -1;</div>
+<div class="line"><span class="lineno">   90</span>                }</div>
+<div class="line"><span class="lineno">   91</span>                if ((<span class="keywordtype">int</span>)p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> + num3 &lt; 0)</div>
+<div class="line"><span class="lineno">   92</span>                {</div>
+<div class="line"><span class="lineno">   93</span>                    num3 = (int)(-(int)p.cell.height);</div>
+<div class="line"><span class="lineno">   94</span>                }</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">else</span> if ((<span class="keywordtype">int</span>)p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> + num3 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">maxGenHeight</a>)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    num3 = EClass.setting.maxGenHeight - (int)p.cell.height;</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>                <a class="code hl_class" href="classCell.html">Cell</a> cell3 = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  100</span>                cell3.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> += (<span class="keywordtype">byte</span>)num3;</div>
+<div class="line"><span class="lineno">  101</span>                if (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    Cell cell4 = p.cell;</div>
+<div class="line"><span class="lineno">  104</span>                    cell4.bridgeHeight += (byte)num3;</div>
+<div class="line"><span class="lineno">  105</span>                }</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            p.<a class="code hl_function" href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">RefreshNeighborTiles</a>();</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                p.cell.room.SetDirty();</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>        });</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassAM__BaseTerrain_html_a053aac41776b71fd9fe24a48f041b061"><div class="ttname"><a href="classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061">AM_BaseTerrain.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00125">AM_BaseTerrain.cs:125</a></div></div>
+<div class="ttc" id="aclassAM__BaseTerrain_html_ad34525c196161376cf58244b901102dd"><div class="ttname"><a href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">AM_BaseTerrain.lastPoint</a></div><div class="ttdeci">Point lastPoint</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00129">AM_BaseTerrain.cs:129</a></div></div>
+<div class="ttc" id="aclassAM__Terrain_html_ab2ff1c6b3781067e5587e2669cb08e6a"><div class="ttname"><a href="classAM__Terrain.html#ab2ff1c6b3781067e5587e2669cb08e6a">AM_Terrain.mode</a></div><div class="ttdeci">AM_Terrain.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="AM__Terrain_8cs_source.html#l00115">AM_Terrain.cs:115</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassCell_html_a23a20aed3b871d236514d5e80ce425ab"><div class="ttname"><a href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">Cell._bridge</a></div><div class="ttdeci">byte _bridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01828">Cell.cs:1828</a></div></div>
+<div class="ttc" id="aclassCell_html_a835540b2640271ddf7ca5b7cd12466c1"><div class="ttname"><a href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">Cell.height</a></div><div class="ttdeci">byte height</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01854">Cell.cs:1854</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a203d5edf6c4908c33d21eea1a4d90d67"><div class="ttname"><a href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">GameSetting.maxGenHeight</a></div><div class="ttdeci">int maxGenHeight</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00057">GameSetting.cs:57</a></div></div>
+<div class="ttc" id="aclassMap_html_a09c1df49e3d0b39ff98627b436211ab1"><div class="ttname"><a href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">Map.ForeachSphere</a></div><div class="ttdeci">void ForeachSphere(int _x, int _z, float r, Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02430">Map.cs:2430</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_abdbc97bd4e9a2e289a39ecbaea3a6aef"><div class="ttname"><a href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">Point.RefreshNeighborTiles</a></div><div class="ttdeci">void RefreshNeighborTiles()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01322">Point.cs:1322</a></div></div>
+<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01054">Point.cs:1054</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01828">Cell._bridge</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Point_8cs_source.html#l01054">Point.Distance()</a>, <a class="el" href="Map_8cs_source.html#l02430">Map.ForeachSphere()</a>, <a class="el" href="Cell_8cs_source.html#l01854">Cell.height</a>, <a class="el" href="AM__BaseTerrain_8cs_source.html#l00129">AM_BaseTerrain.lastPoint</a>, <a class="el" href="GameSetting_8cs_source.html#l00057">GameSetting.maxGenHeight</a>, <a class="el" href="AM__Terrain_8cs_source.html#l00115">mode</a>, <a class="el" href="Point_8cs_source.html#l01322">Point.RefreshNeighborTiles()</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, <a class="el" href="AM__BaseTerrain_8cs_source.html#l00125">AM_BaseTerrain.timer</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -691,7 +816,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a95513a63eb15e1071607d58cfa6db04c">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00027">27</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (a &lt; 3)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;terrain&quot;</span> + a.ToEnum&lt;<a class="code hl_class" href="classAM__Terrain.html">AM_Terrain</a>.<a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>&gt;().ToString();</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a12833e4bb2c6d74efa8a683fa95f29c2" name="a12833e4bb2c6d74efa8a683fa95f29c2"></a>
@@ -721,6 +853,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#afa83cc4dd75eb92cebaef3ab412cacae">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00014">14</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, and <a class="el" href="Cell_8cs_source.html#l01854">Cell.height</a>.</p>
 
 </div>
 </div>
@@ -738,6 +875,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00115">115</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Terrain_8cs_source.html#l00041">OnProcessTiles()</a>.</p>
 
 </div>
 </div>
@@ -763,7 +902,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00019">19</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6fde264a1391cebd5d3f13c6d35ec0da" name="a6fde264a1391cebd5d3f13c6d35ec0da"></a>
@@ -787,16 +932,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Terrain_8cs_source.html#l00006">6</a> of file <a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classAM__Terrain.html#ab2ff1c6b3781067e5587e2669cb08e6a">mode</a>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Terrain_8cs_source.html">AM_Terrain.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Terrain.html">AM_Terrain</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

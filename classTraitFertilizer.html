@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitFertilizer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -663,6 +683,92 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a894532420b321d7f0d21338ad31ff17a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitFertilizer_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitFertilizer_8cs_source.html">TraitFertilizer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_class" href="classPlantData.html">PlantData</a> plantData = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a0929dc7b8015444c40a2f72630766e90">TryGetPlant</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>);</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitFertilizer.html#a53cfccf0c0e7aa18f875e975f07c6b85">Defertilize</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (plantData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                plantData = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a8227ffda86bb49d2671e1edb7f85c27b">AddPlant</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            plantData.fert = -1;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> card <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (card.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitSeed.html">TraitSeed</a> &amp;&amp; !card.<a class="code hl_property" href="classCard.html#a51e91216ecc9690a490e6b52ef798321">isSale</a>)</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   45</span>                    (card.trait as <a class="code hl_class" href="classTraitSeed.html">TraitSeed</a>).TrySprout(<span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   46</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   47</span>                }</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a>)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   52</span>                {</div>
+<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   54</span>                }</div>
+<div class="line"><span class="lineno">   55</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#af848dbc201a7a7a24869d0f3d63df4ac">SetObj</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <span class="keyword">this</span>.owner.pos.z, 5, 1, 0);</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plantData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#af2de1cdb52589d10648135dda1a63386">growth</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>                }</div>
+<div class="line"><span class="lineno">   63</span>                this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#af2de1cdb52589d10648135dda1a63386">growth</a>.<a class="code hl_function" href="classGrowSystem.html#a595206e735b8b5db7ee9b9e82414b284">TryGrow</a>(date);</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plantData.<a class="code hl_variable" href="classPlantData.html#aa8a8be9298bbae4da787b8f8a8822d5f">fert</a> == 0 &amp;&amp; <span class="keyword">this</span>.owner.pos.growth != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#af2de1cdb52589d10648135dda1a63386">growth</a>.<a class="code hl_function" href="classGrowSystem.html#a595206e735b8b5db7ee9b9e82414b284">TryGrow</a>(date);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            plantData = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a0929dc7b8015444c40a2f72630766e90">TryGetPlant</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>);</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (plantData != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                plantData.<a class="code hl_variable" href="classPlantData.html#aa8a8be9298bbae4da787b8f8a8822d5f">fert</a>++;</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (date.<a class="code hl_variable" href="classVirtualDate.html#a32b33fe79ab333c8cecfa47d6b21a96f">IsRealTime</a>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;mutation&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;mutation&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a51e91216ecc9690a490e6b52ef798321"><div class="ttname"><a href="classCard.html#a51e91216ecc9690a490e6b52ef798321">Card.isSale</a></div><div class="ttdeci">bool isSale</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00799">Card.cs:800</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassCard_html_aa4f63069a839c4050b4d56de4e7918c4"><div class="ttname"><a href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">Card.PlayEffect</a></div><div class="ttdeci">unsafe Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05554">Card.cs:5554</a></div></div>
+<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04652">Card.cs:4652</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01995">Card.cs:1996</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_a595206e735b8b5db7ee9b9e82414b284"><div class="ttname"><a href="classGrowSystem.html#a595206e735b8b5db7ee9b9e82414b284">GrowSystem.TryGrow</a></div><div class="ttdeci">void TryGrow(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00339">GrowSystem.cs:339</a></div></div>
+<div class="ttc" id="aclassMap_html_a0929dc7b8015444c40a2f72630766e90"><div class="ttname"><a href="classMap.html#a0929dc7b8015444c40a2f72630766e90">Map.TryGetPlant</a></div><div class="ttdeci">PlantData TryGetPlant(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01952">Map.cs:1952</a></div></div>
+<div class="ttc" id="aclassMap_html_a8227ffda86bb49d2671e1edb7f85c27b"><div class="ttname"><a href="classMap.html#a8227ffda86bb49d2671e1edb7f85c27b">Map.AddPlant</a></div><div class="ttdeci">PlantData AddPlant(Point pos, Thing seed)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01962">Map.cs:1962</a></div></div>
+<div class="ttc" id="aclassMap_html_af848dbc201a7a7a24869d0f3d63df4ac"><div class="ttname"><a href="classMap.html#af848dbc201a7a7a24869d0f3d63df4ac">Map.SetObj</a></div><div class="ttdeci">void SetObj(int x, int z, int id=0, int value=1, int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01502">Map.cs:1502</a></div></div>
+<div class="ttc" id="aclassPlantData_html"><div class="ttname"><a href="classPlantData.html">PlantData</a></div><div class="ttdef"><b>Definition:</b> <a href="PlantData_8cs_source.html#l00004">PlantData.cs:5</a></div></div>
+<div class="ttc" id="aclassPlantData_html_aa8a8be9298bbae4da787b8f8a8822d5f"><div class="ttname"><a href="classPlantData.html#aa8a8be9298bbae4da787b8f8a8822d5f">PlantData.fert</a></div><div class="ttdeci">int fert</div><div class="ttdef"><b>Definition:</b> <a href="PlantData_8cs_source.html#l00013">PlantData.cs:13</a></div></div>
+<div class="ttc" id="aclassPoint_html_a256787e4a6e7438db25289f56e618463"><div class="ttname"><a href="classPoint.html#a256787e4a6e7438db25289f56e618463">Point.ListCards</a></div><div class="ttdeci">List&lt; Card &gt; ListCards(bool includeMasked=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01112">Point.cs:1112</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_abd8d973186ba376ea92ca7563dd98231"><div class="ttname"><a href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">Point.HasObj</a></div><div class="ttdeci">bool HasObj</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00249">Point.cs:250</a></div></div>
+<div class="ttc" id="aclassPoint_html_af2de1cdb52589d10648135dda1a63386"><div class="ttname"><a href="classPoint.html#af2de1cdb52589d10648135dda1a63386">Point.growth</a></div><div class="ttdeci">GrowSystem growth</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00135">Point.cs:136</a></div></div>
+<div class="ttc" id="aclassTraitFertilizer_html_a53cfccf0c0e7aa18f875e975f07c6b85"><div class="ttname"><a href="classTraitFertilizer.html#a53cfccf0c0e7aa18f875e975f07c6b85">TraitFertilizer.Defertilize</a></div><div class="ttdeci">bool Defertilize</div><div class="ttdef"><b>Definition:</b> <a href="TraitFertilizer_8cs_source.html#l00014">TraitFertilizer.cs:15</a></div></div>
+<div class="ttc" id="aclassTraitSeed_html"><div class="ttname"><a href="classTraitSeed.html">TraitSeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSeed_8cs_source.html#l00006">TraitSeed.cs:7</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+<div class="ttc" id="aclassVirtualDate_html_a32b33fe79ab333c8cecfa47d6b21a96f"><div class="ttname"><a href="classVirtualDate.html#a32b33fe79ab333c8cecfa47d6b21a96f">VirtualDate.IsRealTime</a></div><div class="ttdeci">bool IsRealTime</div><div class="ttdef"><b>Definition:</b> <a href="VirtualDate_8cs_source.html#l00115">VirtualDate.cs:115</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l01962">Map.AddPlant()</a>, <a class="el" href="Card_8cs_source.html#l01996">Card.Cell</a>, <a class="el" href="TraitFertilizer_8cs_source.html#l00015">Defertilize</a>, <a class="el" href="Card_8cs_source.html#l04652">Card.Destroy()</a>, <a class="el" href="PlantData_8cs_source.html#l00013">PlantData.fert</a>, <a class="el" href="Point_8cs_source.html#l00136">Point.growth</a>, <a class="el" href="Point_8cs_source.html#l00250">Point.HasObj</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="VirtualDate_8cs_source.html#l00115">VirtualDate.IsRealTime</a>, <a class="el" href="Card_8cs_source.html#l00800">Card.isSale</a>, <a class="el" href="Point_8cs_source.html#l01112">Point.ListCards()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l05554">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Map_8cs_source.html#l01502">Map.SetObj()</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>, <a class="el" href="Map_8cs_source.html#l01952">Map.TryGetPlant()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00339">GrowSystem.TryGrow()</a>, and <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>.</p>
 
 </div>
 </div>
@@ -688,7 +794,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitFertilizer_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitFertilizer_8cs_source.html">TraitFertilizer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a53cfccf0c0e7aa18f875e975f07c6b85" name="a53cfccf0c0e7aa18f875e975f07c6b85"></a>
@@ -712,6 +824,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitFertilizer_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitFertilizer_8cs_source.html">TraitFertilizer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">this</span> is <a class="code hl_class" href="classTraitDefertilizer.html">TraitDefertilizer</a>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassTraitDefertilizer_html"><div class="ttname"><a href="classTraitDefertilizer.html">TraitDefertilizer</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitDefertilizer_8cs_source.html#l00003">TraitDefertilizer.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitFertilizer_8cs_source.html#l00022">OnSimulateHour()</a>.</p>
 
 </div>
 </div>
@@ -719,9 +840,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitFertilizer_8cs_source.html">TraitFertilizer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitFertilizer.html">TraitFertilizer</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

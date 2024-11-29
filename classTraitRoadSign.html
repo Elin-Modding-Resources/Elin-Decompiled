@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitRoadSign.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -676,6 +696,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ae6447942e36559e6875a7ef82b024155">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitRoadSign_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitRoadSign_8cs_source.html">TraitRoadSign.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">int</span> num = (dir == -1) ? this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> : dir;</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">   18</span>        cell = ((num == 0) ? cell.Front : ((num == 1) ? cell.Right : ((num == 2) ? cell.Back : cell.Left)));</div>
+<div class="line"><span class="lineno">   19</span>        Vector3 vector = *cell.<a class="code hl_function" href="classCell.html#acb9e612639dee526ad6fc80bf1c60b17">GetPoint</a>().<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(vector.x, vector.y, vector.z, 10f, 0.3f);</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassCard_html_acead09796e17d25d2c320e10c7da820a"><div class="ttname"><a href="classCard.html#acead09796e17d25d2c320e10c7da820a">Card.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00103">Card.cs:104</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_acb9e612639dee526ad6fc80bf1c60b17"><div class="ttname"><a href="classCell.html#acb9e612639dee526ad6fc80bf1c60b17">Cell.GetPoint</a></div><div class="ttdeci">Point GetPoint()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00061">Cell.cs:61</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l00104">Card.dir</a>, <a class="el" href="Cell_8cs_source.html#l00061">Cell.GetPoint()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, <a class="el" href="Point_8cs_source.html#l00629">Point.Position()</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -701,16 +741,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRoadSign_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitRoadSign_8cs_source.html">TraitRoadSign.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitRoadSign_8cs_source.html">TraitRoadSign.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitRoadSign.html">TraitRoadSign</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBaseListPeople.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -285,6 +305,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classListPeopleBuySlave.html#a699c96c76204c9085ab90de54148b4d5">ListPeopleBuySlave</a>, and <a class="el" href="classListPeopleRevive.html#a42c8a23c836101e58dc91e3112dbe6ab">ListPeopleRevive</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00063">63</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> !c.isDead &amp;&amp; c.memberType != FactionMemberType.Guest &amp;&amp; !c.<a class="code hl_function" href="classChara.html#addeec1aa301e5d3f3d09cb73e1bf4a8f">IsInHomeZone</a>();</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassChara_html_addeec1aa301e5d3f3d09cb73e1bf4a8f"><div class="ttname"><a href="classChara.html#addeec1aa301e5d3f3d09cb73e1bf4a8f">Chara.IsInHomeZone</a></div><div class="ttdeci">bool IsInHomeZone()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05855">Chara.cs:5855</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05855">Chara.IsInHomeZone()</a>.</p>
 
 </div>
 </div>
@@ -314,6 +340,45 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classListOwner.html#a0ae32cba2e7e548c21917c0e4b422cce">ListOwner&lt; Chara, ItemGeneral &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00068">68</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        BaseList <a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a> = this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>;</div>
+<div class="line"><span class="lineno">   71</span>        UIList.Callback&lt;<a class="code hl_class" href="classChara.html">Chara</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classChara.html">Chara</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt;();</div>
+<div class="line"><span class="lineno">   72</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classChara.html">Chara</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            b.<a class="code hl_function" href="classItemGeneral.html#af72d1ea6307d5d57ba3927d7c1ac7363">SetChara</a>(a);</div>
+<div class="line"><span class="lineno">   75</span>            this.<a class="code hl_function" href="classBaseListPeople.html#adcec2fe8b5959de16219f0ac1f11c53e">OnInstantiate</a>(a, b);</div>
+<div class="line"><span class="lineno">   76</span>            b.<a class="code hl_function" href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">Build</a>();</div>
+<div class="line"><span class="lineno">   77</span>        };</div>
+<div class="line"><span class="lineno">   78</span>        callback.onClick = delegate(<a class="code hl_class" href="classChara.html">Chara</a> c, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> i)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            this.<a class="code hl_function" href="classBaseListPeople.html#a1274ad1cad2a3dfdcb9a65129c25ab00">OnClick</a>(c, i);</div>
+<div class="line"><span class="lineno">   81</span>        };</div>
+<div class="line"><span class="lineno">   82</span>        callback.onSort = delegate(<a class="code hl_class" href="classChara.html">Chara</a> a, UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            a.<a class="code hl_function" href="classChara.html#a2d707524ab7ea973182089fe39e0da9f">SetSortVal</a>(m, <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> -a.<a class="code hl_variable" href="classCard.html#a8734269e7f7106bbc00c489caddb0532">sortVal</a>;</div>
+<div class="line"><span class="lineno">   86</span>        };</div>
+<div class="line"><span class="lineno">   87</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            this.<a class="code hl_function" href="classBaseListPeople.html#afc038432765b66f1704235908bb7ae95">OnList</a>();</div>
+<div class="line"><span class="lineno">   90</span>        };</div>
+<div class="line"><span class="lineno">   91</span>        callback.onRefresh = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   92</span>        list.callbacks = callback;</div>
+<div class="line"><span class="lineno">   93</span>        this.list.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_a1274ad1cad2a3dfdcb9a65129c25ab00"><div class="ttname"><a href="classBaseListPeople.html#a1274ad1cad2a3dfdcb9a65129c25ab00">BaseListPeople.OnClick</a></div><div class="ttdeci">override void OnClick(Chara c, ItemGeneral i)</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00217">BaseListPeople.cs:217</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_adcec2fe8b5959de16219f0ac1f11c53e"><div class="ttname"><a href="classBaseListPeople.html#adcec2fe8b5959de16219f0ac1f11c53e">BaseListPeople.OnInstantiate</a></div><div class="ttdeci">override void OnInstantiate(Chara a, ItemGeneral b)</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00096">BaseListPeople.cs:96</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_afc038432765b66f1704235908bb7ae95"><div class="ttname"><a href="classBaseListPeople.html#afc038432765b66f1704235908bb7ae95">BaseListPeople.OnList</a></div><div class="ttdeci">override void OnList()</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00372">BaseListPeople.cs:372</a></div></div>
+<div class="ttc" id="aclassCard_html_a8734269e7f7106bbc00c489caddb0532"><div class="ttname"><a href="classCard.html#a8734269e7f7106bbc00c489caddb0532">Card.sortVal</a></div><div class="ttdeci">int sortVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07342">Card.cs:7342</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a2d707524ab7ea973182089fe39e0da9f"><div class="ttname"><a href="classChara.html#a2d707524ab7ea973182089fe39e0da9f">Chara.SetSortVal</a></div><div class="ttdeci">override void SetSortVal(UIList.SortMode m, CurrencyType currency=CurrencyType.Money)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06530">Chara.cs:6530</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a005bd66508b64671962d3f4889018adf"><div class="ttname"><a href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">ItemGeneral.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00156">ItemGeneral.cs:156</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_af72d1ea6307d5d57ba3927d7c1ac7363"><div class="ttname"><a href="classItemGeneral.html#af72d1ea6307d5d57ba3927d7c1ac7363">ItemGeneral.SetChara</a></div><div class="ttdeci">void SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00007">ItemGeneral.cs:7</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a6ef8dac39202125ddd488be32c34dd20"><div class="ttname"><a href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">ListOwner&lt; Chara, ItemGeneral &gt;::list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00097">ListOwner.2.cs:97</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00156">ItemGeneral.Build()</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00097">ListOwner&lt; Chara, ItemGeneral &gt;.list</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00217">OnClick()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00096">OnInstantiate()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00372">OnList()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00007">ItemGeneral.SetChara()</a>, <a class="el" href="Chara_8cs_source.html#l06530">Chara.SetSortVal()</a>, and <a class="el" href="Card_8cs_source.html#l07342">Card.sortVal</a>.</p>
 
 </div>
 </div>
@@ -352,6 +417,218 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00217">217</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a> != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">  222</span>            {</div>
+<div class="line"><span class="lineno">  223</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;isIn&quot;</span>, c, (c.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a> == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;???&quot;</span> : c.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span>            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  227</span>        }</div>
+<div class="line"><span class="lineno">  228</span>        UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction().SetHighlightTarget(i);</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classChara.html#ab22a5ea4adc84a03802a07811063b465">IsGuest</a>())</div>
+<div class="line"><span class="lineno">  230</span>        {</div>
+<div class="line"><span class="lineno">  231</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;findMember&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Goto.html">AI_Goto</a>(c, 1, <span class="keyword">false</span>, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  234</span>                this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.Close();</div>
+<div class="line"><span class="lineno">  235</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  236</span>        }</div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>())</div>
+<div class="line"><span class="lineno">  238</span>        {</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  240</span>            {</div>
+<div class="line"><span class="lineno">  241</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;findMember&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  242</span>                {</div>
+<div class="line"><span class="lineno">  243</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Goto.html">AI_Goto</a>(c, 1, <span class="keyword">false</span>, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  244</span>                    this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.Close();</div>
+<div class="line"><span class="lineno">  245</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  246</span>            }</div>
+<div class="line"><span class="lineno">  247</span>            Action&lt;bool, string&gt; &lt;&gt;9__3;</div>
+<div class="line"><span class="lineno">  248</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;changeName&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  249</span>            {</div>
+<div class="line"><span class="lineno">  250</span>                <span class="keywordtype">string</span> langDetail = <span class="stringliteral">&quot;dialogChangeName&quot;</span>;</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordtype">string</span> text2 = c.<a class="code hl_property" href="classCard.html#a4127bf1cbb6bbfc53f68e5b79ebe44a7">c_altName</a>.IsEmpty(c.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>);</div>
+<div class="line"><span class="lineno">  252</span>                Action&lt;bool, string&gt; onClose;</div>
+<div class="line"><span class="lineno">  253</span>                if ((onClose = &lt;&gt;9__3) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  254</span>                {</div>
+<div class="line"><span class="lineno">  255</span>                    onClose = (&lt;&gt;9__3 = delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">  256</span>                    {</div>
+<div class="line"><span class="lineno">  257</span>                        <span class="keywordflow">if</span> (!cancel)</div>
+<div class="line"><span class="lineno">  258</span>                        {</div>
+<div class="line"><span class="lineno">  259</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;*r&quot;</span>)</div>
+<div class="line"><span class="lineno">  260</span>                            {</div>
+<div class="line"><span class="lineno">  261</span>                                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = NameGen.getRandomName();</div>
+<div class="line"><span class="lineno">  262</span>                            }</div>
+<div class="line"><span class="lineno">  263</span>                            c.c_altName = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">  264</span>                            this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.<a class="code hl_function" href="classLayerPeople.html#a172f044b05896d17177f4c9599b45378">OnSwitchContent</a>(this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.windows[0]);</div>
+<div class="line"><span class="lineno">  265</span>                        }</div>
+<div class="line"><span class="lineno">  266</span>                    });</div>
+<div class="line"><span class="lineno">  267</span>                }</div>
+<div class="line"><span class="lineno">  268</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">InputName</a>(langDetail, text2, onClose, <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_enumeration" href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">InputType</a>.Default);</div>
+<div class="line"><span class="lineno">  269</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (c != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
+<div class="line"><span class="lineno">  271</span>            {</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#abd565af41f8cc28f8ccdc5ad55e140bb">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#a0afdaf8101eebea34d1222646e2defd5">idActor</a>.IsEmpty() &amp;&amp; c.host == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  275</span>                    {</div>
+<div class="line"><span class="lineno">  276</span>                        uicontextMenu.AddButton(<span class="stringliteral">&quot;togglePCC&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  277</span>                        {</div>
+<div class="line"><span class="lineno">  278</span>                            <span class="keywordtype">bool</span> isSynced = c.<a class="code hl_property" href="classChara.html#a6a11273be8acfa46a6d4801df3a28b8e">isSynced</a>;</div>
+<div class="line"><span class="lineno">  279</span>                            c.pccData = PCCData.Create(c.<a class="code hl_property" href="classChara.html#a0df65e49285c85c955d1f2250817020f">IDPCCBodySet</a>);</div>
+<div class="line"><span class="lineno">  280</span>                            c.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.Randomize(c.<a class="code hl_property" href="classChara.html#a0df65e49285c85c955d1f2250817020f">IDPCCBodySet</a>, <span class="keyword">null</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  281</span>                            <span class="keywordflow">if</span> (isSynced)</div>
+<div class="line"><span class="lineno">  282</span>                            {</div>
+<div class="line"><span class="lineno">  283</span>                                c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a23d7d8a93b11dd71ed344ca761437561">OnLeaveScreen</a>();</div>
+<div class="line"><span class="lineno">  284</span>                            }</div>
+<div class="line"><span class="lineno">  285</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a07a372587b04798bbb7f6988f1b2bf89">syncList</a>.Remove(c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>);</div>
+<div class="line"><span class="lineno">  286</span>                            c.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  287</span>                            <span class="keywordflow">if</span> (isSynced)</div>
+<div class="line"><span class="lineno">  288</span>                            {</div>
+<div class="line"><span class="lineno">  289</span>                                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a07a372587b04798bbb7f6988f1b2bf89">syncList</a>.Add(c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>);</div>
+<div class="line"><span class="lineno">  290</span>                                c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a86e3d538b0807869ac819bae82ced469">OnEnterScreen</a>();</div>
+<div class="line"><span class="lineno">  291</span>                            }</div>
+<div class="line"><span class="lineno">  292</span>                            this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  293</span>                            SE.Click();</div>
+<div class="line"><span class="lineno">  294</span>                        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  295</span>                    }</div>
+<div class="line"><span class="lineno">  296</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  297</span>                    {</div>
+<div class="line"><span class="lineno">  298</span>                        uicontextMenu.AddButton(<span class="stringliteral">&quot;editPCC&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  299</span>                        {</div>
+<div class="line"><span class="lineno">  300</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerEditPCC.html">LayerEditPCC</a>&gt;().Activate(c, UIPCC.Mode.Full, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  301</span>                        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  302</span>                        uicontextMenu.AddButton(<span class="stringliteral">&quot;togglePCC&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  303</span>                        {</div>
+<div class="line"><span class="lineno">  304</span>                            <span class="keywordtype">bool</span> isSynced = c.<a class="code hl_property" href="classChara.html#a6a11273be8acfa46a6d4801df3a28b8e">isSynced</a>;</div>
+<div class="line"><span class="lineno">  305</span>                            <span class="keywordflow">if</span> (isSynced)</div>
+<div class="line"><span class="lineno">  306</span>                            {</div>
+<div class="line"><span class="lineno">  307</span>                                c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a23d7d8a93b11dd71ed344ca761437561">OnLeaveScreen</a>();</div>
+<div class="line"><span class="lineno">  308</span>                            }</div>
+<div class="line"><span class="lineno">  309</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a07a372587b04798bbb7f6988f1b2bf89">syncList</a>.Remove(c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>);</div>
+<div class="line"><span class="lineno">  310</span>                            c.pccData = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  311</span>                            c.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  312</span>                            <span class="keywordflow">if</span> (isSynced)</div>
+<div class="line"><span class="lineno">  313</span>                            {</div>
+<div class="line"><span class="lineno">  314</span>                                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a07a372587b04798bbb7f6988f1b2bf89">syncList</a>.Add(c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>);</div>
+<div class="line"><span class="lineno">  315</span>                                c.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a86e3d538b0807869ac819bae82ced469">OnEnterScreen</a>();</div>
+<div class="line"><span class="lineno">  316</span>                            }</div>
+<div class="line"><span class="lineno">  317</span>                            this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  318</span>                        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  319</span>                    }</div>
+<div class="line"><span class="lineno">  320</span>                }</div>
+<div class="line"><span class="lineno">  321</span>                uicontextMenu.AddButton(<span class="stringliteral">&quot;makeMaid&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  322</span>                {</div>
+<div class="line"><span class="lineno">  323</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a9dedeba736b27be777255ac69df229ac">uidMaid</a> == c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>)</div>
+<div class="line"><span class="lineno">  324</span>                    {</div>
+<div class="line"><span class="lineno">  325</span>                        EClass.Branch.uidMaid = 0;</div>
+<div class="line"><span class="lineno">  326</span>                    }</div>
+<div class="line"><span class="lineno">  327</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  328</span>                    {</div>
+<div class="line"><span class="lineno">  329</span>                        EClass.Branch.uidMaid = c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">  330</span>                    }</div>
+<div class="line"><span class="lineno">  331</span>                    this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  332</span>                    SE.Click();</div>
+<div class="line"><span class="lineno">  333</span>                }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordtype">int</span> @<span class="keywordtype">int</span> = c.<a class="code hl_function" href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">GetInt</a>(36, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  335</span>                <span class="keywordtype">bool</span> isLivestockTimerOn = this.memberType == FactionMemberType.Default &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6">IsExpired</a>(@<span class="keywordtype">int</span>);</div>
+<div class="line"><span class="lineno">  336</span>                <span class="keywordtype">int</span> remainingHours = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#af554f9bf5d2025c12f84ff3e8e93d5ab">GetRemainingHours</a>(@<span class="keywordtype">int</span>);</div>
+<div class="line"><span class="lineno">  337</span>                <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a>)</div>
+<div class="line"><span class="lineno">  338</span>                {</div>
+<div class="line"><span class="lineno">  339</span>                    uicontextMenu.AddButton((c.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Livestock) ? <span class="stringliteral">&quot;daMakeResident&quot;</span> : (isLivestockTimerOn ? <span class="stringliteral">&quot;daMakeLivestock2&quot;</span>.lang(<a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_function" href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">GetText</a>(remainingHours), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>) : <span class="stringliteral">&quot;daMakeLivestock&quot;</span>), delegate()</div>
+<div class="line"><span class="lineno">  340</span>                    {</div>
+<div class="line"><span class="lineno">  341</span>                        <span class="keywordflow">if</span> (isLivestockTimerOn)</div>
+<div class="line"><span class="lineno">  342</span>                        {</div>
+<div class="line"><span class="lineno">  343</span>                            SE.Beep();</div>
+<div class="line"><span class="lineno">  344</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  345</span>                        }</div>
+<div class="line"><span class="lineno">  346</span>                        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Livestock)</div>
+<div class="line"><span class="lineno">  347</span>                        {</div>
+<div class="line"><span class="lineno">  348</span>                            c.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(36, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(0) + 14400);</div>
+<div class="line"><span class="lineno">  349</span>                        }</div>
+<div class="line"><span class="lineno">  350</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_function" href="classFactionBranch.html#a4fa8755cf2d6adffcdc84b02f85b2162">ChangeMemberType</a>(c, (c.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Livestock) ? FactionMemberType.Default : <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Livestock);</div>
+<div class="line"><span class="lineno">  351</span>                        this.<a class="code hl_function" href="classBaseListPeople.html#af1df7731db1ac6e7f22d702e077161b6">List</a>();</div>
+<div class="line"><span class="lineno">  352</span>                        SE.Click();</div>
+<div class="line"><span class="lineno">  353</span>                    }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  354</span>                    uicontextMenu.AddButton(<span class="stringliteral">&quot;addToReserve&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  355</span>                    {</div>
+<div class="line"><span class="lineno">  356</span>                        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">Home</a>.<a class="code hl_variable" href="classFaction.html#a7240c1aaa22259a1efba8fd0f3967a67">listReserve</a>.Count &gt;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">Home</a>.<a class="code hl_variable" href="classFaction.html#a8be995083678d0ba8fc6aae1fb145f89">maxReserve</a>)</div>
+<div class="line"><span class="lineno">  357</span>                        {</div>
+<div class="line"><span class="lineno">  358</span>                            SE.Beep();</div>
+<div class="line"><span class="lineno">  359</span>                            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;reserveLimit&quot;</span>);</div>
+<div class="line"><span class="lineno">  360</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  361</span>                        }</div>
+<div class="line"><span class="lineno">  362</span>                        SE.MoveZone();</div>
+<div class="line"><span class="lineno">  363</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">Home</a>.<a class="code hl_function" href="classFaction.html#a69acebee7fa06e42b99f28d147dbddef">AddReserve</a>(c);</div>
+<div class="line"><span class="lineno">  364</span>                        this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  365</span>                    }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  366</span>                }</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>        }</div>
+<div class="line"><span class="lineno">  369</span>        uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  370</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00003">FactionMemberType.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Goto_html"><div class="ttname"><a href="classAI__Goto.html">AI_Goto</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Goto_8cs_source.html#l00005">AI_Goto.cs:6</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00017">BaseCard.cs:17</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00032">BaseCard.cs:32</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_a4a4323f882aec694e714f8635c4dcd24"><div class="ttname"><a href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">BaseListPeople.layer</a></div><div class="ttdeci">new LayerPeople layer</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00007">BaseListPeople.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_af1df7731db1ac6e7f22d702e077161b6"><div class="ttname"><a href="classBaseListPeople.html#af1df7731db1ac6e7f22d702e077161b6">BaseListPeople.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00068">BaseListPeople.cs:68</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a23d7d8a93b11dd71ed344ca761437561"><div class="ttname"><a href="classCardRenderer.html#a23d7d8a93b11dd71ed344ca761437561">CardRenderer.OnLeaveScreen</a></div><div class="ttdeci">override void OnLeaveScreen()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00407">CardRenderer.cs:407</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a86e3d538b0807869ac819bae82ced469"><div class="ttname"><a href="classCardRenderer.html#a86e3d538b0807869ac819bae82ced469">CardRenderer.OnEnterScreen</a></div><div class="ttdeci">override void OnEnterScreen()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00320">CardRenderer.cs:320</a></div></div>
+<div class="ttc" id="aclassCardRow_html_a0afdaf8101eebea34d1222646e2defd5"><div class="ttname"><a href="classCardRow.html#a0afdaf8101eebea34d1222646e2defd5">CardRow.idActor</a></div><div class="ttdeci">string[] idActor</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00151">CardRow.cs:151</a></div></div>
+<div class="ttc" id="aclassCard_html_a4127bf1cbb6bbfc53f68e5b79ebe44a7"><div class="ttname"><a href="classCard.html#a4127bf1cbb6bbfc53f68e5b79ebe44a7">Card.c_altName</a></div><div class="ttdeci">string c_altName</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01411">Card.cs:1412</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02179">Card.cs:2180</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassChara_html_a0df65e49285c85c955d1f2250817020f"><div class="ttname"><a href="classChara.html#a0df65e49285c85c955d1f2250817020f">Chara.IDPCCBodySet</a></div><div class="ttdeci">string IDPCCBodySet</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00348">Chara.cs:349</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:452</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a4312c7c0a71d9e4709fdfa8b163ebda1"><div class="ttname"><a href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">Chara.IsPCParty</a></div><div class="ttdeci">override bool IsPCParty</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00524">Chara.cs:525</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07915">Chara.cs:7915</a></div></div>
+<div class="ttc" id="aclassChara_html_a6a11273be8acfa46a6d4801df3a28b8e"><div class="ttname"><a href="classChara.html#a6a11273be8acfa46a6d4801df3a28b8e">Chara.isSynced</a></div><div class="ttdeci">override bool isSynced</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00596">Chara.cs:597</a></div></div>
+<div class="ttc" id="aclassChara_html_a6fb5cf442c222746306ffc3f86030d0f"><div class="ttname"><a href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">Chara._CreateRenderer</a></div><div class="ttdeci">override CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05901">Chara.cs:5901</a></div></div>
+<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00056">Chara.cs:57</a></div></div>
+<div class="ttc" id="aclassChara_html_a99afe3a20d2ad672773a2258b535019f"><div class="ttname"><a href="classChara.html#a99afe3a20d2ad672773a2258b535019f">Chara.memberType</a></div><div class="ttdeci">FactionMemberType memberType</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09365">Chara.cs:9365</a></div></div>
+<div class="ttc" id="aclassChara_html_aa789983a23b2c9294d4093ace7c5cd43"><div class="ttname"><a href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">Chara.IsHomeMember</a></div><div class="ttdeci">bool IsHomeMember()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05850">Chara.cs:5850</a></div></div>
+<div class="ttc" id="aclassChara_html_ab22a5ea4adc84a03802a07811063b465"><div class="ttname"><a href="classChara.html#ab22a5ea4adc84a03802a07811063b465">Chara.IsGuest</a></div><div class="ttdeci">bool IsGuest()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05875">Chara.cs:5875</a></div></div>
+<div class="ttc" id="aclassChara_html_abd565af41f8cc28f8ccdc5ad55e140bb"><div class="ttname"><a href="classChara.html#abd565af41f8cc28f8ccdc5ad55e140bb">Chara.sourceCard</a></div><div class="ttdeci">override CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00274">Chara.cs:275</a></div></div>
+<div class="ttc" id="aclassChara_html_ae316a7097e7b696f2f018df973b16224"><div class="ttname"><a href="classChara.html#ae316a7097e7b696f2f018df973b16224">Chara.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09383">Chara.cs:9383</a></div></div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
+<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00324">Date.cs:324</a></div></div>
+<div class="ttc" id="aclassDate_html_a922d66f6ea6d2b5e5a1e3e2323cd14a6"><div class="ttname"><a href="classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6">Date.IsExpired</a></div><div class="ttdeci">bool IsExpired(int time)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00334">Date.cs:334</a></div></div>
+<div class="ttc" id="aclassDate_html_ad7d298a8ccd5c2aa735b2800bb653c2c"><div class="ttname"><a href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">Date.GetText</a></div><div class="ttdeci">string GetText(Date.TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00219">Date.cs:219</a></div></div>
+<div class="ttc" id="aclassDate_html_af554f9bf5d2025c12f84ff3e8e93d5ab"><div class="ttname"><a href="classDate.html#af554f9bf5d2025c12f84ff3e8e93d5ab">Date.GetRemainingHours</a></div><div class="ttdeci">int GetRemainingHours(int rawDeadLine)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00339">Date.cs:339</a></div></div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a9d8fe2e80662df6a6c323599b5eb1257"><div class="ttname"><a href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">Dialog.InputName</a></div><div class="ttdeci">static Dialog InputName(string langDetail, string text, Action&lt; bool, string &gt; onClose, Dialog.InputType inputType=Dialog.InputType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00469">Dialog.cs:469</a></div></div>
+<div class="ttc" id="aclassDialog_html_aaf9f0f8f050b7944063f51a1b9cf878a"><div class="ttname"><a href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">Dialog.InputType</a></div><div class="ttdeci">InputType</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00538">Dialog.cs:539</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassEClass_html_a079df2f093c2b827947eb8db4de7c78a"><div class="ttname"><a href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">EClass.Home</a></div><div class="ttdeci">static Faction Home</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00079">EClass.cs:80</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
+<div class="ttc" id="aclassEClass_html_a8f1e1e1a054339f58a2eecd62c4f3612"><div class="ttname"><a href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">EClass.Branch</a></div><div class="ttdeci">static FactionBranch Branch</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00063">EClass.cs:64</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a4fa8755cf2d6adffcdc84b02f85b2162"><div class="ttname"><a href="classFactionBranch.html#a4fa8755cf2d6adffcdc84b02f85b2162">FactionBranch.ChangeMemberType</a></div><div class="ttdeci">void ChangeMemberType(Chara c, FactionMemberType type)</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01147">FactionBranch.cs:1147</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a9dedeba736b27be777255ac69df229ac"><div class="ttname"><a href="classFactionBranch.html#a9dedeba736b27be777255ac69df229ac">FactionBranch.uidMaid</a></div><div class="ttdeci">int uidMaid</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01622">FactionBranch.cs:1622</a></div></div>
+<div class="ttc" id="aclassFaction_html_a69acebee7fa06e42b99f28d147dbddef"><div class="ttname"><a href="classFaction.html#a69acebee7fa06e42b99f28d147dbddef">Faction.AddReserve</a></div><div class="ttdeci">void AddReserve(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00189">Faction.2.cs:189</a></div></div>
+<div class="ttc" id="aclassFaction_html_a7240c1aaa22259a1efba8fd0f3967a67"><div class="ttname"><a href="classFaction.html#a7240c1aaa22259a1efba8fd0f3967a67">Faction.listReserve</a></div><div class="ttdeci">List&lt; HireInfo &gt; listReserve</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00439">Faction.2.cs:439</a></div></div>
+<div class="ttc" id="aclassFaction_html_a8be995083678d0ba8fc6aae1fb145f89"><div class="ttname"><a href="classFaction.html#a8be995083678d0ba8fc6aae1fb145f89">Faction.maxReserve</a></div><div class="ttdeci">int maxReserve</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00427">Faction.2.cs:427</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html"><div class="ttname"><a href="classLayerEditPCC.html">LayerEditPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00005">LayerEditPCC.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html_a172f044b05896d17177f4c9599b45378"><div class="ttname"><a href="classLayerPeople.html#a172f044b05896d17177f4c9599b45378">LayerPeople.OnSwitchContent</a></div><div class="ttdeci">override void OnSwitchContent(Window window)</div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00060">LayerPeople.cs:60</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassScene_html_a07a372587b04798bbb7f6988f1b2bf89"><div class="ttname"><a href="classScene.html#a07a372587b04798bbb7f6988f1b2bf89">Scene.syncList</a></div><div class="ttdeci">List&lt; ISyncScreen &gt; syncList</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01099">Scene.cs:1099</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05901">Chara._CreateRenderer()</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Faction_82_8cs_source.html#l00189">Faction.AddReserve()</a>, <a class="el" href="EClass_8cs_source.html#l00064">EClass.Branch</a>, <a class="el" href="Card_8cs_source.html#l01412">Card.c_altName</a>, <a class="el" href="FactionBranch_8cs_source.html#l01147">FactionBranch.ChangeMemberType()</a>, <a class="el" href="Chara_8cs_source.html#l00057">Chara.currentZone</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="BaseCard_8cs_source.html#l00017">BaseCard.GetInt()</a>, <a class="el" href="Date_8cs_source.html#l00324">Date.GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00339">Date.GetRemainingHours()</a>, <a class="el" href="Date_8cs_source.html#l00219">Date.GetText()</a>, <a class="el" href="EClass_8cs_source.html#l00080">EClass.Home</a>, <a class="el" href="CardRow_8cs_source.html#l00151">CardRow.idActor</a>, <a class="el" href="Chara_8cs_source.html#l00349">Chara.IDPCCBodySet</a>, <a class="el" href="Dialog_8cs_source.html#l00469">Dialog.InputName()</a>, <a class="el" href="Chara_8cs_source.html#l00452">Chara.IsAliveInCurrentZone</a>, <a class="el" href="Date_8cs_source.html#l00334">Date.IsExpired()</a>, <a class="el" href="Chara_8cs_source.html#l05875">Chara.IsGuest()</a>, <a class="el" href="Chara_8cs_source.html#l05850">Chara.IsHomeMember()</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l00525">Chara.IsPCParty</a>, <a class="el" href="Chara_8cs_source.html#l00597">Chara.isSynced</a>, <a class="el" href="Faction_82_8cs_source.html#l00439">Faction.listReserve</a>, <a class="el" href="Faction_82_8cs_source.html#l00427">Faction.maxReserve</a>, <a class="el" href="Chara_8cs_source.html#l09365">Chara.memberType</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="Card_8cs_source.html#l02180">Card.NameSimple</a>, <a class="el" href="CardRenderer_8cs_source.html#l00320">CardRenderer.OnEnterScreen()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00407">CardRenderer.OnLeaveScreen()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l09383">Chara.pccData</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="Chara_8cs_source.html#l07915">Chara.SetAI()</a>, <a class="el" href="BaseCard_8cs_source.html#l00032">BaseCard.SetInt()</a>, <a class="el" href="Chara_8cs_source.html#l00275">Chara.sourceCard</a>, <a class="el" href="Scene_8cs_source.html#l01099">Scene.syncList</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, <a class="el" href="FactionBranch_8cs_source.html#l01622">FactionBranch.uidMaid</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00068">List()</a>.</p>
 
 </div>
 </div>
@@ -390,6 +667,134 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00096">96</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_class" href="classBaseListPeople.html">BaseListPeople</a>.&lt;&gt;c__DisplayClass18_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classBaseListPeople.html">BaseListPeople</a>.&lt;&gt;c__DisplayClass18_0();</div>
+<div class="line"><span class="lineno">   99</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  100</span>        CS$&lt;&gt;8__locals1.a = a;</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_function" href="classBaseListPeople.html#aecfda02d64995b7e5eefb5c3d6b96fae">SetSubText</a>(CS$&lt;&gt;8__locals1.a, b);</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classBaseListPeople.html#a11d62704546e663eb5ba981145846707">ShowHome</a>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_class" href="classBaseArea.html">BaseArea</a> roomWork = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHobby.html">Hobby</a> hobby <span class="keywordflow">in</span> CS$&lt;&gt;8__locals1.a.ListWorks(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                <a class="code hl_class" href="classAIWork.html">AIWork</a> ai = hobby.<a class="code hl_function" href="classHobby.html#a43781a1ca7ddb8705db2ac8f138c2837">GetAI</a>(CS$&lt;&gt;8__locals1.a);</div>
+<div class="line"><span class="lineno">  109</span>                flag = ai.<a class="code hl_function" href="classAIWork.html#a751ce6464ca3848fa1ba0219447d30db">SetDestination</a>();</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  111</span>                {</div>
+<div class="line"><span class="lineno">  112</span>                    <span class="keywordflow">if</span> (ai.<a class="code hl_variable" href="classAIWork.html#ae378dd10487b1b4fb9779cbcc401fca0">destArea</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  113</span>                    {</div>
+<div class="line"><span class="lineno">  114</span>                        roomWork = ai.<a class="code hl_variable" href="classAIWork.html#ae378dd10487b1b4fb9779cbcc401fca0">destArea</a>;</div>
+<div class="line"><span class="lineno">  115</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  116</span>                    }</div>
+<div class="line"><span class="lineno">  117</span>                    <span class="keywordflow">if</span> (ai.<a class="code hl_variable" href="classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f">destThing</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>                    {</div>
+<div class="line"><span class="lineno">  119</span>                        roomWork = ai.<a class="code hl_variable" href="classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f">destThing</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
+<div class="line"><span class="lineno">  120</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  121</span>                    }</div>
+<div class="line"><span class="lineno">  122</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  123</span>                }</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>            b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.work, delegate</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                if (roomWork == null)</div>
+<div class="line"><span class="lineno">  128</span>                {</div>
+<div class="line"><span class="lineno">  129</span>                    SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  130</span>                    return;</div>
+<div class="line"><span class="lineno">  131</span>                }</div>
+<div class="line"><span class="lineno">  132</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Goto.html">AI_Goto</a>(roomWork.<a class="code hl_function" href="classBaseArea.html#aeba7891cb04819330dd1ee2fa0bd1326">GetRandomFreePos</a>(), 1, <span class="keyword">false</span>, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  133</span>                CS$&lt;&gt;8__locals1.&lt;&gt;4__this.layer.Close();</div>
+<div class="line"><span class="lineno">  134</span>            }, <span class="keyword">null</span>, delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">  135</span>            {</div>
+<div class="line"><span class="lineno">  136</span>                <a class="code hl_class" href="classBaseListPeople.html">BaseListPeople</a>.&lt;&gt;c__DisplayClass18_2 CS$&lt;&gt;8__locals3;</div>
+<div class="line"><span class="lineno">  137</span>                CS$&lt;&gt;8__locals3.t = t;</div>
+<div class="line"><span class="lineno">  138</span>                CS$&lt;&gt;8__locals3.t.note.Clear();</div>
+<div class="line"><span class="lineno">  139</span>                <a class="code hl_class" href="classBaseArea.html">BaseArea</a> roomWork;</div>
+<div class="line"><span class="lineno">  140</span>                CS$&lt;&gt;8__locals3.t.note.AddHeader(<span class="stringliteral">&quot;infoWork&quot;</span>.lang((roomWork != <span class="keyword">null</span>) ? roomWork.<a class="code hl_property" href="classBaseArea.html#abdbffe15f1c7f8ae7f36d672ca084695">Name</a> : <span class="stringliteral">&quot;none&quot;</span>.lang(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHobby.html">Hobby</a> h <span class="keywordflow">in</span> CS$&lt;&gt;8__locals1.a.ListWorks(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  142</span>                {</div>
+<div class="line"><span class="lineno">  143</span>                    CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classBaseListPeople.html#adcec2fe8b5959de16219f0ac1f11c53e">OnInstantiate</a>&gt;g__AddText|5(h, <span class="stringliteral">&quot;work&quot;</span>, ref CS$&lt;&gt;8__locals3);</div>
+<div class="line"><span class="lineno">  144</span>                }</div>
+<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHobby.html">Hobby</a> h2 <span class="keywordflow">in</span> CS$&lt;&gt;8__locals1.a.ListHobbies(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  146</span>                {</div>
+<div class="line"><span class="lineno">  147</span>                    CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classBaseListPeople.html#adcec2fe8b5959de16219f0ac1f11c53e">OnInstantiate</a>&gt;g__AddText|5(h2, <span class="stringliteral">&quot;hobby&quot;</span>, ref CS$&lt;&gt;8__locals3);</div>
+<div class="line"><span class="lineno">  148</span>                }</div>
+<div class="line"><span class="lineno">  149</span>                CS$&lt;&gt;8__locals3.t.note.Build();</div>
+<div class="line"><span class="lineno">  150</span>                roomWork = roomWork;</div>
+<div class="line"><span class="lineno">  151</span>            }).icon.SetAlpha(flag ? 1f : 0.4f);</div>
+<div class="line"><span class="lineno">  152</span>            <a class="code hl_class" href="classRoom.html">Room</a> room = CS$&lt;&gt;8__locals1.a.FindRoom();</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_class" href="classTraitBed.html">TraitBed</a> bed = CS$&lt;&gt;8__locals1.a.FindBed();</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals1.a.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default)</div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.home, delegate</div>
+<div class="line"><span class="lineno">  157</span>                {</div>
+<div class="line"><span class="lineno">  158</span>                    if (room == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  159</span>                    {</div>
+<div class="line"><span class="lineno">  160</span>                        SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  161</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  162</span>                    }</div>
+<div class="line"><span class="lineno">  163</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Goto.html">AI_Goto</a>(room.<a class="code hl_function" href="classBaseArea.html#aeba7891cb04819330dd1ee2fa0bd1326">GetRandomFreePos</a>(), 1, <span class="keyword">false</span>, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  164</span>                    CS$&lt;&gt;8__locals1.&lt;&gt;4__this.layer.Close();</div>
+<div class="line"><span class="lineno">  165</span>                }, <span class="keyword">null</span>, delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">  166</span>                {</div>
+<div class="line"><span class="lineno">  167</span>                    t.note.Clear();</div>
+<div class="line"><span class="lineno">  168</span>                    t.note.AddHeader(<span class="stringliteral">&quot;infoHome&quot;</span>.lang((room != <span class="keyword">null</span>) ? room.<a class="code hl_property" href="classBaseArea.html#abdbffe15f1c7f8ae7f36d672ca084695">Name</a> : <span class="stringliteral">&quot;none&quot;</span>.lang(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  169</span>                    t.note.AddTopic(<span class="stringliteral">&quot;TopicLeft&quot;</span>, <span class="stringliteral">&quot;infoBed&quot;</span>.lang(), (bed != <span class="keyword">null</span>) ? bed.<a class="code hl_property" href="classTrait.html#afab0127cca1275cfacbc10e629be18f0">Name</a>.ToTitleCase(<span class="keyword">false</span>) : <span class="stringliteral">&quot;none&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">  170</span>                    t.note.Build();</div>
+<div class="line"><span class="lineno">  171</span>                    <span class="keywordflow">if</span> (room != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  172</span>                    {</div>
+<div class="line"><span class="lineno">  173</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  174</span>                        {</div>
+<div class="line"><span class="lineno">  175</span>                        });</div>
+<div class="line"><span class="lineno">  176</span>                    }</div>
+<div class="line"><span class="lineno">  177</span>                }).icon.SetAlpha((room != <span class="keyword">null</span>) ? 1f : 0.4f);</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classBaseListPeople.html#af40e4818faf528adf3cdcf721edf580f">ShowCharaSheet</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>)</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.inspect, delegate</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                SE.Play(<span class="stringliteral">&quot;pop_paper&quot;</span>);</div>
+<div class="line"><span class="lineno">  185</span>                <a class="code hl_class" href="classLayerChara.html">LayerChara</a> layerChara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayerDontCloseOthers&lt;<a class="code hl_class" href="classLayerChara.html">LayerChara</a>&gt;();</div>
+<div class="line"><span class="lineno">  186</span>                layerChara.windows[0].SetRect(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.rects.center, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  187</span>                layerChara.<a class="code hl_function" href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">SetChara</a>(CS$&lt;&gt;8__locals1.a);</div>
+<div class="line"><span class="lineno">  188</span>            }, <span class="stringliteral">&quot;charaInfo&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classBaseListPeople.html#ac38689827c4a17949d9035d3b4c9d37c">IsDisabled</a>(CS$&lt;&gt;8__locals1.a))</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            b.gameObject.AddComponent&lt;CanvasGroup&gt;().alpha = 0.6f;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="ttc" id="aclassAIWork_html"><div class="ttname"><a href="classAIWork.html">AIWork</a></div><div class="ttdef"><b>Definition:</b> <a href="AIWork_8cs_source.html#l00004">AIWork.cs:5</a></div></div>
+<div class="ttc" id="aclassAIWork_html_a14b7a8534cdbb2c0ce938e86a701c38f"><div class="ttname"><a href="classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f">AIWork.destThing</a></div><div class="ttdeci">Thing destThing</div><div class="ttdef"><b>Definition:</b> <a href="AIWork_8cs_source.html#l00160">AIWork.cs:160</a></div></div>
+<div class="ttc" id="aclassAIWork_html_a751ce6464ca3848fa1ba0219447d30db"><div class="ttname"><a href="classAIWork.html#a751ce6464ca3848fa1ba0219447d30db">AIWork.SetDestination</a></div><div class="ttdeci">bool SetDestination()</div><div class="ttdef"><b>Definition:</b> <a href="AIWork_8cs_source.html#l00066">AIWork.cs:66</a></div></div>
+<div class="ttc" id="aclassAIWork_html_ae378dd10487b1b4fb9779cbcc401fca0"><div class="ttname"><a href="classAIWork.html#ae378dd10487b1b4fb9779cbcc401fca0">AIWork.destArea</a></div><div class="ttdeci">BaseArea destArea</div><div class="ttdef"><b>Definition:</b> <a href="AIWork_8cs_source.html#l00156">AIWork.cs:156</a></div></div>
+<div class="ttc" id="aclassBaseArea_html"><div class="ttname"><a href="classBaseArea.html">BaseArea</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00006">BaseArea.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseArea_html_abdbffe15f1c7f8ae7f36d672ca084695"><div class="ttname"><a href="classBaseArea.html#abdbffe15f1c7f8ae7f36d672ca084695">BaseArea.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00008">BaseArea.cs:9</a></div></div>
+<div class="ttc" id="aclassBaseArea_html_aeba7891cb04819330dd1ee2fa0bd1326"><div class="ttname"><a href="classBaseArea.html#aeba7891cb04819330dd1ee2fa0bd1326">BaseArea.GetRandomFreePos</a></div><div class="ttdeci">Point GetRandomFreePos()</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00036">BaseArea.cs:36</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html"><div class="ttname"><a href="classBaseListPeople.html">BaseListPeople</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00005">BaseListPeople.cs:6</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_a11d62704546e663eb5ba981145846707"><div class="ttname"><a href="classBaseListPeople.html#a11d62704546e663eb5ba981145846707">BaseListPeople.ShowHome</a></div><div class="ttdeci">virtual bool ShowHome</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00055">BaseListPeople.cs:56</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_ac38689827c4a17949d9035d3b4c9d37c"><div class="ttname"><a href="classBaseListPeople.html#ac38689827c4a17949d9035d3b4c9d37c">BaseListPeople.IsDisabled</a></div><div class="ttdeci">virtual bool IsDisabled(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00063">BaseListPeople.cs:63</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_aecfda02d64995b7e5eefb5c3d6b96fae"><div class="ttname"><a href="classBaseListPeople.html#aecfda02d64995b7e5eefb5c3d6b96fae">BaseListPeople.SetSubText</a></div><div class="ttdeci">virtual void SetSubText(Chara a, ItemGeneral b)</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00196">BaseListPeople.cs:196</a></div></div>
+<div class="ttc" id="aclassBaseListPeople_html_af40e4818faf528adf3cdcf721edf580f"><div class="ttname"><a href="classBaseListPeople.html#af40e4818faf528adf3cdcf721edf580f">BaseListPeople.ShowCharaSheet</a></div><div class="ttdeci">virtual bool ShowCharaSheet</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00023">BaseListPeople.cs:24</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a669319abcd748efaa6f60d5a2ad578ca"><div class="ttname"><a href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">CoreDebug.showExtra</a></div><div class="ttdeci">bool showExtra</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02181">CoreDebug.cs:2181</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassHobby_html"><div class="ttname"><a href="classHobby.html">Hobby</a></div><div class="ttdef"><b>Definition:</b> <a href="Hobby_8cs_source.html#l00003">Hobby.cs:4</a></div></div>
+<div class="ttc" id="aclassHobby_html_a43781a1ca7ddb8705db2ac8f138c2837"><div class="ttname"><a href="classHobby.html#a43781a1ca7ddb8705db2ac8f138c2837">Hobby.GetAI</a></div><div class="ttdeci">AIWork GetAI(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Hobby_8cs_source.html#l00005">Hobby.cs:5</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a386a4f0ea416c6463ff620facdbe2574"><div class="ttname"><a href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">ItemGeneral.AddSubButton</a></div><div class="ttdeci">UIButton AddSubButton(Sprite sprite, Action action, string lang=null, Action&lt; UITooltip &gt; onTooltip=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00069">ItemGeneral.cs:69</a></div></div>
+<div class="ttc" id="aclassLayerChara_html"><div class="ttname"><a href="classLayerChara.html">LayerChara</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00003">LayerChara.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerChara_html_a2a490d43095c16f39501945d9879e97d"><div class="ttname"><a href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">LayerChara.SetChara</a></div><div class="ttdeci">LayerChara SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00013">LayerChara.cs:13</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00004">Room.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitBed_html"><div class="ttname"><a href="classTraitBed.html">TraitBed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitBed_8cs_source.html#l00004">TraitBed.cs:5</a></div></div>
+<div class="ttc" id="aclassTrait_html_afab0127cca1275cfacbc10e629be18f0"><div class="ttname"><a href="classTrait.html#afab0127cca1275cfacbc10e629be18f0">Trait.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00047">Trait.cs:48</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00069">ItemGeneral.AddSubButton()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="AIWork_8cs_source.html#l00156">AIWork.destArea</a>, <a class="el" href="AIWork_8cs_source.html#l00160">AIWork.destThing</a>, <a class="el" href="Hobby_8cs_source.html#l00005">Hobby.GetAI()</a>, <a class="el" href="BaseArea_8cs_source.html#l00036">BaseArea.GetRandomFreePos()</a>, <a class="el" href="BaseArea_8cs_source.html#l00009">BaseArea.Name</a>, <a class="el" href="Trait_8cs_source.html#l00048">Trait.Name</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00096">OnInstantiate()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="Chara_8cs_source.html#l07915">Chara.SetAI()</a>, <a class="el" href="AIWork_8cs_source.html#l00066">AIWork.SetDestination()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00196">SetSubText()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00056">ShowHome</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00068">List()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00096">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -421,6 +826,39 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classListPeopleBed.html#aaa5e1fe02580aa964273a53cb22df1f7">ListPeopleBed</a>, <a class="el" href="classListPeopleBuySlave.html#a8d34614f07357673f98476c844f0ecd4">ListPeopleBuySlave</a>, <a class="el" href="classListPeopleCallReserve.html#a6afb0537fd013bd0f798116bcdea3015">ListPeopleCallReserve</a>, <a class="el" href="classListPeopleEmbark.html#a8d85cb3f509f94d60ecddc66fc8828ad">ListPeopleEmbark</a>, <a class="el" href="classListPeopleExpedition.html#ab8f124f9eab438c59d874f07f9752abf">ListPeopleExpedition</a>, <a class="el" href="classListPeopleRevive.html#a203c1c3a7446c73695de968c39447d95">ListPeopleRevive</a>, and <a class="el" href="classListPeopleSelect.html#a35b0d559171b8712b89d24067c303f69">ListPeopleSelect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00372">372</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>    {</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseListPeople.html#af0baf7548ee451f8e985ff5ffd073172">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Guest)</div>
+<div class="line"><span class="lineno">  375</span>        {</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keyword">using</span> (List&lt;Chara&gt;.Enumerator enumerator = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  377</span>            {</div>
+<div class="line"><span class="lineno">  378</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  379</span>                {</div>
+<div class="line"><span class="lineno">  380</span>                    <a class="code hl_class" href="classChara.html">Chara</a> chara = enumerator.Current;</div>
+<div class="line"><span class="lineno">  381</span>                    <span class="keywordflow">if</span> (chara.<a class="code hl_function" href="classChara.html#ab22a5ea4adc84a03802a07811063b465">IsGuest</a>())</div>
+<div class="line"><span class="lineno">  382</span>                    {</div>
+<div class="line"><span class="lineno">  383</span>                        this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Add(chara);</div>
+<div class="line"><span class="lineno">  384</span>                    }</div>
+<div class="line"><span class="lineno">  385</span>                }</div>
+<div class="line"><span class="lineno">  386</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  387</span>            }</div>
+<div class="line"><span class="lineno">  388</span>        }</div>
+<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>)</div>
+<div class="line"><span class="lineno">  390</span>        {</div>
+<div class="line"><span class="lineno">  391</span>            <span class="keywordflow">if</span> (chara2.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <span class="keyword">this</span>.memberType &amp;&amp; !chara2.<a class="code hl_property" href="classCard.html#a18df8b0c12925deda26841c2e7a41654">isSummon</a>)</div>
+<div class="line"><span class="lineno">  392</span>            {</div>
+<div class="line"><span class="lineno">  393</span>                this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Add(chara2);</div>
+<div class="line"><span class="lineno">  394</span>            }</div>
+<div class="line"><span class="lineno">  395</span>        }</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
+<div class="ttc" id="aclassBaseListPeople_html_af0baf7548ee451f8e985ff5ffd073172"><div class="ttname"><a href="classBaseListPeople.html#af0baf7548ee451f8e985ff5ffd073172">BaseListPeople.memberType</a></div><div class="ttdeci">FactionMemberType memberType</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00423">BaseListPeople.cs:423</a></div></div>
+<div class="ttc" id="aclassCard_html_a18df8b0c12925deda26841c2e7a41654"><div class="ttname"><a href="classCard.html#a18df8b0c12925deda26841c2e7a41654">Card.isSummon</a></div><div class="ttdeci">bool isSummon</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00643">Card.cs:644</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01689">FactionBranch.cs:1689</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Card_8cs_source.html#l03126">Card.Add()</a>, <a class="el" href="EClass_8cs_source.html#l00064">EClass.Branch</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="Chara_8cs_source.html#l05875">Chara.IsGuest()</a>, <a class="el" href="Card_8cs_source.html#l00644">Card.isSummon</a>, <a class="el" href="FactionBranch_8cs_source.html#l01689">FactionBranch.members</a>, and <a class="el" href="Chara_8cs_source.html#l09365">Chara.memberType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00068">List()</a>.</p>
 
 </div>
 </div>
@@ -452,7 +890,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classListPeopleBed.html#a384b0ec5a75b759cdb1e629710b5f81f">ListPeopleBed</a>, and <a class="el" href="classListPeopleEmbark.html#a7cd40eea862c0ae6b511e08b7aba4e56">ListPeopleEmbark</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00398">398</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>        WindowMenu menuLeft = this.<a class="code hl_variable" href="classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6">window</a>.menuLeft;</div>
+<div class="line"><span class="lineno">  401</span>        menuLeft.Clear();</div>
+<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classListOwner.html#ab42835ae58c46bf205bd18fa09bd5518">main</a>)</div>
+<div class="line"><span class="lineno">  403</span>        {</div>
+<div class="line"><span class="lineno">  404</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  405</span>        }</div>
+<div class="line"><span class="lineno">  406</span>        menuLeft.AddButton2Line(<span class="stringliteral">&quot;sort&quot;</span>, () =&gt; this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.sortMode.ToString(), delegate(UIButton b)</div>
+<div class="line"><span class="lineno">  407</span>        {</div>
+<div class="line"><span class="lineno">  408</span>            this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.NextSort();</div>
+<div class="line"><span class="lineno">  409</span>        }, <span class="keyword">null</span>, <span class="stringliteral">&quot;2line&quot;</span>);</div>
+<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classBaseListPeople.html#ab113f36dd136b412edec5243920b27be">ShowShowMode</a>)</div>
+<div class="line"><span class="lineno">  411</span>        {</div>
+<div class="line"><span class="lineno">  412</span>            Lang.GetList(<span class="stringliteral">&quot;info_people&quot;</span>);</div>
+<div class="line"><span class="lineno">  413</span>            menuLeft.AddButton2Line(<span class="stringliteral">&quot;info&quot;</span>, () =&gt; <span class="stringliteral">&quot;show&quot;</span> + this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.<a class="code hl_variable" href="classLayerPeople.html#a0bed27a81d0484480cbf88413009c0e8">showMode</a>.ToString(), delegate(UIButton b)</div>
+<div class="line"><span class="lineno">  414</span>            {</div>
+<div class="line"><span class="lineno">  415</span>                this.layer.showMode = this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.<a class="code hl_variable" href="classLayerPeople.html#a0bed27a81d0484480cbf88413009c0e8">showMode</a>.NextEnum&lt;<a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>.<a class="code hl_enumeration" href="classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bf">ShowMode</a>&gt;();</div>
+<div class="line"><span class="lineno">  416</span>                this.<a class="code hl_function" href="classBaseListPeople.html#af1df7731db1ac6e7f22d702e077161b6">List</a>();</div>
+<div class="line"><span class="lineno">  417</span>            }, <span class="keyword">null</span>, <span class="stringliteral">&quot;2line&quot;</span>);</div>
+<div class="line"><span class="lineno">  418</span>        }</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
+<div class="ttc" id="aclassBaseListPeople_html_ab113f36dd136b412edec5243920b27be"><div class="ttname"><a href="classBaseListPeople.html#ab113f36dd136b412edec5243920b27be">BaseListPeople.ShowShowMode</a></div><div class="ttdeci">virtual bool ShowShowMode</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00031">BaseListPeople.cs:32</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html"><div class="ttname"><a href="classLayerPeople.html">LayerPeople</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00005">LayerPeople.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html_a0bed27a81d0484480cbf88413009c0e8"><div class="ttname"><a href="classLayerPeople.html#a0bed27a81d0484480cbf88413009c0e8">LayerPeople.showMode</a></div><div class="ttdeci">LayerPeople.ShowMode showMode</div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00167">LayerPeople.cs:167</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html_ae40e45a9b25d781eaaecb19dbf2f90bf"><div class="ttname"><a href="classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bf">LayerPeople.ShowMode</a></div><div class="ttdeci">ShowMode</div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00183">LayerPeople.cs:184</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a9d3273fa305bf8fddb90262d603af6d6"><div class="ttname"><a href="classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6">ListOwner&lt; Chara, ItemGeneral &gt;::window</a></div><div class="ttdeci">Window window</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00091">ListOwner.2.cs:91</a></div></div>
+<div class="ttc" id="aclassListOwner_html_ab42835ae58c46bf205bd18fa09bd5518"><div class="ttname"><a href="classListOwner.html#ab42835ae58c46bf205bd18fa09bd5518">ListOwner&lt; Chara, ItemGeneral &gt;::main</a></div><div class="ttdeci">bool main</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00105">ListOwner.2.cs:105</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aecfda02d64995b7e5eefb5c3d6b96fae" name="aecfda02d64995b7e5eefb5c3d6b96fae"></a>
@@ -492,6 +957,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classListPeopleExpedition.html#ac7cd1cfd718045fd418695b42e9c8639">ListPeopleExpedition</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00196">196</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_property" href="classBaseListPeople.html#afa83af2fd3a94daa2b4a2417bf2398b1">ShowMode</a>)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>.<a class="code hl_enumeration" href="classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bf">ShowMode</a>.Job:</div>
+<div class="line"><span class="lineno">  201</span>            b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(a.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetName().ToTitleCase(<span class="keyword">true</span>), 300, FontColor.Default, TextAnchor.MiddleLeft);</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>.<a class="code hl_enumeration" href="classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bf">ShowMode</a>.Race:</div>
+<div class="line"><span class="lineno">  204</span>            b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(a.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetName().ToTitleCase(<span class="keyword">true</span>), 300, FontColor.Default, TextAnchor.MiddleLeft);</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>.<a class="code hl_enumeration" href="classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bf">ShowMode</a>.Work:</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordtype">string</span> lang = a.<a class="code hl_function" href="classChara.html#aec227517705fb2b46491142b695974f2">GetTextWork</a>(<span class="keyword">true</span>) + <span class="stringliteral">&quot;,&quot;</span> + a.<a class="code hl_function" href="classChara.html#aed18d9ca0be38c0cc0abdabc43d234ed">GetTextHobby</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  209</span>            b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(lang, 300, FontColor.Default, TextAnchor.MiddleLeft);</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
+<div class="ttc" id="aclassBaseListPeople_html_afa83af2fd3a94daa2b4a2417bf2398b1"><div class="ttname"><a href="classBaseListPeople.html#afa83af2fd3a94daa2b4a2417bf2398b1">BaseListPeople.ShowMode</a></div><div class="ttdeci">virtual LayerPeople.ShowMode ShowMode</div><div class="ttdef"><b>Definition:</b> <a href="BaseListPeople_8cs_source.html#l00039">BaseListPeople.cs:40</a></div></div>
+<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00307">Chara.cs:308</a></div></div>
+<div class="ttc" id="aclassChara_html_aec227517705fb2b46491142b695974f2"><div class="ttname"><a href="classChara.html#aec227517705fb2b46491142b695974f2">Chara.GetTextWork</a></div><div class="ttdeci">string GetTextWork(bool simple=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08084">Chara.cs:8084</a></div></div>
+<div class="ttc" id="aclassChara_html_aed18d9ca0be38c0cc0abdabc43d234ed"><div class="ttname"><a href="classChara.html#aed18d9ca0be38c0cc0abdabc43d234ed">Chara.GetTextHobby</a></div><div class="ttdeci">string GetTextHobby(bool simple=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08074">Chara.cs:8074</a></div></div>
+<div class="ttc" id="aclassChara_html_aff51c1a00af6403830b9d32980033a66"><div class="ttname"><a href="classChara.html#aff51c1a00af6403830b9d32980033a66">Chara.race</a></div><div class="ttdeci">SourceRace.Row race</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00294">Chara.cs:295</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_ae2b8778fd74445f36964a7224550426a"><div class="ttname"><a href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">ItemGeneral.SetSubText</a></div><div class="ttdeci">UIButton SetSubText(string lang, int x, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.cs:113</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08074">Chara.GetTextHobby()</a>, <a class="el" href="Chara_8cs_source.html#l08084">Chara.GetTextWork()</a>, <a class="el" href="Chara_8cs_source.html#l00308">Chara.job</a>, <a class="el" href="Chara_8cs_source.html#l00295">Chara.race</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.SetSubText()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00096">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -526,6 +1020,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00421">421</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ListPeopleBuySlave_8cs_source.html#l00026">ListPeopleBuySlave.OnCreate()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -550,7 +1046,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00015">15</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;HeaderRowPeople&quot;</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a4323f882aec694e714f8635c4dcd24" name="a4a4323f882aec694e714f8635c4dcd24"></a>
@@ -574,7 +1076,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.layer as <a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af40e4818faf528adf3cdcf721edf580f" name="af40e4818faf528adf3cdcf721edf580f"></a>
@@ -598,7 +1106,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00023">23</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e3883dbd588140cc9dacb0d376400e3" name="a0e3883dbd588140cc9dacb0d376400e3"></a>
@@ -622,7 +1136,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00047">47</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a11d62704546e663eb5ba981145846707" name="a11d62704546e663eb5ba981145846707"></a>
@@ -646,6 +1166,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00055">55</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00096">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +1198,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00039">39</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24">layer</a>.<a class="code hl_variable" href="classLayerPeople.html#a0bed27a81d0484480cbf88413009c0e8">showMode</a>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab113f36dd136b412edec5243920b27be" name="ab113f36dd136b412edec5243920b27be"></a>
@@ -694,16 +1228,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseListPeople_8cs_source.html#l00031">31</a> of file <a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BaseListPeople_8cs_source.html">BaseListPeople.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBaseListPeople.html">BaseListPeople</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

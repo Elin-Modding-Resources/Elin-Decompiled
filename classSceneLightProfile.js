@@ -1,0 +1,26 @@
+var classSceneLightProfile =
+[
+    [ "baseBrightness", "classSceneLightProfile.html#aca0486c748a88d01d950d462826c6e8e", null ],
+    [ "baseBrightnessCurve", "classSceneLightProfile.html#a067a8410f1671c4ceb5c48e4e745767f", null ],
+    [ "bloomCurve", "classSceneLightProfile.html#a23105d07be65d110665db489d20d29f4", null ],
+    [ "bloomCurve2", "classSceneLightProfile.html#a66a649d575b13c2209e0d1c02a6d5d01", null ],
+    [ "dynamicBrightnessCurve", "classSceneLightProfile.html#a9b86c9e6cc36266a68b3f84cbdde4b54", null ],
+    [ "dynamicBrightnessCurve2", "classSceneLightProfile.html#a3852de27fe6017311ff12a4b478771f1", null ],
+    [ "dynamicBrightnessLightBonus", "classSceneLightProfile.html#a79a8bc3455f74fb4ff84eef174794e4a", null ],
+    [ "dynamicBrightnessSpeed", "classSceneLightProfile.html#a124050433af7b47ee02c0a381c7ac7c6", null ],
+    [ "fogBrightness", "classSceneLightProfile.html#a9b867a4bc28afdd6c0190d9b7e785dbd", null ],
+    [ "fovCurveChara", "classSceneLightProfile.html#a020dfe7f01b6eeaff686d6f0d5e4b13f", null ],
+    [ "lightLimit", "classSceneLightProfile.html#a82e2071b99c2ec6b80a8ab2777ba153f", null ],
+    [ "lightMod", "classSceneLightProfile.html#a24bf56161d35cf9b5b29d6e49639f5fe", null ],
+    [ "lightModCurve", "classSceneLightProfile.html#ae2ea77c5bef22dbfa5938a5821737cae", null ],
+    [ "lightPower", "classSceneLightProfile.html#a05b67824bfe6a13333f30d8d24ca3f4a", null ],
+    [ "lightPowerMod", "classSceneLightProfile.html#a9be1a94a27510a268710e4949a8a689b", null ],
+    [ "nightRatioCurve", "classSceneLightProfile.html#ad69fd9935d743056acc2882e3aa941be", null ],
+    [ "orbitAlphaCurve", "classSceneLightProfile.html#a901c31a018cf6040c9bbad53ae441951", null ],
+    [ "playerLightMod", "classSceneLightProfile.html#abcff3c7bfa79bd5e2d3af47912ba6fc2", null ],
+    [ "shadowCurve", "classSceneLightProfile.html#ad679f0d9fa2883cbe58361d22bc2b6ae", null ],
+    [ "shadowCurveFloor", "classSceneLightProfile.html#a34f11cf8631a9ab20639eb1dd24f62e6", null ],
+    [ "vignette", "classSceneLightProfile.html#a865213286ca0688f63569b5d01b5abc1", null ],
+    [ "vignetteColor", "classSceneLightProfile.html#acd27a85683ea128cf10f4ddc1991833c", null ],
+    [ "vignetteCurve", "classSceneLightProfile.html#af56828ad1153048ed7023e4957fb2e9c", null ]
+];

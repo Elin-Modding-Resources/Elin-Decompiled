@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classUIInspector.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -264,6 +284,104 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00174">174</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
+<div class="line"><span class="lineno">  176</span>        <a class="code hl_class" href="classUIInspector.html">UIInspector</a>.&lt;&gt;c__DisplayClass25_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classUIInspector.html">UIInspector</a>.&lt;&gt;c__DisplayClass25_0();</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (i is <a class="code hl_class" href="classArea.html">Area</a> || i is <a class="code hl_class" href="classEloPos.html">EloPos</a>)</div>
+<div class="line"><span class="lineno">  178</span>        {</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  180</span>        }</div>
+<div class="line"><span class="lineno">  181</span>        CS$&lt;&gt;8__locals1.v = i.<a class="code hl_property" href="interfaceIInspect.html#ac1ff8db98a0e48a20ab4b46bdd6e1be3">InspectPosition</a>;</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_class" href="classPoint.html">Point</a> inspectPoint = i.<a class="code hl_property" href="interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e">InspectPoint</a>;</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (inspectPoint == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_class" href="classMeshPass.html">MeshPass</a> meshPass = (inspectPoint.HasNonWallBlock || inspectPoint.<a class="code hl_property" href="classPoint.html#a8a9711a9fc46a40f430d1131d3597876">HasBlockRecipe</a>) ? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a> : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>;</div>
+<div class="line"><span class="lineno">  188</span>        if (i is <a class="code hl_class" href="classChara.html">Chara</a>)</div>
+<div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            CS$&lt;&gt;8__locals1.v += <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a299d7ddb3348550e6b7173189ac9eb41">pcOrbit</a>.<a class="code hl_variable" href="classPCOrbit.html#a5cf9383b24ad2b69a6cb690cceb4aa6a">crystal</a>.transform.position;</div>
+<div class="line"><span class="lineno">  191</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a0fde7a63e605c68b3548673210299990">passIcon</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(ref CS$&lt;&gt;8__locals1.v, 1f, 0f);</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (i is <a class="code hl_class" href="classThing.html">Thing</a>)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = i as <a class="code hl_class" href="classThing.html">Thing</a>;</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a> &amp;&amp; thing.<a class="code hl_property" href="classThing.html#adc4bb311dba09b52f82071adbe7f1654">sourceCard</a>.<a class="code hl_variable" href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">multisize</a>)</div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                <span class="keywordflow">if</span> (selected)</div>
+<div class="line"><span class="lineno">  200</span>                {</div>
+<div class="line"><span class="lineno">  201</span>                    thing.<a class="code hl_function" href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">ForeachPoint</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> pos, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">  202</span>                    {</div>
+<div class="line"><span class="lineno">  203</span>                        CS$&lt;&gt;8__locals1.v = *pos.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">  204</span>                        CS$&lt;&gt;8__locals1.v.z = CS$&lt;&gt;8__locals1.v.z - 0.01f;</div>
+<div class="line"><span class="lineno">  205</span>                        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(ref CS$&lt;&gt;8__locals1.v, 7f, 0f);</div>
+<div class="line"><span class="lineno">  206</span>                    });</div>
+<div class="line"><span class="lineno">  207</span>                }</div>
+<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">TileType</a>.<a class="code hl_property" href="classTileType.html#af429d8e1721b9b2048b59578f4139b52">IsBlockMount</a>)</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                meshPass = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a>;</div>
+<div class="line"><span class="lineno">  213</span>            }</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i is <a class="code hl_class" href="classTaskBuild.html">TaskBuild</a>)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> recipe = (i as <a class="code hl_class" href="classTaskBuild.html">TaskBuild</a>).recipe;</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">if</span> (recipe.<a class="code hl_property" href="classRecipe.html#aafb5390a0ac2628926555cd006229cde">MultiSize</a>)</div>
+<div class="line"><span class="lineno">  219</span>            {</div>
+<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">if</span> (selected)</div>
+<div class="line"><span class="lineno">  221</span>                {</div>
+<div class="line"><span class="lineno">  222</span>                    i.<a class="code hl_property" href="interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e">InspectPoint</a>.<a class="code hl_function" href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">ForeachMultiSize</a>(recipe.<a class="code hl_property" href="classRecipe.html#af249c1a508cebbbc321adc1560639378">W</a>, recipe.<a class="code hl_property" href="classRecipe.html#a8725308b3668823e833db7036dd5f443">H</a>, delegate(<a class="code hl_class" href="classPoint.html">Point</a> pos, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">  223</span>                    {</div>
+<div class="line"><span class="lineno">  224</span>                        CS$&lt;&gt;8__locals1.v = *pos.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">  225</span>                        CS$&lt;&gt;8__locals1.v.z = CS$&lt;&gt;8__locals1.v.z - 0.01f;</div>
+<div class="line"><span class="lineno">  226</span>                        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ad53616b9a079016467151457786ef3f3">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(ref CS$&lt;&gt;8__locals1.v, 7f, 0f);</div>
+<div class="line"><span class="lineno">  227</span>                    });</div>
+<div class="line"><span class="lineno">  228</span>                }</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  230</span>            }</div>
+<div class="line"><span class="lineno">  231</span>        }</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_class" href="classUIInspector.html">UIInspector</a>.&lt;&gt;c__DisplayClass25_0 CS$&lt;&gt;8__locals2 = CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  233</span>        CS$&lt;&gt;8__locals2.v.z = CS$&lt;&gt;8__locals2.v.z - 0.01f;</div>
+<div class="line"><span class="lineno">  234</span>        meshPass.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(ref CS$&lt;&gt;8__locals1.v, 7f, 0f);</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+<div class="ttc" id="aclassArea_html"><div class="ttname"><a href="classArea.html">Area</a></div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00004">Area.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a299d7ddb3348550e6b7173189ac9eb41"><div class="ttname"><a href="classBaseGameScreen.html#a299d7ddb3348550e6b7173189ac9eb41">BaseGameScreen.pcOrbit</a></div><div class="ttdeci">PCOrbit pcOrbit</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00867">BaseGameScreen.cs:867</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.cs:857</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a0fde7a63e605c68b3548673210299990"><div class="ttname"><a href="classBaseTileMap.html#a0fde7a63e605c68b3548673210299990">BaseTileMap.passIcon</a></div><div class="ttdeci">MeshPass passIcon</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03540">BaseTileMap.cs:3540</a></div></div>
+<div class="ttc" id="aclassCard_html_a6c22bc720e969bf7b5160a2b5280951e"><div class="ttname"><a href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">Card.ForeachPoint</a></div><div class="ttdeci">void ForeachPoint(Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07146">Card.cs:7146</a></div></div>
+<div class="ttc" id="aclassCard_html_a7d77dcb1302d78e698ab908f03f339f5"><div class="ttname"><a href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">Card.TileType</a></div><div class="ttdeci">TileType TileType</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02163">Card.cs:2164</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_ad53616b9a079016467151457786ef3f3"><div class="ttname"><a href="classELayer.html#ad53616b9a079016467151457786ef3f3">ELayer.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00094">ELayer.cs:95</a></div></div>
+<div class="ttc" id="aclassEloPos_html"><div class="ttname"><a href="classEloPos.html">EloPos</a></div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00004">EloPos.cs:5</a></div></div>
+<div class="ttc" id="aclassMeshPass_html"><div class="ttname"><a href="classMeshPass.html">MeshPass</a></div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00007">MeshPass.cs:8</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassPCOrbit_html_a5cf9383b24ad2b69a6cb690cceb4aa6a"><div class="ttname"><a href="classPCOrbit.html#a5cf9383b24ad2b69a6cb690cceb4aa6a">PCOrbit.crystal</a></div><div class="ttdeci">Transform crystal</div><div class="ttdef"><b>Definition:</b> <a href="PCOrbit_8cs_source.html#l00013">PCOrbit.cs:13</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a1b6aa4e8565d4dde3333a6dfb99bd894"><div class="ttname"><a href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">Point.ForeachMultiSize</a></div><div class="ttdeci">void ForeachMultiSize(int w, int h, Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01433">Point.cs:1433</a></div></div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
+<div class="ttc" id="aclassPoint_html_a8a9711a9fc46a40f430d1131d3597876"><div class="ttname"><a href="classPoint.html#a8a9711a9fc46a40f430d1131d3597876">Point.HasBlockRecipe</a></div><div class="ttdeci">bool HasBlockRecipe</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00321">Point.cs:322</a></div></div>
+<div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00008">Recipe.cs:9</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a8725308b3668823e833db7036dd5f443"><div class="ttname"><a href="classRecipe.html#a8725308b3668823e833db7036dd5f443">Recipe.H</a></div><div class="ttdeci">virtual int H</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00267">Recipe.cs:268</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aafb5390a0ac2628926555cd006229cde"><div class="ttname"><a href="classRecipe.html#aafb5390a0ac2628926555cd006229cde">Recipe.MultiSize</a></div><div class="ttdeci">bool MultiSize</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00328">Recipe.cs:329</a></div></div>
+<div class="ttc" id="aclassRecipe_html_af249c1a508cebbbc321adc1560639378"><div class="ttname"><a href="classRecipe.html#af249c1a508cebbbc321adc1560639378">Recipe.W</a></div><div class="ttdeci">virtual int W</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00255">Recipe.cs:256</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a2081e4780b37fba374c0014d0405cc09"><div class="ttname"><a href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">RenderRow.multisize</a></div><div class="ttdeci">bool multisize</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00493">RenderRow.cs:493</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abae9aeeca1578db7eff6d822e491eb7c"><div class="ttname"><a href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">ScreenGuide.passGuideBlock</a></div><div class="ttdeci">MeshPass passGuideBlock</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.cs:66</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+<div class="ttc" id="aclassTaskBuild_html"><div class="ttname"><a href="classTaskBuild.html">TaskBuild</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00006">TaskBuild.cs:7</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassThing_html_adc4bb311dba09b52f82071adbe7f1654"><div class="ttname"><a href="classThing.html#adc4bb311dba09b52f82071adbe7f1654">Thing.sourceCard</a></div><div class="ttdeci">override CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00054">Thing.cs:55</a></div></div>
+<div class="ttc" id="aclassTileType_html_af429d8e1721b9b2048b59578f4139b52"><div class="ttname"><a href="classTileType.html#af429d8e1721b9b2048b59578f4139b52">TileType.IsBlockMount</a></div><div class="ttdeci">virtual bool IsBlockMount</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00201">TileType.cs:202</a></div></div>
+<div class="ttc" id="aclassUIInspector_html"><div class="ttname"><a href="classUIInspector.html">UIInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00006">UIInspector.cs:7</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_a93639b982be73f68a6a9d27f6fb7044e"><div class="ttname"><a href="interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e">IInspect.InspectPoint</a></div><div class="ttdeci">Point InspectPoint</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00010">IInspect.cs:10</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_ac1ff8db98a0e48a20ab4b46bdd6e1be3"><div class="ttname"><a href="interfaceIInspect.html#ac1ff8db98a0e48a20ab4b46bdd6e1be3">IInspect.InspectPosition</a></div><div class="ttdeci">Vector3 InspectPosition</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00012">IInspect.cs:12</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="PCOrbit_8cs_source.html#l00013">PCOrbit.crystal</a>, <a class="el" href="Point_8cs_source.html#l01433">Point.ForeachMultiSize()</a>, <a class="el" href="Card_8cs_source.html#l07146">Card.ForeachPoint()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Recipe_8cs_source.html#l00268">Recipe.H</a>, <a class="el" href="Point_8cs_source.html#l00322">Point.HasBlockRecipe</a>, <a class="el" href="IInspect_8cs_source.html#l00010">IInspect.InspectPoint</a>, <a class="el" href="IInspect_8cs_source.html#l00012">IInspect.InspectPosition</a>, <a class="el" href="TileType_8cs_source.html#l00202">TileType.IsBlockMount</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="Recipe_8cs_source.html#l00329">Recipe.MultiSize</a>, <a class="el" href="RenderRow_8cs_source.html#l00493">RenderRow.multisize</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.passGuideBlock</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03540">BaseTileMap.passIcon</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00867">BaseGameScreen.pcOrbit</a>, <a class="el" href="Point_8cs_source.html#l00629">Point.Position()</a>, <a class="el" href="ELayer_8cs_source.html#l00095">ELayer.screen</a>, <a class="el" href="Thing_8cs_source.html#l00055">Thing.sourceCard</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>, <a class="el" href="Card_8cs_source.html#l02164">Card.TileType</a>, and <a class="el" href="Recipe_8cs_source.html#l00256">Recipe.W</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00076">OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -291,6 +409,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00025">25</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        this.group = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   28</span>        this.point = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   29</span>        base.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00076">OnUpdate()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -319,6 +444,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00046">46</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_class" href="classInspectGroup.html">InspectGroup</a> inspectGroup = this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (((inspectGroup != <span class="keyword">null</span>) ? inspectGroup.<a class="code hl_property" href="classInspectGroup.html#a4731e2be8195b784f738e1f3dc83b687">FirstTarget</a> : <span class="keyword">null</span>) == newTarget)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_function" href="classUIInspector.html#a9108b16b3b62e21c5a5dfcb9a856681f">Inspect</a>(<a class="code hl_class" href="classInspectGroup.html">InspectGroup</a>.<a class="code hl_function" href="classInspectGroup.html#adabacf0d555972b4fd33fe9f1d98b5c4">Create</a>(newTarget));</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassInspectGroup_html"><div class="ttname"><a href="classInspectGroup.html">InspectGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_82_8cs_source.html#l00003">InspectGroup.2.cs:4</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a4731e2be8195b784f738e1f3dc83b687"><div class="ttname"><a href="classInspectGroup.html#a4731e2be8195b784f738e1f3dc83b687">InspectGroup.FirstTarget</a></div><div class="ttdeci">new T FirstTarget</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_82_8cs_source.html#l00005">InspectGroup.2.cs:6</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_adabacf0d555972b4fd33fe9f1d98b5c4"><div class="ttname"><a href="classInspectGroup.html#adabacf0d555972b4fd33fe9f1d98b5c4">InspectGroup.Create</a></div><div class="ttdeci">static InspectGroup Create(IInspect t)</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00022">InspectGroup.cs:22</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a9108b16b3b62e21c5a5dfcb9a856681f"><div class="ttname"><a href="classUIInspector.html#a9108b16b3b62e21c5a5dfcb9a856681f">UIInspector.Inspect</a></div><div class="ttdeci">void Inspect(IInspect newTarget)</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00046">UIInspector.cs:46</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a96480c52b6f6e43b97074a736d0fc9e9"><div class="ttname"><a href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">UIInspector.group</a></div><div class="ttdeci">InspectGroup group</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00237">UIInspector.cs:237</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_8cs_source.html#l00022">InspectGroup&lt; T &gt;.Create()</a>, <a class="el" href="InspectGroup_82_8cs_source.html#l00006">InspectGroup&lt; T &gt;.FirstTarget</a>, <a class="el" href="UIInspector_8cs_source.html#l00237">group</a>, and <a class="el" href="UIInspector_8cs_source.html#l00046">Inspect()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00046">Inspect()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00032">InspectUnderMouse()</a>.</p>
 
 </div>
 </div>
@@ -347,6 +489,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00056">56</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        base.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUIInspector.html#a4de8d561fee21ab2c10d6f85fdec7369">initialized</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.windows.Add(this.<a class="code hl_variable" href="classUIInspector.html#a5129b2f70594b2ed16f47633c708dd34">windowChara</a>.window);</div>
+<div class="line"><span class="lineno">   62</span>            this.initialized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   63</span>            this.mold = this.<a class="code hl_variable" href="classUIInspector.html#a0180dacf11bb3a2cc5d2886d2de15946">layoutButtons</a>.CreateMold(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   64</span>            IUISkin[] componentsInChildren = base.transform.GetComponentsInChildren&lt;IUISkin&gt;(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                componentsInChildren[i].ApplySkin();</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            base.InitInspector();</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        this.group = g;</div>
+<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_variable" href="classUIInspector.html#a22d2dbb9cc96d7f714213c8ef1d395a0">soundPop</a>.Play();</div>
+<div class="line"><span class="lineno">   73</span>        this.<a class="code hl_function" href="classUIInspector.html#a169213d1963869e03561311673532b5f">Refresh</a>();</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassUIInspector_html_a0180dacf11bb3a2cc5d2886d2de15946"><div class="ttname"><a href="classUIInspector.html#a0180dacf11bb3a2cc5d2886d2de15946">UIInspector.layoutButtons</a></div><div class="ttdeci">LayoutGroup layoutButtons</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00241">UIInspector.cs:241</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a169213d1963869e03561311673532b5f"><div class="ttname"><a href="classUIInspector.html#a169213d1963869e03561311673532b5f">UIInspector.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00093">UIInspector.cs:93</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a22d2dbb9cc96d7f714213c8ef1d395a0"><div class="ttname"><a href="classUIInspector.html#a22d2dbb9cc96d7f714213c8ef1d395a0">UIInspector.soundPop</a></div><div class="ttdeci">SoundData soundPop</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00249">UIInspector.cs:249</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a4de8d561fee21ab2c10d6f85fdec7369"><div class="ttname"><a href="classUIInspector.html#a4de8d561fee21ab2c10d6f85fdec7369">UIInspector.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00267">UIInspector.cs:267</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a5129b2f70594b2ed16f47633c708dd34"><div class="ttname"><a href="classUIInspector.html#a5129b2f70594b2ed16f47633c708dd34">UIInspector.windowChara</a></div><div class="ttdeci">WindowChara windowChara</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00251">UIInspector.cs:251</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIInspector_8cs_source.html#l00267">initialized</a>, <a class="el" href="UIInspector_8cs_source.html#l00241">layoutButtons</a>, <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>, <a class="el" href="UIInspector_8cs_source.html#l00249">soundPop</a>, and <a class="el" href="UIInspector_8cs_source.html#l00251">windowChara</a>.</p>
 
 </div>
 </div>
@@ -374,6 +541,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00032">32</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classScene.html">Scene</a>.<a class="code hl_variable" href="classScene.html#a333286137d2976b11b59fd8c5b751717">HitPoint</a>.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        List&lt;IInspect&gt; list = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">scene</a>.<a class="code hl_variable" href="classScene.html#acb1c8aaa9c42aaff99807d85c8653bd1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>.<a class="code hl_function" href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">ListInspectorTargets</a>();</div>
+<div class="line"><span class="lineno">   39</span>        this.point = <a class="code hl_class" href="classScene.html">Scene</a>.<a class="code hl_variable" href="classScene.html#a333286137d2976b11b59fd8c5b751717">HitPoint</a>;</div>
+<div class="line"><span class="lineno">   40</span>        IList&lt;IInspect&gt; source = list;</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classInspectGroup.html">InspectGroup</a> inspectGroup = this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>;</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_function" href="classUIInspector.html#a9108b16b3b62e21c5a5dfcb9a856681f">Inspect</a>(source.NextItem((inspectGroup != <span class="keyword">null</span>) ? inspectGroup.<a class="code hl_property" href="classInspectGroup.html#a4731e2be8195b784f738e1f3dc83b687">FirstTarget</a> : <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a0ab4ed57f34ce34e428ae56702787e05"><div class="ttname"><a href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">ELayer.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00086">ELayer.cs:87</a></div></div>
+<div class="ttc" id="aclassPointTarget_html_a8e3f9431c0938d6d92565e1a9d7a7d3c"><div class="ttname"><a href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">PointTarget.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="PointTarget_8cs_source.html#l00233">PointTarget.cs:233</a></div></div>
+<div class="ttc" id="aclassPoint_html_a4c05463f4ffe9ed95d182ef08212f951"><div class="ttname"><a href="classPoint.html#a4c05463f4ffe9ed95d182ef08212f951">Point.ListInspectorTargets</a></div><div class="ttdeci">List&lt; IInspect &gt; ListInspectorTargets()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01400">Point.cs:1400</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00008">Scene.cs:9</a></div></div>
+<div class="ttc" id="aclassScene_html_a333286137d2976b11b59fd8c5b751717"><div class="ttname"><a href="classScene.html#a333286137d2976b11b59fd8c5b751717">Scene.HitPoint</a></div><div class="ttdeci">static Point HitPoint</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00993">Scene.cs:993</a></div></div>
+<div class="ttc" id="aclassScene_html_acb1c8aaa9c42aaff99807d85c8653bd1"><div class="ttname"><a href="classScene.html#acb1c8aaa9c42aaff99807d85c8653bd1">Scene.mouseTarget</a></div><div class="ttdeci">PointTarget mouseTarget</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01097">Scene.cs:1097</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_82_8cs_source.html#l00006">InspectGroup&lt; T &gt;.FirstTarget</a>, <a class="el" href="UIInspector_8cs_source.html#l00237">group</a>, <a class="el" href="Scene_8cs_source.html#l00993">Scene.HitPoint</a>, <a class="el" href="UIInspector_8cs_source.html#l00046">Inspect()</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="Point_8cs_source.html#l01400">Point.ListInspectorTargets()</a>, <a class="el" href="Scene_8cs_source.html#l01097">Scene.mouseTarget</a>, <a class="el" href="PointTarget_8cs_source.html#l00233">PointTarget.pos</a>, and <a class="el" href="ELayer_8cs_source.html#l00087">ELayer.scene</a>.</p>
 
 </div>
 </div>
@@ -401,6 +589,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00076">76</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a> == <span class="keyword">null</span> || !this.<a class="code hl_property" href="classUIInspector.html#a4ccefe3bddef4e1d30fece762a516c35">IsActive</a>)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a38171e7e6a926a149869bb18048c3e0e">CanInspect</a>())</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            this.<a class="code hl_function" href="classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e">Hide</a>();</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">foreach</span> (<a class="code hl_interface" href="interfaceIInspect.html">IInspect</a> i <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_variable" href="classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438">targets</a>)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            this.<a class="code hl_function" href="classUIInspector.html#a69d64ba05eb9e54ce18ea0ffadd51529">DrawHighlight</a>(i, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aclassInspectGroup_html_a38171e7e6a926a149869bb18048c3e0e"><div class="ttname"><a href="classInspectGroup.html#a38171e7e6a926a149869bb18048c3e0e">InspectGroup.CanInspect</a></div><div class="ttdeci">bool CanInspect()</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00058">InspectGroup.cs:58</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_ac91fc16b2a17aba61c1341cbfea77438"><div class="ttname"><a href="classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438">InspectGroup.targets</a></div><div class="ttdeci">List&lt; IInspect &gt; targets</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00100">InspectGroup.cs:100</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a4ccefe3bddef4e1d30fece762a516c35"><div class="ttname"><a href="classUIInspector.html#a4ccefe3bddef4e1d30fece762a516c35">UIInspector.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00008">UIInspector.cs:9</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a69d64ba05eb9e54ce18ea0ffadd51529"><div class="ttname"><a href="classUIInspector.html#a69d64ba05eb9e54ce18ea0ffadd51529">UIInspector.DrawHighlight</a></div><div class="ttdeci">unsafe void DrawHighlight(IInspect i, bool selected=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00174">UIInspector.cs:174</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_ac7d4003ee1350edfd349f44e216f545e"><div class="ttname"><a href="classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e">UIInspector.Hide</a></div><div class="ttdeci">void Hide()</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00025">UIInspector.cs:25</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html"><div class="ttname"><a href="interfaceIInspect.html">IInspect</a></div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00004">IInspect.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_8cs_source.html#l00058">InspectGroup&lt; T &gt;.CanInspect()</a>, <a class="el" href="UIInspector_8cs_source.html#l00174">DrawHighlight()</a>, <a class="el" href="UIInspector_8cs_source.html#l00237">group</a>, <a class="el" href="UIInspector_8cs_source.html#l00025">Hide()</a>, <a class="el" href="UIInspector_8cs_source.html#l00009">IsActive</a>, and <a class="el" href="InspectGroup_8cs_source.html#l00100">InspectGroup&lt; T &gt;.targets</a>.</p>
 
 </div>
 </div>
@@ -428,6 +639,115 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00093">93</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a38171e7e6a926a149869bb18048c3e0e">CanInspect</a>())</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            this.<a class="code hl_function" href="classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e">Hide</a>();</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264">SetActions</a>();</div>
+<div class="line"><span class="lineno">  101</span>        this.<a class="code hl_variable" href="classUIInspector.html#a0180dacf11bb3a2cc5d2886d2de15946">layoutButtons</a>.DestroyChildren(<span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keyword">using</span> (List&lt;<a class="code hl_class" href="classInspectGroup.html">InspectGroup</a>.<a class="code hl_class" href="classInspectGroup_1_1Item.html">Item</a>&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_variable" href="classInspectGroup.html#ae4c75e8620b2549784d125c0960dc38d">actions</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                <a class="code hl_class" href="classInspectGroup_1_1Item.html">InspectGroup.Item</a> item = enumerator.Current;</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_property" href="classInspectGroup.html#a15f846bb8593699aadf8afc408765117">Solo</a> || item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#a4bd6c917be70c41d2215090baa39c4ae">multi</a>)</div>
+<div class="line"><span class="lineno">  108</span>                {</div>
+<div class="line"><span class="lineno">  109</span>                    UIButton uibutton = Util.Instantiate&lt;UIButton&gt;(this.<a class="code hl_variable" href="classUIInspector.html#a0c3ba6f653cc7ea7bd39f13accc4de4d">mold</a>, this.<a class="code hl_variable" href="classUIInspector.html#a0180dacf11bb3a2cc5d2886d2de15946">layoutButtons</a>);</div>
+<div class="line"><span class="lineno">  110</span>                    uibutton.icon.sprite = (SpriteSheet.Get(item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#ae9f62ca9ce7b2c3c77aa5b05d7775863">idSprite</a>.IsEmpty(<span class="stringliteral">&quot;icon_&quot;</span> + item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#a48c793966286305c80143d482f582bfc">text</a>)) ?? uibutton.icon.sprite);</div>
+<div class="line"><span class="lineno">  111</span>                    uibutton.mainText.SetText((item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#adb52274b121272b836fe556ab7ac9ed6">textFunc</a> != <span class="keyword">null</span>) ? item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#adb52274b121272b836fe556ab7ac9ed6">textFunc</a>() : item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#a48c793966286305c80143d482f582bfc">text</a>.lang());</div>
+<div class="line"><span class="lineno">  112</span>                    uibutton.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">  113</span>                    {</div>
+<div class="line"><span class="lineno">  114</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a38171e7e6a926a149869bb18048c3e0e">CanInspect</a>())</div>
+<div class="line"><span class="lineno">  115</span>                        {</div>
+<div class="line"><span class="lineno">  116</span>                            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#aa3abb34b6391b5cf8d17aae0b6ec94f7">sound</a>)</div>
+<div class="line"><span class="lineno">  117</span>                            {</div>
+<div class="line"><span class="lineno">  118</span>                                this.<a class="code hl_variable" href="classUIInspector.html#a22d2dbb9cc96d7f714213c8ef1d395a0">soundPop</a>.Play();</div>
+<div class="line"><span class="lineno">  119</span>                            }</div>
+<div class="line"><span class="lineno">  120</span>                            <span class="keywordflow">foreach</span> (<a class="code hl_interface" href="interfaceIInspect.html">IInspect</a> obj <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_variable" href="classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438">targets</a>)</div>
+<div class="line"><span class="lineno">  121</span>                            {</div>
+<div class="line"><span class="lineno">  122</span>                                item.<a class="code hl_variable" href="classInspectGroup_1_1Item.html#a862263de9878f6d2a3b3df0c19e512ae">action</a>(obj);</div>
+<div class="line"><span class="lineno">  123</span>                            }</div>
+<div class="line"><span class="lineno">  124</span>                        }</div>
+<div class="line"><span class="lineno">  125</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a> == <span class="keyword">null</span> || !this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a38171e7e6a926a149869bb18048c3e0e">CanInspect</a>())</div>
+<div class="line"><span class="lineno">  126</span>                        {</div>
+<div class="line"><span class="lineno">  127</span>                            this.<a class="code hl_function" href="classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e">Hide</a>();</div>
+<div class="line"><span class="lineno">  128</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  129</span>                        }</div>
+<div class="line"><span class="lineno">  130</span>                        this.<a class="code hl_function" href="classUIInspector.html#a169213d1963869e03561311673532b5f">Refresh</a>();</div>
+<div class="line"><span class="lineno">  131</span>                    });</div>
+<div class="line"><span class="lineno">  132</span>                    uibutton.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  133</span>                }</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = this.group.FirstTarget as <a class="code hl_class" href="classChara.html">Chara</a>;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">bool</span> flag = this.group.Solo &amp;&amp; chara != <span class="keyword">null</span> &amp;&amp; chara.<a class="code hl_function" href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">IsHomeMember</a>();</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_class" href="classRoom.html">Room</a> room = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (!flag &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted &amp;&amp; <span class="keyword">this</span>.point != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            room = this.<a class="code hl_variable" href="classUIInspector.html#a6d9a48a292620767ac751f83d69fe5e3">point</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">bool</span> flag2 = room != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  144</span>        this.<a class="code hl_variable" href="classUIInspector.html#a5129b2f70594b2ed16f47633c708dd34">windowChara</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">  145</span>        this.<a class="code hl_variable" href="classUIInspector.html#a2ca05034367d84a540ddc076c28a6d0f">rectInfo</a>.SetActive(!flag);</div>
+<div class="line"><span class="lineno">  146</span>        this.<a class="code hl_variable" href="classUIInspector.html#aabefe51f13d61c7351089de20a1a8839">rectRoom</a>.SetActive(flag2);</div>
+<div class="line"><span class="lineno">  147</span>        this.<a class="code hl_variable" href="classUIInspector.html#a048ecb138fd6120b07ef7612467cb99f">note</a>.Clear();</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            this.<a class="code hl_variable" href="classUIInspector.html#a5129b2f70594b2ed16f47633c708dd34">windowChara</a>.<a class="code hl_function" href="classWindowChara.html#a1652def3f15e1d1f2ffa45fbc0da3f7e">SetChara</a>(chara);</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_property" href="classInspectGroup.html#a15f846bb8593699aadf8afc408765117">Solo</a>)</div>
+<div class="line"><span class="lineno">  153</span>        {</div>
+<div class="line"><span class="lineno">  154</span>            this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_property" href="classInspectGroup.html#a4731e2be8195b784f738e1f3dc83b687">FirstTarget</a>.WriteNote(this.<a class="code hl_variable" href="classUIInspector.html#a048ecb138fd6120b07ef7612467cb99f">note</a>, <span class="keyword">null</span>, <a class="code hl_interface" href="interfaceIInspect.html">IInspect</a>.<a class="code hl_enumeration" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">NoteMode</a>.Default, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  157</span>        {</div>
+<div class="line"><span class="lineno">  158</span>            this.<a class="code hl_variable" href="classUIInspector.html#a048ecb138fd6120b07ef7612467cb99f">note</a>.AddHeader(this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_function" href="classInspectGroup.html#a9ab1fd64ecde12ba4c9a13ba4b262a18">GetName</a>(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  159</span>            this.<a class="code hl_variable" href="classUIInspector.html#a048ecb138fd6120b07ef7612467cb99f">note</a>.Build();</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            UINote uinote = this.<a class="code hl_variable" href="classUIInspector.html#ae77d2b37a558ebb2e62cc15e03d3d12b">noteRoom</a>;</div>
+<div class="line"><span class="lineno">  164</span>            uinote.Clear();</div>
+<div class="line"><span class="lineno">  165</span>            uinote.AddHeader(<span class="stringliteral">&quot;Room&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  166</span>            uinote.AddText(room.<a class="code hl_variable" href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">points</a>.Count.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, FontColor.DontChange);</div>
+<div class="line"><span class="lineno">  167</span>            uinote.Build();</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        this.<a class="code hl_variable" href="classUIInspector.html#a0180dacf11bb3a2cc5d2886d2de15946">layoutButtons</a>.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  170</span>        this.<a class="code hl_variable" href="classUIInspector.html#a6c66f1622ce9aca02d995d556b38f6bc">layoutBody</a>.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  171</span>        this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a>.<a class="code hl_property" href="classInspectGroup.html#a4731e2be8195b784f738e1f3dc83b687">FirstTarget</a>.OnInspect();</div>
+<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="ttc" id="aclassBaseArea_html_ac3a1d4a968aad4974838b1ba7d3a6776"><div class="ttname"><a href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">BaseArea.points</a></div><div class="ttdeci">PointList points</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00311">BaseArea.cs:311</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassChara_html_aa789983a23b2c9294d4093ace7c5cd43"><div class="ttname"><a href="classChara.html#aa789983a23b2c9294d4093ace7c5cd43">Chara.IsHomeMember</a></div><div class="ttdeci">bool IsHomeMember()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05850">Chara.cs:5850</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html"><div class="ttname"><a href="classInspectGroup_1_1Item.html">InspectGroup.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00102">InspectGroup.cs:103</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_a48c793966286305c80143d482f582bfc"><div class="ttname"><a href="classInspectGroup_1_1Item.html#a48c793966286305c80143d482f582bfc">InspectGroup.Item.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00104">InspectGroup.cs:104</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_a4bd6c917be70c41d2215090baa39c4ae"><div class="ttname"><a href="classInspectGroup_1_1Item.html#a4bd6c917be70c41d2215090baa39c4ae">InspectGroup.Item.multi</a></div><div class="ttdeci">bool multi</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00116">InspectGroup.cs:116</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_a862263de9878f6d2a3b3df0c19e512ae"><div class="ttname"><a href="classInspectGroup_1_1Item.html#a862263de9878f6d2a3b3df0c19e512ae">InspectGroup.Item.action</a></div><div class="ttdeci">Action&lt; IInspect &gt; action</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00108">InspectGroup.cs:108</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_aa3abb34b6391b5cf8d17aae0b6ec94f7"><div class="ttname"><a href="classInspectGroup_1_1Item.html#aa3abb34b6391b5cf8d17aae0b6ec94f7">InspectGroup.Item.sound</a></div><div class="ttdeci">bool sound</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00114">InspectGroup.cs:114</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_adb52274b121272b836fe556ab7ac9ed6"><div class="ttname"><a href="classInspectGroup_1_1Item.html#adb52274b121272b836fe556ab7ac9ed6">InspectGroup.Item.textFunc</a></div><div class="ttdeci">Func&lt; string &gt; textFunc</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00118">InspectGroup.cs:118</a></div></div>
+<div class="ttc" id="aclassInspectGroup_1_1Item_html_ae9f62ca9ce7b2c3c77aa5b05d7775863"><div class="ttname"><a href="classInspectGroup_1_1Item.html#ae9f62ca9ce7b2c3c77aa5b05d7775863">InspectGroup.Item.idSprite</a></div><div class="ttdeci">string idSprite</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00106">InspectGroup.cs:106</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a0e360ab375a94c0dd0ed66e310a49264"><div class="ttname"><a href="classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264">InspectGroup.SetActions</a></div><div class="ttdeci">sealed override void SetActions()</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_82_8cs_source.html#l00013">InspectGroup.2.cs:13</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a15f846bb8593699aadf8afc408765117"><div class="ttname"><a href="classInspectGroup.html#a15f846bb8593699aadf8afc408765117">InspectGroup.Solo</a></div><div class="ttdeci">bool Solo</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00014">InspectGroup.cs:15</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_a9ab1fd64ecde12ba4c9a13ba4b262a18"><div class="ttname"><a href="classInspectGroup.html#a9ab1fd64ecde12ba4c9a13ba4b262a18">InspectGroup.GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00075">InspectGroup.cs:75</a></div></div>
+<div class="ttc" id="aclassInspectGroup_html_ae4c75e8620b2549784d125c0960dc38d"><div class="ttname"><a href="classInspectGroup.html#ae4c75e8620b2549784d125c0960dc38d">InspectGroup.actions</a></div><div class="ttdeci">List&lt; InspectGroup.Item &gt; actions</div><div class="ttdef"><b>Definition:</b> <a href="InspectGroup_8cs_source.html#l00098">InspectGroup.cs:98</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00004">Room.cs:5</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a048ecb138fd6120b07ef7612467cb99f"><div class="ttname"><a href="classUIInspector.html#a048ecb138fd6120b07ef7612467cb99f">UIInspector.note</a></div><div class="ttdeci">UINote note</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00257">UIInspector.cs:257</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a0c3ba6f653cc7ea7bd39f13accc4de4d"><div class="ttname"><a href="classUIInspector.html#a0c3ba6f653cc7ea7bd39f13accc4de4d">UIInspector.mold</a></div><div class="ttdeci">UIButton mold</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00243">UIInspector.cs:243</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a2ca05034367d84a540ddc076c28a6d0f"><div class="ttname"><a href="classUIInspector.html#a2ca05034367d84a540ddc076c28a6d0f">UIInspector.rectInfo</a></div><div class="ttdeci">RectTransform rectInfo</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00253">UIInspector.cs:253</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a6c66f1622ce9aca02d995d556b38f6bc"><div class="ttname"><a href="classUIInspector.html#a6c66f1622ce9aca02d995d556b38f6bc">UIInspector.layoutBody</a></div><div class="ttdeci">LayoutGroup layoutBody</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00239">UIInspector.cs:239</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_a6d9a48a292620767ac751f83d69fe5e3"><div class="ttname"><a href="classUIInspector.html#a6d9a48a292620767ac751f83d69fe5e3">UIInspector.point</a></div><div class="ttdeci">Point point</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00265">UIInspector.cs:265</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_aabefe51f13d61c7351089de20a1a8839"><div class="ttname"><a href="classUIInspector.html#aabefe51f13d61c7351089de20a1a8839">UIInspector.rectRoom</a></div><div class="ttdeci">RectTransform rectRoom</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00255">UIInspector.cs:255</a></div></div>
+<div class="ttc" id="aclassUIInspector_html_ae77d2b37a558ebb2e62cc15e03d3d12b"><div class="ttname"><a href="classUIInspector.html#ae77d2b37a558ebb2e62cc15e03d3d12b">UIInspector.noteRoom</a></div><div class="ttdeci">UINote noteRoom</div><div class="ttdef"><b>Definition:</b> <a href="UIInspector_8cs_source.html#l00259">UIInspector.cs:259</a></div></div>
+<div class="ttc" id="aclassWindowChara_html_a1652def3f15e1d1f2ffa45fbc0da3f7e"><div class="ttname"><a href="classWindowChara.html#a1652def3f15e1d1f2ffa45fbc0da3f7e">WindowChara.SetChara</a></div><div class="ttdeci">void SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="WindowChara_8cs_source.html#l00019">WindowChara.cs:19</a></div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">IInspect.NoteMode</a></div><div class="ttdeci">NoteMode</div><div class="ttdef"><b>Definition:</b> <a href="IInspect_8cs_source.html#l00018">IInspect.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InspectGroup_8cs_source.html#l00108">InspectGroup&lt; T &gt;.Item.action</a>, <a class="el" href="InspectGroup_8cs_source.html#l00098">InspectGroup&lt; T &gt;.actions</a>, <a class="el" href="InspectGroup_8cs_source.html#l00058">InspectGroup&lt; T &gt;.CanInspect()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="InspectGroup_82_8cs_source.html#l00006">InspectGroup&lt; T &gt;.FirstTarget</a>, <a class="el" href="InspectGroup_8cs_source.html#l00075">InspectGroup&lt; T &gt;.GetName()</a>, <a class="el" href="UIInspector_8cs_source.html#l00237">group</a>, <a class="el" href="UIInspector_8cs_source.html#l00025">Hide()</a>, <a class="el" href="InspectGroup_8cs_source.html#l00106">InspectGroup&lt; T &gt;.Item.idSprite</a>, <a class="el" href="Chara_8cs_source.html#l05850">Chara.IsHomeMember()</a>, <a class="el" href="UIInspector_8cs_source.html#l00239">layoutBody</a>, <a class="el" href="UIInspector_8cs_source.html#l00241">layoutButtons</a>, <a class="el" href="UIInspector_8cs_source.html#l00243">mold</a>, <a class="el" href="InspectGroup_8cs_source.html#l00116">InspectGroup&lt; T &gt;.Item.multi</a>, <a class="el" href="UIInspector_8cs_source.html#l00257">note</a>, <a class="el" href="UIInspector_8cs_source.html#l00259">noteRoom</a>, <a class="el" href="UIInspector_8cs_source.html#l00265">point</a>, <a class="el" href="BaseArea_8cs_source.html#l00311">BaseArea.points</a>, <a class="el" href="UIInspector_8cs_source.html#l00253">rectInfo</a>, <a class="el" href="UIInspector_8cs_source.html#l00255">rectRoom</a>, <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="InspectGroup_82_8cs_source.html#l00013">InspectGroup&lt; T &gt;.SetActions()</a>, <a class="el" href="WindowChara_8cs_source.html#l00019">WindowChara.SetChara()</a>, <a class="el" href="InspectGroup_8cs_source.html#l00015">InspectGroup&lt; T &gt;.Solo</a>, <a class="el" href="InspectGroup_8cs_source.html#l00114">InspectGroup&lt; T &gt;.Item.sound</a>, <a class="el" href="UIInspector_8cs_source.html#l00249">soundPop</a>, <a class="el" href="InspectGroup_8cs_source.html#l00100">InspectGroup&lt; T &gt;.targets</a>, <a class="el" href="InspectGroup_8cs_source.html#l00104">InspectGroup&lt; T &gt;.Item.text</a>, <a class="el" href="InspectGroup_8cs_source.html#l00118">InspectGroup&lt; T &gt;.Item.textFunc</a>, and <a class="el" href="UIInspector_8cs_source.html#l00251">windowChara</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00056">Inspect()</a>, <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00016">SetVisible()</a>.</p>
 
 </div>
 </div>
@@ -456,6 +776,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00016">16</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        base.gameObject.SetActive(enable &amp;&amp; this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a> != <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (enable &amp;&amp; this.<a class="code hl_variable" href="classUIInspector.html#a96480c52b6f6e43b97074a736d0fc9e9">group</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.<a class="code hl_function" href="classUIInspector.html#a169213d1963869e03561311673532b5f">Refresh</a>();</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIInspector_8cs_source.html#l00237">group</a>, and <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -490,6 +819,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00237">237</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00046">Inspect()</a>, <a class="el" href="UIInspector_8cs_source.html#l00032">InspectUnderMouse()</a>, <a class="el" href="UIInspector_8cs_source.html#l00076">OnUpdate()</a>, <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00016">SetVisible()</a>.</p>
+
 </div>
 </div>
 <a id="a4de8d561fee21ab2c10d6f85fdec7369" name="a4de8d561fee21ab2c10d6f85fdec7369"></a>
@@ -514,6 +845,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00267">267</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00056">Inspect()</a>.</p>
+
 </div>
 </div>
 <a id="a6c66f1622ce9aca02d995d556b38f6bc" name="a6c66f1622ce9aca02d995d556b38f6bc"></a>
@@ -530,6 +863,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00239">239</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a0180dacf11bb3a2cc5d2886d2de15946" name="a0180dacf11bb3a2cc5d2886d2de15946"></a>
@@ -545,6 +880,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00241">241</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00056">Inspect()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -578,6 +915,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00243">243</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a048ecb138fd6120b07ef7612467cb99f" name="a048ecb138fd6120b07ef7612467cb99f"></a>
@@ -594,6 +933,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00257">257</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="ae77d2b37a558ebb2e62cc15e03d3d12b" name="ae77d2b37a558ebb2e62cc15e03d3d12b"></a>
@@ -609,6 +950,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00259">259</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -642,6 +985,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00265">265</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a2ca05034367d84a540ddc076c28a6d0f" name="a2ca05034367d84a540ddc076c28a6d0f"></a>
@@ -657,6 +1002,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00253">253</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -674,6 +1021,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00255">255</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a22d2dbb9cc96d7f714213c8ef1d395a0" name="a22d2dbb9cc96d7f714213c8ef1d395a0"></a>
@@ -689,6 +1038,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00249">249</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00056">Inspect()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -722,6 +1073,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00251">251</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00056">Inspect()</a>, and <a class="el" href="UIInspector_8cs_source.html#l00093">Refresh()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -746,6 +1099,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIInspector_8cs_source.html#l00008">8</a> of file <a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> base.gameObject.activeSelf;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00076">OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -753,9 +1114,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="UIInspector_8cs_source.html">UIInspector.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUIInspector.html">UIInspector</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

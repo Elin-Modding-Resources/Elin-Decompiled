@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classActMelee.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -529,6 +549,170 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00097">97</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_class" href="classActMelee.html">ActMelee</a>.&lt;&gt;c__DisplayClass13_0 CS$&lt;&gt;8__locals1;</div>
+<div class="line"><span class="lineno">  100</span>        CS$&lt;&gt;8__locals1.dmgMulti = dmgMulti;</div>
+<div class="line"><span class="lineno">  101</span>        CS$&lt;&gt;8__locals1.maxRoll = maxRoll;</div>
+<div class="line"><span class="lineno">  102</span>        Act.CC.combatCount = 10;</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>);</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a5e0f1301c474412bd664e354db2e8745">NextFrame</a>();</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConFear.html">ConFear</a>&gt;())</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;fear&quot;</span>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                EInput.Consume(<span class="keyword">true</span>, 1);</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Attack, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>);</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_class" href="classCard.html">Card</a> tc = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (tc != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara = tc.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>;</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                chara.<a class="code hl_function" href="classChara.html#aca643c661b6f7c3a1ae45f4cb2a7b6d9">RequestProtection</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, delegate(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
+<div class="line"><span class="lineno">  122</span>                {</div>
+<div class="line"><span class="lineno">  123</span>                    Act.TC = c;</div>
+<div class="line"><span class="lineno">  124</span>                });</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_class" href="classCellEffect.html">CellEffect</a> effect = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">effect</a>;</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (effect != <span class="keyword">null</span> &amp;&amp; effect.<a class="code hl_property" href="classCellEffect.html#af3e3f841db87b35a1f25c3d9363445e2">id</a> == 6 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;miss&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;abMistOfDarkness_miss&quot;</span>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        CS$&lt;&gt;8__locals1.hasHit = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  136</span>        CS$&lt;&gt;8__locals1.usedTalisman = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>        CS$&lt;&gt;8__locals1.count = 0;</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>);</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBodySlot.html">BodySlot</a> bodySlot <span class="keywordflow">in</span> <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>)</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <span class="keyword">null</span> || !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a9ddb0b2968c7f8ed4fba0191bc6374f2">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">  142</span>            {</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (bodySlot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a> != <span class="keyword">null</span> &amp;&amp; bodySlot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 35 &amp;&amp; bodySlot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>.<a class="code hl_variable" href="classThing.html#a1356967911bd1872c00852223aaebcd7">source</a>.offense.Length &gt;= 2)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <a class="code hl_class" href="classActMelee.html">ActMelee</a>.&lt;&gt;c__DisplayClass13_1 CS$&lt;&gt;8__locals2;</div>
+<div class="line"><span class="lineno">  148</span>                CS$&lt;&gt;8__locals2.w = bodySlot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>;</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (num &lt;= 1 || num &lt;= CS$&lt;&gt;8__locals2.w.Evalue(666) + 1)</div>
+<div class="line"><span class="lineno">  150</span>                {</div>
+<div class="line"><span class="lineno">  151</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  152</span>                    <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals2.w.IsMeleeWithAmmo &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; CS$&lt;&gt;8__locals2.w.c_ammo &lt;= 0 &amp;&amp; !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConReload.html">ConReload</a>&gt;())</div>
+<div class="line"><span class="lineno">  153</span>                    {</div>
+<div class="line"><span class="lineno">  154</span>                        <a class="code hl_class" href="classActRanged.html">ActRanged</a>.<a class="code hl_function" href="classActRanged.html#a90a64e9d6eeeba95f2e0cbeac20d6471">TryReload</a>(CS$&lt;&gt;8__locals2.w, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  155</span>                    }</div>
+<div class="line"><span class="lineno">  156</span>                    <span class="keywordtype">int</span> num2 = (CS$&lt;&gt;8__locals2.w == <span class="keyword">null</span>) ? 0 : CS$&lt;&gt;8__locals2.w.Evalue(606);</div>
+<div class="line"><span class="lineno">  157</span>                    <span class="keywordflow">if</span> (CS$&lt;&gt;8__locals2.w != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  158</span>                    {</div>
+<div class="line"><span class="lineno">  159</span>                        CS$&lt;&gt;8__locals2.w.Evalue(607);</div>
+<div class="line"><span class="lineno">  160</span>                    }</div>
+<div class="line"><span class="lineno">  161</span>                    List&lt;Point&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a644007691d41aff3d62bba34d565ee63">ListPointsInLine</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, num2 / 10 + ((num2 % 10 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10)) ? 1 : 0) + 1);</div>
+<div class="line"><span class="lineno">  162</span>                    <a class="code hl_class" href="classActMelee.html">ActMelee</a>.&lt;<a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>&gt;<a class="code hl_function" href="classActMelee.html#adb189a94d7030ebcfa0525a5c610ad02">g__Attack</a>|13_1(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">if</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno">  164</span>                    {</div>
+<div class="line"><span class="lineno">  165</span>                        <a class="code hl_class" href="classPoint.html">Point</a> obj = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">  166</span>                        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> point <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">  167</span>                        {</div>
+<div class="line"><span class="lineno">  168</span>                            <span class="keywordflow">if</span> (!point.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(obj))</div>
+<div class="line"><span class="lineno">  169</span>                            {</div>
+<div class="line"><span class="lineno">  170</span>                                <a class="code hl_class" href="classChara.html">Chara</a> firstChara = point.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>;</div>
+<div class="line"><span class="lineno">  171</span>                                <span class="keywordflow">if</span> (firstChara != <span class="keyword">null</span> &amp;&amp; firstChara.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>))</div>
+<div class="line"><span class="lineno">  172</span>                                {</div>
+<div class="line"><span class="lineno">  173</span>                                    <a class="code hl_class" href="classActMelee.html">ActMelee</a>.&lt;<a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>&gt;<a class="code hl_function" href="classActMelee.html#adb189a94d7030ebcfa0525a5c610ad02">g__Attack</a>|13_1(point.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>, point, ref CS$&lt;&gt;8__locals1, ref CS$&lt;&gt;8__locals2);</div>
+<div class="line"><span class="lineno">  174</span>                                }</div>
+<div class="line"><span class="lineno">  175</span>                            }</div>
+<div class="line"><span class="lineno">  176</span>                        }</div>
+<div class="line"><span class="lineno">  177</span>                    }</div>
+<div class="line"><span class="lineno">  178</span>                    <span class="keywordtype">int</span> count = CS$&lt;&gt;8__locals1.count;</div>
+<div class="line"><span class="lineno">  179</span>                    CS$&lt;&gt;8__locals1.count = count + 1;</div>
+<div class="line"><span class="lineno">  180</span>                }</div>
+<div class="line"><span class="lineno">  181</span>            }</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            <a class="code hl_class" href="classAttackProcess.html">AttackProcess</a>.<a class="code hl_variable" href="classAttackProcess.html#a3eff9aa39e11f1bed5a4f0b45b08d4ac">Current</a>.<a class="code hl_function" href="classAttackProcess.html#a103817f8718581491eec802a1320cd53">Prepare</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <span class="keyword">null</span>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>, 0, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classAttackProcess.html">AttackProcess</a>.<a class="code hl_variable" href="classAttackProcess.html#a3eff9aa39e11f1bed5a4f0b45b08d4ac">Current</a>.<a class="code hl_function" href="classAttackProcess.html#a2df91e4b12d1fc6414bacf8f4e9edb02">Perform</a>(CS$&lt;&gt;8__locals1.count, CS$&lt;&gt;8__locals1.hasHit, CS$&lt;&gt;8__locals1.dmgMulti, CS$&lt;&gt;8__locals1.maxRoll))</div>
+<div class="line"><span class="lineno">  187</span>            {</div>
+<div class="line"><span class="lineno">  188</span>                CS$&lt;&gt;8__locals1.hasHit = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  189</span>            }</div>
+<div class="line"><span class="lineno">  190</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.game.waitOnMelee)</div>
+<div class="line"><span class="lineno">  193</span>        {</div>
+<div class="line"><span class="lineno">  194</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a44f68f6f1c55b824f3684c78364abf5f">Wait</a>(0.25f, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>);</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (!CS$&lt;&gt;8__locals1.hasHit)</div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;miss&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.RemoveCondition&lt;<a class="code hl_class" href="classConInvisibility.html">ConInvisibility</a>&gt;();</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">AnimeID.Attack</a></div><div class="ttdeci">@ Attack</div></div>
+<div class="ttc" id="aclassActMelee_html"><div class="ttname"><a href="classActMelee.html">ActMelee</a></div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00005">ActMelee.cs:6</a></div></div>
+<div class="ttc" id="aclassActMelee_html_adb189a94d7030ebcfa0525a5c610ad02"><div class="ttname"><a href="classActMelee.html#adb189a94d7030ebcfa0525a5c610ad02">ActMelee.g__Attack</a></div><div class="ttdeci">static void&lt; Attack &gt; g__Attack(Card _tc, Point _tp, ref ActMelee.&lt;&gt;c__DisplayClass13_0 A_2, ref ActMelee.&lt;&gt;c__DisplayClass13_1 A_3)</div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00208">ActMelee.cs:208</a></div></div>
+<div class="ttc" id="aclassActRanged_html"><div class="ttname"><a href="classActRanged.html">ActRanged</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRanged_8cs_source.html#l00006">ActRanged.cs:7</a></div></div>
+<div class="ttc" id="aclassActRanged_html_a90a64e9d6eeeba95f2e0cbeac20d6471"><div class="ttname"><a href="classActRanged.html#a90a64e9d6eeeba95f2e0cbeac20d6471">ActRanged.TryReload</a></div><div class="ttdeci">static bool TryReload(Thing weapon, Thing ammo=null)</div><div class="ttdef"><b>Definition:</b> <a href="ActRanged_8cs_source.html#l00273">ActRanged.cs:273</a></div></div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassAct_html_a2bbe355c1c37f1ac7958c5f1040400db"><div class="ttname"><a href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">Act.TC</a></div><div class="ttdeci">static Card TC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00558">Act.2.cs:558</a></div></div>
+<div class="ttc" id="aclassAct_html_a87d86f3edab9b6107a74d29921b81d32"><div class="ttname"><a href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">Act.TP</a></div><div class="ttdeci">static Point TP</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00560">Act.2.cs:560</a></div></div>
+<div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00556">Act.2.cs:556</a></div></div>
+<div class="ttc" id="aclassAttackProcess_html"><div class="ttname"><a href="classAttackProcess.html">AttackProcess</a></div><div class="ttdef"><b>Definition:</b> <a href="AttackProcess_8cs_source.html#l00007">AttackProcess.cs:8</a></div></div>
+<div class="ttc" id="aclassAttackProcess_html_a103817f8718581491eec802a1320cd53"><div class="ttname"><a href="classAttackProcess.html#a103817f8718581491eec802a1320cd53">AttackProcess.Prepare</a></div><div class="ttdeci">void Prepare(Chara _CC, Thing _weapon, Card _TC=null, Point _TP=null, int _attackIndex=0, bool _isThrow=false)</div><div class="ttdef"><b>Definition:</b> <a href="AttackProcess_8cs_source.html#l00049">AttackProcess.cs:49</a></div></div>
+<div class="ttc" id="aclassAttackProcess_html_a2df91e4b12d1fc6414bacf8f4e9edb02"><div class="ttname"><a href="classAttackProcess.html#a2df91e4b12d1fc6414bacf8f4e9edb02">AttackProcess.Perform</a></div><div class="ttdeci">bool Perform(int count, bool hasHit, float dmgMulti=1f, bool maxRoll=false)</div><div class="ttdef"><b>Definition:</b> <a href="AttackProcess_8cs_source.html#l00336">AttackProcess.cs:336</a></div></div>
+<div class="ttc" id="aclassAttackProcess_html_a3eff9aa39e11f1bed5a4f0b45b08d4ac"><div class="ttname"><a href="classAttackProcess.html#a3eff9aa39e11f1bed5a4f0b45b08d4ac">AttackProcess.Current</a></div><div class="ttdeci">static AttackProcess Current</div><div class="ttdef"><b>Definition:</b> <a href="AttackProcess_8cs_source.html#l00892">AttackProcess.cs:892</a></div></div>
+<div class="ttc" id="aclassBodySlot_html"><div class="ttname"><a href="classBodySlot.html">BodySlot</a></div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00004">BodySlot.cs:5</a></div></div>
+<div class="ttc" id="aclassBodySlot_html_a267347d222852c4a9c677c1b46b4987b"><div class="ttname"><a href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">BodySlot.elementId</a></div><div class="ttdeci">int elementId</div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00028">BodySlot.cs:28</a></div></div>
+<div class="ttc" id="aclassBodySlot_html_aa3a02ef24b88e8c271da0c5cc0dbb2ba"><div class="ttname"><a href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">BodySlot.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00030">BodySlot.cs:30</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a06d351f92c327d70f1ae22553c1d0ace"><div class="ttname"><a href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">CardRenderer.PlayAnime</a></div><div class="ttdeci">void PlayAnime(AnimeID id, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00442">CardRenderer.cs:442</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a5e0f1301c474412bd664e354db2e8745"><div class="ttname"><a href="classCardRenderer.html#a5e0f1301c474412bd664e354db2e8745">CardRenderer.NextFrame</a></div><div class="ttdeci">virtual void NextFrame()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00493">CardRenderer.cs:493</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_a9ddb0b2968c7f8ed4fba0191bc6374f2"><div class="ttname"><a href="classCard.html#a9ddb0b2968c7f8ed4fba0191bc6374f2">Card.IsAliveInCurrentZone</a></div><div class="ttdeci">virtual bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02131">Card.cs:2132</a></div></div>
+<div class="ttc" id="aclassCard_html_abd6b223dc61955d492fc2c2e17f3cf61"><div class="ttname"><a href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Card.Dist</a></div><div class="ttdeci">int Dist(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07008">Card.cs:7008</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassCellEffect_html"><div class="ttname"><a href="classCellEffect.html">CellEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="CellEffect_8cs_source.html#l00004">CellEffect.cs:5</a></div></div>
+<div class="ttc" id="aclassCellEffect_html_af3e3f841db87b35a1f25c3d9363445e2"><div class="ttname"><a href="classCellEffect.html#af3e3f841db87b35a1f25c3d9363445e2">CellEffect.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="CellEffect_8cs_source.html#l00006">CellEffect.cs:7</a></div></div>
+<div class="ttc" id="aclassCell_html_a22ed66ff6f783eebb7c87e61b976ad31"><div class="ttname"><a href="classCell.html#a22ed66ff6f783eebb7c87e61b976ad31">Cell.effect</a></div><div class="ttdeci">CellEffect effect</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01876">Cell.cs:1876</a></div></div>
+<div class="ttc" id="aclassCharaBody_html_a6c3cd67d9056d79512ab74fa55bf64ba"><div class="ttname"><a href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">CharaBody.slots</a></div><div class="ttdeci">List&lt; BodySlot &gt; slots</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00521">CharaBody.cs:521</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09410">Chara.cs:9410</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08484">Chara.cs:8484</a></div></div>
+<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05627">Chara.cs:5627</a></div></div>
+<div class="ttc" id="aclassChara_html_aca643c661b6f7c3a1ae45f4cb2a7b6d9"><div class="ttname"><a href="classChara.html#aca643c661b6f7c3a1ae45f4cb2a7b6d9">Chara.RequestProtection</a></div><div class="ttdeci">void RequestProtection(Chara attacker, Action&lt; Chara &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07481">Chara.cs:7481</a></div></div>
+<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05796">Chara.cs:5796</a></div></div>
+<div class="ttc" id="aclassChara_html_adfc4e346a21e435fbd52582af3788692"><div class="ttname"><a href="classChara.html#adfc4e346a21e435fbd52582af3788692">Chara.LookAt</a></div><div class="ttdeci">override void LookAt(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03048">Chara.cs:3048</a></div></div>
+<div class="ttc" id="aclassConFear_html"><div class="ttname"><a href="classConFear.html">ConFear</a></div><div class="ttdef"><b>Definition:</b> <a href="ConFear_8cs_source.html#l00003">ConFear.cs:4</a></div></div>
+<div class="ttc" id="aclassConInvisibility_html"><div class="ttname"><a href="classConInvisibility.html">ConInvisibility</a></div><div class="ttdef"><b>Definition:</b> <a href="ConInvisibility_8cs_source.html#l00003">ConInvisibility.cs:4</a></div></div>
+<div class="ttc" id="aclassConReload_html"><div class="ttname"><a href="classConReload.html">ConReload</a></div><div class="ttdef"><b>Definition:</b> <a href="ConReload_8cs_source.html#l00003">ConReload.cs:4</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_a44f68f6f1c55b824f3684c78364abf5f"><div class="ttname"><a href="classEClass.html#a44f68f6f1c55b824f3684c78364abf5f">EClass.Wait</a></div><div class="ttdeci">static void Wait(float a, Card c)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00213">EClass.cs:213</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_a644007691d41aff3d62bba34d565ee63"><div class="ttname"><a href="classMap.html#a644007691d41aff3d62bba34d565ee63">Map.ListPointsInLine</a></div><div class="ttdeci">List&lt; Point &gt; ListPointsInLine(Point center, Point to, int radius)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02376">Map.cs:2376</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00565">Point.cs:565</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+<div class="ttc" id="aclassPoint_html_adc2028a1488786ea6d4e75c42fdaec5c"><div class="ttname"><a href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">Point.FirstChara</a></div><div class="ttdeci">Chara FirstChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00390">Point.cs:391</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassThing_html_a1356967911bd1872c00852223aaebcd7"><div class="ttname"><a href="classThing.html#a1356967911bd1872c00852223aaebcd7">Thing.source</a></div><div class="ttdeci">SourceThing.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l02096">Thing.cs:2096</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>, <a class="el" href="Chara_8cs_source.html#l09410">Chara.body</a>, <a class="el" href="Act_82_8cs_source.html#l00556">Act.CC</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l02016">Card.Chara</a>, <a class="el" href="Point_8cs_source.html#l00565">Point.Copy()</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="AttackProcess_8cs_source.html#l00892">AttackProcess.Current</a>, <a class="el" href="Card_8cs_source.html#l07008">Card.Dist()</a>, <a class="el" href="Chara_8cs_source.html#l05627">Chara.DoHostileAction()</a>, <a class="el" href="Cell_8cs_source.html#l01876">Cell.effect</a>, <a class="el" href="BodySlot_8cs_source.html#l00028">BodySlot.elementId</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Point_8cs_source.html#l00391">Point.FirstChara</a>, <a class="el" href="ActMelee_8cs_source.html#l00208">g__Attack()</a>, <a class="el" href="Chara_8cs_source.html#l08484">Chara.HasCondition()</a>, <a class="el" href="CellEffect_8cs_source.html#l00007">CellEffect.id</a>, <a class="el" href="Card_8cs_source.html#l02132">Card.IsAliveInCurrentZone</a>, <a class="el" href="Chara_8cs_source.html#l05796">Chara.IsHostile()</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, <a class="el" href="Map_8cs_source.html#l02376">Map.ListPointsInLine()</a>, <a class="el" href="Chara_8cs_source.html#l03048">Chara.LookAt()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00493">CardRenderer.NextFrame()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00336">AttackProcess.Perform()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00442">CardRenderer.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="AttackProcess_8cs_source.html#l00049">AttackProcess.Prepare()</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="Chara_8cs_source.html#l07481">Chara.RequestProtection()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="CharaBody_8cs_source.html#l00521">CharaBody.slots</a>, <a class="el" href="Thing_8cs_source.html#l02096">Thing.source</a>, <a class="el" href="Act_82_8cs_source.html#l00558">Act.TC</a>, <a class="el" href="BodySlot_8cs_source.html#l00030">BodySlot.thing</a>, <a class="el" href="Act_82_8cs_source.html#l00560">Act.TP</a>, <a class="el" href="ActRanged_8cs_source.html#l00273">ActRanged.TryReload()</a>, and <a class="el" href="EClass_8cs_source.html#l00213">EClass.Wait()</a>.</p>
 
 </div>
 </div>
@@ -560,6 +744,33 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActRush.html#ae2689a832aefc83c6378bec085bd3b49">ActRush</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00068">68</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <span class="keyword">null</span> || !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a9ddb0b2968c7f8ed4fba0191bc6374f2">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>) &gt; <span class="keyword">this</span>.PerformDistance)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29">PerformDistance</a> == 1)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#abdbe645e1b32728b28034c12b792b715">CanInteractTo</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>))</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a5280176d7ffc86ab46d781c59a9ff8d9">CanSeeLos</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, -1, <span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> base.CanPerform();</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassActMelee_html_ac184692d2c011cb8abcd99bbf0badf29"><div class="ttname"><a href="classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29">ActMelee.PerformDistance</a></div><div class="ttdeci">override int PerformDistance</div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00007">ActMelee.cs:8</a></div></div>
+<div class="ttc" id="aclassChara_html_a5280176d7ffc86ab46d781c59a9ff8d9"><div class="ttname"><a href="classChara.html#a5280176d7ffc86ab46d781c59a9ff8d9">Chara.CanSeeLos</a></div><div class="ttdeci">bool CanSeeLos(Card c, int dist=-1, bool includeTelepathy=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00738">Chara.cs:738</a></div></div>
+<div class="ttc" id="aclassChara_html_abdbe645e1b32728b28034c12b792b715"><div class="ttname"><a href="classChara.html#abdbe645e1b32728b28034c12b792b715">Chara.CanInteractTo</a></div><div class="ttdeci">bool CanInteractTo(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02084">Chara.cs:2084</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l02084">Chara.CanInteractTo()</a>, <a class="el" href="Chara_8cs_source.html#l00738">Chara.CanSeeLos()</a>, <a class="el" href="Act_82_8cs_source.html#l00556">Act.CC</a>, <a class="el" href="Card_8cs_source.html#l07008">Card.Dist()</a>, <a class="el" href="Card_8cs_source.html#l02132">Card.IsAliveInCurrentZone</a>, <a class="el" href="ActMelee_8cs_source.html#l00008">PerformDistance</a>, and <a class="el" href="Act_82_8cs_source.html#l00558">Act.TC</a>.</p>
 
 </div>
 </div>
@@ -610,6 +821,85 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00208">208</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  209</span>    {</div>
+<div class="line"><span class="lineno">  210</span>        Act.TC = _tc;</div>
+<div class="line"><span class="lineno">  211</span>        Act.TP = _tp;</div>
+<div class="line"><span class="lineno">  212</span>        <a class="code hl_class" href="classAttackProcess.html">AttackProcess</a>.<a class="code hl_variable" href="classAttackProcess.html#a3eff9aa39e11f1bed5a4f0b45b08d4ac">Current</a>.<a class="code hl_function" href="classAttackProcess.html#a103817f8718581491eec802a1320cd53">Prepare</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, A_3.w, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>, A_2.count, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classAttackProcess.html">AttackProcess</a>.<a class="code hl_variable" href="classAttackProcess.html#a3eff9aa39e11f1bed5a4f0b45b08d4ac">Current</a>.<a class="code hl_function" href="classAttackProcess.html#a2df91e4b12d1fc6414bacf8f4e9edb02">Perform</a>(A_2.count, A_2.hasHit, A_2.dmgMulti, A_2.maxRoll);</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            A_2.hasHit = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (A_3.w.c_ammo &gt; 0 &amp;&amp; !<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConReload.html">ConReload</a>&gt;())</div>
+<div class="line"><span class="lineno">  219</span>        {</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordtype">bool</span> flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  221</span>            <a class="code hl_class" href="classTraitAmmo.html">TraitAmmo</a> traitAmmo = (A_3.w.ammoData == <span class="keyword">null</span>) ? <span class="keyword">null</span> : (A_3.w.ammoData.trait as <a class="code hl_class" href="classTraitAmmo.html">TraitAmmo</a>);</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (traitAmmo != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  223</span>            {</div>
+<div class="line"><span class="lineno">  224</span>                <a class="code hl_class" href="classTraitAmmoTalisman.html">TraitAmmoTalisman</a> traitAmmoTalisman = traitAmmo as <a class="code hl_class" href="classTraitAmmoTalisman.html">TraitAmmoTalisman</a>;</div>
+<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">if</span> (traitAmmoTalisman != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  226</span>                {</div>
+<div class="line"><span class="lineno">  227</span>                    flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  228</span>                    <span class="keywordflow">if</span> (flag &amp;&amp; !A_2.usedTalisman &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a9ddb0b2968c7f8ed4fba0191bc6374f2">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">  229</span>                    {</div>
+<div class="line"><span class="lineno">  230</span>                        <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(traitAmmoTalisman.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>);</div>
+<div class="line"><span class="lineno">  231</span>                        <a class="code hl_class" href="classAct.html">Act</a> <a class="code hl_property" href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">act</a> = ((element != <span class="keyword">null</span>) ? element.<a class="code hl_property" href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">act</a> : <span class="keyword">null</span>) ?? <a class="code hl_class" href="classACT.html">ACT</a>.<a class="code hl_function" href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">Create</a>(traitAmmoTalisman.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>);</div>
+<div class="line"><span class="lineno">  232</span>                        Act.powerMod = traitAmmo.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>;</div>
+<div class="line"><span class="lineno">  233</span>                        <a class="code hl_class" href="classCard.html">Card</a> tc = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>;</div>
+<div class="line"><span class="lineno">  234</span>                        <span class="keywordflow">if</span> (<a class="code hl_property" href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">act</a>.<a class="code hl_function" href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Perform</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>))</div>
+<div class="line"><span class="lineno">  235</span>                        {</div>
+<div class="line"><span class="lineno">  236</span>                            A_2.usedTalisman = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  237</span>                            flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  238</span>                            <span class="keywordtype">int</span> spellExp = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aed6ac4cf2bb631a6b30f1663e7149023">GetSpellExp</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_property" href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">act</a>, 200);</div>
+<div class="line"><span class="lineno">  239</span>                            <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(<a class="code hl_property" href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">act</a>.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, spellExp);</div>
+<div class="line"><span class="lineno">  240</span>                        }</div>
+<div class="line"><span class="lineno">  241</span>                        Act.TC = tc;</div>
+<div class="line"><span class="lineno">  242</span>                        Act.powerMod = 100;</div>
+<div class="line"><span class="lineno">  243</span>                    }</div>
+<div class="line"><span class="lineno">  244</span>                }</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  247</span>            {</div>
+<div class="line"><span class="lineno">  248</span>                <a class="code hl_class" href="classThing.html">Thing</a> w = A_3.w;</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordtype">int</span> c_ammo = w.<a class="code hl_property" href="classCard.html#a23769f359b95bd36d480b6441712761e">c_ammo</a>;</div>
+<div class="line"><span class="lineno">  250</span>                w.c_ammo = c_ammo - 1;</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">if</span> (A_3.w.ammoData != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  252</span>                {</div>
+<div class="line"><span class="lineno">  253</span>                    A_3.w.ammoData.Num = A_3.w.c_ammo;</div>
+<div class="line"><span class="lineno">  254</span>                }</div>
+<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">if</span> (A_3.w.c_ammo &lt;= 0)</div>
+<div class="line"><span class="lineno">  256</span>                {</div>
+<div class="line"><span class="lineno">  257</span>                    A_3.w.c_ammo = 0;</div>
+<div class="line"><span class="lineno">  258</span>                    A_3.w.ammoData = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  259</span>                }</div>
+<div class="line"><span class="lineno">  260</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">SetDirty</a>(A_3.w);</div>
+<div class="line"><span class="lineno">  261</span>            }</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="ttc" id="aclassACT_html"><div class="ttname"><a href="classACT.html">ACT</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00004">ACT.cs:5</a></div></div>
+<div class="ttc" id="aclassACT_html_ac02237de965af1a9ce4c5f088f0e62c2"><div class="ttname"><a href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">ACT.Create</a></div><div class="ttdeci">static Act Create(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00017">ACT.cs:17</a></div></div>
+<div class="ttc" id="aclassAct_html_a16165bf29ed263491e1e1ac5903ee738"><div class="ttname"><a href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Act.Perform</a></div><div class="ttdeci">virtual bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00398">Act.2.cs:398</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a23769f359b95bd36d480b6441712761e"><div class="ttname"><a href="classCard.html#a23769f359b95bd36d480b6441712761e">Card.c_ammo</a></div><div class="ttdeci">int c_ammo</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01303">Card.cs:1304</a></div></div>
+<div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00151">Card.cs:152</a></div></div>
+<div class="ttc" id="aclassCard_html_a9c3b6d0fb8ee414aecdd21c21153204b"><div class="ttname"><a href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">Card.encLV</a></div><div class="ttdeci">int encLV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00271">Card.cs:272</a></div></div>
+<div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02646">Card.cs:2646</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aed6ac4cf2bb631a6b30f1663e7149023"><div class="ttname"><a href="classElementContainer.html#aed6ac4cf2bb631a6b30f1663e7149023">ElementContainer.GetSpellExp</a></div><div class="ttdeci">int GetSpellExp(Chara c, Element e, int costMod=100)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00495">ElementContainer.cs:495</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_ae4c671541618c10b55faf9d10a318fc0"><div class="ttname"><a href="classElement.html#ae4c671541618c10b55faf9d10a318fc0">Element.act</a></div><div class="ttdeci">Act act</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00338">Element.2.cs:339</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a742d3a9ed80e448bf2e0053e8bb23b48"><div class="ttname"><a href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">LayerInventory.SetDirty</a></div><div class="ttdeci">static void SetDirty(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00066">LayerInventory.cs:66</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitAmmoTalisman_html"><div class="ttname"><a href="classTraitAmmoTalisman.html">TraitAmmoTalisman</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitAmmoTalisman_8cs_source.html#l00004">TraitAmmoTalisman.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitAmmo_html"><div class="ttname"><a href="classTraitAmmo.html">TraitAmmo</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitAmmo_8cs_source.html#l00005">TraitAmmo.cs:6</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00339">Element.act</a>, <a class="el" href="Card_8cs_source.html#l01304">Card.c_ammo</a>, <a class="el" href="Act_82_8cs_source.html#l00556">Act.CC</a>, <a class="el" href="ACT_8cs_source.html#l00017">ACT.Create()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00892">AttackProcess.Current</a>, <a class="el" href="Chara_8cs_source.html#l05627">Chara.DoHostileAction()</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l00272">Card.encLV</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00495">ElementContainer.GetSpellExp()</a>, <a class="el" href="Chara_8cs_source.html#l08484">Chara.HasCondition()</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="Card_8cs_source.html#l02132">Card.IsAliveInCurrentZone</a>, <a class="el" href="Card_8cs_source.html#l02646">Card.ModExp()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Act_82_8cs_source.html#l00398">Act.Perform()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00336">AttackProcess.Perform()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00049">AttackProcess.Prepare()</a>, <a class="el" href="Card_8cs_source.html#l00152">Card.refVal</a>, <a class="el" href="LayerInventory_8cs_source.html#l00066">LayerInventory.SetDirty()</a>, <a class="el" href="Act_82_8cs_source.html#l00558">Act.TC</a>, and <a class="el" href="Act_82_8cs_source.html#l00560">Act.TP</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00097">Attack()</a>.</p>
 
 </div>
 </div>
@@ -640,6 +930,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#a875ccb201e58413bf762d0a67fed64ce">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00046">46</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classActMelee.html#a4ff7dab0d8f72e32f5d6e7ad47dfa5b8">HideHint</a>(c))</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> CursorSystem.IconMelee;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassActMelee_html_a4ff7dab0d8f72e32f5d6e7ad47dfa5b8"><div class="ttname"><a href="classActMelee.html#a4ff7dab0d8f72e32f5d6e7ad47dfa5b8">ActMelee.HideHint</a></div><div class="ttdeci">bool HideHint(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00027">ActMelee.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActMelee_8cs_source.html#l00027">HideHint()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +970,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#a4acf5235ae08bbeff9e55e4baf9fc6d1">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00032">32</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5f8ea1e1aa0b239ae845edabd2c4ac28" name="a5f8ea1e1aa0b239ae845edabd2c4ac28"></a>
@@ -700,6 +1003,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#ac7b2338760bdf4f253e1591ebcd3ce92">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00037">37</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classActMelee.html#a4ff7dab0d8f72e32f5d6e7ad47dfa5b8">HideHint</a>(c))</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> base.GetTextSmall(c);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActMelee_8cs_source.html#l00027">HideHint()</a>.</p>
 
 </div>
 </div>
@@ -728,6 +1040,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00027">27</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> EClass.pc.isBlind || c == <span class="keyword">null</span> || (c.isChara &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(c));</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00714">Chara.cs:714</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00714">Chara.CanSee()</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00046">GetCursorIcon()</a>, <a class="el" href="ActMelee_8cs_source.html#l00037">GetTextSmall()</a>, and <a class="el" href="ActMelee_8cs_source.html#l00055">ShowMouseHint()</a>.</p>
 
 </div>
 </div>
@@ -759,6 +1080,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classActRush.html#a04255a90bb02fc95621f2044253e17e8">ActRush</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00092">92</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> this.<a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>(1f, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dadcfafcb4323b102c7e204555d313ba0a">Attack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__PracticeDummy_8cs_source.html#l00034">AI_PracticeDummy.CreateProgress()</a>, and <a class="el" href="TraitTrainingDummy_8cs_source.html#l00013">TraitTrainingDummy.IdleUse()</a>.</p>
 
 </div>
 </div>
@@ -789,6 +1117,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#a6375223c76382529f113aad1c31d8b1f">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00055">55</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> !this.<a class="code hl_function" href="classActMelee.html#a4ff7dab0d8f72e32f5d6e7ad47dfa5b8">HideHint</a>(c);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ActMelee_8cs_source.html#l00027">HideHint()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +1147,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00060">60</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac184692d2c011cb8abcd99bbf0badf29" name="ac184692d2c011cb8abcd99bbf0badf29"></a>
@@ -838,6 +1177,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00007">7</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a659d3ef6dd600acf8a3f0953597d485a">GetMeleeDistance</a>();</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassCharaBody_html_a659d3ef6dd600acf8a3f0953597d485a"><div class="ttname"><a href="classCharaBody.html#a659d3ef6dd600acf8a3f0953597d485a">CharaBody.GetMeleeDistance</a></div><div class="ttdeci">int GetMeleeDistance()</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00404">CharaBody.cs:404</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ActMelee_8cs_source.html#l00068">CanPerform()</a>.</p>
 
 </div>
 </div>
@@ -862,16 +1214,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ActMelee_8cs_source.html#l00019">19</a> of file <a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ActMelee_8cs_source.html">ActMelee.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classActMelee.html">ActMelee</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

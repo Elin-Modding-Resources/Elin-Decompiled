@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classUICharaMaker.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -305,6 +325,34 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00359">359</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  360</span>    {</div>
+<div class="line"><span class="lineno">  361</span>        n.Space(8, 1);</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> domains.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
+<div class="line"><span class="lineno">  364</span>        {</div>
+<div class="line"><span class="lineno">  365</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + ((element == domains.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values.First&lt;<a class="code hl_class" href="classElement.html">Element</a>&gt;()) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;, &quot;</span>) + element.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>;</div>
+<div class="line"><span class="lineno">  366</span>        }</div>
+<div class="line"><span class="lineno">  367</span>        UIItem uiitem = n.AddTopic(<span class="stringliteral">&quot;TopicDomain&quot;</span>, <span class="stringliteral">&quot;domain&quot;</span>.lang(), <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">  368</span>        uiitem.button1.SetActive(button &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1402, 1));</div>
+<div class="line"><span class="lineno">  369</span>        uiitem.button1.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  370</span>        {</div>
+<div class="line"><span class="lineno">  371</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a114201196b6782737d2182961d4ffc3a">SelectDomain</a>(<span class="keyword">new</span> Action(this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>));</div>
+<div class="line"><span class="lineno">  372</span>        });</div>
+<div class="line"><span class="lineno">  373</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05325">Card.cs:5325</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00887">ElementContainer.cs:887</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a114201196b6782737d2182961d4ffc3a"><div class="ttname"><a href="classPlayer.html#a114201196b6782737d2182961d4ffc3a">Player.SelectDomain</a></div><div class="ttdeci">Layer SelectDomain(Action onKill=null)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00355">Player.cs:355</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a5e47ca0c67a6548a2fcca799936d1dad"><div class="ttname"><a href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">UICharaMaker.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00094">UICharaMaker.cs:94</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05325">Card.HasElement()</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="Player_8cs_source.html#l00355">Player.SelectDomain()</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00313">ListJob()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -332,6 +380,41 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00044">44</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">races</a>.Clear();</div>
+<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">jobs</a>.Clear();</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.config.test.extraRace;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0b2b38fa40a1e13c9a86ffa5dabdfd20">races</a>.rows)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (row.playable == 1 || (row.playable &lt;= 6 &amp;&amp; <span class="keyword">this</span>.extraRace) || (flag &amp;&amp; row.playable != 9))</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                this.<a class="code hl_variable" href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">races</a>.Add(row);</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">jobs</a>.rows)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (row2.playable == 1 || (row2.playable &lt;= 6 &amp;&amp; <span class="keyword">this</span>.extraRace) || (flag &amp;&amp; row2.playable != 9))</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                this.<a class="code hl_variable" href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">jobs</a>.Add(row2);</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">races</a>.Sort((<a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a> a, <a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a> b) =&gt; (a.playable - b.playable) * 10000 + a._index - b._index);</div>
+<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">jobs</a>.Sort((<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> a, <a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> b) =&gt; (a.playable - b.playable) * 10000 + a._index - b._index);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassEMono_html_afaf9020addda94e6bab3a114be10e563"><div class="ttname"><a href="classEMono.html#afaf9020addda94e6bab3a114be10e563">EMono.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00142">EMono.cs:143</a></div></div>
+<div class="ttc" id="aclassSourceJob_1_1Row_html"><div class="ttname"><a href="classSourceJob_1_1Row.html">SourceJob.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceJob_8cs_source.html#l00055">SourceJob.cs:56</a></div></div>
+<div class="ttc" id="aclassSourceJob_html"><div class="ttname"><a href="classSourceJob.html">SourceJob</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceJob_8cs_source.html#l00004">SourceJob.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0b2b38fa40a1e13c9a86ffa5dabdfd20"><div class="ttname"><a href="classSourceManager.html#a0b2b38fa40a1e13c9a86ffa5dabdfd20">SourceManager.races</a></div><div class="ttdeci">SourceRace races</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00169">SourceManager.cs:169</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae2456daa44300db5851bb38719d9da90"><div class="ttname"><a href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">SourceManager.jobs</a></div><div class="ttdeci">SourceJob jobs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00189">SourceManager.cs:189</a></div></div>
+<div class="ttc" id="aclassSourceRace_1_1Row_html"><div class="ttname"><a href="classSourceRace_1_1Row.html">SourceRace.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00113">SourceRace.cs:114</a></div></div>
+<div class="ttc" id="aclassSourceRace_html"><div class="ttname"><a href="classSourceRace.html">SourceRace</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00004">SourceRace.cs:5</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a6ae7bc9ed375b2a446217e9428bfcbd4"><div class="ttname"><a href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">UICharaMaker.races</a></div><div class="ttdeci">List&lt; SourceRace.Row &gt; races</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00473">UICharaMaker.cs:473</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_af2b1a89aa7142e583c19fad0ed178170"><div class="ttname"><a href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">UICharaMaker.jobs</a></div><div class="ttdeci">List&lt; SourceJob.Row &gt; jobs</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00475">UICharaMaker.cs:475</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="SourceManager_8cs_source.html#l00189">SourceManager.jobs</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00475">jobs</a>, <a class="el" href="SourceManager_8cs_source.html#l00169">SourceManager.races</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00473">races</a>, and <a class="el" href="EMono_8cs_source.html#l00143">EMono.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -359,6 +442,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00235">235</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">InputName</a>(<span class="stringliteral">&quot;dialogChangeName&quot;</span>, this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classCard.html#a4127bf1cbb6bbfc53f68e5b79ebe44a7">c_altName</a>.IsEmpty(<span class="keyword">this</span>.chara.NameSimple), delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</div>
+<div class="line"><span class="lineno">  238</span>        {</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (!cancel)</div>
+<div class="line"><span class="lineno">  240</span>            {</div>
+<div class="line"><span class="lineno">  241</span>                this.chara.c_altName = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
+<div class="line"><span class="lineno">  242</span>                this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  243</span>            }</div>
+<div class="line"><span class="lineno">  244</span>        }, <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_enumeration" href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">InputType</a>.Default).SetOnKill(delegate</div>
+<div class="line"><span class="lineno">  245</span>        {</div>
+<div class="line"><span class="lineno">  246</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.hud.hint.Show(<span class="stringliteral">&quot;hintEmbarkTop&quot;</span>.lang(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  247</span>        });</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="ttc" id="aclassCard_html_a4127bf1cbb6bbfc53f68e5b79ebe44a7"><div class="ttname"><a href="classCard.html#a4127bf1cbb6bbfc53f68e5b79ebe44a7">Card.c_altName</a></div><div class="ttdeci">string c_altName</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01411">Card.cs:1412</a></div></div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a9d8fe2e80662df6a6c323599b5eb1257"><div class="ttname"><a href="classDialog.html#a9d8fe2e80662df6a6c323599b5eb1257">Dialog.InputName</a></div><div class="ttdeci">static Dialog InputName(string langDetail, string text, Action&lt; bool, string &gt; onClose, Dialog.InputType inputType=Dialog.InputType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00469">Dialog.cs:469</a></div></div>
+<div class="ttc" id="aclassDialog_html_aaf9f0f8f050b7944063f51a1b9cf878a"><div class="ttname"><a href="classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878a">Dialog.InputType</a></div><div class="ttdeci">InputType</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00538">Dialog.cs:539</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_ae5e049b8302a8cc2d6e96dedbf4c269b"><div class="ttname"><a href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">UICharaMaker.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00453">UICharaMaker.cs:453</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01412">Card.c_altName</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="Dialog_8cs_source.html#l00469">Dialog.InputName()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -386,6 +490,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00444">444</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>    {</div>
+<div class="line"><span class="lineno">  446</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerEditPCC.html">LayerEditPCC</a>&gt;().Activate(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, UIPCC.Mode.Body, <span class="keyword">null</span>, delegate</div>
+<div class="line"><span class="lineno">  447</span>        {</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keyword">this</span>.portrait.SetChara(<span class="keyword">this</span>.chara, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  449</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a7739cc92c54e7a06bc0fb1e322eec024">SetPortraitSlider</a>();</div>
+<div class="line"><span class="lineno">  450</span>        });</div>
+<div class="line"><span class="lineno">  451</span>    }</div>
+<div class="ttc" id="aclassLayerEditPCC_html"><div class="ttname"><a href="classLayerEditPCC.html">LayerEditPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00005">LayerEditPCC.cs:6</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a7739cc92c54e7a06bc0fb1e322eec024"><div class="ttname"><a href="classUICharaMaker.html#a7739cc92c54e7a06bc0fb1e322eec024">UICharaMaker.SetPortraitSlider</a></div><div class="ttdeci">void SetPortraitSlider()</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00404">UICharaMaker.cs:404</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -413,6 +528,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00391">391</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  392</span>    {</div>
+<div class="line"><span class="lineno">  393</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetStringList(() =&gt; Lang.GetList(<span class="stringliteral">&quot;ages&quot;</span>), delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">string</span> b)</div>
+<div class="line"><span class="lineno">  394</span>        {</div>
+<div class="line"><span class="lineno">  395</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUICharaMaker.html#a4b2bf377c901d335dd0eb6e2754d2338">ageIndex</a> != a)</div>
+<div class="line"><span class="lineno">  396</span>            {</div>
+<div class="line"><span class="lineno">  397</span>                this.ageIndex = a;</div>
+<div class="line"><span class="lineno">  398</span>                this.<a class="code hl_function" href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">RerollBio</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  399</span>            }</div>
+<div class="line"><span class="lineno">  400</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  401</span>        }, <span class="keyword">true</span>).SetTitles(<span class="stringliteral">&quot;wAge&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  402</span>    }</div>
+<div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00006">LayerList.cs:7</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a4b2bf377c901d335dd0eb6e2754d2338"><div class="ttname"><a href="classUICharaMaker.html#a4b2bf377c901d335dd0eb6e2754d2338">UICharaMaker.ageIndex</a></div><div class="ttdeci">int ageIndex</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00499">UICharaMaker.cs:499</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a8e02ea85aa35ea9862c0ca48657fd086"><div class="ttname"><a href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">UICharaMaker.RerollBio</a></div><div class="ttdeci">void RerollBio()</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00433">UICharaMaker.cs:433</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00499">ageIndex</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -440,6 +571,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00212">212</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>    {</div>
+<div class="line"><span class="lineno">  214</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetStringList(delegate</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            List&lt;string&gt; list = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
+<div class="line"><span class="lineno">  218</span>            {</div>
+<div class="line"><span class="lineno">  219</span>                list.Add(AliasGen.GetRandomAlias());</div>
+<div class="line"><span class="lineno">  220</span>            }</div>
+<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  222</span>        }, delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">string</span> b)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            this.chara._alias = b;</div>
+<div class="line"><span class="lineno">  225</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  226</span>        }, <span class="keyword">true</span>).SetSize(450f, -1f).<a class="code hl_function" href="classLayerList.html#aa06570de0aa70eb268511c3246c0ad89">EnableReroll</a>().SetTitles(<span class="stringliteral">&quot;wAlias&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
+<div class="ttc" id="aclassLayerList_html_aa06570de0aa70eb268511c3246c0ad89"><div class="ttname"><a href="classLayerList.html#aa06570de0aa70eb268511c3246c0ad89">LayerList.EnableReroll</a></div><div class="ttdeci">LayerList EnableReroll()</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00223">LayerList.cs:223</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00223">LayerList.EnableReroll()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -467,6 +616,60 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00164">164</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
+<div class="line"><span class="lineno">  166</span>        TooltipManager.Instance.HideTooltips(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  167</span>        TooltipManager.Instance.disableHide = <span class="stringliteral">&quot;note&quot;</span>;</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  169</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetPivot(0.5f, 0.2f).<a class="code hl_function" href="classLayerList.html#a0843d9541b0f6118f328f987e30cb3ef">SetSize</a>(260f, -1f).SetList2&lt;<a class="code hl_class" href="classGameDifficulty.html">GameDifficulty</a>&gt;(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a026391b61faea40ce50d19f38ecdeb14">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a8e3e12f799f0ff2f6cf0bb010ce6b935">start</a>.difficulties, (<a class="code hl_class" href="classGameDifficulty.html">GameDifficulty</a> a) =&gt; a.Name, delegate(<a class="code hl_class" href="classGameDifficulty.html">GameDifficulty</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            EMono.game.idDifficulty = a.<a class="code hl_property" href="classGameDifficulty.html#a8c406140d90f3f02415d90d177b9b513">ID</a>;</div>
+<div class="line"><span class="lineno">  172</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#a9120cb9f321d94d5b9748988aca5ac1e">textDifficulty</a>.SetText(this.<a class="code hl_variable" href="classUICharaMaker.html#a73d671f5bd97a6138432e712320e96fa">listDifficulties</a>[<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad972ec618df0b2311be8173091df77cb">idDifficulty</a>]);</div>
+<div class="line"><span class="lineno">  173</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  174</span>        }, delegate(<a class="code hl_class" href="classGameDifficulty.html">GameDifficulty</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            UIButton b = item.button1;</div>
+<div class="line"><span class="lineno">  177</span>            b.SetTooltip(delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">  178</span>            {</div>
+<div class="line"><span class="lineno">  179</span>                t.note.Clear();</div>
+<div class="line"><span class="lineno">  180</span>                t.note.AddHeader(a.<a class="code hl_property" href="classGameDifficulty.html#ab1490c2cb2a202ac140366bea9422b49">Name</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  181</span>                t.note.Space(8, 1);</div>
+<div class="line"><span class="lineno">  182</span>                t.note.AddText(<span class="stringliteral">&quot;NoteText_medium&quot;</span>, <span class="stringliteral">&quot;vow_&quot;</span> + a.<a class="code hl_property" href="classGameDifficulty.html#a8c406140d90f3f02415d90d177b9b513">ID</a>.ToString(), FontColor.DontChange).Hyphenate();</div>
+<div class="line"><span class="lineno">  183</span>                t.note.Space(8, 1);</div>
+<div class="line"><span class="lineno">  184</span>                t.note.Build();</div>
+<div class="line"><span class="lineno">  185</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  187</span>            {</div>
+<div class="line"><span class="lineno">  188</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().alpha = 0f;</div>
+<div class="line"><span class="lineno">  189</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().DOFade(1f, 0.3f);</div>
+<div class="line"><span class="lineno">  190</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  191</span>                {</div>
+<div class="line"><span class="lineno">  192</span>                    b.ShowTooltipForced(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  193</span>                });</div>
+<div class="line"><span class="lineno">  194</span>            }</div>
+<div class="line"><span class="lineno">  195</span>            first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  196</span>        }, <span class="keyword">true</span>).SetTitles(<span class="stringliteral">&quot;wDifficulty&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  197</span>        RectTransform rectTransform = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;(<span class="keyword">false</span>).windows[0].Rect();</div>
+<div class="line"><span class="lineno">  198</span>        rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  199</span>        rectTransform.anchoredPosition = this.<a class="code hl_variable" href="classUICharaMaker.html#a8628bdb2490bd4f40be4a87518c008bf">posList2</a>;</div>
+<div class="line"><span class="lineno">  200</span>        TweenUtil.Tween(0.3f, <span class="keyword">null</span>, delegate()</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            UIButton.TryShowTip(<span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  203</span>        });</div>
+<div class="line"><span class="lineno">  204</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a026391b61faea40ce50d19f38ecdeb14"><div class="ttname"><a href="classEMono.html#a026391b61faea40ce50d19f38ecdeb14">EMono.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00102">EMono.cs:103</a></div></div>
+<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00006">EMono.cs:7</a></div></div>
+<div class="ttc" id="aclassGameDifficulty_html"><div class="ttname"><a href="classGameDifficulty.html">GameDifficulty</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDifficulty_8cs_source.html#l00004">GameDifficulty.cs:5</a></div></div>
+<div class="ttc" id="aclassGameDifficulty_html_a8c406140d90f3f02415d90d177b9b513"><div class="ttname"><a href="classGameDifficulty.html#a8c406140d90f3f02415d90d177b9b513">GameDifficulty.ID</a></div><div class="ttdeci">int ID</div><div class="ttdef"><b>Definition:</b> <a href="GameDifficulty_8cs_source.html#l00006">GameDifficulty.cs:7</a></div></div>
+<div class="ttc" id="aclassGameDifficulty_html_ab1490c2cb2a202ac140366bea9422b49"><div class="ttname"><a href="classGameDifficulty.html#ab1490c2cb2a202ac140366bea9422b49">GameDifficulty.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="GameDifficulty_8cs_source.html#l00014">GameDifficulty.cs:15</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a8e3e12f799f0ff2f6cf0bb010ce6b935"><div class="ttname"><a href="classGameSetting.html#a8e3e12f799f0ff2f6cf0bb010ce6b935">GameSetting.start</a></div><div class="ttdeci">GameSetting.StartSetting start</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00031">GameSetting.cs:31</a></div></div>
+<div class="ttc" id="aclassGame_html_ad972ec618df0b2311be8173091df77cb"><div class="ttname"><a href="classGame.html#ad972ec618df0b2311be8173091df77cb">Game.idDifficulty</a></div><div class="ttdeci">int idDifficulty</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00838">Game.cs:838</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerList_html_a0843d9541b0f6118f328f987e30cb3ef"><div class="ttname"><a href="classLayerList.html#a0843d9541b0f6118f328f987e30cb3ef">LayerList.SetSize</a></div><div class="ttdeci">LayerList SetSize(float w=450f, float h=-1f)</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00058">LayerList.cs:58</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a73d671f5bd97a6138432e712320e96fa"><div class="ttname"><a href="classUICharaMaker.html#a73d671f5bd97a6138432e712320e96fa">UICharaMaker.listDifficulties</a></div><div class="ttdeci">string[] listDifficulties</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00509">UICharaMaker.cs:509</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a8628bdb2490bd4f40be4a87518c008bf"><div class="ttname"><a href="classUICharaMaker.html#a8628bdb2490bd4f40be4a87518c008bf">UICharaMaker.posList2</a></div><div class="ttdeci">Vector2 posList2</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00503">UICharaMaker.cs:503</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a9120cb9f321d94d5b9748988aca5ac1e"><div class="ttname"><a href="classUICharaMaker.html#a9120cb9f321d94d5b9748988aca5ac1e">UICharaMaker.textDifficulty</a></div><div class="ttdeci">UIText textDifficulty</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00497">UICharaMaker.cs:497</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="GameDifficulty_8cs_source.html#l00007">GameDifficulty.ID</a>, <a class="el" href="Game_8cs_source.html#l00838">Game.idDifficulty</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00509">listDifficulties</a>, <a class="el" href="GameDifficulty_8cs_source.html#l00015">GameDifficulty.Name</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00503">posList2</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="LayerList_8cs_source.html#l00058">LayerList.SetSize()</a>, <a class="el" href="EMono_8cs_source.html#l00103">EMono.setting</a>, <a class="el" href="GameSetting_8cs_source.html#l00031">GameSetting.start</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00497">textDifficulty</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -494,6 +697,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00375">375</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  376</span>    {</div>
+<div class="line"><span class="lineno">  377</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetStringList(() =&gt; Lang.GetList(<span class="stringliteral">&quot;genders&quot;</span>), delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">string</span> b)</div>
+<div class="line"><span class="lineno">  378</span>        {</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> != a)</div>
+<div class="line"><span class="lineno">  380</span>            {</div>
+<div class="line"><span class="lineno">  381</span>                this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>(a);</div>
+<div class="line"><span class="lineno">  382</span>                this.chara.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, <span class="keyword">this</span>.chara.GetIdPortraitCat());</div>
+<div class="line"><span class="lineno">  383</span>                this.<a class="code hl_variable" href="classUICharaMaker.html#adf520efcd94e75675b48dd5e0269fcf7">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  384</span>                this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  385</span>            }</div>
+<div class="line"><span class="lineno">  386</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a7739cc92c54e7a06bc0fb1e322eec024">SetPortraitSlider</a>();</div>
+<div class="line"><span class="lineno">  387</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  388</span>        }, <span class="keyword">true</span>).SetTitles(<span class="stringliteral">&quot;wGender&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+<div class="ttc" id="aclassBiography_html_a4b942b6cd8c0142e84845fbb70e9e79a"><div class="ttname"><a href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">Biography.SetGender</a></div><div class="ttdeci">void SetGender(int g)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00472">Biography.cs:472</a></div></div>
+<div class="ttc" id="aclassBiography_html_ad30fca890328c9ff7ec6685b1a84b83c"><div class="ttname"><a href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">Biography.gender</a></div><div class="ttdeci">int gender</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00018">Biography.cs:19</a></div></div>
+<div class="ttc" id="aclassCard_html_a55b6cd5c5f3858985829502876c52318"><div class="ttname"><a href="classCard.html#a55b6cd5c5f3858985829502876c52318">Card.bio</a></div><div class="ttdeci">Biography bio</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07289">Card.cs:7289</a></div></div>
+<div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00008">Portrait.cs:9</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a424351a84e09594607b223055f9c9101"><div class="ttname"><a href="classPortrait.html#a424351a84e09594607b223055f9c9101">Portrait.GetRandomPortrait</a></div><div class="ttdeci">static string GetRandomPortrait(string idDict)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00066">Portrait.cs:66</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00098">Portrait.cs:98</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a6cd3dfc94ea46dc3f6a3e035b93c97cf"><div class="ttname"><a href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">UICharaMaker.portraitZoom</a></div><div class="ttdeci">Portrait portraitZoom</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00457">UICharaMaker.cs:457</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_adf520efcd94e75675b48dd5e0269fcf7"><div class="ttname"><a href="classUICharaMaker.html#adf520efcd94e75675b48dd5e0269fcf7">UICharaMaker.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00455">UICharaMaker.cs:455</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07289">Card.bio</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="Biography_8cs_source.html#l00019">Biography.gender</a>, <a class="el" href="Portrait_8cs_source.html#l00066">Portrait.GetRandomPortrait()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00455">portrait</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00457">portraitZoom</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00472">Biography.SetGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -521,6 +748,62 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00313">313</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>        TooltipManager.Instance.HideTooltips(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  316</span>        TooltipManager.Instance.disableHide = <span class="stringliteral">&quot;note&quot;</span>;</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  318</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetPivot(0.5f, 0.1f).<a class="code hl_function" href="classLayerList.html#a0843d9541b0f6118f328f987e30cb3ef">SetSize</a>(260f, -1f).SetList2&lt;<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a>&gt;(this.<a class="code hl_variable" href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">jobs</a>, (<a class="code hl_class" href="classSourceJob_1_1Row.html">SourceJob.Row</a> a) =&gt; a.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), delegate(<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_function" href="classChara.html#aa347d79a75ae79d4cfe17291c2316ff2">ChangeJob</a>(a.id);</div>
+<div class="line"><span class="lineno">  321</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a43d705287ed947445b863607897bf622">RefreshDomain</a>();</div>
+<div class="line"><span class="lineno">  322</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">RerollBio</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  323</span>        }, delegate(<a class="code hl_class" href="classSourceJob.html">SourceJob</a>.<a class="code hl_class" href="classSourceJob_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  324</span>        {</div>
+<div class="line"><span class="lineno">  325</span>            UIButton b = item.button1;</div>
+<div class="line"><span class="lineno">  326</span>            b.SetTooltip(delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">  327</span>            {</div>
+<div class="line"><span class="lineno">  328</span>                <a class="code hl_class" href="classElementContainer.html">ElementContainer</a> elementContainer = <span class="keyword">new</span> <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>();</div>
+<div class="line"><span class="lineno">  329</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#abf940a8558401bbe6f0b59c1fd70fc4a">ApplyElementMap</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>, <a class="code hl_enumeration" href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a>.Chara, a.elementMap, 1, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  330</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#a0a13e0151c7377d15a898f7ea024eacc">ApplyPotential</a>(2);</div>
+<div class="line"><span class="lineno">  331</span>                t.note.Clear();</div>
+<div class="line"><span class="lineno">  332</span>                t.note.AddHeader(a.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  333</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#a20675e034922c6602e03c38c020cd212">AddNoteAll</a>(t.note);</div>
+<div class="line"><span class="lineno">  334</span>                t.note.AddHeader(<span class="stringliteral">&quot;lore&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  335</span>                t.note.AddText(<span class="stringliteral">&quot;NoteText_long&quot;</span>, a.GetDetail().IsEmpty(<span class="keyword">this</span>.TextUnknown), FontColor.DontChange).Hyphenate();</div>
+<div class="line"><span class="lineno">  336</span>                this.<a class="code hl_function" href="classUICharaMaker.html#a0c19275bc622cec6a572ee656b04a867">AddDomain</a>(t.note, <span class="keyword">new</span> <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>().ImportElementMap(a.domain), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  337</span>                t.note.Build();</div>
+<div class="line"><span class="lineno">  338</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  340</span>            {</div>
+<div class="line"><span class="lineno">  341</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().alpha = 0f;</div>
+<div class="line"><span class="lineno">  342</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().DOFade(1f, 0.3f);</div>
+<div class="line"><span class="lineno">  343</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  344</span>                {</div>
+<div class="line"><span class="lineno">  345</span>                    b.ShowTooltipForced(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  346</span>                });</div>
+<div class="line"><span class="lineno">  347</span>            }</div>
+<div class="line"><span class="lineno">  348</span>            first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  349</span>        }, <span class="keyword">true</span>).SetTitles(<span class="stringliteral">&quot;wClass&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  350</span>        RectTransform rectTransform = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;(<span class="keyword">false</span>).windows[0].Rect();</div>
+<div class="line"><span class="lineno">  351</span>        rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  352</span>        rectTransform.anchoredPosition = this.<a class="code hl_variable" href="classUICharaMaker.html#adfc21b647e15971bc5da6c21ba331c49">posList</a>;</div>
+<div class="line"><span class="lineno">  353</span>        TweenUtil.Tween(0.3f, <span class="keyword">null</span>, delegate()</div>
+<div class="line"><span class="lineno">  354</span>        {</div>
+<div class="line"><span class="lineno">  355</span>            UIButton.TryShowTip(<span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  356</span>        });</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+<div class="ttc" id="aSourceValueType_8cs_html_a35f4cafd6783c747f55b3b7ff42d7d27"><div class="ttname"><a href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a></div><div class="ttdeci">SourceValueType</div><div class="ttdef"><b>Definition:</b> <a href="SourceValueType_8cs_source.html#l00003">SourceValueType.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassChara_html_aa347d79a75ae79d4cfe17291c2316ff2"><div class="ttname"><a href="classChara.html#aa347d79a75ae79d4cfe17291c2316ff2">Chara.ChangeJob</a></div><div class="ttdeci">void ChangeJob(string idNew)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01732">Chara.cs:1732</a></div></div>
+<div class="ttc" id="aclassElementContainer_html"><div class="ttname"><a href="classElementContainer.html">ElementContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00010">ElementContainer.cs:11</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0a13e0151c7377d15a898f7ea024eacc"><div class="ttname"><a href="classElementContainer.html#a0a13e0151c7377d15a898f7ea024eacc">ElementContainer.ApplyPotential</a></div><div class="ttdeci">void ApplyPotential(int mode=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00154">ElementContainer.cs:154</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a20675e034922c6602e03c38c020cd212"><div class="ttname"><a href="classElementContainer.html#a20675e034922c6602e03c38c020cd212">ElementContainer.AddNoteAll</a></div><div class="ttdeci">void AddNoteAll(UINote n)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00843">ElementContainer.cs:843</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_abf940a8558401bbe6f0b59c1fd70fc4a"><div class="ttname"><a href="classElementContainer.html#abf940a8558401bbe6f0b59c1fd70fc4a">ElementContainer.ApplyElementMap</a></div><div class="ttdeci">void ApplyElementMap(int uid, SourceValueType type, Dictionary&lt; int, int &gt; map, int lv, bool invert=false, bool applyFeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00080">ElementContainer.cs:80</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a43d705287ed947445b863607897bf622"><div class="ttname"><a href="classPlayer.html#a43d705287ed947445b863607897bf622">Player.RefreshDomain</a></div><div class="ttdeci">void RefreshDomain()</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00336">Player.cs:336</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a0c19275bc622cec6a572ee656b04a867"><div class="ttname"><a href="classUICharaMaker.html#a0c19275bc622cec6a572ee656b04a867">UICharaMaker.AddDomain</a></div><div class="ttdeci">void AddDomain(UINote n, ElementContainer domains, bool button)</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00359">UICharaMaker.cs:359</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_adfc21b647e15971bc5da6c21ba331c49"><div class="ttname"><a href="classUICharaMaker.html#adfc21b647e15971bc5da6c21ba331c49">UICharaMaker.posList</a></div><div class="ttdeci">Vector2 posList</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00501">UICharaMaker.cs:501</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00359">AddDomain()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00843">ElementContainer.AddNoteAll()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00080">ElementContainer.ApplyElementMap()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00154">ElementContainer.ApplyPotential()</a>, <a class="el" href="Chara_8cs_source.html#l01732">Chara.ChangeJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00475">jobs</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00501">posList</a>, <a class="el" href="Player_8cs_source.html#l00336">Player.RefreshDomain()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>, <a class="el" href="LayerList_8cs_source.html#l00058">LayerList.SetSize()</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
 
 </div>
 </div>
@@ -548,6 +831,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00149">149</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetStringList(() =&gt; this.<a class="code hl_variable" href="classUICharaMaker.html#ad006c8cf69f1d47d519355d9bb2ffa6d">listMode</a>, delegate(<span class="keywordtype">int</span> a, <span class="keywordtype">string</span> b)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            EMono.game.idPrologue = a;</div>
+<div class="line"><span class="lineno">  154</span>            <a class="code hl_class" href="classPrologue.html">Prologue</a> prologue = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_property" href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Prologue</a>;</div>
+<div class="line"><span class="lineno">  155</span>            EMono.world.date.year = prologue.<a class="code hl_variable" href="classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0">year</a>;</div>
+<div class="line"><span class="lineno">  156</span>            EMono.world.date.month = prologue.<a class="code hl_variable" href="classPrologue.html#a5638ba5673578da5004ba909415b29f6">month</a>;</div>
+<div class="line"><span class="lineno">  157</span>            EMono.world.date.day = prologue.<a class="code hl_variable" href="classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502">day</a>;</div>
+<div class="line"><span class="lineno">  158</span>            EMono.world.weather._currentCondition = prologue.<a class="code hl_variable" href="classPrologue.html#a4238692911288efddeb45c0528efe5b7">weather</a>;</div>
+<div class="line"><span class="lineno">  159</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#aa68ea74c180d07c964c2688645cffad7">textMode</a>.SetText(this.<a class="code hl_variable" href="classUICharaMaker.html#ad006c8cf69f1d47d519355d9bb2ffa6d">listMode</a>[<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#afbc3aeeecce2de239ce4bb08d824e5fd">idPrologue</a>]);</div>
+<div class="line"><span class="lineno">  160</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  161</span>        }, <span class="keyword">true</span>).SetSize(450f, -1f).SetTitles(<span class="stringliteral">&quot;wStartMode&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+<div class="ttc" id="aclassGame_html_a7e2d9e6c3760641fe15a4d5412e0524e"><div class="ttname"><a href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Game.Prologue</a></div><div class="ttdeci">Prologue Prologue</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00040">Game.cs:41</a></div></div>
+<div class="ttc" id="aclassGame_html_afbc3aeeecce2de239ce4bb08d824e5fd"><div class="ttname"><a href="classGame.html#afbc3aeeecce2de239ce4bb08d824e5fd">Game.idPrologue</a></div><div class="ttdeci">int idPrologue</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00835">Game.cs:835</a></div></div>
+<div class="ttc" id="aclassPrologue_html"><div class="ttname"><a href="classPrologue.html">Prologue</a></div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00005">Prologue.cs:6</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a4238692911288efddeb45c0528efe5b7"><div class="ttname"><a href="classPrologue.html#a4238692911288efddeb45c0528efe5b7">Prologue.weather</a></div><div class="ttdeci">Weather.Condition weather</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00027">Prologue.cs:27</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a5638ba5673578da5004ba909415b29f6"><div class="ttname"><a href="classPrologue.html#a5638ba5673578da5004ba909415b29f6">Prologue.month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00015">Prologue.cs:15</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a70c7f8521b5c7b4e9e0fc9d3b1c19502"><div class="ttname"><a href="classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502">Prologue.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00017">Prologue.cs:17</a></div></div>
+<div class="ttc" id="aclassPrologue_html_a8d481459364a5a40dfd923a1c3f458e0"><div class="ttname"><a href="classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0">Prologue.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Prologue_8cs_source.html#l00013">Prologue.cs:13</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_aa68ea74c180d07c964c2688645cffad7"><div class="ttname"><a href="classUICharaMaker.html#aa68ea74c180d07c964c2688645cffad7">UICharaMaker.textMode</a></div><div class="ttdeci">UIText textMode</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00495">UICharaMaker.cs:495</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_ad006c8cf69f1d47d519355d9bb2ffa6d"><div class="ttname"><a href="classUICharaMaker.html#ad006c8cf69f1d47d519355d9bb2ffa6d">UICharaMaker.listMode</a></div><div class="ttdeci">string[] listMode</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00506">UICharaMaker.cs:506</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Prologue_8cs_source.html#l00017">Prologue.day</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Game_8cs_source.html#l00835">Game.idPrologue</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00506">listMode</a>, <a class="el" href="Prologue_8cs_source.html#l00015">Prologue.month</a>, <a class="el" href="Game_8cs_source.html#l00041">Game.Prologue</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00495">textMode</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>, <a class="el" href="Prologue_8cs_source.html#l00027">Prologue.weather</a>, and <a class="el" href="Prologue_8cs_source.html#l00013">Prologue.year</a>.</p>
 
 </div>
 </div>
@@ -575,6 +882,52 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00261">261</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>    {</div>
+<div class="line"><span class="lineno">  263</span>        TooltipManager.Instance.HideTooltips(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  264</span>        TooltipManager.Instance.disableHide = <span class="stringliteral">&quot;note&quot;</span>;</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  266</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetPivot(0.5f, 0.2f).<a class="code hl_function" href="classLayerList.html#a0843d9541b0f6118f328f987e30cb3ef">SetSize</a>(260f, -1f).SetList2&lt;<a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a>&gt;(this.<a class="code hl_variable" href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">races</a>, (<a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> a) =&gt; a.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), delegate(<a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">  267</span>        {</div>
+<div class="line"><span class="lineno">  268</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_function" href="classChara.html#a0901db8f1aaff5ca73aa0ccdae158735">ChangeRace</a>(a.id);</div>
+<div class="line"><span class="lineno">  269</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">RerollBio</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  270</span>        }, delegate(<a class="code hl_class" href="classSourceRace.html">SourceRace</a>.<a class="code hl_class" href="classSourceRace_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            UIButton b = item.button1;</div>
+<div class="line"><span class="lineno">  273</span>            b.SetTooltip(delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">  274</span>            {</div>
+<div class="line"><span class="lineno">  275</span>                <a class="code hl_class" href="classElementContainer.html">ElementContainer</a> elementContainer = <span class="keyword">new</span> <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>();</div>
+<div class="line"><span class="lineno">  276</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#abf940a8558401bbe6f0b59c1fd70fc4a">ApplyElementMap</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>, <a class="code hl_enumeration" href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a>.Chara, a.elementMap, 1, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  277</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#a0a13e0151c7377d15a898f7ea024eacc">ApplyPotential</a>(1);</div>
+<div class="line"><span class="lineno">  278</span>                t.note.Clear();</div>
+<div class="line"><span class="lineno">  279</span>                t.note.AddHeader(a.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  280</span>                elementContainer.<a class="code hl_function" href="classElementContainer.html#a20675e034922c6602e03c38c020cd212">AddNoteAll</a>(t.note);</div>
+<div class="line"><span class="lineno">  281</span>                t.note.AddHeader(<span class="stringliteral">&quot;lore&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  282</span>                t.note.AddText(<span class="stringliteral">&quot;NoteText_long&quot;</span>, a.GetDetail().IsEmpty(<span class="keyword">this</span>.TextUnknown), FontColor.DontChange).Hyphenate();</div>
+<div class="line"><span class="lineno">  283</span>                t.note.Space(8, 1);</div>
+<div class="line"><span class="lineno">  284</span>                t.note.Build();</div>
+<div class="line"><span class="lineno">  285</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  287</span>            {</div>
+<div class="line"><span class="lineno">  288</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().alpha = 0f;</div>
+<div class="line"><span class="lineno">  289</span>                TooltipManager.Instance.GetComponent&lt;CanvasGroup&gt;().DOFade(1f, 0.3f);</div>
+<div class="line"><span class="lineno">  290</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  291</span>                {</div>
+<div class="line"><span class="lineno">  292</span>                    b.ShowTooltipForced(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  293</span>                });</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>            first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  296</span>        }, <span class="keyword">true</span>).SetTitles(<span class="stringliteral">&quot;wRace&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  297</span>        RectTransform rectTransform = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;(<span class="keyword">false</span>).windows[0].Rect();</div>
+<div class="line"><span class="lineno">  298</span>        rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  299</span>        rectTransform.anchoredPosition = this.<a class="code hl_variable" href="classUICharaMaker.html#adfc21b647e15971bc5da6c21ba331c49">posList</a>;</div>
+<div class="line"><span class="lineno">  300</span>        TweenUtil.Tween(0.3f, <span class="keyword">null</span>, delegate()</div>
+<div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            UIButton.TryShowTip(<span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  303</span>        });</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
+<div class="ttc" id="aclassChara_html_a0901db8f1aaff5ca73aa0ccdae158735"><div class="ttname"><a href="classChara.html#a0901db8f1aaff5ca73aa0ccdae158735">Chara.ChangeRace</a></div><div class="ttdeci">void ChangeRace(string idNew)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01864">Chara.cs:1864</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ElementContainer_8cs_source.html#l00843">ElementContainer.AddNoteAll()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00080">ElementContainer.ApplyElementMap()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00154">ElementContainer.ApplyPotential()</a>, <a class="el" href="Chara_8cs_source.html#l01864">Chara.ChangeRace()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00501">posList</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00473">races</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>, <a class="el" href="LayerList_8cs_source.html#l00058">LayerList.SetSize()</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
 
 </div>
 </div>
@@ -602,6 +955,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00250">250</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>    {</div>
+<div class="line"><span class="lineno">  252</span>        this.chara.c_altName = this.<a class="code hl_variable" href="classUICharaMaker.html#a0904a4a003dc946f9fd768526d4520bf">inputName</a>.text;</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+<div class="ttc" id="aclassUICharaMaker_html_a0904a4a003dc946f9fd768526d4520bf"><div class="ttname"><a href="classUICharaMaker.html#a0904a4a003dc946f9fd768526d4520bf">UICharaMaker.inputName</a></div><div class="ttdeci">InputField inputName</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00459">UICharaMaker.cs:459</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00459">inputName</a>.</p>
 
 </div>
 </div>
@@ -629,6 +988,89 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00094">94</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a0a13e0151c7377d15a898f7ea024eacc">ApplyPotential</a>(0);</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_class" href="classPrologue.html">Prologue</a> prologue = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_property" href="classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e">Prologue</a>;</div>
+<div class="line"><span class="lineno">   98</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aa76e9cc809d103fb7ac871ad4f840424">textSign</a>.SetText(<span class="stringliteral">&quot;signDisembark&quot;</span>.lang(prologue.<a class="code hl_variable" href="classPrologue.html#a5638ba5673578da5004ba909415b29f6">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, prologue.<a class="code hl_variable" href="classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, prologue.<a class="code hl_variable" href="classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   99</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a02ea96bae6f62365da9c2be7b86a2888">RefreshPortraitZoom</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  100</span>        this.inputAlias.text = this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Aka</a>;</div>
+<div class="line"><span class="lineno">  101</span>        this.inputName.text = this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classCard.html#a4127bf1cbb6bbfc53f68e5b79ebe44a7">c_altName</a>;</div>
+<div class="line"><span class="lineno">  102</span>        this.inputRace.text = this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  103</span>        this.inputJob.text = this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  104</span>        this.inputGender.text = Lang._gender(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>);</div>
+<div class="line"><span class="lineno">  105</span>        this.inputAge.text = Lang.GetList(<span class="stringliteral">&quot;ages&quot;</span>)[this.<a class="code hl_variable" href="classUICharaMaker.html#a4b2bf377c901d335dd0eb6e2754d2338">ageIndex</a>];</div>
+<div class="line"><span class="lineno">  106</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.Clear();</div>
+<div class="line"><span class="lineno">  107</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;name&quot;</span>.lang(), <span class="stringliteral">&quot;nameBio&quot;</span>.lang(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>, <span class="keyword">this</span>.chara.Aka, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">  108</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;birthday&quot;</span>.lang(), this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_function" href="classBiography.html#a67348ad1c49c2205ae3f409c78e728bd">TextBirthDate</a>(<span class="keyword">this</span>.chara, <span class="keyword">true</span>) + ((<span class="keyword">this</span>.ageIndex == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot; (&quot;</span> + Lang.GetList(<span class="stringliteral">&quot;ages&quot;</span>)[<span class="keyword">this</span>.ageIndex] + <span class="stringliteral">&quot;)&quot;</span>)));</div>
+<div class="line"><span class="lineno">  109</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;appearance&quot;</span>.lang(), this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_function" href="classBiography.html#ad94ae56084447c7d13f12f063bea7176">TextAppearance</a>());</div>
+<div class="line"><span class="lineno">  110</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;dad&quot;</span>.lang(), this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_property" href="classBiography.html#a66371c9e83c9d988058ed302a7ae7ab7">nameDad</a>.ToTitleCase(<span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  111</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;mom&quot;</span>.lang(), this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_property" href="classBiography.html#ad2f7720851d476bcb2618efe48791819">nameMom</a>.ToTitleCase(<span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  112</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.AddTopic(<span class="stringliteral">&quot;birthLoc&quot;</span>.lang(), this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_property" href="classBiography.html#a4b9ba74b551ed00b9c1ed9dc154da6dc">nameBirthplace</a>.ToTitleCase(<span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  113</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">note</a>.Build();</div>
+<div class="line"><span class="lineno">  114</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">noteRace</a>.Clear();</div>
+<div class="line"><span class="lineno">  115</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">noteRace</a>.AddHeaderTopic(<span class="stringliteral">&quot;race&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  116</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">noteRace</a>.Space(8, 1);</div>
+<div class="line"><span class="lineno">  117</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">noteRace</a>.AddText(<span class="stringliteral">&quot;NoteText_long&quot;</span>, this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetDetail().IsEmpty(<span class="keyword">this</span>.TextUnknown), FontColor.DontChange).Hyphenate();</div>
+<div class="line"><span class="lineno">  118</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">noteRace</a>.Build();</div>
+<div class="line"><span class="lineno">  119</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>.Clear();</div>
+<div class="line"><span class="lineno">  120</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>.AddHeaderTopic(<span class="stringliteral">&quot;job&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToTitleCase(<span class="keyword">true</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  121</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>.Space(8, 1);</div>
+<div class="line"><span class="lineno">  122</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>.AddText(<span class="stringliteral">&quot;NoteText_long&quot;</span>, this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetDetail().IsEmpty(<span class="keyword">this</span>.TextUnknown), FontColor.DontChange).Hyphenate();</div>
+<div class="line"><span class="lineno">  123</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a0c19275bc622cec6a572ee656b04a867">AddDomain</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a707e690596ce94aa73f6c8f3713ceaf8">GetDomains</a>(), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  124</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">noteJob</a>.Build();</div>
+<div class="line"><span class="lineno">  125</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.Clear();</div>
+<div class="line"><span class="lineno">  126</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.AddHeaderTopic(<span class="stringliteral">&quot;attributes&quot;</span>.lang(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  127</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a16e4f85e7555919cee3c3c4ea0a9df67">AddNote</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>, (<a class="code hl_class" href="classElement.html">Element</a> e) =&gt; e.<a class="code hl_function" href="classElement.html#a5163326f1ee817cd7b4d06165bbf30c7">HasTag</a>(<span class="stringliteral">&quot;primary&quot;</span>), <span class="keyword">null</span>, <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>.<a class="code hl_enumeration" href="classElementContainer.html#a92e69612e688de96b29b05f148a7edaf">NoteMode</a>.CharaMake, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  128</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.Space(0, 1);</div>
+<div class="line"><span class="lineno">  129</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.AddHeaderTopic(<span class="stringliteral">&quot;skills&quot;</span>.lang(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  130</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a16e4f85e7555919cee3c3c4ea0a9df67">AddNote</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>, (<a class="code hl_class" href="classElement.html">Element</a> e) =&gt; e.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.category == <span class="stringliteral">&quot;skill&quot;</span> &amp;&amp; e.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a> &gt; 1 &amp;&amp; e.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.categorySub != <span class="stringliteral">&quot;weapon&quot;</span>, <span class="keyword">null</span>, <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>.<a class="code hl_enumeration" href="classElementContainer.html#a92e69612e688de96b29b05f148a7edaf">NoteMode</a>.CharaMake, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  131</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.Space(0, 1);</div>
+<div class="line"><span class="lineno">  132</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.AddHeaderTopic(<span class="stringliteral">&quot;feats&quot;</span>.lang(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  133</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a16e4f85e7555919cee3c3c4ea0a9df67">AddNote</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>, (<a class="code hl_class" href="classElement.html">Element</a> e) =&gt; e is <a class="code hl_class" href="classFeat.html">Feat</a>, <span class="keyword">null</span>, <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>.<a class="code hl_enumeration" href="classElementContainer.html#a92e69612e688de96b29b05f148a7edaf">NoteMode</a>.CharaMake, <span class="keyword">true</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  134</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.Build();</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUICharaMaker.html#aa87d09af97aef368d2b7461b134d615c">addShadow</a>)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">foreach</span> (Text <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">note2</a>.gameObject.GetComponentsInChildren&lt;Text&gt;())</div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                Shadow shadow = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.GetComponent&lt;Shadow&gt;();</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">if</span> (!shadow)</div>
+<div class="line"><span class="lineno">  141</span>                {</div>
+<div class="line"><span class="lineno">  142</span>                    shadow = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.gameObject.AddComponent&lt;Shadow&gt;();</div>
+<div class="line"><span class="lineno">  143</span>                }</div>
+<div class="line"><span class="lineno">  144</span>                shadow.effectColor = <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.black;</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassBiography_html_a4b9ba74b551ed00b9c1ed9dc154da6dc"><div class="ttname"><a href="classBiography.html#a4b9ba74b551ed00b9c1ed9dc154da6dc">Biography.nameBirthplace</a></div><div class="ttdeci">string nameBirthplace</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00278">Biography.cs:279</a></div></div>
+<div class="ttc" id="aclassBiography_html_a66371c9e83c9d988058ed302a7ae7ab7"><div class="ttname"><a href="classBiography.html#a66371c9e83c9d988058ed302a7ae7ab7">Biography.nameDad</a></div><div class="ttdeci">string nameDad</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00262">Biography.cs:263</a></div></div>
+<div class="ttc" id="aclassBiography_html_a67348ad1c49c2205ae3f409c78e728bd"><div class="ttname"><a href="classBiography.html#a67348ad1c49c2205ae3f409c78e728bd">Biography.TextBirthDate</a></div><div class="ttdeci">string TextBirthDate(Chara c, bool _age=false)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00514">Biography.cs:514</a></div></div>
+<div class="ttc" id="aclassBiography_html_ad2f7720851d476bcb2618efe48791819"><div class="ttname"><a href="classBiography.html#ad2f7720851d476bcb2618efe48791819">Biography.nameMom</a></div><div class="ttdeci">string nameMom</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00270">Biography.cs:271</a></div></div>
+<div class="ttc" id="aclassBiography_html_ad94ae56084447c7d13f12f063bea7176"><div class="ttname"><a href="classBiography.html#ad94ae56084447c7d13f12f063bea7176">Biography.TextAppearance</a></div><div class="ttdeci">string TextAppearance()</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00519">Biography.cs:519</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02179">Card.cs:2180</a></div></div>
+<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00307">Chara.cs:308</a></div></div>
+<div class="ttc" id="aclassChara_html_a8d4d12cb1ff927b90512ff98e14d1ec5"><div class="ttname"><a href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Chara.Aka</a></div><div class="ttdeci">string Aka</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00012">Chara.cs:13</a></div></div>
+<div class="ttc" id="aclassChara_html_aff51c1a00af6403830b9d32980033a66"><div class="ttname"><a href="classChara.html#aff51c1a00af6403830b9d32980033a66">Chara.race</a></div><div class="ttdeci">SourceRace.Row race</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00294">Chara.cs:295</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a16e4f85e7555919cee3c3c4ea0a9df67"><div class="ttname"><a href="classElementContainer.html#a16e4f85e7555919cee3c3c4ea0a9df67">ElementContainer.AddNote</a></div><div class="ttdeci">void AddNote(UINote n, Func&lt; Element, bool &gt; isValid=null, Action onAdd=null, ElementContainer.NoteMode mode=ElementContainer.NoteMode.Default, bool addRaceFeat=false, Func&lt; Element, string, string &gt; funcText=null, Action&lt; UINote, Element &gt; onAddNote=null)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00680">ElementContainer.cs:680</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a92e69612e688de96b29b05f148a7edaf"><div class="ttname"><a href="classElementContainer.html#a92e69612e688de96b29b05f148a7edaf">ElementContainer.NoteMode</a></div><div class="ttdeci">NoteMode</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00896">ElementContainer.cs:897</a></div></div>
+<div class="ttc" id="aclassElement_html_a1360f9020059a1c35402e1b66e8dfee4"><div class="ttname"><a href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">Element.ValueWithoutLink</a></div><div class="ttdeci">int ValueWithoutLink</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00061">Element.2.cs:62</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassElement_html_a5163326f1ee817cd7b4d06165bbf30c7"><div class="ttname"><a href="classElement.html#a5163326f1ee817cd7b4d06165bbf30c7">Element.HasTag</a></div><div class="ttdeci">bool HasTag(string tag)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00346">Element.2.cs:346</a></div></div>
+<div class="ttc" id="aclassFeat_html"><div class="ttname"><a href="classFeat.html">Feat</a></div><div class="ttdef"><b>Definition:</b> <a href="Feat_82_8cs_source.html#l00006">Feat.2.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a707e690596ce94aa73f6c8f3713ceaf8"><div class="ttname"><a href="classPlayer.html#a707e690596ce94aa73f6c8f3713ceaf8">Player.GetDomains</a></div><div class="ttdeci">ElementContainer GetDomains()</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00345">Player.cs:345</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a02ea96bae6f62365da9c2be7b86a2888"><div class="ttname"><a href="classUICharaMaker.html#a02ea96bae6f62365da9c2be7b86a2888">UICharaMaker.RefreshPortraitZoom</a></div><div class="ttdeci">void RefreshPortraitZoom(bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00072">UICharaMaker.cs:72</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a0d9dd229cb9ce91c0b596e0c05653946"><div class="ttname"><a href="classUICharaMaker.html#a0d9dd229cb9ce91c0b596e0c05653946">UICharaMaker.note2</a></div><div class="ttdeci">UINote note2</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00483">UICharaMaker.cs:483</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a73b86e3626f1836504451efb3211cd51"><div class="ttname"><a href="classUICharaMaker.html#a73b86e3626f1836504451efb3211cd51">UICharaMaker.noteJob</a></div><div class="ttdeci">UINote noteJob</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00485">UICharaMaker.cs:485</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a7ca2451261dda2e8a3fb9dcc517e5faf"><div class="ttname"><a href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">UICharaMaker.bio</a></div><div class="ttdeci">Biography bio</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00010">UICharaMaker.cs:11</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_aa76e9cc809d103fb7ac871ad4f840424"><div class="ttname"><a href="classUICharaMaker.html#aa76e9cc809d103fb7ac871ad4f840424">UICharaMaker.textSign</a></div><div class="ttdeci">UIText textSign</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00493">UICharaMaker.cs:493</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_aa87d09af97aef368d2b7461b134d615c"><div class="ttname"><a href="classUICharaMaker.html#aa87d09af97aef368d2b7461b134d615c">UICharaMaker.addShadow</a></div><div class="ttdeci">bool addShadow</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00489">UICharaMaker.cs:489</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_aba4fc0b908c314834145e22557022475"><div class="ttname"><a href="classUICharaMaker.html#aba4fc0b908c314834145e22557022475">UICharaMaker.noteRace</a></div><div class="ttdeci">UINote noteRace</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00487">UICharaMaker.cs:487</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_af36140a071b1a82f4da4b55fd0b834ee"><div class="ttname"><a href="classUICharaMaker.html#af36140a071b1a82f4da4b55fd0b834ee">UICharaMaker.note</a></div><div class="ttdeci">UINote note</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00481">UICharaMaker.cs:481</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00359">AddDomain()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00680">ElementContainer.AddNote()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00489">addShadow</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00499">ageIndex</a>, <a class="el" href="Chara_8cs_source.html#l00013">Chara.Aka</a>, <a class="el" href="ElementContainer_8cs_source.html#l00154">ElementContainer.ApplyPotential()</a>, <a class="el" href="Card_8cs_source.html#l07289">Card.bio</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00011">bio</a>, <a class="el" href="Card_8cs_source.html#l01412">Card.c_altName</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Prologue_8cs_source.html#l00017">Prologue.day</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Biography_8cs_source.html#l00019">Biography.gender</a>, <a class="el" href="Player_8cs_source.html#l00345">Player.GetDomains()</a>, <a class="el" href="Element_82_8cs_source.html#l00346">Element.HasTag()</a>, <a class="el" href="Chara_8cs_source.html#l00308">Chara.job</a>, <a class="el" href="Prologue_8cs_source.html#l00015">Prologue.month</a>, <a class="el" href="Biography_8cs_source.html#l00279">Biography.nameBirthplace</a>, <a class="el" href="Biography_8cs_source.html#l00263">Biography.nameDad</a>, <a class="el" href="Biography_8cs_source.html#l00271">Biography.nameMom</a>, <a class="el" href="Card_8cs_source.html#l02180">Card.NameSimple</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00481">note</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00483">note2</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00485">noteJob</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00487">noteRace</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="Game_8cs_source.html#l00041">Game.Prologue</a>, <a class="el" href="Chara_8cs_source.html#l00295">Chara.race</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00072">RefreshPortraitZoom()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="Biography_8cs_source.html#l00519">Biography.TextAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00514">Biography.TextBirthDate()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00493">textSign</a>, <a class="el" href="Element_82_8cs_source.html#l00062">Element.ValueWithoutLink</a>, and <a class="el" href="Prologue_8cs_source.html#l00013">Prologue.year</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00359">AddDomain()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00235">EditName()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00391">ListAge()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00212">ListAlias()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00164">ListDifficulties()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00375">ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00149">ListModes()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00206">RerollAlias()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00438">RerollBio()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00306">RerollJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00229">RerollName()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -657,6 +1099,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00072">72</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        List&lt;GameObject&gt; hovered = InputModuleEX.GetPointerEventData(-1).hovered;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">bool</span> enable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">using</span> (List&lt;GameObject&gt;.Enumerator enumerator = hovered.GetEnumerator())</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (enumerator.Current.transform.IsChildOf(<span class="keyword">this</span>.portrait.transform))</div>
+<div class="line"><span class="lineno">   85</span>                {</div>
+<div class="line"><span class="lineno">   86</span>                    enable = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>.SetActive(enable);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00457">portraitZoom</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00067">Update()</a>.</p>
 
 </div>
 </div>
@@ -684,6 +1150,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00206">206</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>    {</div>
+<div class="line"><span class="lineno">  208</span>        this.chara._alias = AliasGen.GetRandomAlias();</div>
+<div class="line"><span class="lineno">  209</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -711,6 +1183,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00433">433</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  434</span>    {</div>
+<div class="line"><span class="lineno">  435</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">RerollBio</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  436</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00391">ListAge()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00313">ListJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00261">ListRace()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00255">RerollRace()</a>.</p>
 
 </div>
 </div>
@@ -739,6 +1218,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00438">438</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  439</span>    {</div>
+<div class="line"><span class="lineno">  440</span>        this.<a class="code hl_property" href="classUICharaMaker.html#a7ca2451261dda2e8a3fb9dcc517e5faf">bio</a>.<a class="code hl_function" href="classBiography.html#aa3046219269dedf4b0b297c466340741">RerollBio</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, this.<a class="code hl_variable" href="classUICharaMaker.html#a4b2bf377c901d335dd0eb6e2754d2338">ageIndex</a>, keepParent);</div>
+<div class="line"><span class="lineno">  441</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  442</span>    }</div>
+<div class="ttc" id="aclassBiography_html_aa3046219269dedf4b0b297c466340741"><div class="ttname"><a href="classBiography.html#aa3046219269dedf4b0b297c466340741">Biography.RerollBio</a></div><div class="ttdeci">void RerollBio(Chara c, int ageIndex=0, bool keepParent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00400">Biography.cs:400</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00499">ageIndex</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00011">bio</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="Biography_8cs_source.html#l00400">Biography.RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -766,6 +1252,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00426">426</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>    {</div>
+<div class="line"><span class="lineno">  428</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.SetRandomColor(<span class="stringliteral">&quot;hair&quot;</span>);</div>
+<div class="line"><span class="lineno">  429</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#adf520efcd94e75675b48dd5e0269fcf7">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  430</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  431</span>    }</div>
+<div class="ttc" id="aclassChara_html_ae316a7097e7b696f2f018df973b16224"><div class="ttname"><a href="classChara.html#ae316a7097e7b696f2f018df973b16224">Chara.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09383">Chara.cs:9383</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="Chara_8cs_source.html#l09383">Chara.pccData</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00455">portrait</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00457">portraitZoom</a>, and <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>.</p>
 
 </div>
 </div>
@@ -793,6 +1287,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00306">306</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>    {</div>
+<div class="line"><span class="lineno">  308</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_function" href="classChara.html#aa347d79a75ae79d4cfe17291c2316ff2">ChangeJob</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170">jobs</a>.RandomItem(<span class="keyword">this</span>.chara.job).id);</div>
+<div class="line"><span class="lineno">  309</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a43d705287ed947445b863607897bf622">RefreshDomain</a>();</div>
+<div class="line"><span class="lineno">  310</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l01732">Chara.ChangeJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00475">jobs</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="Player_8cs_source.html#l00336">Player.RefreshDomain()</a>.</p>
 
 </div>
 </div>
@@ -820,6 +1321,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00229">229</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
+<div class="line"><span class="lineno">  231</span>        this.chara.c_altName = NameGen.getRandomName();</div>
+<div class="line"><span class="lineno">  232</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -847,6 +1354,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00419">419</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  420</span>    {</div>
+<div class="line"><span class="lineno">  421</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.Randomize(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  422</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#adf520efcd94e75675b48dd5e0269fcf7">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  423</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  424</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="Chara_8cs_source.html#l09383">Chara.pccData</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00455">portrait</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00457">portraitZoom</a>, and <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>.</p>
 
 </div>
 </div>
@@ -874,6 +1388,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00255">255</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>    {</div>
+<div class="line"><span class="lineno">  257</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_function" href="classChara.html#a0901db8f1aaff5ca73aa0ccdae158735">ChangeRace</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4">races</a>.RandomItem(<span class="keyword">this</span>.chara.race).id);</div>
+<div class="line"><span class="lineno">  258</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a8e02ea85aa35ea9862c0ca48657fd086">RerollBio</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l01864">Chara.ChangeRace()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00473">races</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00433">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -902,6 +1422,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00026">26</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        this.listMode = Lang.GetList(<span class="stringliteral">&quot;startMode&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>        this.listDifficulties = Lang.GetList(<span class="stringliteral">&quot;difficulties&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aa68ea74c180d07c964c2688645cffad7">textMode</a>.SetText(this.<a class="code hl_variable" href="classUICharaMaker.html#ad006c8cf69f1d47d519355d9bb2ffa6d">listMode</a>[<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#afbc3aeeecce2de239ce4bb08d824e5fd">idPrologue</a>]);</div>
+<div class="line"><span class="lineno">   31</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a9120cb9f321d94d5b9748988aca5ac1e">textDifficulty</a>.SetText(this.<a class="code hl_variable" href="classUICharaMaker.html#a73d671f5bd97a6138432e712320e96fa">listDifficulties</a>[<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad972ec618df0b2311be8173091df77cb">idDifficulty</a>]);</div>
+<div class="line"><span class="lineno">   32</span>        this.chara = c;</div>
+<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903">BuildRaces</a>();</div>
+<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a7739cc92c54e7a06bc0fb1e322eec024">SetPortraitSlider</a>();</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad">Refresh</a>();</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#aa2b2333f63e821a45b2b1c0ef31ab7d1">toggleExtra</a>.SetToggle(this.<a class="code hl_variable" href="classUICharaMaker.html#af9065a6e1c83b52ee1a73dfe62a6c611">extraRace</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            this.extraRace = a;</div>
+<div class="line"><span class="lineno">   39</span>            this.<a class="code hl_function" href="classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903">BuildRaces</a>();</div>
+<div class="line"><span class="lineno">   40</span>            SE.Tab();</div>
+<div class="line"><span class="lineno">   41</span>        });</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassUICharaMaker_html_a383530ce96edc1da03644ff54fd92903"><div class="ttname"><a href="classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903">UICharaMaker.BuildRaces</a></div><div class="ttdeci">void BuildRaces()</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00044">UICharaMaker.cs:44</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_aa2b2333f63e821a45b2b1c0ef31ab7d1"><div class="ttname"><a href="classUICharaMaker.html#aa2b2333f63e821a45b2b1c0ef31ab7d1">UICharaMaker.toggleExtra</a></div><div class="ttdeci">UIButton toggleExtra</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00477">UICharaMaker.cs:477</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_af9065a6e1c83b52ee1a73dfe62a6c611"><div class="ttname"><a href="classUICharaMaker.html#af9065a6e1c83b52ee1a73dfe62a6c611">UICharaMaker.extraRace</a></div><div class="ttdeci">bool extraRace</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00491">UICharaMaker.cs:491</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00044">BuildRaces()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00491">extraRace</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Game_8cs_source.html#l00838">Game.idDifficulty</a>, <a class="el" href="Game_8cs_source.html#l00835">Game.idPrologue</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00509">listDifficulties</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00506">listMode</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00497">textDifficulty</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00495">textMode</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00477">toggleExtra</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditBio_8cs_source.html#l00025">LayerEditBio.SetChara()</a>.</p>
 
 </div>
 </div>
@@ -929,6 +1472,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00404">404</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  405</span>    {</div>
+<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classUICharaMaker.html#a4289a66eccc8ebfe378102d24462610e">sliderPortrait</a>)</div>
+<div class="line"><span class="lineno">  407</span>        {</div>
+<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  409</span>        }</div>
+<div class="line"><span class="lineno">  410</span>        List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">ListPlayerPortraits</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  411</span>        this.<a class="code hl_variable" href="classUICharaMaker.html#a4289a66eccc8ebfe378102d24462610e">sliderPortrait</a>.SetList&lt;ModItem&lt;Sprite&gt;&gt;(list.Find((ModItem&lt;Sprite&gt; a) =&gt; a.id == <span class="keyword">this</span>.chara.c_idPortrait), list, delegate(<span class="keywordtype">int</span> a, ModItem&lt;Sprite&gt; b)</div>
+<div class="line"><span class="lineno">  412</span>        {</div>
+<div class="line"><span class="lineno">  413</span>            this.chara.c_idPortrait = b.id;</div>
+<div class="line"><span class="lineno">  414</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#adf520efcd94e75675b48dd5e0269fcf7">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  415</span>            this.<a class="code hl_variable" href="classUICharaMaker.html#a6cd3dfc94ea46dc3f6a3e035b93c97cf">portraitZoom</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  416</span>        }, (ModItem&lt;Sprite&gt; a) =&gt; a.id);</div>
+<div class="line"><span class="lineno">  417</span>    }</div>
+<div class="ttc" id="aclassPortrait_html_a51ab554a89c7bd7ed402c494dc03516c"><div class="ttname"><a href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">Portrait.ListPlayerPortraits</a></div><div class="ttdeci">static List&lt; ModItem&lt; Sprite &gt; &gt; ListPlayerPortraits(int gender, bool nullPortrait=false)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00010">Portrait.cs:10</a></div></div>
+<div class="ttc" id="aclassUICharaMaker_html_a4289a66eccc8ebfe378102d24462610e"><div class="ttname"><a href="classUICharaMaker.html#a4289a66eccc8ebfe378102d24462610e">UICharaMaker.sliderPortrait</a></div><div class="ttdeci">UISlider sliderPortrait</div><div class="ttdef"><b>Definition:</b> <a href="UICharaMaker_8cs_source.html#l00471">UICharaMaker.cs:471</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07289">Card.bio</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00453">chara</a>, <a class="el" href="Biography_8cs_source.html#l00019">Biography.gender</a>, <a class="el" href="Portrait_8cs_source.html#l00010">Portrait.ListPlayerPortraits()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00455">portrait</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00457">portraitZoom</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00471">sliderPortrait</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00444">EditPCC()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00375">ListGender()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -956,6 +1518,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00067">67</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        this.<a class="code hl_function" href="classUICharaMaker.html#a02ea96bae6f62365da9c2be7b86a2888">RefreshPortraitZoom</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UICharaMaker_8cs_source.html#l00072">RefreshPortraitZoom()</a>.</p>
 
 </div>
 </div>
@@ -974,6 +1541,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00489">489</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a4b2bf377c901d335dd0eb6e2754d2338" name="a4b2bf377c901d335dd0eb6e2754d2338"></a>
@@ -989,6 +1558,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00499">499</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00391">ListAge()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00438">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -1006,6 +1577,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00453">453</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00235">EditName()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00444">EditPCC()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00375">ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00313">ListJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00261">ListRace()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00438">RerollBio()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00426">RerollHair()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00306">RerollJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00419">RerollPCC()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00255">RerollRace()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>.</p>
+
 </div>
 </div>
 <a id="af9065a6e1c83b52ee1a73dfe62a6c611" name="af9065a6e1c83b52ee1a73dfe62a6c611"></a>
@@ -1021,6 +1594,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00491">491</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -1102,6 +1677,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00459">459</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00250">OnEndEditName()</a>.</p>
+
 </div>
 </div>
 <a id="af671048711018b5b2ad23fc5c4e1caed" name="af671048711018b5b2ad23fc5c4e1caed"></a>
@@ -1134,6 +1711,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00475">475</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00044">BuildRaces()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00313">ListJob()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00306">RerollJob()</a>.</p>
+
 </div>
 </div>
 <a id="a73d671f5bd97a6138432e712320e96fa" name="a73d671f5bd97a6138432e712320e96fa"></a>
@@ -1149,6 +1728,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00509">509</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00164">ListDifficulties()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -1166,6 +1747,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00506">506</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00149">ListModes()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="af36140a071b1a82f4da4b55fd0b834ee" name="af36140a071b1a82f4da4b55fd0b834ee"></a>
@@ -1181,6 +1764,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00481">481</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1198,6 +1783,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00483">483</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a73b86e3626f1836504451efb3211cd51" name="a73b86e3626f1836504451efb3211cd51"></a>
@@ -1213,6 +1800,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00485">485</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1230,6 +1819,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00487">487</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="adf520efcd94e75675b48dd5e0269fcf7" name="adf520efcd94e75675b48dd5e0269fcf7"></a>
@@ -1245,6 +1836,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00455">455</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00375">ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00426">RerollHair()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00419">RerollPCC()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>.</p>
 
 </div>
 </div>
@@ -1262,6 +1855,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00457">457</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00375">ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00072">RefreshPortraitZoom()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00426">RerollHair()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00419">RerollPCC()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>.</p>
+
 </div>
 </div>
 <a id="adfc21b647e15971bc5da6c21ba331c49" name="adfc21b647e15971bc5da6c21ba331c49"></a>
@@ -1277,6 +1872,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00501">501</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00313">ListJob()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00261">ListRace()</a>.</p>
 
 </div>
 </div>
@@ -1294,6 +1891,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00503">503</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00164">ListDifficulties()</a>.</p>
+
 </div>
 </div>
 <a id="a6ae7bc9ed375b2a446217e9428bfcbd4" name="a6ae7bc9ed375b2a446217e9428bfcbd4"></a>
@@ -1309,6 +1908,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00473">473</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00044">BuildRaces()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00261">ListRace()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00255">RerollRace()</a>.</p>
 
 </div>
 </div>
@@ -1326,6 +1927,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00471">471</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00404">SetPortraitSlider()</a>.</p>
+
 </div>
 </div>
 <a id="a9120cb9f321d94d5b9748988aca5ac1e" name="a9120cb9f321d94d5b9748988aca5ac1e"></a>
@@ -1341,6 +1944,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00497">497</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00164">ListDifficulties()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -1358,6 +1963,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00495">495</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00149">ListModes()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="aa76e9cc809d103fb7ac871ad4f840424" name="aa76e9cc809d103fb7ac871ad4f840424"></a>
@@ -1374,6 +1981,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00493">493</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="aa2b2333f63e821a45b2b1c0ef31ab7d1" name="aa2b2333f63e821a45b2b1c0ef31ab7d1"></a>
@@ -1389,6 +1998,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00477">477</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00026">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -1430,6 +2041,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00010">10</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classUICharaMaker.html#ae5e049b8302a8cc2d6e96dedbf4c269b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00094">Refresh()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00438">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -1454,16 +2073,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UICharaMaker_8cs_source.html#l00018">18</a> of file <a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;lore_unknown&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="UICharaMaker_8cs_source.html">UICharaMaker.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUICharaMaker.html">UICharaMaker</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

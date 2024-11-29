@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitSpotSpawn.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -667,6 +687,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a0fe5b36ec4e77dd011ece5a51e8fad66">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitSpotSpawn_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitSpotSpawn_8cs_source.html">TraitSpotSpawn.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = this.<a class="code hl_variable" href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">children</a>.Count - 1; i &gt;= 0; i--)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">children</a>[i].isDead)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                this.<a class="code hl_variable" href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">children</a>.RemoveAt(i);</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">children</a>.Count &gt; 5)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classPoint.html">Point</a> randomPoint = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">GetRandomPoint</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <span class="keyword">this</span>.radius, 100, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">SpawnMob</a>(randomPoint, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            this.<a class="code hl_variable" href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">children</a>.Add(chara);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_a201e5925b364f2c6446f02c35e75c2d1"><div class="ttname"><a href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">Map.GetRandomPoint</a></div><div class="ttdeci">Point GetRandomPoint(Point center, int radius, int tries=100, bool mustBeWalkable=true, bool requireLos=true)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02266">Map.cs:2266</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassTraitSpotSpawn_html_a68925c7634ec1abaeab15a3838c45685"><div class="ttname"><a href="classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685">TraitSpotSpawn.children</a></div><div class="ttdeci">List&lt; Chara &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpotSpawn_8cs_source.html#l00043">TraitSpotSpawn.cs:43</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+<div class="ttc" id="aclassZone_html_a743d6d3ff9afabf8ec22a96581f75ceb"><div class="ttname"><a href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">Zone.SpawnMob</a></div><div class="ttdeci">Chara SpawnMob(Point pos=null, SpawnSetting setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02856">Zone.cs:2856</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="TraitSpotSpawn_8cs_source.html#l00043">children</a>, <a class="el" href="Map_8cs_source.html#l02266">Map.GetRandomPoint()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, and <a class="el" href="Zone_8cs_source.html#l02856">Zone.SpawnMob()</a>.</p>
 
 </div>
 </div>
@@ -684,6 +735,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitSpotSpawn_8cs_source.html#l00043">43</a> of file <a class="el" href="TraitSpotSpawn_8cs_source.html">TraitSpotSpawn.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitSpotSpawn_8cs_source.html#l00022">Update()</a>.</p>
 
 </div>
 </div>
@@ -709,7 +762,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitSpotSpawn_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitSpotSpawn_8cs_source.html">TraitSpotSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa8fead14158139521f68cda9f4b16f0a" name="aa8fead14158139521f68cda9f4b16f0a"></a>
@@ -733,16 +792,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitSpotSpawn_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitSpotSpawn_8cs_source.html">TraitSpotSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitSpotSpawn_8cs_source.html">TraitSpotSpawn.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitSpotSpawn.html">TraitSpotSpawn</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

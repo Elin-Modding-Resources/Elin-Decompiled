@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGameScreenElona.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -391,6 +411,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#a0f27eafbffc56baa929d18974c1ea94f">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00023">23</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">actor</a>.<a class="code hl_variable" href="classEloMapActor.html#a0cbc5602275fa8dbe0af8796cd82d3e8">transMap</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   26</span>        this.actor.selector.hasTargetChanged = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#af01d09ba4e355ad35f69c5b987d0f777">skyBG</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   28</span>        EMono.scene.cam.clearFlags = CameraClearFlags.Color;</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_class" href="classTutorial.html">Tutorial</a>.<a class="code hl_function" href="classTutorial.html#aad010e98af70d4cafa738f43205e4887">Play</a>(<span class="stringliteral">&quot;region&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">actor</a>.<a class="code hl_function" href="classEloMapActor.html#afed22eb90f354b79bcfd64bd5598237e">OnActivate</a>();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a9916c61944ad1e7568a4ad90832675a3"><div class="ttname"><a href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">EMono.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00086">EMono.cs:87</a></div></div>
+<div class="ttc" id="aclassEloMapActor_html_a0cbc5602275fa8dbe0af8796cd82d3e8"><div class="ttname"><a href="classEloMapActor.html#a0cbc5602275fa8dbe0af8796cd82d3e8">EloMapActor.transMap</a></div><div class="ttdeci">Transform transMap</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00099">EloMapActor.cs:99</a></div></div>
+<div class="ttc" id="aclassEloMapActor_html_afed22eb90f354b79bcfd64bd5598237e"><div class="ttname"><a href="classEloMapActor.html#afed22eb90f354b79bcfd64bd5598237e">EloMapActor.OnActivate</a></div><div class="ttdeci">void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00041">EloMapActor.cs:41</a></div></div>
+<div class="ttc" id="aclassGameScreenElona_html_a4fa72af0bded008d5bfb7f6a03893a18"><div class="ttname"><a href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">GameScreenElona.actor</a></div><div class="ttdeci">EloMapActor actor</div><div class="ttdef"><b>Definition:</b> <a href="GameScreenElona_8cs_source.html#l00168">GameScreenElona.cs:168</a></div></div>
+<div class="ttc" id="aclassScene_html_af01d09ba4e355ad35f69c5b987d0f777"><div class="ttname"><a href="classScene.html#af01d09ba4e355ad35f69c5b987d0f777">Scene.skyBG</a></div><div class="ttdeci">MeshRenderer skyBG</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01041">Scene.cs:1041</a></div></div>
+<div class="ttc" id="aclassTutorial_html"><div class="ttname"><a href="classTutorial.html">Tutorial</a></div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00003">Tutorial.cs:4</a></div></div>
+<div class="ttc" id="aclassTutorial_html_aad010e98af70d4cafa738f43205e4887"><div class="ttname"><a href="classTutorial.html#aad010e98af70d4cafa738f43205e4887">Tutorial.Play</a></div><div class="ttdeci">static void Play(string idStep)</div><div class="ttdef"><b>Definition:</b> <a href="Tutorial_8cs_source.html#l00005">Tutorial.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameScreenElona_8cs_source.html#l00168">actor</a>, <a class="el" href="EloMapActor_8cs_source.html#l00041">EloMapActor.OnActivate()</a>, <a class="el" href="Tutorial_8cs_source.html#l00005">Tutorial.Play()</a>, <a class="el" href="EMono_8cs_source.html#l00087">EMono.scene</a>, <a class="el" href="Scene_8cs_source.html#l01041">Scene.skyBG</a>, and <a class="el" href="EloMapActor_8cs_source.html#l00099">EloMapActor.transMap</a>.</p>
 
 </div>
 </div>
@@ -420,6 +458,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#a88241bf85fd17eee34fd4653406b13e0">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00038">38</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_variable" href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">actor</a>.<a class="code hl_function" href="classEloMapActor.html#ae60eb854e1b50cf110e9e7e94053bf18">OnChangeHour</a>();</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassEloMapActor_html_ae60eb854e1b50cf110e9e7e94053bf18"><div class="ttname"><a href="classEloMapActor.html#ae60eb854e1b50cf110e9e7e94053bf18">EloMapActor.OnChangeHour</a></div><div class="ttdeci">void OnChangeHour()</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00064">EloMapActor.cs:64</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameScreenElona_8cs_source.html#l00168">actor</a>, and <a class="el" href="EloMapActor_8cs_source.html#l00064">EloMapActor.OnChangeHour()</a>.</p>
 
 </div>
 </div>
@@ -449,6 +493,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#a713947cd2bbb40197db05c484c0e00d6">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00033">33</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">actor</a>.<a class="code hl_function" href="classEloMapActor.html#ad03209ae06c9c40f10886f9129178819">OnDeactivate</a>();</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassEloMapActor_html_ad03209ae06c9c40f10886f9129178819"><div class="ttname"><a href="classEloMapActor.html#ad03209ae06c9c40f10886f9129178819">EloMapActor.OnDeactivate</a></div><div class="ttdeci">void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00052">EloMapActor.cs:52</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GameScreenElona_8cs_source.html#l00168">actor</a>, and <a class="el" href="EloMapActor_8cs_source.html#l00052">EloMapActor.OnDeactivate()</a>.</p>
 
 </div>
 </div>
@@ -478,6 +528,110 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#ad84ec9e6568ac91ca1003ef8dcaf8e62">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00054">54</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        STETilemap fogmap = this.<a class="code hl_variable" href="classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18">actor</a>.<a class="code hl_variable" href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">elomap</a>.<a class="code hl_variable" href="classEloMap.html#a3cae7bc055e90f60e4632ec1a701f088">fogmap</a>;</div>
+<div class="line"><span class="lineno">   57</span>        this.actor.transMap.position = <span class="keyword">new</span> Vector3((<span class="keywordtype">float</span>)(-(<span class="keywordtype">float</span>)fogmap.MinGridX) * <span class="keyword">this</span>.tileAlign.x + <span class="keyword">this</span>.actorPos.x, (<span class="keywordtype">float</span>)(-(<span class="keywordtype">float</span>)fogmap.MinGridY) * <span class="keyword">this</span>.tileAlign.y + <span class="keyword">this</span>.actorPos.y, <span class="keyword">this</span>.actorPos.z);</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (base.fixFocus &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a> == <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordtype">float</span> z = this.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>.z;</div>
+<div class="line"><span class="lineno">   61</span>            this.targetZoom = this.<a class="code hl_property" href="classGameScreenElona.html#a834ad2227fc4e98735e98f36f07a3de9">TargetZoom</a>;</div>
+<div class="line"><span class="lineno">   62</span>            Vector3 vector = (EMono.pc.isSynced ? EMono.pc.renderer.position : (*<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a4d5c007c7d111a07de6a52a5f5e0adba">PositionTopdown</a>())) + this.<a class="code hl_variable" href="classBaseGameScreen.html#a879569727ca2c6d69b11438811d00499">focusFix</a>;</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classBaseGameScreen.html#a5839c04d092fad1832f12eed7075978e">instantFocus</a>)</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                this.position = vector;</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                this.position = Vector3.Lerp(this.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>, vector, this.<a class="code hl_variable" href="classBaseGameScreen.html#a9d786a495da071cef21deb5de748d3d0">focusSpeed</a> * <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>);</div>
+<div class="line"><span class="lineno">   70</span>            }</div>
+<div class="line"><span class="lineno">   71</span>            this.position.z = z;</div>
+<div class="line"><span class="lineno">   72</span>            this.pcOrbit.transform.position = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">IsActive</a>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                this.targetZoom = 0.01f * (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.defaultZoom;</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            this.pushBack = Vector3.zero;</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">scrollX</a> = this.<a class="code hl_variable" href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">scrollX</a>;</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a> = this.<a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a>;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>)scrollX &lt;= this.<a class="code hl_variable" href="classBaseGameScreen.html#a732a2f6d829f4511fa5a769cdc26aee0">mapLimit</a>.x)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                this.pushBack.x = this.mapLimit.x - (float)<a class="code hl_variable" href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">scrollX</a>;</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>)<a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a> &lt;= this.<a class="code hl_variable" href="classBaseGameScreen.html#a732a2f6d829f4511fa5a769cdc26aee0">mapLimit</a>.y)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                this.pushBack.y = this.mapLimit.y - (float)<a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a>;</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>)<a class="code hl_variable" href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">scrollX</a> &gt;= (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> + <span class="keyword">this</span>.mapLimit.width - (<span class="keywordtype">float</span>)(this.width / 2))</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                this.pushBack.x = (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> + <span class="keyword">this</span>.mapLimit.width - (<span class="keywordtype">float</span>)(this.width / 2) - (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">scrollX</a>;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>)<a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a> &gt;= (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> + <span class="keyword">this</span>.mapLimit.height - (<span class="keywordtype">float</span>)(this.height / 2))</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                this.pushBack.y = (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> + <span class="keyword">this</span>.mapLimit.height - (<span class="keywordtype">float</span>)(this.height / 2) - (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">scrollY</a>;</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>            this.position += this.pushBack * Core.delta * this.<a class="code hl_variable" href="classBaseGameScreen.html#a7faf094e8a29182e0833b6f82690696c">pushbackSpeed</a>;</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        this.scrollX = Mathf.FloorToInt(this.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>.x / <span class="keyword">this</span>.tileWorldSize.x) - this.width / 2 + (int)this.<a class="code hl_variable" href="classBaseGameScreen.html#a52b82b4666768ce632a0ef44ff1ce10d">paddingOffset</a>.x;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keyword">this</span>.scrollY = Mathf.FloorToInt(<span class="keyword">this</span>.position.y / <span class="keyword">this</span>.tileWorldSize.y) - this.height / 4 + (int)this.<a class="code hl_variable" href="classBaseGameScreen.html#a52b82b4666768ce632a0ef44ff1ce10d">paddingOffset</a>.y;</div>
+<div class="line"><span class="lineno">  103</span>        if (this.<a class="code hl_variable" href="classBaseGameScreen.html#a99d05a44fb51c31414a2767804bbc495">lastPos</a>.x != (<span class="keywordtype">float</span>)this.scrollX || this.lastPos.y != (float)this.scrollY)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            this.lastPos.x = (float)this.scrollX;</div>
+<div class="line"><span class="lineno">  106</span>            this.lastPos.y = (float)this.scrollY;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        this.camPos.x = this.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>.x;</div>
+<div class="line"><span class="lineno">  109</span>        this.camPos.y = this.<a class="code hl_variable" href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">position</a>.y;</div>
+<div class="line"><span class="lineno">  110</span>        base.SnapScreen(ref this.<a class="code hl_variable" href="classBaseGameScreen.html#a6fcfe1bef34709678347a05237758149">camPos</a>, this.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>);</div>
+<div class="line"><span class="lineno">  111</span>        this.camPos.z = -500f;</div>
+<div class="line"><span class="lineno">  112</span>        EMono.scene.cam.transform.localPosition = this.<a class="code hl_variable" href="classBaseGameScreen.html#a6fcfe1bef34709678347a05237758149">camPos</a>;</div>
+<div class="line"><span class="lineno">  113</span>        this.camPos.z = 0f;</div>
+<div class="line"><span class="lineno">  114</span>        EMono.scene.transAudio.position = this.camPos + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a99728c16cef87724415c3a49d4a813ec">posAudioListener</a>;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMinimap.html">WidgetMinimap</a>.<a class="code hl_variable" href="classWidgetMinimap.html#a867bceff530bdb47b07e0d18e164519f">Instance</a>)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_class" href="classWidgetMinimap.html">WidgetMinimap</a>.<a class="code hl_variable" href="classWidgetMinimap.html#a867bceff530bdb47b07e0d18e164519f">Instance</a>.<a class="code hl_function" href="classWidgetMinimap.html#a91051c9ce62160cf5b16d9e5ba8776b2">OnUpdate</a>();</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        this.<a class="code hl_function" href="classGameScreenElona.html#aba0125cfc7824f989400bdf0bc62d7b5">RefreshWeather</a>();</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_aa93beefaa4b319252e06c7314fb7789f"><div class="ttname"><a href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">ActionMode.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00076">ActionMode.cs:77</a></div></div>
+<div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01699">ActionMode.cs:1699</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a34a5099f8839e2844471ede33cc47643"><div class="ttname"><a href="classBaseGameScreen.html#a34a5099f8839e2844471ede33cc47643">BaseGameScreen.scrollY</a></div><div class="ttdeci">int scrollY</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00853">BaseGameScreen.cs:853</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a4e8e32bd3b4aece0b4f2da253f99477e"><div class="ttname"><a href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">BaseGameScreen.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00833">BaseGameScreen.cs:833</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a52b82b4666768ce632a0ef44ff1ce10d"><div class="ttname"><a href="classBaseGameScreen.html#a52b82b4666768ce632a0ef44ff1ce10d">BaseGameScreen.paddingOffset</a></div><div class="ttdeci">Vector2 paddingOffset</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00826">BaseGameScreen.cs:826</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a5839c04d092fad1832f12eed7075978e"><div class="ttname"><a href="classBaseGameScreen.html#a5839c04d092fad1832f12eed7075978e">BaseGameScreen.instantFocus</a></div><div class="ttdeci">bool instantFocus</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00909">BaseGameScreen.cs:909</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a6fcfe1bef34709678347a05237758149"><div class="ttname"><a href="classBaseGameScreen.html#a6fcfe1bef34709678347a05237758149">BaseGameScreen.camPos</a></div><div class="ttdeci">Vector3 camPos</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00884">BaseGameScreen.cs:884</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a732a2f6d829f4511fa5a769cdc26aee0"><div class="ttname"><a href="classBaseGameScreen.html#a732a2f6d829f4511fa5a769cdc26aee0">BaseGameScreen.mapLimit</a></div><div class="ttdeci">Rect mapLimit</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00830">BaseGameScreen.cs:830</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a7faf094e8a29182e0833b6f82690696c"><div class="ttname"><a href="classBaseGameScreen.html#a7faf094e8a29182e0833b6f82690696c">BaseGameScreen.pushbackSpeed</a></div><div class="ttdeci">float pushbackSpeed</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00800">BaseGameScreen.cs:800</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a879569727ca2c6d69b11438811d00499"><div class="ttname"><a href="classBaseGameScreen.html#a879569727ca2c6d69b11438811d00499">BaseGameScreen.focusFix</a></div><div class="ttdeci">Vector3 focusFix</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00814">BaseGameScreen.cs:814</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a94b0cc44b9446149cbe3b66bfd3c97be"><div class="ttname"><a href="classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be">BaseGameScreen.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00882">BaseGameScreen.cs:882</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a957dc03dc0d29e230bc7c861929c6742"><div class="ttname"><a href="classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742">BaseGameScreen.scrollX</a></div><div class="ttdeci">int scrollX</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00851">BaseGameScreen.cs:851</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a99d05a44fb51c31414a2767804bbc495"><div class="ttname"><a href="classBaseGameScreen.html#a99d05a44fb51c31414a2767804bbc495">BaseGameScreen.lastPos</a></div><div class="ttdeci">Vector3 lastPos</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00828">BaseGameScreen.cs:828</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a9d786a495da071cef21deb5de748d3d0"><div class="ttname"><a href="classBaseGameScreen.html#a9d786a495da071cef21deb5de748d3d0">BaseGameScreen.focusSpeed</a></div><div class="ttdeci">float focusSpeed</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00839">BaseGameScreen.cs:839</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_a3a3912cba4c1650d7445416067e3ff0e"><div class="ttname"><a href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">CardRenderer.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00716">CardRenderer.cs:716</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00056">Chara.cs:57</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00693">Core.cs:693</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00006">EMono.cs:7</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f5537c2acc423bdbc584f2e2a73629"><div class="ttname"><a href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">EMono._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00046">EMono.cs:47</a></div></div>
+<div class="ttc" id="aclassEloMapActor_html_aebdccd457884172c1be9c544509e57e2"><div class="ttname"><a href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">EloMapActor.elomap</a></div><div class="ttdeci">EloMap elomap</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00097">EloMapActor.cs:97</a></div></div>
+<div class="ttc" id="aclassEloMap_html_a3cae7bc055e90f60e4632ec1a701f088"><div class="ttname"><a href="classEloMap.html#a3cae7bc055e90f60e4632ec1a701f088">EloMap.fogmap</a></div><div class="ttdeci">STETilemap fogmap</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00418">EloMap.cs:418</a></div></div>
+<div class="ttc" id="aclassGameScreenElona_html_a834ad2227fc4e98735e98f36f07a3de9"><div class="ttname"><a href="classGameScreenElona.html#a834ad2227fc4e98735e98f36f07a3de9">GameScreenElona.TargetZoom</a></div><div class="ttdeci">override float TargetZoom</div><div class="ttdef"><b>Definition:</b> <a href="GameScreenElona_8cs_source.html#l00015">GameScreenElona.cs:16</a></div></div>
+<div class="ttc" id="aclassGameScreenElona_html_aba0125cfc7824f989400bdf0bc62d7b5"><div class="ttname"><a href="classGameScreenElona.html#aba0125cfc7824f989400bdf0bc62d7b5">GameScreenElona.RefreshWeather</a></div><div class="ttdeci">override void RefreshWeather()</div><div class="ttdef"><b>Definition:</b> <a href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.cs:122</a></div></div>
+<div class="ttc" id="aclassGame_html_abc8a6c6cf00c78236e51e7f6a94407f4"><div class="ttname"><a href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">Game.config</a></div><div class="ttdeci">Game.Config config</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00850">Game.cs:850</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
+<div class="ttc" id="aclassPoint_html_a4d5c007c7d111a07de6a52a5f5e0adba"><div class="ttname"><a href="classPoint.html#a4d5c007c7d111a07de6a52a5f5e0adba">Point.PositionTopdown</a></div><div class="ttdeci">ref Vector3 PositionTopdown()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00650">Point.cs:650</a></div></div>
+<div class="ttc" id="aclassScene_html_a99728c16cef87724415c3a49d4a813ec"><div class="ttname"><a href="classScene.html#a99728c16cef87724415c3a49d4a813ec">Scene.posAudioListener</a></div><div class="ttdeci">Vector3 posAudioListener</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01005">Scene.cs:1005</a></div></div>
+<div class="ttc" id="aclassWidgetMinimap_html"><div class="ttname"><a href="classWidgetMinimap.html">WidgetMinimap</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMinimap_8cs_source.html#l00006">WidgetMinimap.cs:7</a></div></div>
+<div class="ttc" id="aclassWidgetMinimap_html_a867bceff530bdb47b07e0d18e164519f"><div class="ttname"><a href="classWidgetMinimap.html#a867bceff530bdb47b07e0d18e164519f">WidgetMinimap.Instance</a></div><div class="ttdeci">static WidgetMinimap Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMinimap_8cs_source.html#l00248">WidgetMinimap.cs:248</a></div></div>
+<div class="ttc" id="aclassWidgetMinimap_html_a91051c9ce62160cf5b16d9e5ba8776b2"><div class="ttname"><a href="classWidgetMinimap.html#a91051c9ce62160cf5b16d9e5ba8776b2">WidgetMinimap.OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMinimap_8cs_source.html#l00190">WidgetMinimap.cs:190</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00168">actor</a>, <a class="el" href="ActionMode_8cs_source.html#l01699">ActionMode.Adv</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00884">BaseGameScreen.camPos</a>, <a class="el" href="Game_8cs_source.html#l00850">Game.config</a>, <a class="el" href="Chara_8cs_source.html#l00057">Chara.currentZone</a>, <a class="el" href="EloMapActor_8cs_source.html#l00097">EloMapActor.elomap</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00814">BaseGameScreen.focusFix</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00839">BaseGameScreen.focusSpeed</a>, <a class="el" href="EloMap_8cs_source.html#l00418">EloMap.fogmap</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00248">WidgetMinimap.Instance</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00909">BaseGameScreen.instantFocus</a>, <a class="el" href="ActionMode_8cs_source.html#l00077">ActionMode.IsActive</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00828">BaseGameScreen.lastPos</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00830">BaseGameScreen.mapLimit</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00190">WidgetMinimap.OnUpdate()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00826">BaseGameScreen.paddingOffset</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Scene_8cs_source.html#l01005">Scene.posAudioListener</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00882">BaseGameScreen.position</a>, <a class="el" href="CardRenderer_8cs_source.html#l00716">CardRenderer.position</a>, <a class="el" href="Point_8cs_source.html#l00650">Point.PositionTopdown()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00800">BaseGameScreen.pushbackSpeed</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00122">RefreshWeather()</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="EMono_8cs_source.html#l00087">EMono.scene</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00851">BaseGameScreen.scrollX</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00853">BaseGameScreen.scrollY</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00016">TargetZoom</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00833">BaseGameScreen.Zoom</a>.</p>
 
 </div>
 </div>
@@ -507,6 +661,80 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#ad2bb7197eca837be47a45df5394940f7">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00122">122</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_function" href="classWeather.html#ae2240bac78f6818cb0fb76a3fa2412f7">RefreshWeather</a>();</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_class" href="classPoint.html">Point</a> pos = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>;</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_class" href="classWeather.html">Weather</a> weather = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>;</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a> currentCondition = weather.<a class="code hl_property" href="classWeather.html#a990cf2ab91b952f36cdaccd7c74f209d">CurrentCondition</a>;</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">bool</span> isRaining = weather.<a class="code hl_property" href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">IsRaining</a>;</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">bool</span> isEther = weather.<a class="code hl_property" href="classWeather.html#a1079e0c2b269a60e809190e3a01b6eb2">IsEther</a>;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">bool</span> flag = currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Snow;</div>
+<div class="line"><span class="lineno">  131</span>        EMono.scene.filterRain.enabled = (isRaining &amp;&amp; !flag &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.config.graphic.enhanceRain);</div>
+<div class="line"><span class="lineno">  132</span>        EMono.scene.filterRain.Fade = ((currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy) ? 0.4f : 0.3f);</div>
+<div class="line"><span class="lineno">  133</span>        EMono.scene.rain.enableEmission = (isRaining &amp;&amp; !flag);</div>
+<div class="line"><span class="lineno">  134</span>        ParticleSystem.EmissionModule emission = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#aeee4386e30801230f9e816d4dd264925">rain</a>.emission;</div>
+<div class="line"><span class="lineno">  135</span>        emission.rateOverTime = (float)((currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy) ? 700 : 200);</div>
+<div class="line"><span class="lineno">  136</span>        EMono.scene.snow.enableEmission = flag;</div>
+<div class="line"><span class="lineno">  137</span>        emission = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a1ef55b060a26c3075eca01e639a74bad">snow</a>.emission;</div>
+<div class="line"><span class="lineno">  138</span>        emission.rateOverTime = (float)((currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.SnowHeavy) ? 120 : 35);</div>
+<div class="line"><span class="lineno">  139</span>        EMono.scene.ether.enableEmission = isEther;</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a1ef55b060a26c3075eca01e639a74bad">snow</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#aeee4386e30801230f9e816d4dd264925">rain</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a048ab3d3f2acc2f08becb0b4492a5d17">ether</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a88ea34ddba44f96a7c1ad12bc9741ebf">blossom</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a9fcad3311cb42fe505b6bb6fb9e1d819">godray</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a3d37771476cf18f00476f8166657fb99">godrayDust</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  146</span>        EMono.scene.sfxRain._Volume += Core.delta * ((isRaining &amp;&amp; !flag) ? 0.5f : -0.5f);</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#af66afe3cc9575a1606502a455af45c75">sfxRain</a>.SetVolume(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#af66afe3cc9575a1606502a455af45c75">sfxRain</a>._Volume);</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a0e47093872358889dfc336c523bac0ac">sfxWind</a>.SetVolume(1f);</div>
+<div class="line"><span class="lineno">  149</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#ab6c45bb30cd362b1c8c00c3f1ee686f1">sfxSea</a>.SetVolume(Mathf.Lerp(0f, 1f, -0.05f * (<span class="keywordtype">float</span>)(pos.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> - 20)));</div>
+<div class="line"><span class="lineno">  150</span>        EMono.scene.rain.main.prewarm = (EMono.scene.snow.main.prewarm = (EMono.scene.ether.main.prewarm = <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  151</span>        ParticleSystem[] array = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#afdad28e07ce9d68dc2955bdbc0cbee73">blossoms</a>;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  153</span>        {</div>
+<div class="line"><span class="lineno">  154</span>            array[i].main.prewarm = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">bool</span> enableEmission = currentCondition == Weather.Condition.SnowHeavy &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.config.graphic.blizzard;</div>
+<div class="line"><span class="lineno">  157</span>        array = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#ac87e94b36b989dadef86aeb0b7825993">blizzards</a>;</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            array[i].enableEmission = enableEmission;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        EMono.scene.transBlizzard.localScale = <span class="keyword">new</span> Vector3(2f, 2f, 2f);</div>
+<div class="line"><span class="lineno">  163</span>        EMono.scene.camSupport.grading.profile.fog = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a026391b61faea40ce50d19f38ecdeb14">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.fogs[<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#af205601b66cbc06b45c7495f42bc9dd9">fog</a>];</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordtype">float</span> sceneBrightness = (!EMono._map.IsIndoor &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_property" href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">IsRaining</a>) ? ((currentCondition == <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.RainHeavy) ? -0.06f : -0.03f) : 0f;</div>
+<div class="line"><span class="lineno">  165</span>        base.camSupport.grading.sceneBrightness = sceneBrightness;</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a026391b61faea40ce50d19f38ecdeb14"><div class="ttname"><a href="classEMono.html#a026391b61faea40ce50d19f38ecdeb14">EMono.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00102">EMono.cs:103</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassEMono_html_a3e18271d35c6625bff2e03676a3e5c61"><div class="ttname"><a href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">EMono.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00126">EMono.cs:127</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a000b0eb1e81cc120ffacafb5630c8899"><div class="ttname"><a href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">GameSetting.render</a></div><div class="ttdeci">GameSetting.RenderSetting render</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00027">GameSetting.cs:27</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_af205601b66cbc06b45c7495f42bc9dd9"><div class="ttname"><a href="classMapConfig.html#af205601b66cbc06b45c7495f42bc9dd9">MapConfig.fog</a></div><div class="ttdeci">FogType fog</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00100">MapConfig.cs:100</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02842">Map.cs:2842</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassScene_html_a048ab3d3f2acc2f08becb0b4492a5d17"><div class="ttname"><a href="classScene.html#a048ab3d3f2acc2f08becb0b4492a5d17">Scene.ether</a></div><div class="ttdeci">ParticleSystem ether</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01025">Scene.cs:1025</a></div></div>
+<div class="ttc" id="aclassScene_html_a0e47093872358889dfc336c523bac0ac"><div class="ttname"><a href="classScene.html#a0e47093872358889dfc336c523bac0ac">Scene.sfxWind</a></div><div class="ttdeci">SoundSource sfxWind</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01053">Scene.cs:1053</a></div></div>
+<div class="ttc" id="aclassScene_html_a1ef55b060a26c3075eca01e639a74bad"><div class="ttname"><a href="classScene.html#a1ef55b060a26c3075eca01e639a74bad">Scene.snow</a></div><div class="ttdeci">ParticleSystem snow</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01023">Scene.cs:1023</a></div></div>
+<div class="ttc" id="aclassScene_html_a3d37771476cf18f00476f8166657fb99"><div class="ttname"><a href="classScene.html#a3d37771476cf18f00476f8166657fb99">Scene.godrayDust</a></div><div class="ttdeci">ParticleSystem godrayDust</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01029">Scene.cs:1029</a></div></div>
+<div class="ttc" id="aclassScene_html_a88ea34ddba44f96a7c1ad12bc9741ebf"><div class="ttname"><a href="classScene.html#a88ea34ddba44f96a7c1ad12bc9741ebf">Scene.blossom</a></div><div class="ttdeci">ParticleSystem blossom</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01031">Scene.cs:1031</a></div></div>
+<div class="ttc" id="aclassScene_html_a9fcad3311cb42fe505b6bb6fb9e1d819"><div class="ttname"><a href="classScene.html#a9fcad3311cb42fe505b6bb6fb9e1d819">Scene.godray</a></div><div class="ttdeci">ParticleSystem godray</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01027">Scene.cs:1027</a></div></div>
+<div class="ttc" id="aclassScene_html_ab6c45bb30cd362b1c8c00c3f1ee686f1"><div class="ttname"><a href="classScene.html#ab6c45bb30cd362b1c8c00c3f1ee686f1">Scene.sfxSea</a></div><div class="ttdeci">SoundSource sfxSea</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01055">Scene.cs:1055</a></div></div>
+<div class="ttc" id="aclassScene_html_ac87e94b36b989dadef86aeb0b7825993"><div class="ttname"><a href="classScene.html#ac87e94b36b989dadef86aeb0b7825993">Scene.blizzards</a></div><div class="ttdeci">ParticleSystem[] blizzards</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01037">Scene.cs:1037</a></div></div>
+<div class="ttc" id="aclassScene_html_aeee4386e30801230f9e816d4dd264925"><div class="ttname"><a href="classScene.html#aeee4386e30801230f9e816d4dd264925">Scene.rain</a></div><div class="ttdeci">ParticleSystem rain</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01021">Scene.cs:1021</a></div></div>
+<div class="ttc" id="aclassScene_html_af66afe3cc9575a1606502a455af45c75"><div class="ttname"><a href="classScene.html#af66afe3cc9575a1606502a455af45c75">Scene.sfxRain</a></div><div class="ttdeci">SoundSource sfxRain</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01051">Scene.cs:1051</a></div></div>
+<div class="ttc" id="aclassScene_html_afdad28e07ce9d68dc2955bdbc0cbee73"><div class="ttname"><a href="classScene.html#afdad28e07ce9d68dc2955bdbc0cbee73">Scene.blossoms</a></div><div class="ttdeci">ParticleSystem[] blossoms</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01035">Scene.cs:1035</a></div></div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00006">Weather.cs:7</a></div></div>
+<div class="ttc" id="aclassWeather_html_a1079e0c2b269a60e809190e3a01b6eb2"><div class="ttname"><a href="classWeather.html#a1079e0c2b269a60e809190e3a01b6eb2">Weather.IsEther</a></div><div class="ttdeci">bool IsEther</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00068">Weather.cs:69</a></div></div>
+<div class="ttc" id="aclassWeather_html_a990cf2ab91b952f36cdaccd7c74f209d"><div class="ttname"><a href="classWeather.html#a990cf2ab91b952f36cdaccd7c74f209d">Weather.CurrentCondition</a></div><div class="ttdeci">Weather.Condition CurrentCondition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00008">Weather.cs:9</a></div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1c"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a></div><div class="ttdeci">Condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00304">Weather.cs:305</a></div></div>
+<div class="ttc" id="aclassWeather_html_ac7c213524434980d30b9ef9d3e975364"><div class="ttname"><a href="classWeather.html#ac7c213524434980d30b9ef9d3e975364">Weather.IsRaining</a></div><div class="ttdeci">bool IsRaining</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00044">Weather.cs:45</a></div></div>
+<div class="ttc" id="aclassWeather_html_ae2240bac78f6818cb0fb76a3fa2412f7"><div class="ttname"><a href="classWeather.html#ae2240bac78f6818cb0fb76a3fa2412f7">Weather.RefreshWeather</a></div><div class="ttdeci">void RefreshWeather()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00086">Weather.cs:86</a></div></div>
+<div class="ttc" id="aclassWorld_html_abe79d49b82af83246cebd487414ba156"><div class="ttname"><a href="classWorld.html#abe79d49b82af83246cebd487414ba156">World.weather</a></div><div class="ttdeci">Weather weather</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00069">World.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00047">EMono._map</a>, <a class="el" href="Scene_8cs_source.html#l01037">Scene.blizzards</a>, <a class="el" href="Scene_8cs_source.html#l01031">Scene.blossom</a>, <a class="el" href="Scene_8cs_source.html#l01035">Scene.blossoms</a>, <a class="el" href="Map_8cs_source.html#l02842">Map.config</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="Weather_8cs_source.html#l00009">Weather.CurrentCondition</a>, <a class="el" href="Scene_8cs_source.html#l01025">Scene.ether</a>, <a class="el" href="MapConfig_8cs_source.html#l00100">MapConfig.fog</a>, <a class="el" href="Scene_8cs_source.html#l01027">Scene.godray</a>, <a class="el" href="Scene_8cs_source.html#l01029">Scene.godrayDust</a>, <a class="el" href="Weather_8cs_source.html#l00069">Weather.IsEther</a>, <a class="el" href="Weather_8cs_source.html#l00045">Weather.IsRaining</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Scene_8cs_source.html#l01021">Scene.rain</a>, <a class="el" href="Weather_8cs_source.html#l00086">Weather.RefreshWeather()</a>, <a class="el" href="GameSetting_8cs_source.html#l00027">GameSetting.render</a>, <a class="el" href="EMono_8cs_source.html#l00087">EMono.scene</a>, <a class="el" href="EMono_8cs_source.html#l00103">EMono.setting</a>, <a class="el" href="Scene_8cs_source.html#l01051">Scene.sfxRain</a>, <a class="el" href="Scene_8cs_source.html#l01055">Scene.sfxSea</a>, <a class="el" href="Scene_8cs_source.html#l01053">Scene.sfxWind</a>, <a class="el" href="Scene_8cs_source.html#l01023">Scene.snow</a>, <a class="el" href="World_8cs_source.html#l00069">World.weather</a>, <a class="el" href="EMono_8cs_source.html#l00127">EMono.world</a>, and <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameScreenElona_8cs_source.html#l00054">RefreshPosition()</a>.</p>
 
 </div>
 </div>
@@ -536,6 +764,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseGameScreen.html#af9bc34a523d8b3336dd3cbf681788e3a">BaseGameScreen</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00043">43</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        this.tileAlign = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classBaseGameScreen.html#a71c578a57a6ecaf86b5a1b6218fc0d9c">tileSize</a>.x * 0.01f, <span class="keyword">this</span>.tileSize.y * 0.01f);</div>
+<div class="line"><span class="lineno">   46</span>        this.tileWorldSize = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classBaseGameScreen.html#a71c578a57a6ecaf86b5a1b6218fc0d9c">tileSize</a>.x * 0.01f, <span class="keyword">this</span>.tileSize.y * 0.01f);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordtype">float</span> x = this.<a class="code hl_variable" href="classBaseGameScreen.html#a71c578a57a6ecaf86b5a1b6218fc0d9c">tileSize</a>.x;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">float</span> num = 100f / x;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">float</span> num2 = num * 100f;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">float</span> num3 = num * 100f;</div>
+<div class="line"><span class="lineno">   51</span>        this.tileViewSize = <span class="keyword">new</span> Vector2(num2 * 0.01f, num3 * 0.01f);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a71c578a57a6ecaf86b5a1b6218fc0d9c"><div class="ttname"><a href="classBaseGameScreen.html#a71c578a57a6ecaf86b5a1b6218fc0d9c">BaseGameScreen.tileSize</a></div><div class="ttdeci">Vector2 tileSize</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00804">BaseGameScreen.cs:804</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseGameScreen_8cs_source.html#l00804">BaseGameScreen.tileSize</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EloMapActor_8cs_source.html#l00021">EloMapActor.Initialize()</a>.</p>
 
 </div>
 </div>
@@ -554,6 +796,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00168">168</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GameScreenElona_8cs_source.html#l00023">OnActivate()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00038">OnChangeHour()</a>, <a class="el" href="GameScreenElona_8cs_source.html#l00033">OnDeactivate()</a>, and <a class="el" href="GameScreenElona_8cs_source.html#l00054">RefreshPosition()</a>.</p>
+
 </div>
 </div>
 <a id="a4d423e8df1990a981499b182ab57b79a" name="a4d423e8df1990a981499b182ab57b79a"></a>
@@ -569,6 +813,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00174">174</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EloMapActor_8cs_source.html#l00021">EloMapActor.Initialize()</a>.</p>
 
 </div>
 </div>
@@ -602,6 +848,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00172">172</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerTravel_8cs_source.html#l00020">LayerTravel.OnInit()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -626,7 +874,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00007">7</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classGameScreenElona.html#a8852f94f6bae41dbf52bb423b08cf7c5">skyRate</a>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassGameScreenElona_html_a8852f94f6bae41dbf52bb423b08cf7c5"><div class="ttname"><a href="classGameScreenElona.html#a8852f94f6bae41dbf52bb423b08cf7c5">GameScreenElona.skyRate</a></div><div class="ttdeci">float skyRate</div><div class="ttdef"><b>Definition:</b> <a href="GameScreenElona_8cs_source.html#l00170">GameScreenElona.cs:170</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a834ad2227fc4e98735e98f36f07a3de9" name="a834ad2227fc4e98735e98f36f07a3de9"></a>
@@ -650,6 +905,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GameScreenElona_8cs_source.html#l00015">15</a> of file <a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> this.zoom + 0.01f * (float)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.regionZoom - 1f;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameScreenElona_8cs_source.html#l00054">RefreshPosition()</a>.</p>
 
 </div>
 </div>
@@ -657,9 +920,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GameScreenElona_8cs_source.html">GameScreenElona.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGameScreenElona.html">GameScreenElona</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

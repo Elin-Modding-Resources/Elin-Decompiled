@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitFigure.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -669,6 +689,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370">TraitCard</a>, and <a class="el" href="classTraitStatue.html#ab962c6f56d3b223ee0dae7dd6fc511ae">TraitStatue</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>.</p>
 
 </div>
 </div>
@@ -698,6 +723,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a465361d0239bbdd1358d35046e4e6c87">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> base.GetValue();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> (base.GetValue() + <span class="keyword">this</span>.source.LV * 50) * (this.source.multisize ? 2 : 1) * ((this.<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> &gt;= 4) ? 2 : 1);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a434ba5fccf3e0227791c1561a3fa5903"><div class="ttname"><a href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">CardRow.quality</a></div><div class="ttdeci">int quality</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00135">CardRow.cs:135</a></div></div>
+<div class="ttc" id="aclassTraitFigure_html_a6dc624d3d99e0e0b72c7495de02a41f6"><div class="ttname"><a href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">TraitFigure.source</a></div><div class="ttdeci">CardRow source</div><div class="ttdef"><b>Definition:</b> <a href="TraitFigure_8cs_source.html#l00015">TraitFigure.cs:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardRow_8cs_source.html#l00135">CardRow.quality</a>, and <a class="el" href="TraitFigure_8cs_source.html#l00016">source</a>.</p>
 
 </div>
 </div>
@@ -728,6 +764,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a230baa05c8fbca42690cde706f5b6f20">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00036">36</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">c_idRefCard</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classRenderRow.html">RenderRow</a> renderRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.map.TryGetValue(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">c_idRefCard</a>, <span class="keyword">null</span>) ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.map[<span class="stringliteral">&quot;putty&quot;</span>];</div>
+<div class="line"><span class="lineno">   43</span>        Transform transform = b.<a class="code hl_function" href="classButtonGrid.html#ad835d226c20efefa4c9ab4f23a2e9d5d">Attach</a>&lt;Transform&gt;(<span class="stringliteral">&quot;figure&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   44</span>        renderRow.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(transform.GetChild(0).GetComponent&lt;Image&gt;(), <span class="keyword">null</span>, 0, <span class="keyword">false</span>, 0, 0);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html_ad835d226c20efefa4c9ab4f23a2e9d5d"><div class="ttname"><a href="classButtonGrid.html#ad835d226c20efefa4c9ab4f23a2e9d5d">ButtonGrid.Attach</a></div><div class="ttdeci">Transform Attach(string id, bool rightAttach=true)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00051">ButtonGrid.cs:51</a></div></div>
+<div class="ttc" id="aclassCard_html_afc37a942e92e75a2582c8f35db05dc27"><div class="ttname"><a href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">Card.c_idRefCard</a></div><div class="ttdeci">string c_idRefCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01543">Card.cs:1544</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassRenderRow_html"><div class="ttname"><a href="classRenderRow.html">RenderRow</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00006">RenderRow.cs:7</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a31e60d1c7ca10e9b57f695e66dfc93a6"><div class="ttname"><a href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00345">RenderRow.cs:345</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00153">SourceManager.cs:153</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00051">ButtonGrid.Attach()</a>, <a class="el" href="Card_8cs_source.html#l01544">Card.c_idRefCard</a>, <a class="el" href="SourceManager_8cs_source.html#l00153">SourceManager.charas</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -753,7 +808,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8444d988cf072d1da015423790978202" name="a8444d988cf072d1da015423790978202"></a>
@@ -777,6 +838,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00023">23</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00051">CardRenderer.Draw()</a>.</p>
 
 </div>
 </div>
@@ -801,6 +870,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>.TryGetValue(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afc37a942e92e75a2582c8f35db05dc27">c_idRefCard</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00066">SourceCard.cs:66</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00151">SourceManager.cs:151</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitFigure_8cs_source.html#l00047">GetValue()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +887,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitFigure.html">TraitFigure</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

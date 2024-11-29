@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHUD.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -246,6 +266,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00008">8</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        this.<a class="code hl_variable" href="classHUD.html#a3dfe6bff39dc816bc9645e339dd94d6c">transRight</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassHUD_html_a3dfe6bff39dc816bc9645e339dd94d6c"><div class="ttname"><a href="classHUD.html#a3dfe6bff39dc816bc9645e339dd94d6c">HUD.transRight</a></div><div class="ttdeci">Transform transRight</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00101">HUD.cs:101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HUD_8cs_source.html#l00101">transRight</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00172">UI.OnChangeLayer()</a>.</p>
 
 </div>
 </div>
@@ -290,6 +318,47 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00013">13</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (i == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   18</span>            this.<a class="code hl_function" href="classHUD.html#ae6020ecb8c1bbe9d3ea9558499430e34">SetDragText</a>(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        this.imageDrag.sprite = i.sprite;</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">   23</span>        this.imageDrag.color = i.color;</div>
+<div class="line"><span class="lineno">   24</span>        RectTransform rectTransform = this.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.Rect();</div>
+<div class="line"><span class="lineno">   25</span>        RectTransform rectTransform2 = i.Rect();</div>
+<div class="line"><span class="lineno">   26</span>        rectTransform.sizeDelta = rectTransform2.sizeDelta;</div>
+<div class="line"><span class="lineno">   27</span>        rectTransform.localScale = rectTransform2.localScale;</div>
+<div class="line"><span class="lineno">   28</span>        rectTransform.pivot = rectTransform2.pivot;</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (uiText)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            RectTransform rectTransform3 = this.<a class="code hl_variable" href="classHUD.html#ad03061cf220e2979fbcdca7bc5d19890">textDrag2</a>.rectTransform;</div>
+<div class="line"><span class="lineno">   32</span>            RectTransform rectTransform4 = uiText.rectTransform;</div>
+<div class="line"><span class="lineno">   33</span>            rectTransform3.pivot = rectTransform4.pivot;</div>
+<div class="line"><span class="lineno">   34</span>            rectTransform3.anchorMin = rectTransform4.anchorMin;</div>
+<div class="line"><span class="lineno">   35</span>            rectTransform3.anchorMax = rectTransform4.anchorMax;</div>
+<div class="line"><span class="lineno">   36</span>            this.textDrag2.size = uiText.size;</div>
+<div class="line"><span class="lineno">   37</span>            this.textDrag2.fontStyle = uiText.fontStyle;</div>
+<div class="line"><span class="lineno">   38</span>            this.imageDrag.transform.position = i.transform.position;</div>
+<div class="line"><span class="lineno">   39</span>            rectTransform3.position = rectTransform4.position;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        this.imageDrag.transform.position = EInput.mpos + (EClass.game.UseGrid ? this.imageDragFix2 : this.<a class="code hl_variable" href="classHUD.html#aec12d6fa33421ab7bec69561269bca1d">imageDragFix2</a>);</div>
+<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_function" href="classHUD.html#ae6020ecb8c1bbe9d3ea9558499430e34">SetDragText</a>(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   43</span>        Util.ClampToScreen(this.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.Rect(), <span class="keyword">this</span>.marginImageDrag);</div>
+<div class="line"><span class="lineno">   44</span>        this.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassHUD_html_a35962c2c8e0a7151c9572c89f39b6b90"><div class="ttname"><a href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">HUD.imageDrag</a></div><div class="ttdeci">Image imageDrag</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00067">HUD.cs:67</a></div></div>
+<div class="ttc" id="aclassHUD_html_ad03061cf220e2979fbcdca7bc5d19890"><div class="ttname"><a href="classHUD.html#ad03061cf220e2979fbcdca7bc5d19890">HUD.textDrag2</a></div><div class="ttdeci">UIText textDrag2</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00075">HUD.cs:75</a></div></div>
+<div class="ttc" id="aclassHUD_html_ae6020ecb8c1bbe9d3ea9558499430e34"><div class="ttname"><a href="classHUD.html#ae6020ecb8c1bbe9d3ea9558499430e34">HUD.SetDragText</a></div><div class="ttdeci">void SetDragText(string text=null, string text2=null)</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00047">HUD.cs:47</a></div></div>
+<div class="ttc" id="aclassHUD_html_aec12d6fa33421ab7bec69561269bca1d"><div class="ttname"><a href="classHUD.html#aec12d6fa33421ab7bec69561269bca1d">HUD.imageDragFix2</a></div><div class="ttdeci">Vector3 imageDragFix2</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00083">HUD.cs:83</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HUD_8cs_source.html#l00067">imageDrag</a>, <a class="el" href="HUD_8cs_source.html#l00083">imageDragFix2</a>, <a class="el" href="HUD_8cs_source.html#l00047">SetDragText()</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="HUD_8cs_source.html#l00075">textDrag2</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00734">UI.EndDrag()</a>.</p>
 
 </div>
 </div>
@@ -328,6 +397,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00047">47</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> != this.<a class="code hl_variable" href="classHUD.html#a0dfdd43f0a6b16dfcaed94982366a000">textDrag</a>.text)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            this.textDrag.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.lang();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classHUD.html#a0dfdd43f0a6b16dfcaed94982366a000">textDrag</a>.transform.parent.SetActive(!<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.IsEmpty());</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (text2 != <span class="keyword">null</span> &amp;&amp; text2 != this.<a class="code hl_variable" href="classHUD.html#ad03061cf220e2979fbcdca7bc5d19890">textDrag2</a>.text)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            this.textDrag2.text = text2.lang();</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_variable" href="classHUD.html#ad03061cf220e2979fbcdca7bc5d19890">textDrag2</a>.SetActive(!text2.IsEmpty());</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassHUD_html_a0dfdd43f0a6b16dfcaed94982366a000"><div class="ttname"><a href="classHUD.html#a0dfdd43f0a6b16dfcaed94982366a000">HUD.textDrag</a></div><div class="ttdeci">UIText textDrag</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00073">HUD.cs:73</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="HUD_8cs_source.html#l00073">textDrag</a>, and <a class="el" href="HUD_8cs_source.html#l00075">textDrag2</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HUD_8cs_source.html#l00013">SetDragImage()</a>.</p>
 
 </div>
 </div>
@@ -378,6 +464,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00065">65</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00120">UI.OnActivateZone()</a>.</p>
+
 </div>
 </div>
 <a id="afe95a0451516e341b7ecbb940b3b85d6" name="afe95a0451516e341b7ecbb940b3b85d6"></a>
@@ -393,6 +481,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00061">61</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00172">UI.OnChangeLayer()</a>.</p>
 
 </div>
 </div>
@@ -410,6 +500,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00069">69</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00239">UI.HideCover()</a>, and <a class="el" href="UI_8cs_source.html#l00221">UI.ShowCover()</a>.</p>
+
 </div>
 </div>
 <a id="a35962c2c8e0a7151c9572c89f39b6b90" name="a35962c2c8e0a7151c9572c89f39b6b90"></a>
@@ -425,6 +517,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00067">67</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00293">UI.OnUpdate()</a>, and <a class="el" href="HUD_8cs_source.html#l00013">SetDragImage()</a>.</p>
 
 </div>
 </div>
@@ -457,6 +551,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00083">83</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00293">UI.OnUpdate()</a>, and <a class="el" href="HUD_8cs_source.html#l00013">SetDragImage()</a>.</p>
 
 </div>
 </div>
@@ -506,6 +602,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00089">89</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00293">UI.OnUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="aa2677d66edaf9ffc662aa74bd44783ad" name="aa2677d66edaf9ffc662aa74bd44783ad"></a>
@@ -538,6 +636,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00073">73</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HUD_8cs_source.html#l00047">SetDragText()</a>.</p>
+
 </div>
 </div>
 <a id="ad03061cf220e2979fbcdca7bc5d19890" name="ad03061cf220e2979fbcdca7bc5d19890"></a>
@@ -553,6 +653,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00075">75</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HUD_8cs_source.html#l00013">SetDragImage()</a>, and <a class="el" href="HUD_8cs_source.html#l00047">SetDragText()</a>.</p>
 
 </div>
 </div>
@@ -602,6 +704,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00085">85</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00346">UI.ShowMouseHint()</a>.</p>
+
 </div>
 </div>
 <a id="a954133c11609d3e694f468fcc13fcff3" name="a954133c11609d3e694f468fcc13fcff3"></a>
@@ -617,6 +721,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00087">87</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00346">UI.ShowMouseHint()</a>.</p>
 
 </div>
 </div>
@@ -634,6 +740,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00079">79</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00398">UI.HideMouseHint()</a>, and <a class="el" href="UI_8cs_source.html#l00346">UI.ShowMouseHint()</a>.</p>
+
 </div>
 </div>
 <a id="a27c3195857629794eb5e62586a95669a" name="a27c3195857629794eb5e62586a95669a"></a>
@@ -649,6 +757,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00077">77</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00398">UI.HideMouseHint()</a>, and <a class="el" href="UI_8cs_source.html#l00346">UI.ShowMouseHint()</a>.</p>
 
 </div>
 </div>
@@ -697,6 +807,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HUD_8cs_source.html#l00101">101</a> of file <a class="el" href="HUD_8cs_source.html">HUD.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HUD_8cs_source.html#l00008">HideMouseInfo()</a>.</p>
 
 </div>
 </div>
@@ -752,9 +864,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="HUD_8cs_source.html">HUD.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHUD.html">HUD</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

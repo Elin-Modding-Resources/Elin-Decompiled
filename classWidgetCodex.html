@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetCodex.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -347,7 +367,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00150">150</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  151</span>    {</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_enumvalue" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fae81509b38d0619baeaefaa5f6cb529f2">Codex</a>,</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_enumvalue" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">Search</a></div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="ttc" id="aclassWidgetCodex_html_aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3"><div class="ttname"><a href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">WidgetCodex.SearchType.Search</a></div><div class="ttdeci">@ Search</div></div>
+<div class="ttc" id="aclassWidgetCodex_html_aca855ce6faa977c8148fadeb573bc43fae81509b38d0619baeaefaa5f6cb529f2"><div class="ttname"><a href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fae81509b38d0619baeaefaa5f6cb529f2">WidgetCodex.SearchType.Codex</a></div><div class="ttdeci">@ Codex</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -377,6 +403,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classWidgetSearch.html#af03a19d7ea8c19541c75a9c5c524379b">WidgetSearch</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00129">129</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00098">Update()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +435,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        this.field.text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acbcb282408930b5d6d38465d1c585b12" name="acbcb282408930b5d6d38465d1c585b12"></a>
@@ -435,6 +469,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classWidgetSearch.html#ac8574c8fb779cb603c78aa4f1b5efb45">WidgetSearch</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00017">17</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4">field</a>.onValueChanged.AddListener(<span class="keyword">new</span> UnityAction&lt;string&gt;(this.<a class="code hl_enumvalue" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">Search</a>));</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4">field</a>.onSubmit.AddListener(<span class="keyword">new</span> UnityAction&lt;string&gt;(this.<a class="code hl_enumvalue" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">Search</a>));</div>
+<div class="line"><span class="lineno">   21</span>        this.lastSearch = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   22</span>        this.<a class="code hl_enumvalue" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">Search</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classZone.html#a431112b0d20abf04b97fddc991b01b51">isStarted</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_variable" href="classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4">field</a>.Select();</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_a8484bcf8e505aef3f432d70e532026e4"><div class="ttname"><a href="classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4">WidgetCodex.field</a></div><div class="ttdeci">InputField field</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00134">WidgetCodex.cs:134</a></div></div>
+<div class="ttc" id="aclassZone_html_a431112b0d20abf04b97fddc991b01b51"><div class="ttname"><a href="classZone.html#a431112b0d20abf04b97fddc991b01b51">Zone.isStarted</a></div><div class="ttdeci">bool isStarted</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03885">Zone.cs:3885</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00134">field</a>, <a class="el" href="Zone_8cs_source.html#l03885">Zone.isStarted</a>, and <a class="el" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43fa13348442cc6a27032d2b4aa28b75a5d3">Search</a>.</p>
 
 </div>
 </div>
@@ -464,6 +514,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classWidgetSearch.html#a5d8f7c6c038935b59aec88a0522a7837">WidgetSearch</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00075">75</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        BaseList baseList = this.<a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>;</div>
+<div class="line"><span class="lineno">   78</span>        UIList.Callback&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">   79</span>        callback.onClick = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>        };</div>
+<div class="line"><span class="lineno">   82</span>        callback.onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            b.<a class="code hl_function" href="classButtonGrid.html#a2d49c6082902294b551497a7cbdf3192">SetCraftRecipe</a>(a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>.<a class="code hl_enumeration" href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">Mode</a>.RecipeGrid, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   85</span>        };</div>
+<div class="line"><span class="lineno">   86</span>        callback.onList = delegate(UIList.SortMode m)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a> o <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">recipes</a>)</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                this.<a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.Add(o);</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span>        };</div>
+<div class="line"><span class="lineno">   93</span>        baseList.callbacks = callback;</div>
+<div class="line"><span class="lineno">   94</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.List();</div>
+<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.dsv.OnResize();</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a2d49c6082902294b551497a7cbdf3192"><div class="ttname"><a href="classButtonGrid.html#a2d49c6082902294b551497a7cbdf3192">ButtonGrid.SetCraftRecipe</a></div><div class="ttdeci">void SetCraftRecipe(Recipe r, ButtonGrid.Mode mode, bool tooltip=false)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00580">ButtonGrid.cs:580</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a7c813d5ada0a86d8447be38224802048"><div class="ttname"><a href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">ButtonGrid.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00791">ButtonGrid.cs:792</a></div></div>
+<div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00008">Recipe.cs:9</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_a0671e710267d2b4dd33245e34885c04b"><div class="ttname"><a href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">WidgetCodex.recipes</a></div><div class="ttdeci">HashSet&lt; Recipe &gt; recipes</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00140">WidgetCodex.cs:140</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_ad1420a518676d8e32f0712cbbd4752af"><div class="ttname"><a href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">WidgetCodex.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00138">WidgetCodex.cs:138</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetCodex_8cs_source.html#l00138">list</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00140">recipes</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00580">ButtonGrid.SetCraftRecipe()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00034">Search()</a>.</p>
 
 </div>
 </div>
@@ -494,6 +575,65 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classWidgetSearch.html#a221e7018cdade38f8058222c0f76c494">WidgetSearch</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00034">34</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        s = s.ToLower();</div>
+<div class="line"><span class="lineno">   37</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#aca0ddf3f004fedb3bc45b75f3bb996b5">buttonClear</a>.SetActive(this.<a class="code hl_variable" href="classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4">field</a>.text != <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (s == this.<a class="code hl_variable" href="classWidgetCodex.html#a927601397b91bbd91243ec379830052b">lastSearch</a>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classRecipeManager.html">RecipeManager</a>.<a class="code hl_function" href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">BuildList</a>();</div>
+<div class="line"><span class="lineno">   43</span>        HashSet&lt;Recipe&gt; hashSet = <span class="keyword">new</span> HashSet&lt;Recipe&gt;();</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (!s.IsEmpty())</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keyword">using</span> (List&lt;RecipeSource&gt;.Enumerator enumerator = <a class="code hl_class" href="classRecipeManager.html">RecipeManager</a>.<a class="code hl_variable" href="classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a">list</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   49</span>                {</div>
+<div class="line"><span class="lineno">   50</span>                    <a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> recipeSource = enumerator.Current;</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">if</span> (!recipeSource.<a class="code hl_variable" href="classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08">isChara</a> &amp;&amp; !recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">noListing</a> &amp;&amp; !recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">isBridgePillar</a> &amp;&amp; (recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_function" href="classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a">GetSearchName</a>(<span class="keyword">false</span>).Contains(s) || recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_function" href="classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a">GetSearchName</a>(<span class="keyword">true</span>).Contains(s)) &amp;&amp; (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58">knownRecipes</a>.ContainsKey(recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0">id</a>) || recipeSource.<a class="code hl_variable" href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">alwaysKnown</a>))</div>
+<div class="line"><span class="lineno">   52</span>                    {</div>
+<div class="line"><span class="lineno">   53</span>                        hashSet.Add(<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_function" href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Create</a>(recipeSource, -1, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                }</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">goto</span> IL_16D;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> recipeSource2 <span class="keywordflow">in</span> <a class="code hl_class" href="classRecipeManager.html">RecipeManager</a>.<a class="code hl_variable" href="classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a">list</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (!recipeSource2.<a class="code hl_variable" href="classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08">isChara</a> &amp;&amp; !recipeSource2.<a class="code hl_variable" href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">noListing</a> &amp;&amp; !recipeSource2.<a class="code hl_variable" href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">isBridgePillar</a> &amp;&amp; (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58">knownRecipes</a>.ContainsKey(recipeSource2.<a class="code hl_variable" href="classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0">id</a>) || recipeSource2.<a class="code hl_variable" href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">alwaysKnown</a>))</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                hashSet.Add(<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_function" href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Create</a>(recipeSource2, -1, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        IL_16D:</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (!hashSet.SetEquals(<span class="keyword">this</span>.recipes))</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            this.recipes = hashSet;</div>
+<div class="line"><span class="lineno">   70</span>            this.<a class="code hl_function" href="classWidgetCodex.html#aabf442ae0c883a3f3812247e4234f1d5">RefreshList</a>();</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        this.lastSearch = s;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01536">Player.cs:1536</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html"><div class="ttname"><a href="classRecipeManager.html">RecipeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00006">RecipeManager.cs:7</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a08cedf9e6be21bde401f263ff203412f"><div class="ttname"><a href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">RecipeManager.BuildList</a></div><div class="ttdeci">static void BuildList()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00008">RecipeManager.cs:8</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a25ab43108db349acf1928eeaafd0759a"><div class="ttname"><a href="classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a">RecipeManager.list</a></div><div class="ttdeci">static List&lt; RecipeSource &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00299">RecipeManager.cs:299</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_aadf6707359cef0a3f36428b0be7fde58"><div class="ttname"><a href="classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58">RecipeManager.knownRecipes</a></div><div class="ttdeci">Dictionary&lt; string, int &gt; knownRecipes</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00307">RecipeManager.cs:307</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00004">RecipeSource.cs:5</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a010a0bba2369bc5af000bf68245b33d0"><div class="ttname"><a href="classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0">RecipeSource.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00197">RecipeSource.cs:197</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a131007e755b7e6df83226c0ce1796b50"><div class="ttname"><a href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">RecipeSource.alwaysKnown</a></div><div class="ttdeci">bool alwaysKnown</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00211">RecipeSource.cs:211</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a2b57efc5ee24c77c9c4ee3d3b578a37d"><div class="ttname"><a href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">RecipeSource.row</a></div><div class="ttdeci">RenderRow row</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00193">RecipeSource.cs:193</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a7646730e28576ddcc326ba2c218b4903"><div class="ttname"><a href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">RecipeSource.isBridgePillar</a></div><div class="ttdeci">bool isBridgePillar</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00203">RecipeSource.cs:203</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a8f18d60250c94437c895922bf455293a"><div class="ttname"><a href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">RecipeSource.noListing</a></div><div class="ttdeci">bool noListing</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00207">RecipeSource.cs:207</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_ad045f951fe9f92c5fdb3c3c44e8fed08"><div class="ttname"><a href="classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08">RecipeSource.isChara</a></div><div class="ttdeci">bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00205">RecipeSource.cs:205</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a968929b2cbb9d440eeb72b7cd95a5c6c"><div class="ttname"><a href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Recipe.Create</a></div><div class="ttdeci">static Recipe Create(RecipeSource _source, int idMat=-1, Thing ing=null)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00025">Recipe.cs:25</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aa8870920d19affb19b96dd7bd8ce444a"><div class="ttname"><a href="classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a">RenderRow.GetSearchName</a></div><div class="ttdeci">virtual string GetSearchName(bool jp)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00077">RenderRow.cs:77</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_a927601397b91bbd91243ec379830052b"><div class="ttname"><a href="classWidgetCodex.html#a927601397b91bbd91243ec379830052b">WidgetCodex.lastSearch</a></div><div class="ttdeci">string lastSearch</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00142">WidgetCodex.cs:142</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_aabf442ae0c883a3f3812247e4234f1d5"><div class="ttname"><a href="classWidgetCodex.html#aabf442ae0c883a3f3812247e4234f1d5">WidgetCodex.RefreshList</a></div><div class="ttdeci">virtual void RefreshList()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00075">WidgetCodex.cs:75</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_aca0ddf3f004fedb3bc45b75f3bb996b5"><div class="ttname"><a href="classWidgetCodex.html#aca0ddf3f004fedb3bc45b75f3bb996b5">WidgetCodex.buttonClear</a></div><div class="ttdeci">UIButton buttonClear</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00144">WidgetCodex.cs:144</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RecipeSource_8cs_source.html#l00211">RecipeSource.alwaysKnown</a>, <a class="el" href="RecipeManager_8cs_source.html#l00008">RecipeManager.BuildList()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00144">buttonClear</a>, <a class="el" href="Recipe_8cs_source.html#l00025">Recipe.Create()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00134">field</a>, <a class="el" href="RenderRow_8cs_source.html#l00077">RenderRow.GetSearchName()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00197">RecipeSource.id</a>, <a class="el" href="RecipeSource_8cs_source.html#l00203">RecipeSource.isBridgePillar</a>, <a class="el" href="RecipeSource_8cs_source.html#l00205">RecipeSource.isChara</a>, <a class="el" href="RecipeManager_8cs_source.html#l00307">RecipeManager.knownRecipes</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00142">lastSearch</a>, <a class="el" href="RecipeManager_8cs_source.html#l00299">RecipeManager.list</a>, <a class="el" href="RecipeSource_8cs_source.html#l00207">RecipeSource.noListing</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="Player_8cs_source.html#l01536">Player.recipes</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00075">RefreshList()</a>, and <a class="el" href="RecipeSource_8cs_source.html#l00193">RecipeSource.row</a>.</p>
 
 </div>
 </div>
@@ -521,6 +661,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00098">98</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        this.<a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a>++;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.Escape))</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            base.Close();</div>
+<div class="line"><span class="lineno">  104</span>            EInput.Consume(<span class="keyword">false</span>, 5);</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">int</span> functionkeyDown = EInput.GetFunctionkeyDown();</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a> &gt; 10 &amp;&amp; functionkeyDown != -1)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a> hotbarExtra = <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a>.<a class="code hl_variable" href="classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda">HotbarExtra</a>;</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (hotbarExtra)</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                <a class="code hl_class" href="classHotItemWidget.html">HotItemWidget</a> hotItemWidget = hotbarExtra.<a class="code hl_function" href="classWidgetHotbar.html#a5cea9defd44424c129bbafc8a1d82588">GetItem</a>(functionkeyDown) as <a class="code hl_class" href="classHotItemWidget.html">HotItemWidget</a>;</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">if</span> (hotItemWidget != <span class="keyword">null</span> &amp;&amp; hotItemWidget.<a class="code hl_variable" href="classHotItemWidget.html#a66fa75ffd035511bccabab02c44c8018">id</a> == base.ID)</div>
+<div class="line"><span class="lineno">  115</span>                {</div>
+<div class="line"><span class="lineno">  116</span>                    base.Close();</div>
+<div class="line"><span class="lineno">  117</span>                    EInput.Consume(<span class="keyword">false</span>, 5);</div>
+<div class="line"><span class="lineno">  118</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  119</span>                }</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">CheckClose</a>())</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            base.Close();</div>
+<div class="line"><span class="lineno">  125</span>            EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aclassHotItemWidget_html"><div class="ttname"><a href="classHotItemWidget.html">HotItemWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemWidget_8cs_source.html#l00004">HotItemWidget.cs:5</a></div></div>
+<div class="ttc" id="aclassHotItemWidget_html_a66fa75ffd035511bccabab02c44c8018"><div class="ttname"><a href="classHotItemWidget.html#a66fa75ffd035511bccabab02c44c8018">HotItemWidget.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="HotItemWidget_8cs_source.html#l00050">HotItemWidget.cs:50</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_a592a54ff1c5482f437f159397dbd0b14"><div class="ttname"><a href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">WidgetCodex.CheckClose</a></div><div class="ttdeci">virtual bool CheckClose()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00129">WidgetCodex.cs:129</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_ab225e745df05361040fe40eda2b4ee45"><div class="ttname"><a href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">WidgetCodex.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00148">WidgetCodex.cs:148</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html"><div class="ttname"><a href="classWidgetHotbar.html">WidgetHotbar</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00009">WidgetHotbar.cs:10</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a5cea9defd44424c129bbafc8a1d82588"><div class="ttname"><a href="classWidgetHotbar.html#a5cea9defd44424c129bbafc8a1d82588">WidgetHotbar.GetItem</a></div><div class="ttdeci">HotItem GetItem(int index)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00185">WidgetHotbar.cs:185</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a94dd65734e6cc375e940a8532edafdda"><div class="ttname"><a href="classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda">WidgetHotbar.HotbarExtra</a></div><div class="ttdeci">static WidgetHotbar HotbarExtra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00693">WidgetHotbar.cs:693</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetCodex_8cs_source.html#l00129">CheckClose()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00148">count</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00185">WidgetHotbar.GetItem()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00693">WidgetHotbar.HotbarExtra</a>, and <a class="el" href="HotItemWidget_8cs_source.html#l00050">HotItemWidget.id</a>.</p>
 
 </div>
 </div>
@@ -538,6 +716,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00144">144</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00034">Search()</a>.</p>
 
 </div>
 </div>
@@ -563,6 +743,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00148">148</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00098">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a8484bcf8e505aef3f432d70e532026e4" name="a8484bcf8e505aef3f432d70e532026e4"></a>
@@ -578,6 +760,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00134">134</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00017">OnActivate()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00034">Search()</a>.</p>
 
 </div>
 </div>
@@ -595,6 +779,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00142">142</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00034">Search()</a>.</p>
+
 </div>
 </div>
 <a id="ad1420a518676d8e32f0712cbbd4752af" name="ad1420a518676d8e32f0712cbbd4752af"></a>
@@ -611,6 +797,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00138">138</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00075">RefreshList()</a>.</p>
+
 </div>
 </div>
 <a id="a0671e710267d2b4dd33245e34885c04b" name="a0671e710267d2b4dd33245e34885c04b"></a>
@@ -626,6 +814,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00140">140</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00075">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -683,16 +873,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00009">9</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classWidgetCodex.html">WidgetCodex</a>.<a class="code hl_enumeration" href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43f">SearchType</a>.Codex;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassWidgetCodex_html"><div class="ttname"><a href="classWidgetCodex.html">WidgetCodex</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00007">WidgetCodex.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_aca855ce6faa977c8148fadeb573bc43f"><div class="ttname"><a href="classWidgetCodex.html#aca855ce6faa977c8148fadeb573bc43f">WidgetCodex.SearchType</a></div><div class="ttdeci">SearchType</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00150">WidgetCodex.cs:151</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetCodex.html">WidgetCodex</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

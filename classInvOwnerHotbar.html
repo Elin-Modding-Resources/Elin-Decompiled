@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classInvOwnerHotbar.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -384,7 +404,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00021">21</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                                         : base(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>, container, _currency, <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.Default)</div>
+<div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aPriceType_8cs_html_a482277e66af02c7d65679d7485095573"><div class="ttname"><a href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a></div><div class="ttdeci">PriceType</div><div class="ttdef"><b>Definition:</b> <a href="PriceType_8cs_source.html#l00003">PriceType.cs:4</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01363">InvOwner.cs:1363</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -415,6 +440,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#ac429ef09733cd4a990f5b829703a21da">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00025">25</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.layerFloat.GetLayer&lt;<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>&gt;(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            base.OnClick(button);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(this.<a class="code hl_variable" href="classInvOwnerHotbar.html#a73ccd6d72dfbc08153f659aea6166828">index</a> % 10, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassInvOwnerHotbar_html_a73ccd6d72dfbc08153f659aea6166828"><div class="ttname"><a href="classInvOwnerHotbar.html#a73ccd6d72dfbc08153f659aea6166828">InvOwnerHotbar.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerHotbar_8cs_source.html#l00059">InvOwnerHotbar.cs:59</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html"><div class="ttname"><a href="classWidgetCurrentTool.html">WidgetCurrentTool</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00007">WidgetCurrentTool.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a026d2a629ff4d74acd15d5fe806bd04b"><div class="ttname"><a href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">WidgetCurrentTool.Instance</a></div><div class="ttdeci">static WidgetCurrentTool Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.cs:310</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a778e32ad7caa0de0851954a3ced5fae5"><div class="ttname"><a href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">WidgetCurrentTool.Select</a></div><div class="ttdeci">void Select(int index, bool fromHotkey=false)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00223">WidgetCurrentTool.cs:223</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InvOwnerHotbar_8cs_source.html#l00059">index</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00223">WidgetCurrentTool.Select()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -445,6 +488,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#a308d416ebae8a3ff0d3d172927dc91b1">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00051">51</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> == <span class="keyword">this</span>.index)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_function" href="classWidgetCurrentTool.html#ac841b79f588f2a3f21360749afe49db0">Reselect</a>();</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a36452bc25664c77b7481aaab15495d6f"><div class="ttname"><a href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">WidgetCurrentTool.selected</a></div><div class="ttdeci">int selected</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00334">WidgetCurrentTool.cs:334</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_ac841b79f588f2a3f21360749afe49db0"><div class="ttname"><a href="classWidgetCurrentTool.html#ac841b79f588f2a3f21360749afe49db0">WidgetCurrentTool.Reselect</a></div><div class="ttdeci">void Reselect()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00218">WidgetCurrentTool.cs:218</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00218">WidgetCurrentTool.Reselect()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00334">WidgetCurrentTool.selected</a>.</p>
 
 </div>
 </div>
@@ -475,6 +528,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#a96d3ffaeaee1396a65908eb9dbfa56c3">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00036">36</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classInvOwnerHotbar.html#a773641d3d93ff7b49a60cf24adf9c441">AllowAutouse</a>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            base.OnRightClick(button);</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.<a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(this.<a class="code hl_variable" href="classInvOwnerHotbar.html#a73ccd6d72dfbc08153f659aea6166828">index</a> % 10, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassInvOwnerHotbar_html_a773641d3d93ff7b49a60cf24adf9c441"><div class="ttname"><a href="classInvOwnerHotbar.html#a773641d3d93ff7b49a60cf24adf9c441">InvOwnerHotbar.AllowAutouse</a></div><div class="ttdeci">override bool AllowAutouse</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerHotbar_8cs_source.html#l00005">InvOwnerHotbar.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InvOwnerHotbar_8cs_source.html#l00006">AllowAutouse</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00059">index</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00223">WidgetCurrentTool.Select()</a>.</p>
 
 </div>
 </div>
@@ -505,7 +570,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#ac12084ae177f72fc3d8e6127488f1054">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00047">47</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -522,6 +589,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00059">59</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwnerHotbar_8cs_source.html#l00025">OnClick()</a>, and <a class="el" href="InvOwnerHotbar_8cs_source.html#l00036">OnRightClick()</a>.</p>
 
 </div>
 </div>
@@ -547,6 +616,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00005">5</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> InvOwner.Trader != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classInvOwner.html">InvOwner</a>.<a class="code hl_variable" href="classInvOwner.html#a051ddb8f58db8ff05a195fb47defd273">Trader</a>.<a class="code hl_property" href="classInvOwner.html#a9da2225b73a90f6a2456896711a173dd">UseGuide</a>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassInvOwner_html"><div class="ttname"><a href="classInvOwner.html">InvOwner</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00005">InvOwner.cs:6</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a051ddb8f58db8ff05a195fb47defd273"><div class="ttname"><a href="classInvOwner.html#a051ddb8f58db8ff05a195fb47defd273">InvOwner.Trader</a></div><div class="ttdeci">static InvOwner Trader</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01349">InvOwner.cs:1349</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a9da2225b73a90f6a2456896711a173dd"><div class="ttname"><a href="classInvOwner.html#a9da2225b73a90f6a2456896711a173dd">InvOwner.UseGuide</a></div><div class="ttdeci">virtual bool UseGuide</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00077">InvOwner.cs:78</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="InvOwnerHotbar_8cs_source.html#l00036">OnRightClick()</a>.</p>
 
 </div>
 </div>
@@ -571,16 +651,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerHotbar_8cs_source.html#l00013">13</a> of file <a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="InvOwnerHotbar_8cs_source.html">InvOwnerHotbar.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classInvOwnerHotbar.html">InvOwnerHotbar</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

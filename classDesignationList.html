@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDesignationList.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -250,6 +270,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DesignationList_8cs_source.html#l00028">28</a> of file <a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> p.IsValid &amp;&amp; !this.<a class="code hl_property" href="classDesignationList.html#ad088193eeba96130c0b9845a750ec48b">Designations</a>.mapAll.ContainsKey(p.<a class="code hl_property" href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">index</a>);</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassDesignationList_html_ad088193eeba96130c0b9845a750ec48b"><div class="ttname"><a href="classDesignationList.html#ad088193eeba96130c0b9845a750ec48b">DesignationList.Designations</a></div><div class="ttdeci">TaskManager.Designations Designations</div><div class="ttdef"><b>Definition:</b> <a href="DesignationList_8cs_source.html#l00005">DesignationList.cs:6</a></div></div>
+<div class="ttc" id="aclassPoint_html_a0ca407a11b2419684bb28adee73363cf"><div class="ttname"><a href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">Point.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00018">Point.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DesignationList_8cs_source.html#l00006">DesignationList&lt; T &gt;.Designations</a>, and <a class="el" href="Point_8cs_source.html#l00019">Point.index</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DesignationList_8cs_source.html#l00023">DesignationList&lt; T &gt;.TryAdd()</a>.</p>
 
 </div>
 </div>
@@ -280,6 +309,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTaskList.html#a243509fe87ef516f7dd8adf86c23a637">TaskList&lt; T &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DesignationList_8cs_source.html#l00013">13</a> of file <a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        base.OnAdd(t);</div>
+<div class="line"><span class="lineno">   16</span>        t.pos.ForeachMultiSize(t.W, t.H, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            this.<a class="code hl_property" href="classDesignationList.html#ad088193eeba96130c0b9845a750ec48b">Designations</a>.mapAll.Add(p.<a class="code hl_property" href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">index</a>, t);</div>
+<div class="line"><span class="lineno">   19</span>            p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#a47ab8c2f62245f3ebe27f3d19b6e7811">GetOrCreateDetail</a>().<a class="code hl_variable" href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">designation</a> = t;</div>
+<div class="line"><span class="lineno">   20</span>        });</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassCellDetail_html_a7b07584d994ec50ed5f78d809c2edd2a"><div class="ttname"><a href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">CellDetail.designation</a></div><div class="ttdeci">TaskDesignation designation</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00086">CellDetail.cs:86</a></div></div>
+<div class="ttc" id="aclassCell_html_a47ab8c2f62245f3ebe27f3d19b6e7811"><div class="ttname"><a href="classCell.html#a47ab8c2f62245f3ebe27f3d19b6e7811">Cell.GetOrCreateDetail</a></div><div class="ttdeci">CellDetail GetOrCreateDetail()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01560">Cell.cs:1560</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="CellDetail_8cs_source.html#l00086">CellDetail.designation</a>, <a class="el" href="DesignationList_8cs_source.html#l00006">DesignationList&lt; T &gt;.Designations</a>, <a class="el" href="Cell_8cs_source.html#l01560">Cell.GetOrCreateDetail()</a>, and <a class="el" href="Point_8cs_source.html#l00019">Point.index</a>.</p>
 
 </div>
 </div>
@@ -310,6 +353,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTaskList.html#a8541e9dd7f5163e557beb348680326ab">TaskList&lt; T &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DesignationList_8cs_source.html#l00033">33</a> of file <a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        base.Remove(t);</div>
+<div class="line"><span class="lineno">   36</span>        t.pos.ForeachMultiSize(t.W, t.H, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_property" href="classDesignationList.html#ad088193eeba96130c0b9845a750ec48b">Designations</a>.mapAll.Remove(p.<a class="code hl_property" href="classPoint.html#a0ca407a11b2419684bb28adee73363cf">index</a>);</div>
+<div class="line"><span class="lineno">   39</span>            p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#a47ab8c2f62245f3ebe27f3d19b6e7811">GetOrCreateDetail</a>().<a class="code hl_variable" href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">designation</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   40</span>            p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#aaec0e820ba6e46d01bc487745c580177">TryDespawnDetail</a>();</div>
+<div class="line"><span class="lineno">   41</span>        });</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassCell_html_aaec0e820ba6e46d01bc487745c580177"><div class="ttname"><a href="classCell.html#aaec0e820ba6e46d01bc487745c580177">Cell.TryDespawnDetail</a></div><div class="ttdeci">void TryDespawnDetail()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01569">Cell.cs:1569</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="CellDetail_8cs_source.html#l00086">CellDetail.designation</a>, <a class="el" href="DesignationList_8cs_source.html#l00006">DesignationList&lt; T &gt;.Designations</a>, <a class="el" href="Cell_8cs_source.html#l01560">Cell.GetOrCreateDetail()</a>, <a class="el" href="Point_8cs_source.html#l00019">Point.index</a>, and <a class="el" href="Cell_8cs_source.html#l01569">Cell.TryDespawnDetail()</a>.</p>
 
 </div>
 </div>
@@ -340,6 +395,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTaskList.html#a2c67b84753672064a0f9ce09efcea649">TaskList&lt; T &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DesignationList_8cs_source.html#l00023">23</a> of file <a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099">CanAdd</a>(t.pos) &amp;&amp; base.TryAdd(t);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassDesignationList_html_a5e197f3e260ea2cea7e03c18fa4c9099"><div class="ttname"><a href="classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099">DesignationList.CanAdd</a></div><div class="ttdeci">bool CanAdd(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="DesignationList_8cs_source.html#l00028">DesignationList.cs:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DesignationList_8cs_source.html#l00028">DesignationList&lt; T &gt;.CanAdd()</a>.</p>
 
 </div>
 </div>
@@ -365,6 +426,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DesignationList_8cs_source.html#l00005">5</a> of file <a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ab85591c0fc93476d9d5246e11c717087">tasks</a>.<a class="code hl_variable" href="classTaskManager.html#a3ba8ddb4cb8a3bca18f2c0e703e88629">designations</a>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_ab85591c0fc93476d9d5246e11c717087"><div class="ttname"><a href="classMap.html#ab85591c0fc93476d9d5246e11c717087">Map.tasks</a></div><div class="ttdeci">TaskManager tasks</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02839">Map.cs:2839</a></div></div>
+<div class="ttc" id="aclassTaskManager_html_a3ba8ddb4cb8a3bca18f2c0e703e88629"><div class="ttname"><a href="classTaskManager.html#a3ba8ddb4cb8a3bca18f2c0e703e88629">TaskManager.designations</a></div><div class="ttdeci">TaskManager.Designations designations</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00013">TaskManager.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DesignationList_8cs_source.html#l00028">DesignationList&lt; T &gt;.CanAdd()</a>, <a class="el" href="DesignationList_8cs_source.html#l00013">DesignationList&lt; T &gt;.OnAdd()</a>, and <a class="el" href="DesignationList_8cs_source.html#l00033">DesignationList&lt; T &gt;.Remove()</a>.</p>
 
 </div>
 </div>
@@ -372,9 +445,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="DesignationList_8cs_source.html">DesignationList.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDesignationList.html">DesignationList</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

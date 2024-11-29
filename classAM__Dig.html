@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Dig.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -184,6 +204,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00039">39</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_enumeration" href="classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481">TaskDig.Mode</a> <a class="code hl_variable" href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">mode</a> = this.<a class="code hl_variable" href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">mode</a>;</div>
+<div class="line"><span class="lineno">   42</span>        this.mode = _mode;</div>
+<div class="line"><span class="lineno">   43</span>        this.ramp = 3;</div>
+<div class="line"><span class="lineno">   44</span>        base.Activate(<span class="keyword">false</span>, <a class="code hl_variable" href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">mode</a> != this.mode);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassAM__Dig_html_af6a036ce4b8778ea2d561658aca1d638"><div class="ttname"><a href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">AM_Dig.mode</a></div><div class="ttdeci">TaskDig.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="AM__Dig_8cs_source.html#l00069">AM_Dig.cs:69</a></div></div>
+<div class="ttc" id="aclassTaskDig_html_ab2b8d6bf5a001513c31dc5627aaeb481"><div class="ttname"><a href="classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481">TaskDig.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="TaskDig_8cs_source.html#l00240">TaskDig.cs:241</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Dig_8cs_source.html#l00069">mode</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemActionMode_8cs_source.html#l00030">HotItemActionMode.Execute()</a>.</p>
 
 </div>
 </div>
@@ -212,7 +244,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00029">29</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> t.pos.sourceFloor.tileType.CanInstaComplete &amp;&amp; this.mode == <a class="code hl_class" href="classTaskDig.html">TaskDig</a>.<a class="code hl_enumeration" href="classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481">Mode</a>.RemoveFloor;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassTaskDig_html"><div class="ttname"><a href="classTaskDig.html">TaskDig</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskDig_8cs_source.html#l00003">TaskDig.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a89d6c3c2c49cd53e7b10fcb71c625597" name="a89d6c3c2c49cd53e7b10fcb71c625597"></a>
@@ -239,7 +275,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00047">47</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        this.list = base.Designations.dig;</div>
+<div class="line"><span class="lineno">   50</span>        base.OnActivate();</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7fae0cd9241e876006af58a54631bbd5" name="a7fae0cd9241e876006af58a54631bbd5"></a>
@@ -269,6 +309,15 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAM__Designation.html#a30ac799bcad4a7c6a6bf0ba7223295fe">AM_Designation&lt; TaskDig &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00063">63</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        this.mold.mode = this.<a class="code hl_variable" href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">mode</a>;</div>
+<div class="line"><span class="lineno">   66</span>        this.mold.ramp = this.<a class="code hl_variable" href="classAM__Dig.html#a59e8ab19f16158c0400dd1147dbec70d">ramp</a>;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassAM__Dig_html_a59e8ab19f16158c0400dd1147dbec70d"><div class="ttname"><a href="classAM__Dig.html#a59e8ab19f16158c0400dd1147dbec70d">AM_Dig.ramp</a></div><div class="ttdeci">int ramp</div><div class="ttdef"><b>Definition:</b> <a href="AM__Dig_8cs_source.html#l00071">AM_Dig.cs:71</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Dig_8cs_source.html#l00069">mode</a>, and <a class="el" href="AM__Dig_8cs_source.html#l00071">ramp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionHint_8cs_source.html#l00029">ActionHint.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -297,6 +346,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00058">58</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.hud.hint.groupRadio.ToggleInteractable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -325,6 +381,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00053">53</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.hud.hint.groupRadio.ToggleInteractable(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -352,7 +413,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00034">34</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        base.SetCursorOnMap(CursorSystem.Dig);</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -370,6 +434,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00069">69</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Dig_8cs_source.html#l00039">Activate()</a>, and <a class="el" href="AM__Dig_8cs_source.html#l00063">OnCreateMold()</a>.</p>
+
 </div>
 </div>
 <a id="a59e8ab19f16158c0400dd1147dbec70d" name="a59e8ab19f16158c0400dd1147dbec70d"></a>
@@ -385,6 +451,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00071">71</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Dig_8cs_source.html#l00063">OnCreateMold()</a>.</p>
 
 </div>
 </div>
@@ -410,7 +478,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00021">21</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3d33df6ab0e14b6a0c7bfc8e63da863" name="aa3d33df6ab0e14b6a0c7bfc8e63da863"></a>
@@ -434,7 +508,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00005">5</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 10;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7aeb0449be0c9fc96ed3086e3534160f" name="a7aeb0449be0c9fc96ed3086e3534160f"></a>
@@ -458,16 +538,27 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Dig_8cs_source.html#l00013">13</a> of file <a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Dig&quot;</span> + this.<a class="code hl_variable" href="classAM__Dig.html#af6a036ce4b8778ea2d561658aca1d638">mode</a>.<a class="code hl_function" href="classAIAct.html#ac4dbf95639d8ead3488ad1481de9f98f">ToString</a>();</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_ac4dbf95639d8ead3488ad1481de9f98f"><div class="ttname"><a href="classAIAct.html#ac4dbf95639d8ead3488ad1481de9f98f">AIAct.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00051">AIAct.cs:51</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Dig_8cs_source.html">AM_Dig.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Dig.html">AM_Dig</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

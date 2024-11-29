@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classWidgetMainText.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -385,6 +405,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00186">186</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>    {</div>
+<div class="line"><span class="lineno">  188</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.SetActive(this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.isShowingLog || !<a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_property" href="classWidgetFeed.html#a0d370e53816b564f533907d1a8b66f88">Intercept</a>, delegate(<span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (enabled)</div>
+<div class="line"><span class="lineno">  191</span>            {</div>
+<div class="line"><span class="lineno">  192</span>                this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  193</span>            }</div>
+<div class="line"><span class="lineno">  194</span>        });</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="ttc" id="aclassWidgetFeed_html"><div class="ttname"><a href="classWidgetFeed.html">WidgetFeed</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00004">WidgetFeed.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetFeed_html_a0d370e53816b564f533907d1a8b66f88"><div class="ttname"><a href="classWidgetFeed.html#a0d370e53816b564f533907d1a8b66f88">WidgetFeed.Intercept</a></div><div class="ttdeci">static bool Intercept</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00006">WidgetFeed.cs:7</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_a6ef77e94f8aed018c8f93bfb4c64bfe6"><div class="ttname"><a href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">WidgetMainText.box</a></div><div class="ttdeci">MsgBox box</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00256">WidgetMainText.cs:256</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00007">WidgetFeed.Intercept</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00159">_ToggleLog()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00080">Append()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00178">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -412,6 +448,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00159">159</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.ToggleLog();</div>
+<div class="line"><span class="lineno">  162</span>        this.<a class="code hl_function" href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.isShowingLog)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                <a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>.<a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.KillAll(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>            this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="ttc" id="aclassWidgetFeed_html_a498a84266c404980276c8509b31f14c5"><div class="ttname"><a href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">WidgetFeed.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00110">WidgetFeed.cs:110</a></div></div>
+<div class="ttc" id="aclassWidgetFeed_html_ac1b5284142e34a0206ab4061e95c7a76"><div class="ttname"><a href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">WidgetFeed.Instance</a></div><div class="ttdeci">static WidgetFeed Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00106">WidgetFeed.cs:106</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_aca50edf3a732e8cfdcf9667b173fbed7"><div class="ttname"><a href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">WidgetMainText._Refresh</a></div><div class="ttdeci">void _Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00186">WidgetMainText.cs:186</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00106">WidgetFeed.Instance</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00110">WidgetFeed.pop</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00140">HideLog()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00299">WidgetManager.Reset()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00149">ToggleLog()</a>.</p>
 
 </div>
 </div>
@@ -440,6 +495,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00134">134</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.Append(sprite, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  137</span>        this.<a class="code hl_function" href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>.</p>
 
 </div>
 </div>
@@ -484,6 +545,64 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00080">80</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (s.IsEmpty() || s == <span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (pos != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.Load(<span class="stringliteral">&quot;MsgFocus&quot;</span>).button1.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#aea7dbd671b26bb3b4e481b40a5d00c23">Focus</a>(pos);</div>
+<div class="line"><span class="lineno">   91</span>            });</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (s.StartsWith(<span class="stringliteral">&quot;*&quot;</span>))</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            s = <span class="stringliteral">&quot; &quot;</span> + s;</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (Lang.setting.useSpace)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            s += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (s[0] == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                s = s.TrimStart(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.EndsWith(<span class="stringliteral">&quot;*&quot;</span>))</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            s += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (MsgBlock.lastBlock != <span class="keyword">null</span> &amp;&amp; MsgBlock.lastText == s)</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            MsgBlock lastBlock = MsgBlock.lastBlock;</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (lastBlock.txt != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                UIText txt = lastBlock.txt;</div>
+<div class="line"><span class="lineno">  115</span>                lastBlock.repeat++;</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = txt.text;</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.EndsWith(<span class="stringliteral">&quot;)  &quot;</span>) &amp;&amp; <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Contains(<span class="stringliteral">&quot;(x&quot;</span>))</div>
+<div class="line"><span class="lineno">  118</span>                {</div>
+<div class="line"><span class="lineno">  119</span>                    <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.Substring(0, <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.IndexOf(<span class="stringliteral">&quot;(x&quot;</span>));</div>
+<div class="line"><span class="lineno">  120</span>                }</div>
+<div class="line"><span class="lineno">  121</span>                txt.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;(x&quot;</span> + (lastBlock.repeat + 1).ToString() + <span class="stringliteral">&quot;)  &quot;</span>;</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (lastBlock.repeat == 1)</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    txt.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  125</span>                    this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  126</span>                }</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.Append(s, col);</div>
+<div class="line"><span class="lineno">  131</span>        this.<a class="code hl_function" href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_aea7dbd671b26bb3b4e481b40a5d00c23"><div class="ttname"><a href="classBaseGameScreen.html#aea7dbd671b26bb3b4e481b40a5d00c23">BaseGameScreen.Focus</a></div><div class="ttdeci">void Focus(Int3 ints)</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00604">BaseGameScreen.cs:604</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d9695d19ece56b37cf342a28c0426e0"><div class="ttname"><a href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">EMono.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00094">EMono.cs:95</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00604">BaseGameScreen.Focus()</a>, <a class="el" href="EMono_8cs_source.html#l00095">EMono.screen</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
 
 </div>
 </div>
@@ -522,6 +641,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00075">75</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        this.<a class="code hl_function" href="classWidgetMainText.html#ab0f65eaf996e9d5ea9c46178bb1757fe">Append</a>(s, <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_property" href="classMsg.html#a7eb4385ef8e01803687aaf2f9c611f62">colors</a>.Default, pos);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_a7eb4385ef8e01803687aaf2f9c611f62"><div class="ttname"><a href="classMsg.html#a7eb4385ef8e01803687aaf2f9c611f62">Msg.colors</a></div><div class="ttdeci">static MsgColors colors</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00023">Msg.cs:24</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_ab0f65eaf996e9d5ea9c46178bb1757fe"><div class="ttname"><a href="classWidgetMainText.html#ab0f65eaf996e9d5ea9c46178bb1757fe">WidgetMainText.Append</a></div><div class="ttdeci">void Append(string s, Point pos=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00075">WidgetMainText.cs:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00075">Append()</a>, and <a class="el" href="Msg_8cs_source.html#l00024">Msg.colors</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Msg_8cs_source.html#l00147">Msg.Append()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00075">Append()</a>, <a class="el" href="Msg_8cs_source.html#l00272">Msg.GetGameText()</a>, <a class="el" href="Msg_8cs_source.html#l00157">Msg.Nerun()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, <a class="el" href="Msg_8cs_source.html#l00171">Msg.SayHomeMember()</a>, <a class="el" href="Msg_8cs_source.html#l00185">Msg.SayPic()</a>, <a class="el" href="Msg_8cs_source.html#l00125">Msg.SayRaw()</a>, and <a class="el" href="Msg_8cs_source.html#l00217">Msg.Talk()</a>.</p>
 
 </div>
 </div>
@@ -551,7 +680,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_class" href="classWidgetMainText_1_1Extra.html">Extra</a>();</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassWidgetMainText_1_1Extra_html"><div class="ttname"><a href="classWidgetMainText_1_1Extra.html">WidgetMainText.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00275">WidgetMainText.cs:276</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html"><div class="ttname"><a href="classWidgetMainText.html">WidgetMainText</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00004">WidgetMainText.cs:5</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad88a1e6cea7c2da3d883b5ac8024bed6" name="ad88a1e6cea7c2da3d883b5ac8024bed6"></a>
@@ -578,6 +712,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00140">140</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a> || !<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.isShowingLog)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#acabde80e67d84a1459cbf985e49862b6">_ToggleLog</a>();</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclassWidgetMainText_html_a0f86d5516c5bb3ad7b294150899c5213"><div class="ttname"><a href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">WidgetMainText.Instance</a></div><div class="ttdeci">static WidgetMainText Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00252">WidgetMainText.cs:252</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_acabde80e67d84a1459cbf985e49862b6"><div class="ttname"><a href="classWidgetMainText.html#acabde80e67d84a1459cbf985e49862b6">WidgetMainText._ToggleLog</a></div><div class="ttdeci">void _ToggleLog()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00159">WidgetMainText.cs:159</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00159">_ToggleLog()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00252">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00202">ELayer.OnAfterAddLayer()</a>.</p>
 
 </div>
 </div>
@@ -605,6 +752,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00173">173</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
+<div class="line"><span class="lineno">  175</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.MarkNewBlock();</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Msg_8cs_source.html#l00327">Msg.NewLine()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -634,6 +788,49 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00035">35</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f">boxBk</a>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.gameObject);</div>
+<div class="line"><span class="lineno">   41</span>            this.box = <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f">boxBk</a>;</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f">boxBk</a>.transform.SetParent(base.transform, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f">boxBk</a>.GetComponentInChildren&lt;UIDragPanel&gt;(<span class="keyword">true</span>).SetTarget(this.Rect());</div>
+<div class="line"><span class="lineno">   44</span>            WidgetMainText.boxBk = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   45</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        this.dragPanel = this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.dragPanel;</div>
+<div class="line"><span class="lineno">   48</span>        this.imageBG = this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.imageBg;</div>
+<div class="line"><span class="lineno">   49</span>        WidgetMainText.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   50</span>        this.box.maxBlock = this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>.maxLine;</div>
+<div class="line"><span class="lineno">   51</span>        this.box.fadeLines = this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>.fadeLines;</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (base.config.skin.bgColor.Equals(<span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(0f, 0f, 0f, 0f)))</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            base.config.skin.bgColor = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.refs.bg_msg[this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>.bg].color;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_function" href="classWidgetMainText.html#abc3dbd03ddb1ba763d715fce785b44e1">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">   57</span>        this.<a class="code hl_function" href="classWidgetMainText.html#a9a8930ed56d8f6caba44b0784a0ceecb">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">   58</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.Init();</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.<a class="code hl_function" href="classWidgetMainText.html#ab0f65eaf996e9d5ea9c46178bb1757fe">Append</a>(<span class="stringliteral">&quot;welcome_intro&quot;</span>.langGame(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.version.GetText(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   62</span>            this.<a class="code hl_function" href="classWidgetMainText.html#ab0f65eaf996e9d5ea9c46178bb1757fe">Append</a>(this.<a class="code hl_variable" href="classWidgetMainText.html#a107d83c032d34115817e24d87da37b2b">spriteElin</a>);</div>
+<div class="line"><span class="lineno">   63</span>            this.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
+<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_function" href="classWidgetMainText.html#ab0f65eaf996e9d5ea9c46178bb1757fe">Append</a>(<span class="stringliteral">&quot;welcome&quot;</span>.langGame(EInput.keys.report.key.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   65</span>            this.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_function" href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">_Refresh</a>();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_a107d83c032d34115817e24d87da37b2b"><div class="ttname"><a href="classWidgetMainText.html#a107d83c032d34115817e24d87da37b2b">WidgetMainText.spriteElin</a></div><div class="ttdeci">Sprite spriteElin</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00266">WidgetMainText.cs:266</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_a386395593032ba460d80c6c14fad0833"><div class="ttname"><a href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">WidgetMainText.NewLine</a></div><div class="ttdeci">void NewLine()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00173">WidgetMainText.cs:173</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_a3ae57191a915a14be636cd490020394d"><div class="ttname"><a href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">WidgetMainText.extra</a></div><div class="ttdeci">WidgetMainText.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00011">WidgetMainText.cs:12</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_a9a8930ed56d8f6caba44b0784a0ceecb"><div class="ttname"><a href="classWidgetMainText.html#a9a8930ed56d8f6caba44b0784a0ceecb">WidgetMainText.OnChangeResolution</a></div><div class="ttdeci">override void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00245">WidgetMainText.cs:245</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_abc3dbd03ddb1ba763d715fce785b44e1"><div class="ttname"><a href="classWidgetMainText.html#abc3dbd03ddb1ba763d715fce785b44e1">WidgetMainText.RefreshBG</a></div><div class="ttdeci">void RefreshBG()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00070">WidgetMainText.cs:70</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_af151464838f04a8493e1fd7cde7fcf1f"><div class="ttname"><a href="classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f">WidgetMainText.boxBk</a></div><div class="ttdeci">static MsgBox boxBk</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00254">WidgetMainText.cs:254</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00075">Append()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00254">boxBk</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00012">extra</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00173">NewLine()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00245">OnChangeResolution()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00070">RefreshBG()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00266">spriteElin</a>.</p>
 
 </div>
 </div>
@@ -663,6 +860,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#a263ffee73ef73adc5497c8881dc113c8">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00245">245</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        base.OnChangeResolution();</div>
+<div class="line"><span class="lineno">  248</span>        RectTransform rectTransform = this.Rect();</div>
+<div class="line"><span class="lineno">  249</span>        rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(0.01f * (<span class="keywordtype">float</span>)Screen.width * (<span class="keywordtype">float</span>)<span class="keyword">this</span>.extra.width, rectTransform.sizeDelta.y);</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00197">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -693,6 +897,59 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00197">197</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
+<div class="line"><span class="lineno">  199</span>        SkinConfig cfg = base.config.skin;</div>
+<div class="line"><span class="lineno">  200</span>        UIContextMenu uicontextMenu = m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;msgLines&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">float</span>)<span class="keyword">this</span>.box.maxBlock, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  202</span>        {</div>
+<div class="line"><span class="lineno">  203</span>            this.box.maxBlock = (int)a;</div>
+<div class="line"><span class="lineno">  204</span>            this.extra.maxLine = (int)a;</div>
+<div class="line"><span class="lineno">  205</span>        }, 2f, 10f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  206</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;width&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>.width, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            this.extra.width = (int)a;</div>
+<div class="line"><span class="lineno">  209</span>            this.<a class="code hl_function" href="classWidgetMainText.html#a9a8930ed56d8f6caba44b0784a0ceecb">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">  210</span>        }, 30f, 100f, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  211</span>        UIContextMenu uicontextMenu2 = m.AddChild(<span class="stringliteral">&quot;style&quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>        uicontextMenu2.AddToggle(<span class="stringliteral">&quot;fadeLines&quot;</span>, this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>.fadeLines, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  213</span>        {</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_class" href="classWidgetMainText_1_1Extra.html">WidgetMainText.Extra</a> <a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a> = this.<a class="code hl_property" href="classWidgetMainText.html#a3ae57191a915a14be636cd490020394d">extra</a>;</div>
+<div class="line"><span class="lineno">  215</span>            this.box.fadeLines = a;</div>
+<div class="line"><span class="lineno">  216</span>            extra.fadeLines = a;</div>
+<div class="line"><span class="lineno">  217</span>            this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.RefreshAlpha();</div>
+<div class="line"><span class="lineno">  218</span>        });</div>
+<div class="line"><span class="lineno">  219</span>        uicontextMenu2.AddSlider(<span class="stringliteral">&quot;changeBG&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() + <span class="stringliteral">&quot;/&quot;</span> + (EMono.core.refs.bg_msg.Count - 1).ToString(), (float)this.extra.<a class="code hl_variable" href="classWidgetMainText_1_1Extra.html#acabbc62553d361c5ee449c2deb759a72">bg</a>, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  220</span>        {</div>
+<div class="line"><span class="lineno">  221</span>            this.extra.bg = (int)a;</div>
+<div class="line"><span class="lineno">  222</span>            cfg.bgColor = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.refs.bg_msg[this.extra.<a class="code hl_variable" href="classWidgetMainText_1_1Extra.html#acabbc62553d361c5ee449c2deb759a72">bg</a>].color;</div>
+<div class="line"><span class="lineno">  223</span>            this.<a class="code hl_function" href="classWidgetMainText.html#abc3dbd03ddb1ba763d715fce785b44e1">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">  224</span>        }, 0f, (float)(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.refs.bg_msg.Count - 1), <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  225</span>        Action&lt;PickerState, Color&gt; &lt;&gt;9__8;</div>
+<div class="line"><span class="lineno">  226</span>        uicontextMenu2.AddButton(<span class="stringliteral">&quot;colorBG&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">  229</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> bgColor = cfg.bgColor;</div>
+<div class="line"><span class="lineno">  230</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs[cfg.bg].color;</div>
+<div class="line"><span class="lineno">  231</span>            Action&lt;PickerState, Color&gt; onChangeColor;</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">if</span> ((onChangeColor = &lt;&gt;9__8) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  233</span>            {</div>
+<div class="line"><span class="lineno">  234</span>                onChangeColor = (&lt;&gt;9__8 = delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  235</span>                {</div>
+<div class="line"><span class="lineno">  236</span>                    cfg.bgColor = _c;</div>
+<div class="line"><span class="lineno">  237</span>                    this.<a class="code hl_function" href="classWidgetMainText.html#abc3dbd03ddb1ba763d715fce785b44e1">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">  238</span>                });</div>
+<div class="line"><span class="lineno">  239</span>            }</div>
+<div class="line"><span class="lineno">  240</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(bgColor, color, onChangeColor);</div>
+<div class="line"><span class="lineno">  241</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  242</span>        base.SetBaseContextMenu(m);</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html_a7bef92c42fdcfea302d10f6efbb34713"><div class="ttname"><a href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">LayerColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_1_1Extra_html_acabbc62553d361c5ee449c2deb759a72"><div class="ttname"><a href="classWidgetMainText_1_1Extra.html#acabbc62553d361c5ee449c2deb759a72">WidgetMainText.Extra.bg</a></div><div class="ttdeci">int bg</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00279">WidgetMainText.cs:279</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00012">extra</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00245">OnChangeResolution()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00070">RefreshBG()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.SetColor()</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -720,6 +977,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00178">178</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>)</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#aca50edf3a732e8cfdcf9667b173fbed7">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00252">Instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetFeed_8cs_source.html#l00051">WidgetFeed.OnActivate()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00059">WidgetFeed.OnDeactivate()</a>.</p>
 
 </div>
 </div>
@@ -747,6 +1014,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00070">70</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.SetBG(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.refs.bg_msg[<span class="keyword">this</span>.extra.bg], base.config.skin.bgColor);</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00256">box</a>, and <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00197">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -774,6 +1048,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00149">149</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.Activate(<span class="stringliteral">&quot;MainText&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#acabde80e67d84a1459cbf985e49862b6">_ToggleLog</a>();</div>
+<div class="line"><span class="lineno">  156</span>        SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00159">_ToggleLog()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00252">Instance</a>, and <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemToggleLog_8cs_source.html#l00021">HotItemToggleLog.OnClick()</a>, and <a class="el" href="AM__BaseGameMode_8cs_source.html#l00065">AM_BaseGameMode.OnUpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -791,6 +1077,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00256">256</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00186">_Refresh()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00159">_ToggleLog()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00080">Append()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00140">HideLog()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00173">NewLine()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00197">OnSetContextMenu()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00070">RefreshBG()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00299">WidgetManager.Reset()</a>.</p>
 
 </div>
 </div>
@@ -815,6 +1103,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00254">254</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -863,6 +1153,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00252">252</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00140">HideLog()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00178">Refresh()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00299">WidgetManager.Reset()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00149">ToggleLog()</a>.</p>
 
 </div>
 </div>
@@ -928,6 +1220,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00268">268</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Msg_8cs_source.html#l00272">Msg.GetGameText()</a>.</p>
+
 </div>
 </div>
 <a id="a107d83c032d34115817e24d87da37b2b" name="a107d83c032d34115817e24d87da37b2b"></a>
@@ -943,6 +1237,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00266">266</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1296,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00027">27</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3ae57191a915a14be636cd490020394d" name="a3ae57191a915a14be636cd490020394d"></a>
@@ -1024,6 +1326,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_class" href="classWidgetMainText_1_1Extra.html">Extra</a>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetMainText_8cs_source.html#l00035">OnActivate()</a>, and <a class="el" href="WidgetMainText_8cs_source.html#l00197">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -1048,16 +1358,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetMainText_8cs_source.html#l00019">19</a> of file <a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="WidgetMainText_8cs_source.html">WidgetMainText.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classWidgetMainText.html">WidgetMainText</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

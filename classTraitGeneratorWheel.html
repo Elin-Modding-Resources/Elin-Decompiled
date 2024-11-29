@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitGeneratorWheel.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -700,6 +720,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00037">37</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> this.owner.IsInstalled &amp;&amp; EClass._zone.IsPCFaction &amp;&amp; !this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">HasChara</a>;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassPoint_html_af4f53c5ef543798320ca855aa873dc46"><div class="ttname"><a href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">Point.HasChara</a></div><div class="ttdeci">bool HasChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00364">Point.cs:365</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00365">Point.HasChara</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>.</p>
 
 </div>
 </div>
@@ -730,6 +758,27 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a9da0751e99e26b4aeafb94c206e21e9e">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00064">64</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitGeneratorWheel.html#ad2b6b1617582de57e8cb2f73fa254953">IsOn</a>)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e">ShouldWork</a>())</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            this.owner.isOn = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>            EClass._zone.dirtyElectricity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;generator_start&quot;</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   75</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;electricity_on&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   76</span>            this.<a class="code hl_function" href="classTraitGeneratorWheel.html#a774ecd4a5408a5c28323fd9230220d06">Refresh</a>(c);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassTraitGeneratorWheel_html_a774ecd4a5408a5c28323fd9230220d06"><div class="ttname"><a href="classTraitGeneratorWheel.html#a774ecd4a5408a5c28323fd9230220d06">TraitGeneratorWheel.Refresh</a></div><div class="ttdeci">void Refresh(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitGeneratorWheel_8cs_source.html#l00100">TraitGeneratorWheel.cs:100</a></div></div>
+<div class="ttc" id="aclassTraitGeneratorWheel_html_ad2b6b1617582de57e8cb2f73fa254953"><div class="ttname"><a href="classTraitGeneratorWheel.html#ad2b6b1617582de57e8cb2f73fa254953">TraitGeneratorWheel.IsOn</a></div><div class="ttdeci">override bool IsOn</div><div class="ttdef"><b>Definition:</b> <a href="TraitGeneratorWheel_8cs_source.html#l00029">TraitGeneratorWheel.cs:30</a></div></div>
+<div class="ttc" id="aclassTraitGeneratorWheel_html_af4fb97465b98e6bc72d7727366bfff6e"><div class="ttname"><a href="classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e">TraitGeneratorWheel.ShouldWork</a></div><div class="ttdeci">bool ShouldWork()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGeneratorWheel_8cs_source.html#l00108">TraitGeneratorWheel.cs:108</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245aec3f5ff99b3a57a9b1c774f42258642a">IsOn</a>.</p>
 
 </div>
 </div>
@@ -760,7 +809,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a3286bc7f5350d3e65ab339708a6eacbe">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00080">80</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        this.<a class="code hl_function" href="classTraitGeneratorWheel.html#a774ecd4a5408a5c28323fd9230220d06">Refresh</a>(c);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3f197df98b6db4ef93b4f8351d87fe60" name="a3f197df98b6db4ef93b4f8351d87fe60"></a>
@@ -790,6 +842,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00042">42</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classLayerPeople.html">LayerPeople</a>.<a class="code hl_function" href="classLayerPeople.html#a80a236c9b33a959d5fc62bad8053138b">CreateSelect</a>(<span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, delegate(UIList l)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                if (chara.IsAliveInCurrentZone &amp;&amp; !chara.IsPCParty &amp;&amp; chara.memberType == FactionMemberType.Default)</div>
+<div class="line"><span class="lineno">   49</span>                {</div>
+<div class="line"><span class="lineno">   50</span>                    l.Add(chara);</div>
+<div class="line"><span class="lineno">   51</span>                }</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }, delegate(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            c.<a class="code hl_function" href="classCard.html#aee78e0135c6399ec3a93d03a6741df8e">Teleport</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>            c.RemoveCondition&lt;<a class="code hl_class" href="classConSleep.html">ConSleep</a>&gt;();</div>
+<div class="line"><span class="lineno">   57</span>            c.noMove = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>            c.orgPos = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   59</span>            c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   60</span>        }, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassCard_html_aee78e0135c6399ec3a93d03a6741df8e"><div class="ttname"><a href="classCard.html#aee78e0135c6399ec3a93d03a6741df8e">Card.Teleport</a></div><div class="ttdeci">unsafe void Teleport(Point point, bool silent=false, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05264">Card.cs:5264</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassConSleep_html"><div class="ttname"><a href="classConSleep.html">ConSleep</a></div><div class="ttdef"><b>Definition:</b> <a href="ConSleep_8cs_source.html#l00005">ConSleep.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a8f1e1e1a054339f58a2eecd62c4f3612"><div class="ttname"><a href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">EClass.Branch</a></div><div class="ttdeci">static FactionBranch Branch</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00063">EClass.cs:64</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01689">FactionBranch.cs:1689</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html"><div class="ttname"><a href="classLayerPeople.html">LayerPeople</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00005">LayerPeople.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerPeople_html_a80a236c9b33a959d5fc62bad8053138b"><div class="ttname"><a href="classLayerPeople.html#a80a236c9b33a959d5fc62bad8053138b">LayerPeople.CreateSelect</a></div><div class="ttdeci">static LayerPeople CreateSelect(string langHeader, string langHint, Action&lt; UIList &gt; onList, Action&lt; Chara &gt; onClick, Func&lt; Chara, string &gt; _onShowSubText=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerPeople_8cs_source.html#l00150">LayerPeople.cs:150</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00064">EClass.Branch</a>, <a class="el" href="LayerPeople_8cs_source.html#l00150">LayerPeople.CreateSelect()</a>, and <a class="el" href="FactionBranch_8cs_source.html#l01689">FactionBranch.members</a>.</p>
 
 </div>
 </div>
@@ -818,6 +901,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00100">100</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            c.<a class="code hl_function" href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">RefreshWorkElements</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classZone.html#a63f58f0d899e9e3382986390e4c866d5">elements</a>);</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="aclassChara_html_a30f7c1afe3fea2b732490af476a54b77"><div class="ttname"><a href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">Chara.RefreshWorkElements</a></div><div class="ttdeci">void RefreshWorkElements(ElementContainer parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08049">Chara.cs:8049</a></div></div>
+<div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00556">Chara.cs:557</a></div></div>
+<div class="ttc" id="aclassChara_html_ad5985ee50790374ee8bc017ffa5c3da8"><div class="ttname"><a href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">Chara.homeBranch</a></div><div class="ttdeci">FactionBranch homeBranch</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00917">Chara.cs:918</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03852">Zone.cs:3852</a></div></div>
+<div class="ttc" id="aclassZone_html_a63f58f0d899e9e3382986390e4c866d5"><div class="ttname"><a href="classZone.html#a63f58f0d899e9e3382986390e4c866d5">Zone.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03861">Zone.cs:3861</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l03852">Zone.branch</a>, <a class="el" href="Zone_8cs_source.html#l03861">Zone.elements</a>, <a class="el" href="Chara_8cs_source.html#l00918">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00557">Chara.IsPCFaction</a>, and <a class="el" href="Chara_8cs_source.html#l08049">Chara.RefreshWorkElements()</a>.</p>
 
 </div>
 </div>
@@ -845,6 +942,47 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00108">108</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">HasChara</a>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a> &amp;&amp; thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitGeneratorWheel.html">TraitGeneratorWheel</a>)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                num++;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (num != 1)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Charas</a>)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; chara.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default)</div>
+<div class="line"><span class="lineno">  133</span>            {</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  135</span>            }</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00003">FactionMemberType.cs:4</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassCard_html_aadea8879b1297e3bd6bae341b8be33c7"><div class="ttname"><a href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">Card.IsInstalled</a></div><div class="ttdeci">bool IsInstalled</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02700">Card.cs:2701</a></div></div>
+<div class="ttc" id="aclassChara_html_a99afe3a20d2ad672773a2258b535019f"><div class="ttname"><a href="classChara.html#a99afe3a20d2ad672773a2258b535019f">Chara.memberType</a></div><div class="ttdeci">FactionMemberType memberType</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09365">Chara.cs:9365</a></div></div>
+<div class="ttc" id="aclassPoint_html_a683b8213ae7243d6f8531fc0e90e70e7"><div class="ttname"><a href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Point.Things</a></div><div class="ttdeci">List&lt; Thing &gt; Things</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00456">Point.cs:457</a></div></div>
+<div class="ttc" id="aclassPoint_html_a7c39f4085805ef81c56b538e34f16f8a"><div class="ttname"><a href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Point.Charas</a></div><div class="ttdeci">List&lt; Chara &gt; Charas</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00464">Point.cs:465</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitGeneratorWheel_html"><div class="ttname"><a href="classTraitGeneratorWheel.html">TraitGeneratorWheel</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGeneratorWheel_8cs_source.html#l00003">TraitGeneratorWheel.cs:4</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Point_8cs_source.html#l00465">Point.Charas</a>, <a class="el" href="Card_8cs_source.html#l02701">Card.IsInstalled</a>, <a class="el" href="Chara_8cs_source.html#l00557">Chara.IsPCFaction</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l09365">Chara.memberType</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00457">Point.Things</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -874,6 +1012,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a0fe5b36ec4e77dd011ece5a51e8fad66">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00085">85</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a> || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e">ShouldWork</a>())</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            this.owner.isOn = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   94</span>            EClass._zone.dirtyElectricity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;generator_stop&quot;</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   96</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;electricity_off&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, and <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>.</p>
 
 </div>
 </div>
@@ -899,7 +1053,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2b6b1617582de57e8cb2f73fa254953" name="ad2b6b1617582de57e8cb2f73fa254953"></a>
@@ -923,7 +1083,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> this.owner.isOn || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9716c12090259efe078c13be975293d" name="ae9716c12090259efe078c13be975293d"></a>
@@ -947,7 +1113,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Custom;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aToggleType_8cs_html_aecee16d60b8bc0be86b35c9932813db8"><div class="ttname"><a href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div><div class="ttdeci">ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="ToggleType_8cs_source.html#l00003">ToggleType.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae5aad7532ca4914c24d3aa01bec5387f" name="ae5aad7532ca4914c24d3aa01bec5387f"></a>
@@ -971,16 +1144,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGeneratorWheel_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitGeneratorWheel_8cs_source.html">TraitGeneratorWheel.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitGeneratorWheel.html">TraitGeneratorWheel</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classCodexManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -221,6 +241,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00029">29</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        this.<a class="code hl_function" href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">GetOrCreate</a>(<span class="keywordtype">id</span>).<a class="code hl_property" href="classCodexCreature.html#a53fc120a115da7361e65f8df05ada451">numCard</a> += num;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassCodexCreature_html_a53fc120a115da7361e65f8df05ada451"><div class="ttname"><a href="classCodexCreature.html#a53fc120a115da7361e65f8df05ada451">CodexCreature.numCard</a></div><div class="ttdeci">int numCard</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00024">CodexCreature.cs:25</a></div></div>
+<div class="ttc" id="aclassCodexManager_html_a9a446209900165399d58b5c5da0885d7"><div class="ttname"><a href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">CodexManager.GetOrCreate</a></div><div class="ttdeci">CodexCreature GetOrCreate(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CodexManager_8cs_source.html#l00007">CodexManager.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00025">CodexCreature.numCard</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00136">ContentCodex.Collect()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.OnClickAddCards()</a>.</p>
 
 </div>
 </div>
@@ -249,6 +278,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00049">49</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_class" href="classCodexCreature.html">CodexCreature</a> orCreate = this.<a class="code hl_function" href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">GetOrCreate</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> kills = orCreate.<a class="code hl_property" href="classCodexCreature.html#a909253583d6c402986b699a819754fb1">kills</a>;</div>
+<div class="line"><span class="lineno">   53</span>        orCreate.kills = kills + 1;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassCodexCreature_html"><div class="ttname"><a href="classCodexCreature.html">CodexCreature</a></div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00006">CodexCreature.cs:7</a></div></div>
+<div class="ttc" id="aclassCodexCreature_html_a909253583d6c402986b699a819754fb1"><div class="ttname"><a href="classCodexCreature.html#a909253583d6c402986b699a819754fb1">CodexCreature.kills</a></div><div class="ttdeci">int kills</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00048">CodexCreature.cs:49</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00049">CodexCreature.kills</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>.</p>
 
 </div>
 </div>
@@ -277,6 +317,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00063">63</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_class" href="classCodexCreature.html">CodexCreature</a> orCreate = this.<a class="code hl_function" href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">GetOrCreate</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">int</span> spawns = orCreate.<a class="code hl_property" href="classCodexCreature.html#a7c4ffca759757b23c56ba8680a5f8d27">spawns</a>;</div>
+<div class="line"><span class="lineno">   67</span>        orCreate.spawns = spawns + 1;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassCodexCreature_html_a7c4ffca759757b23c56ba8680a5f8d27"><div class="ttname"><a href="classCodexCreature.html#a7c4ffca759757b23c56ba8680a5f8d27">CodexCreature.spawns</a></div><div class="ttdeci">int spawns</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00060">CodexCreature.cs:61</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00061">CodexCreature.spawns</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CharaGen_8cs_source.html#l00005">CharaGen._Create()</a>.</p>
 
 </div>
 </div>
@@ -305,6 +355,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00056">56</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classCodexCreature.html">CodexCreature</a> orCreate = this.<a class="code hl_function" href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">GetOrCreate</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">int</span> weakspot = orCreate.<a class="code hl_property" href="classCodexCreature.html#ac6b694c12306573a3537e09971e9e061">weakspot</a>;</div>
+<div class="line"><span class="lineno">   60</span>        orCreate.weakspot = weakspot + 1;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassCodexCreature_html_ac6b694c12306573a3537e09971e9e061"><div class="ttname"><a href="classCodexCreature.html#ac6b694c12306573a3537e09971e9e061">CodexCreature.weakspot</a></div><div class="ttdeci">int weakspot</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00036">CodexCreature.cs:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00037">CodexCreature.weakspot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00154">TraitBaseSpellbook.OnRead()</a>.</p>
 
 </div>
 </div>
@@ -333,6 +393,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00044">44</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>.ContainsKey(<span class="keywordtype">id</span>) &amp;&amp; this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>[id].droppedCard;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassCodexManager_html_ae8db35079ee814d97778a761a23258e1"><div class="ttname"><a href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">CodexManager.creatures</a></div><div class="ttdeci">Dictionary&lt; string, CodexCreature &gt; creatures</div><div class="ttdef"><b>Definition:</b> <a href="CodexManager_8cs_source.html#l00088">CodexManager.cs:88</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00088">creatures</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04692">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -361,6 +429,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00007">7</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_class" href="classCodexCreature.html">CodexCreature</a> codexCreature = this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>.TryGetValue(<span class="keywordtype">id</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (codexCreature == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            codexCreature = <span class="keyword">new</span> <a class="code hl_class" href="classCodexCreature.html">CodexCreature</a></div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordtype">id</span> = <span class="keywordtype">id</span></div>
+<div class="line"><span class="lineno">   15</span>            };</div>
+<div class="line"><span class="lineno">   16</span>            this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>[id] = codexCreature;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> codexCreature;</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00088">creatures</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00029">AddCard()</a>, <a class="el" href="CodexManager_8cs_source.html#l00049">AddKill()</a>, <a class="el" href="CodexManager_8cs_source.html#l00063">AddSpawn()</a>, <a class="el" href="CodexManager_8cs_source.html#l00056">AddWeakspot()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>, <a class="el" href="Card_8cs_source.html#l07230">Card.g__chance()</a>, and <a class="el" href="CodexManager_8cs_source.html#l00039">MarkCardDrop()</a>.</p>
 
 </div>
 </div>
@@ -389,6 +473,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00034">34</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>.ContainsKey(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00088">creatures</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03891">Card.DamageHP()</a>.</p>
 
 </div>
 </div>
@@ -416,6 +507,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00070">70</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        List&lt;CardRow&gt; list = <span class="keyword">new</span> List&lt;CardRow&gt;();</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, CodexCreature&gt; keyValuePair <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>)</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (keyValuePair.Value.kills &gt; 0)</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>.TryGetValue(keyValuePair.Key, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (cardRow != <span class="keyword">null</span> &amp;&amp; !cardRow.<a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.noRandomProduct))</div>
+<div class="line"><span class="lineno">   79</span>                {</div>
+<div class="line"><span class="lineno">   80</span>                    list.Add(cardRow);</div>
+<div class="line"><span class="lineno">   81</span>                }</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a></div><div class="ttdeci">CTAG</div><div class="ttdef"><b>Definition:</b> <a href="CTAG_8cs_source.html#l00003">CTAG.cs:4</a></div></div>
+<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a6762676c70a7cbff08d3dfcbb462d37b"><div class="ttname"><a href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">RenderRow.HasTag</a></div><div class="ttdeci">bool HasTag(CTAG _tag)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00072">RenderRow.cs:72</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00066">SourceCard.cs:66</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00151">SourceManager.cs:151</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00151">SourceManager.cards</a>, <a class="el" href="CodexManager_8cs_source.html#l00088">creatures</a>, <a class="el" href="RenderRow_8cs_source.html#l00072">RenderRow.HasTag()</a>, <a class="el" href="SourceCard_8cs_source.html#l00066">SourceCard.map</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.Craft()</a>.</p>
 
 </div>
 </div>
@@ -444,6 +561,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00039">39</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        this.<a class="code hl_function" href="classCodexManager.html#a9a446209900165399d58b5c5da0885d7">GetOrCreate</a>(<span class="keywordtype">id</span>).<a class="code hl_property" href="classCodexCreature.html#a58063c13c4320af8195fa35419d55d01">droppedCard</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassCodexCreature_html_a58063c13c4320af8195fa35419d55d01"><div class="ttname"><a href="classCodexCreature.html#a58063c13c4320af8195fa35419d55d01">CodexCreature.droppedCard</a></div><div class="ttdeci">bool droppedCard</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00084">CodexCreature.cs:85</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexCreature_8cs_source.html#l00085">CodexCreature.droppedCard</a>, and <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04692">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -471,6 +596,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00021">21</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, CodexCreature&gt; keyValuePair <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            keyValuePair.Value.id = keyValuePair.Key;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00088">creatures</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00242">Player.OnLoad()</a>.</p>
 
 </div>
 </div>
@@ -489,15 +624,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CodexManager_8cs_source.html#l00088">88</a> of file <a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00044">DroppedCard()</a>, <a class="el" href="CodexManager_8cs_source.html#l00007">GetOrCreate()</a>, <a class="el" href="CodexManager_8cs_source.html#l00034">Has()</a>, <a class="el" href="CodexManager_8cs_source.html#l00070">ListKills()</a>, <a class="el" href="CodexManager_8cs_source.html#l00021">OnLoad()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00025">ContentCodex.RefreshList()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="CodexManager_8cs_source.html">CodexManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCodexManager.html">CodexManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

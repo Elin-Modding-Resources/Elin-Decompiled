@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classElementSelecter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -201,6 +221,61 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ElementSelecter_8cs_source.html#l00007">7</a> of file <a class="el" href="ElementSelecter_8cs_source.html">ElementSelecter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classElementSelecter.html#af2281fe6c7cca89bfb7d289cf645a3b0">listSource</a>.Count == 0 || Application.isEditor)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            this.<a class="code hl_variable" href="classElementSelecter.html#af2281fe6c7cca89bfb7d289cf645a3b0">listSource</a>.Clear();</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.rows)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">if</span> (row.thing.Contains(<span class="keyword">this</span>.type) &amp;&amp; row.chance != 0 &amp;&amp; !(row.aliasRef == <span class="stringliteral">&quot;mold&quot;</span>))</div>
+<div class="line"><span class="lineno">   15</span>                {</div>
+<div class="line"><span class="lineno">   16</span>                    this.<a class="code hl_variable" href="classElementSelecter.html#af2281fe6c7cca89bfb7d289cf645a3b0">listSource</a>.Add(row);</div>
+<div class="line"><span class="lineno">   17</span>                }</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classElementSelecter.html#ab0f2ba6bddfbbea4b192f34ca132d75c">list</a>.Clear();</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row2 in <span class="keyword">this</span>.listSource)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (row2.LV &lt;= lv + <span class="keyword">this</span>.lvMod)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> (!row2.aliasRef.IsEmpty() &amp;&amp; row2.tag.Contains(<span class="stringliteral">&quot;domain&quot;</span>))</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classElementSelecter.html#a9b8f6c47cf550a63d2ac74af5edda9d5">useDomain</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) != 0)</div>
+<div class="line"><span class="lineno">   28</span>                    {</div>
+<div class="line"><span class="lineno">   29</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   30</span>                    }</div>
+<div class="line"><span class="lineno">   31</span>                    <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row3 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[row2.aliasRef];</div>
+<div class="line"><span class="lineno">   32</span>                    <span class="keywordflow">if</span> ((this.<a class="code hl_variable" href="classElementSelecter.html#a9b8f6c47cf550a63d2ac74af5edda9d5">useDomain</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a9a39a284dc494fa1fcfbe62d9aa86a0d">domains</a>.Contains(row3.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10) &gt; 1) || !row3.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(row2.alias.Split(<span class="charliteral">&#39;_&#39;</span>, StringSplitOptions.None)[0]))</div>
+<div class="line"><span class="lineno">   33</span>                    {</div>
+<div class="line"><span class="lineno">   34</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   35</span>                    }</div>
+<div class="line"><span class="lineno">   36</span>                }</div>
+<div class="line"><span class="lineno">   37</span>                this.<a class="code hl_variable" href="classElementSelecter.html#ab0f2ba6bddfbbea4b192f34ca132d75c">list</a>.Add(row2);</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classElementSelecter.html#ab0f2ba6bddfbbea4b192f34ca132d75c">list</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classElementSelecter.html#af2281fe6c7cca89bfb7d289cf645a3b0">listSource</a>.RandomItemWeighted((<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> r) =&gt; (<span class="keywordtype">float</span>)r.chance).id;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classElementSelecter.html#ab0f2ba6bddfbbea4b192f34ca132d75c">list</a>.RandomItemWeighted((<a class="code hl_class" href="classSourceElement.html">SourceElement</a>.<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> r) =&gt; (<span class="keywordtype">float</span>)r.chance).id;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassElementSelecter_html_a9b8f6c47cf550a63d2ac74af5edda9d5"><div class="ttname"><a href="classElementSelecter.html#a9b8f6c47cf550a63d2ac74af5edda9d5">ElementSelecter.useDomain</a></div><div class="ttdeci">bool useDomain</div><div class="ttdef"><b>Definition:</b> <a href="ElementSelecter_8cs_source.html#l00053">ElementSelecter.cs:53</a></div></div>
+<div class="ttc" id="aclassElementSelecter_html_ab0f2ba6bddfbbea4b192f34ca132d75c"><div class="ttname"><a href="classElementSelecter.html#ab0f2ba6bddfbbea4b192f34ca132d75c">ElementSelecter.list</a></div><div class="ttdeci">List&lt; SourceElement.Row &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ElementSelecter_8cs_source.html#l00049">ElementSelecter.cs:49</a></div></div>
+<div class="ttc" id="aclassElementSelecter_html_af2281fe6c7cca89bfb7d289cf645a3b0"><div class="ttname"><a href="classElementSelecter.html#af2281fe6c7cca89bfb7d289cf645a3b0">ElementSelecter.listSource</a></div><div class="ttdeci">List&lt; SourceElement.Row &gt; listSource</div><div class="ttdef"><b>Definition:</b> <a href="ElementSelecter_8cs_source.html#l00047">ElementSelecter.cs:47</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a9a39a284dc494fa1fcfbe62d9aa86a0d"><div class="ttname"><a href="classPlayer.html#a9a39a284dc494fa1fcfbe62d9aa86a0d">Player.domains</a></div><div class="ttdeci">List&lt; int &gt; domains</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01518">Player.cs:1518</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a258e55d6efca1996b0542540a95442a9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">SourceElement.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00315">SourceElement.cs:315</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00273">SourceElement.cs:273</a></div></div>
+<div class="ttc" id="aclassSourceElement_html"><div class="ttname"><a href="classSourceElement.html">SourceElement</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00007">SourceElement.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01518">Player.domains</a>, <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00273">SourceElement.Row.id</a>, <a class="el" href="ElementSelecter_8cs_source.html#l00049">list</a>, <a class="el" href="ElementSelecter_8cs_source.html#l00047">listSource</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="SourceElement_8cs_source.html#l00315">SourceElement.Row.tag</a>, and <a class="el" href="ElementSelecter_8cs_source.html#l00053">useDomain</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00059">TraitBaseSpellbook.OnCreate()</a>, <a class="el" href="TraitPerfume_8cs_source.html#l00010">TraitPerfume.OnCreate()</a>, <a class="el" href="TraitPotionRandom_8cs_source.html#l00063">TraitPotionRandom.OnCreate()</a>, <a class="el" href="TraitRodRandom_8cs_source.html#l00053">TraitRodRandom.OnCreate()</a>, and <a class="el" href="TraitScrollRandom_8cs_source.html#l00050">TraitScrollRandom.OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -219,6 +294,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ElementSelecter_8cs_source.html#l00049">49</a> of file <a class="el" href="ElementSelecter_8cs_source.html">ElementSelecter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ElementSelecter_8cs_source.html#l00007">Select()</a>.</p>
+
 </div>
 </div>
 <a id="af2281fe6c7cca89bfb7d289cf645a3b0" name="af2281fe6c7cca89bfb7d289cf645a3b0"></a>
@@ -234,6 +311,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ElementSelecter_8cs_source.html#l00047">47</a> of file <a class="el" href="ElementSelecter_8cs_source.html">ElementSelecter.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ElementSelecter_8cs_source.html#l00007">Select()</a>.</p>
 
 </div>
 </div>
@@ -283,15 +362,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ElementSelecter_8cs_source.html#l00053">53</a> of file <a class="el" href="ElementSelecter_8cs_source.html">ElementSelecter.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ElementSelecter_8cs_source.html#l00007">Select()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ElementSelecter_8cs_source.html">ElementSelecter.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classElementSelecter.html">ElementSelecter</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

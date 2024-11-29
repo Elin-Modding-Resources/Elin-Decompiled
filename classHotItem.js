@@ -1,0 +1,27 @@
+var classHotItem =
+[
+    [ "CanAutoFire", "classHotItem.html#ae0f1228e2f12267b94e1fc6170211764", null ],
+    [ "OnClick", "classHotItem.html#a70fde84034309bd884c98d694fc58444", null ],
+    [ "OnMarkMapHighlights", "classHotItem.html#a8ba8a61bfc742ae8f6124dff49fd653c", null ],
+    [ "OnRenderTile", "classHotItem.html#a49bd0fc89ee56c48118c2dc59dce948d", null ],
+    [ "OnRightClick", "classHotItem.html#aee5eea584002fb14b3852b4e9646ab99", null ],
+    [ "OnSetCurrentItem", "classHotItem.html#af4fff3b1277e4738da4a5becb860720c", null ],
+    [ "OnUnselect", "classHotItem.html#a49c6e0e48d66fe9a0f11e3b79d1f241c", null ],
+    [ "OnUnsetCurrentItem", "classHotItem.html#a5993f0128903171505dcf043db570157", null ],
+    [ "SetImage", "classHotItem.html#a5235e1399f78eedc0600c8406fec31cc", null ],
+    [ "TextHotkey", "classHotItem.html#a8801f9446fd2d045be43e484144e01ee", null ],
+    [ "TrySetAct", "classHotItem.html#a68caceb0669833b56d2b047813df155d", null ],
+    [ "button", "classHotItem.html#a1181a695b601927f5f4955604e6cb4cb", null ],
+    [ "disabled", "classHotItem.html#ad3829cb10991b95edd52059cf0c7a6bb", null ],
+    [ "hotbar", "classHotItem.html#a763455d96b2555d6664ee30c4a8eebc6", null ],
+    [ "IsGameAction", "classHotItem.html#a82f67f6f394c1660623749c5a4792688", null ],
+    [ "IsSelectable", "classHotItem.html#af3c1307874f87bc779a92b8a05f70b95", null ],
+    [ "IsTool", "classHotItem.html#a09c601ae70acc4af97424b733a1b5d7f", null ],
+    [ "LookAtMouse", "classHotItem.html#abee1145d4cd58e0dc06f93d24f2756bb", null ],
+    [ "RenderThing", "classHotItem.html#a2611ac5528e747550918d3db0fe85aaa", null ],
+    [ "SpriteHighlight", "classHotItem.html#a5362f50c040d4e6546269c009b25720e", null ],
+    [ "TextTip", "classHotItem.html#a0fa4d0b99443b5700cd04740db462100", null ],
+    [ "Thing", "classHotItem.html#af7819bb69ba852812357b84aca4ed137", null ],
+    [ "Tool", "classHotItem.html#a9cec1f3846a475abf2d58131e2bff2bb", null ],
+    [ "UseUIObjMaterial", "classHotItem.html#ae9ac4a9ade28480b74735e8b030b2a42", null ]
+];

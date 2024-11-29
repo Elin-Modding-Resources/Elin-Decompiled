@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBiomeProfile_1_1TileBlock.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1TileBlock.html">TileBlock</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#properties">Properties</a> &#124;
@@ -199,7 +215,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00452">452</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  453</span>        {</div>
+<div class="line"><span class="lineno">  454</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  455</span>            {</div>
+<div class="line"><span class="lineno">  456</span>                <span class="keywordflow">return</span> base._GetBlock(this.<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  457</span>            }</div>
+<div class="line"><span class="lineno">  458</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  459</span>            {</div>
+<div class="line"><span class="lineno">  460</span>                base._SetBlock(ref this.<span class="keywordtype">id</span>, value);</div>
+<div class="line"><span class="lineno">  461</span>            }</div>
+<div class="line"><span class="lineno">  462</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a70d7f6143ca7f3444ce8d1416d503041" name="a70d7f6143ca7f3444ce8d1416d503041"></a>
@@ -223,16 +249,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00464">464</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  465</span>        {</div>
+<div class="line"><span class="lineno">  466</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  467</span>            {</div>
+<div class="line"><span class="lineno">  468</span>                <span class="keywordflow">return</span> base._GetBlock(this.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a>);</div>
+<div class="line"><span class="lineno">  469</span>            }</div>
+<div class="line"><span class="lineno">  470</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  471</span>            {</div>
+<div class="line"><span class="lineno">  472</span>                base._SetBlock(ref this.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a>, value);</div>
+<div class="line"><span class="lineno">  473</span>            }</div>
+<div class="line"><span class="lineno">  474</span>        }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a762961914009f2c293c711c603475360"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">BiomeProfile.Tile.idSub</a></div><div class="ttdeci">int idSub</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00411">BiomeProfile.cs:411</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1TileBlock.html">TileBlock</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

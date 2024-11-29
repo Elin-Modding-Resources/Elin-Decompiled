@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitToolTalisman.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -780,6 +800,26 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTraitCrafter.html#a380ec8a3ad068bb5d7f154aa6b9d5e30">TraitCrafter</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00082">82</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (cat == <span class="stringliteral">&quot;spellbook&quot;</span>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_class" href="classTraitSpellbook.html">TraitSpellbook</a> traitSpellbook = c.trait as <a class="code hl_class" href="classTraitSpellbook.html">TraitSpellbook</a>;</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (traitSpellbook != <span class="keyword">null</span> &amp;&amp; traitSpellbook.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.abilityType.Length &gt;= 1)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordtype">string</span> a = traitSpellbook.<a class="code hl_property" href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">source</a>.abilityType[0];</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;attack&quot;</span> || a == <span class="stringliteral">&quot;attackArea&quot;</span>)</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassTraitScroll_html_ac7d1b953cfcde5d9ae85396795ad3d2d"><div class="ttname"><a href="classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d">TraitScroll.source</a></div><div class="ttdeci">virtual SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitScroll_8cs_source.html#l00006">TraitScroll.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitSpellbook_html"><div class="ttname"><a href="classTraitSpellbook.html">TraitSpellbook</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpellbook_8cs_source.html#l00003">TraitSpellbook.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitScroll_8cs_source.html#l00007">TraitScroll.source</a>.</p>
 
 </div>
 </div>
@@ -820,7 +860,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTraitCrafter.html#a48ba3e8202cfb2e57ddad797be7baa1d">TraitCrafter</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00077">77</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> index == 1;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -845,7 +888,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00045">45</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0570fc6eaf7f97ac63265befa1c1b176" name="a0570fc6eaf7f97ac63265befa1c1b176"></a>
@@ -869,7 +918,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00053">53</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a641e5ad30e9b0a4efe916c0a0a9eddcc" name="a641e5ad30e9b0a4efe916c0a0a9eddcc"></a>
@@ -893,7 +948,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;actWrite&quot;</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a591bc7510cb9e9f810701c33e8aa115e" name="a591bc7510cb9e9f810701c33e8aa115e"></a>
@@ -917,7 +978,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00037">37</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00003">AnimeID.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3aaeea66f51cb96aea42536db2e290eb" name="a3aaeea66f51cb96aea42536db2e290eb"></a>
@@ -941,7 +1009,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;intonation&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2eef1c145cc21eef149e51d3068741cf" name="a2eef1c145cc21eef149e51d3068741cf"></a>
@@ -965,7 +1039,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;write&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2f907dd845c4d804ac2ee22834864ff" name="ac2f907dd845c4d804ac2ee22834864ff"></a>
@@ -989,7 +1069,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Talisman&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a935ef1ade21756e75c9f91e20e84bb4d" name="a935ef1ade21756e75c9f91e20e84bb4d"></a>
@@ -1013,7 +1099,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00061">61</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b02272526c9469e10b7da1a773daab5" name="a7b02272526c9469e10b7da1a773daab5"></a>
@@ -1037,16 +1129,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitToolTalisman_8cs_source.html#l00069">69</a> of file <a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitToolTalisman_8cs_source.html">TraitToolTalisman.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitToolTalisman.html">TraitToolTalisman</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

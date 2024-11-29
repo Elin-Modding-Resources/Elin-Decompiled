@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLightControl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -145,6 +165,14 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00011">11</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        this.partcleMain = this.<a class="code hl_variable" href="classLightControl.html#a0f2e4d1d43c7a38111d6fd17ae4a23f2">Haze</a>.GetComponent&lt;ParticleSystem&gt;().main;</div>
+<div class="line"><span class="lineno">   14</span>        this.lightPart = this.<a class="code hl_variable" href="classLightControl.html#a1f992dd4508599b98f1ef042888842fc">particleLight</a>.transform.parent.gameObject.GetComponent&lt;ParticleSystem&gt;().lights;</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassLightControl_html_a0f2e4d1d43c7a38111d6fd17ae4a23f2"><div class="ttname"><a href="classLightControl.html#a0f2e4d1d43c7a38111d6fd17ae4a23f2">LightControl.Haze</a></div><div class="ttdeci">GameObject Haze</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00043">LightControl.cs:43</a></div></div>
+<div class="ttc" id="aclassLightControl_html_a1f992dd4508599b98f1ef042888842fc"><div class="ttname"><a href="classLightControl.html#a1f992dd4508599b98f1ef042888842fc">LightControl.particleLight</a></div><div class="ttdeci">Light particleLight</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00040">LightControl.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LightControl_8cs_source.html#l00043">Haze</a>, and <a class="el" href="LightControl_8cs_source.html#l00040">particleLight</a>.</p>
 
 </div>
 </div>
@@ -172,7 +200,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00007">7</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7cb3385dfab08f3c18f7cbc7065690b7" name="a7cb3385dfab08f3c18f7cbc7065690b7"></a>
@@ -199,6 +229,23 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00017">17</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classLightControl.html#a0f2e4d1d43c7a38111d6fd17ae4a23f2">Haze</a>.SetActive(this.<a class="code hl_variable" href="classLightControl.html#ad4bca95cb96f984679cb1a0fc0bf1aa2">enableHaze</a>);</div>
+<div class="line"><span class="lineno">   20</span>        this.lightPart.enabled = this.<a class="code hl_variable" href="classLightControl.html#a9255a88db15aefc508a9907c5b11d9e4">enableLight</a>;</div>
+<div class="line"><span class="lineno">   21</span>        this.particleLight.range = this.<a class="code hl_variable" href="classLightControl.html#a72aca1c9142d94012841e225a7e9674f">lightRange</a>;</div>
+<div class="line"><span class="lineno">   22</span>        this.particleLight.intensity = this.<a class="code hl_variable" href="classLightControl.html#aa118d5c5e8c441265f3a4c6d35cc9901">lightIntensity</a>;</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = this.<a class="code hl_variable" href="classLightControl.html#ab97e2ce17966afc16e4766e130ddd586">partcleMain</a>.startColor.color;</div>
+<div class="line"><span class="lineno">   24</span>        color.a = this.hazeLevel / 255f;</div>
+<div class="line"><span class="lineno">   25</span>        this.partcleMain.startColor = color;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassLightControl_html_a72aca1c9142d94012841e225a7e9674f"><div class="ttname"><a href="classLightControl.html#a72aca1c9142d94012841e225a7e9674f">LightControl.lightRange</a></div><div class="ttdeci">float lightRange</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00032">LightControl.cs:32</a></div></div>
+<div class="ttc" id="aclassLightControl_html_a9255a88db15aefc508a9907c5b11d9e4"><div class="ttname"><a href="classLightControl.html#a9255a88db15aefc508a9907c5b11d9e4">LightControl.enableLight</a></div><div class="ttdeci">bool enableLight</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00028">LightControl.cs:28</a></div></div>
+<div class="ttc" id="aclassLightControl_html_aa118d5c5e8c441265f3a4c6d35cc9901"><div class="ttname"><a href="classLightControl.html#aa118d5c5e8c441265f3a4c6d35cc9901">LightControl.lightIntensity</a></div><div class="ttdeci">float lightIntensity</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00034">LightControl.cs:34</a></div></div>
+<div class="ttc" id="aclassLightControl_html_ab97e2ce17966afc16e4766e130ddd586"><div class="ttname"><a href="classLightControl.html#ab97e2ce17966afc16e4766e130ddd586">LightControl.partcleMain</a></div><div class="ttdeci">ParticleSystem.MainModule partcleMain</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00045">LightControl.cs:45</a></div></div>
+<div class="ttc" id="aclassLightControl_html_ad4bca95cb96f984679cb1a0fc0bf1aa2"><div class="ttname"><a href="classLightControl.html#ad4bca95cb96f984679cb1a0fc0bf1aa2">LightControl.enableHaze</a></div><div class="ttdeci">bool enableHaze</div><div class="ttdef"><b>Definition:</b> <a href="LightControl_8cs_source.html#l00030">LightControl.cs:30</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="LightControl_8cs_source.html#l00030">enableHaze</a>, <a class="el" href="LightControl_8cs_source.html#l00028">enableLight</a>, <a class="el" href="LightControl_8cs_source.html#l00043">Haze</a>, <a class="el" href="LightControl_8cs_source.html#l00034">lightIntensity</a>, <a class="el" href="LightControl_8cs_source.html#l00032">lightRange</a>, and <a class="el" href="LightControl_8cs_source.html#l00045">partcleMain</a>.</p>
 
 </div>
 </div>
@@ -217,6 +264,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00030">30</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a9255a88db15aefc508a9907c5b11d9e4" name="a9255a88db15aefc508a9907c5b11d9e4"></a>
@@ -233,6 +282,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00028">28</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a0f2e4d1d43c7a38111d6fd17ae4a23f2" name="a0f2e4d1d43c7a38111d6fd17ae4a23f2"></a>
@@ -248,6 +299,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00043">43</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00011">OnEnable()</a>, and <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
 
 </div>
 </div>
@@ -280,6 +333,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00034">34</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
 
 </div>
 </div>
@@ -321,6 +376,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00032">32</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
+
 </div>
 </div>
 <a id="ab97e2ce17966afc16e4766e130ddd586" name="ab97e2ce17966afc16e4766e130ddd586"></a>
@@ -345,6 +402,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00045">45</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00017">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a1f992dd4508599b98f1ef042888842fc" name="a1f992dd4508599b98f1ef042888842fc"></a>
@@ -361,15 +420,21 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LightControl_8cs_source.html#l00040">40</a> of file <a class="el" href="LightControl_8cs_source.html">LightControl.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LightControl_8cs_source.html#l00011">OnEnable()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LightControl_8cs_source.html">LightControl.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLightControl.html">LightControl</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

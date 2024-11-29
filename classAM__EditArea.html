@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__EditArea.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -550,6 +570,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#ac7b649874fcfb6c6f2fc9c558b97cd89">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00050">50</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> base.HitTest(point, start);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
+<div class="ttc" id="aclassPoint_html_acd5999e555a324bcf6f8a17216a72d76"><div class="ttname"><a href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">Point.area</a></div><div class="ttdeci">Area area</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00114">Point.cs:115</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00115">Point.area</a>.</p>
 
 </div>
 </div>
@@ -590,6 +621,38 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#afdba5ef3a1ea3b111b32e46ecfe5eaa8">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00059">59</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="classArea.html">Area</a> a = point.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a>;</div>
+<div class="line"><span class="lineno">   64</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   65</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;expandArea&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a74f34d5258aab237f632b504d44af0c5">ExpandArea</a>.<a class="code hl_function" href="classAM__ExpandArea.html#aed65bfd06dac22ced2f5838e1494bf43">Activate</a>(a, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   68</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   69</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;shrinkArea&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a74f34d5258aab237f632b504d44af0c5">ExpandArea</a>.<a class="code hl_function" href="classAM__ExpandArea.html#aed65bfd06dac22ced2f5838e1494bf43">Activate</a>(a, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   72</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>            uicontextMenu.AddButton(<span class="stringliteral">&quot;delete&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                SE.Play(<span class="stringliteral">&quot;trash&quot;</span>);</div>
+<div class="line"><span class="lineno">   76</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a8270be4ddfbee895c502315214e1af18">rooms</a>.<a class="code hl_function" href="classRoomManager.html#aa567530c6c913fda8cd4765f136057d1">RemoveArea</a>(a);</div>
+<div class="line"><span class="lineno">   77</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclassAM__ExpandArea_html_aed65bfd06dac22ced2f5838e1494bf43"><div class="ttname"><a href="classAM__ExpandArea.html#aed65bfd06dac22ced2f5838e1494bf43">AM_ExpandArea.Activate</a></div><div class="ttdeci">void Activate(Area a, bool _shrink=false)</div><div class="ttdef"><b>Definition:</b> <a href="AM__ExpandArea_8cs_source.html#l00042">AM_ExpandArea.cs:42</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a74f34d5258aab237f632b504d44af0c5"><div class="ttname"><a href="classActionMode.html#a74f34d5258aab237f632b504d44af0c5">ActionMode.ExpandArea</a></div><div class="ttdeci">static AM_ExpandArea ExpandArea</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01739">ActionMode.cs:1739</a></div></div>
+<div class="ttc" id="aclassArea_html"><div class="ttname"><a href="classArea.html">Area</a></div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00004">Area.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassMap_html_a8270be4ddfbee895c502315214e1af18"><div class="ttname"><a href="classMap.html#a8270be4ddfbee895c502315214e1af18">Map.rooms</a></div><div class="ttdeci">RoomManager rooms</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02836">Map.cs:2836</a></div></div>
+<div class="ttc" id="aclassRoomManager_html_aa567530c6c913fda8cd4765f136057d1"><div class="ttname"><a href="classRoomManager.html#aa567530c6c913fda8cd4765f136057d1">RoomManager.RemoveArea</a></div><div class="ttdeci">void RemoveArea(Area a)</div><div class="ttdef"><b>Definition:</b> <a href="RoomManager_8cs_source.html#l00085">RoomManager.cs:85</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="AM__ExpandArea_8cs_source.html#l00042">AM_ExpandArea.Activate()</a>, <a class="el" href="Point_8cs_source.html#l00115">Point.area</a>, <a class="el" href="ActionMode_8cs_source.html#l01739">ActionMode.ExpandArea</a>, <a class="el" href="RoomManager_8cs_source.html#l00085">RoomManager.RemoveArea()</a>, <a class="el" href="Map_8cs_source.html#l02836">Map.rooms</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -619,7 +682,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classActionMode.html#a815c9333c3a1f082eb8bd667b2fe29c7">ActionMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00045">45</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        base.SetCursorOnMap(CursorSystem.Select);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -644,7 +710,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00029">29</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="AreaHighlightMode_8cs.html#a15798da014a287e7a68b371004532342">AreaHighlightMode</a>.Edit;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aAreaHighlightMode_8cs_html_a15798da014a287e7a68b371004532342"><div class="ttname"><a href="AreaHighlightMode_8cs.html#a15798da014a287e7a68b371004532342">AreaHighlightMode</a></div><div class="ttdeci">AreaHighlightMode</div><div class="ttdef"><b>Definition:</b> <a href="AreaHighlightMode_8cs_source.html#l00003">AreaHighlightMode.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8aea48b8726fa5ad966aed424c33bd20" name="a8aea48b8726fa5ad966aed424c33bd20"></a>
@@ -668,7 +741,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00005">5</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_enumeration" href="classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299">Mode</a>.Area;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassBuildMenu_html"><div class="ttname"><a href="classBuildMenu.html">BuildMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00007">BuildMenu.cs:8</a></div></div>
+<div class="ttc" id="aclassBuildMenu_html_a42020f754bb7f8564cb3a8853597b299"><div class="ttname"><a href="classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299">BuildMenu.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00723">BuildMenu.cs:724</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae0053d5d5793b25923d1a14c685ae80b" name="ae0053d5d5793b25923d1a14c685ae80b"></a>
@@ -692,7 +773,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00013">13</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3adcf13203fda3a13a4edcc165bec452" name="a3adcf13203fda3a13a4edcc165bec452"></a>
@@ -716,7 +803,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00037">37</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.Single;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_a126c209eb9b08ada2549a86c6fc6dd1f"><div class="ttname"><a href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">BaseTileSelector.SelectType</a></div><div class="ttdeci">SelectType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00517">BaseTileSelector.cs:518</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab04fd579af587cac27de00f531c5f104" name="ab04fd579af587cac27de00f531c5f104"></a>
@@ -740,16 +835,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__EditArea_8cs_source.html#l00021">21</a> of file <a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__EditArea_8cs_source.html">AM_EditArea.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__EditArea.html">AM_EditArea</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classListPeopleSelect.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -289,6 +309,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00028">28</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">Home</a>.<a class="code hl_variable" href="classFaction.html#a7240c1aaa22259a1efba8fd0f3967a67">listReserve</a>.First((<a class="code hl_class" href="classHireInfo.html">HireInfo</a> a) =&gt; a.<a class="code hl_variable" href="classHireInfo.html#a43e73d0bf8ec3368cc13be172547c65f">chara</a> == c);</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a079df2f093c2b827947eb8db4de7c78a"><div class="ttname"><a href="classEClass.html#a079df2f093c2b827947eb8db4de7c78a">EClass.Home</a></div><div class="ttdeci">static Faction Home</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00079">EClass.cs:80</a></div></div>
+<div class="ttc" id="aclassFaction_html_a7240c1aaa22259a1efba8fd0f3967a67"><div class="ttname"><a href="classFaction.html#a7240c1aaa22259a1efba8fd0f3967a67">Faction.listReserve</a></div><div class="ttdeci">List&lt; HireInfo &gt; listReserve</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00439">Faction.2.cs:439</a></div></div>
+<div class="ttc" id="aclassHireInfo_html"><div class="ttname"><a href="classHireInfo.html">HireInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="HireInfo_8cs_source.html#l00004">HireInfo.cs:5</a></div></div>
+<div class="ttc" id="aclassHireInfo_html_a43e73d0bf8ec3368cc13be172547c65f"><div class="ttname"><a href="classHireInfo.html#a43e73d0bf8ec3368cc13be172547c65f">HireInfo.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="HireInfo_8cs_source.html#l00035">HireInfo.cs:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HireInfo_8cs_source.html#l00035">HireInfo.chara</a>, <a class="el" href="EClass_8cs_source.html#l00080">EClass.Home</a>, and <a class="el" href="Faction_82_8cs_source.html#l00439">Faction.listReserve</a>.</p>
 
 </div>
 </div>
@@ -327,6 +357,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00017">17</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classListPeopleSelect.html#a86b40be1da421d958c7999f8a37476f3">onClick</a>(c);</div>
+<div class="line"><span class="lineno">   20</span>        base.layer.Close();</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassListPeopleSelect_html_a86b40be1da421d958c7999f8a37476f3"><div class="ttname"><a href="classListPeopleSelect.html#a86b40be1da421d958c7999f8a37476f3">ListPeopleSelect.onClick</a></div><div class="ttdeci">Action&lt; Chara &gt; onClick</div><div class="ttdef"><b>Definition:</b> <a href="ListPeopleSelect_8cs_source.html#l00035">ListPeopleSelect.cs:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListPeopleSelect_8cs_source.html#l00035">onClick</a>.</p>
 
 </div>
 </div>
@@ -365,6 +402,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00007">7</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">string</span> lang = a.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetName().ToTitleCase(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classListPeopleSelect.html#ad0966f7a48c0177024aa5f5e185b8c05">onShowSubText</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            lang = this.<a class="code hl_variable" href="classListPeopleSelect.html#ad0966f7a48c0177024aa5f5e185b8c05">onShowSubText</a>(a);</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>        b.<a class="code hl_function" href="classItemGeneral.html#a2ce248e2eb75dcd1faf1de9a808bab8c">SetSubText2</a>(lang, FontColor.Default, TextAnchor.MiddleRight);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00307">Chara.cs:308</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a2ce248e2eb75dcd1faf1de9a808bab8c"><div class="ttname"><a href="classItemGeneral.html#a2ce248e2eb75dcd1faf1de9a808bab8c">ItemGeneral.SetSubText2</a></div><div class="ttdeci">UIButton SetSubText2(string lang, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleRight)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00123">ItemGeneral.cs:123</a></div></div>
+<div class="ttc" id="aclassListPeopleSelect_html_ad0966f7a48c0177024aa5f5e185b8c05"><div class="ttname"><a href="classListPeopleSelect.html#ad0966f7a48c0177024aa5f5e185b8c05">ListPeopleSelect.onShowSubText</a></div><div class="ttdeci">Func&lt; Chara, string &gt; onShowSubText</div><div class="ttdef"><b>Definition:</b> <a href="ListPeopleSelect_8cs_source.html#l00037">ListPeopleSelect.cs:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00308">Chara.job</a>, <a class="el" href="ListPeopleSelect_8cs_source.html#l00037">onShowSubText</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00123">ItemGeneral.SetSubText2()</a>.</p>
 
 </div>
 </div>
@@ -394,6 +444,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseListPeople.html#afc038432765b66f1704235908bb7ae95">BaseListPeople</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00023">23</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classListPeopleSelect.html#ae56ce14783f73a0e337386558db9e578">onList</a>(this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassListOwner_html_a6ef8dac39202125ddd488be32c34dd20"><div class="ttname"><a href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">ListOwner&lt; Chara, ItemGeneral &gt;::list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00097">ListOwner.2.cs:97</a></div></div>
+<div class="ttc" id="aclassListPeopleSelect_html_ae56ce14783f73a0e337386558db9e578"><div class="ttname"><a href="classListPeopleSelect.html#ae56ce14783f73a0e337386558db9e578">ListPeopleSelect.onList</a></div><div class="ttdeci">Action&lt; UIList &gt; onList</div><div class="ttdef"><b>Definition:</b> <a href="ListPeopleSelect_8cs_source.html#l00033">ListPeopleSelect.cs:33</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ListOwner_82_8cs_source.html#l00097">ListOwner&lt; Chara, ItemGeneral &gt;.list</a>, and <a class="el" href="ListPeopleSelect_8cs_source.html#l00033">onList</a>.</p>
 
 </div>
 </div>
@@ -412,6 +469,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00035">35</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ListPeopleSelect_8cs_source.html#l00017">OnClick()</a>.</p>
+
 </div>
 </div>
 <a id="ae56ce14783f73a0e337386558db9e578" name="ae56ce14783f73a0e337386558db9e578"></a>
@@ -427,6 +486,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00033">33</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ListPeopleSelect_8cs_source.html#l00023">OnList()</a>.</p>
 
 </div>
 </div>
@@ -444,15 +505,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleSelect_8cs_source.html#l00037">37</a> of file <a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ListPeopleSelect_8cs_source.html#l00007">OnInstantiate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ListPeopleSelect_8cs_source.html">ListPeopleSelect.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classListPeopleSelect.html">ListPeopleSelect</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

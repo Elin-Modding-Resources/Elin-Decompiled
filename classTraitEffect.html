@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitEffect.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -701,6 +721,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#af198baeac5df3a1a0efc771401772f0d">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00171">171</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> b.refVal - this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00151">Card.cs:152</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00152">Card.refVal</a>.</p>
 
 </div>
 </div>
@@ -729,6 +756,49 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00076">76</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_class" href="classEffect.html">Effect</a> effect = <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(this.<a class="code hl_property" href="classTraitEffect.html#a421a99541c178b934d4eef877efcfe1c">Path</a>);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.color.Get().a != 0f)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            effect.<a class="code hl_function" href="classEffect.html#aba9f6f61c95b4378dc3c9fd5804c74a0">SetParticleColor</a>(this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.color.Get());</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.sprite != 0)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            Sprite sprite = effect.<a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>[this.data.sprite % effect.<a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>.Length];</div>
+<div class="line"><span class="lineno">   86</span>            ParticleSystem[] componentsInChildren = effect.GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                ParticleSystem.ShapeModule shape = componentsInChildren[i].shape;</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (shape.shapeType == ParticleSystemShapeType.Sprite &amp;&amp; shape.sprite)</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    shape.sprite = sprite;</div>
+<div class="line"><span class="lineno">   93</span>                    shape.texture = sprite.texture;</div>
+<div class="line"><span class="lineno">   94</span>                }</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (effect.<a class="code hl_variable" href="classEffect.html#a1e86db094d72f601ad967ed7b26942bc">dirs</a>.Length != 0)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            effect.transform.localEulerAngles = effect.<a class="code hl_variable" href="classEffect.html#a1e86db094d72f601ad967ed7b26942bc">dirs</a>[this.owner.dir % effect.<a class="code hl_variable" href="classEffect.html#a1e86db094d72f601ad967ed7b26942bc">dirs</a>.Length];</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        effect.<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>((v == <span class="keywordflow">default</span>(Vector3)) ? ((this.owner.parent == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>) ? this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a> : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_variable" href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">position</a>) : v);</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="ttc" id="aclassCardRenderer_html_a3a3912cba4c1650d7445416067e3ff0e"><div class="ttname"><a href="classCardRenderer.html#a3a3912cba4c1650d7445416067e3ff0e">CardRenderer.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00716">CardRenderer.cs:716</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00008">Effect.cs:9</a></div></div>
+<div class="ttc" id="aclassEffect_html_a1e86db094d72f601ad967ed7b26942bc"><div class="ttname"><a href="classEffect.html#a1e86db094d72f601ad967ed7b26942bc">Effect.dirs</a></div><div class="ttdeci">Vector3[] dirs</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00273">Effect.cs:273</a></div></div>
+<div class="ttc" id="aclassEffect_html_a4464a19ae38b7a19f2ebfae0a75f4287"><div class="ttname"><a href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">Effect.sprites</a></div><div class="ttdeci">Sprite[] sprites</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00283">Effect.cs:283</a></div></div>
+<div class="ttc" id="aclassEffect_html_a4b51528582c52d77dc9846b6efa150d5"><div class="ttname"><a href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Effect.Get</a></div><div class="ttdeci">static Effect Get(Effect original)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00010">Effect.cs:10</a></div></div>
+<div class="ttc" id="aclassEffect_html_a7fc23b7447649119c0b7497c4218d792"><div class="ttname"><a href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Effect.Play</a></div><div class="ttdeci">void Play(float delay, Point from, float fixY=0f, Point to=null, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00033">Effect.cs:33</a></div></div>
+<div class="ttc" id="aclassEffect_html_aba9f6f61c95b4378dc3c9fd5804c74a0"><div class="ttname"><a href="classEffect.html#aba9f6f61c95b4378dc3c9fd5804c74a0">Effect.SetParticleColor</a></div><div class="ttdeci">Effect SetParticleColor(Color c)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00217">Effect.cs:217</a></div></div>
+<div class="ttc" id="aclassTraitEffect_html_a421a99541c178b934d4eef877efcfe1c"><div class="ttname"><a href="classTraitEffect.html#a421a99541c178b934d4eef877efcfe1c">TraitEffect.Path</a></div><div class="ttdeci">virtual string Path</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00039">TraitEffect.cs:40</a></div></div>
+<div class="ttc" id="aclassTraitEffect_html_ab2f489215f0dbd587f7dbd49414da1aa"><div class="ttname"><a href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">TraitEffect.data</a></div><div class="ttdeci">TraitEffect.Data data</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00055">TraitEffect.cs:56</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="TraitEffect_8cs_source.html#l00056">data</a>, <a class="el" href="Effect_8cs_source.html#l00273">Effect.dirs</a>, <a class="el" href="Effect_8cs_source.html#l00010">Effect.Get()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="TraitEffect_8cs_source.html#l00040">Path</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Effect_8cs_source.html#l00033">Effect.Play()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00716">CardRenderer.position</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="Effect_8cs_source.html#l00217">Effect.SetParticleColor()</a>, and <a class="el" href="Effect_8cs_source.html#l00283">Effect.sprites</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00021">TCExtra.OnDraw()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00104">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -759,6 +829,85 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00104">104</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        base.TrySetAct(p);</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classActPlan.html#a6f9540948676b3b625b47e4f3716a36c">input</a> != <a class="code hl_enumeration" href="ActInput_8cs.html#a0b87c74553636e0d52d296c7664e7564">ActInput</a>.AllAction)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (this.<a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>.Length != 0)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeSymbol&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">  116</span>                uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; ((<span class="keywordtype">int</span>)a).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">float</span>)this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.sprite, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    this.data.sprite = (int)b;</div>
+<div class="line"><span class="lineno">  119</span>                }, 0f, (float)(this.<a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>.Length - 1), <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  120</span>                uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  122</span>            }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (this.<a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>.Length != 0)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeColor&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.color.Get(), <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(0f, 0f, 0f, 0f), delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  129</span>                {</div>
+<div class="line"><span class="lineno">  130</span>                    this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.color.Set(_c);</div>
+<div class="line"><span class="lineno">  131</span>                });</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  133</span>            }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeInterval&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">  138</span>            uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; (0.01f * (float)((<span class="keywordtype">int</span>)(a * 10f))).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, this.data.interval * 10f, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  139</span>            {</div>
+<div class="line"><span class="lineno">  140</span>                this.data.interval = b * 0.1f;</div>
+<div class="line"><span class="lineno">  141</span>            }, 0f, 200f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  142</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  145</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeDelay&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">  148</span>            uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; (0.01f * (float)((<span class="keywordtype">int</span>)(a * 10f))).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, this.data.delay * 10f, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  149</span>            {</div>
+<div class="line"><span class="lineno">  150</span>                this.data.delay = b * 0.1f;</div>
+<div class="line"><span class="lineno">  151</span>            }, 0f, 200f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  152</span>            uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  154</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actChangeType&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">  160</span>                uicontextMenu.AddSlider(<span class="stringliteral">&quot;adjustment&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)this.<span class="keywordtype">id</span>, delegate(<span class="keywordtype">float</span> b)</div>
+<div class="line"><span class="lineno">  161</span>                {</div>
+<div class="line"><span class="lineno">  162</span>                    this.id = (int)b;</div>
+<div class="line"><span class="lineno">  163</span>                    this.<a class="code hl_function" href="classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138">Proc</a>(<span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">  164</span>                }, 0f, (float)(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.fireworks.Count - 1), <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  165</span>                uicontextMenu.Show();</div>
+<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  167</span>            }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="ttc" id="aActInput_8cs_html_a0b87c74553636e0d52d296c7664e7564"><div class="ttname"><a href="ActInput_8cs.html#a0b87c74553636e0d52d296c7664e7564">ActInput</a></div><div class="ttdeci">ActInput</div><div class="ttdef"><b>Definition:</b> <a href="ActInput_8cs_source.html#l00003">ActInput.cs:4</a></div></div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
+<div class="ttc" id="aclassActPlan_html_a6f9540948676b3b625b47e4f3716a36c"><div class="ttname"><a href="classActPlan.html#a6f9540948676b3b625b47e4f3716a36c">ActPlan.input</a></div><div class="ttdeci">ActInput input</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00799">ActPlan.cs:799</a></div></div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassEffect_html_a35c4a15f39858c75f7dc48c614b768e1"><div class="ttname"><a href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">Effect.systems</a></div><div class="ttdeci">ParticleSystem[] systems</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00271">Effect.cs:271</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitEffect_html_a49d29f10fb5e4db7826ae1287470e138"><div class="ttname"><a href="classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138">TraitEffect.Proc</a></div><div class="ttdeci">void Proc(Vector3 v=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00076">TraitEffect.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="TraitEffect_8cs_source.html#l00056">data</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="ActPlan_8cs_source.html#l00799">ActPlan.input</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">Proc()</a>, <a class="el" href="Effect_8cs_source.html#l00283">Effect.sprites</a>, <a class="el" href="Effect_8cs_source.html#l00271">Effect.systems</a>, <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -793,6 +942,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00176">176</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00021">TCExtra.OnDraw()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -817,6 +968,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00055">55</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTraitEffect.html#ae4fe9e69dd7f9a3a549538f4877ebd13">_data</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                this._data = this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.GetObj&lt;<a class="code hl_class" href="classTraitEffect.html">TraitEffect</a>.<a class="code hl_class" href="classTraitEffect_1_1Data.html">Data</a>&gt;(7);</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTraitEffect.html#ae4fe9e69dd7f9a3a549538f4877ebd13">_data</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    this._data = <span class="keyword">new</span> <a class="code hl_class" href="classTraitEffect.html">TraitEffect</a>.<a class="code hl_class" href="classTraitEffect_1_1Data.html">Data</a>();</div>
+<div class="line"><span class="lineno">   65</span>                    this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>(7, this.<a class="code hl_variable" href="classTraitEffect.html#ae4fe9e69dd7f9a3a549538f4877ebd13">_data</a>);</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTraitEffect.html#ae4fe9e69dd7f9a3a549538f4877ebd13">_data</a>;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>(7, value);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_a27a8dbca89eb27a56b60b86c69195adc"><div class="ttname"><a href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">BaseCard.SetObj</a></div><div class="ttdeci">void SetObj(int id, object o)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00082">BaseCard.cs:82</a></div></div>
+<div class="ttc" id="aclassTraitEffect_1_1Data_html"><div class="ttname"><a href="classTraitEffect_1_1Data.html">TraitEffect.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00180">TraitEffect.cs:181</a></div></div>
+<div class="ttc" id="aclassTraitEffect_html"><div class="ttname"><a href="classTraitEffect.html">TraitEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00005">TraitEffect.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitEffect_html_ae4fe9e69dd7f9a3a549538f4877ebd13"><div class="ttname"><a href="classTraitEffect.html#ae4fe9e69dd7f9a3a549538f4877ebd13">TraitEffect._data</a></div><div class="ttdeci">TraitEffect.Data _data</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00178">TraitEffect.cs:178</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00021">TCExtra.OnDraw()</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">Proc()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00104">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -841,7 +1017,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.fireworks[this.id % <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.fireworks.Count];</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17bd67fbfc23aaf5e55649c261a0b670" name="a17bd67fbfc23aaf5e55649c261a0b670"></a>
@@ -865,7 +1047,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            this.owner.refVal = value;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aace38ee2768d2aa57f521a1b05a40712" name="aace38ee2768d2aa57f521a1b05a40712"></a>
@@ -889,7 +1081,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.interval != 0f)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitEffect.html#ab2f489215f0dbd587f7dbd49414da1aa">data</a>.interval;</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> 3f;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a421a99541c178b934d4eef877efcfe1c" name="a421a99541c178b934d4eef877efcfe1c"></a>
@@ -913,6 +1115,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00039">39</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitEffect_8cs_source.html#l00076">Proc()</a>.</p>
 
 </div>
 </div>
@@ -937,16 +1147,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitEffect_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitEffect_8cs_source.html">TraitEffect.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitEffect.html">TraitEffect</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

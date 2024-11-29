@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classListPeopleRevive.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -281,7 +301,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseListPeople.html#ac38689827c4a17949d9035d3b4c9d37c">BaseListPeople</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleRevive_8cs_source.html#l00007">7</a> of file <a class="el" href="ListPeopleRevive_8cs_source.html">ListPeopleRevive.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2c87362089d236ca39d86862fd77c51" name="ac2c87362089d236ca39d86862fd77c51"></a>
@@ -319,6 +342,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleRevive_8cs_source.html#l00019">19</a> of file <a class="el" href="ListPeopleRevive_8cs_source.html">ListPeopleRevive.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#aa7e91f1941ab7a6054674667896c3f8b">TryPay</a>(<a class="code hl_class" href="classCalcMoney.html">CalcMoney</a>.<a class="code hl_function" href="classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88">Revive</a>(c), <span class="stringliteral">&quot;money&quot;</span>))</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        c.<a class="code hl_function" href="classChara.html#a0219e0ff47bdfd344eed3d5238fb57f8">GetRevived</a>();</div>
+<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.List(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassCalcMoney_html"><div class="ttname"><a href="classCalcMoney.html">CalcMoney</a></div><div class="ttdef"><b>Definition:</b> <a href="CalcMoney_8cs_source.html#l00004">CalcMoney.cs:5</a></div></div>
+<div class="ttc" id="aclassCalcMoney_html_aaa3bce77f8cdce7bebc21f8a0eaebf88"><div class="ttname"><a href="classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88">CalcMoney.Revive</a></div><div class="ttdeci">static int Revive(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="CalcMoney_8cs_source.html#l00036">CalcMoney.cs:36</a></div></div>
+<div class="ttc" id="aclassCard_html_aa7e91f1941ab7a6054674667896c3f8b"><div class="ttname"><a href="classCard.html#aa7e91f1941ab7a6054674667896c3f8b">Card.TryPay</a></div><div class="ttdeci">bool TryPay(int a, string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03756">Card.cs:3756</a></div></div>
+<div class="ttc" id="aclassChara_html_a0219e0ff47bdfd344eed3d5238fb57f8"><div class="ttname"><a href="classChara.html#a0219e0ff47bdfd344eed3d5238fb57f8">Chara.GetRevived</a></div><div class="ttdeci">void GetRevived()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04564">Chara.cs:4564</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassListOwner_html_a6ef8dac39202125ddd488be32c34dd20"><div class="ttname"><a href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">ListOwner&lt; Chara, ItemGeneral &gt;::list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_82_8cs_source.html#l00097">ListOwner.2.cs:97</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l04564">Chara.GetRevived()</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00097">ListOwner&lt; Chara, ItemGeneral &gt;.list</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="CalcMoney_8cs_source.html#l00036">CalcMoney.Revive()</a>, and <a class="el" href="Card_8cs_source.html#l03756">Card.TryPay()</a>.</p>
 
 </div>
 </div>
@@ -357,6 +397,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleRevive_8cs_source.html#l00012">12</a> of file <a class="el" href="ListPeopleRevive_8cs_source.html">ListPeopleRevive.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        base.OnInstantiate(a, b);</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">money</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;money&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>        b.AddPrefab&lt;UIItem&gt;(<span class="stringliteral">&quot;costMoney&quot;</span>).text1.SetText((<a class="code hl_class" href="classCalcMoney.html">CalcMoney</a>.<a class="code hl_function" href="classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88">Revive</a>(a).ToString() ?? <span class="stringliteral">&quot;&quot;</span>).TagColorGoodBad(() =&gt; <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">money</a> &gt;= <a class="code hl_class" href="classCalcMoney.html">CalcMoney</a>.<a class="code hl_function" href="classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88">Revive</a>(a), <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">HomeResourceType.money</a></div><div class="ttdeci">@ money</div></div>
+<div class="ttc" id="aclassCard_html_a6b8ed8f4280ec4fde249ed153321db75"><div class="ttname"><a href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">Card.GetCurrency</a></div><div class="ttdeci">int GetCurrency(string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03807">Card.cs:3807</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03807">Card.GetCurrency()</a>, <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca9726255eec083aa56dc0449a21b33190">money</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00036">CalcMoney.Revive()</a>.</p>
 
 </div>
 </div>
@@ -386,6 +435,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classBaseListPeople.html#afc038432765b66f1704235908bb7ae95">BaseListPeople</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ListPeopleRevive_8cs_source.html#l00029">29</a> of file <a class="el" href="ListPeopleRevive_8cs_source.html">ListPeopleRevive.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Chara&gt; keyValuePair <span class="keywordflow">in</span> from a <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a></div>
+<div class="line"><span class="lineno">   32</span>        where a.Value.isDead &amp;&amp; a.Value.faction == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a> &amp;&amp; !a.Value.isSummon</div>
+<div class="line"><span class="lineno">   33</span>        select a)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            this.<a class="code hl_variable" href="classListOwner.html#a6ef8dac39202125ddd488be32c34dd20">list</a>.Add(keyValuePair.Value);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassCardManager_html_a6d6d588d3c038e8919951bccaa2263d6"><div class="ttname"><a href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">CardManager.globalCharas</a></div><div class="ttdeci">CardManager.GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00065">CardManager.cs:65</a></div></div>
+<div class="ttc" id="aclassChara_html_a34adc7979fac5d829240e53c7da2e5b8"><div class="ttname"><a href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">Chara.faction</a></div><div class="ttdeci">Faction faction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00245">Chara.cs:246</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="Chara_8cs_source.html#l00246">Chara.faction</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CardManager_8cs_source.html#l00065">CardManager.globalCharas</a>, <a class="el" href="ListOwner_82_8cs_source.html#l00097">ListOwner&lt; Chara, ItemGeneral &gt;.list</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -393,9 +456,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="ListPeopleRevive_8cs_source.html">ListPeopleRevive.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classListPeopleRevive.html">ListPeopleRevive</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

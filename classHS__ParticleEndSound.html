@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHS__ParticleEndSound.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -169,7 +189,10 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00008">8</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        HS_ParticleEndSound.SharedInstance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a626f56b67364f1a5591094a69a63a678" name="a626f56b67364f1a5591094a69a63a678"></a>
@@ -197,6 +220,16 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00080">80</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a643a81415c679e726995d58dd0fcc16c">poolReturnTimer</a>);</div>
+<div class="line"><span class="lineno">   83</span>        soundInstance.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   84</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a643a81415c679e726995d58dd0fcc16c"><div class="ttname"><a href="classHS__ParticleEndSound.html#a643a81415c679e726995d58dd0fcc16c">HS_ParticleEndSound.poolReturnTimer</a></div><div class="ttdeci">float poolReturnTimer</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00087">HS_ParticleEndSound.cs:87</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00087">poolReturnTimer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">LateUpdate()</a>.</p>
 
 </div>
 </div>
@@ -224,6 +257,37 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">55</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        ParticleSystem.Particle[] array = <span class="keyword">new</span> ParticleSystem.Particle[base.GetComponent&lt;ParticleSystem&gt;().particleCount];</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">int</span> particles = base.GetComponent&lt;ParticleSystem&gt;().GetParticles(array);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; particles; i++)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d">audioExplosion</a>.Length != 0 &amp;&amp; array[i].remainingLifetime &lt; Time.deltaTime)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                GameObject gameObject = <a class="code hl_class" href="classHS__ParticleEndSound.html">HS_ParticleEndSound</a>.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a9bf76c824b8e9d7c4ce080493929114b">SharedInstance</a>.<a class="code hl_function" href="classHS__ParticleEndSound.html#aceb7b4dd8fc44ee9a524f9a7958a53a1">SpawnFromPool</a>(<span class="stringliteral">&quot;AudioExplosion&quot;</span>, array[i].position);</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (gameObject != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    base.StartCoroutine(this.<a class="code hl_function" href="classHS__ParticleEndSound.html#a626f56b67364f1a5591094a69a63a678">LateCall</a>(gameObject));</div>
+<div class="line"><span class="lineno">   67</span>                }</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a4cd775f107a214371692e76cad2acc48">audioShot</a>.Length != 0 &amp;&amp; array[i].remainingLifetime &gt;= array[i].startLifetime - Time.deltaTime)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                GameObject gameObject2 = <a class="code hl_class" href="classHS__ParticleEndSound.html">HS_ParticleEndSound</a>.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a9bf76c824b8e9d7c4ce080493929114b">SharedInstance</a>.<a class="code hl_function" href="classHS__ParticleEndSound.html#aceb7b4dd8fc44ee9a524f9a7958a53a1">SpawnFromPool</a>(<span class="stringliteral">&quot;AudioShot&quot;</span>, array[i].position);</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (gameObject2 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   73</span>                {</div>
+<div class="line"><span class="lineno">   74</span>                    base.StartCoroutine(this.<a class="code hl_function" href="classHS__ParticleEndSound.html#a626f56b67364f1a5591094a69a63a678">LateCall</a>(gameObject2));</div>
+<div class="line"><span class="lineno">   75</span>                }</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html"><div class="ttname"><a href="classHS__ParticleEndSound.html">HS_ParticleEndSound</a></div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00006">HS_ParticleEndSound.cs:7</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a4cd775f107a214371692e76cad2acc48"><div class="ttname"><a href="classHS__ParticleEndSound.html#a4cd775f107a214371692e76cad2acc48">HS_ParticleEndSound.audioShot</a></div><div class="ttdeci">AudioClip[] audioShot</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00107">HS_ParticleEndSound.cs:107</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a626f56b67364f1a5591094a69a63a678"><div class="ttname"><a href="classHS__ParticleEndSound.html#a626f56b67364f1a5591094a69a63a678">HS_ParticleEndSound.LateCall</a></div><div class="ttdeci">IEnumerator LateCall(GameObject soundInstance)</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00080">HS_ParticleEndSound.cs:80</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a738b06d9def5a3c8978f27ccd20dd39d"><div class="ttname"><a href="classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d">HS_ParticleEndSound.audioExplosion</a></div><div class="ttdeci">AudioClip[] audioExplosion</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00105">HS_ParticleEndSound.cs:105</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a9bf76c824b8e9d7c4ce080493929114b"><div class="ttname"><a href="classHS__ParticleEndSound.html#a9bf76c824b8e9d7c4ce080493929114b">HS_ParticleEndSound.SharedInstance</a></div><div class="ttdeci">static HS_ParticleEndSound SharedInstance</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00109">HS_ParticleEndSound.cs:109</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_aceb7b4dd8fc44ee9a524f9a7958a53a1"><div class="ttname"><a href="classHS__ParticleEndSound.html#aceb7b4dd8fc44ee9a524f9a7958a53a1">HS_ParticleEndSound.SpawnFromPool</a></div><div class="ttdeci">GameObject SpawnFromPool(string tag, Vector3 position)</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00040">HS_ParticleEndSound.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00105">audioExplosion</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00107">audioShot</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00080">LateCall()</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00109">SharedInstance</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00040">SpawnFromPool()</a>.</p>
 
 </div>
 </div>
@@ -262,6 +326,24 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00040">40</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>.ContainsKey(tag))</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            Debug.LogWarning(<span class="stringliteral">&quot;Pool with tag&quot;</span> + tag + <span class="stringliteral">&quot; does not excist.&quot;</span>);</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        GameObject gameObject = this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>[tag].Dequeue();</div>
+<div class="line"><span class="lineno">   48</span>        gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   49</span>        position.z = 0f;</div>
+<div class="line"><span class="lineno">   50</span>        gameObject.transform.position = position;</div>
+<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>[tag].Enqueue(gameObject);</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> gameObject;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_ab8a451d1541490ac7640904584b59aa1"><div class="ttname"><a href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">HS_ParticleEndSound.poolDictionary</a></div><div class="ttdeci">Dictionary&lt; string, Queue&lt; GameObject &gt; &gt; poolDictionary</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00113">HS_ParticleEndSound.cs:113</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00113">poolDictionary</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">LateUpdate()</a>.</p>
 
 </div>
 </div>
@@ -289,6 +371,43 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">13</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        this.poolDictionary = <span class="keyword">new</span> Dictionary&lt;string, Queue&lt;GameObject&gt;&gt;();</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHS__ParticleEndSound.html">HS_ParticleEndSound</a>.<a class="code hl_class" href="classHS__ParticleEndSound_1_1Pool.html">Pool</a> pool in <span class="keyword">this</span>.pools)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_class" href="classQueue.html">Queue&lt;GameObject&gt;</a> queue = <span class="keyword">new</span> <a class="code hl_class" href="classQueue.html">Queue&lt;GameObject&gt;</a>();</div>
+<div class="line"><span class="lineno">   19</span>            GameObject gameObject = UnityEngine.Object.Instantiate&lt;GameObject&gt;(pool.prefab);</div>
+<div class="line"><span class="lineno">   20</span>            AudioSource component = gameObject.GetComponent&lt;AudioSource&gt;();</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (pool.tag == <span class="stringliteral">&quot;AudioExplosion&quot;</span>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                component.clip = this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d">audioExplosion</a>[UnityEngine.Random.Range(0, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d">audioExplosion</a>.Length)];</div>
+<div class="line"><span class="lineno">   24</span>                component.volume = UnityEngine.Random.Range(this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#abb36e4245d5ecae59ad0365c8d655bd8">explosionMinVolume</a>, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#afaf6fb95f7f60834a7211f7c50f2c718">explosionMaxVolume</a>);</div>
+<div class="line"><span class="lineno">   25</span>                component.pitch = UnityEngine.Random.Range(this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a73310c3a3112fb217346c3c5da592027">explosionPitchMin</a>, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a722069a8546ef999721a8fc87acc1e21">explosionPitchMax</a>);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pool.tag == <span class="stringliteral">&quot;AudioShot&quot;</span>)</div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                component.clip = this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a4cd775f107a214371692e76cad2acc48">audioShot</a>[UnityEngine.Random.Range(0, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d">audioExplosion</a>.Length)];</div>
+<div class="line"><span class="lineno">   30</span>                component.volume = UnityEngine.Random.Range(this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#af3b0f8725a0de412da4e9a7ef9339945">shootMinVolume</a>, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a44ee781a6b758f616a86fb16d8d97833">shootMaxVolume</a>);</div>
+<div class="line"><span class="lineno">   31</span>                component.pitch = UnityEngine.Random.Range(this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a40a2ab1fed57740c8808a8610eb735cf">shootPitchMin</a>, this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#a0fabfbb7d3d68cd08da03e3277b8a1f1">shootPitchMax</a>);</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            gameObject.transform.parent = base.gameObject.transform;</div>
+<div class="line"><span class="lineno">   34</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   35</span>            queue.Enqueue(gameObject);</div>
+<div class="line"><span class="lineno">   36</span>            this.<a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>.Add(pool.tag, queue);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassHS__ParticleEndSound_1_1Pool_html"><div class="ttname"><a href="classHS__ParticleEndSound_1_1Pool.html">HS_ParticleEndSound.Pool</a></div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00116">HS_ParticleEndSound.cs:117</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a0fabfbb7d3d68cd08da03e3277b8a1f1"><div class="ttname"><a href="classHS__ParticleEndSound.html#a0fabfbb7d3d68cd08da03e3277b8a1f1">HS_ParticleEndSound.shootPitchMax</a></div><div class="ttdeci">float shootPitchMax</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00103">HS_ParticleEndSound.cs:103</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a40a2ab1fed57740c8808a8610eb735cf"><div class="ttname"><a href="classHS__ParticleEndSound.html#a40a2ab1fed57740c8808a8610eb735cf">HS_ParticleEndSound.shootPitchMin</a></div><div class="ttdeci">float shootPitchMin</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00101">HS_ParticleEndSound.cs:101</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a44ee781a6b758f616a86fb16d8d97833"><div class="ttname"><a href="classHS__ParticleEndSound.html#a44ee781a6b758f616a86fb16d8d97833">HS_ParticleEndSound.shootMaxVolume</a></div><div class="ttdeci">float shootMaxVolume</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00099">HS_ParticleEndSound.cs:99</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a722069a8546ef999721a8fc87acc1e21"><div class="ttname"><a href="classHS__ParticleEndSound.html#a722069a8546ef999721a8fc87acc1e21">HS_ParticleEndSound.explosionPitchMax</a></div><div class="ttdeci">float explosionPitchMax</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00095">HS_ParticleEndSound.cs:95</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_a73310c3a3112fb217346c3c5da592027"><div class="ttname"><a href="classHS__ParticleEndSound.html#a73310c3a3112fb217346c3c5da592027">HS_ParticleEndSound.explosionPitchMin</a></div><div class="ttdeci">float explosionPitchMin</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00093">HS_ParticleEndSound.cs:93</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_abb36e4245d5ecae59ad0365c8d655bd8"><div class="ttname"><a href="classHS__ParticleEndSound.html#abb36e4245d5ecae59ad0365c8d655bd8">HS_ParticleEndSound.explosionMinVolume</a></div><div class="ttdeci">float explosionMinVolume</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00089">HS_ParticleEndSound.cs:89</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_af3b0f8725a0de412da4e9a7ef9339945"><div class="ttname"><a href="classHS__ParticleEndSound.html#af3b0f8725a0de412da4e9a7ef9339945">HS_ParticleEndSound.shootMinVolume</a></div><div class="ttdeci">float shootMinVolume</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00097">HS_ParticleEndSound.cs:97</a></div></div>
+<div class="ttc" id="aclassHS__ParticleEndSound_html_afaf6fb95f7f60834a7211f7c50f2c718"><div class="ttname"><a href="classHS__ParticleEndSound.html#afaf6fb95f7f60834a7211f7c50f2c718">HS_ParticleEndSound.explosionMaxVolume</a></div><div class="ttdeci">float explosionMaxVolume</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00091">HS_ParticleEndSound.cs:91</a></div></div>
+<div class="ttc" id="aclassQueue_html"><div class="ttname"><a href="classQueue.html">Queue</a></div><div class="ttdef"><b>Definition:</b> <a href="Queue_8cs_source.html#l00003">Queue.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00105">audioExplosion</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00107">audioShot</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00091">explosionMaxVolume</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00089">explosionMinVolume</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00095">explosionPitchMax</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00093">explosionPitchMin</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00113">poolDictionary</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00099">shootMaxVolume</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00097">shootMinVolume</a>, <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00103">shootPitchMax</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00101">shootPitchMin</a>.</p>
 
 </div>
 </div>
@@ -307,6 +426,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00105">105</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">LateUpdate()</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <a id="a4cd775f107a214371692e76cad2acc48" name="a4cd775f107a214371692e76cad2acc48"></a>
@@ -322,6 +443,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00107">107</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">LateUpdate()</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -339,6 +462,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00091">91</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <a id="abb36e4245d5ecae59ad0365c8d655bd8" name="abb36e4245d5ecae59ad0365c8d655bd8"></a>
@@ -354,6 +479,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00089">89</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -371,6 +498,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00095">95</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <a id="a73310c3a3112fb217346c3c5da592027" name="a73310c3a3112fb217346c3c5da592027"></a>
@@ -386,6 +515,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00093">93</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -403,6 +534,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00113">113</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00040">SpawnFromPool()</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <a id="a643a81415c679e726995d58dd0fcc16c" name="a643a81415c679e726995d58dd0fcc16c"></a>
@@ -418,6 +551,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00087">87</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00080">LateCall()</a>.</p>
 
 </div>
 </div>
@@ -459,6 +594,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00109">109</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00055">LateUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a44ee781a6b758f616a86fb16d8d97833" name="a44ee781a6b758f616a86fb16d8d97833"></a>
@@ -474,6 +611,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00099">99</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -491,6 +630,8 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00097">97</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <a id="a0fabfbb7d3d68cd08da03e3277b8a1f1" name="a0fabfbb7d3d68cd08da03e3277b8a1f1"></a>
@@ -506,6 +647,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00103">103</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -523,15 +666,21 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00101">101</a> of file <a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00013">Start()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HS__ParticleEndSound_8cs_source.html">HS_ParticleEndSound.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHS__ParticleEndSound.html">HS_ParticleEndSound</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLot.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -279,6 +299,107 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00183">183</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        r2.lot = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#a2ded50938b7ffd5cee8db48550838a60">x</a> &lt; <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a42c9ea28a6e11910bb915fc12f8231e7">minX</a>)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            Lot.minX = r2.<a class="code hl_variable" href="classRoom.html#a2ded50938b7ffd5cee8db48550838a60">x</a>;</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#ac9f3f8768cf9f4964d0e1e5f2314af9f">mx</a> &gt; <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a401b97898b1a69152e168ef00ec6b2f4">maxX</a>)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            Lot.maxX = r2.<a class="code hl_variable" href="classRoom.html#ac9f3f8768cf9f4964d0e1e5f2314af9f">mx</a>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#a35ec98a06c828163ca60ebb7532fae9a">z</a> &lt; <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#ae9c0747d6a6fc88f356232941610537b">minZ</a>)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            Lot.minZ = r2.<a class="code hl_variable" href="classRoom.html#a35ec98a06c828163ca60ebb7532fae9a">z</a>;</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#afd40264c2f989b333b7857cecef7818c">mz</a> &gt; <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a81c5675bf0853aaef443f3aeaba6c633">maxZ</a>)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            Lot.maxZ = r2.<a class="code hl_variable" href="classRoom.html#afd40264c2f989b333b7857cecef7818c">mz</a>;</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#ad9932121fb0c6b53c6427e216976c7ad">mh</a> &gt; <span class="keyword">this</span>.mh)</div>
+<div class="line"><span class="lineno">  203</span>        {</div>
+<div class="line"><span class="lineno">  204</span>            this.mh = r2.<a class="code hl_variable" href="classRoom.html#ad9932121fb0c6b53c6427e216976c7ad">mh</a>;</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26">pointMinX</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + r2.<a class="code hl_variable" href="classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26">pointMinX</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &lt; <span class="keyword">this</span>.pointMinX.x + <span class="keyword">this</span>.pointMinX.z)</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            this.pointMinX = r2.<a class="code hl_variable" href="classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26">pointMinX</a>;</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (r2.<a class="code hl_variable" href="classRoom.html#a2304eeb6838237587640276d5c1bcd98">pointMaxX</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + r2.<a class="code hl_variable" href="classRoom.html#a2304eeb6838237587640276d5c1bcd98">pointMaxX</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &gt; <span class="keyword">this</span>.pointMaxX.x + <span class="keyword">this</span>.pointMaxX.z)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            this.pointMaxX = r2.<a class="code hl_variable" href="classRoom.html#a2304eeb6838237587640276d5c1bcd98">pointMaxX</a>;</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLot.html#a8144db60a1e6a5f20e94240d985198e4">board</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> point <span class="keywordflow">in</span> r2.<a class="code hl_variable" href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">points</a>)</div>
+<div class="line"><span class="lineno">  217</span>            {</div>
+<div class="line"><span class="lineno">  218</span>                <a class="code hl_class" href="classTraitHouseBoard.html">TraitHouseBoard</a> <a class="code hl_enumvalue" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff">installed</a> = point.GetInstalled&lt;<a class="code hl_class" href="classTraitHouseBoard.html">TraitHouseBoard</a>&gt;();</div>
+<div class="line"><span class="lineno">  219</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff">installed</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    this.board = <a class="code hl_enumvalue" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff">installed</a>;</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  223</span>                }</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRoom.html">Room</a> room <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a8270be4ddfbee895c502315214e1af18">rooms</a>.<a class="code hl_variable" href="classRoomManager.html#a8e6bd194479349737a63f80839c8aad9">listRoom</a>)</div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">if</span> (room.<a class="code hl_variable" href="classRoom.html#afda6933321733eafef719578c1eb3ef3">lot</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  229</span>            {</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> p <span class="keywordflow">in</span> room.<a class="code hl_variable" href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">points</a>)</div>
+<div class="line"><span class="lineno">  232</span>                {</div>
+<div class="line"><span class="lineno">  233</span>                    <span class="keyword">using</span> (List&lt;Point&gt;.Enumerator enumerator3 = r2.<a class="code hl_variable" href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">points</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  234</span>                    {</div>
+<div class="line"><span class="lineno">  235</span>                        <span class="keywordflow">while</span> (enumerator3.MoveNext())</div>
+<div class="line"><span class="lineno">  236</span>                        {</div>
+<div class="line"><span class="lineno">  237</span>                            <span class="keywordflow">if</span> (enumerator3.Current.Distance(p) == 1 &amp;&amp; r2.data.group == room.<a class="code hl_variable" href="classBaseArea.html#a3c93fe71e5bb2c966bb3053bc9493a3e">data</a>.<a class="code hl_property" href="classAreaData.html#a7d9a75ae2852d6947005686eea0829e1">group</a>)</div>
+<div class="line"><span class="lineno">  238</span>                            {</div>
+<div class="line"><span class="lineno">  239</span>                                this.<a class="code hl_function" href="classLot.html#a0c983e7490924586ceb62919d11f486f">AddConnectedRooms</a>(room);</div>
+<div class="line"><span class="lineno">  240</span>                                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  241</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  242</span>                            }</div>
+<div class="line"><span class="lineno">  243</span>                        }</div>
+<div class="line"><span class="lineno">  244</span>                    }</div>
+<div class="line"><span class="lineno">  245</span>                    <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  246</span>                    {</div>
+<div class="line"><span class="lineno">  247</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  248</span>                    }</div>
+<div class="line"><span class="lineno">  249</span>                }</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>    }</div>
+<div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff">PlaceState.installed</a></div><div class="ttdeci">@ installed</div></div>
+<div class="ttc" id="aclassAreaData_html_a7d9a75ae2852d6947005686eea0829e1"><div class="ttname"><a href="classAreaData.html#a7d9a75ae2852d6947005686eea0829e1">AreaData.group</a></div><div class="ttdeci">int group</div><div class="ttdef"><b>Definition:</b> <a href="AreaData_8cs_source.html#l00007">AreaData.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseArea_html_a3c93fe71e5bb2c966bb3053bc9493a3e"><div class="ttname"><a href="classBaseArea.html#a3c93fe71e5bb2c966bb3053bc9493a3e">BaseArea.data</a></div><div class="ttdeci">AreaData data</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00314">BaseArea.cs:314</a></div></div>
+<div class="ttc" id="aclassBaseArea_html_ac3a1d4a968aad4974838b1ba7d3a6776"><div class="ttname"><a href="classBaseArea.html#ac3a1d4a968aad4974838b1ba7d3a6776">BaseArea.points</a></div><div class="ttdeci">PointList points</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00311">BaseArea.cs:311</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassLot_html"><div class="ttname"><a href="classLot.html">Lot</a></div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00005">Lot.cs:6</a></div></div>
+<div class="ttc" id="aclassLot_html_a0c983e7490924586ceb62919d11f486f"><div class="ttname"><a href="classLot.html#a0c983e7490924586ceb62919d11f486f">Lot.AddConnectedRooms</a></div><div class="ttdeci">void AddConnectedRooms(Room r2)</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00183">Lot.cs:183</a></div></div>
+<div class="ttc" id="aclassLot_html_a401b97898b1a69152e168ef00ec6b2f4"><div class="ttname"><a href="classLot.html#a401b97898b1a69152e168ef00ec6b2f4">Lot.maxX</a></div><div class="ttdeci">static int maxX</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00324">Lot.cs:324</a></div></div>
+<div class="ttc" id="aclassLot_html_a42c9ea28a6e11910bb915fc12f8231e7"><div class="ttname"><a href="classLot.html#a42c9ea28a6e11910bb915fc12f8231e7">Lot.minX</a></div><div class="ttdeci">static int minX</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00320">Lot.cs:320</a></div></div>
+<div class="ttc" id="aclassLot_html_a8144db60a1e6a5f20e94240d985198e4"><div class="ttname"><a href="classLot.html#a8144db60a1e6a5f20e94240d985198e4">Lot.board</a></div><div class="ttdeci">TraitHouseBoard board</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00328">Lot.cs:328</a></div></div>
+<div class="ttc" id="aclassLot_html_a81c5675bf0853aaef443f3aeaba6c633"><div class="ttname"><a href="classLot.html#a81c5675bf0853aaef443f3aeaba6c633">Lot.maxZ</a></div><div class="ttdeci">static int maxZ</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00326">Lot.cs:326</a></div></div>
+<div class="ttc" id="aclassLot_html_ae9c0747d6a6fc88f356232941610537b"><div class="ttname"><a href="classLot.html#ae9c0747d6a6fc88f356232941610537b">Lot.minZ</a></div><div class="ttdeci">static int minZ</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00322">Lot.cs:322</a></div></div>
+<div class="ttc" id="aclassMap_html_a8270be4ddfbee895c502315214e1af18"><div class="ttname"><a href="classMap.html#a8270be4ddfbee895c502315214e1af18">Map.rooms</a></div><div class="ttdeci">RoomManager rooms</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02836">Map.cs:2836</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassRoomManager_html_a8e6bd194479349737a63f80839c8aad9"><div class="ttname"><a href="classRoomManager.html#a8e6bd194479349737a63f80839c8aad9">RoomManager.listRoom</a></div><div class="ttdeci">List&lt; Room &gt; listRoom</div><div class="ttdef"><b>Definition:</b> <a href="RoomManager_8cs_source.html#l00169">RoomManager.cs:169</a></div></div>
+<div class="ttc" id="aclassRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00004">Room.cs:5</a></div></div>
+<div class="ttc" id="aclassRoom_html_a2304eeb6838237587640276d5c1bcd98"><div class="ttname"><a href="classRoom.html#a2304eeb6838237587640276d5c1bcd98">Room.pointMaxX</a></div><div class="ttdeci">Point pointMaxX</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00222">Room.cs:222</a></div></div>
+<div class="ttc" id="aclassRoom_html_a2ded50938b7ffd5cee8db48550838a60"><div class="ttname"><a href="classRoom.html#a2ded50938b7ffd5cee8db48550838a60">Room.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00202">Room.cs:202</a></div></div>
+<div class="ttc" id="aclassRoom_html_a35ec98a06c828163ca60ebb7532fae9a"><div class="ttname"><a href="classRoom.html#a35ec98a06c828163ca60ebb7532fae9a">Room.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00204">Room.cs:204</a></div></div>
+<div class="ttc" id="aclassRoom_html_ac9f3f8768cf9f4964d0e1e5f2314af9f"><div class="ttname"><a href="classRoom.html#ac9f3f8768cf9f4964d0e1e5f2314af9f">Room.mx</a></div><div class="ttdeci">int mx</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00206">Room.cs:206</a></div></div>
+<div class="ttc" id="aclassRoom_html_acf287d2fae4f83b30beeb4dc1e9cff26"><div class="ttname"><a href="classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26">Room.pointMinX</a></div><div class="ttdeci">Point pointMinX</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00220">Room.cs:220</a></div></div>
+<div class="ttc" id="aclassRoom_html_ad9932121fb0c6b53c6427e216976c7ad"><div class="ttname"><a href="classRoom.html#ad9932121fb0c6b53c6427e216976c7ad">Room.mh</a></div><div class="ttdeci">int mh</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00210">Room.cs:210</a></div></div>
+<div class="ttc" id="aclassRoom_html_afd40264c2f989b333b7857cecef7818c"><div class="ttname"><a href="classRoom.html#afd40264c2f989b333b7857cecef7818c">Room.mz</a></div><div class="ttdeci">int mz</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00208">Room.cs:208</a></div></div>
+<div class="ttc" id="aclassRoom_html_afda6933321733eafef719578c1eb3ef3"><div class="ttname"><a href="classRoom.html#afda6933321733eafef719578c1eb3ef3">Room.lot</a></div><div class="ttdeci">Lot lot</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00218">Room.cs:218</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_html"><div class="ttname"><a href="classTraitHouseBoard.html">TraitHouseBoard</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00005">TraitHouseBoard.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, <a class="el" href="Lot_8cs_source.html#l00328">board</a>, <a class="el" href="BaseArea_8cs_source.html#l00314">BaseArea.data</a>, <a class="el" href="AreaData_8cs_source.html#l00008">AreaData.group</a>, <a class="el" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348a73329564760013a7824ff9d5d1af91ff">installed</a>, <a class="el" href="RoomManager_8cs_source.html#l00169">RoomManager.listRoom</a>, <a class="el" href="Room_8cs_source.html#l00218">Room.lot</a>, <a class="el" href="Lot_8cs_source.html#l00324">maxX</a>, <a class="el" href="Lot_8cs_source.html#l00326">maxZ</a>, <a class="el" href="Room_8cs_source.html#l00210">Room.mh</a>, <a class="el" href="Lot_8cs_source.html#l00320">minX</a>, <a class="el" href="Lot_8cs_source.html#l00322">minZ</a>, <a class="el" href="Room_8cs_source.html#l00206">Room.mx</a>, <a class="el" href="Room_8cs_source.html#l00208">Room.mz</a>, <a class="el" href="Room_8cs_source.html#l00222">Room.pointMaxX</a>, <a class="el" href="Room_8cs_source.html#l00220">Room.pointMinX</a>, <a class="el" href="BaseArea_8cs_source.html#l00311">BaseArea.points</a>, <a class="el" href="Map_8cs_source.html#l02836">Map.rooms</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, <a class="el" href="Room_8cs_source.html#l00202">Room.x</a>, <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>, and <a class="el" href="Room_8cs_source.html#l00204">Room.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -307,6 +428,78 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00140">140</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a7b489fa568df6038dff97e64c3db7edc">colRoof</a> == 0)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            data.colRoof = IntColor.ToInt(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;oak&quot;</span>].matColor.SetAlpha(1f));</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c">colBlock</a> == 0)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            data.colBlock = IntColor.ToInt(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;oak&quot;</span>].matColor.SetAlpha(1f));</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ab59594d5fc129ceadedfad35fc7bde4d">colDeco</a> == 0)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            data.colDeco = IntColor.ToInt(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;oak&quot;</span>].matColor.SetAlpha(1f));</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d">colDeco2</a> == 0)</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            data.colDeco2 = IntColor.ToInt(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;oak&quot;</span>].matColor.SetAlpha(1f));</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        this.height = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23">height</a>;</div>
+<div class="line"><span class="lineno">  159</span>        this.reverse = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7">reverse</a>;</div>
+<div class="line"><span class="lineno">  160</span>        this.altRoof = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a655b4df697b08da44d293dcbeb60a516">altRoof</a>;</div>
+<div class="line"><span class="lineno">  161</span>        this.snow = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a5e5dab433ca2876b0dd2bea2d2d7a527">snow</a>;</div>
+<div class="line"><span class="lineno">  162</span>        this.idRoofStyle = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a78c4f7d90794694fcf3db226dba9648a">idRoofStyle</a>;</div>
+<div class="line"><span class="lineno">  163</span>        this.idRoofTile = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#aa257cd2549299f79bed4adbf331779fd">idRoofTile</a>;</div>
+<div class="line"><span class="lineno">  164</span>        this.idBlock = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#aae695a0628fdfebbf9b163044ba07be4">idBlock</a>;</div>
+<div class="line"><span class="lineno">  165</span>        this.idRamp = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#aae475e0f39d0f33545c1f74185ca7567">idRamp</a>;</div>
+<div class="line"><span class="lineno">  166</span>        this.idBGM = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9">idBGM</a>;</div>
+<div class="line"><span class="lineno">  167</span>        this.idDeco = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a9e07f57568ef073f59673731aae201e4">idDeco</a>;</div>
+<div class="line"><span class="lineno">  168</span>        this.idDeco2 = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b">idDeco2</a>;</div>
+<div class="line"><span class="lineno">  169</span>        this.heightFix = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a59b37da647fd73e78797c7ff2ac1bbfb">heightFix</a>;</div>
+<div class="line"><span class="lineno">  170</span>        this.decoFix = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ac3c871e51c30f0b4740776cb7aafe63a">decoFix</a>;</div>
+<div class="line"><span class="lineno">  171</span>        this.decoFix2 = data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a5185cb25b09ff747071433ed6ecb2694">decoFix2</a>;</div>
+<div class="line"><span class="lineno">  172</span>        this.realHeight = (float)this.<a class="code hl_variable" href="classLot.html#adf89fe20f9ac3b0a0a61be71a49c8593">height</a> * <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.roomHeightMod + 0.01f * (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classLot.html#aae948f1e270704cf75f6b4e68cfb937e">heightFix</a>;</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = IntColor.FromInt(data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a7b489fa568df6038dff97e64c3db7edc">colRoof</a>);</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color2 = IntColor.FromInt(data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c">colBlock</a>);</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color3 = IntColor.FromInt(data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ab59594d5fc129ceadedfad35fc7bde4d">colDeco</a>);</div>
+<div class="line"><span class="lineno">  176</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color4 = IntColor.FromInt(data.<a class="code hl_variable" href="classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d">colDeco2</a>);</div>
+<div class="line"><span class="lineno">  177</span>        this.colRoof = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref color, 100);</div>
+<div class="line"><span class="lineno">  178</span>        this.colBlock = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref color2, 100);</div>
+<div class="line"><span class="lineno">  179</span>        this.colDeco = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref color3, 100);</div>
+<div class="line"><span class="lineno">  180</span>        this.colDeco2 = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref color4, 100);</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00006">BaseTileMap.cs:7</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a4ce40943930704595f222254d924a7c5"><div class="ttname"><a href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">BaseTileMap.GetColorInt</a></div><div class="ttdeci">static int GetColorInt(ref Color matColor, int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03344">BaseTileMap.cs:3344</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a000b0eb1e81cc120ffacafb5630c8899"><div class="ttname"><a href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">GameSetting.render</a></div><div class="ttdeci">GameSetting.RenderSetting render</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00027">GameSetting.cs:27</a></div></div>
+<div class="ttc" id="aclassLot_html_aae948f1e270704cf75f6b4e68cfb937e"><div class="ttname"><a href="classLot.html#aae948f1e270704cf75f6b4e68cfb937e">Lot.heightFix</a></div><div class="ttdeci">int heightFix</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00266">Lot.cs:266</a></div></div>
+<div class="ttc" id="aclassLot_html_adf89fe20f9ac3b0a0a61be71a49c8593"><div class="ttname"><a href="classLot.html#adf89fe20f9ac3b0a0a61be71a49c8593">Lot.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00260">Lot.cs:260</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00173">SourceManager.cs:173</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a0d184a64fffe2dce1b803b12f741c0c7"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7">TraitHouseBoard.Data.reverse</a></div><div class="ttdeci">bool reverse</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00166">TraitHouseBoard.cs:166</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a304cc8ac79c1eacc9b120e7fb18faf23"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23">TraitHouseBoard.Data.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00124">TraitHouseBoard.cs:124</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a3e943eef195b0f105276a96bcc108a1c"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c">TraitHouseBoard.Data.colBlock</a></div><div class="ttdeci">int colBlock</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00157">TraitHouseBoard.cs:157</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a5185cb25b09ff747071433ed6ecb2694"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a5185cb25b09ff747071433ed6ecb2694">TraitHouseBoard.Data.decoFix2</a></div><div class="ttdeci">int decoFix2</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00151">TraitHouseBoard.cs:151</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a59b37da647fd73e78797c7ff2ac1bbfb"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a59b37da647fd73e78797c7ff2ac1bbfb">TraitHouseBoard.Data.heightFix</a></div><div class="ttdeci">int heightFix</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00130">TraitHouseBoard.cs:130</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a5e5dab433ca2876b0dd2bea2d2d7a527"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a5e5dab433ca2876b0dd2bea2d2d7a527">TraitHouseBoard.Data.snow</a></div><div class="ttdeci">bool snow</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00169">TraitHouseBoard.cs:169</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a655b4df697b08da44d293dcbeb60a516"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a655b4df697b08da44d293dcbeb60a516">TraitHouseBoard.Data.altRoof</a></div><div class="ttdeci">bool altRoof</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00172">TraitHouseBoard.cs:172</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a78c4f7d90794694fcf3db226dba9648a"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a78c4f7d90794694fcf3db226dba9648a">TraitHouseBoard.Data.idRoofStyle</a></div><div class="ttdeci">int idRoofStyle</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00121">TraitHouseBoard.cs:121</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a7b489fa568df6038dff97e64c3db7edc"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a7b489fa568df6038dff97e64c3db7edc">TraitHouseBoard.Data.colRoof</a></div><div class="ttdeci">int colRoof</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00154">TraitHouseBoard.cs:154</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_a9e07f57568ef073f59673731aae201e4"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#a9e07f57568ef073f59673731aae201e4">TraitHouseBoard.Data.idDeco</a></div><div class="ttdeci">int idDeco</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00142">TraitHouseBoard.cs:142</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_aa257cd2549299f79bed4adbf331779fd"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#aa257cd2549299f79bed4adbf331779fd">TraitHouseBoard.Data.idRoofTile</a></div><div class="ttdeci">int idRoofTile</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00133">TraitHouseBoard.cs:133</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_aae475e0f39d0f33545c1f74185ca7567"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#aae475e0f39d0f33545c1f74185ca7567">TraitHouseBoard.Data.idRamp</a></div><div class="ttdeci">int idRamp</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00139">TraitHouseBoard.cs:139</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_aae695a0628fdfebbf9b163044ba07be4"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#aae695a0628fdfebbf9b163044ba07be4">TraitHouseBoard.Data.idBlock</a></div><div class="ttdeci">int idBlock</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00136">TraitHouseBoard.cs:136</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_ab59594d5fc129ceadedfad35fc7bde4d"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#ab59594d5fc129ceadedfad35fc7bde4d">TraitHouseBoard.Data.colDeco</a></div><div class="ttdeci">int colDeco</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00160">TraitHouseBoard.cs:160</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_ac20790270289beaf3e2362ddff8f536d"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d">TraitHouseBoard.Data.colDeco2</a></div><div class="ttdeci">int colDeco2</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00163">TraitHouseBoard.cs:163</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_ac3c871e51c30f0b4740776cb7aafe63a"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#ac3c871e51c30f0b4740776cb7aafe63a">TraitHouseBoard.Data.decoFix</a></div><div class="ttdeci">int decoFix</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00148">TraitHouseBoard.cs:148</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_ac7e5bb7cc0542cd42488bcd3d68e60b9"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9">TraitHouseBoard.Data.idBGM</a></div><div class="ttdeci">int idBGM</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00127">TraitHouseBoard.cs:127</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html_af821e32d51cf81d58a9da427ca06fe2b"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b">TraitHouseBoard.Data.idDeco2</a></div><div class="ttdeci">int idDeco2</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00145">TraitHouseBoard.cs:145</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03344">BaseTileMap.GetColorInt()</a>, <a class="el" href="Lot_8cs_source.html#l00260">height</a>, <a class="el" href="Lot_8cs_source.html#l00266">heightFix</a>, <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>, <a class="el" href="GameSetting_8cs_source.html#l00027">GameSetting.render</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitHouseBoard_8cs_source.html#l00067">TraitHouseBoard.ApplyData()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -335,6 +528,163 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00007">7</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        this.board = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   10</span>        this.fullblock = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   11</span>        Lot.minX = r.<a class="code hl_variable" href="classRoom.html#a2ded50938b7ffd5cee8db48550838a60">x</a>;</div>
+<div class="line"><span class="lineno">   12</span>        Lot.maxX = r.<a class="code hl_variable" href="classRoom.html#ac9f3f8768cf9f4964d0e1e5f2314af9f">mx</a>;</div>
+<div class="line"><span class="lineno">   13</span>        Lot.minZ = r.<a class="code hl_variable" href="classRoom.html#a35ec98a06c828163ca60ebb7532fae9a">z</a>;</div>
+<div class="line"><span class="lineno">   14</span>        Lot.maxZ = r.<a class="code hl_variable" href="classRoom.html#afd40264c2f989b333b7857cecef7818c">mz</a>;</div>
+<div class="line"><span class="lineno">   15</span>        this.mh = r.<a class="code hl_variable" href="classRoom.html#ad9932121fb0c6b53c6427e216976c7ad">mh</a>;</div>
+<div class="line"><span class="lineno">   16</span>        this.pointMinX = r.<a class="code hl_variable" href="classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26">pointMinX</a>;</div>
+<div class="line"><span class="lineno">   17</span>        this.pointMaxX = r.<a class="code hl_variable" href="classRoom.html#a2304eeb6838237587640276d5c1bcd98">pointMaxX</a>;</div>
+<div class="line"><span class="lineno">   18</span>        this.<a class="code hl_function" href="classLot.html#a0c983e7490924586ceb62919d11f486f">AddConnectedRooms</a>(r);</div>
+<div class="line"><span class="lineno">   19</span>        this.x = <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a42c9ea28a6e11910bb915fc12f8231e7">minX</a>;</div>
+<div class="line"><span class="lineno">   20</span>        this.mx = <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a401b97898b1a69152e168ef00ec6b2f4">maxX</a>;</div>
+<div class="line"><span class="lineno">   21</span>        this.z = <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#ae9c0747d6a6fc88f356232941610537b">minZ</a>;</div>
+<div class="line"><span class="lineno">   22</span>        this.mz = <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a81c5675bf0853aaef443f3aeaba6c633">maxZ</a>;</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">roofCount</a>.Clear();</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRoom.html">Room</a> room <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a8270be4ddfbee895c502315214e1af18">rooms</a>.<a class="code hl_variable" href="classRoomManager.html#a8e6bd194479349737a63f80839c8aad9">listRoom</a>)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (room.<a class="code hl_variable" href="classRoom.html#afda6933321733eafef719578c1eb3ef3">lot</a> == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">if</span> (room.<a class="code hl_variable" href="classRoom.html#a5e2a70d8cde0902f314f1abfedde6427">roof</a>)</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">if</span> (room.<a class="code hl_variable" href="classRoom.html#a7a36f72c7bdd6da7f53eb789442d6688">fullblock</a>)</div>
+<div class="line"><span class="lineno">   34</span>                {</div>
+<div class="line"><span class="lineno">   35</span>                    this.fullblock = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   36</span>                }</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, int&gt; keyValuePair <span class="keywordflow">in</span> room.<a class="code hl_variable" href="classRoom.html#ae12255396231c71ab17ebd67fadac5b1">roofCount</a>)</div>
+<div class="line"><span class="lineno">   38</span>                {</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">roofCount</a>.ContainsKey(keyValuePair.Key))</div>
+<div class="line"><span class="lineno">   40</span>                    {</div>
+<div class="line"><span class="lineno">   41</span>                        <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">roofCount</a>[keyValuePair.Key] = 0;</div>
+<div class="line"><span class="lineno">   42</span>                    }</div>
+<div class="line"><span class="lineno">   43</span>                    Dictionary&lt;int, int&gt; dictionary = <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">roofCount</a>;</div>
+<div class="line"><span class="lineno">   44</span>                    <span class="keywordtype">int</span> key = keyValuePair.Key;</div>
+<div class="line"><span class="lineno">   45</span>                    dictionary[key] += keyValuePair.Value;</div>
+<div class="line"><span class="lineno">   46</span>                }</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, int&gt; keyValuePair2 <span class="keywordflow">in</span> <a class="code hl_class" href="classLot.html">Lot</a>.<a class="code hl_variable" href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">roofCount</a>)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (keyValuePair2.Value &gt; num)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                num = keyValuePair2.Value;</div>
+<div class="line"><span class="lineno">   56</span>                num2 = keyValuePair2.Key;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLot.html#a8144db60a1e6a5f20e94240d985198e4">board</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLot.html#a8144db60a1e6a5f20e94240d985198e4">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <a class="code hl_class" href="classTraitHouseBoard_1_1Data.html">TraitHouseBoard.Data</a> data = this.board.data = <span class="keyword">new</span> <a class="code hl_class" href="classTraitHouseBoard.html">TraitHouseBoard</a>.<a class="code hl_class" href="classTraitHouseBoard_1_1Data.html">Data</a>();</div>
+<div class="line"><span class="lineno">   64</span>                <a class="code hl_class" href="classCoreRef_1_1DefaultRoof.html">CoreRef.DefaultRoof</a> defaultRoof = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.defaultRoofs[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.map[num2 / 1000].roof];</div>
+<div class="line"><span class="lineno">   65</span>                data.height = (this.fullblock ? 1 : 2);</div>
+<div class="line"><span class="lineno">   66</span>                data.heightFix = (this.fullblock ? 40 : 0);</div>
+<div class="line"><span class="lineno">   67</span>                data.reverse = (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0);</div>
+<div class="line"><span class="lineno">   68</span>                data.idRoofStyle = ((!EClass._map.IsIndoor &amp;&amp; flag) ? 2 : 0);</div>
+<div class="line"><span class="lineno">   69</span>                data.idBlock = defaultRoof.<a class="code hl_variable" href="classCoreRef_1_1DefaultRoof.html#abcfc821a2a856282b572b67c4e2af2ee">idBlock</a>;</div>
+<div class="line"><span class="lineno">   70</span>                data.idRamp = defaultRoof.<a class="code hl_variable" href="classCoreRef_1_1DefaultRoof.html#a3cc0237df76fb76749cc467ee65cb79d">idRamp</a>;</div>
+<div class="line"><span class="lineno">   71</span>                <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.map[num2 % 1000];</div>
+<div class="line"><span class="lineno">   72</span>                data.colRoof = IntColor.ToInt(row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>);</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_function" href="classLot.html#a3530886e3f4ed240c50d0226b311f00d">RefreshData</a>(this.<a class="code hl_variable" href="classLot.html#a8144db60a1e6a5f20e94240d985198e4">board</a>.<a class="code hl_property" href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">data</a>);</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_class" href="classCoreRef_1_1DefaultRoof.html">CoreRef.DefaultRoof</a> defaultRoof2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.defaultRoofs[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.map[num2 / 1000].roof];</div>
+<div class="line"><span class="lineno">   79</span>            this.height = (this.fullblock ? 1 : 2);</div>
+<div class="line"><span class="lineno">   80</span>            this.heightFix = (this.fullblock ? 40 : 0);</div>
+<div class="line"><span class="lineno">   81</span>            this.idRoofStyle = ((!EClass._map.IsIndoor &amp;&amp; flag) ? 2 : 0);</div>
+<div class="line"><span class="lineno">   82</span>            this.idBlock = defaultRoof2.<a class="code hl_variable" href="classCoreRef_1_1DefaultRoof.html#abcfc821a2a856282b572b67c4e2af2ee">idBlock</a>;</div>
+<div class="line"><span class="lineno">   83</span>            this.idRamp = defaultRoof2.<a class="code hl_variable" href="classCoreRef_1_1DefaultRoof.html#a3cc0237df76fb76749cc467ee65cb79d">idRamp</a>;</div>
+<div class="line"><span class="lineno">   84</span>            this.realHeight = (float)this.<a class="code hl_variable" href="classLot.html#adf89fe20f9ac3b0a0a61be71a49c8593">height</a> * <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a000b0eb1e81cc120ffacafb5630c8899">render</a>.roomHeightMod + 0.01f * (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classLot.html#aae948f1e270704cf75f6b4e68cfb937e">heightFix</a>;</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;oak&quot;</span>].matColor.SetAlpha(1f);</div>
+<div class="line"><span class="lineno">   86</span>            this.colRoof = (this.colBlock = (this.colDeco = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref color, 100)));</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.map[num2 % 1000];</div>
+<div class="line"><span class="lineno">   88</span>            this.colRoof = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref row2.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>, 100);</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">int</span> num3 = (this.mx - this.x + this.pointMinX.z - this.<a class="code hl_variable" href="classLot.html#a5026e0aea296224e4221219a28559e1b">z</a>) / 2;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">int</span> num4 = this.pointMaxX.x - this.pointMinX.x + this.pointMaxX.z - this.pointMinX.z + 1;</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">int</span> num5 = (this.mx - this.x + this.mz - this.<a class="code hl_variable" href="classLot.html#a5026e0aea296224e4221219a28559e1b">z</a>) / 2 + 2;</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">int</span> num6 = this.pointMinX.x + num3 - num5;</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">int</span> num7 = this.pointMinX.z - num3 + num5;</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> num8 = 0;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num4; i++)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">int</span> num9 = num6;</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordtype">int</span> num10 = num7;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num5 + 1; j++)</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">if</span> (num10 &gt;= num8 - 1 &amp;&amp; num9 &gt;= 0 &amp;&amp; num10 &gt;= 0 &amp;&amp; num9 &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> &amp;&amp; num10 &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a>)</div>
+<div class="line"><span class="lineno">  104</span>                {</div>
+<div class="line"><span class="lineno">  105</span>                    <a class="code hl_class" href="classCell.html">Cell</a> cell = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">cells</a>[num9, num10];</div>
+<div class="line"><span class="lineno">  106</span>                    <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  107</span>                    {</div>
+<div class="line"><span class="lineno">  108</span>                        <a class="code hl_class" href="classRoom.html">Room</a> room2 = cell.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
+<div class="line"><span class="lineno">  109</span>                        <span class="keywordflow">if</span> (((room2 != <span class="keyword">null</span>) ? room2.lot : <span class="keyword">null</span>) != <span class="keyword">this</span> || (!cell.<a class="code hl_property" href="classCell.html#aea1fd7722ef05e202c93503d0d038a1d">HasFullBlock</a> &amp;&amp; !cell.<a class="code hl_property" href="classCell.html#a587ff80fbd696124f8987fe1116d72e1">HasWall</a>))</div>
+<div class="line"><span class="lineno">  110</span>                        {</div>
+<div class="line"><span class="lineno">  111</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  112</span>                        }</div>
+<div class="line"><span class="lineno">  113</span>                    }</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_class" href="classRoom.html">Room</a> room3 = cell.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
+<div class="line"><span class="lineno">  115</span>                    <span class="keywordflow">if</span> (((room3 != <span class="keyword">null</span>) ? room3.lot : <span class="keyword">null</span>) == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">  116</span>                    {</div>
+<div class="line"><span class="lineno">  117</span>                        cell.lotWall = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  118</span>                        <span class="keywordflow">if</span> (!flag2 &amp;&amp; !cell.<a class="code hl_property" href="classCell.html#aea1fd7722ef05e202c93503d0d038a1d">HasFullBlock</a> &amp;&amp; !cell.<a class="code hl_property" href="classCell.html#a587ff80fbd696124f8987fe1116d72e1">HasWall</a>)</div>
+<div class="line"><span class="lineno">  119</span>                        {</div>
+<div class="line"><span class="lineno">  120</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  121</span>                        }</div>
+<div class="line"><span class="lineno">  122</span>                        flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  123</span>                        num8 = num10;</div>
+<div class="line"><span class="lineno">  124</span>                    }</div>
+<div class="line"><span class="lineno">  125</span>                    num9++;</div>
+<div class="line"><span class="lineno">  126</span>                    num10--;</div>
+<div class="line"><span class="lineno">  127</span>                }</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (i % 2 == 0)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                num6++;</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  134</span>            {</div>
+<div class="line"><span class="lineno">  135</span>                num7++;</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
+<div class="ttc" id="aclassCell_html_a587ff80fbd696124f8987fe1116d72e1"><div class="ttname"><a href="classCell.html#a587ff80fbd696124f8987fe1116d72e1">Cell.HasWall</a></div><div class="ttdeci">bool HasWall</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00793">Cell.cs:794</a></div></div>
+<div class="ttc" id="aclassCell_html_aea1fd7722ef05e202c93503d0d038a1d"><div class="ttname"><a href="classCell.html#aea1fd7722ef05e202c93503d0d038a1d">Cell.HasFullBlock</a></div><div class="ttdeci">bool HasFullBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00769">Cell.cs:770</a></div></div>
+<div class="ttc" id="aclassCoreRef_1_1DefaultRoof_html"><div class="ttname"><a href="classCoreRef_1_1DefaultRoof.html">CoreRef.DefaultRoof</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00454">CoreRef.cs:455</a></div></div>
+<div class="ttc" id="aclassCoreRef_1_1DefaultRoof_html_a3cc0237df76fb76749cc467ee65cb79d"><div class="ttname"><a href="classCoreRef_1_1DefaultRoof.html#a3cc0237df76fb76749cc467ee65cb79d">CoreRef.DefaultRoof.idRamp</a></div><div class="ttdeci">int idRamp</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00458">CoreRef.cs:458</a></div></div>
+<div class="ttc" id="aclassCoreRef_1_1DefaultRoof_html_abcfc821a2a856282b572b67c4e2af2ee"><div class="ttname"><a href="classCoreRef_1_1DefaultRoof.html#abcfc821a2a856282b572b67c4e2af2ee">CoreRef.DefaultRoof.idBlock</a></div><div class="ttdeci">int idBlock</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00456">CoreRef.cs:456</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassLot_html_a0ded601b945f299f9d2b4a2ae76abb5e"><div class="ttname"><a href="classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e">Lot.roofCount</a></div><div class="ttdeci">static Dictionary&lt; int, int &gt; roofCount</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00256">Lot.cs:256</a></div></div>
+<div class="ttc" id="aclassLot_html_a3530886e3f4ed240c50d0226b311f00d"><div class="ttname"><a href="classLot.html#a3530886e3f4ed240c50d0226b311f00d">Lot.RefreshData</a></div><div class="ttdeci">void RefreshData(TraitHouseBoard.Data data)</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00140">Lot.cs:140</a></div></div>
+<div class="ttc" id="aclassLot_html_a5026e0aea296224e4221219a28559e1b"><div class="ttname"><a href="classLot.html#a5026e0aea296224e4221219a28559e1b">Lot.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Lot_8cs_source.html#l00300">Lot.cs:300</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
+<div class="ttc" id="aclassMap_html_aa1a8a360aeea7dda2537485e30fea299"><div class="ttname"><a href="classMap.html#aa1a8a360aeea7dda2537485e30fea299">Map.cells</a></div><div class="ttdeci">Cell[,] cells</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02887">Map.cs:2887</a></div></div>
+<div class="ttc" id="aclassRoom_html_a5e2a70d8cde0902f314f1abfedde6427"><div class="ttname"><a href="classRoom.html#a5e2a70d8cde0902f314f1abfedde6427">Room.roof</a></div><div class="ttdeci">bool roof</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00214">Room.cs:214</a></div></div>
+<div class="ttc" id="aclassRoom_html_a7a36f72c7bdd6da7f53eb789442d6688"><div class="ttname"><a href="classRoom.html#a7a36f72c7bdd6da7f53eb789442d6688">Room.fullblock</a></div><div class="ttdeci">bool fullblock</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00216">Room.cs:216</a></div></div>
+<div class="ttc" id="aclassRoom_html_ae12255396231c71ab17ebd67fadac5b1"><div class="ttname"><a href="classRoom.html#ae12255396231c71ab17ebd67fadac5b1">Room.roofCount</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; roofCount</div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00224">Room.cs:224</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6bbe3e57f372109d0661eb0872cf590e"><div class="ttname"><a href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">SourceManager.blocks</a></div><div class="ttdeci">SourceBlock blocks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00177">SourceManager.cs:177</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00136">SourceMaterial.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_ac134d6a3e626a2e05695b105aa708ee4"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">SourceMaterial.Row.matColor</a></div><div class="ttdeci">Color matColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00440">SourceMaterial.cs:440</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_1_1Data_html"><div class="ttname"><a href="classTraitHouseBoard_1_1Data.html">TraitHouseBoard.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00118">TraitHouseBoard.cs:119</a></div></div>
+<div class="ttc" id="aclassTraitHouseBoard_html_af97bc19c391a6f04987a5474dc899ea2"><div class="ttname"><a href="classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2">TraitHouseBoard.data</a></div><div class="ttdeci">TraitHouseBoard.Data data</div><div class="ttdef"><b>Definition:</b> <a href="TraitHouseBoard_8cs_source.html#l00007">TraitHouseBoard.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, <a class="el" href="Lot_8cs_source.html#l00328">board</a>, <a class="el" href="Map_8cs_source.html#l02887">Map.cells</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="TraitHouseBoard_8cs_source.html#l00008">TraitHouseBoard.data</a>, <a class="el" href="Room_8cs_source.html#l00216">Room.fullblock</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03344">BaseTileMap.GetColorInt()</a>, <a class="el" href="Cell_8cs_source.html#l00770">Cell.HasFullBlock</a>, <a class="el" href="Cell_8cs_source.html#l00794">Cell.HasWall</a>, <a class="el" href="Lot_8cs_source.html#l00260">height</a>, <a class="el" href="Lot_8cs_source.html#l00266">heightFix</a>, <a class="el" href="CoreRef_8cs_source.html#l00456">CoreRef.DefaultRoof.idBlock</a>, <a class="el" href="CoreRef_8cs_source.html#l00458">CoreRef.DefaultRoof.idRamp</a>, <a class="el" href="RoomManager_8cs_source.html#l00169">RoomManager.listRoom</a>, <a class="el" href="Room_8cs_source.html#l00218">Room.lot</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00440">SourceMaterial.Row.matColor</a>, <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>, <a class="el" href="Lot_8cs_source.html#l00324">maxX</a>, <a class="el" href="Lot_8cs_source.html#l00326">maxZ</a>, <a class="el" href="Room_8cs_source.html#l00210">Room.mh</a>, <a class="el" href="Lot_8cs_source.html#l00320">minX</a>, <a class="el" href="Lot_8cs_source.html#l00322">minZ</a>, <a class="el" href="Room_8cs_source.html#l00206">Room.mx</a>, <a class="el" href="Room_8cs_source.html#l00208">Room.mz</a>, <a class="el" href="Room_8cs_source.html#l00222">Room.pointMaxX</a>, <a class="el" href="Room_8cs_source.html#l00220">Room.pointMinX</a>, <a class="el" href="Lot_8cs_source.html#l00140">RefreshData()</a>, <a class="el" href="GameSetting_8cs_source.html#l00027">GameSetting.render</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Room_8cs_source.html#l00214">Room.roof</a>, <a class="el" href="Lot_8cs_source.html#l00256">roofCount</a>, <a class="el" href="Room_8cs_source.html#l00224">Room.roofCount</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="Map_8cs_source.html#l02836">Map.rooms</a>, <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="Room_8cs_source.html#l00202">Room.x</a>, <a class="el" href="Lot_8cs_source.html#l00300">z</a>, and <a class="el" href="Room_8cs_source.html#l00204">Room.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RoomManager_8cs_source.html#l00121">RoomManager.RebuildLots()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +703,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00294">294</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
+
 </div>
 </div>
 <a id="a8144db60a1e6a5f20e94240d985198e4" name="a8144db60a1e6a5f20e94240d985198e4"></a>
@@ -368,6 +720,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00328">328</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>, and <a class="el" href="TraitHouseBoard_8cs_source.html#l00075">TraitHouseBoard.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -385,6 +739,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00280">280</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
+
 </div>
 </div>
 <a id="aa7f6896e671178c9748fec97fff3a486" name="aa7f6896e671178c9748fec97fff3a486"></a>
@@ -400,6 +756,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00282">282</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -417,6 +775,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00284">284</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="a9e8ae8ad16b4324d3d6090aca6fd7ece" name="a9e8ae8ad16b4324d3d6090aca6fd7ece"></a>
@@ -432,6 +792,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00278">278</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
 
 </div>
 </div>
@@ -464,6 +826,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00288">288</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -513,6 +877,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00260">260</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="Lot_8cs_source.html#l00140">RefreshData()</a>, <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03353">BaseTileMap.SetRoofHeight()</a>.</p>
+
 </div>
 </div>
 <a id="aae948f1e270704cf75f6b4e68cfb937e" name="aae948f1e270704cf75f6b4e68cfb937e"></a>
@@ -528,6 +894,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00266">266</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="Lot_8cs_source.html#l00140">RefreshData()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -561,6 +929,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00264">264</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="acf061042e5b3566db8b4ca7b9ce18f5a" name="acf061042e5b3566db8b4ca7b9ce18f5a"></a>
@@ -576,6 +946,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00270">270</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
 
 </div>
 </div>
@@ -593,6 +965,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00274">274</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="ae3bba289cf87430f196a868b488719ea" name="ae3bba289cf87430f196a868b488719ea"></a>
@@ -608,6 +982,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00276">276</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -625,6 +1001,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00272">272</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
+
 </div>
 </div>
 <a id="aad71a4ce61b3e0bdcab7f7067457af00" name="aad71a4ce61b3e0bdcab7f7067457af00"></a>
@@ -640,6 +1018,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00262">262</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03353">BaseTileMap.SetRoofHeight()</a>.</p>
 
 </div>
 </div>
@@ -657,6 +1037,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00268">268</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
+
 </div>
 </div>
 <a id="ac46d6f0a15efff8c96691cbc9a54a84c" name="ac46d6f0a15efff8c96691cbc9a54a84c"></a>
@@ -672,6 +1054,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00314">314</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l02934">BaseTileMap.GetRoofLight()</a>.</p>
 
 </div>
 </div>
@@ -697,6 +1081,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00324">324</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
+
 </div>
 </div>
 <a id="a81c5675bf0853aaef443f3aeaba6c633" name="a81c5675bf0853aaef443f3aeaba6c633"></a>
@@ -721,6 +1107,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00326">326</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
+
 </div>
 </div>
 <a id="a9eb64a3f95f6db9cd64ecc000a0eb6c0" name="a9eb64a3f95f6db9cd64ecc000a0eb6c0"></a>
@@ -736,6 +1124,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00306">306</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03353">BaseTileMap.SetRoofHeight()</a>.</p>
 
 </div>
 </div>
@@ -761,6 +1151,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00320">320</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
+
 </div>
 </div>
 <a id="ae9c0747d6a6fc88f356232941610537b" name="ae9c0747d6a6fc88f356232941610537b"></a>
@@ -784,6 +1176,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00322">322</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00183">AddConnectedRooms()</a>, and <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -865,6 +1259,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00312">312</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00138">TileMapElona.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03353">BaseTileMap.SetRoofHeight()</a>.</p>
+
 </div>
 </div>
 <a id="af212030a6cfeda8380c57d6276059fe8" name="af212030a6cfeda8380c57d6276059fe8"></a>
@@ -880,6 +1276,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00290">290</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l02953">BaseTileMap.DrawRoof()</a>.</p>
 
 </div>
 </div>
@@ -904,6 +1302,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00256">256</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
 
 </div>
 </div>
@@ -937,6 +1337,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00308">308</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a80f540ac0d4095da0c7e32f5253ba993" name="a80f540ac0d4095da0c7e32f5253ba993"></a>
@@ -960,6 +1362,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00254">254</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Room_8cs_source.html#l00029">Room.AddPoint()</a>.</p>
 
 </div>
 </div>
@@ -993,15 +1397,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lot_8cs_source.html#l00300">300</a> of file <a class="el" href="Lot_8cs_source.html">Lot.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Lot_8cs_source.html#l00007">SetBaseRoom()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="Lot_8cs_source.html">Lot.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLot.html">Lot</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

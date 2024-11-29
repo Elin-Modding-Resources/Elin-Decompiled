@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Mine.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -194,6 +214,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00070">70</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        this.mode = _mode;</div>
+<div class="line"><span class="lineno">   73</span>        this.ramp = 3;</div>
+<div class="line"><span class="lineno">   74</span>        base.Activate(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HotItemActionMode_8cs_source.html#l00030">HotItemActionMode.Execute()</a>.</p>
 
 </div>
 </div>
@@ -222,6 +249,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00048">48</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> t.<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.CanInstaComplete;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00074">Point.cs:75</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_a14bd72967b54c56f9fc32d26a866fbaa"><div class="ttname"><a href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">TaskPoint.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00180">TaskPoint.cs:180</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskPoint_8cs_source.html#l00180">TaskPoint.pos</a>, and <a class="el" href="Point_8cs_source.html#l00075">Point.sourceBlock</a>.</p>
 
 </div>
 </div>
@@ -250,6 +284,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00061">61</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> ((this.<a class="code hl_function" href="classAM__Mine.html#a47a117491f1f3376da4b7bd2b048a025">IsRoofEditMode</a>(<span class="keyword">null</span>) &amp;&amp; point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a727c54c67ad11b9c8220bcb479f1df16">_roofBlock</a> != 0) || (!<span class="keyword">this</span>.IsRoofEditMode(<span class="keyword">null</span>) &amp;&amp; point.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>))</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a>;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> base.GetGuidePass(point);</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassAM__Mine_html_a47a117491f1f3376da4b7bd2b048a025"><div class="ttname"><a href="classAM__Mine.html#a47a117491f1f3376da4b7bd2b048a025">AM_Mine.IsRoofEditMode</a></div><div class="ttdeci">override bool IsRoofEditMode(Card c=null)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Mine_8cs_source.html#l00006">AM_Mine.cs:6</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassCell_html_a727c54c67ad11b9c8220bcb479f1df16"><div class="ttname"><a href="classCell.html#a727c54c67ad11b9c8220bcb479f1df16">Cell._roofBlock</a></div><div class="ttdeci">byte _roofBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01832">Cell.cs:1832</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassPoint_html_a6b2acc02dc9b1c00963431c6c13f0903"><div class="ttname"><a href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">Point.HasWallOrFence</a></div><div class="ttdeci">bool HasWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00281">Point.cs:282</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abae9aeeca1578db7eff6d822e491eb7c"><div class="ttname"><a href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">ScreenGuide.passGuideBlock</a></div><div class="ttdeci">MeshPass passGuideBlock</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.cs:66</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01832">Cell._roofBlock</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Point_8cs_source.html#l00282">Point.HasWallOrFence</a>, <a class="el" href="AM__Mine_8cs_source.html#l00006">IsRoofEditMode()</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.passGuideBlock</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -278,6 +329,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00006">6</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> Input.GetKey(KeyCode.LeftAlt);</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TaskMine_8cs_source.html#l00133">TaskMine.DrawMarker()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00061">GetGuidePass()</a>, <a class="el" href="TaskMine_8cs_source.html#l00143">TaskMine.GetHitResult()</a>, <a class="el" href="Map_8cs_source.html#l01650">Map.MineBlock()</a>, <a class="el" href="TaskMine_8cs_source.html#l00175">TaskMine.OnProgressComplete()</a>, and <a class="el" href="AM__Mine_8cs_source.html#l00099">OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -305,7 +361,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00077">77</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        this.list = base.Designations.mine;</div>
+<div class="line"><span class="lineno">   80</span>        base.OnActivate();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a07d7a21be1f913f2c0e50d6b19e70ae1" name="a07d7a21be1f913f2c0e50d6b19e70ae1"></a>
@@ -335,6 +395,16 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAM__Designation.html#a30ac799bcad4a7c6a6bf0ba7223295fe">AM_Designation&lt; TaskMine &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00093">93</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        this.mold.mode = this.<a class="code hl_variable" href="classAM__Mine.html#a9957f7d4d9186bcab4387e3630838341">mode</a>;</div>
+<div class="line"><span class="lineno">   96</span>        this.mold.ramp = this.<a class="code hl_variable" href="classAM__Mine.html#ab7f0ef8ccfca545a959be2aee22dc5cb">ramp</a>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassAM__Mine_html_a9957f7d4d9186bcab4387e3630838341"><div class="ttname"><a href="classAM__Mine.html#a9957f7d4d9186bcab4387e3630838341">AM_Mine.mode</a></div><div class="ttdeci">TaskMine.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="AM__Mine_8cs_source.html#l00109">AM_Mine.cs:109</a></div></div>
+<div class="ttc" id="aclassAM__Mine_html_ab7f0ef8ccfca545a959be2aee22dc5cb"><div class="ttname"><a href="classAM__Mine.html#ab7f0ef8ccfca545a959be2aee22dc5cb">AM_Mine.ramp</a></div><div class="ttdeci">int ramp</div><div class="ttdef"><b>Definition:</b> <a href="AM__Mine_8cs_source.html#l00111">AM_Mine.cs:111</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Mine_8cs_source.html#l00109">mode</a>, and <a class="el" href="AM__Mine_8cs_source.html#l00111">ramp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActionHint_8cs_source.html#l00029">ActionHint.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -379,6 +449,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00099">99</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAM__Mine.html#a47a117491f1f3376da4b7bd2b048a025">IsRoofEditMode</a>(<span class="keyword">null</span>) &amp;&amp; point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a0b3a2e3257a0135955ee222f95c71801">HasWallOrFence</a> &amp;&amp; (result == <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid || result == <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid))</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_function" href="classScreenGuide.html#a9421fa3d19546fad616536ab2d96ec45">DrawWall</a>(point, (result == <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid) ? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#a58871365243b4b8d67df9b9c2c741b9a">blockColors</a>.Valid : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">Colors</a>.<a class="code hl_variable" href="classColorProfile.html#a58871365243b4b8d67df9b9c2c741b9a">blockColors</a>.Warning, <span class="keyword">false</span>, 0f);</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        base.OnRenderTile(point, result, dir);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
+<div class="ttc" id="aclassCell_html_a0b3a2e3257a0135955ee222f95c71801"><div class="ttname"><a href="classCell.html#a0b3a2e3257a0135955ee222f95c71801">Cell.HasWallOrFence</a></div><div class="ttdeci">bool HasWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00785">Cell.cs:786</a></div></div>
+<div class="ttc" id="aclassColorProfile_html_a58871365243b4b8d67df9b9c2c741b9a"><div class="ttname"><a href="classColorProfile.html#a58871365243b4b8d67df9b9c2c741b9a">ColorProfile.blockColors</a></div><div class="ttdeci">ColorProfile.BlockColors blockColors</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00078">ColorProfile.cs:78</a></div></div>
+<div class="ttc" id="aclassEClass_html_a0803a3f94e106e7d65031cb5c9f23ebe"><div class="ttname"><a href="classEClass.html#a0803a3f94e106e7d65031cb5c9f23ebe">EClass.Colors</a></div><div class="ttdeci">static ColorProfile Colors</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00127">EClass.cs:128</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_a9421fa3d19546fad616536ab2d96ec45"><div class="ttname"><a href="classScreenGuide.html#a9421fa3d19546fad616536ab2d96ec45">ScreenGuide.DrawWall</a></div><div class="ttdeci">unsafe void DrawWall(Point point, int color, bool useMarkerPass=false, float offsetZ=0f)</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00031">ScreenGuide.cs:31</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ColorProfile_8cs_source.html#l00078">ColorProfile.blockColors</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="EClass_8cs_source.html#l00128">EClass.Colors</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00031">ScreenGuide.DrawWall()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Cell_8cs_source.html#l00786">Cell.HasWallOrFence</a>, <a class="el" href="AM__Mine_8cs_source.html#l00006">IsRoofEditMode()</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -407,6 +492,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00088">88</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.hud.hint.groupRadio.ToggleInteractable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -435,6 +526,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00083">83</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.hud.hint.groupRadio.ToggleInteractable(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -462,7 +558,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00043">43</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        base.SetCursorOnMap(CursorSystem.Mine);</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -480,6 +579,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00109">109</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Mine_8cs_source.html#l00093">OnCreateMold()</a>.</p>
+
 </div>
 </div>
 <a id="ab7f0ef8ccfca545a959be2aee22dc5cb" name="ab7f0ef8ccfca545a959be2aee22dc5cb"></a>
@@ -495,6 +596,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00111">111</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Mine_8cs_source.html#l00093">OnCreateMold()</a>.</p>
 
 </div>
 </div>
@@ -520,7 +623,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00035">35</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8704769d65e2419e60cbf54755c80a81" name="a8704769d65e2419e60cbf54755c80a81"></a>
@@ -544,7 +653,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00053">53</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a11365b8a732e9fdf98f83cd7728881f1" name="a11365b8a732e9fdf98f83cd7728881f1"></a>
@@ -568,7 +683,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00011">11</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> 10;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b80bd61498eb84db69c66e749ae1bdf" name="a5b80bd61498eb84db69c66e749ae1bdf"></a>
@@ -592,7 +713,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00019">19</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6">HitType</a>.Block;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_aeb150efb90d481f6e6d19a43514de1a6"><div class="ttname"><a href="classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6">BaseTileSelector.HitType</a></div><div class="ttdeci">HitType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00524">BaseTileSelector.cs:525</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9844231057ec65315c3481326b494661" name="a9844231057ec65315c3481326b494661"></a>
@@ -616,16 +745,27 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Mine_8cs_source.html#l00027">27</a> of file <a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Mine&quot;</span> + this.<a class="code hl_variable" href="classAM__Mine.html#a9957f7d4d9186bcab4387e3630838341">mode</a>.<a class="code hl_function" href="classAIAct.html#ac4dbf95639d8ead3488ad1481de9f98f">ToString</a>();</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_ac4dbf95639d8ead3488ad1481de9f98f"><div class="ttname"><a href="classAIAct.html#ac4dbf95639d8ead3488ad1481de9f98f">AIAct.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00051">AIAct.cs:51</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Mine_8cs_source.html">AM_Mine.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Mine.html">AM_Mine</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

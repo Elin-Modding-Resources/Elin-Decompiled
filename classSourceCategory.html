@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceCategory.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -125,6 +145,39 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceCategory_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceCategory_8cs_source.html">SourceCategory.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">   11</span>            uid = SourceData.GetInt(1),</div>
+<div class="line"><span class="lineno">   12</span>            name_JP = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   13</span>            name = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">   14</span>            _parent = SourceData.GetString(4),</div>
+<div class="line"><span class="lineno">   15</span>            recipeCat = SourceData.GetString(5),</div>
+<div class="line"><span class="lineno">   16</span>            slot = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a3dc1253c3eba8b4d616506b8d5755438">GetElement</a>(SourceData.GetStr(6, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   17</span>            skill = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a3dc1253c3eba8b4d616506b8d5755438">GetElement</a>(SourceData.GetStr(7, <span class="keyword">false</span>)),</div>
+<div class="line"><span class="lineno">   18</span>            maxStack = SourceData.GetInt(8),</div>
+<div class="line"><span class="lineno">   19</span>            tileDummy = SourceData.GetInt(9),</div>
+<div class="line"><span class="lineno">   20</span>            installOne = SourceData.GetBool(10),</div>
+<div class="line"><span class="lineno">   21</span>            ignoreBless = SourceData.GetInt(11),</div>
+<div class="line"><span class="lineno">   22</span>            tag = SourceData.GetStringArray(12),</div>
+<div class="line"><span class="lineno">   23</span>            idThing = SourceData.GetString(13),</div>
+<div class="line"><span class="lineno">   24</span>            recycle = SourceData.GetStringArray(14),</div>
+<div class="line"><span class="lineno">   25</span>            costSP = SourceData.GetInt(15),</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e">gift</a> = SourceData.GetInt(16),</div>
+<div class="line"><span class="lineno">   27</span>            deliver = SourceData.GetInt(17),</div>
+<div class="line"><span class="lineno">   28</span>            offer = SourceData.GetInt(18),</div>
+<div class="line"><span class="lineno">   29</span>            ticket = SourceData.GetInt(19),</div>
+<div class="line"><span class="lineno">   30</span>            sortVal = SourceData.GetInt(20),</div>
+<div class="line"><span class="lineno">   31</span>            flag = SourceData.GetInt(21)</div>
+<div class="line"><span class="lineno">   32</span>        };</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e">CTAG.gift</a></div><div class="ttdeci">@ gift</div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_a3dc1253c3eba8b4d616506b8d5755438"><div class="ttname"><a href="classCore.html#a3dc1253c3eba8b4d616506b8d5755438">Core.GetElement</a></div><div class="ttdeci">static int GetElement(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00662">Core.cs:662</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00058">SourceCategory.cs:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa0ec3b461abf4bc16ad615481260140e">gift</a>.</p>
 
 </div>
 </div>
@@ -152,6 +205,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceCategory_8cs_source.html#l00040">40</a> of file <a class="el" href="SourceCategory_8cs_source.html">SourceCategory.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row in <span class="keyword">this</span>.rows)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            row.children = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt;();</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row2 in <span class="keyword">this</span>.rows)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (!row2._parent.IsEmpty())</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> row3 = this.map[row2._parent];</div>
+<div class="line"><span class="lineno">   51</span>                row2.parent = row3;</div>
+<div class="line"><span class="lineno">   52</span>                row3.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a00630fe772db09e815df3e3c15dc1f36">children</a>.Add(row2);</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a00630fe772db09e815df3e3c15dc1f36"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a00630fe772db09e815df3e3c15dc1f36">SourceCategory.Row.children</a></div><div class="ttdeci">List&lt; SourceCategory.Row &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00185">SourceCategory.cs:185</a></div></div>
+<div class="ttc" id="aclassSourceCategory_html"><div class="ttname"><a href="classSourceCategory.html">SourceCategory</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00004">SourceCategory.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceCategory_8cs_source.html#l00185">SourceCategory.Row.children</a>.</p>
 
 </div>
 </div>
@@ -180,16 +252,24 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceCategory_8cs_source.html#l00035">35</a> of file <a class="el" href="SourceCategory_8cs_source.html">SourceCategory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        this.map[r.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a>] = r;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a7a1e4cd547823f8b3227ba4a574d3c8a"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">SourceCategory.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00137">SourceCategory.cs:137</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceCategory_8cs_source.html">SourceCategory.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceCategory.html">SourceCategory</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classQuestMusic.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -484,7 +504,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuestInstance.html#ab0851714e0444cf013953761907dc014">QuestInstance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00046">46</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneEventMusic.html">ZoneEventMusic</a>();</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassZoneEventMusic_html"><div class="ttname"><a href="classZoneEventMusic.html">ZoneEventMusic</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventMusic_8cs_source.html#l00006">ZoneEventMusic.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad6f8b85fd301afbbe0562c303a573e16" name="ad6f8b85fd301afbbe0562c303a573e16"></a>
@@ -513,7 +537,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuestInstance.html#ae9000f657901528c780313ade8ff5e63">QuestInstance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00051">51</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classZoneInstanceMusic.html">ZoneInstanceMusic</a>();</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassZoneInstanceMusic_html"><div class="ttname"><a href="classZoneInstanceMusic.html">ZoneInstanceMusic</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceMusic_8cs_source.html#l00003">ZoneInstanceMusic.cs:4</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aedcdc849e926a8b3520b5fc3cc84402d" name="aedcdc849e926a8b3520b5fc3cc84402d"></a>
@@ -543,6 +571,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a2a1c146a6ef577a0040fd40dc442020a">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00061">61</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> this.difficulty + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
 
 </div>
 </div>
@@ -572,6 +607,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00056">56</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressMusic&quot;</span>.lang(this.<a class="code hl_variable" href="classQuestMusic.html#a5d05005cae29724d32b3df40a39d5628">score</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>.destScore.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassQuestMusic_html_a5d05005cae29724d32b3df40a39d5628"><div class="ttname"><a href="classQuestMusic.html#a5d05005cae29724d32b3df40a39d5628">QuestMusic.score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="QuestMusic_8cs_source.html#l00073">QuestMusic.cs:73</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestMusic_8cs_source.html#l00073">score</a>.</p>
 
 </div>
 </div>
@@ -601,6 +642,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classQuest.html#a1671b571331d5c1b59720b5a85a5c50c">Quest</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00066">66</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        this.destScore = this.difficulty * 150;</div>
+<div class="line"><span class="lineno">   69</span>        this.destScore += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(this.<a class="code hl_variable" href="classQuestMusic.html#a68bb72a23363a78173af3a3fb74e985d">destScore</a> / 5);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassQuestMusic_html_a68bb72a23363a78173af3a3fb74e985d"><div class="ttname"><a href="classQuestMusic.html#a68bb72a23363a78173af3a3fb74e985d">QuestMusic.destScore</a></div><div class="ttdeci">int destScore</div><div class="ttdef"><b>Definition:</b> <a href="QuestMusic_8cs_source.html#l00076">QuestMusic.cs:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestMusic_8cs_source.html#l00076">destScore</a>, and <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>.</p>
 
 </div>
 </div>
@@ -619,6 +667,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00076">76</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="QuestMusic_8cs_source.html#l00066">OnInit()</a>.</p>
+
 </div>
 </div>
 <a id="a5d05005cae29724d32b3df40a39d5628" name="a5d05005cae29724d32b3df40a39d5628"></a>
@@ -635,6 +685,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00073">73</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="QuestMusic_8cs_source.html#l00056">GetTextProgress()</a>, and <a class="el" href="ZoneEventMusic_8cs_source.html#l00138">ZoneEventMusic.OnReachTimeLimit()</a>.</p>
+
 </div>
 </div>
 <a id="af0c8e7a2f533e99f1eec42b3fd98b63e" name="af0c8e7a2f533e99f1eec42b3fd98b63e"></a>
@@ -650,6 +702,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00079">79</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneEventMusic_8cs_source.html#l00138">ZoneEventMusic.OnReachTimeLimit()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +729,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_enumeration" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>.Music;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
+<div class="ttc" id="aclassQuest_html_ae59aa23495624702ceda9305dd62f16f"><div class="ttname"><a href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a></div><div class="ttdeci">DifficultyType</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00818">Quest.cs:819</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e6931fc5d609019254177fbd0f268ef" name="a0e6931fc5d609019254177fbd0f268ef"></a>
@@ -699,7 +761,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;instance_music&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5346273b2303856836bf30fcac919b56" name="a5346273b2303856836bf30fcac919b56"></a>
@@ -723,7 +791,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00038">38</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7370eb46576791cf118780f5f88302bf" name="a7370eb46576791cf118780f5f88302bf"></a>
@@ -747,7 +821,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00030">30</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classQuestMusic.html#a68bb72a23363a78173af3a3fb74e985d">destScore</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa5d3625197a1422c4468509aaabeb6fa" name="aa5d3625197a1422c4468509aaabeb6fa"></a>
@@ -771,16 +851,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="QuestMusic_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Music&quot;</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="QuestMusic_8cs_source.html">QuestMusic.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classQuestMusic.html">QuestMusic</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

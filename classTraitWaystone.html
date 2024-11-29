@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitWaystone.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -664,6 +684,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a164af9b099be75ec2ddc7d1d750727ea">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitWaystone_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitWaystone_8cs_source.html">TraitWaystone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classTraitWaystone.html#abed4d138e7b2d7b3a2ebb23c800990d6">IsTemp</a>;</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassTraitWaystone_html_abed4d138e7b2d7b3a2ebb23c800990d6"><div class="ttname"><a href="classTraitWaystone.html#abed4d138e7b2d7b3a2ebb23c800990d6">TraitWaystone.IsTemp</a></div><div class="ttdeci">bool IsTemp</div><div class="ttdef"><b>Definition:</b> <a href="TraitWaystone_8cs_source.html#l00005">TraitWaystone.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitWaystone_8cs_source.html#l00006">IsTemp</a>.</p>
 
 </div>
 </div>
@@ -694,6 +720,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitWaystone_8cs_source.html#l00018">18</a> of file <a class="el" href="TraitWaystone_8cs_source.html">TraitWaystone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">MoveZone</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac61d073632122ad204c71b8d2d8b8575">ParentZone</a>, <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Auto);</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassCard_html_ae8e34c12f7fdaf3c6b3a50e27e4e3090"><div class="ttname"><a href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">Card.ModNum</a></div><div class="ttdeci">void ModNum(int a, bool notify=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03487">Card.cs:3487</a></div></div>
+<div class="ttc" id="aclassChara_html_afd491cf74f5f62c8e67b99f9e3b0202f"><div class="ttname"><a href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">Chara.MoveZone</a></div><div class="ttdeci">void MoveZone(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02829">Chara.cs:2829</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html"><div class="ttname"><a href="classZoneTransition.html">ZoneTransition</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00004">ZoneTransition.cs:5</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html_a42f31e47f43496abebff8ed4c4d16d46"><div class="ttname"><a href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">ZoneTransition.EnterState</a></div><div class="ttdeci">EnterState</div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00048">ZoneTransition.cs:49</a></div></div>
+<div class="ttc" id="aclassZone_html_ac61d073632122ad204c71b8d2d8b8575"><div class="ttname"><a href="classZone.html#ac61d073632122ad204c71b8d2d8b8575">Zone.ParentZone</a></div><div class="ttdeci">Zone ParentZone</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00188">Zone.cs:189</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Card_8cs_source.html#l03487">Card.ModNum()</a>, <a class="el" href="Chara_8cs_source.html#l02829">Chara.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Zone_8cs_source.html#l00189">Zone.ParentZone</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -724,6 +766,74 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitWaystone_8cs_source.html#l00025">25</a> of file <a class="el" href="TraitWaystone_8cs_source.html">TraitWaystone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a>.<a class="code hl_property" href="classSpatial.html#a7811977e144299adabca3a9908a04f17">IsRegion</a>)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">IsInstance</a> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__Dungeon.html">Zone_Dungeon</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__Tent.html">Zone_Tent</a>)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actNewZone&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTraitWaystone.html#abed4d138e7b2d7b3a2ebb23c800990d6">IsTemp</a>)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">MoveZone</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac61d073632122ad204c71b8d2d8b8575">ParentZone</a>, <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Auto);</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>        }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, CursorSystem.MoveZone, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">IsTown</a>)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_property" href="classPlayer.html#a63d58d55fbafe5847aa08cc0045d8d28">spawnZone</a> != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actSetSpawn&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;aura_heaven&quot;</span>).Play(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, 0f, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   55</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.Play(<span class="stringliteral">&quot;worship&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_property" href="classPlayer.html#a63d58d55fbafe5847aa08cc0045d8d28">spawnZone</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>;</div>
+<div class="line"><span class="lineno">   57</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;setSpawn&quot;</span>, <span class="keyword">this</span>.owner, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   58</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   59</span>                }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_property" href="classPlayer.html#a63d58d55fbafe5847aa08cc0045d8d28">spawnZone</a> != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actUnsetSpawn&quot;</span>, delegate()</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.Play(<span class="stringliteral">&quot;trash&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>                    EClass.player.spawnZone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>;</div>
+<div class="line"><span class="lineno">   68</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;unsetSpawn&quot;</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   70</span>                }, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, 1, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00180">ActPlan.cs:180</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassChara_html_aadd3929ed87179d19119d41182f92afc"><div class="ttname"><a href="classChara.html#aadd3929ed87179d19119d41182f92afc">Chara.homeZone</a></div><div class="ttdeci">Zone homeZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00068">Chara.cs:69</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00159">EClass.cs:160</a></div></div>
+<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00008">Effect.cs:9</a></div></div>
+<div class="ttc" id="aclassEffect_html_a4b51528582c52d77dc9846b6efa150d5"><div class="ttname"><a href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Effect.Get</a></div><div class="ttdeci">static Effect Get(Effect original)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00010">Effect.cs:10</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a63d58d55fbafe5847aa08cc0045d8d28"><div class="ttname"><a href="classPlayer.html#a63d58d55fbafe5847aa08cc0045d8d28">Player.spawnZone</a></div><div class="ttdeci">Zone spawnZone</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00034">Player.cs:35</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a4b9ceece95a08942c73fd641b7c7837e"><div class="ttname"><a href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">Spatial.parent</a></div><div class="ttdeci">Spatial parent</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00839">Spatial.cs:839</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a7811977e144299adabca3a9908a04f17"><div class="ttname"><a href="classSpatial.html#a7811977e144299adabca3a9908a04f17">Spatial.IsRegion</a></div><div class="ttdeci">virtual bool IsRegion</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00556">Spatial.cs:557</a></div></div>
+<div class="ttc" id="aclassZone__Dungeon_html"><div class="ttname"><a href="classZone__Dungeon.html">Zone_Dungeon</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Dungeon_8cs_source.html#l00007">Zone_Dungeon.cs:8</a></div></div>
+<div class="ttc" id="aclassZone__Tent_html"><div class="ttname"><a href="classZone__Tent.html">Zone_Tent</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Tent_8cs_source.html#l00003">Zone_Tent.cs:4</a></div></div>
+<div class="ttc" id="aclassZone_html_a7a2728e8894a1803eeba17ffc4c9f735"><div class="ttname"><a href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">Zone.IsUserZone</a></div><div class="ttdeci">virtual bool IsUserZone</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00376">Zone.cs:377</a></div></div>
+<div class="ttc" id="aclassZone_html_a8eb04cc71eac203b2f8877bd8e464d1d"><div class="ttname"><a href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">Zone.IsInstance</a></div><div class="ttdeci">bool IsInstance</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00780">Zone.cs:781</a></div></div>
+<div class="ttc" id="aclassZone_html_a98e18c99b9b4dd93176e660a5c545d74"><div class="ttname"><a href="classZone.html#a98e18c99b9b4dd93176e660a5c545d74">Zone.IsTown</a></div><div class="ttdeci">virtual bool IsTown</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00288">Zone.cs:289</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Effect_8cs_source.html#l00010">Effect.Get()</a>, <a class="el" href="Chara_8cs_source.html#l00069">Chara.homeZone</a>, <a class="el" href="Zone_8cs_source.html#l00781">Zone.IsInstance</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="Spatial_8cs_source.html#l00557">Spatial.IsRegion</a>, <a class="el" href="TraitWaystone_8cs_source.html#l00006">IsTemp</a>, <a class="el" href="Zone_8cs_source.html#l00289">Zone.IsTown</a>, <a class="el" href="Zone_8cs_source.html#l00377">Zone.IsUserZone</a>, <a class="el" href="Card_8cs_source.html#l03487">Card.ModNum()</a>, <a class="el" href="Chara_8cs_source.html#l02829">Chara.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Spatial_8cs_source.html#l00839">Spatial.parent</a>, <a class="el" href="Zone_8cs_source.html#l00189">Zone.ParentZone</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="EClass_8cs_source.html#l00160">EClass.Sound</a>, <a class="el" href="Player_8cs_source.html#l00035">Player.spawnZone</a>, and <a class="el" href="ActPlan_8cs_source.html#l00180">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -749,6 +859,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitWaystone_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitWaystone_8cs_source.html">TraitWaystone.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> this.owner.id == <span class="stringliteral">&quot;waystone_temp&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitWaystone_8cs_source.html#l00013">CanUse()</a>, and <a class="el" href="TraitWaystone_8cs_source.html#l00025">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -756,9 +874,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TraitWaystone_8cs_source.html">TraitWaystone.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitWaystone.html">TraitWaystone</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

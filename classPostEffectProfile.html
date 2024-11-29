@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classPostEffectProfile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -163,6 +183,40 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00024">24</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        Antialiasing component = cam.transform.GetComponent&lt;Antialiasing&gt;();</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (component)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            component.enabled = this.<a class="code hl_variable" href="classPostEffectProfile.html#af813034bb2f21a7f1e79d4823fa6b0dc">enableAA</a>;</div>
+<div class="line"><span class="lineno">   30</span>            component.mode = this.<a class="code hl_variable" href="classPostEffectProfile.html#a473ae68ddf7407db52ed08c32150d77b">aaMode</a>;</div>
+<div class="line"><span class="lineno">   31</span>            component.offsetScale = this.<a class="code hl_variable" href="classPostEffectProfile.html#a7c0a080f2b9b1a1efaeb967ac323da61">offsetScale</a>;</div>
+<div class="line"><span class="lineno">   32</span>            component.blurRadius = this.<a class="code hl_variable" href="classPostEffectProfile.html#a5f6688dab4a7d8abc0d1fddb28b74253">blurRadius</a>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPostEffectProfile.html#a23f7eda3394c671d39cd24ec4f08c1c3">enableCharaAA</a>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">screenElin</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a397f9e6cb11fd8eba4e9ab5ff6b755b9">passChara</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.EnableKeyword(<span class="stringliteral">&quot;AA_ON&quot;</span>);</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">screenElin</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a">passCharaL</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.EnableKeyword(<span class="stringliteral">&quot;AA_ON&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">screenElin</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a397f9e6cb11fd8eba4e9ab5ff6b755b9">passChara</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.DisableKeyword(<span class="stringliteral">&quot;AA_ON&quot;</span>);</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">screenElin</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a">passCharaL</a>.<a class="code hl_variable" href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">mat</a>.DisableKeyword(<span class="stringliteral">&quot;AA_ON&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.cs:857</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a397f9e6cb11fd8eba4e9ab5ff6b755b9"><div class="ttname"><a href="classBaseTileMap.html#a397f9e6cb11fd8eba4e9ab5ff6b755b9">BaseTileMap.passChara</a></div><div class="ttdeci">MeshPass passChara</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03542">BaseTileMap.cs:3542</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_ab5c0ef910c6d4502e9467e3ad71da71a"><div class="ttname"><a href="classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a">BaseTileMap.passCharaL</a></div><div class="ttdeci">MeshPass passCharaL</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03544">BaseTileMap.cs:3544</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a867e46b34b801aa583aa5257121d4902"><div class="ttname"><a href="classMeshPass.html#a867e46b34b801aa583aa5257121d4902">MeshPass.mat</a></div><div class="ttdeci">Material mat</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00431">MeshPass.cs:431</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a23f7eda3394c671d39cd24ec4f08c1c3"><div class="ttname"><a href="classPostEffectProfile.html#a23f7eda3394c671d39cd24ec4f08c1c3">PostEffectProfile.enableCharaAA</a></div><div class="ttdeci">bool enableCharaAA</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00058">PostEffectProfile.cs:58</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a473ae68ddf7407db52ed08c32150d77b"><div class="ttname"><a href="classPostEffectProfile.html#a473ae68ddf7407db52ed08c32150d77b">PostEffectProfile.aaMode</a></div><div class="ttdeci">AAMode aaMode</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00064">PostEffectProfile.cs:64</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a5f6688dab4a7d8abc0d1fddb28b74253"><div class="ttname"><a href="classPostEffectProfile.html#a5f6688dab4a7d8abc0d1fddb28b74253">PostEffectProfile.blurRadius</a></div><div class="ttdeci">float blurRadius</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00068">PostEffectProfile.cs:68</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a7c0a080f2b9b1a1efaeb967ac323da61"><div class="ttname"><a href="classPostEffectProfile.html#a7c0a080f2b9b1a1efaeb967ac323da61">PostEffectProfile.offsetScale</a></div><div class="ttdeci">float offsetScale</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00066">PostEffectProfile.cs:66</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_af813034bb2f21a7f1e79d4823fa6b0dc"><div class="ttname"><a href="classPostEffectProfile.html#af813034bb2f21a7f1e79d4823fa6b0dc">PostEffectProfile.enableAA</a></div><div class="ttdeci">bool enableAA</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00056">PostEffectProfile.cs:56</a></div></div>
+<div class="ttc" id="aclassScene_html_a47f3ab81d509c86e6cd3cc438651725f"><div class="ttname"><a href="classScene.html#a47f3ab81d509c86e6cd3cc438651725f">Scene.screenElin</a></div><div class="ttdeci">GameScreen screenElin</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01061">Scene.cs:1061</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PostEffectProfile_8cs_source.html#l00064">aaMode</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00068">blurRadius</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00056">enableAA</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00058">enableCharaAA</a>, <a class="el" href="MeshPass_8cs_source.html#l00431">MeshPass.mat</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00066">offsetScale</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03542">BaseTileMap.passChara</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03544">BaseTileMap.passCharaL</a>, <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l01061">Scene.screenElin</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">CoreConfig.ApplyGrading()</a>, and <a class="el" href="PostEffectProfile_8cs_source.html#l00007">OnValidate()</a>.</p>
 
 </div>
 </div>
@@ -190,6 +244,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00015">15</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classCoreConfig_1_1GraphicSetting.html">CoreConfig.GraphicSetting</a> graphic = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.graphic;</div>
+<div class="line"><span class="lineno">   18</span>        graphic.sharpen = this.<a class="code hl_variable" href="classPostEffectProfile.html#a8ecf9e8d2160885360662c77856e8b26">sharpen</a>;</div>
+<div class="line"><span class="lineno">   19</span>        graphic.sharpen2 = this.<a class="code hl_variable" href="classPostEffectProfile.html#a27f9d54e282598605d9ebdda88eb0318">sharpen2</a>;</div>
+<div class="line"><span class="lineno">   20</span>        graphic.blur = this.<a class="code hl_variable" href="classPostEffectProfile.html#a075fa0108d34698739e725d0fd99e533">blur</a>;</div>
+<div class="line"><span class="lineno">   21</span>        graphic.kuwahara = this.<a class="code hl_variable" href="classPostEffectProfile.html#a6568bfb7c7f117fc0ce81d7b0e5c7c16">kuwahara</a>;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_1_1GraphicSetting_html"><div class="ttname"><a href="classCoreConfig_1_1GraphicSetting.html">CoreConfig.GraphicSetting</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00727">CoreConfig.cs:728</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a075fa0108d34698739e725d0fd99e533"><div class="ttname"><a href="classPostEffectProfile.html#a075fa0108d34698739e725d0fd99e533">PostEffectProfile.blur</a></div><div class="ttdeci">int blur</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00054">PostEffectProfile.cs:54</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a27f9d54e282598605d9ebdda88eb0318"><div class="ttname"><a href="classPostEffectProfile.html#a27f9d54e282598605d9ebdda88eb0318">PostEffectProfile.sharpen2</a></div><div class="ttdeci">int sharpen2</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00052">PostEffectProfile.cs:52</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a6568bfb7c7f117fc0ce81d7b0e5c7c16"><div class="ttname"><a href="classPostEffectProfile.html#a6568bfb7c7f117fc0ce81d7b0e5c7c16">PostEffectProfile.kuwahara</a></div><div class="ttdeci">bool kuwahara</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00062">PostEffectProfile.cs:62</a></div></div>
+<div class="ttc" id="aclassPostEffectProfile_html_a8ecf9e8d2160885360662c77856e8b26"><div class="ttname"><a href="classPostEffectProfile.html#a8ecf9e8d2160885360662c77856e8b26">PostEffectProfile.sharpen</a></div><div class="ttdeci">int sharpen</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00050">PostEffectProfile.cs:50</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PostEffectProfile_8cs_source.html#l00054">blur</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00062">kuwahara</a>, <a class="el" href="PostEffectProfile_8cs_source.html#l00050">sharpen</a>, and <a class="el" href="PostEffectProfile_8cs_source.html#l00052">sharpen2</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00085">CoreConfig.Init()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -217,6 +288,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00007">7</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (Application.isPlaying)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            this.<a class="code hl_function" href="classPostEffectProfile.html#a8a6b4420c5c909653cdc659f908c2b45">Apply</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa73b32127f51413e730ef55f1412dc23">cam</a>);</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassPostEffectProfile_html_a8a6b4420c5c909653cdc659f908c2b45"><div class="ttname"><a href="classPostEffectProfile.html#a8a6b4420c5c909653cdc659f908c2b45">PostEffectProfile.Apply</a></div><div class="ttdeci">void Apply(Camera cam)</div><div class="ttdef"><b>Definition:</b> <a href="PostEffectProfile_8cs_source.html#l00024">PostEffectProfile.cs:24</a></div></div>
+<div class="ttc" id="aclassScene_html_aa73b32127f51413e730ef55f1412dc23"><div class="ttname"><a href="classScene.html#aa73b32127f51413e730ef55f1412dc23">Scene.cam</a></div><div class="ttdeci">Camera cam</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01009">Scene.cs:1009</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>, <a class="el" href="Scene_8cs_source.html#l01009">Scene.cam</a>, and <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>.</p>
 
 </div>
 </div>
@@ -235,6 +316,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00064">64</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>.</p>
+
 </div>
 </div>
 <a id="a075fa0108d34698739e725d0fd99e533" name="a075fa0108d34698739e725d0fd99e533"></a>
@@ -250,6 +333,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00054">54</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00015">OnChangeProfile()</a>.</p>
 
 </div>
 </div>
@@ -267,6 +352,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00068">68</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>.</p>
+
 </div>
 </div>
 <a id="a0ff3354689f0a6e3eec7e5f63e477865" name="a0ff3354689f0a6e3eec7e5f63e477865"></a>
@@ -282,6 +369,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00044">44</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">CoreConfig.ApplyGrading()</a>.</p>
 
 </div>
 </div>
@@ -299,6 +388,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00048">48</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">CoreConfig.ApplyGrading()</a>.</p>
+
 </div>
 </div>
 <a id="a4b70d7eac5db7835e2a069003668b09b" name="a4b70d7eac5db7835e2a069003668b09b"></a>
@@ -314,6 +405,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00060">60</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -331,6 +424,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00056">56</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>.</p>
+
 </div>
 </div>
 <a id="a23f7eda3394c671d39cd24ec4f08c1c3" name="a23f7eda3394c671d39cd24ec4f08c1c3"></a>
@@ -346,6 +441,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00058">58</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>.</p>
 
 </div>
 </div>
@@ -363,6 +460,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00062">62</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00015">OnChangeProfile()</a>.</p>
+
 </div>
 </div>
 <a id="a7c0a080f2b9b1a1efaeb967ac323da61" name="a7c0a080f2b9b1a1efaeb967ac323da61"></a>
@@ -378,6 +477,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00066">66</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00024">Apply()</a>.</p>
 
 </div>
 </div>
@@ -395,6 +496,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00046">46</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00334">CoreConfig.ApplyGrading()</a>.</p>
+
 </div>
 </div>
 <a id="a8ecf9e8d2160885360662c77856e8b26" name="a8ecf9e8d2160885360662c77856e8b26"></a>
@@ -410,6 +513,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00050">50</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00015">OnChangeProfile()</a>.</p>
 
 </div>
 </div>
@@ -427,15 +532,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PostEffectProfile_8cs_source.html#l00052">52</a> of file <a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PostEffectProfile_8cs_source.html#l00015">OnChangeProfile()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="PostEffectProfile_8cs_source.html">PostEffectProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classPostEffectProfile.html">PostEffectProfile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

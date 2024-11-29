@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTextureReplace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -144,7 +164,15 @@ Properties</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00067">67</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_enumvalue" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a8f9bfe9d1345237cb3b2b205864da075">User</a>,</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_enumvalue" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a7aeb0277500c86e4aa6bd23f9a737942">Mod</a>,</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_enumvalue" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a509820290d57f333403f490dde7316f4">Local</a></div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassTextureReplace_html_a2590dcd97f19076413e6f42b89a98cd7a509820290d57f333403f490dde7316f4"><div class="ttname"><a href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a509820290d57f333403f490dde7316f4">TextureReplace.Source.Local</a></div><div class="ttdeci">@ Local</div></div>
+<div class="ttc" id="aclassTextureReplace_html_a2590dcd97f19076413e6f42b89a98cd7a7aeb0277500c86e4aa6bd23f9a737942"><div class="ttname"><a href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a7aeb0277500c86e4aa6bd23f9a737942">TextureReplace.Source.Mod</a></div><div class="ttdeci">@ Mod</div></div>
+<div class="ttc" id="aclassTextureReplace_html_a2590dcd97f19076413e6f42b89a98cd7a8f9bfe9d1345237cb3b2b205864da075"><div class="ttname"><a href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7a8f9bfe9d1345237cb3b2b205864da075">TextureReplace.Source.User</a></div><div class="ttdeci">@ User</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -172,6 +200,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00044">44</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        UnityEngine.Object.Destroy(this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassTextureReplace_html_afb42270339c1aee60fd029fab89c5514"><div class="ttname"><a href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">TextureReplace.tex</a></div><div class="ttdeci">Texture2D tex</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00051">TextureReplace.cs:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00051">tex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00155">TextureData.AddReplace()</a>, <a class="el" href="TextureManager_8cs_source.html#l00166">TextureManager.ApplyLocalReplace()</a>, and <a class="el" href="TextureData_8cs_source.html#l00182">TextureData.RemoveDeletedReplace()</a>.</p>
 
 </div>
 </div>
@@ -200,6 +236,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00030">30</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            UnityEngine.Object.Destroy(this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        this.tex = IO.LoadPNG(this.<a class="code hl_variable" href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">file</a>.FullName, FilterMode.Point);</div>
+<div class="line"><span class="lineno">   37</span>        this.w = this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>.width;</div>
+<div class="line"><span class="lineno">   38</span>        this.h = this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>.height;</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">int</span> dstX = this.index % 100 * this.<a class="code hl_variable" href="classTextureReplace.html#a03d5931f8c6300c722a4e4eba3f57462">data</a>.<a class="code hl_variable" href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">tileW</a>;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">int</span> dstY = this.data.tex.height - this.index / 100 * this.data.tileH - this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>.height;</div>
+<div class="line"><span class="lineno">   41</span>        Graphics.CopyTexture(this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>, 0, 0, 0, 0, this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>.width, <span class="keyword">this</span>.tex.height, <span class="keyword">this</span>.data.tex, 0, 0, dstX, dstY);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassTextureData_html_a67c0c5f69a5112b90bed9ecfaace7267"><div class="ttname"><a href="classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267">TextureData.tileW</a></div><div class="ttdeci">int tileW</div><div class="ttdef"><b>Definition:</b> <a href="TextureData_8cs_source.html#l00208">TextureData.cs:208</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a027e48d52f965d133f85cafb642e4e81"><div class="ttname"><a href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">TextureReplace.file</a></div><div class="ttdeci">FileInfo file</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00053">TextureReplace.cs:53</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a03d5931f8c6300c722a4e4eba3f57462"><div class="ttname"><a href="classTextureReplace.html#a03d5931f8c6300c722a4e4eba3f57462">TextureReplace.data</a></div><div class="ttdeci">TextureData data</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00055">TextureReplace.cs:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00055">data</a>, <a class="el" href="TextureReplace_8cs_source.html#l00053">file</a>, <a class="el" href="TextureReplace_8cs_source.html#l00051">tex</a>, and <a class="el" href="TextureData_8cs_source.html#l00208">TextureData.tileW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureReplace_8cs_source.html#l00015">TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -228,6 +283,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00015">15</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (!File.Exists(<span class="keyword">this</span>.file.FullName))</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        DateTime lastWriteTime = File.GetLastWriteTime(this.<a class="code hl_variable" href="classTextureReplace.html#a027e48d52f965d133f85cafb642e4e81">file</a>.FullName);</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">bool</span> flag = this.date.Year != 1 &amp;&amp; this.<a class="code hl_variable" href="classTextureReplace.html#af427f14f7c6580dddd7b1fcecc992df3">date</a>.Equals(lastWriteTime);</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!flag || force || !this.<a class="code hl_variable" href="classTextureReplace.html#afb42270339c1aee60fd029fab89c5514">tex</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.<a class="code hl_function" href="classTextureReplace.html#ad894669d7c2836201f909a581bf39831">Load</a>(flag);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        this.date = lastWriteTime;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassTextureReplace_html_ad894669d7c2836201f909a581bf39831"><div class="ttname"><a href="classTextureReplace.html#ad894669d7c2836201f909a581bf39831">TextureReplace.Load</a></div><div class="ttdeci">void Load(bool dateMatched)</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00030">TextureReplace.cs:30</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_af427f14f7c6580dddd7b1fcecc992df3"><div class="ttname"><a href="classTextureReplace.html#af427f14f7c6580dddd7b1fcecc992df3">TextureReplace.date</a></div><div class="ttdeci">DateTime date</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00049">TextureReplace.cs:49</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TextureReplace_8cs_source.html#l00049">date</a>, <a class="el" href="TextureReplace_8cs_source.html#l00053">file</a>, <a class="el" href="TextureReplace_8cs_source.html#l00030">Load()</a>, and <a class="el" href="TextureReplace_8cs_source.html#l00051">tex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00008">TextureData.TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -246,6 +320,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00055">55</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureReplace_8cs_source.html#l00030">Load()</a>.</p>
+
 </div>
 </div>
 <a id="af427f14f7c6580dddd7b1fcecc992df3" name="af427f14f7c6580dddd7b1fcecc992df3"></a>
@@ -261,6 +337,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00049">49</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureReplace_8cs_source.html#l00015">TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -278,6 +356,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00053">53</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00176">TextureData.DeleteReplace()</a>, <a class="el" href="TextureReplace_8cs_source.html#l00030">Load()</a>, <a class="el" href="TextureData_8cs_source.html#l00182">TextureData.RemoveDeletedReplace()</a>, <a class="el" href="TextureData_8cs_source.html#l00008">TextureData.TryRefresh()</a>, <a class="el" href="TextureReplace_8cs_source.html#l00015">TryRefresh()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
+
 </div>
 </div>
 <a id="a110dc31a64b2314a0f71361661721b73" name="a110dc31a64b2314a0f71361661721b73"></a>
@@ -293,6 +373,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00061">61</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +392,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00057">57</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00155">TextureData.AddReplace()</a>, <a class="el" href="TextureManager_8cs_source.html#l00166">TextureManager.ApplyLocalReplace()</a>, <a class="el" href="TextureData_8cs_source.html#l00176">TextureData.DeleteReplace()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>, and <a class="el" href="TextureData_8cs_source.html#l00008">TextureData.TryRefresh()</a>.</p>
+
 </div>
 </div>
 <a id="ae20e6f68a3108d0fff85b2f254158848" name="ae20e6f68a3108d0fff85b2f254158848"></a>
@@ -325,6 +409,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00065">65</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TextureManager_8cs_source.html#l00166">TextureManager.ApplyLocalReplace()</a>, and <a class="el" href="TextureData_8cs_source.html#l00182">TextureData.RemoveDeletedReplace()</a>.</p>
 
 </div>
 </div>
@@ -342,6 +428,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00063">63</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureData_8cs_source.html#l00155">TextureData.AddReplace()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>.</p>
+
 </div>
 </div>
 <a id="afb42270339c1aee60fd029fab89c5514" name="afb42270339c1aee60fd029fab89c5514"></a>
@@ -358,6 +446,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00051">51</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TextureReplace_8cs_source.html#l00044">DestoryTex()</a>, <a class="el" href="TextureReplace_8cs_source.html#l00030">Load()</a>, and <a class="el" href="TextureReplace_8cs_source.html#l00015">TryRefresh()</a>.</p>
+
 </div>
 </div>
 <a id="a5ce7dd5b241f912e2f6cbc91c305b7fc" name="a5ce7dd5b241f912e2f6cbc91c305b7fc"></a>
@@ -373,6 +463,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00059">59</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>.</p>
 
 </div>
 </div>
@@ -398,16 +490,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TextureReplace_8cs_source.html#l00007">7</a> of file <a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.source == <a class="code hl_class" href="classTextureReplace.html">TextureReplace</a>.<a class="code hl_enumeration" href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">Source</a>.User;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassTextureReplace_html"><div class="ttname"><a href="classTextureReplace.html">TextureReplace</a></div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00005">TextureReplace.cs:6</a></div></div>
+<div class="ttc" id="aclassTextureReplace_html_a2590dcd97f19076413e6f42b89a98cd7"><div class="ttname"><a href="classTextureReplace.html#a2590dcd97f19076413e6f42b89a98cd7">TextureReplace.Source</a></div><div class="ttdeci">Source</div><div class="ttdef"><b>Definition:</b> <a href="TextureReplace_8cs_source.html#l00067">TextureReplace.cs:68</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TextureReplace_8cs_source.html">TextureReplace.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTextureReplace.html">TextureReplace</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

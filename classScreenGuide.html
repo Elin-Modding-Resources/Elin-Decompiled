@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classScreenGuide.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -205,7 +225,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00018">18</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4f09b312922ae6bad21b94225d288547" name="a4f09b312922ae6bad21b94225d288547"></a>
@@ -243,7 +265,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00014">14</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac02b861319d073d4bc37852a116957dc" name="ac02b861319d073d4bc37852a116957dc"></a>
@@ -281,6 +305,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00006">6</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.lr.positionCount = 2;</div>
+<div class="line"><span class="lineno">    9</span>        from.z = (to.z = -300f);</div>
+<div class="line"><span class="lineno">   10</span>        this.<a class="code hl_variable" href="classScreenGuide.html#ae9c6579c9d6e4df3113c361821dc94f8">lr</a>.SetPosition(0, from);</div>
+<div class="line"><span class="lineno">   11</span>        this.<a class="code hl_variable" href="classScreenGuide.html#ae9c6579c9d6e4df3113c361821dc94f8">lr</a>.SetPosition(1, to);</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassScreenGuide_html_ae9c6579c9d6e4df3113c361821dc94f8"><div class="ttname"><a href="classScreenGuide.html#ae9c6579c9d6e4df3113c361821dc94f8">ScreenGuide.lr</a></div><div class="ttdeci">LineRenderer lr</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00074">ScreenGuide.cs:74</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ScreenGuide_8cs_source.html#l00074">lr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__MoveInstalled_8cs_source.html#l00353">AM_MoveInstalled.OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -331,6 +366,60 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00031">31</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            Vector3 vector = *point.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(vector.x, vector.y, vector.z - 0.01f, 0f, 0f);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="classSourceBlock_1_1Row.html">SourceBlock.Row</a> sourceBlock = point.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>;</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="classRenderParam.html">RenderParam</a> renderParam = sourceBlock.<a class="code hl_function" href="classSourceBlock_1_1Row.html#a27e7b2e8b3f714ef60221d0d46ac7af4">GetRenderParam</a>(point.<a class="code hl_property" href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">matBlock</a>, point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ae07feab7f2615212c5839854cef969ea">blockDir</a>, point, num);</div>
+<div class="line"><span class="lineno">   41</span>        renderParam.matColor = (float)color;</div>
+<div class="line"><span class="lineno">   42</span>        renderParam.z -= 0.01f;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (useMarkerPass)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            renderParam.x += sourceBlock.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x;</div>
+<div class="line"><span class="lineno">   46</span>            renderParam.y += sourceBlock.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y;</div>
+<div class="line"><span class="lineno">   47</span>            renderParam.z += sourceBlock.renderData.offset.z + offsetZ;</div>
+<div class="line"><span class="lineno">   48</span>            this.<a class="code hl_variable" href="classScreenGuide.html#a45f134a3bb49bc9c126c71591ec45b0f">passBlockMarker</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(renderParam);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            sourceBlock.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_function" href="classRenderData.html#a337df6bccf7eb5af3e793530018cf0db">Draw</a>(renderParam);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ae07feab7f2615212c5839854cef969ea">blockDir</a> == 2)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            renderParam.tile *= -1f;</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (useMarkerPass)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                this.<a class="code hl_variable" href="classScreenGuide.html#a45f134a3bb49bc9c126c71591ec45b0f">passBlockMarker</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(renderParam);</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            sourceBlock.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_function" href="classRenderData.html#a337df6bccf7eb5af3e793530018cf0db">Draw</a>(renderParam);</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassCell_html_ae07feab7f2615212c5839854cef969ea"><div class="ttname"><a href="classCell.html#ae07feab7f2615212c5839854cef969ea">Cell.blockDir</a></div><div class="ttdeci">int blockDir</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00923">Cell.cs:924</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d9695d19ece56b37cf342a28c0426e0"><div class="ttname"><a href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">EMono.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00094">EMono.cs:95</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassPoint_html_a0980c1b838c69aef62bd3302b2c5e41d"><div class="ttname"><a href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">Point.matBlock</a></div><div class="ttdeci">SourceMaterial.Row matBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00042">Point.cs:43</a></div></div>
+<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00074">Point.cs:75</a></div></div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRenderData_html_a337df6bccf7eb5af3e793530018cf0db"><div class="ttname"><a href="classRenderData.html#a337df6bccf7eb5af3e793530018cf0db">RenderData.Draw</a></div><div class="ttdeci">void Draw(RenderParam p, int tile)</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00109">RenderData.cs:109</a></div></div>
+<div class="ttc" id="aclassRenderData_html_ab0c24dab311f1c22c8b109f201135029"><div class="ttname"><a href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">RenderData.offset</a></div><div class="ttdeci">Vector3 offset</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00268">RenderData.cs:268</a></div></div>
+<div class="ttc" id="aclassRenderParam_html"><div class="ttname"><a href="classRenderParam.html">RenderParam</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00004">RenderParam.cs:5</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a2a871b97e038c6b15e02a011aa4d27b4"><div class="ttname"><a href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">RenderRow.renderData</a></div><div class="ttdeci">RenderData renderData</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00498">RenderRow.cs:498</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_a45f134a3bb49bc9c126c71591ec45b0f"><div class="ttname"><a href="classScreenGuide.html#a45f134a3bb49bc9c126c71591ec45b0f">ScreenGuide.passBlockMarker</a></div><div class="ttdeci">MeshPass passBlockMarker</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00072">ScreenGuide.cs:72</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html"><div class="ttname"><a href="classSourceBlock_1_1Row.html">SourceBlock.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00107">SourceBlock.cs:108</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html_a27e7b2e8b3f714ef60221d0d46ac7af4"><div class="ttname"><a href="classSourceBlock_1_1Row.html#a27e7b2e8b3f714ef60221d0d46ac7af4">SourceBlock.Row.GetRenderParam</a></div><div class="ttdeci">override RenderParam GetRenderParam(SourceMaterial.Row mat, int dir, Point point=null, int bridgeHeight=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00151">SourceBlock.cs:151</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="Cell_8cs_source.html#l00924">Cell.blockDir</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="RenderData_8cs_source.html#l00109">RenderData.Draw()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00151">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Point_8cs_source.html#l00043">Point.matBlock</a>, <a class="el" href="RenderData_8cs_source.html#l00268">RenderData.offset</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00072">passBlockMarker</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">passGuideFloor</a>, <a class="el" href="Point_8cs_source.html#l00629">Point.Position()</a>, <a class="el" href="RenderRow_8cs_source.html#l00498">RenderRow.renderData</a>, <a class="el" href="EMono_8cs_source.html#l00095">EMono.screen</a>, and <a class="el" href="Point_8cs_source.html#l00075">Point.sourceBlock</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskMine_8cs_source.html#l00133">TaskMine.DrawMarker()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="ActionMode_8cs_source.html#l01449">ActionMode.OnRenderTile()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00099">AM_Mine.OnRenderTile()</a>, and <a class="el" href="AM__Picker_8cs_source.html#l00057">AM_Picker.OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -358,6 +447,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00022">22</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00903">Scene.DrawPass()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +478,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00026">26</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        this.lr.positionCount = 0;</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -403,6 +499,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00076">76</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00629">Recipe.OnRenderMarker()</a>, and <a class="el" href="Card_8cs_source.html#l05665">Card.RenderMarker()</a>.</p>
+
 </div>
 </div>
 <a id="ae9c6579c9d6e4df3113c361821dc94f8" name="ae9c6579c9d6e4df3113c361821dc94f8"></a>
@@ -418,6 +516,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00074">74</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ScreenGuide_8cs_source.html#l00006">DrawLine()</a>.</p>
 
 </div>
 </div>
@@ -435,6 +535,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00070">70</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileSelector_8cs_source.html#l00104">BaseTileSelector.OnUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a45f134a3bb49bc9c126c71591ec45b0f" name="a45f134a3bb49bc9c126c71591ec45b0f"></a>
@@ -450,6 +552,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00072">72</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ScreenGuide_8cs_source.html#l00031">DrawWall()</a>.</p>
 
 </div>
 </div>
@@ -467,6 +571,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00066">66</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00174">UIInspector.DrawHighlight()</a>, <a class="el" href="ActionMode_8cs_source.html#l01440">ActionMode.GetGuidePass()</a>, <a class="el" href="AM__Build_8cs_source.html#l00162">AM_Build.GetGuidePass()</a>, <a class="el" href="AM__Deconstruct_8cs_source.html#l00048">AM_Deconstruct.GetGuidePass()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00061">AM_Mine.GetGuidePass()</a>, <a class="el" href="AM__MoveInstalled_8cs_source.html#l00098">AM_MoveInstalled.GetGuidePass()</a>, <a class="el" href="AM__RemoveDesignation_8cs_source.html#l00026">AM_RemoveDesignation.GetGuidePass()</a>, <a class="el" href="Recipe_8cs_source.html#l00629">Recipe.OnRenderMarker()</a>, <a class="el" href="Card_8cs_source.html#l05665">Card.RenderMarker()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00018">LayerInteraction.Update()</a>.</p>
+
 </div>
 </div>
 <a id="abd2582d0da474b87de4f668bc34f5e8e" name="abd2582d0da474b87de4f668bc34f5e8e"></a>
@@ -483,15 +589,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ScreenGuide_8cs_source.html#l00068">68</a> of file <a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00174">UIInspector.DrawHighlight()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00031">DrawWall()</a>, <a class="el" href="ActionMode_8cs_source.html#l01440">ActionMode.GetGuidePass()</a>, <a class="el" href="AM__BaseTerrain_8cs_source.html#l00066">AM_BaseTerrain.GetGuidePass()</a>, <a class="el" href="AM__Build_8cs_source.html#l00162">AM_Build.GetGuidePass()</a>, <a class="el" href="Recipe_8cs_source.html#l00629">Recipe.OnRenderMarker()</a>, <a class="el" href="AM__Adv_8cs_source.html#l00105">AM_Adv.OnRenderTile()</a>, <a class="el" href="AM__Build_8cs_source.html#l00286">AM_Build.OnRenderTile()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00428">HotItemHeld.OnRenderTile()</a>, <a class="el" href="Trait_8cs_source.html#l00870">Trait.OnRenderTile()</a>, <a class="el" href="TraitRoadSign_8cs_source.html#l00014">TraitRoadSign.OnRenderTile()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00018">LayerInteraction.Update()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ScreenGuide_8cs_source.html">ScreenGuide.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classScreenGuide.html">ScreenGuide</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

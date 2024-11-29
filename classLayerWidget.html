@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerWidget.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -213,6 +233,152 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.HideFloats();</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_class" href="classWidgetManager.html">WidgetManager</a> widgets = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets;</div>
+<div class="line"><span class="lineno">   10</span>        LayerWidget.Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   11</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567">list</a>;</div>
+<div class="line"><span class="lineno">   12</span>        BaseList baseList2 = this.<a class="code hl_variable" href="classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb">list2</a>;</div>
+<div class="line"><span class="lineno">   13</span>        UIList.Callback&lt;<a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_class" href="classWidget_1_1Config.html">Config</a>, <a class="code hl_class" href="classItemWidget.html">ItemWidget</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_class" href="classWidget_1_1Config.html">Config</a>, <a class="code hl_class" href="classItemWidget.html">ItemWidget</a>&gt;();</div>
+<div class="line"><span class="lineno">   14</span>        callback.onClick = delegate(<a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_class" href="classWidget_1_1Config.html">Config</a> a, <a class="code hl_class" href="classItemWidget.html">ItemWidget</a> b)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>        };</div>
+<div class="line"><span class="lineno">   17</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_class" href="classWidget_1_1Config.html">Config</a> a, <a class="code hl_class" href="classItemWidget.html">ItemWidget</a> b)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            b.buttonActivate.mainText.text = Lang.Get(<span class="stringliteral">&quot;Widget&quot;</span> + a.id);</div>
+<div class="line"><span class="lineno">   20</span>            b.<a class="code hl_variable" href="classItemWidget.html#a4d6424c36ecf144da89b80babc0fb2af">buttonActivate</a>.subText.SetActive(a.IsSystem);</div>
+<div class="line"><span class="lineno">   21</span>            b.<a class="code hl_variable" href="classItemWidget.html#a4d6424c36ecf144da89b80babc0fb2af">buttonActivate</a>.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">if</span> (a.IsSealed)</div>
+<div class="line"><span class="lineno">   24</span>                {</div>
+<div class="line"><span class="lineno">   25</span>                    SE.Beep();</div>
+<div class="line"><span class="lineno">   26</span>                    return;</div>
+<div class="line"><span class="lineno">   27</span>                }</div>
+<div class="line"><span class="lineno">   28</span>                if (a.id == <span class="stringliteral">&quot;QuestTracker&quot;</span>)</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    if (ELayer.ui.widgets.GetWidget(<span class="stringliteral">&quot;QuestTracker&quot;</span>) != null)</div>
+<div class="line"><span class="lineno">   31</span>                    {</div>
+<div class="line"><span class="lineno">   32</span>                        ELayer.player.questTracker = false;</div>
+<div class="line"><span class="lineno">   33</span>                    }</div>
+<div class="line"><span class="lineno">   34</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   35</span>                    {</div>
+<div class="line"><span class="lineno">   36</span>                        ELayer.player.questTracker = true;</div>
+<div class="line"><span class="lineno">   37</span>                    }</div>
+<div class="line"><span class="lineno">   38</span>                    <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a>.<a class="code hl_function" href="classWidgetHotbar.html#ae77868c1a95513518ea6e2746857005f">RefreshButtons</a>();</div>
+<div class="line"><span class="lineno">   39</span>                }</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_class" href="classWidget.html">Widget</a> widget2 = widgets.<a class="code hl_function" href="classWidgetManager.html#abad073deaeeca4b8c57103dee2d2d47e">Toggle</a>(a);</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (widget2 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    widget2.<a class="code hl_function" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a>();</div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                this.<a class="code hl_function" href="classLayerWidget.html#a8d07296b2387c997671db18aa05d8137">Refresh</a>();</div>
+<div class="line"><span class="lineno">   46</span>            });</div>
+<div class="line"><span class="lineno">   47</span>            b.<a class="code hl_variable" href="classItemWidget.html#af3ad5a0c140f562dafa07a78a8efd037">buttonLock</a>.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                widgets.<a class="code hl_function" href="classWidgetManager.html#a0fd9903a606b0deaed0d8cf9964b8a6c">ToggleLock</a>(a);</div>
+<div class="line"><span class="lineno">   50</span>                this.<a class="code hl_function" href="classLayerWidget.html#a8d07296b2387c997671db18aa05d8137">Refresh</a>();</div>
+<div class="line"><span class="lineno">   51</span>            });</div>
+<div class="line"><span class="lineno">   52</span>            b.config = a;</div>
+<div class="line"><span class="lineno">   53</span>        };</div>
+<div class="line"><span class="lineno">   54</span>        callback.onRefresh = <span class="keyword">new</span> Action(this.<a class="code hl_function" href="classLayerWidget.html#a8d07296b2387c997671db18aa05d8137">Refresh</a>);</div>
+<div class="line"><span class="lineno">   55</span>        UIList.ICallback callbacks = callback;</div>
+<div class="line"><span class="lineno">   56</span>        baseList2.callbacks = callback;</div>
+<div class="line"><span class="lineno">   57</span>        baseList.callbacks = callbacks;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_class" href="classWidget_1_1Meta.html">Meta</a> meta in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a004a116a068dbda3cf78ffcfbd3fa039">ui</a>.widgetMetas)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classWidget_1_1Config.html">Widget.Config</a> <a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a> = widgets.<a class="code hl_property" href="classWidgetManager.html#aaebfbf2ececab9e7019796393552a428">configs</a>[meta.id];</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.IsInRightMode() &amp;&amp; !meta.debugOnly)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.id.Contains(<span class="stringliteral">&quot;Hotbar&quot;</span>))</div>
+<div class="line"><span class="lineno">   64</span>                {</div>
+<div class="line"><span class="lineno">   65</span>                    this.<a class="code hl_variable" href="classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb">list2</a>.Add(config);</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   68</span>                {</div>
+<div class="line"><span class="lineno">   69</span>                    this.<a class="code hl_variable" href="classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567">list</a>.Add(config);</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        this.<a class="code hl_variable" href="classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567">list</a>.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   74</span>        this.<a class="code hl_variable" href="classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb">list2</a>.Refresh(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> widget <span class="keywordflow">in</span> widgets.<a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            widget.<a class="code hl_function" href="classWidget.html#acff238f1edde59feb5b454e873c0cec5">OnManagerActivate</a>();</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        this.windows[0].AddBottomSpace(20);</div>
+<div class="line"><span class="lineno">   80</span>        Action &lt;&gt;9__7;</div>
+<div class="line"><span class="lineno">   81</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;resetWidget&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">string</span> langDetail = <span class="stringliteral">&quot;dialogResetWidget&quot;</span>;</div>
+<div class="line"><span class="lineno">   84</span>            Action actionYes;</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> ((actionYes = &lt;&gt;9__7) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                actionYes = (&lt;&gt;9__7 = delegate()</div>
+<div class="line"><span class="lineno">   88</span>                {</div>
+<div class="line"><span class="lineno">   89</span>                    this.Close();</div>
+<div class="line"><span class="lineno">   90</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Load(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a2d6b723453add2e1b272341c38451262">useSubWidgetTheme</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   91</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Reset(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   92</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;();</div>
+<div class="line"><span class="lineno">   93</span>                });</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(langDetail, actionYes, <span class="keyword">null</span>, <span class="stringliteral">&quot;yes&quot;</span>, <span class="stringliteral">&quot;no&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   97</span>        Action &lt;&gt;9__8;</div>
+<div class="line"><span class="lineno">   98</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;loadTheme&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <a class="code hl_class" href="classWidgetManager.html">WidgetManager</a> widgets = widgets;</div>
+<div class="line"><span class="lineno">  101</span>            Action onLoad;</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> ((onLoad = &lt;&gt;9__8) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                onLoad = (&lt;&gt;9__8 = delegate()</div>
+<div class="line"><span class="lineno">  105</span>                {</div>
+<div class="line"><span class="lineno">  106</span>                    this.Close();</div>
+<div class="line"><span class="lineno">  107</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;();</div>
+<div class="line"><span class="lineno">  108</span>                });</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            widgets.<a class="code hl_function" href="classWidgetManager.html#a00c4b9d53a75de01da85d40fcbf314ab">DialogLoad</a>(onLoad);</div>
+<div class="line"><span class="lineno">  111</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  112</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;saveTheme&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            widgets.<a class="code hl_function" href="classWidgetManager.html#a6c2d87f70e5c134ba4207ebd6dbe60fe">DialogSave</a>(delegate</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialogSaveTheme&quot;</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  117</span>            });</div>
+<div class="line"><span class="lineno">  118</span>        }, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
+<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00204">Dialog.cs:204</a></div></div>
+<div class="ttc" id="aclassDialog_html_a8cf00750d0a8ed4e4212aa3956dead48"><div class="ttname"><a href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Dialog.Ok</a></div><div class="ttdeci">static Dialog Ok(string langDetail, Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00182">Dialog.cs:182</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassELayer_html_a6ce5e3c8bbab020ab68e9fa4c2d63683"><div class="ttname"><a href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">ELayer.config</a></div><div class="ttdeci">static CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00102">ELayer.cs:103</a></div></div>
+<div class="ttc" id="aclassELayer_html_a8425a850da931bf4ff4469f7c45880f0"><div class="ttname"><a href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">ELayer.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00110">ELayer.cs:111</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_a004a116a068dbda3cf78ffcfbd3fa039"><div class="ttname"><a href="classGameSetting.html#a004a116a068dbda3cf78ffcfbd3fa039">GameSetting.ui</a></div><div class="ttdeci">GameSetting.UISetting ui</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00033">GameSetting.cs:33</a></div></div>
+<div class="ttc" id="aclassItemWidget_html"><div class="ttname"><a href="classItemWidget.html">ItemWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00004">ItemWidget.cs:5</a></div></div>
+<div class="ttc" id="aclassItemWidget_html_a4d6424c36ecf144da89b80babc0fb2af"><div class="ttname"><a href="classItemWidget.html#a4d6424c36ecf144da89b80babc0fb2af">ItemWidget.buttonActivate</a></div><div class="ttdeci">UIButton buttonActivate</div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00006">ItemWidget.cs:6</a></div></div>
+<div class="ttc" id="aclassItemWidget_html_af3ad5a0c140f562dafa07a78a8efd037"><div class="ttname"><a href="classItemWidget.html#af3ad5a0c140f562dafa07a78a8efd037">ItemWidget.buttonLock</a></div><div class="ttdeci">UIButton buttonLock</div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00010">ItemWidget.cs:10</a></div></div>
+<div class="ttc" id="aclassLayerWidget_html"><div class="ttname"><a href="classLayerWidget.html">LayerWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00004">LayerWidget.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerWidget_html_a8d07296b2387c997671db18aa05d8137"><div class="ttname"><a href="classLayerWidget.html#a8d07296b2387c997671db18aa05d8137">LayerWidget.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00137">LayerWidget.cs:137</a></div></div>
+<div class="ttc" id="aclassLayerWidget_html_ad0d89cbd69896ca19e42ace17b9b6567"><div class="ttname"><a href="classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567">LayerWidget.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00159">LayerWidget.cs:159</a></div></div>
+<div class="ttc" id="aclassLayerWidget_html_adcd0b2f7e3fb99c714476b11fe8ebbcb"><div class="ttname"><a href="classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb">LayerWidget.list2</a></div><div class="ttdeci">UIList list2</div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00161">LayerWidget.cs:161</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2d6b723453add2e1b272341c38451262"><div class="ttname"><a href="classPlayer.html#a2d6b723453add2e1b272341c38451262">Player.useSubWidgetTheme</a></div><div class="ttdeci">bool useSubWidgetTheme</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01425">Player.cs:1425</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html"><div class="ttname"><a href="classWidgetHotbar.html">WidgetHotbar</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00009">WidgetHotbar.cs:10</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_ae77868c1a95513518ea6e2746857005f"><div class="ttname"><a href="classWidgetHotbar.html#ae77868c1a95513518ea6e2746857005f">WidgetHotbar.RefreshButtons</a></div><div class="ttdeci">static void RefreshButtons()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00448">WidgetHotbar.cs:448</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html"><div class="ttname"><a href="classWidgetManager.html">WidgetManager</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00008">WidgetManager.cs:9</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_a00c4b9d53a75de01da85d40fcbf314ab"><div class="ttname"><a href="classWidgetManager.html#a00c4b9d53a75de01da85d40fcbf314ab">WidgetManager.DialogLoad</a></div><div class="ttdeci">void DialogLoad(Action onLoad=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00340">WidgetManager.cs:340</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_a0fd9903a606b0deaed0d8cf9964b8a6c"><div class="ttname"><a href="classWidgetManager.html#a0fd9903a606b0deaed0d8cf9964b8a6c">WidgetManager.ToggleLock</a></div><div class="ttdeci">void ToggleLock(Widget.Config c)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00173">WidgetManager.cs:173</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_a6c2d87f70e5c134ba4207ebd6dbe60fe"><div class="ttname"><a href="classWidgetManager.html#a6c2d87f70e5c134ba4207ebd6dbe60fe">WidgetManager.DialogSave</a></div><div class="ttdeci">void DialogSave(Action onSave=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00319">WidgetManager.cs:319</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_aaebfbf2ececab9e7019796393552a428"><div class="ttname"><a href="classWidgetManager.html#aaebfbf2ececab9e7019796393552a428">WidgetManager.configs</a></div><div class="ttdeci">Dictionary&lt; string, Widget.Config &gt; configs</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00018">WidgetManager.cs:19</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_ab2f3ed28fcf34a6559c87e153a9cc4bd"><div class="ttname"><a href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">WidgetManager.list</a></div><div class="ttdeci">List&lt; Widget &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00390">WidgetManager.cs:390</a></div></div>
+<div class="ttc" id="aclassWidgetManager_html_abad073deaeeca4b8c57103dee2d2d47e"><div class="ttname"><a href="classWidgetManager.html#abad073deaeeca4b8c57103dee2d2d47e">WidgetManager.Toggle</a></div><div class="ttdeci">Widget Toggle(string id)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00151">WidgetManager.cs:151</a></div></div>
+<div class="ttc" id="aclassWidget_1_1Config_html"><div class="ttname"><a href="classWidget_1_1Config.html">Widget.Config</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00685">Widget.cs:686</a></div></div>
+<div class="ttc" id="aclassWidget_1_1Meta_html"><div class="ttname"><a href="classWidget_1_1Meta.html">Widget.Meta</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00657">Widget.cs:658</a></div></div>
+<div class="ttc" id="aclassWidget_html"><div class="ttname"><a href="classWidget.html">Widget</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00007">Widget.cs:8</a></div></div>
+<div class="ttc" id="aclassWidget_html_ac6533dcab2a91d1122bc393e017d9f44"><div class="ttname"><a href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">Widget.SoundActivate</a></div><div class="ttdeci">void SoundActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00629">Widget.cs:629</a></div></div>
+<div class="ttc" id="aclassWidget_html_acff238f1edde59feb5b454e873c0cec5"><div class="ttname"><a href="classWidget.html#acff238f1edde59feb5b454e873c0cec5">Widget.OnManagerActivate</a></div><div class="ttdeci">virtual void OnManagerActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00206">Widget.cs:206</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemWidget_8cs_source.html#l00006">ItemWidget.buttonActivate</a>, <a class="el" href="ItemWidget_8cs_source.html#l00010">ItemWidget.buttonLock</a>, <a class="el" href="LayerWidget_8cs_source.html#l00159">list</a>, <a class="el" href="LayerWidget_8cs_source.html#l00161">list2</a>, <a class="el" href="LayerWidget_8cs_source.html#l00137">Refresh()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00448">WidgetHotbar.RefreshButtons()</a>, <a class="el" href="Widget_8cs_source.html#l00629">Widget.SoundActivate()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00151">WidgetManager.Toggle()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00173">WidgetManager.ToggleLock()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -240,6 +406,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00148">148</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> widget <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.list)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            widget.<a class="code hl_function" href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">OnManagerDeactivate</a>();</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ShowFloats();</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="ttc" id="aclassWidget_html_af07afdbb7e0dc8eb844f4b5d3a4cce37"><div class="ttname"><a href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">Widget.OnManagerDeactivate</a></div><div class="ttdeci">virtual void OnManagerDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00229">Widget.cs:229</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00229">Widget.OnManagerDeactivate()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -267,6 +443,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00121">121</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (EInput.leftMouse.clicked)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (EInput.leftMouse.dragging)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_class" href="classWidget.html">Widget</a> componentOf = InputModuleEX.GetComponentOf&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;();</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (componentOf)</div>
+<div class="line"><span class="lineno">  131</span>            {</div>
+<div class="line"><span class="lineno">  132</span>                componentOf.<a class="code hl_function" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a>();</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="ttc" id="aclassWidget_html_a0e5655bef2d0773efbcfc065b4abbca7"><div class="ttname"><a href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">Widget.ShowContextMenu</a></div><div class="ttdeci">void ShowContextMenu()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00472">Widget.cs:472</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00472">Widget.ShowContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -294,6 +487,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00137">137</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">foreach</span> (UIList.ButtonPair buttonPair in <span class="keyword">this</span>.list.buttons.Concat(<span class="keyword">this</span>.list2.buttons))</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_class" href="classItemWidget.html">ItemWidget</a> itemWidget = buttonPair.component as <a class="code hl_class" href="classItemWidget.html">ItemWidget</a>;</div>
+<div class="line"><span class="lineno">  142</span>            itemWidget.<a class="code hl_variable" href="classItemWidget.html#a3ec423545495f555fe65b8c96ba12d3d">imageLock</a>.SetActive(itemWidget.<a class="code hl_variable" href="classItemWidget.html#aa2233a06a694701bfcc16aef0d73407d">config</a>.locked);</div>
+<div class="line"><span class="lineno">  143</span>            itemWidget.<a class="code hl_variable" href="classItemWidget.html#acfed5cede03ef983379eb79cfc27c336">imageActive</a>.SetActive(itemWidget.<a class="code hl_variable" href="classItemWidget.html#aa2233a06a694701bfcc16aef0d73407d">config</a>.state == <a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_enumeration" href="classWidget.html#aa91ece767174d862948d83a17ec7a724">State</a>.Active);</div>
+<div class="line"><span class="lineno">  144</span>            itemWidget.buttonLock.mainText.text = Lang.Get(itemWidget.<a class="code hl_variable" href="classItemWidget.html#aa2233a06a694701bfcc16aef0d73407d">config</a>.locked ? <span class="stringliteral">&quot;unlockWidget&quot;</span> : <span class="stringliteral">&quot;lockWidget&quot;</span>);</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="ttc" id="aclassItemWidget_html_a3ec423545495f555fe65b8c96ba12d3d"><div class="ttname"><a href="classItemWidget.html#a3ec423545495f555fe65b8c96ba12d3d">ItemWidget.imageLock</a></div><div class="ttdeci">Image imageLock</div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00014">ItemWidget.cs:14</a></div></div>
+<div class="ttc" id="aclassItemWidget_html_aa2233a06a694701bfcc16aef0d73407d"><div class="ttname"><a href="classItemWidget.html#aa2233a06a694701bfcc16aef0d73407d">ItemWidget.config</a></div><div class="ttdeci">Widget.Config config</div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00016">ItemWidget.cs:16</a></div></div>
+<div class="ttc" id="aclassItemWidget_html_acfed5cede03ef983379eb79cfc27c336"><div class="ttname"><a href="classItemWidget.html#acfed5cede03ef983379eb79cfc27c336">ItemWidget.imageActive</a></div><div class="ttdeci">Image imageActive</div><div class="ttdef"><b>Definition:</b> <a href="ItemWidget_8cs_source.html#l00012">ItemWidget.cs:12</a></div></div>
+<div class="ttc" id="aclassWidget_html_aa91ece767174d862948d83a17ec7a724"><div class="ttname"><a href="classWidget.html#aa91ece767174d862948d83a17ec7a724">Widget.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00774">Widget.cs:775</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemWidget_8cs_source.html#l00016">ItemWidget.config</a>, <a class="el" href="ItemWidget_8cs_source.html#l00012">ItemWidget.imageActive</a>, and <a class="el" href="ItemWidget_8cs_source.html#l00014">ItemWidget.imageLock</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00256">WidgetManager.DeactivateWidget()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00006">OnInit()</a>, and <a class="el" href="Widget_8cs_source.html#l00479">Widget.SetBaseContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -320,6 +530,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00157">157</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00184">WidgetManager.ActivateWidget()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00256">WidgetManager.DeactivateWidget()</a>.</p>
+
 </div>
 </div>
 <a id="ad0d89cbd69896ca19e42ace17b9b6567" name="ad0d89cbd69896ca19e42ace17b9b6567"></a>
@@ -335,6 +547,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00159">159</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerWidget_8cs_source.html#l00006">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -352,15 +566,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWidget_8cs_source.html#l00161">161</a> of file <a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerWidget_8cs_source.html#l00006">OnInit()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerWidget_8cs_source.html">LayerWidget.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerWidget.html">LayerWidget</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

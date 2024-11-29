@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTaskWater.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -728,7 +748,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a0fc638accd60819daab652193aad04ca">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00039">39</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab6f2691fb572e7b2d606e3a30f259ef3" name="ab6f2691fb572e7b2d606e3a30f259ef3"></a>
@@ -757,6 +780,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00034">34</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTaskWater.html">TaskWater</a>.<a class="code hl_function" href="classTaskWater.html#a2f97a8d4aa4e543934421f25d5eef21b">ShouldWater</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>) &amp;&amp; this.<a class="code hl_function" href="classTaskWater.html#a95d18a943f252f1cc0949df0346a433d">IsWaterCanValid</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassAct_html_a87d86f3edab9b6107a74d29921b81d32"><div class="ttname"><a href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">Act.TP</a></div><div class="ttdeci">static Point TP</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00560">Act.2.cs:560</a></div></div>
+<div class="ttc" id="aclassTaskWater_html"><div class="ttname"><a href="classTaskWater.html">TaskWater</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00004">TaskWater.cs:5</a></div></div>
+<div class="ttc" id="aclassTaskWater_html_a2f97a8d4aa4e543934421f25d5eef21b"><div class="ttname"><a href="classTaskWater.html#a2f97a8d4aa4e543934421f25d5eef21b">TaskWater.ShouldWater</a></div><div class="ttdeci">static bool ShouldWater(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00110">TaskWater.cs:110</a></div></div>
+<div class="ttc" id="aclassTaskWater_html_a95d18a943f252f1cc0949df0346a433d"><div class="ttname"><a href="classTaskWater.html#a95d18a943f252f1cc0949df0346a433d">TaskWater.IsWaterCanValid</a></div><div class="ttdeci">bool IsWaterCanValid(bool msg=true)</div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00137">TaskWater.cs:137</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskWater_8cs_source.html#l00137">IsWaterCanValid()</a>, <a class="el" href="TaskWater_8cs_source.html#l00110">ShouldWater()</a>, and <a class="el" href="Act_82_8cs_source.html#l00560">Act.TP</a>.</p>
 
 </div>
 </div>
@@ -787,6 +820,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAct.html#ad78fda455786213d477bf3acfd262968">Act</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00025">25</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTaskWater.html#abad46d70484358885eac67c9f1aeac70">dest</a> == <span class="keyword">null</span> || !this.<a class="code hl_variable" href="classTaskWater.html#abad46d70484358885eac67c9f1aeac70">dest</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">HasFire</a>)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> base.GetText(str);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;TaskWaterFire&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassCell_html_aaedd016b01dc09d12c3c5737d22caa84"><div class="ttname"><a href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">Cell.HasFire</a></div><div class="ttdeci">bool HasFire</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00641">Cell.cs:642</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassTaskWater_html_abad46d70484358885eac67c9f1aeac70"><div class="ttname"><a href="classTaskWater.html#abad46d70484358885eac67c9f1aeac70">TaskWater.dest</a></div><div class="ttdeci">Point dest</div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00160">TaskWater.cs:160</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="TaskWater_8cs_source.html#l00160">dest</a>, and <a class="el" href="Cell_8cs_source.html#l00642">Cell.HasFire</a>.</p>
 
 </div>
 </div>
@@ -815,6 +860,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00137">137</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">bool</span> flag = this.waterCan != <span class="keyword">null</span> &amp;&amp; this.waterCan.owner.c_charges &gt; 0;</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span> (!flag &amp;&amp; msg)</div>
+<div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;water_deplete&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> flag;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskWater_8cs_source.html#l00034">CanPerform()</a>, and <a class="el" href="TaskWater_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -842,6 +901,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00147">147</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        List&lt;Point&gt; list = <span class="keyword">new</span> List&lt;Point&gt;();</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a564c0140fa92afc06984600614bf2b7c">ForeachPoint</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classTaskWater.html">TaskWater</a>.<a class="code hl_function" href="classTaskWater.html#a2f97a8d4aa4e543934421f25d5eef21b">ShouldWater</a>(p))</div>
+<div class="line"><span class="lineno">  153</span>            {</div>
+<div class="line"><span class="lineno">  154</span>                list.Add(p.Copy());</div>
+<div class="line"><span class="lineno">  155</span>            }</div>
+<div class="line"><span class="lineno">  156</span>        });</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a564c0140fa92afc06984600614bf2b7c"><div class="ttname"><a href="classMapBounds.html#a564c0140fa92afc06984600614bf2b7c">MapBounds.ForeachPoint</a></div><div class="ttdeci">void ForeachPoint(Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00292">MapBounds.cs:292</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Map_8cs_source.html#l02857">Map.bounds</a>, <a class="el" href="MapBounds_8cs_source.html#l00292">MapBounds.ForeachPoint()</a>, and <a class="el" href="TaskWater_8cs_source.html#l00110">ShouldWater()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskWater_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -871,6 +950,93 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00044">44</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        this.dest = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(this.<a class="code hl_variable" href="classTaskWater.html#abad46d70484358885eac67c9f1aeac70">dest</a>);</div>
+<div class="line"><span class="lineno">   47</span>        List&lt;Point&gt; list = this.<a class="code hl_function" href="classTaskWater.html#ab8a07cdaa1296a39974c63e37655765a">ListPoints</a>();</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_class" href="classTaskWater.html">TaskWater</a>.&lt;&gt;c__DisplayClass6_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classTaskWater.html">TaskWater</a>.&lt;&gt;c__DisplayClass6_0();</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>            list.Sort((<a class="code hl_class" href="classPoint.html">Point</a> a, <a class="code hl_class" href="classPoint.html">Point</a> b) =&gt; a.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<span class="keyword">this</span>.dest) - b.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<span class="keyword">this</span>.dest));</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="classPoint.html">Point</a> p = list[0];</div>
+<div class="line"><span class="lineno">   57</span>            this.<a class="code hl_variable" href="classTaskWater.html#abad46d70484358885eac67c9f1aeac70">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p);</div>
+<div class="line"><span class="lineno">   58</span>            list.RemoveAt(0);</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classTaskWater.html">TaskWater</a>.<a class="code hl_function" href="classTaskWater.html#a2f97a8d4aa4e543934421f25d5eef21b">ShouldWater</a>(p))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTaskWater.html#a95d18a943f252f1cc0949df0346a433d">IsWaterCanValid</a>(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTask.html#a79c3640290766cf28e62340d96a3366f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   64</span>                }</div>
+<div class="line"><span class="lineno">   65</span>                CS$&lt;&gt;8__locals1.fail = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>                yield <span class="keywordflow">return</span> base.DoGoto(p, 1, <span class="keyword">false</span>, delegate()</div>
+<div class="line"><span class="lineno">   67</span>                {</div>
+<div class="line"><span class="lineno">   68</span>                    CS$&lt;&gt;8__locals1.fail = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
+<div class="line"><span class="lineno">   70</span>                });</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (!CS$&lt;&gt;8__locals1.fail)</div>
+<div class="line"><span class="lineno">   72</span>                {</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTaskWater.html#a95d18a943f252f1cc0949df0346a433d">IsWaterCanValid</a>(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   74</span>                    {</div>
+<div class="line"><span class="lineno">   75</span>                        yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTask.html#a79c3640290766cf28e62340d96a3366f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   76</span>                    }</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classTaskWater.html">TaskWater</a>.<a class="code hl_function" href="classTaskWater.html#a2f97a8d4aa4e543934421f25d5eef21b">ShouldWater</a>(p))</div>
+<div class="line"><span class="lineno">   78</span>                    {</div>
+<div class="line"><span class="lineno">   79</span>                        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(<span class="keyword">this</span>.dest) &gt; 1)</div>
+<div class="line"><span class="lineno">   80</span>                        {</div>
+<div class="line"><span class="lineno">   81</span>                            yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTask.html#a79c3640290766cf28e62340d96a3366f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   82</span>                        }</div>
+<div class="line"><span class="lineno">   83</span>                        p.cell.isWatered = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   84</span>                        <span class="keywordflow">if</span> (!p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">blocked</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0)</div>
+<div class="line"><span class="lineno">   85</span>                        {</div>
+<div class="line"><span class="lineno">   86</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a4adc1043f8ef8e34b1e6af45f88ba3f7">SetLiquid</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, 1, 1);</div>
+<div class="line"><span class="lineno">   87</span>                        }</div>
+<div class="line"><span class="lineno">   88</span>                        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">HasFire</a>)</div>
+<div class="line"><span class="lineno">   89</span>                        {</div>
+<div class="line"><span class="lineno">   90</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a73968ef967ca71ef55e86dfe5f0d61a0">ModFire</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, -50);</div>
+<div class="line"><span class="lineno">   91</span>                        }</div>
+<div class="line"><span class="lineno">   92</span>                        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;water_farm&quot;</span>, 1f, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   93</span>                        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;water_farm&quot;</span>, this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#a9d426016ed41725165ee710931fe30a7">GetFloorName</a>(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   94</span>                        this.<a class="code hl_property" href="classTaskWater.html#a3756e062b1a512a820dadd9d59a68c55">waterCan</a>.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa898e2009ea962ec5740e49ddef63b92">ModCharge</a>(-1, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   95</span>                        this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(286, 15);</div>
+<div class="line"><span class="lineno">   96</span>                        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTaskWater.html#a95d18a943f252f1cc0949df0346a433d">IsWaterCanValid</a>(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   97</span>                        {</div>
+<div class="line"><span class="lineno">   98</span>                            yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classTask.html#a79c3640290766cf28e62340d96a3366f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   99</span>                        }</div>
+<div class="line"><span class="lineno">  100</span>                        yield <span class="keywordflow">return</span> base.KeepRunning();</div>
+<div class="line"><span class="lineno">  101</span>                        CS$&lt;&gt;8__locals1 = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  102</span>                        p = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  103</span>                    }</div>
+<div class="line"><span class="lineno">  104</span>                }</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclassAIAct_html"><div class="ttname"><a href="classAIAct.html">AIAct</a></div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00005">AIAct.cs:6</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00727">AIAct.cs:728</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1WeightCell_html_a2c5ee336064b309bc73a1db233757553"><div class="ttname"><a href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">Algorithms.WeightCell.blocked</a></div><div class="ttdeci">bool blocked</div><div class="ttdef"><b>Definition:</b> <a href="WeightCell_8cs_source.html#l00012">WeightCell.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05521">Card.cs:5521</a></div></div>
+<div class="ttc" id="aclassCard_html_aa898e2009ea962ec5740e49ddef63b92"><div class="ttname"><a href="classCard.html#aa898e2009ea962ec5740e49ddef63b92">Card.ModCharge</a></div><div class="ttdeci">void ModCharge(int a, bool destroy=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03781">Card.cs:3781</a></div></div>
+<div class="ttc" id="aclassCard_html_abd6b223dc61955d492fc2c2e17f3cf61"><div class="ttname"><a href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Card.Dist</a></div><div class="ttdeci">int Dist(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07008">Card.cs:7008</a></div></div>
+<div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02646">Card.cs:2646</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06175">Card.cs:6175</a></div></div>
+<div class="ttc" id="aclassCell_html_a9d426016ed41725165ee710931fe30a7"><div class="ttname"><a href="classCell.html#a9d426016ed41725165ee710931fe30a7">Cell.GetFloorName</a></div><div class="ttdeci">string GetFloorName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01621">Cell.cs:1621</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassMap_html_a4adc1043f8ef8e34b1e6af45f88ba3f7"><div class="ttname"><a href="classMap.html#a4adc1043f8ef8e34b1e6af45f88ba3f7">Map.SetLiquid</a></div><div class="ttdeci">void SetLiquid(int x, int z, CellEffect effect=null)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01441">Map.cs:1441</a></div></div>
+<div class="ttc" id="aclassMap_html_a73968ef967ca71ef55e86dfe5f0d61a0"><div class="ttname"><a href="classMap.html#a73968ef967ca71ef55e86dfe5f0d61a0">Map.ModFire</a></div><div class="ttdeci">void ModFire(int x, int z, int amount)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01142">Map.cs:1142</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01054">Point.cs:1054</a></div></div>
+<div class="ttc" id="aclassTaskWater_html_a3756e062b1a512a820dadd9d59a68c55"><div class="ttname"><a href="classTaskWater.html#a3756e062b1a512a820dadd9d59a68c55">TaskWater.waterCan</a></div><div class="ttdeci">TraitToolWaterCan waterCan</div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00006">TaskWater.cs:7</a></div></div>
+<div class="ttc" id="aclassTaskWater_html_ab8a07cdaa1296a39974c63e37655765a"><div class="ttname"><a href="classTaskWater.html#ab8a07cdaa1296a39974c63e37655765a">TaskWater.ListPoints</a></div><div class="ttdeci">List&lt; Point &gt; ListPoints()</div><div class="ttdef"><b>Definition:</b> <a href="TaskWater_8cs_source.html#l00147">TaskWater.cs:147</a></div></div>
+<div class="ttc" id="aclassTask_html_a79c3640290766cf28e62340d96a3366f"><div class="ttname"><a href="classTask.html#a79c3640290766cf28e62340d96a3366f">Task.Cancel</a></div><div class="ttdeci">override AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00052">Task.cs:52</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="WeightCell_8cs_source.html#l00012">Algorithms.WeightCell.blocked</a>, <a class="el" href="Task_8cs_source.html#l00052">Task.Cancel()</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="TaskWater_8cs_source.html#l00160">dest</a>, <a class="el" href="Card_8cs_source.html#l07008">Card.Dist()</a>, <a class="el" href="Point_8cs_source.html#l01054">Point.Distance()</a>, <a class="el" href="Cell_8cs_source.html#l01621">Cell.GetFloorName()</a>, <a class="el" href="Cell_8cs_source.html#l00642">Cell.HasFire</a>, <a class="el" href="TaskWater_8cs_source.html#l00137">IsWaterCanValid()</a>, <a class="el" href="TaskWater_8cs_source.html#l00147">ListPoints()</a>, <a class="el" href="Card_8cs_source.html#l03781">Card.ModCharge()</a>, <a class="el" href="Card_8cs_source.html#l02646">Card.ModExp()</a>, <a class="el" href="Map_8cs_source.html#l01142">Map.ModFire()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l05521">Card.PlaySound()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l06175">Card.Say()</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Map_8cs_source.html#l01441">Map.SetLiquid()</a>, <a class="el" href="TaskWater_8cs_source.html#l00110">ShouldWater()</a>, <a class="el" href="TaskWater_8cs_source.html#l00007">waterCan</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -899,6 +1065,43 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00110">110</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">HasFire</a>)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a878ad44220309e5d88026f9704f3ed7c">isWatered</a> || cell.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a> || cell.<a class="code hl_property" href="classCell.html#a1157f01db73e85fd317f0fc91476199f">IsSnowTile</a> || !p.<a class="code hl_property" href="classPoint.html#a758f4e0fc35d1bbf2d960d5910f9200e">IsFarmField</a>)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a8ae6e83a67061ee373662062596013c9">detail</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keyword">using</span> (List&lt;Thing&gt;.Enumerator enumerator = p.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>.GetEnumerator())</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  126</span>                {</div>
+<div class="line"><span class="lineno">  127</span>                    <span class="keywordflow">if</span> (enumerator.Current.trait is <a class="code hl_class" href="classTraitSeed.html">TraitSeed</a>)</div>
+<div class="line"><span class="lineno">  128</span>                    {</div>
+<div class="line"><span class="lineno">  129</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  130</span>                    }</div>
+<div class="line"><span class="lineno">  131</span>                }</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> p.growth != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a1157f01db73e85fd317f0fc91476199f"><div class="ttname"><a href="classCell.html#a1157f01db73e85fd317f0fc91476199f">Cell.IsSnowTile</a></div><div class="ttdeci">bool IsSnowTile</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00725">Cell.cs:726</a></div></div>
+<div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00657">Cell.cs:658</a></div></div>
+<div class="ttc" id="aclassCell_html_a878ad44220309e5d88026f9704f3ed7c"><div class="ttname"><a href="classCell.html#a878ad44220309e5d88026f9704f3ed7c">Cell.isWatered</a></div><div class="ttdeci">bool isWatered</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00284">Cell.cs:285</a></div></div>
+<div class="ttc" id="aclassCell_html_a8ae6e83a67061ee373662062596013c9"><div class="ttname"><a href="classCell.html#a8ae6e83a67061ee373662062596013c9">Cell.detail</a></div><div class="ttdeci">CellDetail detail</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01874">Cell.cs:1874</a></div></div>
+<div class="ttc" id="aclassPoint_html_a683b8213ae7243d6f8531fc0e90e70e7"><div class="ttname"><a href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Point.Things</a></div><div class="ttdeci">List&lt; Thing &gt; Things</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00456">Point.cs:457</a></div></div>
+<div class="ttc" id="aclassPoint_html_a758f4e0fc35d1bbf2d960d5910f9200e"><div class="ttname"><a href="classPoint.html#a758f4e0fc35d1bbf2d960d5910f9200e">Point.IsFarmField</a></div><div class="ttdeci">bool IsFarmField</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00209">Point.cs:210</a></div></div>
+<div class="ttc" id="aclassTraitSeed_html"><div class="ttname"><a href="classTraitSeed.html">TraitSeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSeed_8cs_source.html#l00006">TraitSeed.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l01874">Cell.detail</a>, <a class="el" href="Cell_8cs_source.html#l00642">Cell.HasFire</a>, <a class="el" href="Point_8cs_source.html#l00210">Point.IsFarmField</a>, <a class="el" href="Cell_8cs_source.html#l00726">Cell.IsSnowTile</a>, <a class="el" href="Cell_8cs_source.html#l00658">Cell.IsTopWater</a>, <a class="el" href="Cell_8cs_source.html#l00285">Cell.isWatered</a>, and <a class="el" href="Point_8cs_source.html#l00457">Point.Things</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskWater_8cs_source.html#l00034">CanPerform()</a>, <a class="el" href="TaskWater_8cs_source.html#l00147">ListPoints()</a>, and <a class="el" href="TaskWater_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -916,6 +1119,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00160">160</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskWater_8cs_source.html#l00025">GetText()</a>, and <a class="el" href="TaskWater_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -941,6 +1146,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TaskWater_8cs_source.html#l00006">6</a> of file <a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara = this.owner ?? <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>;</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordtype">object</span> obj;</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (chara == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                obj = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   15</span>            }</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                <a class="code hl_class" href="classCard.html">Card</a> held = chara.<a class="code hl_variable" href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">held</a>;</div>
+<div class="line"><span class="lineno">   19</span>                obj = ((held != <span class="keyword">null</span>) ? held.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   20</span>            }</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> obj as <a class="code hl_class" href="classTraitToolWaterCan.html">TraitToolWaterCan</a>;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00556">Act.2.cs:556</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a1a07bdf34edac20229f9c2ac895e83f8"><div class="ttname"><a href="classChara.html#a1a07bdf34edac20229f9c2ac895e83f8">Chara.held</a></div><div class="ttdeci">Card held</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09386">Chara.cs:9386</a></div></div>
+<div class="ttc" id="aclassTraitToolWaterCan_html"><div class="ttname"><a href="classTraitToolWaterCan.html">TraitToolWaterCan</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitToolWaterCan_8cs_source.html#l00003">TraitToolWaterCan.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TaskWater_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -948,9 +1178,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="TaskWater_8cs_source.html">TaskWater.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTaskWater.html">TaskWater</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

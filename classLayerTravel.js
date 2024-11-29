@@ -1,0 +1,25 @@
+var classLayerTravel =
+[
+    [ "GetSortVal", "classLayerTravel.html#a68e365e8e7447d8d0d5334462e5cefca", null ],
+    [ "GetTravelFood", "classLayerTravel.html#a95152c94bb03ac1e8c8f15031c85544b", null ],
+    [ "GetTravelHours", "classLayerTravel.html#a3cb745245b811d416c8165f090ca69ac", null ],
+    [ "OnInit", "classLayerTravel.html#af365196ec995e80b8ccf6f587c65d1b2", null ],
+    [ "OnKill", "classLayerTravel.html#a9a53064d2ad1908603d00800ccf6aa81", null ],
+    [ "OnSwitchContent", "classLayerTravel.html#a707c5048bcdf9a6b9fd051542ee48e8b", null ],
+    [ "Refresh", "classLayerTravel.html#adb78d91bec3e47e4671cbdeb71eba23b", null ],
+    [ "bg", "classLayerTravel.html#a36ea10e5c23368c12f70c89c61be4c5d", null ],
+    [ "currentZone", "classLayerTravel.html#a01c714f046093f6e45e55b31a76b3c1d", null ],
+    [ "easeFade", "classLayerTravel.html#a84c6c38e265cb064bcc31a75c61703e1", null ],
+    [ "easeZoom", "classLayerTravel.html#acb4f6727df663392e7d2734941859383", null ],
+    [ "endZoom", "classLayerTravel.html#a2fbf5ee7ab2a9a6383f5e02b516289d4", null ],
+    [ "fadeAlpha", "classLayerTravel.html#a9a57bda1f2e4276084eeb45243e6de55", null ],
+    [ "fadeTime", "classLayerTravel.html#ab290d790647b262dce5e05fcbd0baf2d", null ],
+    [ "highlightZone", "classLayerTravel.html#a6b6b88516bd0fa1a7bfa74b25cd25f19", null ],
+    [ "list", "classLayerTravel.html#a140cfbe4121aa585a9c84b79ad260ea7", null ],
+    [ "posHighlight", "classLayerTravel.html#aa244fb09fa6c26ab4ac1b529f210576c", null ],
+    [ "startZoom", "classLayerTravel.html#ac8858356b2cd8e91070bbdfc233f6609", null ],
+    [ "timeZoom", "classLayerTravel.html#ae3175394351130486ec48288e55c1db1", null ],
+    [ "useBG", "classLayerTravel.html#a23b589ba194df5f266ce839a7b905b45", null ],
+    [ "useZoom", "classLayerTravel.html#a5cd4d51d098301ff41b36dd0f0869658", null ],
+    [ "blockWidgetClick", "classLayerTravel.html#a7699d76da078b5d70ce0f684dce0db54", null ]
+];

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classMapConfig.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -254,7 +274,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00019">19</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classFowProfile.html">FowProfile</a>[] array = Resources.LoadAll&lt;<a class="code hl_class" href="classFowProfile.html">FowProfile</a>&gt;(<span class="stringliteral">&quot;Scene/Profile/Fow/&quot;</span>);</div>
+<div class="line"><span class="lineno">   22</span>        List&lt;string&gt; list = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classFowProfile.html">FowProfile</a> fowProfile <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            list.Add(fowProfile.name.Replace(<span class="stringliteral">&quot;FowProfile_&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassFowProfile_html"><div class="ttname"><a href="classFowProfile.html">FowProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="FowProfile_8cs_source.html#l00004">FowProfile.cs:5</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b918efc6f2904c0aea7ba101377d278" name="a7b918efc6f2904c0aea7ba101377d278"></a>
@@ -281,7 +311,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00008">8</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_class" href="classSceneProfile.html">SceneProfile</a>[] array = Resources.LoadAll&lt;<a class="code hl_class" href="classSceneProfile.html">SceneProfile</a>&gt;(<span class="stringliteral">&quot;Scene/Profile/&quot;</span>);</div>
+<div class="line"><span class="lineno">   11</span>        List&lt;string&gt; list = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSceneProfile.html">SceneProfile</a> sceneProfile <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            list.Add(sceneProfile.name.Replace(<span class="stringliteral">&quot;SceneProfile_&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassSceneProfile_html"><div class="ttname"><a href="classSceneProfile.html">SceneProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="SceneProfile_8cs_source.html#l00005">SceneProfile.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -299,6 +339,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00097">97</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00658">Scene.RefreshBG()</a>.</p>
+
 </div>
 </div>
 <a id="a7eb4f0bf0ea58a1e68f76ff569cfccf5" name="a7eb4f0bf0ea58a1e68f76ff569cfccf5"></a>
@@ -314,6 +356,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00091">91</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00017">TraitMapBoard.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -347,6 +391,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00073">73</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LiquidProfile_8cs_source.html#l00028">LiquidProfile.ApplyColor()</a>, <a class="el" href="LiquidProfile_8cs_source.html#l00034">LiquidProfile.g__Set()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00102">WidgetSceneCustomizer.RefreshColor()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00080">WidgetSceneCustomizer.ShowPicker()</a>.</p>
+
 </div>
 </div>
 <a id="a89a476e6fee05fbf4f0fa14a9ccf37c7" name="a89a476e6fee05fbf4f0fa14a9ccf37c7"></a>
@@ -362,6 +408,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00118">118</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00017">TraitMapBoard.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -379,6 +427,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00121">121</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00017">TraitMapBoard.TrySetAct()</a>.</p>
+
 </div>
 </div>
 <a id="afa57b3a79ccb9e2193a323c35194de69" name="afa57b3a79ccb9e2193a323c35194de69"></a>
@@ -394,6 +444,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00103">103</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l01622">Zone.GetSpawnPos()</a>.</p>
 
 </div>
 </div>
@@ -443,6 +495,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00100">100</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, and <a class="el" href="GameScreenElona_8cs_source.html#l00122">GameScreenElona.RefreshWeather()</a>.</p>
+
 </div>
 </div>
 <a id="ab2c2f68c1394ee35c009ecc9dfe86a92" name="ab2c2f68c1394ee35c009ecc9dfe86a92"></a>
@@ -491,6 +545,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00055">55</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+
 </div>
 </div>
 <a id="a1cd098e7a5302ad9a98740be016825b7" name="a1cd098e7a5302ad9a98740be016825b7"></a>
@@ -507,6 +563,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00076">76</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a158c5cefcdc28c505b0ec583da8f0865" name="a158c5cefcdc28c505b0ec583da8f0865"></a>
@@ -522,6 +580,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00115">115</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00627">Scene.UpdateTimeRatio()</a>.</p>
 
 </div>
 </div>
@@ -555,6 +615,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00034">34</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l00135">Map.SetZone()</a>.</p>
+
 </div>
 </div>
 <a id="a693e975ab77ef8bc79406271e58d8e6b" name="a693e975ab77ef8bc79406271e58d8e6b"></a>
@@ -570,6 +632,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00037">37</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00102">WidgetSceneCustomizer.RefreshColor()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00080">WidgetSceneCustomizer.ShowPicker()</a>.</p>
 
 </div>
 </div>
@@ -587,6 +651,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00040">40</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>.</p>
+
 </div>
 </div>
 <a id="ab0b6210b8712e8ac5c89f4063ce79c9e" name="ab0b6210b8712e8ac5c89f4063ce79c9e"></a>
@@ -602,6 +668,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00043">43</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -619,6 +687,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00031">31</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, <a class="el" href="ZoneInspector_8cs_source.html#l00063">ZoneInspector.RefreshScreen()</a>, and <a class="el" href="Map_8cs_source.html#l00135">Map.SetZone()</a>.</p>
+
 </div>
 </div>
 <a id="ab157a47c154baf35da98df24b9a12983" name="ab157a47c154baf35da98df24b9a12983"></a>
@@ -634,6 +704,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00046">46</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>.</p>
 
 </div>
 </div>
@@ -651,6 +723,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00052">52</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>, <a class="el" href="GameScreen_8cs_source.html#l00014">GameScreen.OnActivate()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.RefreshAll()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00453">BaseGameScreen.RefreshSky()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00354">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00472">BaseGameScreen.RefreshWeather()</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00020">GameUpdater.Update100ms()</a>.</p>
+
 </div>
 </div>
 <a id="ad716822ac2639b91b198c8b9836bae1b" name="ad716822ac2639b91b198c8b9836bae1b"></a>
@@ -666,6 +740,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00079">79</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -683,6 +759,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00082">82</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>.</p>
+
 </div>
 </div>
 <a id="a6b89a023c62dd032d14b08b95e72b5aa" name="a6b89a023c62dd032d14b08b95e72b5aa"></a>
@@ -698,6 +776,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00085">85</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00009">WidgetSceneCustomizer.OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -763,6 +843,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00094">94</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00453">BaseGameScreen.RefreshSky()</a>.</p>
+
 </div>
 </div>
 <a id="a6975da84308f50dfa79dfa41abea2bb5" name="a6975da84308f50dfa79dfa41abea2bb5"></a>
@@ -779,15 +861,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MapConfig_8cs_source.html#l00112">112</a> of file <a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00017">TraitMapBoard.TrySetAct()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="MapConfig_8cs_source.html">MapConfig.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classMapConfig.html">MapConfig</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

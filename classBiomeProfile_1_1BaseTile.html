@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classBiomeProfile_1_1BaseTile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1BaseTile.html">BaseTile</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -178,7 +194,15 @@ Protected Member Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00354">354</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  355</span>        {</div>
+<div class="line"><span class="lineno">  356</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a5fca8c46b4c8566cc752d66081c7312a">Random8</a>,</div>
+<div class="line"><span class="lineno">  357</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a9cd6aac250662a45dd7b0427135598c6">RandomSqrt8</a>,</div>
+<div class="line"><span class="lineno">  358</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a7f6e151dd77e242641eb839f53dd7f45">RandomSqrtSqrt8</a></div>
+<div class="line"><span class="lineno">  359</span>        }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a8613aa980ebd9c41ba6baa939d934939a5fca8c46b4c8566cc752d66081c7312a"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a5fca8c46b4c8566cc752d66081c7312a">BiomeProfile.BaseTile.DirType.Random8</a></div><div class="ttdeci">@ Random8</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a8613aa980ebd9c41ba6baa939d934939a7f6e151dd77e242641eb839f53dd7f45"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a7f6e151dd77e242641eb839f53dd7f45">BiomeProfile.BaseTile.DirType.RandomSqrtSqrt8</a></div><div class="ttdeci">@ RandomSqrtSqrt8</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a8613aa980ebd9c41ba6baa939d934939a9cd6aac250662a45dd7b0427135598c6"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a8613aa980ebd9c41ba6baa939d934939a9cd6aac250662a45dd7b0427135598c6">BiomeProfile.BaseTile.DirType.RandomSqrt8</a></div><div class="ttdeci">@ RandomSqrt8</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6daec7355470f7f891b5da77172de69b" name="a6daec7355470f7f891b5da77172de69b"></a>
@@ -201,7 +225,19 @@ Protected Member Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00345">345</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  346</span>        {</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><span class="lineno">  348</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69bad734cb933615f57b49107d1eb7b78414">Rnd5</a> = 10,</div>
+<div class="line"><span class="lineno">  349</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba9f7c75dad32efbda7f641c5751b9f0ab">Rnd10</a>,</div>
+<div class="line"><span class="lineno">  350</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69baa238cc0aa3616f3eff3b548b626b5985">Rnd20</a>,</div>
+<div class="line"><span class="lineno">  351</span>            <a class="code hl_enumvalue" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba57391192dfa1f247ad015a0fe2eca48e">Pattern</a> = 20</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69ba57391192dfa1f247ad015a0fe2eca48e"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba57391192dfa1f247ad015a0fe2eca48e">BiomeProfile.BaseTile.SubType.Pattern</a></div><div class="ttdeci">@ Pattern</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69ba6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba6adf97f83acf6453d4a6a4b1070f3754">BiomeProfile.BaseTile.SubType.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69ba9f7c75dad32efbda7f641c5751b9f0ab"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba9f7c75dad32efbda7f641c5751b9f0ab">BiomeProfile.BaseTile.SubType.Rnd10</a></div><div class="ttdeci">@ Rnd10</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69baa238cc0aa3616f3eff3b548b626b5985"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69baa238cc0aa3616f3eff3b548b626b5985">BiomeProfile.BaseTile.SubType.Rnd20</a></div><div class="ttdeci">@ Rnd20</div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a6daec7355470f7f891b5da77172de69bad734cb933615f57b49107d1eb7b78414"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69bad734cb933615f57b49107d1eb7b78414">BiomeProfile.BaseTile.SubType.Rnd5</a></div><div class="ttdeci">@ Rnd5</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -230,6 +266,32 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00261">261</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            <a class="code hl_class" href="classSourceBlock_1_1Row.html">SourceBlock.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.rows.First((<a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_class" href="classSourceBlock_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  265</span>            {</div>
+<div class="line"><span class="lineno">  266</span>                <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  267</span>                {</div>
+<div class="line"><span class="lineno">  268</span>                    row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>.ToString(),</div>
+<div class="line"><span class="lineno">  269</span>                    <span class="stringliteral">&quot;-&quot;</span>,</div>
+<div class="line"><span class="lineno">  270</span>                    row.<a class="code hl_variable" href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">alias</a>,</div>
+<div class="line"><span class="lineno">  271</span>                    <span class="stringliteral">&quot;(&quot;</span>,</div>
+<div class="line"><span class="lineno">  272</span>                    row.<a class="code hl_variable" href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">name_JP</a>,</div>
+<div class="line"><span class="lineno">  273</span>                    <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><span class="lineno">  274</span>                });</div>
+<div class="line"><span class="lineno">  275</span>            }</div>
+<div class="line"><span class="lineno">  276</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  277</span>        }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a970c1867feff8e3f5a85aeab6af85c42"><div class="ttname"><a href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">EClass.editorSources</a></div><div class="ttdeci">static SourceManager editorSources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00151">EClass.cs:152</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_afc7861d8294f1449cd46eeaa1f4ccc10"><div class="ttname"><a href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">RenderRow.name_JP</a></div><div class="ttdeci">string name_JP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00461">RenderRow.cs:461</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html"><div class="ttname"><a href="classSourceBlock_1_1Row.html">SourceBlock.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00107">SourceBlock.cs:108</a></div></div>
+<div class="ttc" id="aclassSourceBlock_html"><div class="ttname"><a href="classSourceBlock.html">SourceBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00004">SourceBlock.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a6bbe3e57f372109d0661eb0872cf590e"><div class="ttname"><a href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">SourceManager.blocks</a></div><div class="ttdeci">SourceBlock blocks</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00177">SourceManager.cs:177</a></div></div>
+<div class="ttc" id="aclassTileRow_html_aa04ce5718657608d45e983e9a3798fc6"><div class="ttname"><a href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">TileRow.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00023">TileRow.cs:23</a></div></div>
+<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00019">TileRow.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00023">TileRow.alias</a>, <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, <a class="el" href="TileRow_8cs_source.html#l00019">TileRow.id</a>, and <a class="el" href="RenderRow_8cs_source.html#l00461">RenderRow.name_JP</a>.</p>
 
 </div>
 </div>
@@ -258,6 +320,27 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00233">233</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>        {</div>
+<div class="line"><span class="lineno">  235</span>            <a class="code hl_class" href="classSourceFloor_1_1Row.html">SourceFloor.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.rows.First((<a class="code hl_class" href="classSourceFloor.html">SourceFloor</a>.<a class="code hl_class" href="classSourceFloor_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  237</span>            {</div>
+<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  239</span>                {</div>
+<div class="line"><span class="lineno">  240</span>                    row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>.ToString(),</div>
+<div class="line"><span class="lineno">  241</span>                    <span class="stringliteral">&quot;-&quot;</span>,</div>
+<div class="line"><span class="lineno">  242</span>                    row.<a class="code hl_variable" href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">alias</a>,</div>
+<div class="line"><span class="lineno">  243</span>                    <span class="stringliteral">&quot;(&quot;</span>,</div>
+<div class="line"><span class="lineno">  244</span>                    row.<a class="code hl_variable" href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">name_JP</a>,</div>
+<div class="line"><span class="lineno">  245</span>                    <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><span class="lineno">  246</span>                });</div>
+<div class="line"><span class="lineno">  247</span>            }</div>
+<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  249</span>        }</div>
+<div class="ttc" id="aclassSourceFloor_1_1Row_html"><div class="ttname"><a href="classSourceFloor_1_1Row.html">SourceFloor.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00114">SourceFloor.cs:115</a></div></div>
+<div class="ttc" id="aclassSourceFloor_html"><div class="ttname"><a href="classSourceFloor.html">SourceFloor</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00004">SourceFloor.cs:5</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_af0401efa5aae8bd83979a2a12bad1893"><div class="ttname"><a href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">SourceManager.floors</a></div><div class="ttdeci">SourceFloor floors</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00179">SourceManager.cs:179</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00023">TileRow.alias</a>, <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, <a class="el" href="SourceManager_8cs_source.html#l00179">SourceManager.floors</a>, <a class="el" href="TileRow_8cs_source.html#l00019">TileRow.id</a>, and <a class="el" href="RenderRow_8cs_source.html#l00461">RenderRow.name_JP</a>.</p>
 
 </div>
 </div>
@@ -286,6 +369,34 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00289">289</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  290</span>        {</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == -1)</div>
+<div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>                <span class="keywordtype">id</span> = 0;</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.First((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  297</span>            {</div>
+<div class="line"><span class="lineno">  298</span>                <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  299</span>                {</div>
+<div class="line"><span class="lineno">  300</span>                    row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">id</a>.ToString(),</div>
+<div class="line"><span class="lineno">  301</span>                    <span class="stringliteral">&quot;-&quot;</span>,</div>
+<div class="line"><span class="lineno">  302</span>                    row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">alias</a>,</div>
+<div class="line"><span class="lineno">  303</span>                    <span class="stringliteral">&quot;(&quot;</span>,</div>
+<div class="line"><span class="lineno">  304</span>                    row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a6698dae0ce8ddd500ae5e685196142a0">name_JP</a>,</div>
+<div class="line"><span class="lineno">  305</span>                    <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><span class="lineno">  306</span>                });</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00173">SourceManager.cs:173</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00136">SourceMaterial.cs:137</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a28c5f8719fb3c00b9bf1a2c131008c5e"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e">SourceMaterial.Row.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00373">SourceMaterial.cs:373</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_a6698dae0ce8ddd500ae5e685196142a0"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a6698dae0ce8ddd500ae5e685196142a0">SourceMaterial.Row.name_JP</a></div><div class="ttdeci">string name_JP</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00375">SourceMaterial.cs:375</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_1_1Row_html_af25f7aab4d97ca55b5ee305f82ccf6c8"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">SourceMaterial.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00371">SourceMaterial.cs:371</a></div></div>
+<div class="ttc" id="aclassSourceMaterial_html"><div class="ttname"><a href="classSourceMaterial.html">SourceMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00006">SourceMaterial.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceMaterial_8cs_source.html#l00373">SourceMaterial.Row.alias</a>, <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00371">SourceMaterial.Row.id</a>, <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00375">SourceMaterial.Row.name_JP</a>.</p>
 
 </div>
 </div>
@@ -314,6 +425,27 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00205">205</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_class" href="classSourceObj_1_1Row.html">SourceObj.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.rows.First((<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  209</span>            {</div>
+<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><span class="lineno">  211</span>                {</div>
+<div class="line"><span class="lineno">  212</span>                    row.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>.ToString(),</div>
+<div class="line"><span class="lineno">  213</span>                    <span class="stringliteral">&quot;-&quot;</span>,</div>
+<div class="line"><span class="lineno">  214</span>                    row.<a class="code hl_variable" href="classTileRow.html#aa04ce5718657608d45e983e9a3798fc6">alias</a>,</div>
+<div class="line"><span class="lineno">  215</span>                    <span class="stringliteral">&quot;(&quot;</span>,</div>
+<div class="line"><span class="lineno">  216</span>                    row.<a class="code hl_variable" href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">name_JP</a>,</div>
+<div class="line"><span class="lineno">  217</span>                    <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><span class="lineno">  218</span>                });</div>
+<div class="line"><span class="lineno">  219</span>            }</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="ttc" id="aclassSourceManager_html_a38f1a362e2021aef4516d1b34101d179"><div class="ttname"><a href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">SourceManager.objs</a></div><div class="ttdeci">SourceObj objs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00183">SourceManager.cs:183</a></div></div>
+<div class="ttc" id="aclassSourceObj_1_1Row_html"><div class="ttname"><a href="classSourceObj_1_1Row.html">SourceObj.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00111">SourceObj.cs:112</a></div></div>
+<div class="ttc" id="aclassSourceObj_html"><div class="ttname"><a href="classSourceObj.html">SourceObj</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00004">SourceObj.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00023">TileRow.alias</a>, <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, <a class="el" href="TileRow_8cs_source.html#l00019">TileRow.id</a>, <a class="el" href="RenderRow_8cs_source.html#l00461">RenderRow.name_JP</a>, and <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.objs</a>.</p>
 
 </div>
 </div>
@@ -342,6 +474,24 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00321">321</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>        {</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty() || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.map.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  324</span>            {</div>
+<div class="line"><span class="lineno">  325</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>            <a class="code hl_class" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.rows.First((<a class="code hl_class" href="classSourceSpawnList.html">SourceSpawnList</a>.<a class="code hl_class" href="classSourceSpawnList_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                <span class="keywordflow">return</span> row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a883c531afff37f4d1ec5e9841e85912f">id</a>;</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  333</span>        }</div>
+<div class="ttc" id="aclassSourceManager_html_a56b3d59619d0a5a90bf8a31b5791a73c"><div class="ttname"><a href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">SourceManager.spawnLists</a></div><div class="ttdeci">SourceSpawnList spawnLists</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00175">SourceManager.cs:175</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00025">SourceSpawnList.cs:26</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a883c531afff37f4d1ec5e9841e85912f"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a883c531afff37f4d1ec5e9841e85912f">SourceSpawnList.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00048">SourceSpawnList.cs:48</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_html"><div class="ttname"><a href="classSourceSpawnList.html">SourceSpawnList</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00003">SourceSpawnList.cs:4</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00048">SourceSpawnList.Row.id</a>, and <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.spawnLists</a>.</p>
 
 </div>
 </div>
@@ -370,6 +520,23 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00181">181</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>        {</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty())</div>
+<div class="line"><span class="lineno">  184</span>            {</div>
+<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>            }</div>
+<div class="line"><span class="lineno">  187</span>            <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.First((<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  189</span>            {</div>
+<div class="line"><span class="lineno">  190</span>                <span class="keywordflow">return</span> row.id + <span class="stringliteral">&quot;-(&quot;</span> + row.name_JP + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00161">SourceManager.cs:161</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00099">SourceThing.cs:100</a></div></div>
+<div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>.</p>
 
 </div>
 </div>
@@ -408,6 +575,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00279">279</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>        {</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.rows.First((<a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_class" href="classSourceBlock_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">int</span>.Parse(value.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0])).id;</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, and <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>.</p>
 
 </div>
 </div>
@@ -446,6 +618,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00251">251</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.rows.First((<a class="code hl_class" href="classSourceFloor.html">SourceFloor</a>.<a class="code hl_class" href="classSourceFloor_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">int</span>.Parse(value.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0])).id;</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00179">SourceManager.floors</a>.</p>
 
 </div>
 </div>
@@ -484,6 +661,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00311">311</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  312</span>        {</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.First((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">int</span>.Parse(value.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0])).id;</div>
+<div class="line"><span class="lineno">  314</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>.</p>
 
 </div>
 </div>
@@ -522,6 +704,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00223">223</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.rows.First((<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> a) =&gt; a.id == <span class="keywordtype">int</span>.Parse(value.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0])).id;</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.objs</a>.</p>
 
 </div>
 </div>
@@ -560,6 +747,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00335">335</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  336</span>        {</div>
+<div class="line"><span class="lineno">  337</span>            <span class="keywordtype">id</span> = ((value == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;&quot;</span> : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.rows.First((<a class="code hl_class" href="classSourceSpawnList.html">SourceSpawnList</a>.<a class="code hl_class" href="classSourceSpawnList_1_1Row.html">Row</a> a) =&gt; a.id == value).<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  338</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.spawnLists</a>.</p>
 
 </div>
 </div>
@@ -598,6 +790,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00195">195</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.First((<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> a) =&gt; a.id == value.Split(<span class="charliteral">&#39;-&#39;</span>, StringSplitOptions.None)[0]).id;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>.</p>
 
 </div>
 </div>
@@ -625,6 +822,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00340">340</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>        {</div>
+<div class="line"><span class="lineno">  342</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.GetListString();</div>
+<div class="line"><span class="lineno">  343</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.spawnLists</a>.</p>
 
 </div>
 </div>
@@ -652,6 +854,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00284">284</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>        {</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e">blocks</a>.GetListString();</div>
+<div class="line"><span class="lineno">  287</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00177">SourceManager.blocks</a>, and <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>.</p>
 
 </div>
 </div>
@@ -679,6 +886,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00256">256</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  257</span>        {</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>.GetListString();</div>
+<div class="line"><span class="lineno">  259</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00179">SourceManager.floors</a>.</p>
 
 </div>
 </div>
@@ -706,6 +918,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00316">316</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  317</span>        {</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.GetListString();</div>
+<div class="line"><span class="lineno">  319</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00173">SourceManager.materials</a>.</p>
 
 </div>
 </div>
@@ -733,6 +950,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00228">228</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>        {</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.GetListString();</div>
+<div class="line"><span class="lineno">  231</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.objs</a>.</p>
 
 </div>
 </div>
@@ -760,6 +982,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00200">200</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a970c1867feff8e3f5a85aeab6af85c42">editorSources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.GetListString();</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00152">EClass.editorSources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00161">SourceManager.things</a>.</p>
 
 </div>
 </div>
@@ -767,9 +994,13 @@ Protected Member Functions</h2></td></tr>
 <li>Elin/<a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBiomeProfile.html">BiomeProfile</a></li><li class="navelem"><a class="el" href="classBiomeProfile_1_1BaseTile.html">BaseTile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

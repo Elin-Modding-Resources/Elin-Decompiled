@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTraitPowerStatue.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -685,6 +705,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e">TraitGodStatue</a>, and <a class="el" href="classTraitShrine.html#af0f2426934c4e0597c3bcb659657ce01">TraitShrine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00065">65</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitPowerStatue_8cs_source.html#l00035">OnUse()</a>.</p>
 
 </div>
 </div>
@@ -715,6 +739,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTraitItem.html#a02208ed1a7513742a9168c1d82ff04d5">TraitItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00030">30</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> base.CanUse(c) &amp;&amp; this.owner.isOn &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>;</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassZone_html_a7a2728e8894a1803eeba17ffc4c9f735"><div class="ttname"><a href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">Zone.IsUserZone</a></div><div class="ttdeci">virtual bool IsUserZone</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00376">Zone.cs:377</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, and <a class="el" href="Zone_8cs_source.html#l00377">Zone.IsUserZone</a>.</p>
 
 </div>
 </div>
@@ -744,6 +776,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33">TraitGodStatue</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00069">69</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TraitPowerStatue_8cs_source.html#l00035">OnUse()</a>.</p>
 
 </div>
 </div>
@@ -776,6 +813,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classTraitShrine.html#a9c13a4e8f7f4e7429f415e4c45dfa5e4">TraitShrine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        this.owner.isOn = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aca629319c0060497dea0b3fb95b4e516">ChangeMaterial</a>(12);</div>
+<div class="line"><span class="lineno">   26</span>        this.owner.c_seed = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20000);</div>
+<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a58f06539b1340f90f343bdab15828ad2">SetLv</a>(lv);</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassCard_html_a58f06539b1340f90f343bdab15828ad2"><div class="ttname"><a href="classCard.html#a58f06539b1340f90f343bdab15828ad2">Card.SetLv</a></div><div class="ttdeci">Card SetLv(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02987">Card.cs:2987</a></div></div>
+<div class="ttc" id="aclassCard_html_aca629319c0060497dea0b3fb95b4e516"><div class="ttname"><a href="classCard.html#aca629319c0060497dea0b3fb95b4e516">Card.ChangeMaterial</a></div><div class="ttdeci">Card ChangeMaterial(int idNew)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03086">Card.cs:3086</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03086">Card.ChangeMaterial()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="Card_8cs_source.html#l02987">Card.SetLv()</a>.</p>
 
 </div>
 </div>
@@ -806,6 +855,47 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00035">35</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">this</span> is <a class="code hl_class" href="classTraitGodStatue.html">TraitGodStatue</a>;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18">IsImplemented</a>())</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">SayNothingHappen</a>();</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;shrine_power&quot;</span>, this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            SE.Play(<span class="stringliteral">&quot;godbless&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;aura_heaven&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            SE.<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(<span class="stringliteral">&quot;shrine&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">PlayEffect</a>(<span class="stringliteral">&quot;buff&quot;</span>, <span class="keyword">true</span>, 0f, <span class="keywordflow">default</span>(Vector3));</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_function" href="classTraitPowerStatue.html#a7875940fd840ee1f9a491e61234594a8">_OnUse</a>(c);</div>
+<div class="line"><span class="lineno">   55</span>        this.owner.isOn = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aca629319c0060497dea0b3fb95b4e516">ChangeMaterial</a>(<span class="stringliteral">&quot;onyx&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>            this.owner.rarity = <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Normal;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#ab5f21d53cd13924f94f29c6ad4053bfc">RefreshExtra</a>();</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a></div><div class="ttdeci">Rarity</div><div class="ttdef"><b>Definition:</b> <a href="Rarity_8cs_source.html#l00003">Rarity.cs:4</a></div></div>
+<div class="ttc" id="aclassCardRenderer_html_ab5f21d53cd13924f94f29c6ad4053bfc"><div class="ttname"><a href="classCardRenderer.html#ab5f21d53cd13924f94f29c6ad4053bfc">CardRenderer.RefreshExtra</a></div><div class="ttdeci">void RefreshExtra()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00380">CardRenderer.cs:380</a></div></div>
+<div class="ttc" id="aclassCard_html_aa4f63069a839c4050b4d56de4e7918c4"><div class="ttname"><a href="classCard.html#aa4f63069a839c4050b4d56de4e7918c4">Card.PlayEffect</a></div><div class="ttdeci">unsafe Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05554">Card.cs:5554</a></div></div>
+<div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07306">Card.cs:7306</a></div></div>
+<div class="ttc" id="aclassEffect_html_a7fc23b7447649119c0b7497c4218d792"><div class="ttname"><a href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Effect.Play</a></div><div class="ttdeci">void Play(float delay, Point from, float fixY=0f, Point to=null, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00033">Effect.cs:33</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_aecd2169a069c87c9eca10d3a04249b54"><div class="ttname"><a href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">Msg.SayNothingHappen</a></div><div class="ttdeci">static string SayNothingHappen()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00105">Msg.cs:105</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassTraitGodStatue_html"><div class="ttname"><a href="classTraitGodStatue.html">TraitGodStatue</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGodStatue_8cs_source.html#l00004">TraitGodStatue.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitPowerStatue_html_a7875940fd840ee1f9a491e61234594a8"><div class="ttname"><a href="classTraitPowerStatue.html#a7875940fd840ee1f9a491e61234594a8">TraitPowerStatue._OnUse</a></div><div class="ttdeci">virtual void _OnUse(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitPowerStatue_8cs_source.html#l00065">TraitPowerStatue.cs:65</a></div></div>
+<div class="ttc" id="aclassTraitPowerStatue_html_a7aac436c696a83cff1b994329c8b2f18"><div class="ttname"><a href="classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18">TraitPowerStatue.IsImplemented</a></div><div class="ttdeci">virtual bool IsImplemented()</div><div class="ttdef"><b>Definition:</b> <a href="TraitPowerStatue_8cs_source.html#l00069">TraitPowerStatue.cs:69</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitPowerStatue_8cs_source.html#l00065">_OnUse()</a>, <a class="el" href="Card_8cs_source.html#l03086">Card.ChangeMaterial()</a>, <a class="el" href="TraitPowerStatue_8cs_source.html#l00069">IsImplemented()</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Effect_8cs_source.html#l00033">Effect.Play()</a>, <a class="el" href="Card_8cs_source.html#l05554">Card.PlayEffect()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00380">CardRenderer.RefreshExtra()</a>, <a class="el" href="Card_8cs_source.html#l07306">Card.renderer</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, and <a class="el" href="Msg_8cs_source.html#l00105">Msg.SayNothingHappen()</a>.</p>
 
 </div>
 </div>
@@ -831,7 +921,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00074">74</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab90bbb3524ed9a6d8555c64838c8dab2" name="ab90bbb3524ed9a6d8555c64838c8dab2"></a>
@@ -855,7 +951,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a99fce41332750e792a49f5424108fdf2" name="a99fce41332750e792a49f5424108fdf2"></a>
@@ -879,16 +981,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitPowerStatue_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00475">Card.cs:476</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitPowerStatue_8cs_source.html">TraitPowerStatue.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTraitPowerStatue.html">TraitPowerStatue</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDragItem.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -201,6 +221,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00014">14</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> this.<a class="code hl_property" href="classDragItem.html#adf000d6a3d0826bb059003fdc23fe0c9">Button</a>.icon;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassDragItem_html_adf000d6a3d0826bb059003fdc23fe0c9"><div class="ttname"><a href="classDragItem.html#adf000d6a3d0826bb059003fdc23fe0c9">DragItem.Button</a></div><div class="ttdeci">virtual UIButton Button</div><div class="ttdef"><b>Definition:</b> <a href="DragItem_8cs_source.html#l00006">DragItem.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DragItem_8cs_source.html#l00007">Button</a>.</p>
 
 </div>
 </div>
@@ -241,6 +267,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classDragItemCard.html#ada4a59ffaf72c07a230414db737984f3">DragItemCard</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00027">27</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00734">UI.EndDrag()</a>, and <a class="el" href="UI_8cs_source.html#l00716">UI.OnDrag()</a>.</p>
 
 </div>
 </div>
@@ -270,6 +301,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classDragItemCard.html#ae681c21e562ac9735a77352263703ae0">DragItemCard</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00032">32</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00722">UI.OnDragSpecial()</a>.</p>
 
 </div>
 </div>
@@ -299,6 +335,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classDragItemCard.html#ac7640b14d7c49d40f6b33fd515a6f845">DragItemCard</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00023">23</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00734">UI.EndDrag()</a>.</p>
 
 </div>
 </div>
@@ -328,6 +368,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classDragItemCard.html#a82ef8017ca98c1031ce6c032a6b8ead4">DragItemCard</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00019">19</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00695">UI.StartDrag()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +397,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DragItem_8cs_source.html#l00006">6</a> of file <a class="el" href="DragItem_8cs_source.html">DragItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="DragItem_8cs_source.html#l00014">GetDragImage()</a>.</p>
 
 </div>
 </div>
@@ -360,9 +412,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="DragItem_8cs_source.html">DragItem.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDragItem.html">DragItem</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

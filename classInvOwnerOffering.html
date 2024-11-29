@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classInvOwnerOffering.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -449,7 +469,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00029">29</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                                   : base(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>, container, _currency)</div>
+<div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01363">InvOwner.cs:1363</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -480,6 +504,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwnerDraglet.html#a3d60e9b55ed8812c443d98ae1432af98">InvOwnerDraglet</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00038">38</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_variable" href="classInvOwnerOffering.html#a0a7890abba33e42f0b37416dd41e2dd0">altar</a>.<a class="code hl_function" href="classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752">OnOffer</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, t);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassInvOwnerOffering_html_a0a7890abba33e42f0b37416dd41e2dd0"><div class="ttname"><a href="classInvOwnerOffering.html#a0a7890abba33e42f0b37416dd41e2dd0">InvOwnerOffering.altar</a></div><div class="ttdeci">TraitAltar altar</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerOffering_8cs_source.html#l00043">InvOwnerOffering.cs:43</a></div></div>
+<div class="ttc" id="aclassTraitAltar_html_ad113125ab8bbe049e091efafdff2f752"><div class="ttname"><a href="classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752">TraitAltar.OnOffer</a></div><div class="ttdeci">void OnOffer(Chara c, Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitAltar_8cs_source.html#l00130">TraitAltar.cs:130</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InvOwnerOffering_8cs_source.html#l00043">altar</a>, <a class="el" href="TraitAltar_8cs_source.html#l00130">TraitAltar.OnOffer()</a>, and <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>.</p>
 
 </div>
 </div>
@@ -510,6 +543,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classInvOwner.html#aed54b09e84cc86b06b74bb6e7c82ab95">InvOwner</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00033">33</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classInvOwnerOffering.html#a0a7890abba33e42f0b37416dd41e2dd0">altar</a>.<a class="code hl_function" href="classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e">CanOffer</a>(t);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassTraitAltar_html_a22ef7843576ce235a8cc1ff6035e976e"><div class="ttname"><a href="classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e">TraitAltar.CanOffer</a></div><div class="ttdeci">override bool CanOffer(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitAltar_8cs_source.html#l00125">TraitAltar.cs:125</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="InvOwnerOffering_8cs_source.html#l00043">altar</a>, and <a class="el" href="TraitAltar_8cs_source.html#l00125">TraitAltar.CanOffer()</a>.</p>
 
 </div>
 </div>
@@ -527,6 +566,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00043">43</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwnerOffering_8cs_source.html#l00038">_OnProcess()</a>, and <a class="el" href="InvOwnerOffering_8cs_source.html#l00033">ShouldShowGuide()</a>.</p>
 
 </div>
 </div>
@@ -552,7 +593,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00021">21</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64b2afa4ce2582d968a4802e8704a715" name="a64b2afa4ce2582d968a4802e8704a715"></a>
@@ -576,7 +623,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00005">5</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;invOffering&quot;</span>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad8657324a75e1294f74b5d5097fb4b1e" name="ad8657324a75e1294f74b5d5097fb4b1e"></a>
@@ -600,16 +653,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerOffering_8cs_source.html#l00013">13</a> of file <a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classInvOwnerDraglet.html">InvOwnerDraglet</a>.<a class="code hl_enumeration" href="classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77e">ProcessType</a>.Consume;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassInvOwnerDraglet_html"><div class="ttname"><a href="classInvOwnerDraglet.html">InvOwnerDraglet</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerDraglet_8cs_source.html#l00008">InvOwnerDraglet.cs:9</a></div></div>
+<div class="ttc" id="aclassInvOwnerDraglet_html_ac84e693d7e7dfbf1245b4e324ff4a77e"><div class="ttname"><a href="classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77e">InvOwnerDraglet.ProcessType</a></div><div class="ttdeci">ProcessType</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerDraglet_8cs_source.html#l00255">InvOwnerDraglet.cs:256</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="InvOwnerOffering_8cs_source.html">InvOwnerOffering.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classInvOwnerOffering.html">InvOwnerOffering</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

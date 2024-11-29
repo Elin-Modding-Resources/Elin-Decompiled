@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGameUpdater_1_1SensorUpdater.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classGameUpdater.html">GameUpdater</a></li><li class="navelem"><a class="el" href="classGameUpdater_1_1SensorUpdater.html">SensorUpdater</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -211,6 +227,33 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classGameUpdater_1_1Updater.html#a9ce890880fbdda48c1bc3645c627fea6">GameUpdater.Updater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00526">526</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            List&lt;Chara&gt; charas = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>;</div>
+<div class="line"><span class="lineno">  529</span>            base.SetUpdatesPerFrame(charas.Count, 1f);</div>
+<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#a222403ebd6b15b7f2558e8c6cffe350c">updatesPerFrame</a>; i++)</div>
+<div class="line"><span class="lineno">  531</span>            {</div>
+<div class="line"><span class="lineno">  532</span>                this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#a8d6f68488dd902926c320444278416ee">index</a>++;</div>
+<div class="line"><span class="lineno">  533</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#a8d6f68488dd902926c320444278416ee">index</a> &gt;= charas.Count)</div>
+<div class="line"><span class="lineno">  534</span>                {</div>
+<div class="line"><span class="lineno">  535</span>                    this.index = 0;</div>
+<div class="line"><span class="lineno">  536</span>                }</div>
+<div class="line"><span class="lineno">  537</span>                <a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a> = charas[this.<a class="code hl_variable" href="classGameUpdater_1_1Updater.html#a8d6f68488dd902926c320444278416ee">index</a>];</div>
+<div class="line"><span class="lineno">  538</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> &amp;&amp; !<a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.IsPC)</div>
+<div class="line"><span class="lineno">  539</span>                {</div>
+<div class="line"><span class="lineno">  540</span>                    <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.FindNewEnemy();</div>
+<div class="line"><span class="lineno">  541</span>                }</div>
+<div class="line"><span class="lineno">  542</span>            }</div>
+<div class="line"><span class="lineno">  543</span>        }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:452</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1Updater_html_a222403ebd6b15b7f2558e8c6cffe350c"><div class="ttname"><a href="classGameUpdater_1_1Updater.html#a222403ebd6b15b7f2558e8c6cffe350c">GameUpdater.Updater.updatesPerFrame</a></div><div class="ttdeci">int updatesPerFrame</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00289">GameUpdater.cs:289</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1Updater_html_a8d6f68488dd902926c320444278416ee"><div class="ttname"><a href="classGameUpdater_1_1Updater.html#a8d6f68488dd902926c320444278416ee">GameUpdater.Updater.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00287">GameUpdater.cs:287</a></div></div>
+<div class="ttc" id="aclassGameUpdater_html_abe28639f17198c4c4c848b7c617fecf8"><div class="ttname"><a href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">GameUpdater.chara</a></div><div class="ttdeci">GameUpdater.CharaUpdater chara</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00247">GameUpdater.cs:247</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="GameUpdater_8cs_source.html#l00247">GameUpdater.chara</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="GameUpdater_8cs_source.html#l00287">GameUpdater.Updater.index</a>, <a class="el" href="Chara_8cs_source.html#l00452">Chara.IsAliveInCurrentZone</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00289">GameUpdater.Updater.updatesPerFrame</a>.</p>
 
 </div>
 </div>
@@ -218,9 +261,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGameUpdater.html">GameUpdater</a></li><li class="navelem"><a class="el" href="classGameUpdater_1_1SensorUpdater.html">SensorUpdater</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

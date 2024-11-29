@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGoalManualMove.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -699,6 +719,61 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00095">95</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        Vector2 nextMove = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>;</div>
+<div class="line"><span class="lineno">   98</span>        Vector2 vector = <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f">lastMove</a>;</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_class" href="classPoint.html">Point</a> point2 = <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a> != <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f">lastMove</a>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            GoalManualMove.lastMove = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>;</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Invalid</a>);</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Invalid</a>);</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>((<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x, (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y) &amp;&amp; !<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#a77571ceeadf2dc97db63cc79df111948">TryAltMove</a>())</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            GoalManualMove.lastMove = vector;</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point);</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point2);</div>
+<div class="line"><span class="lineno">  112</span>            EClass.player.nextMove = nextMove;</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  116</span>        GoalManualMove.dest.x += (int)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x;</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> += (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y;</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a3fd6a040d68bf3af5d228990075adaef">GetFirstStep</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>, <a class="code hl_class" href="classPathManager.html">PathManager</a>.<a class="code hl_enumeration" href="classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9">MoveType</a>.Default));</div>
+<div class="line"><span class="lineno">  119</span>        GoalManualMove.lastMove = vector;</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point);</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point2);</div>
+<div class="line"><span class="lineno">  122</span>        EClass.player.nextMove = nextMove;</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> GoalManualMove.dest.IsInBounds &amp;&amp; !<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>) &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ad65d0cc192fdc3a429eb5a0ce33c21a6">IsEnemyOnPath</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassChara_html_a3fd6a040d68bf3af5d228990075adaef"><div class="ttname"><a href="classChara.html#a3fd6a040d68bf3af5d228990075adaef">Chara.GetFirstStep</a></div><div class="ttdeci">Point GetFirstStep(Point newPoint, PathManager.MoveType moveType=PathManager.MoveType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02135">Chara.cs:2135</a></div></div>
+<div class="ttc" id="aclassChara_html_ad65d0cc192fdc3a429eb5a0ce33c21a6"><div class="ttname"><a href="classChara.html#ad65d0cc192fdc3a429eb5a0ce33c21a6">Chara.IsEnemyOnPath</a></div><div class="ttdeci">bool IsEnemyOnPath(Point p, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02060">Chara.cs:2060</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html"><div class="ttname"><a href="classGoalManualMove.html">GoalManualMove</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00005">GoalManualMove.cs:6</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_a1cc71c519b3d6c4d81f9d5c8eee4453f"><div class="ttname"><a href="classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f">GoalManualMove.lastMove</a></div><div class="ttdeci">static Vector2 lastMove</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00186">GoalManualMove.cs:186</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_a5b26b58fc1d4fc7b6f261c821e41e69d"><div class="ttname"><a href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">GoalManualMove.lastlastPoint</a></div><div class="ttdeci">static Point lastlastPoint</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00184">GoalManualMove.cs:184</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_a6d4097a50c3e07192f4936ca9d53ba0a"><div class="ttname"><a href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">GoalManualMove.lastPoint</a></div><div class="ttdeci">static Point lastPoint</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00182">GoalManualMove.cs:182</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_a77571ceeadf2dc97db63cc79df111948"><div class="ttname"><a href="classGoalManualMove.html#a77571ceeadf2dc97db63cc79df111948">GoalManualMove.TryAltMove</a></div><div class="ttdeci">static bool TryAltMove()</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00126">GoalManualMove.cs:126</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_aae71eab4fd5a74079756c24db7cc3993"><div class="ttname"><a href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">GoalManualMove.dest</a></div><div class="ttdeci">static Point dest</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00180">GoalManualMove.cs:180</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html_ac27f579e750ef0c08d252feb56585e74"><div class="ttname"><a href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">GoalManualMove.TryMove</a></div><div class="ttdeci">static bool TryMove(int x, int z)</div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00165">GoalManualMove.cs:165</a></div></div>
+<div class="ttc" id="aclassPathManager_html"><div class="ttname"><a href="classPathManager.html">PathManager</a></div><div class="ttdef"><b>Definition:</b> <a href="PathManager_8cs_source.html#l00007">PathManager.cs:8</a></div></div>
+<div class="ttc" id="aclassPathManager_html_a4e5aa59d44fc07f796614f5c688d53e9"><div class="ttname"><a href="classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9">PathManager.MoveType</a></div><div class="ttdeci">MoveType</div><div class="ttdef"><b>Definition:</b> <a href="PathManager_8cs_source.html#l00114">PathManager.cs:115</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a49d4323b8ad06b5b1db4e39ee8812ae8"><div class="ttname"><a href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">Player.nextMove</a></div><div class="ttdeci">Vector2 nextMove</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01645">Player.cs:1645</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+<div class="ttc" id="aclassPoint_html_a0df46e81ce85121a6dc87a8af523c0b4"><div class="ttname"><a href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Point.Invalid</a></div><div class="ttdeci">static Point Invalid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01504">Point.cs:1504</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00565">Point.cs:565</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00565">Point.Copy()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00180">dest</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l02135">Chara.GetFirstStep()</a>, <a class="el" href="Point_8cs_source.html#l01504">Point.Invalid</a>, <a class="el" href="Chara_8cs_source.html#l02060">Chara.IsEnemyOnPath()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00184">lastlastPoint</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00186">lastMove</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00182">lastPoint</a>, <a class="el" href="Player_8cs_source.html#l01645">Player.nextMove</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00126">TryAltMove()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00165">TryMove()</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00941">AM_Adv.AxisMove()</a>, and <a class="el" href="AM__Adv_8cs_source.html#l01061">AM_Adv.PressedActionMove()</a>.</p>
 
 </div>
 </div>
@@ -728,6 +803,88 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00023">23</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        GoalManualMove.hasMoved = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">bool</span> willEnd = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a0e5aba40c23ea42bc1e43d178727a3b7">TooHeavyToMove</a>())</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a> == Vector2.zero)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.test.extraMoveCancel)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    willEnd = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   38</span>                    EClass.player.nextMove = <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f">lastMove</a>;</div>
+<div class="line"><span class="lineno">   39</span>                }</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   41</span>                {</div>
+<div class="line"><span class="lineno">   42</span>                    yield <span class="keywordflow">return</span> base.Success(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   43</span>                }</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a> != <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f">lastMove</a>)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                GoalManualMove.lastMove = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>;</div>
+<div class="line"><span class="lineno">   48</span>                <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Invalid</a>);</div>
+<div class="line"><span class="lineno">   49</span>                <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Invalid</a>);</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   52</span>            GoalManualMove.dest.x += (int)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x;</div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> += (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y;</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                EClass.player.nextMove = Vector2.zero;</div>
+<div class="line"><span class="lineno">   57</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   58</span>                yield <span class="keywordflow">return</span> base.<a class="code hl_function" href="classAIAct.html#a4d60673a6c0988c72446883f779798e5">Success</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>((<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x, (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y) &amp;&amp; !<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#a77571ceeadf2dc97db63cc79df111948">TryAltMove</a>())</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                EClass.player.nextMove = Vector2.zero;</div>
+<div class="line"><span class="lineno">   63</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   64</span>                yield <span class="keywordflow">return</span> base.<a class="code hl_function" href="classAIAct.html#a4d60673a6c0988c72446883f779798e5">Success</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   67</span>            GoalManualMove.dest.x += (int)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x;</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> += (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y;</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a3fd6a040d68bf3af5d228990075adaef">GetFirstStep</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>, <a class="code hl_class" href="classPathManager.html">PathManager</a>.<a class="code hl_enumeration" href="classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9">MoveType</a>.Default));</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a> &amp;&amp; !<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>))</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a82be730eb48c64050dc1a677af1de161">TryMove</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#aae71eab4fd5a74079756c24db7cc3993">dest</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (willEnd)</div>
+<div class="line"><span class="lineno">   74</span>                {</div>
+<div class="line"><span class="lineno">   75</span>                    yield <span class="keywordflow">return</span> base.Success(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   76</span>                }</div>
+<div class="line"><span class="lineno">   77</span>                GoalManualMove.hasMoved = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                EClass.player.nextMove = Vector2.zero;</div>
+<div class="line"><span class="lineno">   82</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   83</span>                yield <span class="keywordflow">return</span> base.<a class="code hl_function" href="classAIAct.html#a4d60673a6c0988c72446883f779798e5">Success</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>))</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>);</div>
+<div class="line"><span class="lineno">   88</span>                <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a">lastPoint</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>            yield <span class="keywordflow">return</span> <a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassAIAct_html"><div class="ttname"><a href="classAIAct.html">AIAct</a></div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00005">AIAct.cs:6</a></div></div>
+<div class="ttc" id="aclassAIAct_html_a4d60673a6c0988c72446883f779798e5"><div class="ttname"><a href="classAIAct.html#a4d60673a6c0988c72446883f779798e5">AIAct.Success</a></div><div class="ttdeci">AIAct.Status Success(Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00334">AIAct.cs:334</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00727">AIAct.cs:728</a></div></div>
+<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09506">Chara.cs:9506</a></div></div>
+<div class="ttc" id="aclassChara_html_a82be730eb48c64050dc1a677af1de161"><div class="ttname"><a href="classChara.html#a82be730eb48c64050dc1a677af1de161">Chara.TryMove</a></div><div class="ttdeci">Card.MoveResult TryMove(Point newPoint, bool allowDestroyPath=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02275">Chara.cs:2275</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a0e5aba40c23ea42bc1e43d178727a3b7"><div class="ttname"><a href="classPlayer.html#a0e5aba40c23ea42bc1e43d178727a3b7">Player.TooHeavyToMove</a></div><div class="ttdeci">bool TooHeavyToMove()</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01298">Player.cs:1298</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00176">Point.cs:177</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae5bd32e3472ef6f1f687ebed62b14a36"><div class="ttname"><a href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">Point.IsInBounds</a></div><div class="ttdeci">bool IsInBounds</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00188">Point.cs:189</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00180">dest</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l02135">Chara.GetFirstStep()</a>, <a class="el" href="Point_8cs_source.html#l01504">Point.Invalid</a>, <a class="el" href="Point_8cs_source.html#l00189">Point.IsInBounds</a>, <a class="el" href="Point_8cs_source.html#l00177">Point.IsValid</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00184">lastlastPoint</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00186">lastMove</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00182">lastPoint</a>, <a class="el" href="Player_8cs_source.html#l01645">Player.nextMove</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="AIAct_8cs_source.html#l00334">AIAct.Success()</a>, <a class="el" href="Player_8cs_source.html#l01298">Player.TooHeavyToMove()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00126">TryAltMove()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00165">TryMove()</a>, <a class="el" href="Chara_8cs_source.html#l02275">Chara.TryMove()</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -755,6 +912,47 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00126">126</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">float</span> x = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.x;</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> y = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8">nextMove</a>.y;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">bool</span> extraTurnaround = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.config.test.extraTurnaround;</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (y == 1f)</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (x == 1f)</div>
+<div class="line"><span class="lineno">  134</span>            {</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 0) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, 1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 1)));</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (x == 0f)</div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 0) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 0)));</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 0) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, -1)));</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (y == 0f)</div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (x == 1f)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, 1)));</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, -1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, -1)));</div>
+<div class="line"><span class="lineno">  150</span>        }</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (x == 1f)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 0) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 1)));</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (x == 0f)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, -1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, -1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 0) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, 0)));</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 0) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(0, -1) || (extraTurnaround &amp;&amp; (<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(-1, 1) || <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_function" href="classGoalManualMove.html#ac27f579e750ef0c08d252feb56585e74">TryMove</a>(1, -1)));</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Player_8cs_source.html#l01645">Player.nextMove</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00165">TryMove()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>.</p>
 
 </div>
 </div>
@@ -793,6 +991,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00165">165</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  168</span>        Point.shared.x += x;</div>
+<div class="line"><span class="lineno">  169</span>        Point.shared.z += z;</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a3fd6a040d68bf3af5d228990075adaef">GetFirstStep</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>, <a class="code hl_class" href="classPathManager.html">PathManager</a>.<a class="code hl_enumeration" href="classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9">MoveType</a>.Default));</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a> &amp;&amp; !<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a>.<a class="code hl_variable" href="classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d">lastlastPoint</a>))</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            EClass.player.nextMove.x = (float)x;</div>
+<div class="line"><span class="lineno">  174</span>            EClass.player.nextMove.y = (float)z;</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="ttc" id="aclassPoint_html_a090d94a6a4141358d605e78ba8cb56fa"><div class="ttname"><a href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">Point.shared</a></div><div class="ttdeci">static Point shared</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01496">Point.cs:1496</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l02135">Chara.GetFirstStep()</a>, <a class="el" href="Point_8cs_source.html#l00189">Point.IsInBounds</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00184">lastlastPoint</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, and <a class="el" href="Point_8cs_source.html#l01496">Point.shared</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00126">TryAltMove()</a>.</p>
 
 </div>
 </div>
@@ -818,6 +1034,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00180">180</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>.</p>
 
 </div>
 </div>
@@ -867,6 +1085,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00184">184</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, <a class="el" href="AM__Adv_8cs_source.html#l01061">AM_Adv.PressedActionMove()</a>, <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00165">TryMove()</a>.</p>
+
 </div>
 </div>
 <a id="a1cc71c519b3d6c4d81f9d5c8eee4453f" name="a1cc71c519b3d6c4d81f9d5c8eee4453f"></a>
@@ -890,6 +1110,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00186">186</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>.</p>
 
 </div>
 </div>
@@ -915,6 +1137,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00182">182</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GoalManualMove_8cs_source.html#l00095">CanMove()</a>, <a class="el" href="AM__Adv_8cs_source.html#l01061">AM_Adv.PressedActionMove()</a>, and <a class="el" href="GoalManualMove_8cs_source.html#l00023">Run()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -939,7 +1163,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00007">7</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac96280847587eaa533efb17903317ba7" name="ac96280847587eaa533efb17903317ba7"></a>
@@ -963,16 +1193,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalManualMove_8cs_source.html#l00015">15</a> of file <a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="GoalManualMove_8cs_source.html">GoalManualMove.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGoalManualMove.html">GoalManualMove</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

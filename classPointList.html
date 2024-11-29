@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classPointList.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -129,6 +149,19 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PointList_8cs_source.html#l00028">28</a> of file <a class="el" href="PointList_8cs_source.html">PointList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        base.Capacity = this.data.Length / 2 + 8;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.data.Length / 2; i++)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            base.Add(<span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(this.<a class="code hl_variable" href="classPointList.html#a699b0bbab054257d55f0485551d7b7b4">data</a>[i * 2], this.<a class="code hl_variable" href="classPointList.html#a699b0bbab054257d55f0485551d7b7b4">data</a>[i * 2 + 1]));</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassPointList_html_a699b0bbab054257d55f0485551d7b7b4"><div class="ttname"><a href="classPointList.html#a699b0bbab054257d55f0485551d7b7b4">PointList.data</a></div><div class="ttdeci">int[] data</div><div class="ttdef"><b>Definition:</b> <a href="PointList_8cs_source.html#l00038">PointList.cs:38</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PointList_8cs_source.html#l00038">data</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PointList_8cs_source.html#l00023">OnDeserialized()</a>.</p>
 
 </div>
 </div>
@@ -157,6 +190,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PointList_8cs_source.html#l00023">23</a> of file <a class="el" href="PointList_8cs_source.html">PointList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_function" href="classPointList.html#a1e6fcec97c721ecbf1d3c36ad48afac1">Deserialize</a>();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassPointList_html_a1e6fcec97c721ecbf1d3c36ad48afac1"><div class="ttname"><a href="classPointList.html#a1e6fcec97c721ecbf1d3c36ad48afac1">PointList.Deserialize</a></div><div class="ttdeci">void Deserialize()</div><div class="ttdef"><b>Definition:</b> <a href="PointList_8cs_source.html#l00028">PointList.cs:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PointList_8cs_source.html#l00028">Deserialize()</a>.</p>
 
 </div>
 </div>
@@ -185,6 +224,20 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PointList_8cs_source.html#l00010">10</a> of file <a class="el" href="PointList_8cs_source.html">PointList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        this.data = <span class="keyword">new</span> <span class="keywordtype">int</span>[base.Count * 2];</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> point <span class="keywordflow">in</span> <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            this.<a class="code hl_variable" href="classPointList.html#a699b0bbab054257d55f0485551d7b7b4">data</a>[num] = point.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>;</div>
+<div class="line"><span class="lineno">   17</span>            this.<a class="code hl_variable" href="classPointList.html#a699b0bbab054257d55f0485551d7b7b4">data</a>[num + 1] = point.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>;</div>
+<div class="line"><span class="lineno">   18</span>            num += 2;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PointList_8cs_source.html#l00038">data</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
 
 </div>
 </div>
@@ -203,15 +256,21 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PointList_8cs_source.html#l00038">38</a> of file <a class="el" href="PointList_8cs_source.html">PointList.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="PointList_8cs_source.html#l00028">Deserialize()</a>, and <a class="el" href="PointList_8cs_source.html#l00010">OnSerializing()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="PointList_8cs_source.html">PointList.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classPointList.html">PointList</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classZoneProfile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -192,7 +212,15 @@ Public Attributes</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00085">85</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_enumvalue" href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa7a1920d61156abc05a60135aefe8bc67">Default</a>,</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_enumvalue" href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa03462a41aec357b74c89eb8d272532f7">Sky</a>,</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_enumvalue" href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa78eeb11057619ca7b6a6a179984eab5a">Underground</a></div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassZoneProfile_html_aa8ccbe63c907c9f1cc65efe7ed6cc76aa03462a41aec357b74c89eb8d272532f7"><div class="ttname"><a href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa03462a41aec357b74c89eb8d272532f7">ZoneProfile.GenType.Sky</a></div><div class="ttdeci">@ Sky</div></div>
+<div class="ttc" id="aclassZoneProfile_html_aa8ccbe63c907c9f1cc65efe7ed6cc76aa78eeb11057619ca7b6a6a179984eab5a"><div class="ttname"><a href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa78eeb11057619ca7b6a6a179984eab5a">ZoneProfile.GenType.Underground</a></div><div class="ttdeci">@ Underground</div></div>
+<div class="ttc" id="aclassZoneProfile_html_aa8ccbe63c907c9f1cc65efe7ed6cc76aa7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76aa7a1920d61156abc05a60135aefe8bc67">ZoneProfile.GenType.Default</a></div><div class="ttdeci">@ Default</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -220,6 +248,25 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00011">11</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classZoneBlueprint.html">ZoneBlueprint</a> zoneBlueprint = <span class="keyword">new</span> <a class="code hl_class" href="classZoneBlueprint.html">ZoneBlueprint</a>();</div>
+<div class="line"><span class="lineno">   14</span>        zoneBlueprint.<a class="code hl_function" href="classZoneBlueprint.html#a966ca31be89978961972506c3e8165d3">Create</a>();</div>
+<div class="line"><span class="lineno">   15</span>        zoneBlueprint.map = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>;</div>
+<div class="line"><span class="lineno">   16</span>        zoneBlueprint.zoneProfile = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   17</span>        zoneBlueprint.<a class="code hl_function" href="classZoneBlueprint.html#a3d81d6dd1528e6da30f8cccb8efe49b6">GenerateMap</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>);</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#ae617ecdb8dbafde565ee5a91fc989cb1">RevealAll</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassMap_html_ae617ecdb8dbafde565ee5a91fc989cb1"><div class="ttname"><a href="classMap.html#ae617ecdb8dbafde565ee5a91fc989cb1">Map.RevealAll</a></div><div class="ttdeci">void RevealAll(bool reveal=true)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00867">Map.cs:867</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html"><div class="ttname"><a href="classZoneBlueprint.html">ZoneBlueprint</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00004">ZoneBlueprint.cs:5</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a3d81d6dd1528e6da30f8cccb8efe49b6"><div class="ttname"><a href="classZoneBlueprint.html#a3d81d6dd1528e6da30f8cccb8efe49b6">ZoneBlueprint.GenerateMap</a></div><div class="ttdeci">void GenerateMap(Zone zone)</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.cs:27</a></div></div>
+<div class="ttc" id="aclassZoneBlueprint_html_a966ca31be89978961972506c3e8165d3"><div class="ttname"><a href="classZoneBlueprint.html#a966ca31be89978961972506c3e8165d3">ZoneBlueprint.Create</a></div><div class="ttdeci">void Create()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneBlueprint_8cs_source.html#l00018">ZoneBlueprint.cs:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00018">ZoneBlueprint.Create()</a>, <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.GenerateMap()</a>, and <a class="el" href="Map_8cs_source.html#l00867">Map.RevealAll()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneProfile_8cs_source.html#l00021">RerollBiome()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00027">RerollBiomeSub()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00033">RerollBush()</a>.</p>
 
 </div>
 </div>
@@ -248,6 +295,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> Resources.Load&lt;<a class="code hl_class" href="classZoneProfile.html">ZoneProfile</a>&gt;(<span class="stringliteral">&quot;World/Zone/Profile/&quot;</span> + <span class="keywordtype">id</span>.IsEmpty(<span class="stringliteral">&quot;Default&quot;</span>));</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassZoneProfile_html"><div class="ttname"><a href="classZoneProfile.html">ZoneProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00004">ZoneProfile.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneProfile_8cs_source.html#l00006">Load()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02534">Zone.GetProfile()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00006">Load()</a>, and <a class="el" href="UIMapSelector_8cs_source.html#l00007">UIMapSelector.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -275,6 +330,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00021">21</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">seeds</a>.biome++;</div>
+<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_function" href="classZoneProfile.html#ac598fe339ff09b966d9974ddaf14ff54">Generate</a>();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassZoneProfile_html_a85d810f30ee61936507e1cefad7d777c"><div class="ttname"><a href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">ZoneProfile.seeds</a></div><div class="ttdeci">ZoneProfile.Seeds seeds</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00043">ZoneProfile.cs:43</a></div></div>
+<div class="ttc" id="aclassZoneProfile_html_ac598fe339ff09b966d9974ddaf14ff54"><div class="ttname"><a href="classZoneProfile.html#ac598fe339ff09b966d9974ddaf14ff54">ZoneProfile.Generate</a></div><div class="ttdeci">void Generate()</div><div class="ttdef"><b>Definition:</b> <a href="ZoneProfile_8cs_source.html#l00011">ZoneProfile.cs:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneProfile_8cs_source.html#l00011">Generate()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00043">seeds</a>.</p>
 
 </div>
 </div>
@@ -302,6 +365,12 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00027">27</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_variable" href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">seeds</a>.biomeSub++;</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_function" href="classZoneProfile.html#ac598fe339ff09b966d9974ddaf14ff54">Generate</a>();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneProfile_8cs_source.html#l00011">Generate()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00043">seeds</a>.</p>
 
 </div>
 </div>
@@ -329,6 +398,12 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00033">33</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classZoneProfile.html#a85d810f30ee61936507e1cefad7d777c">seeds</a>.bush++;</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_function" href="classZoneProfile.html#ac598fe339ff09b966d9974ddaf14ff54">Generate</a>();</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ZoneProfile_8cs_source.html#l00011">Generate()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00043">seeds</a>.</p>
 
 </div>
 </div>
@@ -347,6 +422,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00063">63</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a6f3e9311a8ff80d2f6f88f76d52df565" name="a6f3e9311a8ff80d2f6f88f76d52df565"></a>
@@ -362,6 +439,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00053">53</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -395,6 +474,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00077">77</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="af822a2c9d109b4011c212f0e650c76a8" name="af822a2c9d109b4011c212f0e650c76a8"></a>
@@ -410,6 +491,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00059">59</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -427,6 +510,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00081">81</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="acc95029310654847c926795775d609d8" name="acc95029310654847c926795775d609d8"></a>
@@ -442,6 +527,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00041">41</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>, and <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.GenerateMap()</a>.</p>
 
 </div>
 </div>
@@ -459,6 +546,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00079">79</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="a86b2c9168b8074e8d378fea93455a934" name="a86b2c9168b8074e8d378fea93455a934"></a>
@@ -474,6 +563,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00075">75</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -491,6 +582,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00065">65</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="a1ade493a25bab3f0e434a8c5319c4684" name="a1ade493a25bab3f0e434a8c5319c4684"></a>
@@ -506,6 +599,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00083">83</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -539,6 +634,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00049">49</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
+
 </div>
 </div>
 <a id="adced1799f806c748e922ba8c0416dc77" name="adced1799f806c748e922ba8c0416dc77"></a>
@@ -554,6 +651,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00051">51</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseMapGen_8cs_source.html#l00024">BaseMapGen.Generate()</a>.</p>
 
 </div>
 </div>
@@ -571,6 +670,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00071">71</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>.</p>
+
 </div>
 </div>
 <a id="a85d810f30ee61936507e1cefad7d777c" name="a85d810f30ee61936507e1cefad7d777c"></a>
@@ -586,6 +687,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00043">43</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.GenerateMap()</a>, <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGen_8cs_source.html#l00588">MapGen.Populate()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00021">RerollBiome()</a>, <a class="el" href="ZoneProfile_8cs_source.html#l00027">RerollBiomeSub()</a>, and <a class="el" href="ZoneProfile_8cs_source.html#l00033">RerollBush()</a>.</p>
 
 </div>
 </div>
@@ -603,6 +706,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00067">67</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a23a777d358ea40442f25ac292fabde02" name="a23a777d358ea40442f25ac292fabde02"></a>
@@ -618,6 +723,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00061">61</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -651,6 +758,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00047">47</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <a id="a85a71f2dc87924fdda40576b8a7c16f3" name="a85a71f2dc87924fdda40576b8a7c16f3"></a>
@@ -666,6 +775,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00073">73</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00021">MapGen.GenerateTerrain()</a>, and <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
 
 </div>
 </div>
@@ -683,6 +794,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00039">39</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ZoneBlueprint_8cs_source.html#l00027">ZoneBlueprint.GenerateMap()</a>.</p>
+
 </div>
 </div>
 <a id="a076f750e6d3e34d7b296349e440b8b40" name="a076f750e6d3e34d7b296349e440b8b40"></a>
@@ -699,15 +812,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneProfile_8cs_source.html#l00055">55</a> of file <a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00064">MapGen.OnGenerateTerrain()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ZoneProfile_8cs_source.html">ZoneProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classZoneProfile.html">ZoneProfile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

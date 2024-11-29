@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classItemPosition.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -197,6 +217,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemPosition_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemPosition_8cs_source.html">ItemPosition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (t == <span class="keyword">null</span> || t.<a class="code hl_property" href="classCard.html#ad69d5c5b12c1398aba92287d942b1f4c">parentCard</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classItemPosition.html">ItemPosition</a></div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <a class="code hl_variable" href="classItemPosition.html#a78a3b5fd8d8787bbe46042eadc56e781">uidContainer</a> = t.<a class="code hl_property" href="classCard.html#ad69d5c5b12c1398aba92287d942b1f4c">parentCard</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>,</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_variable" href="classItemPosition.html#a6ccff9e05feadddf33825dba5c2c2a2b">invX</a> = t.<a class="code hl_property" href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">invX</a>,</div>
+<div class="line"><span class="lineno">   16</span>            <a class="code hl_variable" href="classItemPosition.html#a5c5e3adc113a5a66f2c3bc697542843b">invY</a> = t.invY</div>
+<div class="line"><span class="lineno">   17</span>        };</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
+<div class="ttc" id="aclassCard_html_ac1b50d158e71e97e496402fb0fe51b9d"><div class="ttname"><a href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">Card.invX</a></div><div class="ttdeci">int invX</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01763">Card.cs:1764</a></div></div>
+<div class="ttc" id="aclassCard_html_ad69d5c5b12c1398aba92287d942b1f4c"><div class="ttname"><a href="classCard.html#ad69d5c5b12c1398aba92287d942b1f4c">Card.parentCard</a></div><div class="ttdeci">Card parentCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00043">Card.cs:44</a></div></div>
+<div class="ttc" id="aclassItemPosition_html"><div class="ttname"><a href="classItemPosition.html">ItemPosition</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00004">ItemPosition.cs:5</a></div></div>
+<div class="ttc" id="aclassItemPosition_html_a5c5e3adc113a5a66f2c3bc697542843b"><div class="ttname"><a href="classItemPosition.html#a5c5e3adc113a5a66f2c3bc697542843b">ItemPosition.invY</a></div><div class="ttdeci">int invY</div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00027">ItemPosition.cs:27</a></div></div>
+<div class="ttc" id="aclassItemPosition_html_a6ccff9e05feadddf33825dba5c2c2a2b"><div class="ttname"><a href="classItemPosition.html#a6ccff9e05feadddf33825dba5c2c2a2b">ItemPosition.invX</a></div><div class="ttdeci">int invX</div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00024">ItemPosition.cs:24</a></div></div>
+<div class="ttc" id="aclassItemPosition_html_a78a3b5fd8d8787bbe46042eadc56e781"><div class="ttname"><a href="classItemPosition.html#a78a3b5fd8d8787bbe46042eadc56e781">ItemPosition.uidContainer</a></div><div class="ttdeci">int uidContainer</div><div class="ttdef"><b>Definition:</b> <a href="ItemPosition_8cs_source.html#l00021">ItemPosition.cs:21</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01764">Card.invX</a>, <a class="el" href="ItemPosition_8cs_source.html#l00024">invX</a>, <a class="el" href="ItemPosition_8cs_source.html#l00027">invY</a>, <a class="el" href="Card_8cs_source.html#l00044">Card.parentCard</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, and <a class="el" href="ItemPosition_8cs_source.html#l00021">uidContainer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemActionSleep_8cs_source.html#l00021">HotItemActionSleep.Perform()</a>.</p>
 
 </div>
 </div>
@@ -215,6 +258,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemPosition_8cs_source.html#l00024">24</a> of file <a class="el" href="ItemPosition_8cs_source.html">ItemPosition.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ConSleep_8cs_source.html#l00251">ConSleep.g__TryPick()</a>, and <a class="el" href="ItemPosition_8cs_source.html#l00006">Get()</a>.</p>
+
 </div>
 </div>
 <a id="a5c5e3adc113a5a66f2c3bc697542843b" name="a5c5e3adc113a5a66f2c3bc697542843b"></a>
@@ -230,6 +275,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemPosition_8cs_source.html#l00027">27</a> of file <a class="el" href="ItemPosition_8cs_source.html">ItemPosition.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ConSleep_8cs_source.html#l00251">ConSleep.g__TryPick()</a>, and <a class="el" href="ItemPosition_8cs_source.html#l00006">Get()</a>.</p>
 
 </div>
 </div>
@@ -247,15 +294,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemPosition_8cs_source.html#l00021">21</a> of file <a class="el" href="ItemPosition_8cs_source.html">ItemPosition.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ConSleep_8cs_source.html#l00251">ConSleep.g__TryPick()</a>, and <a class="el" href="ItemPosition_8cs_source.html#l00006">Get()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="ItemPosition_8cs_source.html">ItemPosition.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classItemPosition.html">ItemPosition</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

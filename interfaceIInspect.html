@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('interfaceIInspect.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -173,7 +193,17 @@ Properties</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="IInspect_8cs_source.html#l00018">18</a> of file <a class="el" href="IInspect_8cs_source.html">IInspect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_enumvalue" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67">Default</a>,</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_enumvalue" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4aaef6ec2224f7ef3c74b4942b0e7f2969">Recipe</a>,</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_enumvalue" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4adeb10517653c255364175796ace3553f">Product</a>,</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_enumvalue" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875">Info</a></div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875">IInspect.NoteMode.Info</a></div><div class="ttdeci">@ Info</div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67">IInspect.NoteMode.Default</a></div><div class="ttdeci">@ Default</div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4aaef6ec2224f7ef3c74b4942b0e7f2969"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4aaef6ec2224f7ef3c74b4942b0e7f2969">IInspect.NoteMode.Recipe</a></div><div class="ttdeci">@ Recipe</div></div>
+<div class="ttc" id="ainterfaceIInspect_html_afe15ff5466a83e238eb5a07846684df4adeb10517653c255364175796ace3553f"><div class="ttname"><a href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4adeb10517653c255364175796ace3553f">IInspect.NoteMode.Product</a></div><div class="ttdeci">@ Product</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -262,6 +292,9 @@ Properties</h2></td></tr>
 <p>Implemented in <a class="el" href="classBaseArea.html#a225ea6df2c8ab6cf8790a6548f7d3655">BaseArea</a>, <a class="el" href="classBaseInspectPos.html#ae969784ba459fe2de03c60c9390a9c71">BaseInspectPos</a>, <a class="el" href="classBlockInfo.html#add0998fdf1ec6dff9840743c06aad2a4">BlockInfo</a>, <a class="el" href="classCard.html#a39fc426455760b38c12b8e644545b661">Card</a>, <a class="el" href="classEloPos.html#a383d2de09ce43d1c2f4e99a9cae3f3d8">EloPos</a>, <a class="el" href="classObjInfo.html#a94bf8a20bd60787e8130e61e5a383ea6">ObjInfo</a>, <a class="el" href="classTaskPoint.html#ab1c210ead82c27202a0ae0b01610bcf2">TaskPoint</a>, and <a class="el" href="classZone.html#affe48dfc6a861e5c5b32a1fb6c36e6ae">Zone</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="IInspect_8cs_source.html#l00006">6</a> of file <a class="el" href="IInspect_8cs_source.html">IInspect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>{ <span class="keyword">get</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AM__Select_8cs_source.html#l00058">AM_Select.OnRefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -288,6 +321,9 @@ Properties</h2></td></tr>
 <p>Implemented in <a class="el" href="classBaseArea.html#a67e7625433bffca1436d0daa68cfb516">BaseArea</a>, <a class="el" href="classBaseInspectPos.html#a8dad48efa1633b30abaf5012f8bd11e8">BaseInspectPos</a>, <a class="el" href="classBlockInfo.html#ad65c919e182211ab88beea92e6c587e7">BlockInfo</a>, <a class="el" href="classCard.html#a441fece5b0085a68f5686c96656cda0a">Card</a>, <a class="el" href="classEloPos.html#a6a6ead82d73fb95c617ae700fe9c1658">EloPos</a>, <a class="el" href="classObjInfo.html#a5f1fe5ded2f4b1f965b4e2da655c34d9">ObjInfo</a>, <a class="el" href="classTaskPoint.html#adf46d04b4356019f501238e94ae3eb39">TaskPoint</a>, and <a class="el" href="classZone.html#a983f4a5002c46baff973de06da520cd8">Zone</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="IInspect_8cs_source.html#l00008">8</a> of file <a class="el" href="IInspect_8cs_source.html">IInspect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>{ <span class="keyword">get</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="WidgetMouseover_8cs_source.html#l00016">WidgetMouseover.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -314,6 +350,9 @@ Properties</h2></td></tr>
 <p>Implemented in <a class="el" href="classBaseArea.html#af9da25477335bb3f969f94d3f565a41d">BaseArea</a>, <a class="el" href="classBaseInspectPos.html#ad6156388185d0e309661c03073469df7">BaseInspectPos</a>, <a class="el" href="classCard.html#a4ef4dd16457faad4c262fe7019748e1d">Card</a>, <a class="el" href="classEloPos.html#a376750f7246b60a5f902e67b25253f5e">EloPos</a>, <a class="el" href="classTaskPoint.html#ae05c0f2d5627eab9bc37c9b9747cdb94">TaskPoint</a>, and <a class="el" href="classZone.html#a9bcb7e1b2225f8000378624f0425ef17">Zone</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="IInspect_8cs_source.html#l00010">10</a> of file <a class="el" href="IInspect_8cs_source.html">IInspect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00174">UIInspector.DrawHighlight()</a>.</p>
 
 </div>
 </div>
@@ -340,6 +379,9 @@ Properties</h2></td></tr>
 <p>Implemented in <a class="el" href="classBaseArea.html#aab309fd6ece927d3edba0394610e2177">BaseArea</a>, <a class="el" href="classBaseInspectPos.html#aa647e6ef1b7e15dc7b3b55a22cb152d4">BaseInspectPos</a>, <a class="el" href="classCard.html#ae766a9d37337c7a14e6701fdb206fd35">Card</a>, <a class="el" href="classEloPos.html#a3db3ccac22e648bfa0f55d16d198eb85">EloPos</a>, <a class="el" href="classTaskPoint.html#a5235eeda2dc7f2dde58f8b0bb0789a84">TaskPoint</a>, and <a class="el" href="classZone.html#a0916ac61ffc8b1e3bba9cd6c4513b617">Zone</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="IInspect_8cs_source.html#l00012">12</a> of file <a class="el" href="IInspect_8cs_source.html">IInspect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00174">UIInspector.DrawHighlight()</a>.</p>
 
 </div>
 </div>
@@ -347,9 +389,13 @@ Properties</h2></td></tr>
 <li>Elin/<a class="el" href="IInspect_8cs_source.html">IInspect.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="interfaceIInspect.html">IInspect</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

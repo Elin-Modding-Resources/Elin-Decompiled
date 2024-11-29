@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHoardActor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -278,6 +298,594 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00025">25</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_variable" href="classHoardActor.html#a06cafbb8f3020e904c95ccbd8b2107c4">passShadow</a>.<a class="code hl_function" href="classMeshPass.html#a8967402ea5f93c8de1742521efd51449">Init</a>();</div>
+<div class="line"><span class="lineno">   28</span>        this.hoard.score = 0;</div>
+<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_function" href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_function" href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">RefreshZoom</a>();</div>
+<div class="line"><span class="lineno">   31</span>        RigidUpdate.leftX = -5f;</div>
+<div class="line"><span class="lineno">   32</span>        RigidUpdate.rightX = 5f;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            this.<a class="code hl_function" href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">Clear</a>();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        this.angryEhe = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0);</div>
+<div class="line"><span class="lineno">   38</span>        Vector3 zero = Vector3.zero;</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_class" href="classHoard_1_1Item.html">Item</a> item in <span class="keyword">this</span>.hoard.items.Values)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            num += item.show;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        IEnumerable&lt;<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_class" href="classHoard_1_1Item.html">Item</a>&gt; enumerable = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_class" href="classHoard_1_1Item.html">Item</a>&gt;(this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.Values).Shuffle&lt;Hoard.Item&gt;();</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">string</span> b = this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">mode</a>.ToString();</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_class" href="classHoard_1_1Item.html">Item</a> item2 in enumerable)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordtype">string</span> filter = item2.Source.filter;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">mode</a> == <a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_enumeration" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Mode</a>.all || filter.IsEmpty() || !(filter != b))</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordtype">bool</span> flag = item2.Source.tag.Contains(<span class="stringliteral">&quot;god&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordtype">int</span> num2 = item2.show;</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (item2.random)</div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    num2 = Rand.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(num2 + 1);</div>
+<div class="line"><span class="lineno">   56</span>                    <span class="keywordflow">if</span> (num2 &gt; 2 &amp;&amp; num2 &lt; 50)</div>
+<div class="line"><span class="lineno">   57</span>                    {</div>
+<div class="line"><span class="lineno">   58</span>                        num2 = Rand.rnd(num2 + 1) + 1;</div>
+<div class="line"><span class="lineno">   59</span>                    }</div>
+<div class="line"><span class="lineno">   60</span>                }</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (num2 != 0)</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    GameObject actor = this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_function" href="classHoard.html#a356da000fbe69aba476d1dce7ffd3cc5">GetActor</a>(item2.id);</div>
+<div class="line"><span class="lineno">   64</span>                    <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> component = actor.GetComponent&lt;<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a>&gt;();</div>
+<div class="line"><span class="lineno">   65</span>                    SpriteRenderer component2 = actor.GetComponent&lt;SpriteRenderer&gt;();</div>
+<div class="line"><span class="lineno">   66</span>                    Vector3 extents = component2.bounds.extents;</div>
+<div class="line"><span class="lineno">   67</span>                    <span class="keywordtype">int</span> num3 = (int)(extents.x * extents.y * 10f);</div>
+<div class="line"><span class="lineno">   68</span>                    <span class="keywordflow">if</span> (num3 &gt; 5)</div>
+<div class="line"><span class="lineno">   69</span>                    {</div>
+<div class="line"><span class="lineno">   70</span>                        num3 = 5;</div>
+<div class="line"><span class="lineno">   71</span>                    }</div>
+<div class="line"><span class="lineno">   72</span>                    <span class="keywordtype">float</span> y = extents.y;</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordtype">float</span> z = flag ? -0.1f : 0f;</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordtype">bool</span> hasSound = !item2.Source.sound.IsEmpty();</div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoardActor.html#a127878b6e4a747d59e9d5789ba3acc07">debug</a>)</div>
+<div class="line"><span class="lineno">   76</span>                    {</div>
+<div class="line"><span class="lineno">   77</span>                        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = item2.id;</div>
+<div class="line"><span class="lineno">   78</span>                        <span class="keywordtype">string</span> str = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>                        Vector3 vector = extents;</div>
+<div class="line"><span class="lineno">   80</span>                        Debug.Log(<span class="keywordtype">id</span> + str + vector.ToString());</div>
+<div class="line"><span class="lineno">   81</span>                    }</div>
+<div class="line"><span class="lineno">   82</span>                    <span class="keywordtype">float</span> num4 = Mathf.Sqrt(actor.GetComponent&lt;Rigidbody2D&gt;().mass);</div>
+<div class="line"><span class="lineno">   83</span>                    <span class="keywordflow">if</span> (num4 &lt; 0.7f)</div>
+<div class="line"><span class="lineno">   84</span>                    {</div>
+<div class="line"><span class="lineno">   85</span>                        num4 = 0.7f;</div>
+<div class="line"><span class="lineno">   86</span>                    }</div>
+<div class="line"><span class="lineno">   87</span>                    BoxCollider2D component3 = actor.GetComponent&lt;BoxCollider2D&gt;();</div>
+<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">if</span> (component3)</div>
+<div class="line"><span class="lineno">   89</span>                    {</div>
+<div class="line"><span class="lineno">   90</span>                        component3.size = extents * this.<a class="code hl_variable" href="classHoardActor.html#aea2f2eec64994ab0940f22f6dfada8a0">sizeMod</a>;</div>
+<div class="line"><span class="lineno">   91</span>                    }</div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   93</span>                    {</div>
+<div class="line"><span class="lineno">   94</span>                        actor.GetComponent&lt;CircleCollider2D&gt;().radius = (extents.x + extents.y) * this.sizeModCircle * this.<a class="code hl_variable" href="classHoardActor.html#ac5f32758038aa67f792245187a6e2361">sizeModCircle</a>;</div>
+<div class="line"><span class="lineno">   95</span>                    }</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="keywordtype">string</span> id2 = item2.id;</div>
+<div class="line"><span class="lineno">   97</span>                    uint num5 = &lt;PrivateImplementationDetails&gt;.ComputeStringHash(id2);</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">if</span> (num5 &lt;= 2580362002U)</div>
+<div class="line"><span class="lineno">   99</span>                    {</div>
+<div class="line"><span class="lineno">  100</span>                        <span class="keywordflow">if</span> (num5 &lt;= 1166849410U)</div>
+<div class="line"><span class="lineno">  101</span>                        {</div>
+<div class="line"><span class="lineno">  102</span>                            <span class="keywordflow">if</span> (num5 &lt;= 622086627U)</div>
+<div class="line"><span class="lineno">  103</span>                            {</div>
+<div class="line"><span class="lineno">  104</span>                                <span class="keywordflow">if</span> (num5 != 595338019U)</div>
+<div class="line"><span class="lineno">  105</span>                                {</div>
+<div class="line"><span class="lineno">  106</span>                                    <span class="keywordflow">if</span> (num5 != 622086627U)</div>
+<div class="line"><span class="lineno">  107</span>                                    {</div>
+<div class="line"><span class="lineno">  108</span>                                        <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  109</span>                                    }</div>
+<div class="line"><span class="lineno">  110</span>                                    <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;renton&quot;</span>))</div>
+<div class="line"><span class="lineno">  111</span>                                    {</div>
+<div class="line"><span class="lineno">  112</span>                                        <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  113</span>                                    }</div>
+<div class="line"><span class="lineno">  114</span>                                    this.renton = component;</div>
+<div class="line"><span class="lineno">  115</span>                                    <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classHoardActor.html#adc28a9d1448cb60a98a6570e375c7a6c">angryEhe</a>)</div>
+<div class="line"><span class="lineno">  116</span>                                    {</div>
+<div class="line"><span class="lineno">  117</span>                                        Util.Instantiate&lt;SpriteRenderer&gt;(<span class="stringliteral">&quot;UI/Layer/Hoard/Effect/sister&quot;</span>, component);</div>
+<div class="line"><span class="lineno">  118</span>                                        component.paired = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  119</span>                                        this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(component);</div>
+<div class="line"><span class="lineno">  120</span>                                        <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  121</span>                                    }</div>
+<div class="line"><span class="lineno">  122</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  123</span>                                }</div>
+<div class="line"><span class="lineno">  124</span>                                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;mine_dog&quot;</span>))</div>
+<div class="line"><span class="lineno">  125</span>                                {</div>
+<div class="line"><span class="lineno">  126</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  127</span>                                }</div>
+<div class="line"><span class="lineno">  128</span>                            }</div>
+<div class="line"><span class="lineno">  129</span>                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 1111712579U)</div>
+<div class="line"><span class="lineno">  130</span>                            {</div>
+<div class="line"><span class="lineno">  131</span>                                <span class="keywordflow">if</span> (num5 != 1166849410U)</div>
+<div class="line"><span class="lineno">  132</span>                                {</div>
+<div class="line"><span class="lineno">  133</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  134</span>                                }</div>
+<div class="line"><span class="lineno">  135</span>                                <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;hat_magic&quot;</span>))</div>
+<div class="line"><span class="lineno">  136</span>                                {</div>
+<div class="line"><span class="lineno">  137</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  138</span>                                }</div>
+<div class="line"><span class="lineno">  139</span>                                <span class="keywordflow">goto</span> IL_67F;</div>
+<div class="line"><span class="lineno">  140</span>                            }</div>
+<div class="line"><span class="lineno">  141</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  142</span>                            {</div>
+<div class="line"><span class="lineno">  143</span>                                <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;tentacle&quot;</span>))</div>
+<div class="line"><span class="lineno">  144</span>                                {</div>
+<div class="line"><span class="lineno">  145</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  146</span>                                }</div>
+<div class="line"><span class="lineno">  147</span>                                <span class="keywordflow">goto</span> IL_676;</div>
+<div class="line"><span class="lineno">  148</span>                            }</div>
+<div class="line"><span class="lineno">  149</span>                        }</div>
+<div class="line"><span class="lineno">  150</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &lt;= 2122968502U)</div>
+<div class="line"><span class="lineno">  151</span>                        {</div>
+<div class="line"><span class="lineno">  152</span>                            <span class="keywordflow">if</span> (num5 != 1891070888U)</div>
+<div class="line"><span class="lineno">  153</span>                            {</div>
+<div class="line"><span class="lineno">  154</span>                                <span class="keywordflow">if</span> (num5 != 2122968502U)</div>
+<div class="line"><span class="lineno">  155</span>                                {</div>
+<div class="line"><span class="lineno">  156</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  157</span>                                }</div>
+<div class="line"><span class="lineno">  158</span>                                <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;mine&quot;</span>))</div>
+<div class="line"><span class="lineno">  159</span>                                {</div>
+<div class="line"><span class="lineno">  160</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  161</span>                                }</div>
+<div class="line"><span class="lineno">  162</span>                            }</div>
+<div class="line"><span class="lineno">  163</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  164</span>                            {</div>
+<div class="line"><span class="lineno">  165</span>                                <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;bat&quot;</span>))</div>
+<div class="line"><span class="lineno">  166</span>                                {</div>
+<div class="line"><span class="lineno">  167</span>                                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  168</span>                                }</div>
+<div class="line"><span class="lineno">  169</span>                                <span class="keywordflow">goto</span> IL_67F;</div>
+<div class="line"><span class="lineno">  170</span>                            }</div>
+<div class="line"><span class="lineno">  171</span>                        }</div>
+<div class="line"><span class="lineno">  172</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 2273286343U)</div>
+<div class="line"><span class="lineno">  173</span>                        {</div>
+<div class="line"><span class="lineno">  174</span>                            <span class="keywordflow">if</span> (num5 != 2580362002U)</div>
+<div class="line"><span class="lineno">  175</span>                            {</div>
+<div class="line"><span class="lineno">  176</span>                                <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  177</span>                            }</div>
+<div class="line"><span class="lineno">  178</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;mine_rock&quot;</span>))</div>
+<div class="line"><span class="lineno">  179</span>                            {</div>
+<div class="line"><span class="lineno">  180</span>                                <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  181</span>                            }</div>
+<div class="line"><span class="lineno">  182</span>                        }</div>
+<div class="line"><span class="lineno">  183</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  184</span>                        {</div>
+<div class="line"><span class="lineno">  185</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;ehe&quot;</span>))</div>
+<div class="line"><span class="lineno">  186</span>                            {</div>
+<div class="line"><span class="lineno">  187</span>                                <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  188</span>                            }</div>
+<div class="line"><span class="lineno">  189</span>                            this.ehe = component;</div>
+<div class="line"><span class="lineno">  190</span>                            <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  191</span>                        }</div>
+<div class="line"><span class="lineno">  192</span>                        actor.AddComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;().particle = this.<a class="code hl_variable" href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">psExplode</a>;</div>
+<div class="line"><span class="lineno">  193</span>                    }</div>
+<div class="line"><span class="lineno">  194</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &lt;= 3274701990U)</div>
+<div class="line"><span class="lineno">  195</span>                    {</div>
+<div class="line"><span class="lineno">  196</span>                        <span class="keywordflow">if</span> (num5 &lt;= 3222636880U)</div>
+<div class="line"><span class="lineno">  197</span>                        {</div>
+<div class="line"><span class="lineno">  198</span>                            <span class="keywordflow">if</span> (num5 != 2973714812U)</div>
+<div class="line"><span class="lineno">  199</span>                            {</div>
+<div class="line"><span class="lineno">  200</span>                                <span class="keywordflow">if</span> (num5 == 3222636880U)</div>
+<div class="line"><span class="lineno">  201</span>                                {</div>
+<div class="line"><span class="lineno">  202</span>                                    <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;tentacle3&quot;</span>)</div>
+<div class="line"><span class="lineno">  203</span>                                    {</div>
+<div class="line"><span class="lineno">  204</span>                                        <span class="keywordflow">goto</span> IL_676;</div>
+<div class="line"><span class="lineno">  205</span>                                    }</div>
+<div class="line"><span class="lineno">  206</span>                                }</div>
+<div class="line"><span class="lineno">  207</span>                            }</div>
+<div class="line"><span class="lineno">  208</span>                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;pet_mani&quot;</span>)</div>
+<div class="line"><span class="lineno">  209</span>                            {</div>
+<div class="line"><span class="lineno">  210</span>                                <a class="code hl_class" href="classRigidExplode.html">RigidExplode</a> rigidExplode = actor.AddComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;();</div>
+<div class="line"><span class="lineno">  211</span>                                rigidExplode.particle = this.<a class="code hl_variable" href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">psExplode</a>;</div>
+<div class="line"><span class="lineno">  212</span>                                rigidExplode.chance = 0.1f;</div>
+<div class="line"><span class="lineno">  213</span>                                rigidExplode.intervalMin *= 2f;</div>
+<div class="line"><span class="lineno">  214</span>                            }</div>
+<div class="line"><span class="lineno">  215</span>                        }</div>
+<div class="line"><span class="lineno">  216</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 3239414499U)</div>
+<div class="line"><span class="lineno">  217</span>                        {</div>
+<div class="line"><span class="lineno">  218</span>                            <span class="keywordflow">if</span> (num5 == 3274701990U)</div>
+<div class="line"><span class="lineno">  219</span>                            {</div>
+<div class="line"><span class="lineno">  220</span>                                <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;sis&quot;</span>)</div>
+<div class="line"><span class="lineno">  221</span>                                {</div>
+<div class="line"><span class="lineno">  222</span>                                    <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">voice</a>)</div>
+<div class="line"><span class="lineno">  223</span>                                    {</div>
+<div class="line"><span class="lineno">  224</span>                                        hasSound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  225</span>                                    }</div>
+<div class="line"><span class="lineno">  226</span>                                }</div>
+<div class="line"><span class="lineno">  227</span>                            }</div>
+<div class="line"><span class="lineno">  228</span>                        }</div>
+<div class="line"><span class="lineno">  229</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;tentacle2&quot;</span>)</div>
+<div class="line"><span class="lineno">  230</span>                        {</div>
+<div class="line"><span class="lineno">  231</span>                            <span class="keywordflow">goto</span> IL_676;</div>
+<div class="line"><span class="lineno">  232</span>                        }</div>
+<div class="line"><span class="lineno">  233</span>                    }</div>
+<div class="line"><span class="lineno">  234</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &lt;= 3516364402U)</div>
+<div class="line"><span class="lineno">  235</span>                    {</div>
+<div class="line"><span class="lineno">  236</span>                        <span class="keywordflow">if</span> (num5 != 3340080213U)</div>
+<div class="line"><span class="lineno">  237</span>                        {</div>
+<div class="line"><span class="lineno">  238</span>                            <span class="keywordflow">if</span> (num5 == 3516364402U)</div>
+<div class="line"><span class="lineno">  239</span>                            {</div>
+<div class="line"><span class="lineno">  240</span>                                <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;mani&quot;</span>)</div>
+<div class="line"><span class="lineno">  241</span>                                {</div>
+<div class="line"><span class="lineno">  242</span>                                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  243</span>                                    {</div>
+<div class="line"><span class="lineno">  244</span>                                        actor.AddComponent&lt;<a class="code hl_class" href="classRigidAngle.html">RigidAngle</a>&gt;();</div>
+<div class="line"><span class="lineno">  245</span>                                    }</div>
+<div class="line"><span class="lineno">  246</span>                                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  247</span>                                    {</div>
+<div class="line"><span class="lineno">  248</span>                                        component2.material = this.<a class="code hl_variable" href="classHoardActor.html#a980773e6b2e267a672221dbf56b9843c">matMani</a>;</div>
+<div class="line"><span class="lineno">  249</span>                                        UnityEngine.Object.DestroyImmediate(actor.GetComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;());</div>
+<div class="line"><span class="lineno">  250</span>                                    }</div>
+<div class="line"><span class="lineno">  251</span>                                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  252</span>                                    {</div>
+<div class="line"><span class="lineno">  253</span>                                        <a class="code hl_class" href="classRigidExplode.html">RigidExplode</a> rigidExplode2 = actor.AddComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;();</div>
+<div class="line"><span class="lineno">  254</span>                                        rigidExplode2.particle = this.<a class="code hl_variable" href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">psExplode</a>;</div>
+<div class="line"><span class="lineno">  255</span>                                        rigidExplode2.radius *= 10f;</div>
+<div class="line"><span class="lineno">  256</span>                                        rigidExplode2.force *= 10f;</div>
+<div class="line"><span class="lineno">  257</span>                                        rigidExplode2.chance = 0.1f;</div>
+<div class="line"><span class="lineno">  258</span>                                        rigidExplode2.intervalMin *= 2f;</div>
+<div class="line"><span class="lineno">  259</span>                                    }</div>
+<div class="line"><span class="lineno">  260</span>                                }</div>
+<div class="line"><span class="lineno">  261</span>                            }</div>
+<div class="line"><span class="lineno">  262</span>                        }</div>
+<div class="line"><span class="lineno">  263</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;tentacle4&quot;</span>)</div>
+<div class="line"><span class="lineno">  264</span>                        {</div>
+<div class="line"><span class="lineno">  265</span>                            <span class="keywordflow">goto</span> IL_676;</div>
+<div class="line"><span class="lineno">  266</span>                        }</div>
+<div class="line"><span class="lineno">  267</span>                    }</div>
+<div class="line"><span class="lineno">  268</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 3610891294U)</div>
+<div class="line"><span class="lineno">  269</span>                    {</div>
+<div class="line"><span class="lineno">  270</span>                        <span class="keywordflow">if</span> (num5 == 4049731356U)</div>
+<div class="line"><span class="lineno">  271</span>                        {</div>
+<div class="line"><span class="lineno">  272</span>                            <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;chicken&quot;</span>)</div>
+<div class="line"><span class="lineno">  273</span>                            {</div>
+<div class="line"><span class="lineno">  274</span>                                actor.AddComponent&lt;<a class="code hl_class" href="classRigidUpdateSound.html">RigidUpdateSound</a>&gt;();</div>
+<div class="line"><span class="lineno">  275</span>                            }</div>
+<div class="line"><span class="lineno">  276</span>                        }</div>
+<div class="line"><span class="lineno">  277</span>                    }</div>
+<div class="line"><span class="lineno">  278</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id2 == <span class="stringliteral">&quot;hat_feather&quot;</span>)</div>
+<div class="line"><span class="lineno">  279</span>                    {</div>
+<div class="line"><span class="lineno">  280</span>                        <span class="keywordflow">goto</span> IL_67F;</div>
+<div class="line"><span class="lineno">  281</span>                    }</div>
+<div class="line"><span class="lineno">  282</span>                    IL_687:</div>
+<div class="line"><span class="lineno">  283</span>                    <span class="keywordflow">if</span> (item2.floating)</div>
+<div class="line"><span class="lineno">  284</span>                    {</div>
+<div class="line"><span class="lineno">  285</span>                        actor.AddComponent&lt;<a class="code hl_class" href="classRigidFloat.html">RigidFloat</a>&gt;();</div>
+<div class="line"><span class="lineno">  286</span>                    }</div>
+<div class="line"><span class="lineno">  287</span>                    component.updates = actor.GetComponents&lt;<a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>&gt;();</div>
+<div class="line"><span class="lineno">  288</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno">  289</span>                    {</div>
+<div class="line"><span class="lineno">  290</span>                        <span class="keywordtype">object</span> obj = (i == 0) ? actor : UnityEngine.Object.Instantiate&lt;GameObject&gt;(actor);</div>
+<div class="line"><span class="lineno">  291</span>                        <span class="keywordtype">float</span> num6 = this.<a class="code hl_variable" href="classHoardActor.html#ad869ea98b227d5923471323eec7cbad7">radiusX</a>;</div>
+<div class="line"><span class="lineno">  292</span>                        zero.x = this.posCenter.x + UnityEngine.Random.Range(-num6, num6);</div>
+<div class="line"><span class="lineno">  293</span>                        zero.y = this.posCenter.y + UnityEngine.Random.Range(0f, this.<a class="code hl_variable" href="classHoardActor.html#a931d5fb3be0e62a7a69423f2b4d12b79">radiusY</a> + 0.1f * (<span class="keywordtype">float</span>)num) / num4;</div>
+<div class="line"><span class="lineno">  294</span>                        zero.z = z;</div>
+<div class="line"><span class="lineno">  295</span>                        <span class="keywordtype">object</span> obj2 = obj;</div>
+<div class="line"><span class="lineno">  296</span>                        obj2.transform.position = zero;</div>
+<div class="line"><span class="lineno">  297</span>                        <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> component4 = obj2.GetComponent&lt;<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a>&gt;();</div>
+<div class="line"><span class="lineno">  298</span>                        Rigidbody2D component5 = obj2.GetComponent&lt;Rigidbody2D&gt;();</div>
+<div class="line"><span class="lineno">  299</span>                        component4.item = item2;</div>
+<div class="line"><span class="lineno">  300</span>                        component4.hasSound = hasSound;</div>
+<div class="line"><span class="lineno">  301</span>                        component4.rb = component5;</div>
+<div class="line"><span class="lineno">  302</span>                        this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>.Add(component4);</div>
+<div class="line"><span class="lineno">  303</span>                        <span class="keywordflow">if</span> (component4.<a class="code hl_variable" href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">updates</a>.Length != 0)</div>
+<div class="line"><span class="lineno">  304</span>                        {</div>
+<div class="line"><span class="lineno">  305</span>                            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a> rigidUpdate <span class="keywordflow">in</span> component4.<a class="code hl_variable" href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">updates</a>)</div>
+<div class="line"><span class="lineno">  306</span>                            {</div>
+<div class="line"><span class="lineno">  307</span>                                rigidUpdate.rb = component5;</div>
+<div class="line"><span class="lineno">  308</span>                                this.<a class="code hl_variable" href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">updates</a>.Add(rigidUpdate);</div>
+<div class="line"><span class="lineno">  309</span>                            }</div>
+<div class="line"><span class="lineno">  310</span>                        }</div>
+<div class="line"><span class="lineno">  311</span>                        component4.shadow = num3;</div>
+<div class="line"><span class="lineno">  312</span>                        component4.shadowY = y;</div>
+<div class="line"><span class="lineno">  313</span>                    }</div>
+<div class="line"><span class="lineno">  314</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  315</span>                    IL_676:</div>
+<div class="line"><span class="lineno">  316</span>                    z = -0.05f;</div>
+<div class="line"><span class="lineno">  317</span>                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  318</span>                    IL_67F:</div>
+<div class="line"><span class="lineno">  319</span>                    actor.AddComponent&lt;<a class="code hl_class" href="classRigidAngle.html">RigidAngle</a>&gt;();</div>
+<div class="line"><span class="lineno">  320</span>                    <span class="keywordflow">goto</span> IL_687;</div>
+<div class="line"><span class="lineno">  321</span>                }</div>
+<div class="line"><span class="lineno">  322</span>            }</div>
+<div class="line"><span class="lineno">  323</span>        }</div>
+<div class="line"><span class="lineno">  324</span>        this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>.Shuffle&lt;<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a>&gt;();</div>
+<div class="line"><span class="lineno">  325</span>        IEnumerable&lt;CollectibleActor&gt; enumerable2 = from a in this.actors</div>
+<div class="line"><span class="lineno">  326</span>        where a.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.tag.Contains(<span class="stringliteral">&quot;god&quot;</span>)</div>
+<div class="line"><span class="lineno">  327</span>        select a;</div>
+<div class="line"><span class="lineno">  328</span>        IEnumerable&lt;CollectibleActor&gt; enumerable3 = from a in this.actors</div>
+<div class="line"><span class="lineno">  329</span>        where a.item.Source.tag.Contains(<span class="stringliteral">&quot;chara&quot;</span>)</div>
+<div class="line"><span class="lineno">  330</span>        select a;</div>
+<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>)</div>
+<div class="line"><span class="lineno">  332</span>        {</div>
+<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">if</span> (!collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a>)</div>
+<div class="line"><span class="lineno">  334</span>            {</div>
+<div class="line"><span class="lineno">  335</span>                <span class="keywordtype">string</span> id2 = collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.id;</div>
+<div class="line"><span class="lineno">  336</span>                uint num5 = &lt;PrivateImplementationDetails&gt;.ComputeStringHash(id2);</div>
+<div class="line"><span class="lineno">  337</span>                <span class="keywordflow">if</span> (num5 &lt;= 2988676833U)</div>
+<div class="line"><span class="lineno">  338</span>                {</div>
+<div class="line"><span class="lineno">  339</span>                    <span class="keywordflow">if</span> (num5 &lt;= 1150570096U)</div>
+<div class="line"><span class="lineno">  340</span>                    {</div>
+<div class="line"><span class="lineno">  341</span>                        <span class="keywordflow">if</span> (num5 != 460777894U)</div>
+<div class="line"><span class="lineno">  342</span>                        {</div>
+<div class="line"><span class="lineno">  343</span>                            <span class="keywordflow">if</span> (num5 != 1111712579U)</div>
+<div class="line"><span class="lineno">  344</span>                            {</div>
+<div class="line"><span class="lineno">  345</span>                                <span class="keywordflow">if</span> (num5 != 1150570096U)</div>
+<div class="line"><span class="lineno">  346</span>                                {</div>
+<div class="line"><span class="lineno">  347</span>                                    <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  348</span>                                }</div>
+<div class="line"><span class="lineno">  349</span>                                <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;qulu&quot;</span>))</div>
+<div class="line"><span class="lineno">  350</span>                                {</div>
+<div class="line"><span class="lineno">  351</span>                                    <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  352</span>                                }</div>
+<div class="line"><span class="lineno">  353</span>                                <span class="keywordflow">if</span> (this.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">g__FindPair</a>|25_2(collectibleActor, <span class="stringliteral">&quot;dragon&quot;</span>, 0.3f))</div>
+<div class="line"><span class="lineno">  354</span>                                {</div>
+<div class="line"><span class="lineno">  355</span>                                    this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  356</span>                                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  357</span>                                }</div>
+<div class="line"><span class="lineno">  358</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  359</span>                            }</div>
+<div class="line"><span class="lineno">  360</span>                            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;tentacle&quot;</span>))</div>
+<div class="line"><span class="lineno">  361</span>                            {</div>
+<div class="line"><span class="lineno">  362</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  363</span>                            }</div>
+<div class="line"><span class="lineno">  364</span>                        }</div>
+<div class="line"><span class="lineno">  365</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  366</span>                        {</div>
+<div class="line"><span class="lineno">  367</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;vesda&quot;</span>))</div>
+<div class="line"><span class="lineno">  368</span>                            {</div>
+<div class="line"><span class="lineno">  369</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  370</span>                            }</div>
+<div class="line"><span class="lineno">  371</span>                            <a class="code hl_class" href="classHoardActor.html">HoardActor</a>.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a30188e8ad7c2f89601f309c70dccc5e6">g__DisableParticle</a>|25_3(collectibleActor, 50);</div>
+<div class="line"><span class="lineno">  372</span>                            <span class="keyword">using</span> (IEnumerator&lt;CollectibleActor&gt; enumerator4 = enumerable3.GetEnumerator())</div>
+<div class="line"><span class="lineno">  373</span>                            {</div>
+<div class="line"><span class="lineno">  374</span>                                <span class="keywordflow">while</span> (enumerator4.MoveNext())</div>
+<div class="line"><span class="lineno">  375</span>                                {</div>
+<div class="line"><span class="lineno">  376</span>                                    <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor2 = enumerator4.Current;</div>
+<div class="line"><span class="lineno">  377</span>                                    <span class="keywordflow">if</span> (!collectibleActor2.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a> &amp;&amp; !(collectibleActor2 == collectibleActor))</div>
+<div class="line"><span class="lineno">  378</span>                                    {</div>
+<div class="line"><span class="lineno">  379</span>                                        this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(collectibleActor, collectibleActor2, <span class="keyword">new</span> Vector3(0f, -0.25f, -0.01f));</div>
+<div class="line"><span class="lineno">  380</span>                                        collectibleActor2.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, 0f, 90f);</div>
+<div class="line"><span class="lineno">  381</span>                                        collectibleActor2.GetComponent&lt;SpriteRenderer&gt;().flipX = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  382</span>                                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  383</span>                                    }</div>
+<div class="line"><span class="lineno">  384</span>                                }</div>
+<div class="line"><span class="lineno">  385</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  386</span>                            }</div>
+<div class="line"><span class="lineno">  387</span>                            <span class="keywordflow">goto</span> IL_D2A;</div>
+<div class="line"><span class="lineno">  388</span>                        }</div>
+<div class="line"><span class="lineno">  389</span>                    }</div>
+<div class="line"><span class="lineno">  390</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 1382054340U)</div>
+<div class="line"><span class="lineno">  391</span>                    {</div>
+<div class="line"><span class="lineno">  392</span>                        <span class="keywordflow">if</span> (num5 != 2281206494U)</div>
+<div class="line"><span class="lineno">  393</span>                        {</div>
+<div class="line"><span class="lineno">  394</span>                            <span class="keywordflow">if</span> (num5 != 2988676833U)</div>
+<div class="line"><span class="lineno">  395</span>                            {</div>
+<div class="line"><span class="lineno">  396</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  397</span>                            }</div>
+<div class="line"><span class="lineno">  398</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;jure&quot;</span>))</div>
+<div class="line"><span class="lineno">  399</span>                            {</div>
+<div class="line"><span class="lineno">  400</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  401</span>                            }</div>
+<div class="line"><span class="lineno">  402</span>                            <span class="keywordflow">if</span> (this.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">g__FindPair</a>|25_2(collectibleActor, <span class="stringliteral">&quot;odina&quot;</span>, 0.3f))</div>
+<div class="line"><span class="lineno">  403</span>                            {</div>
+<div class="line"><span class="lineno">  404</span>                                this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  405</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  406</span>                            }</div>
+<div class="line"><span class="lineno">  407</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  408</span>                        }</div>
+<div class="line"><span class="lineno">  409</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  410</span>                        {</div>
+<div class="line"><span class="lineno">  411</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;itz&quot;</span>))</div>
+<div class="line"><span class="lineno">  412</span>                            {</div>
+<div class="line"><span class="lineno">  413</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  414</span>                            }</div>
+<div class="line"><span class="lineno">  415</span>                            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  416</span>                            {</div>
+<div class="line"><span class="lineno">  417</span>                                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor3 <span class="keywordflow">in</span> enumerable3)</div>
+<div class="line"><span class="lineno">  418</span>                                {</div>
+<div class="line"><span class="lineno">  419</span>                                    <span class="keywordflow">if</span> (!collectibleActor3.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a> &amp;&amp; !(collectibleActor3 == collectibleActor) &amp;&amp; collectibleActor3.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.tag.Contains(<span class="stringliteral">&quot;fem&quot;</span>))</div>
+<div class="line"><span class="lineno">  420</span>                                    {</div>
+<div class="line"><span class="lineno">  421</span>                                        this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(collectibleActor, collectibleActor3, <span class="keyword">new</span> Vector3(0.02f, 0f, -0.01f));</div>
+<div class="line"><span class="lineno">  422</span>                                        collectibleActor3.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, 0f, -90f);</div>
+<div class="line"><span class="lineno">  423</span>                                        collectibleActor3.GetComponent&lt;SpriteRenderer&gt;().flipX = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  424</span>                                        this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  425</span>                                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  426</span>                                    }</div>
+<div class="line"><span class="lineno">  427</span>                                }</div>
+<div class="line"><span class="lineno">  428</span>                                <span class="keywordflow">if</span> (collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a>)</div>
+<div class="line"><span class="lineno">  429</span>                                {</div>
+<div class="line"><span class="lineno">  430</span>                                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  431</span>                                }</div>
+<div class="line"><span class="lineno">  432</span>                            }</div>
+<div class="line"><span class="lineno">  433</span>                            collectibleActor.GetComponentInChildren&lt;ParticleSystem&gt;().SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  434</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  435</span>                        }</div>
+<div class="line"><span class="lineno">  436</span>                    }</div>
+<div class="line"><span class="lineno">  437</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  438</span>                    {</div>
+<div class="line"><span class="lineno">  439</span>                        <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;lar&quot;</span>))</div>
+<div class="line"><span class="lineno">  440</span>                        {</div>
+<div class="line"><span class="lineno">  441</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  442</span>                        }</div>
+<div class="line"><span class="lineno">  443</span>                        <span class="keywordflow">goto</span> IL_C47;</div>
+<div class="line"><span class="lineno">  444</span>                    }</div>
+<div class="line"><span class="lineno">  445</span>                }</div>
+<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &lt;= 3340080213U)</div>
+<div class="line"><span class="lineno">  447</span>                {</div>
+<div class="line"><span class="lineno">  448</span>                    <span class="keywordflow">if</span> (num5 != 3222636880U)</div>
+<div class="line"><span class="lineno">  449</span>                    {</div>
+<div class="line"><span class="lineno">  450</span>                        <span class="keywordflow">if</span> (num5 != 3239414499U)</div>
+<div class="line"><span class="lineno">  451</span>                        {</div>
+<div class="line"><span class="lineno">  452</span>                            <span class="keywordflow">if</span> (num5 != 3340080213U)</div>
+<div class="line"><span class="lineno">  453</span>                            {</div>
+<div class="line"><span class="lineno">  454</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  455</span>                            }</div>
+<div class="line"><span class="lineno">  456</span>                            <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;tentacle4&quot;</span>))</div>
+<div class="line"><span class="lineno">  457</span>                            {</div>
+<div class="line"><span class="lineno">  458</span>                                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  459</span>                            }</div>
+<div class="line"><span class="lineno">  460</span>                        }</div>
+<div class="line"><span class="lineno">  461</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;tentacle2&quot;</span>))</div>
+<div class="line"><span class="lineno">  462</span>                        {</div>
+<div class="line"><span class="lineno">  463</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  464</span>                        }</div>
+<div class="line"><span class="lineno">  465</span>                    }</div>
+<div class="line"><span class="lineno">  466</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;tentacle3&quot;</span>))</div>
+<div class="line"><span class="lineno">  467</span>                    {</div>
+<div class="line"><span class="lineno">  468</span>                        <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  469</span>                    }</div>
+<div class="line"><span class="lineno">  470</span>                }</div>
+<div class="line"><span class="lineno">  471</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 != 3842579285U)</div>
+<div class="line"><span class="lineno">  472</span>                {</div>
+<div class="line"><span class="lineno">  473</span>                    <span class="keywordflow">if</span> (num5 != 3907705998U)</div>
+<div class="line"><span class="lineno">  474</span>                    {</div>
+<div class="line"><span class="lineno">  475</span>                        <span class="keywordflow">if</span> (num5 != 4161811998U)</div>
+<div class="line"><span class="lineno">  476</span>                        {</div>
+<div class="line"><span class="lineno">  477</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  478</span>                        }</div>
+<div class="line"><span class="lineno">  479</span>                        <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;dragon&quot;</span>))</div>
+<div class="line"><span class="lineno">  480</span>                        {</div>
+<div class="line"><span class="lineno">  481</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  482</span>                        }</div>
+<div class="line"><span class="lineno">  483</span>                        <span class="keywordflow">if</span> (this.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">g__FindPair</a>|25_2(collectibleActor, <span class="stringliteral">&quot;qulu&quot;</span>, 0.3f))</div>
+<div class="line"><span class="lineno">  484</span>                        {</div>
+<div class="line"><span class="lineno">  485</span>                            this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  486</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  487</span>                        }</div>
+<div class="line"><span class="lineno">  488</span>                        <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  489</span>                    }</div>
+<div class="line"><span class="lineno">  490</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  491</span>                    {</div>
+<div class="line"><span class="lineno">  492</span>                        <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;lomi&quot;</span>))</div>
+<div class="line"><span class="lineno">  493</span>                        {</div>
+<div class="line"><span class="lineno">  494</span>                            <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  495</span>                        }</div>
+<div class="line"><span class="lineno">  496</span>                        <span class="keywordflow">if</span> (this.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">g__FindPair</a>|25_2(collectibleActor, <span class="stringliteral">&quot;lar&quot;</span>, 0.15f))</div>
+<div class="line"><span class="lineno">  497</span>                        {</div>
+<div class="line"><span class="lineno">  498</span>                            this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  499</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  500</span>                        }</div>
+<div class="line"><span class="lineno">  501</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  502</span>                    }</div>
+<div class="line"><span class="lineno">  503</span>                }</div>
+<div class="line"><span class="lineno">  504</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  505</span>                {</div>
+<div class="line"><span class="lineno">  506</span>                    <span class="keywordflow">if</span> (!(id2 == <span class="stringliteral">&quot;lulu&quot;</span>))</div>
+<div class="line"><span class="lineno">  507</span>                    {</div>
+<div class="line"><span class="lineno">  508</span>                        <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  509</span>                    }</div>
+<div class="line"><span class="lineno">  510</span>                    <span class="keywordflow">goto</span> IL_D2A;</div>
+<div class="line"><span class="lineno">  511</span>                }</div>
+<div class="line"><span class="lineno">  512</span>                <span class="keyword">using</span> (IEnumerator&lt;CollectibleActor&gt; enumerator4 = enumerable3.GetEnumerator())</div>
+<div class="line"><span class="lineno">  513</span>                {</div>
+<div class="line"><span class="lineno">  514</span>                    <span class="keywordflow">while</span> (enumerator4.MoveNext())</div>
+<div class="line"><span class="lineno">  515</span>                    {</div>
+<div class="line"><span class="lineno">  516</span>                        <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor4 = enumerator4.Current;</div>
+<div class="line"><span class="lineno">  517</span>                        <span class="keywordflow">if</span> (!collectibleActor4.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a> &amp;&amp; !(collectibleActor4 == collectibleActor))</div>
+<div class="line"><span class="lineno">  518</span>                        {</div>
+<div class="line"><span class="lineno">  519</span>                            this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(collectibleActor, collectibleActor4, <span class="keyword">new</span> Vector3(0f, 0.25f, -0.01f));</div>
+<div class="line"><span class="lineno">  520</span>                            collectibleActor.GetComponent&lt;SpriteAnimation&gt;().link = collectibleActor4.transform;</div>
+<div class="line"><span class="lineno">  521</span>                            if (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  522</span>                            {</div>
+<div class="line"><span class="lineno">  523</span>                                collectibleActor4.GetComponent&lt;SpriteRenderer&gt;().flipX = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  524</span>                            }</div>
+<div class="line"><span class="lineno">  525</span>                            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  526</span>                            {</div>
+<div class="line"><span class="lineno">  527</span>                                collectibleActor.transform.SetLocalScaleX(collectibleActor.transform.localScale.x * -1f);</div>
+<div class="line"><span class="lineno">  528</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  529</span>                            }</div>
+<div class="line"><span class="lineno">  530</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  531</span>                        }</div>
+<div class="line"><span class="lineno">  532</span>                    }</div>
+<div class="line"><span class="lineno">  533</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  534</span>                }</div>
+<div class="line"><span class="lineno">  535</span>                IL_C47:</div>
+<div class="line"><span class="lineno">  536</span>                <span class="keywordflow">if</span> (this.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">g__FindPair</a>|25_2(collectibleActor, <span class="stringliteral">&quot;lomi&quot;</span>, 0.15f))</div>
+<div class="line"><span class="lineno">  537</span>                {</div>
+<div class="line"><span class="lineno">  538</span>                    this.<a class="code hl_function" href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">MakeSteady</a>(collectibleActor);</div>
+<div class="line"><span class="lineno">  539</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  540</span>                }</div>
+<div class="line"><span class="lineno">  541</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  542</span>                IL_D33:</div>
+<div class="line"><span class="lineno">  543</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) != 0 &amp;&amp; collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.tag.Contains(<span class="stringliteral">&quot;pair&quot;</span>))</div>
+<div class="line"><span class="lineno">  544</span>                {</div>
+<div class="line"><span class="lineno">  545</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor5 <span class="keywordflow">in</span> enumerable2)</div>
+<div class="line"><span class="lineno">  546</span>                    {</div>
+<div class="line"><span class="lineno">  547</span>                        <span class="keywordflow">if</span> (!collectibleActor5.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a> &amp;&amp; !(collectibleActor5 == collectibleActor))</div>
+<div class="line"><span class="lineno">  548</span>                        {</div>
+<div class="line"><span class="lineno">  549</span>                            this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(collectibleActor, collectibleActor5, 0.26f);</div>
+<div class="line"><span class="lineno">  550</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  551</span>                        }</div>
+<div class="line"><span class="lineno">  552</span>                    }</div>
+<div class="line"><span class="lineno">  553</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  554</span>                }</div>
+<div class="line"><span class="lineno">  555</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  556</span>                IL_D2A:</div>
+<div class="line"><span class="lineno">  557</span>                <a class="code hl_class" href="classHoardActor.html">HoardActor</a>.&lt;<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>&gt;<a class="code hl_function" href="classHoardActor.html#a30188e8ad7c2f89601f309c70dccc5e6">g__DisableParticle</a>|25_3(collectibleActor, 50);</div>
+<div class="line"><span class="lineno">  558</span>                <span class="keywordflow">goto</span> IL_D33;</div>
+<div class="line"><span class="lineno">  559</span>            }</div>
+<div class="line"><span class="lineno">  560</span>        }</div>
+<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor6 <span class="keywordflow">in</span> this.actors)</div>
+<div class="line"><span class="lineno">  562</span>        {</div>
+<div class="line"><span class="lineno">  563</span>            <span class="keywordflow">if</span> (!collectibleActor6.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(3) != 0)</div>
+<div class="line"><span class="lineno">  564</span>            {</div>
+<div class="line"><span class="lineno">  565</span>                collectibleActor6.GetComponent&lt;SpriteRenderer&gt;().flipX = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  566</span>            }</div>
+<div class="line"><span class="lineno">  567</span>        }</div>
+<div class="line"><span class="lineno">  568</span>    }</div>
+<div class="ttc" id="aclassCollectibleActor_html"><div class="ttname"><a href="classCollectibleActor.html">CollectibleActor</a></div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00004">CollectibleActor.cs:5</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a51300889399b76c546f14f4ec60a7686"><div class="ttname"><a href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">CollectibleActor.paired</a></div><div class="ttdeci">bool paired</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00055">CollectibleActor.cs:55</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a918aab8414397c90eee59a9e1fc23a5b"><div class="ttname"><a href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">CollectibleActor.updates</a></div><div class="ttdeci">RigidUpdate[] updates</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00046">CollectibleActor.cs:46</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_af93429ef439cd618acf6216f4530ff8a"><div class="ttname"><a href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">CollectibleActor.item</a></div><div class="ttdeci">Hoard.Item item</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.cs:44</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a790dff7e193a284b2be7a187110677bf"><div class="ttname"><a href="classEMono.html#a790dff7e193a284b2be7a187110677bf">EMono.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00166">EMono.cs:166</a></div></div>
+<div class="ttc" id="aclassHoardActor_html"><div class="ttname"><a href="classHoardActor.html">HoardActor</a></div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00007">HoardActor.cs:8</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a06cafbb8f3020e904c95ccbd8b2107c4"><div class="ttname"><a href="classHoardActor.html#a06cafbb8f3020e904c95ccbd8b2107c4">HoardActor.passShadow</a></div><div class="ttdeci">MeshPass passShadow</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00741">HoardActor.cs:741</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a127878b6e4a747d59e9d5789ba3acc07"><div class="ttname"><a href="classHoardActor.html#a127878b6e4a747d59e9d5789ba3acc07">HoardActor.debug</a></div><div class="ttdeci">new bool debug</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00735">HoardActor.cs:735</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a30188e8ad7c2f89601f309c70dccc5e6"><div class="ttname"><a href="classHoardActor.html#a30188e8ad7c2f89601f309c70dccc5e6">HoardActor.g__DisableParticle</a></div><div class="ttdeci">static void&lt; Activate &gt; g__DisableParticle(CollectibleActor a, int chance)</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00709">HoardActor.cs:709</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a4fac413724d6b44bcbfd93b16556e624"><div class="ttname"><a href="classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624">HoardActor.MakeSteady</a></div><div class="ttdeci">void MakeSteady(CollectibleActor a)</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00580">HoardActor.cs:580</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a55621c901028b9c537ca931df8c94957"><div class="ttname"><a href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">HoardActor.actors</a></div><div class="ttdeci">List&lt; CollectibleActor &gt; actors</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00737">HoardActor.cs:737</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5ec56150a93ffe8ce6e641effe4ebe35"><div class="ttname"><a href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">HoardActor.updates</a></div><div class="ttdeci">List&lt; RigidUpdate &gt; updates</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00739">HoardActor.cs:739</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5fc3a4d50b0a973e62f195a021898fe4"><div class="ttname"><a href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">HoardActor.RefreshBG</a></div><div class="ttdeci">void RefreshBG()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00605">HoardActor.cs:605</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a67dae3a430217b345ffdd33a467612eb"><div class="ttname"><a href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">HoardActor.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00009">HoardActor.cs:10</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a7b227935e9ef7b671bf01fce2c199155"><div class="ttname"><a href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">HoardActor.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00612">HoardActor.cs:612</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a8134bdf3e23dcaa88d59af722faa02a6"><div class="ttname"><a href="classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6">HoardActor.g__FindPair</a></div><div class="ttdeci">bool&lt; Activate &gt; g__FindPair(CollectibleActor taker, string id, float dist)</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00695">HoardActor.cs:695</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a84a2e530016063495ca01b8f7214f25d"><div class="ttname"><a href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">HoardActor.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00025">HoardActor.cs:25</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a931d5fb3be0e62a7a69423f2b4d12b79"><div class="ttname"><a href="classHoardActor.html#a931d5fb3be0e62a7a69423f2b4d12b79">HoardActor.radiusY</a></div><div class="ttdeci">float radiusY</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00727">HoardActor.cs:727</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a980773e6b2e267a672221dbf56b9843c"><div class="ttname"><a href="classHoardActor.html#a980773e6b2e267a672221dbf56b9843c">HoardActor.matMani</a></div><div class="ttdeci">Material matMani</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00745">HoardActor.cs:745</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_ab8c2fd21c5eff2be54866c3accd92e4d"><div class="ttname"><a href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">HoardActor.RefreshZoom</a></div><div class="ttdeci">void RefreshZoom()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00570">HoardActor.cs:570</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_ac5f32758038aa67f792245187a6e2361"><div class="ttname"><a href="classHoardActor.html#ac5f32758038aa67f792245187a6e2361">HoardActor.sizeModCircle</a></div><div class="ttdeci">float sizeModCircle</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00731">HoardActor.cs:731</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_ad869ea98b227d5923471323eec7cbad7"><div class="ttname"><a href="classHoardActor.html#ad869ea98b227d5923471323eec7cbad7">HoardActor.radiusX</a></div><div class="ttdeci">float radiusX</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00725">HoardActor.cs:725</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_adc28a9d1448cb60a98a6570e375c7a6c"><div class="ttname"><a href="classHoardActor.html#adc28a9d1448cb60a98a6570e375c7a6c">HoardActor.angryEhe</a></div><div class="ttdeci">bool angryEhe</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00761">HoardActor.cs:761</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_aea2f2eec64994ab0940f22f6dfada8a0"><div class="ttname"><a href="classHoardActor.html#aea2f2eec64994ab0940f22f6dfada8a0">HoardActor.sizeMod</a></div><div class="ttdeci">float sizeMod</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00729">HoardActor.cs:729</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_af046c1af572b2e80df89d1c4238e0d13"><div class="ttname"><a href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">HoardActor.MakePair</a></div><div class="ttdeci">void MakePair(CollectibleActor a, CollectibleActor b, float dist=0.26f)</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00585">HoardActor.cs:585</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_afb3764d292f3305b1ec8d68b23929cec"><div class="ttname"><a href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">HoardActor.psExplode</a></div><div class="ttdeci">ParticleSystem psExplode</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00753">HoardActor.cs:753</a></div></div>
+<div class="ttc" id="aclassHoard_1_1Item_html"><div class="ttname"><a href="classHoard_1_1Item.html">Hoard.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00145">Hoard.cs:146</a></div></div>
+<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00008">Hoard.cs:9</a></div></div>
+<div class="ttc" id="aclassHoard_html_a10058610034de8b461710c6df53d31b4"><div class="ttname"><a href="classHoard.html#a10058610034de8b461710c6df53d31b4">Hoard.items</a></div><div class="ttdeci">Dictionary&lt; string, Hoard.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00104">Hoard.cs:104</a></div></div>
+<div class="ttc" id="aclassHoard_html_a356da000fbe69aba476d1dce7ffd3cc5"><div class="ttname"><a href="classHoard.html#a356da000fbe69aba476d1dce7ffd3cc5">Hoard.GetActor</a></div><div class="ttdeci">GameObject GetActor(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00089">Hoard.cs:89</a></div></div>
+<div class="ttc" id="aclassHoard_html_a96dbfa632bb1cef5c6d038035aa19d54"><div class="ttname"><a href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">Hoard.mode</a></div><div class="ttdeci">Hoard.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00110">Hoard.cs:110</a></div></div>
+<div class="ttc" id="aclassHoard_html_a9819e7cbe953c2e58096da7e1a1b3fd8"><div class="ttname"><a href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">Hoard.voice</a></div><div class="ttdeci">bool voice</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00132">Hoard.cs:132</a></div></div>
+<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9b"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Hoard.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00138">Hoard.cs:139</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a8967402ea5f93c8de1742521efd51449"><div class="ttname"><a href="classMeshPass.html#a8967402ea5f93c8de1742521efd51449">MeshPass.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00009">MeshPass.cs:9</a></div></div>
+<div class="ttc" id="aclassRigidAngle_html"><div class="ttname"><a href="classRigidAngle.html">RigidAngle</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidAngle_8cs_source.html#l00004">RigidAngle.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html"><div class="ttname"><a href="classRigidExplode.html">RigidExplode</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00004">RigidExplode.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidFloat_html"><div class="ttname"><a href="classRigidFloat.html">RigidFloat</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidFloat_8cs_source.html#l00004">RigidFloat.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidUpdateSound_html"><div class="ttname"><a href="classRigidUpdateSound.html">RigidUpdateSound</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdateSound_8cs_source.html#l00004">RigidUpdateSound.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html"><div class="ttname"><a href="classRigidUpdate.html">RigidUpdate</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00004">RigidUpdate.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00737">actors</a>, <a class="el" href="HoardActor_8cs_source.html#l00761">angryEhe</a>, <a class="el" href="HoardActor_8cs_source.html#l00612">Clear()</a>, <a class="el" href="HoardActor_8cs_source.html#l00735">debug</a>, <a class="el" href="HoardActor_8cs_source.html#l00709">g__DisableParticle()</a>, <a class="el" href="HoardActor_8cs_source.html#l00695">g__FindPair()</a>, <a class="el" href="Hoard_8cs_source.html#l00089">Hoard.GetActor()</a>, <a class="el" href="HoardActor_8cs_source.html#l00010">hoard</a>, <a class="el" href="MeshPass_8cs_source.html#l00009">MeshPass.Init()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.item</a>, <a class="el" href="Hoard_8cs_source.html#l00104">Hoard.items</a>, <a class="el" href="HoardActor_8cs_source.html#l00585">MakePair()</a>, <a class="el" href="HoardActor_8cs_source.html#l00580">MakeSteady()</a>, <a class="el" href="HoardActor_8cs_source.html#l00745">matMani</a>, <a class="el" href="Hoard_8cs_source.html#l00110">Hoard.mode</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00055">CollectibleActor.paired</a>, <a class="el" href="HoardActor_8cs_source.html#l00741">passShadow</a>, <a class="el" href="HoardActor_8cs_source.html#l00753">psExplode</a>, <a class="el" href="HoardActor_8cs_source.html#l00725">radiusX</a>, <a class="el" href="HoardActor_8cs_source.html#l00727">radiusY</a>, <a class="el" href="HoardActor_8cs_source.html#l00605">RefreshBG()</a>, <a class="el" href="HoardActor_8cs_source.html#l00570">RefreshZoom()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>, <a class="el" href="HoardActor_8cs_source.html#l00729">sizeMod</a>, <a class="el" href="HoardActor_8cs_source.html#l00731">sizeModCircle</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00046">CollectibleActor.updates</a>, <a class="el" href="HoardActor_8cs_source.html#l00739">updates</a>, and <a class="el" href="Hoard_8cs_source.html#l00132">Hoard.voice</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00045">LayerHoard.Reset()</a>.</p>
 
 </div>
 </div>
@@ -305,6 +913,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00612">612</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  613</span>    {</div>
+<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>)</div>
+<div class="line"><span class="lineno">  615</span>        {</div>
+<div class="line"><span class="lineno">  616</span>            <span class="keywordflow">if</span> (collectibleActor &amp;&amp; collectibleActor.gameObject)</div>
+<div class="line"><span class="lineno">  617</span>            {</div>
+<div class="line"><span class="lineno">  618</span>                UnityEngine.Object.DestroyImmediate(collectibleActor.gameObject);</div>
+<div class="line"><span class="lineno">  619</span>            }</div>
+<div class="line"><span class="lineno">  620</span>        }</div>
+<div class="line"><span class="lineno">  621</span>        this.actors.Clear();</div>
+<div class="line"><span class="lineno">  622</span>        this.<a class="code hl_variable" href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">updates</a>.Clear();</div>
+<div class="line"><span class="lineno">  623</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00737">actors</a>, and <a class="el" href="HoardActor_8cs_source.html#l00739">updates</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00051">LayerHoard.OnKill()</a>.</p>
 
 </div>
 </div>
@@ -332,6 +955,46 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00662">662</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  663</span>    {</div>
+<div class="line"><span class="lineno">  664</span>        <span class="keywordtype">float</span> num = RigidUpdate.delta = Time.fixedDeltaTime;</div>
+<div class="line"><span class="lineno">  665</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoardActor.html#adc28a9d1448cb60a98a6570e375c7a6c">angryEhe</a> &amp;&amp; this.<a class="code hl_variable" href="classHoardActor.html#aa826a9af1f50821c12ad1a7fbd162dfe">renton</a> &amp;&amp; this.<a class="code hl_variable" href="classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b">ehe</a> &amp;&amp; !this.<a class="code hl_variable" href="classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b">ehe</a>.<a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.isKinematic &amp;&amp; (Mathf.Abs(<span class="keyword">this</span>.renton.transform.position.x - <span class="keyword">this</span>.ehe.transform.position.x) &gt; 0.6f || <span class="keyword">this</span>.renton.transform.position.y &gt; <span class="keyword">this</span>.ehe.transform.position.y))</div>
+<div class="line"><span class="lineno">  666</span>        {</div>
+<div class="line"><span class="lineno">  667</span>            this.eheTimer += num;</div>
+<div class="line"><span class="lineno">  668</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoardActor.html#a33806fc2e852521fcaa9450f11a2f803">eheTimer</a> &gt; 2f)</div>
+<div class="line"><span class="lineno">  669</span>            {</div>
+<div class="line"><span class="lineno">  670</span>                this.ehe.rb.position = <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classHoardActor.html#aa826a9af1f50821c12ad1a7fbd162dfe">renton</a>.transform.position.x, <span class="keyword">this</span>.renton.transform.position.y + 4f, <span class="keyword">this</span>.ehe.transform.position.z);</div>
+<div class="line"><span class="lineno">  671</span>                this.<a class="code hl_variable" href="classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b">ehe</a>.<a class="code hl_function" href="classCollectibleActor.html#a614a1f18f3de2c5fd734de2af0de5057">PlaySound</a>(<span class="stringliteral">&quot;teleport&quot;</span>);</div>
+<div class="line"><span class="lineno">  672</span>                this.eheTimer = 0f;</div>
+<div class="line"><span class="lineno">  673</span>                this.<a class="code hl_variable" href="classHoardActor.html#a055b63aa38fad1a8496ad9c06b664bb5">eheCount</a>++;</div>
+<div class="line"><span class="lineno">  674</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHoardActor.html#a055b63aa38fad1a8496ad9c06b664bb5">eheCount</a> &gt; 5)</div>
+<div class="line"><span class="lineno">  675</span>                {</div>
+<div class="line"><span class="lineno">  676</span>                    this.renton.rb.constraints = RigidbodyConstraints2D.FreezePositionX;</div>
+<div class="line"><span class="lineno">  677</span>                    this.renton.rb.gravityScale = 3f;</div>
+<div class="line"><span class="lineno">  678</span>                }</div>
+<div class="line"><span class="lineno">  679</span>            }</div>
+<div class="line"><span class="lineno">  680</span>        }</div>
+<div class="line"><span class="lineno">  681</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  682</span>        {</div>
+<div class="line"><span class="lineno">  683</span>            this.eheTimer = 0f;</div>
+<div class="line"><span class="lineno">  684</span>        }</div>
+<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a> rigidUpdate <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">updates</a>)</div>
+<div class="line"><span class="lineno">  686</span>        {</div>
+<div class="line"><span class="lineno">  687</span>            <span class="keywordflow">if</span> (rigidUpdate.<a class="code hl_variable" href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">active</a>)</div>
+<div class="line"><span class="lineno">  688</span>            {</div>
+<div class="line"><span class="lineno">  689</span>                rigidUpdate.<a class="code hl_function" href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">OnFixedUpdate</a>();</div>
+<div class="line"><span class="lineno">  690</span>            }</div>
+<div class="line"><span class="lineno">  691</span>        }</div>
+<div class="line"><span class="lineno">  692</span>    }</div>
+<div class="ttc" id="aclassCollectibleActor_html_a614a1f18f3de2c5fd734de2af0de5057"><div class="ttname"><a href="classCollectibleActor.html#a614a1f18f3de2c5fd734de2af0de5057">CollectibleActor.PlaySound</a></div><div class="ttdeci">void PlaySound(string id=null)</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00024">CollectibleActor.cs:24</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_ad678e98c65bbf5d558fdcfe82ddb2dce"><div class="ttname"><a href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">CollectibleActor.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00064">CollectibleActor.cs:64</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a055b63aa38fad1a8496ad9c06b664bb5"><div class="ttname"><a href="classHoardActor.html#a055b63aa38fad1a8496ad9c06b664bb5">HoardActor.eheCount</a></div><div class="ttdeci">int eheCount</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00765">HoardActor.cs:765</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a33806fc2e852521fcaa9450f11a2f803"><div class="ttname"><a href="classHoardActor.html#a33806fc2e852521fcaa9450f11a2f803">HoardActor.eheTimer</a></div><div class="ttdeci">float eheTimer</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00763">HoardActor.cs:763</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5ec31f09edea5dc75a8d0b93c166575b"><div class="ttname"><a href="classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b">HoardActor.ehe</a></div><div class="ttdeci">CollectibleActor ehe</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00759">HoardActor.cs:759</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_aa826a9af1f50821c12ad1a7fbd162dfe"><div class="ttname"><a href="classHoardActor.html#aa826a9af1f50821c12ad1a7fbd162dfe">HoardActor.renton</a></div><div class="ttdeci">CollectibleActor renton</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00757">HoardActor.cs:757</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a6d4ca41bb6f158de8824788da6b2dfd0"><div class="ttname"><a href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">RigidUpdate.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00033">RigidUpdate.cs:33</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_af5ee37daddd2f9d113a350db83afe738"><div class="ttname"><a href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">RigidUpdate.OnFixedUpdate</a></div><div class="ttdeci">virtual void OnFixedUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00019">RigidUpdate.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00033">RigidUpdate.active</a>, <a class="el" href="HoardActor_8cs_source.html#l00761">angryEhe</a>, <a class="el" href="HoardActor_8cs_source.html#l00759">ehe</a>, <a class="el" href="HoardActor_8cs_source.html#l00765">eheCount</a>, <a class="el" href="HoardActor_8cs_source.html#l00763">eheTimer</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00019">RigidUpdate.OnFixedUpdate()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00024">CollectibleActor.PlaySound()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00064">CollectibleActor.rb</a>, <a class="el" href="HoardActor_8cs_source.html#l00757">renton</a>, and <a class="el" href="HoardActor_8cs_source.html#l00739">updates</a>.</p>
 
 </div>
 </div>
@@ -370,6 +1033,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00709">709</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  710</span>    {</div>
+<div class="line"><span class="lineno">  711</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(100) &lt; chance)</div>
+<div class="line"><span class="lineno">  712</span>        {</div>
+<div class="line"><span class="lineno">  713</span>            ParticleSystem[] componentsInChildren = a.GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
+<div class="line"><span class="lineno">  714</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">  715</span>            {</div>
+<div class="line"><span class="lineno">  716</span>                componentsInChildren[i].SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  717</span>            }</div>
+<div class="line"><span class="lineno">  718</span>        }</div>
+<div class="line"><span class="lineno">  719</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -414,6 +1091,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00695">695</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  696</span>    {</div>
+<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>)</div>
+<div class="line"><span class="lineno">  698</span>        {</div>
+<div class="line"><span class="lineno">  699</span>            <span class="keywordflow">if</span> (collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.id == <span class="keywordtype">id</span> &amp;&amp; !collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686">paired</a>)</div>
+<div class="line"><span class="lineno">  700</span>            {</div>
+<div class="line"><span class="lineno">  701</span>                this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(taker, collectibleActor, dist);</div>
+<div class="line"><span class="lineno">  702</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  703</span>            }</div>
+<div class="line"><span class="lineno">  704</span>        }</div>
+<div class="line"><span class="lineno">  705</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  706</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00737">actors</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.item</a>, <a class="el" href="HoardActor_8cs_source.html#l00585">MakePair()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00055">CollectibleActor.paired</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -458,6 +1150,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00585">585</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  586</span>    {</div>
+<div class="line"><span class="lineno">  587</span>        <span class="keywordtype">float</span> z = 0.01f;</div>
+<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">if</span> (a.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.id != <span class="stringliteral">&quot;lulu&quot;</span>)</div>
+<div class="line"><span class="lineno">  589</span>        {</div>
+<div class="line"><span class="lineno">  590</span>            z = ((Rand.rnd(2) == 0) ? 0.01f : -0.01f);</div>
+<div class="line"><span class="lineno">  591</span>        }</div>
+<div class="line"><span class="lineno">  592</span>        this.<a class="code hl_function" href="classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13">MakePair</a>(a, b, <span class="keyword">new</span> Vector3(dist, 0f, z));</div>
+<div class="line"><span class="lineno">  593</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.item</a>, and <a class="el" href="HoardActor_8cs_source.html#l00585">MakePair()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00695">g__FindPair()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00585">MakePair()</a>.</p>
 
 </div>
 </div>
@@ -502,7 +1206,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00595">595</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  596</span>    {</div>
+<div class="line"><span class="lineno">  597</span>        b.transform.SetParent(a.transform, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  598</span>        b.transform.localPosition = v;</div>
+<div class="line"><span class="lineno">  599</span>        b.GetComponent&lt;SpriteRenderer&gt;().flipX = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  600</span>        b.rb.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  601</span>        b.GetComponent&lt;Collider2D&gt;().enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  602</span>        a.paired = (b.paired = <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  603</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4fac413724d6b44bcbfd93b16556e624" name="a4fac413724d6b44bcbfd93b16556e624"></a>
@@ -530,6 +1242,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00580">580</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  581</span>    {</div>
+<div class="line"><span class="lineno">  582</span>        (a.rb ?? a.GetComponent&lt;Rigidbody2D&gt;()).freezeRotation = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  583</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -557,6 +1274,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00605">605</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  606</span>    {</div>
+<div class="line"><span class="lineno">  607</span>        this.srBG.sprite = (this.srReflection.sprite = this.<a class="code hl_property" href="classHoardActor.html#a5902bb0ac464e80de5040439d1b4f879">bg</a>.sprite);</div>
+<div class="line"><span class="lineno">  608</span>        this.<a class="code hl_variable" href="classHoardActor.html#a44d620b0cad8dd3a260cf00b2cf864e6">matReflection</a>.SetColor(<span class="stringliteral">&quot;_GrabColor&quot;</span>, <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(1f, 1f, 1f, this.<a class="code hl_property" href="classHoardActor.html#a5902bb0ac464e80de5040439d1b4f879">bg</a>.reflection * (0.01f * (<span class="keywordtype">float</span>)<span class="keyword">this</span>.hoard.reflection)));</div>
+<div class="line"><span class="lineno">  609</span>        this.<a class="code hl_variable" href="classHoardActor.html#a0afc3903c9df6c1baa23709213aaad19">srReflection</a>.SetActive(this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">reflection</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  610</span>    }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassHoardActor_html_a0afc3903c9df6c1baa23709213aaad19"><div class="ttname"><a href="classHoardActor.html#a0afc3903c9df6c1baa23709213aaad19">HoardActor.srReflection</a></div><div class="ttdeci">SpriteRenderer srReflection</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00751">HoardActor.cs:751</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a44d620b0cad8dd3a260cf00b2cf864e6"><div class="ttname"><a href="classHoardActor.html#a44d620b0cad8dd3a260cf00b2cf864e6">HoardActor.matReflection</a></div><div class="ttdeci">Material matReflection</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00743">HoardActor.cs:743</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5902bb0ac464e80de5040439d1b4f879"><div class="ttname"><a href="classHoardActor.html#a5902bb0ac464e80de5040439d1b4f879">HoardActor.bg</a></div><div class="ttdeci">HoardActor.BG bg</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00017">HoardActor.cs:18</a></div></div>
+<div class="ttc" id="aclassHoard_html_a14ed19f37de12dc8fac23f0517b0d2a2"><div class="ttname"><a href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">Hoard.reflection</a></div><div class="ttdeci">int reflection</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00116">Hoard.cs:116</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00018">bg</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="HoardActor_8cs_source.html#l00010">hoard</a>, <a class="el" href="HoardActor_8cs_source.html#l00743">matReflection</a>, <a class="el" href="Hoard_8cs_source.html#l00116">Hoard.reflection</a>, and <a class="el" href="HoardActor_8cs_source.html#l00751">srReflection</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>.</p>
 
 </div>
 </div>
@@ -584,6 +1315,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00570">570</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  571</span>    {</div>
+<div class="line"><span class="lineno">  572</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">pixelPerfect</a>)</div>
+<div class="line"><span class="lineno">  573</span>        {</div>
+<div class="line"><span class="lineno">  574</span>            this.cam.orthographicSize = (float)Screen.height * 0.5f * 0.01f * 2f;</div>
+<div class="line"><span class="lineno">  575</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  576</span>        }</div>
+<div class="line"><span class="lineno">  577</span>        this.cam.orthographicSize = 5f;</div>
+<div class="line"><span class="lineno">  578</span>    }</div>
+<div class="ttc" id="aclassHoard_html_aefbfc5625d88a1789464f6d1ab515807"><div class="ttname"><a href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">Hoard.pixelPerfect</a></div><div class="ttdeci">bool pixelPerfect</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00134">Hoard.cs:134</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00010">hoard</a>, and <a class="el" href="Hoard_8cs_source.html#l00134">Hoard.pixelPerfect</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -611,6 +1355,58 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00625">625</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  626</span>    {</div>
+<div class="line"><span class="lineno">  627</span>        this.<a class="code hl_function" href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">RefreshZoom</a>();</div>
+<div class="line"><span class="lineno">  628</span>        this.<a class="code hl_variable" href="classHoardActor.html#a980773e6b2e267a672221dbf56b9843c">matMani</a>.SetFloat(<span class="stringliteral">&quot;_Space&quot;</span>, this.<a class="code hl_variable" href="classHoardActor.html#a3cadd37f87ef9e6685793bc64cfe3349">curveMani</a>.Evaluate(Time.timeSinceLevelLoad % 10f / 10f));</div>
+<div class="line"><span class="lineno">  629</span>        <span class="keywordtype">float</span> value = (this.cam.orthographicSize &lt;= 5f) ? 0f : ((this.<a class="code hl_variable" href="classHoardActor.html#a7747d60974568f15b4983bc62eee46a9">cam</a>.orthographicSize - 5f) * this.<a class="code hl_variable" href="classHoardActor.html#a630fe0fa98bd0f37776f697b0ea64efb">reflectMod</a>);</div>
+<div class="line"><span class="lineno">  630</span>        this.<a class="code hl_variable" href="classHoardActor.html#a44d620b0cad8dd3a260cf00b2cf864e6">matReflection</a>.SetFloat(<span class="stringliteral">&quot;_Offset&quot;</span>, value);</div>
+<div class="line"><span class="lineno">  631</span>        EMono.scene.transAudio.position = <span class="keyword">new</span> Vector3(0f, this.<a class="code hl_variable" href="classHoardActor.html#a69847789557da45e516e275273059bff">groundY</a>, 0f);</div>
+<div class="line"><span class="lineno">  632</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">shadow</a>)</div>
+<div class="line"><span class="lineno">  633</span>        {</div>
+<div class="line"><span class="lineno">  634</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  635</span>        }</div>
+<div class="line"><span class="lineno">  636</span>        <span class="keywordtype">float</span> shadow = this.<a class="code hl_property" href="classHoardActor.html#a5902bb0ac464e80de5040439d1b4f879">bg</a>.shadow;</div>
+<div class="line"><span class="lineno">  637</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>)</div>
+<div class="line"><span class="lineno">  638</span>        {</div>
+<div class="line"><span class="lineno">  639</span>            <span class="keywordflow">if</span> (collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53">active</a>)</div>
+<div class="line"><span class="lineno">  640</span>            {</div>
+<div class="line"><span class="lineno">  641</span>                <span class="keywordtype">float</span> num = (collectibleActor.transform.position.y - this.<a class="code hl_variable" href="classHoardActor.html#ae939374f8199b3394a92536c1cf43f97">alphaFix1</a>) * this.<a class="code hl_variable" href="classHoardActor.html#a90a24fe22ea6949dceb4d3427d495e7f">alphaFix2</a>;</div>
+<div class="line"><span class="lineno">  642</span>                num = 1f - num * num * this.<a class="code hl_variable" href="classHoardActor.html#af7c684bf13e04097ab52a252bf8935db">alphaFix4</a>;</div>
+<div class="line"><span class="lineno">  643</span>                <span class="keywordflow">if</span> (num &gt;= 0f)</div>
+<div class="line"><span class="lineno">  644</span>                {</div>
+<div class="line"><span class="lineno">  645</span>                    <span class="keywordflow">if</span> (num &gt; this.<a class="code hl_variable" href="classHoardActor.html#a1acb3c0691144e2fefa2f13487ab68e2">maxAplha</a>)</div>
+<div class="line"><span class="lineno">  646</span>                    {</div>
+<div class="line"><span class="lineno">  647</span>                        num = this.<a class="code hl_variable" href="classHoardActor.html#a1acb3c0691144e2fefa2f13487ab68e2">maxAplha</a>;</div>
+<div class="line"><span class="lineno">  648</span>                    }</div>
+<div class="line"><span class="lineno">  649</span>                    num *= shadow;</div>
+<div class="line"><span class="lineno">  650</span>                    <span class="keywordtype">float</span> num2 = (collectibleActor.transform.position.y + this.<a class="code hl_variable" href="classHoardActor.html#a69847789557da45e516e275273059bff">groundY</a>) * 0.05f;</div>
+<div class="line"><span class="lineno">  651</span>                    <span class="keywordflow">if</span> (num2 &gt; this.<a class="code hl_variable" href="classHoardActor.html#a8ef0584635a9da083463e5292680ccaa">shdowLimitY</a>)</div>
+<div class="line"><span class="lineno">  652</span>                    {</div>
+<div class="line"><span class="lineno">  653</span>                        num2 = this.<a class="code hl_variable" href="classHoardActor.html#a8ef0584635a9da083463e5292680ccaa">shdowLimitY</a>;</div>
+<div class="line"><span class="lineno">  654</span>                    }</div>
+<div class="line"><span class="lineno">  655</span>                    this.<a class="code hl_variable" href="classHoardActor.html#a06cafbb8f3020e904c95ccbd8b2107c4">passShadow</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(collectibleActor.transform.position.x, collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a378be62783df4ddb4ff3857f8cf7b863">shadowY</a> * <span class="keyword">this</span>.sizeFixY + <span class="keyword">this</span>.groundY + num2, 0.8f, (<span class="keywordtype">float</span>)((int)(num * 1000f) * 1000 + collectibleActor.<a class="code hl_variable" href="classCollectibleActor.html#a8861e0d895aa91c870b2bb4ad4ff71eb">shadow</a>), 0f);</div>
+<div class="line"><span class="lineno">  656</span>                }</div>
+<div class="line"><span class="lineno">  657</span>            }</div>
+<div class="line"><span class="lineno">  658</span>        }</div>
+<div class="line"><span class="lineno">  659</span>        this.<a class="code hl_variable" href="classHoardActor.html#a06cafbb8f3020e904c95ccbd8b2107c4">passShadow</a>.<a class="code hl_function" href="classMeshPass.html#a26cecde5a06290ae32bfbe05d631f67c">Draw</a>();</div>
+<div class="line"><span class="lineno">  660</span>    }</div>
+<div class="ttc" id="aclassCollectibleActor_html_a378be62783df4ddb4ff3857f8cf7b863"><div class="ttname"><a href="classCollectibleActor.html#a378be62783df4ddb4ff3857f8cf7b863">CollectibleActor.shadowY</a></div><div class="ttdeci">float shadowY</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00049">CollectibleActor.cs:49</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a81ab4fa3e0dbb32ab2e0ced1acaf9e53"><div class="ttname"><a href="classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53">CollectibleActor.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00058">CollectibleActor.cs:58</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a8861e0d895aa91c870b2bb4ad4ff71eb"><div class="ttname"><a href="classCollectibleActor.html#a8861e0d895aa91c870b2bb4ad4ff71eb">CollectibleActor.shadow</a></div><div class="ttdeci">int shadow</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00052">CollectibleActor.cs:52</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a1acb3c0691144e2fefa2f13487ab68e2"><div class="ttname"><a href="classHoardActor.html#a1acb3c0691144e2fefa2f13487ab68e2">HoardActor.maxAplha</a></div><div class="ttdeci">float maxAplha</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00777">HoardActor.cs:777</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a3cadd37f87ef9e6685793bc64cfe3349"><div class="ttname"><a href="classHoardActor.html#a3cadd37f87ef9e6685793bc64cfe3349">HoardActor.curveMani</a></div><div class="ttdeci">AnimationCurve curveMani</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00747">HoardActor.cs:747</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a630fe0fa98bd0f37776f697b0ea64efb"><div class="ttname"><a href="classHoardActor.html#a630fe0fa98bd0f37776f697b0ea64efb">HoardActor.reflectMod</a></div><div class="ttdeci">float reflectMod</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00733">HoardActor.cs:733</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a69847789557da45e516e275273059bff"><div class="ttname"><a href="classHoardActor.html#a69847789557da45e516e275273059bff">HoardActor.groundY</a></div><div class="ttdeci">float groundY</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00767">HoardActor.cs:767</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a7747d60974568f15b4983bc62eee46a9"><div class="ttname"><a href="classHoardActor.html#a7747d60974568f15b4983bc62eee46a9">HoardActor.cam</a></div><div class="ttdeci">Camera cam</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00721">HoardActor.cs:721</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a8ef0584635a9da083463e5292680ccaa"><div class="ttname"><a href="classHoardActor.html#a8ef0584635a9da083463e5292680ccaa">HoardActor.shdowLimitY</a></div><div class="ttdeci">float shdowLimitY</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00769">HoardActor.cs:769</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a90a24fe22ea6949dceb4d3427d495e7f"><div class="ttname"><a href="classHoardActor.html#a90a24fe22ea6949dceb4d3427d495e7f">HoardActor.alphaFix2</a></div><div class="ttdeci">float alphaFix2</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00773">HoardActor.cs:773</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_ae939374f8199b3394a92536c1cf43f97"><div class="ttname"><a href="classHoardActor.html#ae939374f8199b3394a92536c1cf43f97">HoardActor.alphaFix1</a></div><div class="ttdeci">float alphaFix1</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00771">HoardActor.cs:771</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_af7c684bf13e04097ab52a252bf8935db"><div class="ttname"><a href="classHoardActor.html#af7c684bf13e04097ab52a252bf8935db">HoardActor.alphaFix4</a></div><div class="ttdeci">float alphaFix4</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00775">HoardActor.cs:775</a></div></div>
+<div class="ttc" id="aclassHoard_html_a48ebae85bb650431db04296ee5a9a905"><div class="ttname"><a href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">Hoard.shadow</a></div><div class="ttdeci">bool shadow</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00130">Hoard.cs:130</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a26cecde5a06290ae32bfbe05d631f67c"><div class="ttname"><a href="classMeshPass.html#a26cecde5a06290ae32bfbe05d631f67c">MeshPass.Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00261">MeshPass.cs:261</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CollectibleActor_8cs_source.html#l00058">CollectibleActor.active</a>, <a class="el" href="HoardActor_8cs_source.html#l00737">actors</a>, <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="HoardActor_8cs_source.html#l00771">alphaFix1</a>, <a class="el" href="HoardActor_8cs_source.html#l00773">alphaFix2</a>, <a class="el" href="HoardActor_8cs_source.html#l00775">alphaFix4</a>, <a class="el" href="HoardActor_8cs_source.html#l00018">bg</a>, <a class="el" href="HoardActor_8cs_source.html#l00721">cam</a>, <a class="el" href="HoardActor_8cs_source.html#l00747">curveMani</a>, <a class="el" href="MeshPass_8cs_source.html#l00261">MeshPass.Draw()</a>, <a class="el" href="HoardActor_8cs_source.html#l00767">groundY</a>, <a class="el" href="HoardActor_8cs_source.html#l00010">hoard</a>, <a class="el" href="HoardActor_8cs_source.html#l00745">matMani</a>, <a class="el" href="HoardActor_8cs_source.html#l00743">matReflection</a>, <a class="el" href="HoardActor_8cs_source.html#l00777">maxAplha</a>, <a class="el" href="HoardActor_8cs_source.html#l00741">passShadow</a>, <a class="el" href="HoardActor_8cs_source.html#l00733">reflectMod</a>, <a class="el" href="HoardActor_8cs_source.html#l00570">RefreshZoom()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00052">CollectibleActor.shadow</a>, <a class="el" href="Hoard_8cs_source.html#l00130">Hoard.shadow</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00049">CollectibleActor.shadowY</a>, and <a class="el" href="HoardActor_8cs_source.html#l00769">shdowLimitY</a>.</p>
 
 </div>
 </div>
@@ -629,6 +1425,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00737">737</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00612">Clear()</a>, <a class="el" href="HoardActor_8cs_source.html#l00695">g__FindPair()</a>, <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
+
 </div>
 </div>
 <a id="ae939374f8199b3394a92536c1cf43f97" name="ae939374f8199b3394a92536c1cf43f97"></a>
@@ -644,6 +1442,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00771">771</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -661,6 +1461,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00773">773</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
+
 </div>
 </div>
 <a id="af7c684bf13e04097ab52a252bf8935db" name="af7c684bf13e04097ab52a252bf8935db"></a>
@@ -676,6 +1478,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00775">775</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -700,6 +1504,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00761">761</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -733,6 +1539,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00721">721</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a3cadd37f87ef9e6685793bc64cfe3349" name="a3cadd37f87ef9e6685793bc64cfe3349"></a>
@@ -749,6 +1557,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00747">747</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a127878b6e4a747d59e9d5789ba3acc07" name="a127878b6e4a747d59e9d5789ba3acc07"></a>
@@ -764,6 +1574,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00735">735</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -789,6 +1601,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00759">759</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a055b63aa38fad1a8496ad9c06b664bb5" name="a055b63aa38fad1a8496ad9c06b664bb5"></a>
@@ -812,6 +1626,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00765">765</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -837,6 +1653,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00763">763</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a69847789557da45e516e275273059bff" name="a69847789557da45e516e275273059bff"></a>
@@ -852,6 +1670,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00767">767</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -869,6 +1689,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00745">745</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a44d620b0cad8dd3a260cf00b2cf864e6" name="a44d620b0cad8dd3a260cf00b2cf864e6"></a>
@@ -884,6 +1706,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00743">743</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00605">RefreshBG()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -901,6 +1725,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00777">777</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
+
 </div>
 </div>
 <a id="a06cafbb8f3020e904c95ccbd8b2107c4" name="a06cafbb8f3020e904c95ccbd8b2107c4"></a>
@@ -916,6 +1742,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00741">741</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -949,6 +1777,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00753">753</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
+
 </div>
 </div>
 <a id="ad869ea98b227d5923471323eec7cbad7" name="ad869ea98b227d5923471323eec7cbad7"></a>
@@ -964,6 +1794,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00725">725</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -981,6 +1813,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00727">727</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
+
 </div>
 </div>
 <a id="a630fe0fa98bd0f37776f697b0ea64efb" name="a630fe0fa98bd0f37776f697b0ea64efb"></a>
@@ -996,6 +1830,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00733">733</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -1021,6 +1857,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00757">757</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>.</p>
+
 </div>
 </div>
 <a id="a8ef0584635a9da083463e5292680ccaa" name="a8ef0584635a9da083463e5292680ccaa"></a>
@@ -1036,6 +1874,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00769">769</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -1069,6 +1909,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00729">729</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
+
 </div>
 </div>
 <a id="ac5f32758038aa67f792245187a6e2361" name="ac5f32758038aa67f792245187a6e2361"></a>
@@ -1084,6 +1926,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00731">731</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>.</p>
 
 </div>
 </div>
@@ -1117,6 +1961,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00751">751</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00605">RefreshBG()</a>.</p>
+
 </div>
 </div>
 <a id="a5ec56150a93ffe8ce6e641effe4ebe35" name="a5ec56150a93ffe8ce6e641effe4ebe35"></a>
@@ -1132,6 +1978,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00739">739</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00612">Clear()</a>, <a class="el" href="HoardActor_8cs_source.html#l00662">FixedUpdate()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
 
 </div>
 </div>
@@ -1157,6 +2005,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00017">17</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHoardActor.html#a5d280c658053b5268d8b1ba93e158ab7">bgs</a>[this.<a class="code hl_property" href="classHoardActor.html#a67dae3a430217b345ffdd33a467612eb">hoard</a>.<a class="code hl_variable" href="classHoard.html#ad39118bd17a9fc53d6829420e036ee0f">bg</a>];</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassHoardActor_html_a5d280c658053b5268d8b1ba93e158ab7"><div class="ttname"><a href="classHoardActor.html#a5d280c658053b5268d8b1ba93e158ab7">HoardActor.bgs</a></div><div class="ttdeci">HoardActor.BG[] bgs</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00755">HoardActor.cs:755</a></div></div>
+<div class="ttc" id="aclassHoard_html_ad39118bd17a9fc53d6829420e036ee0f"><div class="ttname"><a href="classHoard.html#ad39118bd17a9fc53d6829420e036ee0f">Hoard.bg</a></div><div class="ttdeci">int bg</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00113">Hoard.cs:113</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00605">RefreshBG()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -1181,6 +2039,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HoardActor_8cs_source.html#l00009">9</a> of file <a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af911928ea2eb22d1cbaf7e86a83a2e82"><div class="ttname"><a href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">Player.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01530">Player.cs:1530</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00605">RefreshBG()</a>, <a class="el" href="HoardActor_8cs_source.html#l00570">RefreshZoom()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00625">Update()</a>.</p>
 
 </div>
 </div>
@@ -1188,9 +2056,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="HoardActor_8cs_source.html">HoardActor.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHoardActor.html">HoardActor</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

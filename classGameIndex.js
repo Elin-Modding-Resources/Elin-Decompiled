@@ -1,0 +1,26 @@
+var classGameIndex =
+[
+    [ "Create", "classGameIndex.html#a0a22e276afebd3a87b76d32e66e863d3", null ],
+    [ "aka", "classGameIndex.html#a693b5fc7e7507113b325b3af06de6599", null ],
+    [ "color", "classGameIndex.html#a93d2c7ae84a06f54f78f0e37067446e9", null ],
+    [ "date", "classGameIndex.html#aac40546c11d34e233b83d43ed6bc4b1c", null ],
+    [ "days", "classGameIndex.html#a7982b108e2b18c67270d7f5d748b056f", null ],
+    [ "deepest", "classGameIndex.html#a639995b305458f79d7091a9e20dc4555", null ],
+    [ "difficulty", "classGameIndex.html#a83ba4f8177faeaa142fb2679094a199a", null ],
+    [ "factionName", "classGameIndex.html#a067c1fe807ad4d218d5f22e5fd9757ab", null ],
+    [ "id", "classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9", null ],
+    [ "idJob", "classGameIndex.html#a6639d33e2671d8dcdf67a56c294bfaa7", null ],
+    [ "idPortrait", "classGameIndex.html#af607534c5c632b2538fe66f6205925be", null ],
+    [ "idRace", "classGameIndex.html#a67ad4b9c4f88c2001b0b88cb104b0431", null ],
+    [ "isBackup", "classGameIndex.html#afbf3c19c68f86cf1a496c52b51fd9b16", null ],
+    [ "madeBackup", "classGameIndex.html#ad8ae29fb5cd6a74886a36d9bc660e2cc", null ],
+    [ "path", "classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701", null ],
+    [ "pcName", "classGameIndex.html#a290288aa32ce6d95924d9a599f013824", null ],
+    [ "real", "classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc", null ],
+    [ "version", "classGameIndex.html#afb5663e5e61411075ee7e74a0eaae010", null ],
+    [ "zoneName", "classGameIndex.html#adc16f3bb080248d5c3e361d1035d342f", null ],
+    [ "FormTitle", "classGameIndex.html#a7814512f978c761739aabb9245029850", null ],
+    [ "GameData", "classGameIndex.html#aeeb8881417fbc072913e7470116d496e", null ],
+    [ "RealDate", "classGameIndex.html#a055409fca29a714aace17fd83bb9eefe", null ],
+    [ "Title", "classGameIndex.html#a06cbefd55026ea5aa6331601ec274bce", null ]
+];

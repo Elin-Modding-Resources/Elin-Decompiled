@@ -1,0 +1,25 @@
+var classSourceTactics_1_1Row =
+[
+    [ "buff", "classSourceTactics_1_1Row.html#a6c633789aa7e3bb65967dd1c2e48c12c", null ],
+    [ "debuff", "classSourceTactics_1_1Row.html#a4d6a275d49b40b49cfae4651ac109c43", null ],
+    [ "detail", "classSourceTactics_1_1Row.html#aa253a8f1cb580dc890859fb9ca9dc44b", null ],
+    [ "detail_JP", "classSourceTactics_1_1Row.html#a92a54a904c7e41f95a7331aac45cc079", null ],
+    [ "detail_L", "classSourceTactics_1_1Row.html#aafcb448d3258f8b237e4455876afbcdd", null ],
+    [ "dist", "classSourceTactics_1_1Row.html#a52df1f501d5334099f5ac2ea1ae4d688", null ],
+    [ "heal", "classSourceTactics_1_1Row.html#ac0ea75908ec8044aa707656846659f69", null ],
+    [ "id", "classSourceTactics_1_1Row.html#a55884a794f58754015614815e4e42f49", null ],
+    [ "melee", "classSourceTactics_1_1Row.html#a4c314cbd164a840f91e1a2913bbe48dc", null ],
+    [ "move", "classSourceTactics_1_1Row.html#a8f4f377b2ab35f60db964960995543f3", null ],
+    [ "movePC", "classSourceTactics_1_1Row.html#a683884deccc253a4cdb79810e40640a6", null ],
+    [ "name", "classSourceTactics_1_1Row.html#aa3431dec3066e835f8b67199a468cfa5", null ],
+    [ "name_JP", "classSourceTactics_1_1Row.html#a6d4a2d3c8ec0842590b7dfaff5a5be37", null ],
+    [ "name_L", "classSourceTactics_1_1Row.html#a092853846328396067c4d112997bf650", null ],
+    [ "party", "classSourceTactics_1_1Row.html#a56e8fcbaab8c75b7c3bef7c94d752f03", null ],
+    [ "range", "classSourceTactics_1_1Row.html#a95e0a37dcb6521284c202839a3672b15", null ],
+    [ "spell", "classSourceTactics_1_1Row.html#a3f798f16e7ce9e21e2b0649c9a04a1b2", null ],
+    [ "summon", "classSourceTactics_1_1Row.html#af32d6a5f71dcc5f354f744474dd59ada", null ],
+    [ "tag", "classSourceTactics_1_1Row.html#ad3693635dcd9fafbe6500ec741130e1c", null ],
+    [ "taunt", "classSourceTactics_1_1Row.html#a2850d689be8bcc50ef42b8fe7826bfba", null ],
+    [ "GetAlias", "classSourceTactics_1_1Row.html#a4aa777b182b9250203f341fadd2af444", null ],
+    [ "UseAlias", "classSourceTactics_1_1Row.html#aaca20ed08e1636cd4bd6edb8376af3d5", null ]
+];

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSceneLightProfile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -165,6 +185,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00024">24</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a23105d07be65d110665db489d20d29f4" name="a23105d07be65d110665db489d20d29f4"></a>
@@ -180,6 +202,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00038">38</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
 
 </div>
 </div>
@@ -197,6 +221,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00040">40</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
+
 </div>
 </div>
 <a id="a9b86c9e6cc36266a68b3f84cbdde4b54" name="a9b86c9e6cc36266a68b3f84cbdde4b54"></a>
@@ -212,6 +238,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00026">26</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
 
 </div>
 </div>
@@ -229,6 +257,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00028">28</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a79a8bc3455f74fb4ff84eef174794e4a" name="a79a8bc3455f74fb4ff84eef174794e4a"></a>
@@ -244,6 +274,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00010">10</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
 
 </div>
 </div>
@@ -277,6 +309,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00034">34</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a020dfe7f01b6eeaff686d6f0d5e4b13f" name="a020dfe7f01b6eeaff686d6f0d5e4b13f"></a>
@@ -293,6 +327,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00032">32</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05760">Card.GetLightPower()</a>.</p>
+
 </div>
 </div>
 <a id="a82e2071b99c2ec6b80a8ab2777ba153f" name="a82e2071b99c2ec6b80a8ab2777ba153f"></a>
@@ -308,6 +344,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00018">18</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
 
 </div>
 </div>
@@ -341,6 +379,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00020">20</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a05b67824bfe6a13333f30d8d24ca3f4a" name="a05b67824bfe6a13333f30d8d24ca3f4a"></a>
@@ -356,6 +396,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00022">22</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
 
 </div>
 </div>
@@ -373,6 +415,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00014">14</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
+
 </div>
 </div>
 <a id="ad69fd9935d743056acc2882e3aa941be" name="ad69fd9935d743056acc2882e3aa941be"></a>
@@ -388,6 +432,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00030">30</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshGrading()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
 
 </div>
 </div>
@@ -405,6 +451,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00042">42</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="EloMapActor_8cs_source.html#l00064">EloMapActor.OnChangeHour()</a>, and <a class="el" href="PCOrbit_8cs_source.html#l00006">PCOrbit.OnChangeMin()</a>.</p>
+
 </div>
 </div>
 <a id="abcff3c7bfa79bd5e2d3af47912ba6fc2" name="abcff3c7bfa79bd5e2d3af47912ba6fc2"></a>
@@ -420,6 +468,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00016">16</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05853">Card.CalculateFOV()</a>.</p>
 
 </div>
 </div>
@@ -437,6 +487,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00044">44</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00015">TileMapElona.Draw()</a>.</p>
+
 </div>
 </div>
 <a id="a34f11cf8631a9ab20639eb1dd24f62e6" name="a34f11cf8631a9ab20639eb1dd24f62e6"></a>
@@ -452,6 +504,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00046">46</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00039">BaseTileMap.Draw()</a>.</p>
 
 </div>
 </div>
@@ -469,6 +523,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00048">48</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.RefreshAll()</a>.</p>
+
 </div>
 </div>
 <a id="acd27a85683ea128cf10f4ddc1991833c" name="acd27a85683ea128cf10f4ddc1991833c"></a>
@@ -484,6 +540,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00050">50</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00395">BaseGameScreen.RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -501,15 +559,21 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SceneLightProfile_8cs_source.html#l00036">36</a> of file <a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00222">BaseGameScreen.UpdateShaders()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SceneLightProfile_8cs_source.html">SceneLightProfile.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSceneLightProfile.html">SceneLightProfile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

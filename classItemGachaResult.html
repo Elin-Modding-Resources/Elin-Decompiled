@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classItemGachaResult.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -205,6 +225,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00058">58</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a2f771c57aff4cadced233cac4402c29e">textResult</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a2f771c57aff4cadced233cac4402c29e">textResult</a>.SetText(add ? <span class="stringliteral">&quot;Get!&quot;</span> : <span class="stringliteral">&quot;Discarded&quot;</span>, add ? FontColor.Good : FontColor.Bad);</div>
+<div class="line"><span class="lineno">   62</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#aa7a4b5d028a45e221973275ba844b5c1">buttonDump</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a590d0bbf0ae6c42cbf5b1f5a589968c9">buttonGet</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a87a954caeca2c06477cdcc7bc7bd19e5">layer</a>.<a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.Remove(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (add)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a04e759d761511b35ecb2458813c9a549">Home</a>.<a class="code hl_function" href="classFaction.html#a69acebee7fa06e42b99f28d147dbddef">AddReserve</a>(this.<a class="code hl_variable" href="classItemGachaResult.html#a6c1bea2f64472d41ac6e1261e76cf12a">chara</a>);</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;gachaAdd&quot;</span>, this.<a class="code hl_variable" href="classItemGachaResult.html#a6c1bea2f64472d41ac6e1261e76cf12a">chara</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(this.<a class="code hl_function" href="classItemGachaResult.html#ad796ebd84d07d891384352b6bae981bf">GetMedal</a>(), <span class="stringliteral">&quot;medal&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classItemGachaResult.html#a87a954caeca2c06477cdcc7bc7bd19e5">layer</a>.<a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            this.<a class="code hl_variable" href="classItemGachaResult.html#a87a954caeca2c06477cdcc7bc7bd19e5">layer</a>.Close();</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassCard_html_a96f39d6bde48b6e50faef3539a3b46c5"><div class="ttname"><a href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">Card.ModCurrency</a></div><div class="ttdeci">void ModCurrency(int a, string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03792">Card.cs:3792</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a04e759d761511b35ecb2458813c9a549"><div class="ttname"><a href="classEMono.html#a04e759d761511b35ecb2458813c9a549">EMono.Home</a></div><div class="ttdeci">static Faction Home</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00078">EMono.cs:79</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<div class="ttc" id="aclassFaction_html_a69acebee7fa06e42b99f28d147dbddef"><div class="ttname"><a href="classFaction.html#a69acebee7fa06e42b99f28d147dbddef">Faction.AddReserve</a></div><div class="ttdeci">void AddReserve(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00189">Faction.2.cs:189</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_a2f771c57aff4cadced233cac4402c29e"><div class="ttname"><a href="classItemGachaResult.html#a2f771c57aff4cadced233cac4402c29e">ItemGachaResult.textResult</a></div><div class="ttdeci">UIText textResult</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00096">ItemGachaResult.cs:96</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_a590d0bbf0ae6c42cbf5b1f5a589968c9"><div class="ttname"><a href="classItemGachaResult.html#a590d0bbf0ae6c42cbf5b1f5a589968c9">ItemGachaResult.buttonGet</a></div><div class="ttdeci">UIButton buttonGet</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00080">ItemGachaResult.cs:80</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_a6c1bea2f64472d41ac6e1261e76cf12a"><div class="ttname"><a href="classItemGachaResult.html#a6c1bea2f64472d41ac6e1261e76cf12a">ItemGachaResult.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00086">ItemGachaResult.cs:86</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_a87a954caeca2c06477cdcc7bc7bd19e5"><div class="ttname"><a href="classItemGachaResult.html#a87a954caeca2c06477cdcc7bc7bd19e5">ItemGachaResult.layer</a></div><div class="ttdeci">LayerGachaResult layer</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00104">ItemGachaResult.cs:104</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_aa7a4b5d028a45e221973275ba844b5c1"><div class="ttname"><a href="classItemGachaResult.html#aa7a4b5d028a45e221973275ba844b5c1">ItemGachaResult.buttonDump</a></div><div class="ttdeci">UIButton buttonDump</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00082">ItemGachaResult.cs:82</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_ad796ebd84d07d891384352b6bae981bf"><div class="ttname"><a href="classItemGachaResult.html#ad796ebd84d07d891384352b6bae981bf">ItemGachaResult.GetMedal</a></div><div class="ttdeci">int GetMedal()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00053">ItemGachaResult.cs:53</a></div></div>
+<div class="ttc" id="aclassLayerGachaResult_html_a65bcbb6e846dea42cc4874558cc46c6e"><div class="ttname"><a href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">LayerGachaResult.items</a></div><div class="ttdeci">List&lt; ItemGachaResult &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="LayerGachaResult_8cs_source.html#l00134">LayerGachaResult.cs:134</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00189">Faction.AddReserve()</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00082">buttonDump</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00080">buttonGet</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00086">chara</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00053">GetMedal()</a>, <a class="el" href="EMono_8cs_source.html#l00079">EMono.Home</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00134">LayerGachaResult.items</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00104">layer</a>, <a class="el" href="Card_8cs_source.html#l03792">Card.ModCurrency()</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00096">textResult</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGachaResult_8cs_source.html#l00007">LayerGachaResult.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -232,6 +290,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00053">53</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00114">LayerGachaResult.Refresh()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -270,6 +333,72 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00008">8</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        this.layer = _layer;</div>
+<div class="line"><span class="lineno">   11</span>        this.chara = c;</div>
+<div class="line"><span class="lineno">   12</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#aef7fd8384fcf36fb4e4c35563af6dd93">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(c, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#aec77afc7be7a3a9811822ad9924234ea">IsPCC</a>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            this.portrait.imageChara.transform.localScale = <span class="keyword">new</span> Vector3(1.4f, 1.4f, 1f);</div>
+<div class="line"><span class="lineno">   16</span>            this.portrait.imageChara.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(45f, -120f);</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>        this.textName.text = c.<a class="code hl_property" href="classChara.html#a77fdd5861e500e5a7faf16fb89577bdf">NameBraced</a>;</div>
+<div class="line"><span class="lineno">   19</span>        this.textJob.text = c.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetName();</div>
+<div class="line"><span class="lineno">   20</span>        this.textBio.text = c.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_function" href="classBiography.html#a44bdd85a54ff8fd53f6389999d4ddb4d">TextBio</a>(c);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keyword">using</span> (List&lt;Element&gt;.Enumerator enumerator = c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319">ListBestSkills</a>().GetEnumerator())</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <a class="code hl_class" href="classElement.html">Element</a> e = enumerator.Current;</div>
+<div class="line"><span class="lineno">   26</span>                HintIcon hintIcon = Util.Instantiate&lt;HintIcon&gt;(<span class="stringliteral">&quot;UI/Element/Item/Tag Skill&quot;</span>, this.<a class="code hl_variable" href="classItemGachaResult.html#ac891f1d9d0a8aa01dbcf8b725ce0c5a0">layoutTag</a>);</div>
+<div class="line"><span class="lineno">   27</span>                hintIcon.text.SetText(e.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>);</div>
+<div class="line"><span class="lineno">   28</span>                hintIcon.text2.SetText(e.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>                hintIcon.tooltip.onShowTooltip = delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    e.<a class="code hl_function" href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">WriteNote</a>(t.note, <span class="keyword">this</span>.chara.elements, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   32</span>                };</div>
+<div class="line"><span class="lineno">   33</span>                hintIcon.RebuildLayout(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a2f771c57aff4cadced233cac4402c29e">textResult</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   37</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#a590d0bbf0ae6c42cbf5b1f5a589968c9">buttonGet</a>.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<span class="stringliteral">&quot;good&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>            this.<a class="code hl_enumvalue" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437a70d9be9b139893aa6c69b5e77e614311">Confirm</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   41</span>        });</div>
+<div class="line"><span class="lineno">   42</span>        this.buttonDump.tooltip.text = <span class="stringliteral">&quot;gachaDump&quot;</span>.lang(this.<a class="code hl_function" href="classItemGachaResult.html#ad796ebd84d07d891384352b6bae981bf">GetMedal</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   43</span>        this.<a class="code hl_variable" href="classItemGachaResult.html#aa7a4b5d028a45e221973275ba844b5c1">buttonDump</a>.onClick.AddListener(delegate()</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<span class="stringliteral">&quot;pay&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>            this.<a class="code hl_enumvalue" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437a70d9be9b139893aa6c69b5e77e614311">Confirm</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   47</span>        });</div>
+<div class="line"><span class="lineno">   48</span>        this.textHobby.text = c.<a class="code hl_function" href="classChara.html#aed18d9ca0be38c0cc0abdabc43d234ed">GetTextHobby</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   49</span>        this.textWork.text = c.<a class="code hl_function" href="classChara.html#aec227517705fb2b46491142b695974f2">GetTextWork</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   50</span>        this.textLifeStyle.text = <span class="stringliteral">&quot;lifestyle&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + (<span class="stringliteral">&quot;lifestyle_&quot;</span> + c.<a class="code hl_property" href="classChara.html#ae72a18bef98f4d508e2fe85deecd923c">idTimeTable</a>).lang();</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437a70d9be9b139893aa6c69b5e77e614311"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437a70d9be9b139893aa6c69b5e77e614311">PickerState.Confirm</a></div><div class="ttdeci">@ Confirm</div></div>
+<div class="ttc" id="aclassBiography_html_a44bdd85a54ff8fd53f6389999d4ddb4d"><div class="ttname"><a href="classBiography.html#a44bdd85a54ff8fd53f6389999d4ddb4d">Biography.TextBio</a></div><div class="ttdeci">string TextBio(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00497">Biography.cs:497</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a55b6cd5c5f3858985829502876c52318"><div class="ttname"><a href="classCard.html#a55b6cd5c5f3858985829502876c52318">Card.bio</a></div><div class="ttdeci">Biography bio</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07289">Card.cs:7289</a></div></div>
+<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00307">Chara.cs:308</a></div></div>
+<div class="ttc" id="aclassChara_html_a77fdd5861e500e5a7faf16fb89577bdf"><div class="ttname"><a href="classChara.html#a77fdd5861e500e5a7faf16fb89577bdf">Chara.NameBraced</a></div><div class="ttdeci">string NameBraced</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00391">Chara.cs:392</a></div></div>
+<div class="ttc" id="aclassChara_html_ae72a18bef98f4d508e2fe85deecd923c"><div class="ttname"><a href="classChara.html#ae72a18bef98f4d508e2fe85deecd923c">Chara.idTimeTable</a></div><div class="ttdeci">string idTimeTable</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00320">Chara.cs:321</a></div></div>
+<div class="ttc" id="aclassChara_html_aec227517705fb2b46491142b695974f2"><div class="ttname"><a href="classChara.html#aec227517705fb2b46491142b695974f2">Chara.GetTextWork</a></div><div class="ttdeci">string GetTextWork(bool simple=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08084">Chara.cs:8084</a></div></div>
+<div class="ttc" id="aclassChara_html_aec77afc7be7a3a9811822ad9924234ea"><div class="ttname"><a href="classChara.html#aec77afc7be7a3a9811822ad9924234ea">Chara.IsPCC</a></div><div class="ttdeci">override bool IsPCC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00564">Chara.cs:565</a></div></div>
+<div class="ttc" id="aclassChara_html_aed18d9ca0be38c0cc0abdabc43d234ed"><div class="ttname"><a href="classChara.html#aed18d9ca0be38c0cc0abdabc43d234ed">Chara.GetTextHobby</a></div><div class="ttdeci">string GetTextHobby(bool simple=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08074">Chara.cs:8074</a></div></div>
+<div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00134">EMono.cs:135</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_aae6af3f16e4db24da44b8d8184ada319"><div class="ttname"><a href="classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319">ElementContainer.ListBestSkills</a></div><div class="ttdeci">List&lt; Element &gt; ListBestSkills()</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00625">ElementContainer.cs:625</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
+<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassElement_html_aa4bf612a89ba65848dfa1cb60df72a3c"><div class="ttname"><a href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">Element.WriteNote</a></div><div class="ttdeci">void WriteNote(UINote n, ElementContainer owner=null, Action&lt; UINote &gt; onWriteNote=null)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00453">Element.2.cs:453</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_ac891f1d9d0a8aa01dbcf8b725ce0c5a0"><div class="ttname"><a href="classItemGachaResult.html#ac891f1d9d0a8aa01dbcf8b725ce0c5a0">ItemGachaResult.layoutTag</a></div><div class="ttdeci">LayoutGroup layoutTag</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00106">ItemGachaResult.cs:106</a></div></div>
+<div class="ttc" id="aclassItemGachaResult_html_aef7fd8384fcf36fb4e4c35563af6dd93"><div class="ttname"><a href="classItemGachaResult.html#aef7fd8384fcf36fb4e4c35563af6dd93">ItemGachaResult.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ItemGachaResult_8cs_source.html#l00084">ItemGachaResult.cs:84</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00098">Portrait.cs:98</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l07289">Card.bio</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00082">buttonDump</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00080">buttonGet</a>, <a class="el" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437a70d9be9b139893aa6c69b5e77e614311">Confirm</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00053">GetMedal()</a>, <a class="el" href="Chara_8cs_source.html#l08074">Chara.GetTextHobby()</a>, <a class="el" href="Chara_8cs_source.html#l08084">Chara.GetTextWork()</a>, <a class="el" href="Chara_8cs_source.html#l00321">Chara.idTimeTable</a>, <a class="el" href="Chara_8cs_source.html#l00565">Chara.IsPCC</a>, <a class="el" href="Chara_8cs_source.html#l00308">Chara.job</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00106">layoutTag</a>, <a class="el" href="ElementContainer_8cs_source.html#l00625">ElementContainer.ListBestSkills()</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="Chara_8cs_source.html#l00392">Chara.NameBraced</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00084">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, <a class="el" href="EMono_8cs_source.html#l00135">EMono.Sound</a>, <a class="el" href="Biography_8cs_source.html#l00497">Biography.TextBio()</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00096">textResult</a>, <a class="el" href="Element_82_8cs_source.html#l00054">Element.Value</a>, and <a class="el" href="Element_82_8cs_source.html#l00453">Element.WriteNote()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGachaResult_8cs_source.html#l00007">LayerGachaResult.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -288,6 +417,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00082">82</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="a590d0bbf0ae6c42cbf5b1f5a589968c9" name="a590d0bbf0ae6c42cbf5b1f5a589968c9"></a>
@@ -303,6 +434,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00080">80</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -320,6 +453,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00086">86</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>.</p>
+
 </div>
 </div>
 <a id="a87a954caeca2c06477cdcc7bc7bd19e5" name="a87a954caeca2c06477cdcc7bc7bd19e5"></a>
@@ -335,6 +470,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00104">104</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>.</p>
 
 </div>
 </div>
@@ -352,6 +489,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00106">106</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="aef7fd8384fcf36fb4e4c35563af6dd93" name="aef7fd8384fcf36fb4e4c35563af6dd93"></a>
@@ -367,6 +506,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00084">84</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
 
 </div>
 </div>
@@ -480,6 +621,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGachaResult_8cs_source.html#l00096">96</a> of file <a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ItemGachaResult_8cs_source.html#l00058">Confirm()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00008">SetChara()</a>.</p>
+
 </div>
 </div>
 <a id="a43a918ac980186b5e1249bbe1eaed345" name="a43a918ac980186b5e1249bbe1eaed345"></a>
@@ -502,9 +645,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="ItemGachaResult_8cs_source.html">ItemGachaResult.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classItemGachaResult.html">ItemGachaResult</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classButtonAbility.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -191,6 +211,14 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00216">216</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>    {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> _act.TargetType.CanSelectSelf &amp;&amp; (!EClass._zone.IsRegion || !_act.<a class="code hl_property" href="classAct.html#a500995532864367830e20593687d4fde">LocalAct</a>);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="ttc" id="aclassAct_html_a500995532864367830e20593687d4fde"><div class="ttname"><a href="classAct.html#a500995532864367830e20593687d4fde">Act.LocalAct</a></div><div class="ttdeci">virtual bool LocalAct</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00349">Act.2.cs:350</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Act_82_8cs_source.html#l00350">Act.LocalAct</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00231">ShowMouseHintRight()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00080">Use()</a>.</p>
 
 </div>
 </div>
@@ -218,6 +246,13 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00241">241</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>    {</div>
+<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AllowInventoryInteractions;</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -247,7 +282,10 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c">IMouseHint</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00226">226</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  227</span>    {</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af83d47b47d2b2546bbdc4706fe804721" name="af83d47b47d2b2546bbdc4706fe804721"></a>
@@ -276,7 +314,10 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280">IMouseHint</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00236">236</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;actUse&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adf1ba0fff97280319d266610c3c7c4d0" name="adf1ba0fff97280319d266610c3c7c4d0"></a>
@@ -303,6 +344,18 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00210">210</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">SetCurrentHotItem</a>(<span class="keyword">new</span> <a class="code hl_class" href="classHotItemAct.html">HotItemAct</a>(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>));</div>
+<div class="line"><span class="lineno">  213</span>        SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_a7f8966240ba94ebea2a0309754a64e52"><div class="ttname"><a href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">ButtonAbility.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00284">ButtonAbility.cs:284</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassHotItemAct_html"><div class="ttname"><a href="classHotItemAct.html">HotItemAct</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemAct_8cs_source.html#l00006">HotItemAct.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_afbe334fb5e8a370af1caffdf123e585e"><div class="ttname"><a href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">Player.SetCurrentHotItem</a></div><div class="ttdeci">void SetCurrentHotItem(HotItem item)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01025">Player.cs:1025</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01025">Player.SetCurrentHotItem()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00284">source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00246">OnMiddleClick()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00080">Use()</a>.</p>
 
 </div>
 </div>
@@ -331,6 +384,28 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00049">49</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e">dragParent</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (data.button != PointerEventData.InputButton.Left)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classButtonAbility.html#ab2c6b4fbb4addbc5f27314bfaf69cbbd">dragged</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.dragged = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   62</span>            this.<a class="code hl_variable" href="classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e">dragParent</a>.OnStartDrag(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   63</span>            base.OnPointerUpOnDrag(data);</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        this.<a class="code hl_variable" href="classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e">dragParent</a>.OnDrag(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_a824f8581d48e424ab5c10fb77415301e"><div class="ttname"><a href="classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e">ButtonAbility.dragParent</a></div><div class="ttdeci">IDragParent dragParent</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00286">ButtonAbility.cs:286</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_ab2c6b4fbb4addbc5f27314bfaf69cbbd"><div class="ttname"><a href="classButtonAbility.html#ab2c6b4fbb4addbc5f27314bfaf69cbbd">ButtonAbility.dragged</a></div><div class="ttdeci">bool dragged</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00303">ButtonAbility.cs:303</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00303">dragged</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00286">dragParent</a>.</p>
 
 </div>
 </div>
@@ -359,6 +434,24 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00246">246</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (EInput.middleMouse.clicked)</div>
+<div class="line"><span class="lineno">  249</span>        {</div>
+<div class="line"><span class="lineno">  250</span>            this.<a class="code hl_function" href="classButtonAbility.html#a3ecf63495b612e17e0a72109f5ca3460">ToggleFav</a>();</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>        EInput.middleMouse.pressedLongAction = delegate()</div>
+<div class="line"><span class="lineno">  253</span>        {</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AllowInventoryInteractions)</div>
+<div class="line"><span class="lineno">  255</span>            {</div>
+<div class="line"><span class="lineno">  256</span>                this.<a class="code hl_function" href="classButtonAbility.html#adf1ba0fff97280319d266610c3c7c4d0">HoldAbility</a>();</div>
+<div class="line"><span class="lineno">  257</span>                EInput.Consume(<span class="keyword">false</span>, 1);</div>
+<div class="line"><span class="lineno">  258</span>            }</div>
+<div class="line"><span class="lineno">  259</span>        };</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_a3ecf63495b612e17e0a72109f5ca3460"><div class="ttname"><a href="classButtonAbility.html#a3ecf63495b612e17e0a72109f5ca3460">ButtonAbility.ToggleFav</a></div><div class="ttdeci">void ToggleFav()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00262">ButtonAbility.cs:262</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_adf1ba0fff97280319d266610c3c7c4d0"><div class="ttname"><a href="classButtonAbility.html#adf1ba0fff97280319d266610c3c7c4d0">ButtonAbility.HoldAbility</a></div><div class="ttdeci">void HoldAbility()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00210">ButtonAbility.cs:210</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00210">HoldAbility()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00262">ToggleFav()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -387,6 +480,17 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00069">69</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classButtonAbility.html#ab2c6b4fbb4addbc5f27314bfaf69cbbd">dragged</a>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            this.dragged = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_variable" href="classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e">dragParent</a>.OnEndDrag(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        base.OnPointerUp(eventData);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00303">dragged</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00286">dragParent</a>.</p>
 
 </div>
 </div>
@@ -414,6 +518,16 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00278">278</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordtype">bool</span> enable = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Contains(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>.id);</div>
+<div class="line"><span class="lineno">  281</span>        this.<a class="code hl_variable" href="classButtonAbility.html#aef9b2e4fbb772c54436f2f0d292a4154">imageFav</a>.SetActive(enable);</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_aef9b2e4fbb772c54436f2f0d292a4154"><div class="ttname"><a href="classButtonAbility.html#aef9b2e4fbb772c54436f2f0d292a4154">ButtonAbility.imageFav</a></div><div class="ttdeci">Image imageFav</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00292">ButtonAbility.cs:292</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a9f5205a935f87557f969deca18fa3d84"><div class="ttname"><a href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">Player.favAbility</a></div><div class="ttdeci">HashSet&lt; int &gt; favAbility</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01506">Player.cs:1506</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01506">Player.favAbility</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00292">imageFav</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00284">source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00262">ToggleFav()</a>.</p>
 
 </div>
 </div>
@@ -452,6 +566,67 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00008">8</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        this.source = e.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>;</div>
+<div class="line"><span class="lineno">   11</span>        this.chara = _chara;</div>
+<div class="line"><span class="lineno">   12</span>        this.act = <a class="code hl_class" href="classACT.html">ACT</a>.<a class="code hl_function" href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">Create</a>(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>);</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            Debug.Log(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>.alias);</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        Sprite iconType = this.<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_property" href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">TargetType</a>.<a class="code hl_property" href="classTargetType.html#a4bee9e2ad63198f3daf0a0935e9b7942">IconType</a>;</div>
+<div class="line"><span class="lineno">   18</span>        this.<a class="code hl_variable" href="classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869">imageType</a>.SetActive(iconType);</div>
+<div class="line"><span class="lineno">   19</span>        this.imageType.sprite = iconType;</div>
+<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_function" href="classAct.html#afbe8a7c9e5139d43f78ddde88e015b17">SetImage</a>(this.icon);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            this.<a class="code hl_variable" href="classButtonAbility.html#a306a857f888accf8ab432811bc106b8c">textStock</a>.SetActive(e is <a class="code hl_class" href="classSpell.html">Spell</a>);</div>
+<div class="line"><span class="lineno">   24</span>            this.textStock.text = (e.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>            this.onRightClick = delegate()</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.IsActive)</div>
+<div class="line"><span class="lineno">   28</span>                {</div>
+<div class="line"><span class="lineno">   29</span>                    SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   30</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>                }</div>
+<div class="line"><span class="lineno">   32</span>                this.<a class="code hl_function" href="classButtonAbility.html#a446f0c510e562916432d63aac2c2e2b0">Use</a>();</div>
+<div class="line"><span class="lineno">   33</span>            };</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.mainText.SetText(e.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        base.SetTooltip(<span class="stringliteral">&quot;note&quot;</span>, delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            e.<a class="code hl_function" href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">WriteNote</a>(t.note, <span class="keyword">this</span>.chara.elements, delegate(UINote n)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                e.<a class="code hl_function" href="classElement.html#a44ec7d5b4683382abeda62c48e135e7f">_WriteNote</a>(t.note, <span class="keyword">this</span>.chara, <span class="keyword">this</span>.act);</div>
+<div class="line"><span class="lineno">   44</span>            });</div>
+<div class="line"><span class="lineno">   45</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   46</span>        this.<a class="code hl_function" href="classButtonAbility.html#a5cdf93ec4cd086277ce250902629a52e">RefreshFavIcon</a>();</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassACT_html"><div class="ttname"><a href="classACT.html">ACT</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00004">ACT.cs:5</a></div></div>
+<div class="ttc" id="aclassACT_html_ac02237de965af1a9ce4c5f088f0e62c2"><div class="ttname"><a href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">ACT.Create</a></div><div class="ttdeci">static Act Create(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00017">ACT.cs:17</a></div></div>
+<div class="ttc" id="aclassAct_html_aa3b011668766e36997dcf0a9fd1483ec"><div class="ttname"><a href="classAct.html#aa3b011668766e36997dcf0a9fd1483ec">Act.TargetType</a></div><div class="ttdeci">virtual TargetType TargetType</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00271">Act.2.cs:272</a></div></div>
+<div class="ttc" id="aclassAct_html_afbe8a7c9e5139d43f78ddde88e015b17"><div class="ttname"><a href="classAct.html#afbe8a7c9e5139d43f78ddde88e015b17">Act.SetImage</a></div><div class="ttdeci">new void SetImage(Image image)</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00524">Act.2.cs:524</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a27f2ea4d22788e6fea2055cbc1c06869"><div class="ttname"><a href="classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869">ButtonAbility.imageType</a></div><div class="ttdeci">Image imageType</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00290">ButtonAbility.cs:290</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a306a857f888accf8ab432811bc106b8c"><div class="ttname"><a href="classButtonAbility.html#a306a857f888accf8ab432811bc106b8c">ButtonAbility.textStock</a></div><div class="ttdeci">UIText textStock</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00288">ButtonAbility.cs:288</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a446f0c510e562916432d63aac2c2e2b0"><div class="ttname"><a href="classButtonAbility.html#a446f0c510e562916432d63aac2c2e2b0">ButtonAbility.Use</a></div><div class="ttdeci">void Use()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00080">ButtonAbility.cs:80</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a5cdf93ec4cd086277ce250902629a52e"><div class="ttname"><a href="classButtonAbility.html#a5cdf93ec4cd086277ce250902629a52e">ButtonAbility.RefreshFavIcon</a></div><div class="ttdeci">void RefreshFavIcon()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00278">ButtonAbility.cs:278</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_aa6fba54811acd29a18e70b8b177cfcd8"><div class="ttname"><a href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">ButtonAbility.act</a></div><div class="ttdeci">Act act</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00300">ButtonAbility.cs:300</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassElement_html_a44ec7d5b4683382abeda62c48e135e7f"><div class="ttname"><a href="classElement.html#a44ec7d5b4683382abeda62c48e135e7f">Element._WriteNote</a></div><div class="ttdeci">void _WriteNote(UINote n, Chara c, Act act)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00468">Element.2.cs:468</a></div></div>
+<div class="ttc" id="aclassElement_html_a458fcaa631dde18afaff0d34f26d70fe"><div class="ttname"><a href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">Element.vPotential</a></div><div class="ttdeci">int vPotential</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00882">Element.2.cs:882</a></div></div>
+<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassElement_html_aa4bf612a89ba65848dfa1cb60df72a3c"><div class="ttname"><a href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">Element.WriteNote</a></div><div class="ttdeci">void WriteNote(UINote n, ElementContainer owner=null, Action&lt; UINote &gt; onWriteNote=null)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00453">Element.2.cs:453</a></div></div>
+<div class="ttc" id="aclassGame_html_a0b6ef45569f091050847284c1abc35c5"><div class="ttname"><a href="classGame.html#a0b6ef45569f091050847284c1abc35c5">Game.altAbility</a></div><div class="ttdeci">bool altAbility</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00088">Game.cs:89</a></div></div>
+<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="Spell_82_8cs_source.html#l00003">Spell.2.cs:4</a></div></div>
+<div class="ttc" id="aclassTargetType_html_a4bee9e2ad63198f3daf0a0935e9b7942"><div class="ttname"><a href="classTargetType.html#a4bee9e2ad63198f3daf0a0935e9b7942">TargetType.IconType</a></div><div class="ttdeci">virtual Sprite IconType</div><div class="ttdef"><b>Definition:</b> <a href="TargetType_8cs_source.html#l00078">TargetType.cs:79</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00468">Element._WriteNote()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00300">act</a>, <a class="el" href="Game_8cs_source.html#l00089">Game.altAbility</a>, <a class="el" href="ACT_8cs_source.html#l00017">ACT.Create()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="TargetType_8cs_source.html#l00079">TargetType.IconType</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00290">imageType</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00278">RefreshFavIcon()</a>, <a class="el" href="Act_82_8cs_source.html#l00524">Act.SetImage()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00284">source</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="Act_82_8cs_source.html#l00272">Act.TargetType</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00288">textStock</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00080">Use()</a>, <a class="el" href="Element_82_8cs_source.html#l00882">Element.vPotential</a>, and <a class="el" href="Element_82_8cs_source.html#l00453">Element.WriteNote()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00146">LayerAbility.SelectGroup()</a>.</p>
 
 </div>
 </div>
@@ -481,7 +656,10 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIMouseHint.html#a099e28bf822465cb8781af155f2c4853">IMouseHint</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00221">221</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a521c3db25e1c46c57f53bd2ce6c6ce0a" name="a521c3db25e1c46c57f53bd2ce6c6ce0a"></a>
@@ -510,6 +688,12 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="interfaceIMouseHint.html#a75528713c7deb9501223d2b8b9e09a10">IMouseHint</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00231">231</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classButtonAbility.html#ab8a3aed63c29aea7d16316d1d2b414ec">CanAutoUse</a>(<a class="code hl_class" href="classACT.html">ACT</a>.<a class="code hl_function" href="classACT.html#ac02237de965af1a9ce4c5f088f0e62c2">Create</a>(<span class="keyword">this</span>.source));</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="ttc" id="aclassButtonAbility_html_ab8a3aed63c29aea7d16316d1d2b414ec"><div class="ttname"><a href="classButtonAbility.html#ab8a3aed63c29aea7d16316d1d2b414ec">ButtonAbility.CanAutoUse</a></div><div class="ttdeci">bool CanAutoUse(Act _act)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00216">ButtonAbility.cs:216</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00216">CanAutoUse()</a>, and <a class="el" href="ACT_8cs_source.html#l00017">ACT.Create()</a>.</p>
 
 </div>
 </div>
@@ -538,6 +722,75 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00161">161</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="classAct.html">Act</a> e = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>) as <a class="code hl_class" href="classAct.html">Act</a>;</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (e == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = e.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>;</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == 8230 || <span class="keywordtype">id</span> == 8232)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordtype">bool</span> stop = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno">  174</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aeb6ca5c2f62e5a584b732552ed160599">IsIdentified</a>)</div>
+<div class="line"><span class="lineno">  177</span>                {</div>
+<div class="line"><span class="lineno">  178</span>                    return;</div>
+<div class="line"><span class="lineno">  179</span>                }</div>
+<div class="line"><span class="lineno">  180</span>                if (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">mana</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a> &lt; e.<a class="code hl_function" href="classElement.html#a8ef0315fd456856fc442d460c5f7e310">GetCost</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>).cost &amp;&amp; !first)</div>
+<div class="line"><span class="lineno">  181</span>                {</div>
+<div class="line"><span class="lineno">  182</span>                    stop = true;</div>
+<div class="line"><span class="lineno">  183</span>                }</div>
+<div class="line"><span class="lineno">  184</span>                if (e.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  185</span>                {</div>
+<div class="line"><span class="lineno">  186</span>                    stop = true;</div>
+<div class="line"><span class="lineno">  187</span>                }</div>
+<div class="line"><span class="lineno">  188</span>                if (stop)</div>
+<div class="line"><span class="lineno">  189</span>                {</div>
+<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  191</span>                }</div>
+<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &gt;= <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Mythical &amp;&amp; e.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a> == 8230)</div>
+<div class="line"><span class="lineno">  193</span>                {</div>
+<div class="line"><span class="lineno">  194</span>                    return;</div>
+<div class="line"><span class="lineno">  195</span>                }</div>
+<div class="line"><span class="lineno">  196</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a06ad44122f09a4eed59d9ca9d74ea30e">UseAbility</a>(<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias, t, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  197</span>                <span class="keywordtype">int</span> count = count;</div>
+<div class="line"><span class="lineno">  198</span>                count++;</div>
+<div class="line"><span class="lineno">  199</span>                first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  200</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (count == 0)</div>
+<div class="line"><span class="lineno">  202</span>            {</div>
+<div class="line"><span class="lineno">  203</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;identify_nothing&quot;</span>);</div>
+<div class="line"><span class="lineno">  204</span>            }</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a></div><div class="ttdeci">Rarity</div><div class="ttdef"><b>Definition:</b> <a href="Rarity_8cs_source.html#l00003">Rarity.cs:4</a></div></div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07286">Card.cs:7286</a></div></div>
+<div class="ttc" id="aclassCard_html_a5977c43f14d376055d2ab4e8009c31d4"><div class="ttname"><a href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">Card.rarity</a></div><div class="ttdeci">Rarity rarity</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00259">Card.cs:260</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07304">Card.cs:7304</a></div></div>
+<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07283">Card.cs:7283</a></div></div>
+<div class="ttc" id="aclassCard_html_aeb6ca5c2f62e5a584b732552ed160599"><div class="ttname"><a href="classCard.html#aeb6ca5c2f62e5a584b732552ed160599">Card.IsIdentified</a></div><div class="ttdeci">bool IsIdentified</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02684">Card.cs:2685</a></div></div>
+<div class="ttc" id="aclassChara_html_a06ad44122f09a4eed59d9ca9d74ea30e"><div class="ttname"><a href="classChara.html#a06ad44122f09a4eed59d9ca9d74ea30e">Chara.UseAbility</a></div><div class="ttdeci">bool UseAbility(string idAct, Card tc=null, Point pos=null, bool pt=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05198">Chara.cs:5198</a></div></div>
+<div class="ttc" id="aclassChara_html_a98e75854a92d992deba6688b2cb8c7e8"><div class="ttname"><a href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">Chara.mana</a></div><div class="ttdeci">Stats mana</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08280">Chara.cs:8281</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00876">Element.2.cs:876</a></div></div>
+<div class="ttc" id="aclassElement_html_a8ef0315fd456856fc442d460c5f7e310"><div class="ttname"><a href="classElement.html#a8ef0315fd456856fc442d460c5f7e310">Element.GetCost</a></div><div class="ttdeci">virtual Act.Cost GetCost(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00701">Element.2.cs:701</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
+<div class="ttc" id="aclassStats_html_ac5ab607149d0e76d6f1692e5f05c622f"><div class="ttname"><a href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">Stats.value</a></div><div class="ttdeci">virtual int value</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00011">Stats.cs:12</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a893f3830d6174aa8ef32d39b151ca647"><div class="ttname"><a href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">ThingContainer.Foreach</a></div><div class="ttdeci">void Foreach(Action&lt; Thing &gt; action, bool onlyAccessible=true)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00695">ThingContainer.cs:695</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00300">act</a>, <a class="el" href="Card_8cs_source.html#l07286">Card.elements</a>, <a class="el" href="ThingContainer_8cs_source.html#l00695">ThingContainer.Foreach()</a>, <a class="el" href="Element_82_8cs_source.html#l00701">Element.GetCost()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00876">Element.id</a>, <a class="el" href="Card_8cs_source.html#l02685">Card.IsIdentified</a>, <a class="el" href="Chara_8cs_source.html#l08281">Chara.mana</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l00260">Card.rarity</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="Card_8cs_source.html#l07283">Card.things</a>, <a class="el" href="Chara_8cs_source.html#l05198">Chara.UseAbility()</a>, <a class="el" href="Stats_8cs_source.html#l00012">Stats.value</a>, and <a class="el" href="Element_82_8cs_source.html#l00882">Element.vPotential</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>.</p>
 
 </div>
 </div>
@@ -565,6 +818,27 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00262">262</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>    {</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Contains(<span class="keyword">this</span>.source.id))</div>
+<div class="line"><span class="lineno">  265</span>        {</div>
+<div class="line"><span class="lineno">  266</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Remove(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>.id);</div>
+<div class="line"><span class="lineno">  267</span>            SE.Tab();</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  270</span>        {</div>
+<div class="line"><span class="lineno">  271</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Add(this.<a class="code hl_variable" href="classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52">source</a>.id);</div>
+<div class="line"><span class="lineno">  272</span>            SE.Tab();</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+<div class="line"><span class="lineno">  274</span>        this.<a class="code hl_function" href="classButtonAbility.html#a5cdf93ec4cd086277ce250902629a52e">RefreshFavIcon</a>();</div>
+<div class="line"><span class="lineno">  275</span>        <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_variable" href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">Instance</a>.<a class="code hl_variable" href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">list</a>.Redraw();</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a5ddcbcf983118b23fd2526c77c00878d"><div class="ttname"><a href="classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d">LayerAbility.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00255">LayerAbility.cs:255</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a6b807f2d25164920a38c19aaa7fe43e4"><div class="ttname"><a href="classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4">LayerAbility.Instance</a></div><div class="ttdeci">static LayerAbility Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00251">LayerAbility.cs:251</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01506">Player.favAbility</a>, <a class="el" href="LayerAbility_8cs_source.html#l00251">LayerAbility.Instance</a>, <a class="el" href="LayerAbility_8cs_source.html#l00255">LayerAbility.list</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00278">RefreshFavIcon()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00284">source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00246">OnMiddleClick()</a>.</p>
 
 </div>
 </div>
@@ -627,6 +901,81 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00101">101</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (tg == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            tg = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (pos == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            pos = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (first &amp;&amp; EInput.GetHotkey() != -1)</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            mouse = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  115</span>            ButtonAbility.hotkeyTimer = 0f;</div>
+<div class="line"><span class="lineno">  116</span>            Debug.Log(EInput.GetHotkey());</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_property" href="classAct.html#ac656d6f66d0e2b01101e77be466d2f3e">HaveLongPressAction</a>)</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> ((mouse &amp;&amp; EInput.rightMouse.pressedLong) || (!mouse &amp;&amp; <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_variable" href="classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758">hotkeyTimer</a> &gt;= 0.45f))</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                EInput.rightMouse.Consume();</div>
+<div class="line"><span class="lineno">  123</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  124</span>                ButtonAbility.hotkeyTimer = 1f;</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> ((mouse &amp;&amp; EInput.rightMouse.pressing) || (!mouse &amp;&amp; EInput.GetHotkey() != -1 &amp;&amp; <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_variable" href="classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758">hotkeyTimer</a> &lt; 1f))</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                ButtonAbility.hotkeyTimer += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  130</span>                {</div>
+<div class="line"><span class="lineno">  131</span>                    <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_function" href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">TryUse</a>(<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>, tg, pos, catalyst, <span class="keyword">false</span>, mouse);</div>
+<div class="line"><span class="lineno">  132</span>                });</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  134</span>                {</div>
+<div class="line"><span class="lineno">  135</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  136</span>                    {</div>
+<div class="line"><span class="lineno">  137</span>                        EInput.rightMouse.down = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  138</span>                        EInput.rightMouse.consumed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  139</span>                        EInput.rightMouse.pressing = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  140</span>                        EInput.rightMouse.usedMouse = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  141</span>                    });</div>
+<div class="line"><span class="lineno">  142</span>                }</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (flag &amp;&amp; <a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_function" href="classButtonAbility.html#aecc525cef42601a8e35e744facec4a2f">SpecialHoldAction</a>(<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>))</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a06ad44122f09a4eed59d9ca9d74ea30e">UseAbility</a>(<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias, tg, pos, flag))</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (catalyst != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">SetDirty</a>(catalyst.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>);</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="ttc" id="aclassAct_html_ac656d6f66d0e2b01101e77be466d2f3e"><div class="ttname"><a href="classAct.html#ac656d6f66d0e2b01101e77be466d2f3e">Act.HaveLongPressAction</a></div><div class="ttdeci">virtual bool HaveLongPressAction</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00195">Act.2.cs:196</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html"><div class="ttname"><a href="classButtonAbility.html">ButtonAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00006">ButtonAbility.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_a22a75fea4856ce1626e29ff516a53758"><div class="ttname"><a href="classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758">ButtonAbility.hotkeyTimer</a></div><div class="ttdeci">static float hotkeyTimer</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00305">ButtonAbility.cs:305</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_aa5a7387f40975e2615d4e696357ddb4e"><div class="ttname"><a href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">ButtonAbility.TryUse</a></div><div class="ttdeci">static bool TryUse(Act act, Card tg=null, Point pos=null, Card catalyst=null, bool first=true, bool mouse=true)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00101">ButtonAbility.cs:101</a></div></div>
+<div class="ttc" id="aclassButtonAbility_html_aecc525cef42601a8e35e744facec4a2f"><div class="ttname"><a href="classButtonAbility.html#aecc525cef42601a8e35e744facec4a2f">ButtonAbility.SpecialHoldAction</a></div><div class="ttdeci">static bool SpecialHoldAction(Act act)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonAbility_8cs_source.html#l00161">ButtonAbility.cs:161</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02003">Card.cs:2004</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
+<div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00693">Core.cs:693</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerInventory_html_a742d3a9ed80e448bf2e0053e8bb23b48"><div class="ttname"><a href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">LayerInventory.SetDirty</a></div><div class="ttdeci">static void SetDirty(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00066">LayerInventory.cs:66</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a70760993376895e3e79c170a3ac751e9"><div class="ttname"><a href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">Player.EndTurn</a></div><div class="ttdeci">void EndTurn(bool consume=true)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00854">Player.cs:854</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00565">Point.cs:565</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00300">act</a>, <a class="el" href="Point_8cs_source.html#l00565">Point.Copy()</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="Player_8cs_source.html#l00854">Player.EndTurn()</a>, <a class="el" href="Act_82_8cs_source.html#l00196">Act.HaveLongPressAction</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00305">hotkeyTimer</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l07304">Card.pos</a>, <a class="el" href="LayerInventory_8cs_source.html#l00066">LayerInventory.SetDirty()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00161">SpecialHoldAction()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>, and <a class="el" href="Chara_8cs_source.html#l05198">Chara.UseAbility()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitCatalyst_8cs_source.html#l00036">TraitCatalyst.OnUse()</a>, <a class="el" href="HotItemAct_8cs_source.html#l00081">HotItemAct.TrySetAct()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00041">TraitCatalyst.TrySetHeldAct()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00080">Use()</a>.</p>
 
 </div>
 </div>
@@ -654,6 +1003,32 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00080">80</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#ac3a94b99896802674865cfd6e4109e80">HasNoGoal</a>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classButtonAbility.html#ab8a3aed63c29aea7d16316d1d2b414ec">CanAutoUse</a>(this.<a class="code hl_variable" href="classButtonAbility.html#aa6fba54811acd29a18e70b8b177cfcd8">act</a>))</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classButtonAbility.html">ButtonAbility</a>.<a class="code hl_function" href="classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e">TryUse</a>(<span class="keyword">this</span>.act, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">true</span>) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a>.<a class="code hl_property" href="classAIAct.html#a949c3e95d68a860ee5f233f741f70ecb">IsNoGoal</a>)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            this.<a class="code hl_function" href="classButtonAbility.html#adf1ba0fff97280319d266610c3c7c4d0">HoldAbility</a>();</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a949c3e95d68a860ee5f233f741f70ecb"><div class="ttname"><a href="classAIAct.html#a949c3e95d68a860ee5f233f741f70ecb">AIAct.IsNoGoal</a></div><div class="ttdeci">virtual bool IsNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00072">AIAct.cs:73</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09506">Chara.cs:9506</a></div></div>
+<div class="ttc" id="aclassChara_html_ac3a94b99896802674865cfd6e4109e80"><div class="ttname"><a href="classChara.html#ac3a94b99896802674865cfd6e4109e80">Chara.HasNoGoal</a></div><div class="ttdeci">bool HasNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00840">Chara.cs:841</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonAbility_8cs_source.html#l00300">act</a>, <a class="el" href="Chara_8cs_source.html#l09506">Chara.ai</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00216">CanAutoUse()</a>, <a class="el" href="Player_8cs_source.html#l00854">Player.EndTurn()</a>, <a class="el" href="Chara_8cs_source.html#l00841">Chara.HasNoGoal</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00210">HoldAbility()</a>, <a class="el" href="AIAct_8cs_source.html#l00073">AIAct.IsNoGoal</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>.</p>
 
 </div>
 </div>
@@ -672,6 +1047,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00300">300</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00161">SpecialHoldAction()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00080">Use()</a>.</p>
+
 </div>
 </div>
 <a id="a840d1141b2da1156afe70c14bbb661e0" name="a840d1141b2da1156afe70c14bbb661e0"></a>
@@ -687,6 +1064,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00294">294</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00133">LayerAbility.ClearHotElement()</a>.</p>
 
 </div>
 </div>
@@ -720,6 +1099,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00303">303</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00049">OnDrag()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00069">OnPointerUp()</a>.</p>
+
 </div>
 </div>
 <a id="a824f8581d48e424ab5c10fb77415301e" name="a824f8581d48e424ab5c10fb77415301e"></a>
@@ -735,6 +1116,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00286">286</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00049">OnDrag()</a>, and <a class="el" href="ButtonAbility_8cs_source.html#l00069">OnPointerUp()</a>.</p>
 
 </div>
 </div>
@@ -760,6 +1143,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00305">305</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00101">TryUse()</a>.</p>
+
 </div>
 </div>
 <a id="aef9b2e4fbb772c54436f2f0d292a4154" name="aef9b2e4fbb772c54436f2f0d292a4154"></a>
@@ -775,6 +1160,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00292">292</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00278">RefreshFavIcon()</a>.</p>
 
 </div>
 </div>
@@ -792,6 +1179,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00290">290</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>.</p>
+
 </div>
 </div>
 <a id="a7f8966240ba94ebea2a0309754a64e52" name="a7f8966240ba94ebea2a0309754a64e52"></a>
@@ -808,6 +1197,8 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00284">284</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00210">HoldAbility()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00215">LayerAbility.OnDrag()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00118">LayerAbility.OnUpdateInput()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00278">RefreshFavIcon()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00262">ToggleFav()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+
 </div>
 </div>
 <a id="a306a857f888accf8ab432811bc106b8c" name="a306a857f888accf8ab432811bc106b8c"></a>
@@ -823,6 +1214,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ButtonAbility_8cs_source.html#l00288">288</a> of file <a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonAbility_8cs_source.html#l00008">SetAct()</a>.</p>
 
 </div>
 </div>
@@ -846,9 +1239,13 @@ Static Public Attributes</h2></td></tr>
 <li>Elin/<a class="el" href="ButtonAbility_8cs_source.html">ButtonAbility.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classButtonAbility.html">ButtonAbility</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

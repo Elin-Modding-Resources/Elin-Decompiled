@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classHotItemLayer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -208,6 +228,114 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classHotItem.html#a70fde84034309bd884c98d694fc58444">HotItem</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00035">35</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = this.<a class="code hl_variable" href="classHotItemLayer.html#ab1f5faf47fbae0102588b55ccc8a503c">id</a>;</div>
+<div class="line"><span class="lineno">   38</span>        uint num = &lt;PrivateImplementationDetails&gt;.ComputeStringHash(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (num &lt;= 2200499586U)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (num != 459378836U)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (num != 1457414945U)</div>
+<div class="line"><span class="lineno">   44</span>                {</div>
+<div class="line"><span class="lineno">   45</span>                    <span class="keywordflow">if</span> (num == 2200499586U)</div>
+<div class="line"><span class="lineno">   46</span>                    {</div>
+<div class="line"><span class="lineno">   47</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;stash&quot;</span>)</div>
+<div class="line"><span class="lineno">   48</span>                        {</div>
+<div class="line"><span class="lineno">   49</span>                            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.backpackHighlightDisabled)</div>
+<div class="line"><span class="lineno">   50</span>                            {</div>
+<div class="line"><span class="lineno">   51</span>                                EClass.player.flags.backpackHighlightDisabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   52</span>                            }</div>
+<div class="line"><span class="lineno">   53</span>                            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.IsInventoryOpen)</div>
+<div class="line"><span class="lineno">   54</span>                            {</div>
+<div class="line"><span class="lineno">   55</span>                                SE.PopInventory();</div>
+<div class="line"><span class="lineno">   56</span>                            }</div>
+<div class="line"><span class="lineno">   57</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleInventory(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   58</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   59</span>                        }</div>
+<div class="line"><span class="lineno">   60</span>                    }</div>
+<div class="line"><span class="lineno">   61</span>                }</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerChara&quot;</span>)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    <a class="code hl_class" href="classLayerChara.html">LayerChara</a> layerChara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerChara.html">LayerChara</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (layerChara == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>                    {</div>
+<div class="line"><span class="lineno">   67</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span>                    }</div>
+<div class="line"><span class="lineno">   69</span>                    layerChara.<a class="code hl_function" href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">SetChara</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
+<div class="line"><span class="lineno">   70</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerAbility&quot;</span>)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.abilityHighlightDisabled)</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    EClass.player.flags.abilityHighlightDisabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span>                }</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleAbility(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &lt;= 2922513849U)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (num != 2853713114U)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">if</span> (num == 2922513849U)</div>
+<div class="line"><span class="lineno">   88</span>                {</div>
+<div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerHelp&quot;</span>)</div>
+<div class="line"><span class="lineno">   90</span>                    {</div>
+<div class="line"><span class="lineno">   91</span>                        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.helpHighlightDisabled)</div>
+<div class="line"><span class="lineno">   92</span>                        {</div>
+<div class="line"><span class="lineno">   93</span>                            EClass.player.flags.helpHighlightDisabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   94</span>                            <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;general&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   96</span>                        }</div>
+<div class="line"><span class="lineno">   97</span>                        <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_variable" href="classLayerHelp.html#aaa60edbdf9d42c8100888ff90cfd90df">lastIdFile</a>.IsEmpty(<span class="stringliteral">&quot;general&quot;</span>), <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_variable" href="classLayerHelp.html#a8dadbf6e553f6090f1a211bca7716c0b">lastIdTopic</a>.IsEmpty(<span class="stringliteral">&quot;2&quot;</span>));</div>
+<div class="line"><span class="lineno">   98</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   99</span>                    }</div>
+<div class="line"><span class="lineno">  100</span>                }</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerTravel&quot;</span>)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerTravel.html">LayerTravel</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num != 3310650625U)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (num == 4163083791U)</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerTactics&quot;</span>)</div>
+<div class="line"><span class="lineno">  113</span>                {</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerTactics.html">LayerTactics</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  115</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  116</span>                }</div>
+<div class="line"><span class="lineno">  117</span>            }</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> == <span class="stringliteral">&quot;LayerJournal&quot;</span>)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerJournal.html">LayerJournal</a>&gt;(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.ToggleLayer(this.<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html_ab1f5faf47fbae0102588b55ccc8a503c"><div class="ttname"><a href="classHotItemLayer.html#ab1f5faf47fbae0102588b55ccc8a503c">HotItemLayer.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00134">HotItemLayer.cs:134</a></div></div>
+<div class="ttc" id="aclassLayerChara_html"><div class="ttname"><a href="classLayerChara.html">LayerChara</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00003">LayerChara.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerChara_html_a2a490d43095c16f39501945d9879e97d"><div class="ttname"><a href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">LayerChara.SetChara</a></div><div class="ttdeci">LayerChara SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00013">LayerChara.cs:13</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html"><div class="ttname"><a href="classLayerHelp.html">LayerHelp</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00003">LayerHelp.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_a8c2b68bab7fee455dcd42a72525d2799"><div class="ttname"><a href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">LayerHelp.Toggle</a></div><div class="ttdeci">static void Toggle(string idFile, string idTopic=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00028">LayerHelp.cs:28</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_a8dadbf6e553f6090f1a211bca7716c0b"><div class="ttname"><a href="classLayerHelp.html#a8dadbf6e553f6090f1a211bca7716c0b">LayerHelp.lastIdTopic</a></div><div class="ttdeci">static string lastIdTopic</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00058">LayerHelp.cs:58</a></div></div>
+<div class="ttc" id="aclassLayerHelp_html_aaa60edbdf9d42c8100888ff90cfd90df"><div class="ttname"><a href="classLayerHelp.html#aaa60edbdf9d42c8100888ff90cfd90df">LayerHelp.lastIdFile</a></div><div class="ttdeci">static string lastIdFile</div><div class="ttdef"><b>Definition:</b> <a href="LayerHelp_8cs_source.html#l00056">LayerHelp.cs:56</a></div></div>
+<div class="ttc" id="aclassLayerJournal_html"><div class="ttname"><a href="classLayerJournal.html">LayerJournal</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerJournal_8cs_source.html#l00003">LayerJournal.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerTactics_html"><div class="ttname"><a href="classLayerTactics.html">LayerTactics</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerTactics_8cs_source.html#l00003">LayerTactics.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerTravel_html"><div class="ttname"><a href="classLayerTravel.html">LayerTravel</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerTravel_8cs_source.html#l00010">LayerTravel.cs:11</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a32d11973d28303248aaf613be2a24040"><div class="ttname"><a href="classPlayer.html#a32d11973d28303248aaf613be2a24040">Player.flags</a></div><div class="ttdeci">Player.Flags flags</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01533">Player.cs:1533</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l01533">Player.flags</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00134">id</a>, <a class="el" href="LayerHelp_8cs_source.html#l00056">LayerHelp.lastIdFile</a>, <a class="el" href="LayerHelp_8cs_source.html#l00058">LayerHelp.lastIdTopic</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="LayerChara_8cs_source.html#l00013">LayerChara.SetChara()</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="LayerHelp_8cs_source.html#l00028">LayerHelp.Toggle()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -236,6 +364,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00022">22</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classHotItemLayer.html">HotItemLayer</a>.&lt;&gt;c__DisplayClass8_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classHotItemLayer.html">HotItemLayer</a>.&lt;&gt;c__DisplayClass8_0();</div>
+<div class="line"><span class="lineno">   25</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   26</span>        CS$&lt;&gt;8__locals1.b = b;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemLayer.html#af64e4835218eae2675af3e046c0fba19">OnSetItem</a>&gt;g__AddHighlight|0(<span class="stringliteral">&quot;LayerHelp&quot;</span>, () =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.helpHighlightDisabled, ref <a class="code hl_class" href="classHotItemLayer.html">HotItemLayer</a>.<a class="code hl_variable" href="classHotItemLayer.html#a260e2a682a5ab4ec74f966168732c79d">highlightHelp</a>);</div>
+<div class="line"><span class="lineno">   30</span>            CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemLayer.html#af64e4835218eae2675af3e046c0fba19">OnSetItem</a>&gt;g__AddHighlight|0(<span class="stringliteral">&quot;stash&quot;</span>, () =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.backpackHighlightDisabled, ref <a class="code hl_class" href="classHotItemLayer.html">HotItemLayer</a>.<a class="code hl_variable" href="classHotItemLayer.html#a2d6c4401378f7bc6f77271554d210bf8">highlightBackpack</a>);</div>
+<div class="line"><span class="lineno">   31</span>            CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classHotItemLayer.html#af64e4835218eae2675af3e046c0fba19">OnSetItem</a>&gt;g__AddHighlight|0(<span class="stringliteral">&quot;LayerAbility&quot;</span>, () =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a32d11973d28303248aaf613be2a24040">flags</a>.abilityHighlightDisabled, ref <a class="code hl_class" href="classHotItemLayer.html">HotItemLayer</a>.<a class="code hl_variable" href="classHotItemLayer.html#a334fbc9df9e89bac0812538db95e80d2">highlightAbility</a>);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02313">CoreDebug.cs:2313</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html"><div class="ttname"><a href="classHotItemLayer.html">HotItemLayer</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00004">HotItemLayer.cs:5</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html_a260e2a682a5ab4ec74f966168732c79d"><div class="ttname"><a href="classHotItemLayer.html#a260e2a682a5ab4ec74f966168732c79d">HotItemLayer.highlightHelp</a></div><div class="ttdeci">static UIHighlightObject highlightHelp</div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00127">HotItemLayer.cs:127</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html_a2d6c4401378f7bc6f77271554d210bf8"><div class="ttname"><a href="classHotItemLayer.html#a2d6c4401378f7bc6f77271554d210bf8">HotItemLayer.highlightBackpack</a></div><div class="ttdeci">static UIHighlightObject highlightBackpack</div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00131">HotItemLayer.cs:131</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html_a334fbc9df9e89bac0812538db95e80d2"><div class="ttname"><a href="classHotItemLayer.html#a334fbc9df9e89bac0812538db95e80d2">HotItemLayer.highlightAbility</a></div><div class="ttdeci">static UIHighlightObject highlightAbility</div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00129">HotItemLayer.cs:129</a></div></div>
+<div class="ttc" id="aclassHotItemLayer_html_af64e4835218eae2675af3e046c0fba19"><div class="ttname"><a href="classHotItemLayer.html#af64e4835218eae2675af3e046c0fba19">HotItemLayer.OnSetItem</a></div><div class="ttdeci">override void OnSetItem(UIButton b)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemLayer_8cs_source.html#l00022">HotItemLayer.cs:22</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02313">CoreDebug.enable</a>, <a class="el" href="Player_8cs_source.html#l01533">Player.flags</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00129">highlightAbility</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00131">highlightBackpack</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00127">highlightHelp</a>, <a class="el" href="HotItemLayer_8cs_source.html#l00022">OnSetItem()</a>, and <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00022">OnSetItem()</a>.</p>
 
 </div>
 </div>
@@ -262,6 +412,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00129">129</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00022">OnSetItem()</a>.</p>
+
 </div>
 </div>
 <a id="a2d6c4401378f7bc6f77271554d210bf8" name="a2d6c4401378f7bc6f77271554d210bf8"></a>
@@ -285,6 +437,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00131">131</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00022">OnSetItem()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +464,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00127">127</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00022">OnSetItem()</a>.</p>
+
 </div>
 </div>
 <a id="ab1f5faf47fbae0102588b55ccc8a503c" name="ab1f5faf47fbae0102588b55ccc8a503c"></a>
@@ -325,6 +481,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00134">134</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemLayer_8cs_source.html#l00035">OnClick()</a>.</p>
 
 </div>
 </div>
@@ -350,7 +508,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00006">6</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.<span class="keywordtype">id</span>.lang();</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9be3a7301e3251f871d3d66773141f1" name="ae9be3a7301e3251f871d3d66773141f1"></a>
@@ -374,16 +538,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="HotItemLayer_8cs_source.html#l00014">14</a> of file <a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;icon_&quot;</span> + this.<a class="code hl_variable" href="classHotItemLayer.html#ab1f5faf47fbae0102588b55ccc8a503c">id</a>;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="HotItemLayer_8cs_source.html">HotItemLayer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classHotItemLayer.html">HotItemLayer</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

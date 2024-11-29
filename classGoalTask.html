@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGoalTask.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -697,6 +717,55 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAIAct.html#a9701ab536b31b675434f11ed51f4274f">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00014">14</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGoalTask.html#a3cb6f6da58ea95eacadbacdfd87b19de">manual</a>)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            yield <span class="keywordflow">return</span> base.Do(this.<a class="code hl_variable" href="classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2">task</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   19</span>            yield <span class="keywordflow">return</span> base.Success(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            yield <span class="keywordflow">return</span> base.Do(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Clean.html">AI_Clean</a>(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">props</a>.<a class="code hl_variable" href="classPropsManager.html#acef3d60fb0706c1e737bce2a21f776c1">deconstructing</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            yield <span class="keywordflow">return</span> base.Do(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Deconstruct.html">AI_Deconstruct</a>(), <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        this.area = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   30</span>        this.taskList = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classGoalTask.html#a7c2500dfc889c770053da616cfe9e36c">TryAssignDesignations</a>())</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            yield <span class="keywordflow">return</span> <a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classGoalTask.html#ac50abab5c540b60e25b744f39f67e116">TryAssignAreaTask</a>())</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                yield <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            yield <span class="keywordflow">return</span> base.Do(this.<a class="code hl_variable" href="classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2">task</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">while</span> (this.<a class="code hl_variable" href="classGoalTask.html#a633e9ccf86a101e0ece8629d228db970">taskList</a> != <span class="keyword">null</span> &amp;&amp; (this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(1) || this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(3) || this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(9)));</div>
+<div class="line"><span class="lineno">   44</span>        yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassAIAct_html"><div class="ttname"><a href="classAIAct.html">AIAct</a></div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00005">AIAct.cs:6</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00727">AIAct.cs:728</a></div></div>
+<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
+<div class="ttc" id="aclassAI__Clean_html"><div class="ttname"><a href="classAI__Clean.html">AI_Clean</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Clean_8cs_source.html#l00004">AI_Clean.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Deconstruct_html"><div class="ttname"><a href="classAI__Deconstruct.html">AI_Deconstruct</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Deconstruct_8cs_source.html#l00005">AI_Deconstruct.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a27a69c8c10ec7d5760d3211f076032d2"><div class="ttname"><a href="classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2">GoalTask.task</a></div><div class="ttdeci">Task task</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00099">GoalTask.cs:99</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a3cb6f6da58ea95eacadbacdfd87b19de"><div class="ttname"><a href="classGoalTask.html#a3cb6f6da58ea95eacadbacdfd87b19de">GoalTask.manual</a></div><div class="ttdeci">bool manual</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00103">GoalTask.cs:103</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a633e9ccf86a101e0ece8629d228db970"><div class="ttname"><a href="classGoalTask.html#a633e9ccf86a101e0ece8629d228db970">GoalTask.taskList</a></div><div class="ttdeci">TaskList taskList</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00105">GoalTask.cs:105</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a7c2500dfc889c770053da616cfe9e36c"><div class="ttname"><a href="classGoalTask.html#a7c2500dfc889c770053da616cfe9e36c">GoalTask.TryAssignDesignations</a></div><div class="ttdeci">bool TryAssignDesignations()</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00067">GoalTask.cs:67</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a9e7f0d76f2ce3632e9923bb83ca6de68"><div class="ttname"><a href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">GoalTask.TryAssignTask</a></div><div class="ttdeci">bool TryAssignTask(TaskList list)</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00073">GoalTask.cs:73</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_ac50abab5c540b60e25b744f39f67e116"><div class="ttname"><a href="classGoalTask.html#ac50abab5c540b60e25b744f39f67e116">GoalTask.TryAssignAreaTask</a></div><div class="ttdeci">bool TryAssignAreaTask()</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00047">GoalTask.cs:47</a></div></div>
+<div class="ttc" id="aclassMap_html_a7bbfb1c119ff730ece5cb7a046449ed1"><div class="ttname"><a href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">Map.props</a></div><div class="ttdeci">PropsManager props</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02893">Map.cs:2893</a></div></div>
+<div class="ttc" id="aclassPropsManager_html_acef3d60fb0706c1e737bce2a21f776c1"><div class="ttname"><a href="classPropsManager.html#acef3d60fb0706c1e737bce2a21f776c1">PropsManager.deconstructing</a></div><div class="ttdeci">List&lt; Card &gt; deconstructing</div><div class="ttdef"><b>Definition:</b> <a href="PropsManager_8cs_source.html#l00138">PropsManager.cs:138</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="PropsManager_8cs_source.html#l00138">PropsManager.deconstructing</a>, <a class="el" href="GoalTask_8cs_source.html#l00103">manual</a>, <a class="el" href="Map_8cs_source.html#l02893">Map.props</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="GoalTask_8cs_source.html#l00099">task</a>, <a class="el" href="GoalTask_8cs_source.html#l00105">taskList</a>, <a class="el" href="GoalTask_8cs_source.html#l00047">TryAssignAreaTask()</a>, <a class="el" href="GoalTask_8cs_source.html#l00067">TryAssignDesignations()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00073">TryAssignTask()</a>.</p>
 
 </div>
 </div>
@@ -724,6 +793,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00047">47</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classArea.html">Area</a> <a class="code hl_variable" href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">area</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#a8270be4ddfbee895c502315214e1af18">rooms</a>.<a class="code hl_variable" href="classRoomManager.html#a9d91d50025637e131c807a9a313abe17">listArea</a>)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classGoalTask.html#ac50abab5c540b60e25b744f39f67e116">TryAssignAreaTask</a>(area))</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                this.area = <a class="code hl_variable" href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">area</a>;</div>
+<div class="line"><span class="lineno">   54</span>                this.taskList = <a class="code hl_variable" href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">area</a>.<a class="code hl_variable" href="classArea.html#abf51606d1c3dad14341627feaa2b3c1f">taskList</a>;</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassArea_html"><div class="ttname"><a href="classArea.html">Area</a></div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00004">Area.cs:5</a></div></div>
+<div class="ttc" id="aclassArea_html_abf51606d1c3dad14341627feaa2b3c1f"><div class="ttname"><a href="classArea.html#abf51606d1c3dad14341627feaa2b3c1f">Area.taskList</a></div><div class="ttdeci">TaskList&lt; Task &gt; taskList</div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00127">Area.cs:127</a></div></div>
+<div class="ttc" id="aclassGoalTask_html_a131fb83443b3558c5e771f8c51603c1b"><div class="ttname"><a href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">GoalTask.area</a></div><div class="ttdeci">Area area</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00101">GoalTask.cs:101</a></div></div>
+<div class="ttc" id="aclassMap_html_a8270be4ddfbee895c502315214e1af18"><div class="ttname"><a href="classMap.html#a8270be4ddfbee895c502315214e1af18">Map.rooms</a></div><div class="ttdeci">RoomManager rooms</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02836">Map.cs:2836</a></div></div>
+<div class="ttc" id="aclassRoomManager_html_a9d91d50025637e131c807a9a313abe17"><div class="ttname"><a href="classRoomManager.html#a9d91d50025637e131c807a9a313abe17">RoomManager.listArea</a></div><div class="ttdeci">List&lt; Area &gt; listArea</div><div class="ttdef"><b>Definition:</b> <a href="RoomManager_8cs_source.html#l00166">RoomManager.cs:166</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="GoalTask_8cs_source.html#l00101">area</a>, <a class="el" href="RoomManager_8cs_source.html#l00166">RoomManager.listArea</a>, <a class="el" href="Map_8cs_source.html#l02836">Map.rooms</a>, <a class="el" href="Area_8cs_source.html#l00127">Area.taskList</a>, and <a class="el" href="GoalTask_8cs_source.html#l00047">TryAssignAreaTask()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00047">TryAssignAreaTask()</a>.</p>
 
 </div>
 </div>
@@ -752,6 +842,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00061">61</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        this.task = a.<a class="code hl_variable" href="classArea.html#abf51606d1c3dad14341627feaa2b3c1f">taskList</a>.<a class="code hl_function" href="classTaskList.html#a6afe212b870762312893c27f0c8e9c20">GetTask</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, -1);</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> this.task != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00711">AIAct.cs:711</a></div></div>
+<div class="ttc" id="aclassTaskList_html_a6afe212b870762312893c27f0c8e9c20"><div class="ttname"><a href="classTaskList.html#a6afe212b870762312893c27f0c8e9c20">TaskList.GetTask</a></div><div class="ttdeci">override Task GetTask(Chara chara, int radius=-1)</div><div class="ttdef"><b>Definition:</b> <a href="TaskList_82_8cs_source.html#l00054">TaskList.2.cs:54</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskList_82_8cs_source.html#l00054">TaskList&lt; T &gt;.GetTask()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, and <a class="el" href="Area_8cs_source.html#l00127">Area.taskList</a>.</p>
 
 </div>
 </div>
@@ -779,6 +877,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00067">67</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classTaskManager_1_1Designations.html">TaskManager.Designations</a> designations = this.<a class="code hl_property" href="classGoalTask.html#aadcc28cc698b209fe142fc6614b71037">Designations</a>;</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; <span class="keyword">this</span>.TryAssignTask(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#a04b1c8e57ac0597ea351c6ad52c7bb30">moveInstalled</a>)) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071">cut</a>)) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#acf3d25ef9c5d0687bddc7fcb8e508121">harvest</a>)) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293">mine</a>)) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#a8d16ae882e3694d6b480982abf3acd8d">dig</a>)) || (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0 &amp;&amp; this.<a class="code hl_function" href="classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68">TryAssignTask</a>(designations.<a class="code hl_variable" href="classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb">build</a>));</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassGoalTask_html_aadcc28cc698b209fe142fc6614b71037"><div class="ttname"><a href="classGoalTask.html#aadcc28cc698b209fe142fc6614b71037">GoalTask.Designations</a></div><div class="ttdeci">TaskManager.Designations Designations</div><div class="ttdef"><b>Definition:</b> <a href="GoalTask_8cs_source.html#l00006">GoalTask.cs:7</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html"><div class="ttname"><a href="classTaskManager_1_1Designations.html">TaskManager.Designations</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00017">TaskManager.cs:18</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_a04b1c8e57ac0597ea351c6ad52c7bb30"><div class="ttname"><a href="classTaskManager_1_1Designations.html#a04b1c8e57ac0597ea351c6ad52c7bb30">TaskManager.Designations.moveInstalled</a></div><div class="ttdeci">DesignationList&lt; TaskMoveInstalled &gt; moveInstalled</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00064">TaskManager.cs:64</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_a33ece8fe7d4e12d34276af1fd03bebcb"><div class="ttname"><a href="classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb">TaskManager.Designations.build</a></div><div class="ttdeci">DesignationList&lt; TaskBuild &gt; build</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00061">TaskManager.cs:61</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_a43bd2a42344872f04cdaadc19ef24071"><div class="ttname"><a href="classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071">TaskManager.Designations.cut</a></div><div class="ttdeci">DesignationList&lt; TaskCut &gt; cut</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00055">TaskManager.cs:55</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_a8d16ae882e3694d6b480982abf3acd8d"><div class="ttname"><a href="classTaskManager_1_1Designations.html#a8d16ae882e3694d6b480982abf3acd8d">TaskManager.Designations.dig</a></div><div class="ttdeci">DesignationList&lt; TaskDig &gt; dig</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00052">TaskManager.cs:52</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_aad4bbcfbd0a6dc433cd134ba9457d293"><div class="ttname"><a href="classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293">TaskManager.Designations.mine</a></div><div class="ttdeci">DesignationList&lt; TaskMine &gt; mine</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00049">TaskManager.cs:49</a></div></div>
+<div class="ttc" id="aclassTaskManager_1_1Designations_html_acf3d25ef9c5d0687bddc7fcb8e508121"><div class="ttname"><a href="classTaskManager_1_1Designations.html#acf3d25ef9c5d0687bddc7fcb8e508121">TaskManager.Designations.harvest</a></div><div class="ttdeci">DesignationList&lt; TaskHarvest &gt; harvest</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00058">TaskManager.cs:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskManager_8cs_source.html#l00061">TaskManager.Designations.build</a>, <a class="el" href="TaskManager_8cs_source.html#l00055">TaskManager.Designations.cut</a>, <a class="el" href="GoalTask_8cs_source.html#l00007">Designations</a>, <a class="el" href="TaskManager_8cs_source.html#l00052">TaskManager.Designations.dig</a>, <a class="el" href="TaskManager_8cs_source.html#l00058">TaskManager.Designations.harvest</a>, <a class="el" href="TaskManager_8cs_source.html#l00049">TaskManager.Designations.mine</a>, <a class="el" href="TaskManager_8cs_source.html#l00064">TaskManager.Designations.moveInstalled</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00073">TryAssignTask()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>.</p>
 
 </div>
 </div>
@@ -807,6 +921,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00084">84</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">area</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            this.task = this.<a class="code hl_variable" href="classGoalTask.html#a633e9ccf86a101e0ece8629d228db970">taskList</a>.<a class="code hl_function" href="classTaskList.html#a6afe212b870762312893c27f0c8e9c20">GetTask</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, radius);</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> this.task != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b">area</a>.<a class="code hl_variable" href="classArea.html#afc0c9cbae844f35e918fa283e5a790c1">isDestroyed</a>)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        this.task = this.<a class="code hl_variable" href="classGoalTask.html#a633e9ccf86a101e0ece8629d228db970">taskList</a>.<a class="code hl_function" href="classTaskList.html#a6afe212b870762312893c27f0c8e9c20">GetTask</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, radius);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> this.task != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassArea_html_afc0c9cbae844f35e918fa283e5a790c1"><div class="ttname"><a href="classArea.html#afc0c9cbae844f35e918fa283e5a790c1">Area.isDestroyed</a></div><div class="ttdeci">bool isDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Area_8cs_source.html#l00129">Area.cs:129</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskList_82_8cs_source.html#l00054">TaskList&lt; T &gt;.GetTask()</a>, <a class="el" href="Area_8cs_source.html#l00129">Area.isDestroyed</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, and <a class="el" href="GoalTask_8cs_source.html#l00105">taskList</a>.</p>
 
 </div>
 </div>
@@ -835,6 +965,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00073">73</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        this.task = list.<a class="code hl_function" href="classTaskList.html#a6afe212b870762312893c27f0c8e9c20">GetTask</a>(this.<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, -1);</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2">task</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            this.taskList = list;</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TaskList_82_8cs_source.html#l00054">TaskList&lt; T &gt;.GetTask()</a>, <a class="el" href="AIAct_8cs_source.html#l00711">AIAct.owner</a>, and <a class="el" href="GoalTask_8cs_source.html#l00099">task</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00067">TryAssignDesignations()</a>.</p>
 
 </div>
 </div>
@@ -853,6 +996,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00101">101</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00047">TryAssignAreaTask()</a>.</p>
+
 </div>
 </div>
 <a id="a3cb6f6da58ea95eacadbacdfd87b19de" name="a3cb6f6da58ea95eacadbacdfd87b19de"></a>
@@ -868,6 +1013,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00103">103</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>.</p>
 
 </div>
 </div>
@@ -885,6 +1032,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00099">99</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00073">TryAssignTask()</a>.</p>
+
 </div>
 </div>
 <a id="a633e9ccf86a101e0ece8629d228db970" name="a633e9ccf86a101e0ece8629d228db970"></a>
@@ -900,6 +1049,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00105">105</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00014">Run()</a>, and <a class="el" href="GoalTask_8cs_source.html#l00084">TryAssignTask()</a>.</p>
 
 </div>
 </div>
@@ -925,6 +1076,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GoalTask_8cs_source.html#l00006">6</a> of file <a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ab85591c0fc93476d9d5246e11c717087">tasks</a>.<a class="code hl_variable" href="classTaskManager.html#a3ba8ddb4cb8a3bca18f2c0e703e88629">designations</a>;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassMap_html_ab85591c0fc93476d9d5246e11c717087"><div class="ttname"><a href="classMap.html#ab85591c0fc93476d9d5246e11c717087">Map.tasks</a></div><div class="ttdeci">TaskManager tasks</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02839">Map.cs:2839</a></div></div>
+<div class="ttc" id="aclassTaskManager_html_a3ba8ddb4cb8a3bca18f2c0e703e88629"><div class="ttname"><a href="classTaskManager.html#a3ba8ddb4cb8a3bca18f2c0e703e88629">TaskManager.designations</a></div><div class="ttdeci">TaskManager.Designations designations</div><div class="ttdef"><b>Definition:</b> <a href="TaskManager_8cs_source.html#l00013">TaskManager.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GoalTask_8cs_source.html#l00067">TryAssignDesignations()</a>.</p>
 
 </div>
 </div>
@@ -932,9 +1093,13 @@ Additional Inherited Members</h2></td></tr>
 <li>Elin/<a class="el" href="GoalTask_8cs_source.html">GoalTask.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGoalTask.html">GoalTask</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

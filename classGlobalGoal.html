@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGlobalGoal.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -212,6 +232,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00021">21</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classGlobalGoal.html#aa9264f11678dea51f4dbd69390f59c29">hours</a>++;</div>
+<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_function" href="classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735">OnAdvanceHour</a>();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassGlobalGoal_html_a42fff510e744d3de87825e7713d4b735"><div class="ttname"><a href="classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735">GlobalGoal.OnAdvanceHour</a></div><div class="ttdeci">virtual void OnAdvanceHour()</div><div class="ttdef"><b>Definition:</b> <a href="GlobalGoal_8cs_source.html#l00027">GlobalGoal.cs:27</a></div></div>
+<div class="ttc" id="aclassGlobalGoal_html_aa9264f11678dea51f4dbd69390f59c29"><div class="ttname"><a href="classGlobalGoal.html#aa9264f11678dea51f4dbd69390f59c29">GlobalGoal.hours</a></div><div class="ttdeci">int hours</div><div class="ttdef"><b>Definition:</b> <a href="GlobalGoal_8cs_source.html#l00047">GlobalGoal.cs:47</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GlobalGoal_8cs_source.html#l00047">hours</a>, and <a class="el" href="GlobalGoal_8cs_source.html#l00027">OnAdvanceHour()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>.</p>
 
 </div>
 </div>
@@ -239,6 +269,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00036">36</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        this.<a class="code hl_function" href="classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0">OnComplete</a>();</div>
+<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_function" href="classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada">Kill</a>();</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassGlobalGoal_html_a5c2048b56e976d1e86601a6fd0299ada"><div class="ttname"><a href="classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada">GlobalGoal.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="GlobalGoal_8cs_source.html#l00031">GlobalGoal.cs:31</a></div></div>
+<div class="ttc" id="aclassGlobalGoal_html_a6de3df5d326eb08614a42a65fdde49d0"><div class="ttname"><a href="classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0">GlobalGoal.OnComplete</a></div><div class="ttdeci">virtual void OnComplete()</div><div class="ttdef"><b>Definition:</b> <a href="GlobalGoal_8cs_source.html#l00042">GlobalGoal.cs:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GlobalGoal_8cs_source.html#l00031">Kill()</a>, and <a class="el" href="GlobalGoal_8cs_source.html#l00042">OnComplete()</a>.</p>
 
 </div>
 </div>
@@ -266,6 +304,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00031">31</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        this.owner.global.goal = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GlobalGoal_8cs_source.html#l00036">Complete()</a>.</p>
 
 </div>
 </div>
@@ -295,6 +338,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classGlobalGoalAdv.html#a4b10fb5369a0b97b50f052d91fcf845e">GlobalGoalAdv</a>, and <a class="el" href="classGlobalGoalVisitAndStay.html#a44cc6c81e0ef2b7d462699431cf29784">GlobalGoalVisitAndStay</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00027">27</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GlobalGoal_8cs_source.html#l00021">AdvanceHour()</a>.</p>
 
 </div>
 </div>
@@ -322,6 +369,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00042">42</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GlobalGoal_8cs_source.html#l00036">Complete()</a>.</p>
 
 </div>
 </div>
@@ -349,6 +400,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00017">17</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GlobalGoal_8cs_source.html#l00012">Start()</a>.</p>
 
 </div>
 </div>
@@ -377,6 +432,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00006">6</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        this.owner = c;</div>
+<div class="line"><span class="lineno">    9</span>        c.global.goal = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>, and <a class="el" href="Chara_8cs_source.html#l00953">Chara.OnDeserialized()</a>.</p>
 
 </div>
 </div>
@@ -404,6 +465,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00012">12</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        this.<a class="code hl_function" href="classGlobalGoal.html#adddd8a0f1a96851f123e72e4728a77bf">OnStart</a>();</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassGlobalGoal_html_adddd8a0f1a96851f123e72e4728a77bf"><div class="ttname"><a href="classGlobalGoal.html#adddd8a0f1a96851f123e72e4728a77bf">GlobalGoal.OnStart</a></div><div class="ttdeci">virtual void OnStart()</div><div class="ttdef"><b>Definition:</b> <a href="GlobalGoal_8cs_source.html#l00017">GlobalGoal.cs:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GlobalGoal_8cs_source.html#l00017">OnStart()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00068">GameDate.AdvanceHour()</a>.</p>
 
 </div>
 </div>
@@ -422,6 +491,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00047">47</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GlobalGoal_8cs_source.html#l00021">AdvanceHour()</a>, and <a class="el" href="GlobalGoalVisitAndStay_8cs_source.html#l00015">GlobalGoalVisitAndStay.OnAdvanceHour()</a>.</p>
+
 </div>
 </div>
 <a id="a9ac4b8ed5f324bc100e6dd06f4b51e71" name="a9ac4b8ed5f324bc100e6dd06f4b51e71"></a>
@@ -438,15 +509,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GlobalGoal_8cs_source.html#l00049">49</a> of file <a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GlobalGoalExplore_8cs_source.html#l00006">GlobalGoalExplore.GetDestZone()</a>, <a class="el" href="GlobalGoalVisitAndStay_8cs_source.html#l00072">GlobalGoalVisitAndStay.GetDestZone()</a>, <a class="el" href="GlobalGoalVisitTown_8cs_source.html#l00005">GlobalGoalVisitTown.GetDestZone()</a>, <a class="el" href="GlobalGoalAdv_8cs_source.html#l00005">GlobalGoalAdv.OnAdvanceHour()</a>, and <a class="el" href="GlobalGoalVisitAndStay_8cs_source.html#l00015">GlobalGoalVisitAndStay.OnAdvanceHour()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="GlobalGoal_8cs_source.html">GlobalGoal.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGlobalGoal.html">GlobalGoal</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

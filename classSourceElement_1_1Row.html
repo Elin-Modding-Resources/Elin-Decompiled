@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classSourceElement_1_1Row.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="classSourceElement.html">SourceElement</a></li><li class="navelem"><a class="el" href="classSourceElement_1_1Row.html">Row</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -284,6 +300,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00207">207</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span> base.GetText(<span class="stringliteral">&quot;altname&quot;</span>, <span class="keyword">false</span>).Split(<span class="charliteral">&#39;,&#39;</span>, StringSplitOptions.None).TryGet(i, -1);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="CardRow_8cs_source.html#l00095">CardRow.GetName()</a>.</p>
 
 </div>
 </div>
@@ -311,6 +332,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00177">177</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>        {</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> != 0)</div>
+<div class="line"><span class="lineno">  180</span>            {</div>
+<div class="line"><span class="lineno">  181</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a>].alias.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[<span class="keyword">this</span>.aliasRef].GetAltname(0), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  182</span>            }</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">return</span> base.GetName();</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_af4bcfe28856d43f17e6b9c5c795cb68a"><div class="ttname"><a href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">SourceElement.Row.idMold</a></div><div class="ttdeci">int idMold</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00395">SourceElement.cs:395</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00395">SourceElement.Row.idMold</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00631">Element.CheckLevelBonus()</a>, <a class="el" href="Feat_82_8cs_source.html#l00602">Feat.g__NoteElement()</a>, <a class="el" href="CardRow_8cs_source.html#l00095">CardRow.GetName()</a>, and <a class="el" href="TraitAbility_8cs_source.html#l00043">TraitAbility.SetName()</a>.</p>
 
 </div>
 </div>
@@ -338,6 +374,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00186">186</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            Sprite result;</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> ((result = SpriteSheet.Get(<span class="stringliteral">&quot;Media/Graphics/Icon/Element/icon_ability&quot;</span>, <span class="keyword">this</span>.alias)) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  190</span>            {</div>
+<div class="line"><span class="lineno">  191</span>                result = (SpriteSheet.Get(<span class="stringliteral">&quot;Media/Graphics/Icon/Element/icon_ability&quot;</span>, this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580">type</a>) ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.defaultAbility);</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_abf32b2e2ae58e3cbec41c187bf2ac580"><div class="ttname"><a href="classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580">SourceElement.Row.type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00305">SourceElement.cs:305</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, and <a class="el" href="SourceElement_8cs_source.html#l00305">SourceElement.Row.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonGrid_8cs_source.html#l00185">ButtonGrid.SetCard()</a>, and <a class="el" href="SourceElement_8cs_source.html#l00196">SourceElement.Row.SetImage()</a>.</p>
 
 </div>
 </div>
@@ -366,6 +416,36 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00246">246</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>        {</div>
+<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85">encSlot</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  249</span>            {</div>
+<div class="line"><span class="lineno">  250</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  251</span>            }</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85">encSlot</a> == <span class="stringliteral">&quot;global&quot;</span>)</div>
+<div class="line"><span class="lineno">  253</span>            {</div>
+<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  255</span>            }</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordtype">int</span> slot = cat.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#af74b55a264c4354aea3a7cde6ea0f1f2">slot</a>;</div>
+<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">if</span> (slot == 0)</div>
+<div class="line"><span class="lineno">  258</span>            {</div>
+<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  260</span>            }</div>
+<div class="line"><span class="lineno">  261</span>            <span class="keywordtype">string</span> a = this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85">encSlot</a>;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;all&quot;</span>)</div>
+<div class="line"><span class="lineno">  263</span>            {</div>
+<div class="line"><span class="lineno">  264</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  265</span>            }</div>
+<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (!(a == <span class="stringliteral">&quot;weapon&quot;</span>))</div>
+<div class="line"><span class="lineno">  267</span>            {</div>
+<div class="line"><span class="lineno">  268</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85">encSlot</a>.Contains(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[slot].alias);</div>
+<div class="line"><span class="lineno">  269</span>            }</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">return</span> cat.<a class="code hl_function" href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">IsChildOf</a>(<span class="stringliteral">&quot;weapon&quot;</span>);</div>
+<div class="line"><span class="lineno">  271</span>        }</div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a9fa12e7fd725535437b9fdc34f375ee0"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">SourceCategory.Row.IsChildOf</a></div><div class="ttdeci">bool IsChildOf(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00076">SourceCategory.cs:76</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_af74b55a264c4354aea3a7cde6ea0f1f2"><div class="ttname"><a href="classSourceCategory_1_1Row.html#af74b55a264c4354aea3a7cde6ea0f1f2">SourceCategory.Row.slot</a></div><div class="ttdeci">int slot</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00149">SourceCategory.cs:149</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a039db66bd13f8a88fc0b81f8297e2b85"><div class="ttname"><a href="classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85">SourceElement.Row.encSlot</a></div><div class="ttdeci">string encSlot</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00341">SourceElement.cs:341</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00341">SourceElement.Row.encSlot</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -394,6 +474,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00225">225</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (this.<span class="keywordtype">id</span> == 10)</div>
+<div class="line"><span class="lineno">  228</span>            {</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  230</span>            }</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;trait&quot;</span>))</div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keywordflow">return</span> !t.IsEquipmentOrRanged &amp;&amp; !t.<a class="code hl_property" href="classCard.html#a1447725b673773c7a3657a01ccc0f684">IsAmmo</a>;</div>
+<div class="line"><span class="lineno">  234</span>            }</div>
+<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (!t.<a class="code hl_property" href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">IsEquipmentOrRanged</a>)</div>
+<div class="line"><span class="lineno">  236</span>            {</div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  238</span>            }</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a1447725b673773c7a3657a01ccc0f684">IsAmmo</a>)</div>
+<div class="line"><span class="lineno">  240</span>            {</div>
+<div class="line"><span class="lineno">  241</span>                this.<a class="code hl_function" href="classSourceElement_1_1Row.html#ada33168a64beecc7441ee9924ad32b55">IsEncAppliable</a>(t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>);</div>
+<div class="line"><span class="lineno">  242</span>            }</div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  244</span>        }</div>
+<div class="ttc" id="aclassCard_html_a1447725b673773c7a3657a01ccc0f684"><div class="ttname"><a href="classCard.html#a1447725b673773c7a3657a01ccc0f684">Card.IsAmmo</a></div><div class="ttdeci">bool IsAmmo</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02354">Card.cs:2355</a></div></div>
+<div class="ttc" id="aclassCard_html_a8f074386edfb55a8db4bf6ad31f49c22"><div class="ttname"><a href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">Card.IsEquipmentOrRanged</a></div><div class="ttdeci">bool IsEquipmentOrRanged</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02322">Card.cs:2323</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1dbde98a747856add8519bb4e7cc688"><div class="ttname"><a href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">Card.category</a></div><div class="ttdeci">SourceCategory.Row category</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01930">Card.cs:1931</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a258e55d6efca1996b0542540a95442a9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">SourceElement.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00315">SourceElement.cs:315</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_ada33168a64beecc7441ee9924ad32b55"><div class="ttname"><a href="classSourceElement_1_1Row.html#ada33168a64beecc7441ee9924ad32b55">SourceElement.Row.IsEncAppliable</a></div><div class="ttdeci">bool IsEncAppliable(Thing t, bool isMaterial)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00212">SourceElement.cs:212</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01931">Card.category</a>, <a class="el" href="Card_8cs_source.html#l02355">Card.IsAmmo</a>, <a class="el" href="SourceElement_8cs_source.html#l00212">SourceElement.Row.IsEncAppliable()</a>, <a class="el" href="Card_8cs_source.html#l02323">Card.IsEquipmentOrRanged</a>, and <a class="el" href="SourceElement_8cs_source.html#l00315">SourceElement.Row.tag</a>.</p>
 
 </div>
 </div>
@@ -432,6 +538,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00212">212</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>        {</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (isMaterial &amp;&amp; t.<a class="code hl_property" href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">IsEquipmentOrRanged</a>)</div>
+<div class="line"><span class="lineno">  215</span>            {</div>
+<div class="line"><span class="lineno">  216</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;trait&quot;</span>))</div>
+<div class="line"><span class="lineno">  219</span>            {</div>
+<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">return</span> !t.<a class="code hl_property" href="classCard.html#a8f074386edfb55a8db4bf6ad31f49c22">IsEquipmentOrRanged</a>;</div>
+<div class="line"><span class="lineno">  221</span>            }</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSourceElement_1_1Row.html#ada33168a64beecc7441ee9924ad32b55">IsEncAppliable</a>(t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>);</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01931">Card.category</a>, <a class="el" href="SourceElement_8cs_source.html#l00212">SourceElement.Row.IsEncAppliable()</a>, <a class="el" href="Card_8cs_source.html#l02323">Card.IsEquipmentOrRanged</a>, and <a class="el" href="SourceElement_8cs_source.html#l00315">SourceElement.Row.tag</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceElement_8cs_source.html#l00212">SourceElement.Row.IsEncAppliable()</a>.</p>
 
 </div>
 </div>
@@ -460,6 +581,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00196">196</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            image.sprite = (this.<a class="code hl_function" href="classSourceElement_1_1Row.html#ab7fff6c47f36c12bb6874fcc9080d6b1">GetSprite</a>() ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.icons.defaultAbility);</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a4652ce165a6625864e2ba4058c07563e">aliasRef</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>                image.color = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#afdc8bf4470b117ddaa2703587e52149a">elements</a>[this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a4652ce165a6625864e2ba4058c07563e">aliasRef</a>].colorSprite;</div>
+<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  203</span>            }</div>
+<div class="line"><span class="lineno">  204</span>            image.color = <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00111">EClass.cs:112</a></div></div>
+<div class="ttc" id="aclassGameSetting_html_afdc8bf4470b117ddaa2703587e52149a"><div class="ttname"><a href="classGameSetting.html#afdc8bf4470b117ddaa2703587e52149a">GameSetting.elements</a></div><div class="ttdeci">UD_String_ElementRef elements</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00041">GameSetting.cs:41</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a4652ce165a6625864e2ba4058c07563e"><div class="ttname"><a href="classSourceElement_1_1Row.html#a4652ce165a6625864e2ba4058c07563e">SourceElement.Row.aliasRef</a></div><div class="ttdeci">string aliasRef</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00295">SourceElement.cs:295</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_ab7fff6c47f36c12bb6874fcc9080d6b1"><div class="ttname"><a href="classSourceElement_1_1Row.html#ab7fff6c47f36c12bb6874fcc9080d6b1">SourceElement.Row.GetSprite</a></div><div class="ttdeci">Sprite GetSprite()</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00186">SourceElement.cs:186</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceElement_8cs_source.html#l00295">SourceElement.Row.aliasRef</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="GameSetting_8cs_source.html#l00041">GameSetting.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00186">SourceElement.Row.GetSprite()</a>, and <a class="el" href="EClass_8cs_source.html#l00112">EClass.setting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ButtonGrid_8cs_source.html#l00185">ButtonGrid.SetCard()</a>.</p>
 
 </div>
 </div>
@@ -477,6 +616,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00313">313</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalCombat_8cs_source.html#l00423">GoalCombat.TryUseAbility()</a>.</p>
 
 </div>
 </div>
@@ -542,6 +683,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00275">275</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>.</p>
+
 </div>
 </div>
 <a id="ad788ad5f182392d96cdea2290f6b22c3" name="ad788ad5f182392d96cdea2290f6b22c3"></a>
@@ -574,6 +717,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00285">285</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>.</p>
+
 </div>
 </div>
 <a id="a4652ce165a6625864e2ba4058c07563e" name="a4652ce165a6625864e2ba4058c07563e"></a>
@@ -589,6 +734,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00295">295</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00557">Player.DreamSpell()</a>, <a class="el" href="SourceElement_8cs_source.html#l00196">SourceElement.Row.SetImage()</a>, and <a class="el" href="Chara_8cs_source.html#l01697">Chara.SetMainElement()</a>.</p>
 
 </div>
 </div>
@@ -654,6 +801,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00309">309</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00104">DNA.Apply()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00019">FactionBranch.Evalue()</a>, <a class="el" href="Feat_82_8cs_source.html#l00602">Feat.g__NoteElement()</a>, and <a class="el" href="Chara_8cs_source.html#l07657">Chara.TryUpgrade()</a>.</p>
+
 </div>
 </div>
 <a id="a6dfbffba5a86a6ae85bf1b148386e6a9" name="a6dfbffba5a86a6ae85bf1b148386e6a9"></a>
@@ -686,6 +835,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00325">325</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceElement_8cs_source.html#l00117">SourceElement.AddRow()</a>.</p>
+
 </div>
 </div>
 <a id="a4235011c10329e428552e3f6f313c16d" name="a4235011c10329e428552e3f6f313c16d"></a>
@@ -717,6 +868,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00321">321</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07756">Chara.AddCooldown()</a>.</p>
 
 </div>
 </div>
@@ -830,6 +983,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00341">341</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceElement_8cs_source.html#l00246">SourceElement.Row.IsEncAppliable()</a>.</p>
+
 </div>
 </div>
 <a id="a264a4f5384f5099243c0171442349222" name="a264a4f5384f5099243c0171442349222"></a>
@@ -878,6 +1033,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00273">273</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="CraftUtil_8cs_source.html#l00031">CraftUtil.AddRandomFoodEnc()</a>, <a class="el" href="SourceElement_8cs_source.html#l00117">SourceElement.AddRow()</a>, <a class="el" href="DNA_8cs_source.html#l00104">DNA.Apply()</a>, <a class="el" href="Element_82_8cs_source.html#l00631">Element.CheckLevelBonus()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.Craft()</a>, <a class="el" href="Player_8cs_source.html#l00557">Player.DreamSpell()</a>, <a class="el" href="Core_8cs_source.html#l00662">Core.GetElement()</a>, <a class="el" href="Zone_8cs_source.html#l03134">Zone.ListLandFeats()</a>, <a class="el" href="Chara_8cs_source.html#l09134">Chara.ModTempElement()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="Trait_8cs_source.html#l01955">Trait.OnBarter()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00859">FactionBranch.OnClaimZone()</a>, <a class="el" href="TraitMod_8cs_source.html#l00021">TraitMod.OnCreate()</a>, <a class="el" href="Chara_8cs_source.html#l09091">Chara.RefreshFaithElement()</a>, <a class="el" href="ElementSelecter_8cs_source.html#l00007">ElementSelecter.Select()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01647">CoreDebug.SetElement()</a>, <a class="el" href="ConDisease_8cs_source.html#l00021">ConDisease.Tick()</a>, <a class="el" href="Chara_8cs_source.html#l03780">Chara.TryAbsorbRod()</a>, and <a class="el" href="Chara_8cs_source.html#l07657">Chara.TryUpgrade()</a>.</p>
+
 </div>
 </div>
 <a id="af4bcfe28856d43f17e6b9c5c795cb68a" name="af4bcfe28856d43f17e6b9c5c795cb68a"></a>
@@ -893,6 +1050,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00395">395</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceElement_8cs_source.html#l00177">SourceElement.Row.GetName()</a>.</p>
 
 </div>
 </div>
@@ -1054,6 +1213,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00323">323</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="SourceElement_8cs_source.html#l00117">SourceElement.AddRow()</a>.</p>
+
 </div>
 </div>
 <a id="a082ab156c7c75a2cac622dfe85e7278a" name="a082ab156c7c75a2cac622dfe85e7278a"></a>
@@ -1085,6 +1246,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00335">335</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>.</p>
 
 </div>
 </div>
@@ -1198,6 +1361,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00303">303</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="GoalCombat_8cs_source.html#l00423">GoalCombat.TryUseAbility()</a>.</p>
+
 </div>
 </div>
 <a id="a74d67c9ee1c0a4fe4def203771f7f856" name="a74d67c9ee1c0a4fe4def203771f7f856"></a>
@@ -1262,6 +1427,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00315">315</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00019">FactionBranch.Evalue()</a>, <a class="el" href="Feat_82_8cs_source.html#l00602">Feat.g__NoteElement()</a>, <a class="el" href="SourceElement_8cs_source.html#l00212">SourceElement.Row.IsEncAppliable()</a>, <a class="el" href="Chara_8cs_source.html#l08924">Chara.MutateRandom()</a>, <a class="el" href="ElementSelecter_8cs_source.html#l00007">ElementSelecter.Select()</a>, and <a class="el" href="Chara_8cs_source.html#l07657">Chara.TryUpgrade()</a>.</p>
+
 </div>
 </div>
 <a id="a51cfbad805d07a53c15d1a039cab2241" name="a51cfbad805d07a53c15d1a039cab2241"></a>
@@ -1293,6 +1460,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00301">301</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GoalCombat_8cs_source.html#l00423">GoalCombat.TryUseAbility()</a>.</p>
 
 </div>
 </div>
@@ -1566,6 +1735,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00305">305</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00761">Element.Create()</a>, and <a class="el" href="SourceElement_8cs_source.html#l00186">SourceElement.Row.GetSprite()</a>.</p>
+
 </div>
 </div>
 <a id="a7c90b7d633f5722cee42545faaeb3965" name="a7c90b7d633f5722cee42545faaeb3965"></a>
@@ -1606,7 +1777,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00169">169</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  172</span>            {</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>;</div>
+<div class="line"><span class="lineno">  174</span>            }</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_aa9b6be183183173bc2d17d5a18bce762"><div class="ttname"><a href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">SourceElement.Row.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00275">SourceElement.cs:275</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa634fd91f3c6fd1cf27ff52109e8c369" name="aa634fd91f3c6fd1cf27ff52109e8c369"></a>
@@ -1630,16 +1808,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00161">161</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  164</span>            {</div>
+<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSourceElement.html">SourceElement</a></li><li class="navelem"><a class="el" href="classSourceElement_1_1Row.html">Row</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

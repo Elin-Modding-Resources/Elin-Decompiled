@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAM__Build.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -244,6 +264,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00006">6</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> Input.GetKey(KeyCode.LeftAlt) &amp;&amp; (c == <span class="keyword">null</span> || !c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">CanOnlyCarry</a>);</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
+<div class="ttc" id="aclassTrait_html_af59d1d8c9919b6620eab8ceba3956cca"><div class="ttname"><a href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">Trait.CanOnlyCarry</a></div><div class="ttdeci">virtual bool CanOnlyCarry</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00622">Trait.cs:623</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00623">Trait.CanOnlyCarry</a>, and <a class="el" href="Card_8cs_source.html#l07298">Card.trait</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00011">IsRoofEditMode()</a>, and <a class="el" href="AM__MoveInstalled_8cs_source.html#l00007">AM_MoveInstalled.IsRoofEditMode()</a>.</p>
 
 </div>
 </div>
@@ -282,6 +311,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00277">277</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  278</span>    {</div>
+<div class="line"><span class="lineno">  279</span>        this.bridgeHeight = -1;</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">IsBridge</a>)</div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            this.bridgeHeight = (int)((<span class="keywordtype">byte</span>)((point.cell.bridgeHeight == 0) ? ((<span class="keywordtype">int</span>)point.cell.height + <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#ac089a03a968e551337d767ef3601a101">MinAltitude</a>) : ((<span class="keywordtype">int</span>)point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#ad9e440b850957018738788fd3d259877">bridgeHeight</a>)));</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="line"><span class="lineno">  284</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a53b544fc59c344f015fc9f97f7dbfaf3"><div class="ttname"><a href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">AM_Build.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00459">AM_Build.cs:459</a></div></div>
+<div class="ttc" id="aclassCell_html_ad9e440b850957018738788fd3d259877"><div class="ttname"><a href="classCell.html#ad9e440b850957018738788fd3d259877">Cell.bridgeHeight</a></div><div class="ttdeci">byte bridgeHeight</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01856">Cell.cs:1856</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a3d324d398c2b04a5384df28d7cebee16"><div class="ttname"><a href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">Recipe.tileType</a></div><div class="ttdeci">virtual TileType tileType</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00128">Recipe.cs:129</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ad57d23b10a9aa05731abe13c24b26065"><div class="ttname"><a href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">Recipe.IsBridge</a></div><div class="ttdeci">bool IsBridge</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00200">Recipe.cs:201</a></div></div>
+<div class="ttc" id="aclassTileType_html_ac089a03a968e551337d767ef3601a101"><div class="ttname"><a href="classTileType.html#ac089a03a968e551337d767ef3601a101">TileType.MinAltitude</a></div><div class="ttdeci">virtual int MinAltitude</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00353">TileType.cs:354</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01856">Cell.bridgeHeight</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Recipe_8cs_source.html#l00201">Recipe.IsBridge</a>, <a class="el" href="TileType_8cs_source.html#l00354">TileType.MinAltitude</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="Recipe_8cs_source.html#l00129">Recipe.tileType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00252">TaskBuild.OnProgressComplete()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00286">OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -310,6 +356,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00171">171</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#af2698fc13183e3d4c1fe6f5fa0916ab3">CanInstaComplete</a>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassTileType_html_af2698fc13183e3d4c1fe6f5fa0916ab3"><div class="ttname"><a href="classTileType.html#af2698fc13183e3d4c1fe6f5fa0916ab3">TileType.CanInstaComplete</a></div><div class="ttdeci">virtual bool CanInstaComplete</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00345">TileType.cs:346</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00346">TileType.CanInstaComplete</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="Recipe_8cs_source.html#l00129">Recipe.tileType</a>.</p>
 
 </div>
 </div>
@@ -338,6 +390,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00162">162</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a6fe0c301bf2206b21bfd8d1317b74439">IsBlock</a>)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">passGuideBlock</a>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.cs:861</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6fe0c301bf2206b21bfd8d1317b74439"><div class="ttname"><a href="classRecipe.html#a6fe0c301bf2206b21bfd8d1317b74439">Recipe.IsBlock</a></div><div class="ttdeci">virtual bool IsBlock</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00184">Recipe.cs:185</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abae9aeeca1578db7eff6d822e491eb7c"><div class="ttname"><a href="classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c">ScreenGuide.passGuideBlock</a></div><div class="ttdeci">MeshPass passGuideBlock</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.cs:66</a></div></div>
+<div class="ttc" id="aclassScreenGuide_html_abd2582d0da474b87de4f668bc34f5e8e"><div class="ttname"><a href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">ScreenGuide.passGuideFloor</a></div><div class="ttdeci">MeshPass passGuideFloor</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.cs:68</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Recipe_8cs_source.html#l00185">Recipe.IsBlock</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00066">ScreenGuide.passGuideBlock</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>.</p>
 
 </div>
 </div>
@@ -368,6 +435,21 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAM__Designation.html#aec3484359d225d40177e7fede92d2a76">AM_Designation&lt; TaskBuild &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00087">87</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_class" href="classCellDetail.html">CellDetail</a> detail = p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a>;</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (((detail != <span class="keyword">null</span>) ? detail.<a class="code hl_variable" href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">designation</a> : <span class="keyword">null</span>) is <a class="code hl_class" href="classTaskBuild.html">TaskBuild</a>)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
+<div class="ttc" id="aclassCellDetail_html"><div class="ttname"><a href="classCellDetail.html">CellDetail</a></div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00004">CellDetail.cs:5</a></div></div>
+<div class="ttc" id="aclassCellDetail_html_a7b07584d994ec50ed5f78d809c2edd2a"><div class="ttname"><a href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">CellDetail.designation</a></div><div class="ttdeci">TaskDesignation designation</div><div class="ttdef"><b>Definition:</b> <a href="CellDetail_8cs_source.html#l00086">CellDetail.cs:86</a></div></div>
+<div class="ttc" id="aclassPoint_html_a57750a64b9d2677905e55c987f55981f"><div class="ttname"><a href="classPoint.html#a57750a64b9d2677905e55c987f55981f">Point.detail</a></div><div class="ttdeci">CellDetail detail</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00106">Point.cs:107</a></div></div>
+<div class="ttc" id="aclassTaskBuild_html"><div class="ttname"><a href="classTaskBuild.html">TaskBuild</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00006">TaskBuild.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CellDetail_8cs_source.html#l00086">CellDetail.designation</a>, and <a class="el" href="Point_8cs_source.html#l00107">Point.detail</a>.</p>
 
 </div>
 </div>
@@ -406,6 +488,70 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00224">224</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>    {</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (start != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            this.mold.bridgeHeight = (int)start.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#ad9e440b850957018738788fd3d259877">bridgeHeight</a>;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>            this.mold.bridgeHeight = (int)point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#ad9e440b850957018738788fd3d259877">bridgeHeight</a>;</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  235</span>        {</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Default;</div>
+<div class="line"><span class="lineno">  237</span>        }</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classAM__Build.html#a9e838e68e7fbe8dacc7654eb2d9e8709">IsRoofEditMode</a>(<span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  239</span>        {</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classAM__Build.html#a6a450ead9391efc3aa0132f148b69cfa">IsFillMode</a>())</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_class" href="classCell.html">Cell</a> cell = point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">IsBridge</a>)</div>
+<div class="line"><span class="lineno">  246</span>            {</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != start.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a>)</div>
+<div class="line"><span class="lineno">  248</span>                {</div>
+<div class="line"><span class="lineno">  249</span>                    <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.NoTarget;</div>
+<div class="line"><span class="lineno">  250</span>                }</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#aa314244ec75b63a41483cde74ad282bb">IsFloor</a>)</div>
+<div class="line"><span class="lineno">  254</span>            {</div>
+<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a2d09db65942b1e42ab8b42516def5b48">_floor</a> != start.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a2d09db65942b1e42ab8b42516def5b48">_floor</a>)</div>
+<div class="line"><span class="lineno">  256</span>                {</div>
+<div class="line"><span class="lineno">  257</span>                    <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.NoTarget;</div>
+<div class="line"><span class="lineno">  258</span>                }</div>
+<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  260</span>            }</div>
+<div class="line"><span class="lineno">  261</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a6fe0c301bf2206b21bfd8d1317b74439">IsBlock</a>)</div>
+<div class="line"><span class="lineno">  262</span>            {</div>
+<div class="line"><span class="lineno">  263</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_variable" href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">_block</a> != start.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">_block</a>)</div>
+<div class="line"><span class="lineno">  264</span>                {</div>
+<div class="line"><span class="lineno">  265</span>                    <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.NoTarget;</div>
+<div class="line"><span class="lineno">  266</span>                }</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  268</span>            }</div>
+<div class="line"><span class="lineno">  269</span>        }</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">IsBridge</a> &amp;&amp; <span class="keyword">this</span>.recipe.tileType.SelectType == <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.Multiple &amp;&amp; !point.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(start) &amp;&amp; (int)point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &gt; <span class="keyword">this</span>.bridgeHeight + <span class="keyword">this</span>.altitude)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> base.HitTest(point, start);</div>
+<div class="line"><span class="lineno">  275</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a6a450ead9391efc3aa0132f148b69cfa"><div class="ttname"><a href="classAM__Build.html#a6a450ead9391efc3aa0132f148b69cfa">AM_Build.IsFillMode</a></div><div class="ttdeci">override bool IsFillMode()</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00017">AM_Build.cs:17</a></div></div>
+<div class="ttc" id="aclassAM__Build_html_a9e838e68e7fbe8dacc7654eb2d9e8709"><div class="ttname"><a href="classAM__Build.html#a9e838e68e7fbe8dacc7654eb2d9e8709">AM_Build.IsRoofEditMode</a></div><div class="ttdeci">override bool IsRoofEditMode(Card c=null)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00011">AM_Build.cs:11</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html"><div class="ttname"><a href="classBaseTileSelector.html">BaseTileSelector</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00004">BaseTileSelector.cs:5</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_a126c209eb9b08ada2549a86c6fc6dd1f"><div class="ttname"><a href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">BaseTileSelector.SelectType</a></div><div class="ttdeci">SelectType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00517">BaseTileSelector.cs:518</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
+<div class="ttc" id="aclassCell_html_a00dcc9aa5469cc15cabbfcb6c3d4e329"><div class="ttname"><a href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">Cell._block</a></div><div class="ttdeci">byte _block</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01812">Cell.cs:1812</a></div></div>
+<div class="ttc" id="aclassCell_html_a23a20aed3b871d236514d5e80ce425ab"><div class="ttname"><a href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">Cell._bridge</a></div><div class="ttdeci">byte _bridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01828">Cell.cs:1828</a></div></div>
+<div class="ttc" id="aclassCell_html_a2d09db65942b1e42ab8b42516def5b48"><div class="ttname"><a href="classCell.html#a2d09db65942b1e42ab8b42516def5b48">Cell._floor</a></div><div class="ttdeci">byte _floor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01816">Cell.cs:1816</a></div></div>
+<div class="ttc" id="aclassCell_html_a835540b2640271ddf7ca5b7cd12466c1"><div class="ttname"><a href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">Cell.height</a></div><div class="ttdeci">byte height</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01854">Cell.cs:1854</a></div></div>
+<div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01029">Point.cs:1029</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aa314244ec75b63a41483cde74ad282bb"><div class="ttname"><a href="classRecipe.html#aa314244ec75b63a41483cde74ad282bb">Recipe.IsFloor</a></div><div class="ttdeci">bool IsFloor</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00168">Recipe.cs:169</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01812">Cell._block</a>, <a class="el" href="Cell_8cs_source.html#l01828">Cell._bridge</a>, <a class="el" href="Cell_8cs_source.html#l01816">Cell._floor</a>, <a class="el" href="Cell_8cs_source.html#l01856">Cell.bridgeHeight</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Point_8cs_source.html#l01029">Point.Equals()</a>, <a class="el" href="Cell_8cs_source.html#l01854">Cell.height</a>, <a class="el" href="Recipe_8cs_source.html#l00185">Recipe.IsBlock</a>, <a class="el" href="Recipe_8cs_source.html#l00201">Recipe.IsBridge</a>, <a class="el" href="AM__Build_8cs_source.html#l00017">IsFillMode()</a>, <a class="el" href="Recipe_8cs_source.html#l00169">Recipe.IsFloor</a>, <a class="el" href="AM__Build_8cs_source.html#l00011">IsRoofEditMode()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>.</p>
 
 </div>
 </div>
@@ -434,6 +580,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00415">415</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>    {</div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (EInput.isAltDown || EInput.isCtrlDown)</div>
+<div class="line"><span class="lineno">  418</span>        {</div>
+<div class="line"><span class="lineno">  419</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  420</span>        }</div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a97446d9f144851eee239e510affb2c5f">MaxAltitude</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  422</span>        {</div>
+<div class="line"><span class="lineno">  423</span>            this.<a class="code hl_function" href="classAM__Build.html#a871b35969398c63b105a030299a212f6">ModAltitude</a>(wheel);</div>
+<div class="line"><span class="lineno">  424</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">tileSelector</a>.<a class="code hl_function" href="classBaseTileSelector.html#ad4a18b3e45fcc519796ae9de866e24ab">RefreshMouseInfo</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  425</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  426</span>        }</div>
+<div class="line"><span class="lineno">  427</span>        base.InputWheel(wheel);</div>
+<div class="line"><span class="lineno">  428</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a871b35969398c63b105a030299a212f6"><div class="ttname"><a href="classAM__Build.html#a871b35969398c63b105a030299a212f6">AM_Build.ModAltitude</a></div><div class="ttdeci">void ModAltitude(int a)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00430">AM_Build.cs:430</a></div></div>
+<div class="ttc" id="aclassBaseGameScreen_html_ab7be591966272c30dbaf7f49dae84e8d"><div class="ttname"><a href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">BaseGameScreen.tileSelector</a></div><div class="ttdeci">BaseTileSelector tileSelector</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.cs:859</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_ad4a18b3e45fcc519796ae9de866e24ab"><div class="ttname"><a href="classBaseTileSelector.html#ad4a18b3e45fcc519796ae9de866e24ab">BaseTileSelector.RefreshMouseInfo</a></div><div class="ttdeci">unsafe void RefreshMouseInfo(bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00388">BaseTileSelector.cs:388</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a97446d9f144851eee239e510affb2c5f"><div class="ttname"><a href="classRecipe.html#a97446d9f144851eee239e510affb2c5f">Recipe.MaxAltitude</a></div><div class="ttdeci">int MaxAltitude</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00148">Recipe.cs:149</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00149">Recipe.MaxAltitude</a>, <a class="el" href="AM__Build_8cs_source.html#l00430">ModAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, <a class="el" href="BaseTileSelector_8cs_source.html#l00388">BaseTileSelector.RefreshMouseInfo()</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.tileSelector</a>.</p>
 
 </div>
 </div>
@@ -461,6 +626,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00017">17</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> !this.recipe.IsThing &amp;&amp; Input.GetKey(KeyCode.LeftControl) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_property" href="classCoreDebug.html#aa3a934419cfa84c02f58a6f9b4fd8cad">godBuild</a>;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_aa3a934419cfa84c02f58a6f9b4fd8cad"><div class="ttname"><a href="classCoreDebug.html#aa3a934419cfa84c02f58a6f9b4fd8cad">CoreDebug.godBuild</a></div><div class="ttdeci">bool godBuild</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00012">CoreDebug.cs:13</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00013">CoreDebug.godBuild</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00224">HitTest()</a>, and <a class="el" href="TaskBuild_8cs_source.html#l00252">TaskBuild.OnProgressComplete()</a>.</p>
 
 </div>
 </div>
@@ -489,6 +663,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00011">11</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classAM__Build.html#a1f8b40da48e033e1f968c4543cfb9c55">_IsRoofEditMode</a>((recipe != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a32ea83feab1dd425947e10577121c615">Mold</a> : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a1f8b40da48e033e1f968c4543cfb9c55"><div class="ttname"><a href="classAM__Build.html#a1f8b40da48e033e1f968c4543cfb9c55">AM_Build._IsRoofEditMode</a></div><div class="ttdeci">bool _IsRoofEditMode(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00006">AM_Build.cs:6</a></div></div>
+<div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00008">Recipe.cs:9</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a32ea83feab1dd425947e10577121c615"><div class="ttname"><a href="classRecipe.html#a32ea83feab1dd425947e10577121c615">Recipe.Mold</a></div><div class="ttdeci">virtual Card Mold</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00216">Recipe.cs:217</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00006">_IsRoofEditMode()</a>, <a class="el" href="Recipe_8cs_source.html#l00217">Recipe.Mold</a>, and <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00224">HitTest()</a>.</p>
 
 </div>
 </div>
@@ -517,6 +702,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00430">430</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  431</span>    {</div>
+<div class="line"><span class="lineno">  432</span>        this.altitude += a;</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a> &lt; (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">IsBridge</a> ? -10 : 0))</div>
+<div class="line"><span class="lineno">  434</span>        {</div>
+<div class="line"><span class="lineno">  435</span>            this.altitude = this.<a class="code hl_property" href="classAM__Build.html#a92223aa73fa422cc2d2116e7f9509ff0">MaxAltitude</a>;</div>
+<div class="line"><span class="lineno">  436</span>        }</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a> &gt; this.<a class="code hl_property" href="classAM__Build.html#a92223aa73fa422cc2d2116e7f9509ff0">MaxAltitude</a>)</div>
+<div class="line"><span class="lineno">  438</span>        {</div>
+<div class="line"><span class="lineno">  439</span>            this.altitude = (this.recipe.IsBridge ? -10 : 0);</div>
+<div class="line"><span class="lineno">  440</span>        }</div>
+<div class="line"><span class="lineno">  441</span>        this.<a class="code hl_function" href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">SetAltitude</a>(this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>);</div>
+<div class="line"><span class="lineno">  442</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a039a1ff3be43d9d3300b6725e224e3bf"><div class="ttname"><a href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">AM_Build.altitude</a></div><div class="ttdeci">int altitude</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00457">AM_Build.cs:457</a></div></div>
+<div class="ttc" id="aclassAM__Build_html_a92223aa73fa422cc2d2116e7f9509ff0"><div class="ttname"><a href="classAM__Build.html#a92223aa73fa422cc2d2116e7f9509ff0">AM_Build.MaxAltitude</a></div><div class="ttdeci">int MaxAltitude</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00403">AM_Build.cs:404</a></div></div>
+<div class="ttc" id="aclassAM__Build_html_ae9482c01217f5df0380ca1d5903fe0e7"><div class="ttname"><a href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">AM_Build.SetAltitude</a></div><div class="ttdeci">void SetAltitude(int a)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00444">AM_Build.cs:444</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>, <a class="el" href="Recipe_8cs_source.html#l00201">Recipe.IsBridge</a>, <a class="el" href="AM__Build_8cs_source.html#l00404">MaxAltitude</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, <a class="el" href="AM__Build_8cs_source.html#l00415">InputWheel()</a>, and <a class="el" href="UIPlaceHelper_8cs_source.html#l00006">UIPlaceHelper.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +748,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00181">181</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        this.list = base.Designations.build;</div>
+<div class="line"><span class="lineno">  184</span>        base.OnActivate();</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b3bb41f72b80ba47f9ed3cbe62043eb" name="a6b3bb41f72b80ba47f9ed3cbe62043eb"></a>
@@ -571,6 +779,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00325">325</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  326</span>    {</div>
+<div class="line"><span class="lineno">  327</span>        this._recipe = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  328</span>        this._recipe._dir = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#aca331b776177d220f4c5fb9131d5bc54">_dir</a>;</div>
+<div class="line"><span class="lineno">  329</span>        this.mold.dir = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#aca331b776177d220f4c5fb9131d5bc54">_dir</a>;</div>
+<div class="line"><span class="lineno">  330</span>        base.OnBeforeProcessTiles();</div>
+<div class="line"><span class="lineno">  331</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_aca331b776177d220f4c5fb9131d5bc54"><div class="ttname"><a href="classRecipe.html#aca331b776177d220f4c5fb9131d5bc54">Recipe._dir</a></div><div class="ttdeci">int _dir</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00903">Recipe.cs:903</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00903">Recipe._dir</a>, and <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>.</p>
 
 </div>
 </div>
@@ -598,6 +815,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00198">198</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>    {</div>
+<div class="line"><span class="lineno">  200</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">Inspect</a>.<a class="code hl_function" href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
+<div class="ttc" id="aclassAM__MoveInstalled_html_acc4b380fcce0cc921fd59a9583aafce2"><div class="ttname"><a href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">AM_MoveInstalled.Activate</a></div><div class="ttdeci">void Activate(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.cs:103</a></div></div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a03ce1f17d0e13fd5e7341cad4b9f4085"><div class="ttname"><a href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">ActionMode.Inspect</a></div><div class="ttdeci">static AM_Inspect Inspect</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01707">ActionMode.cs:1707</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.Activate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l01707">ActionMode.Inspect</a>.</p>
 
 </div>
 </div>
@@ -628,6 +853,12 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classAM__Designation.html#a30ac799bcad4a7c6a6bf0ba7223295fe">AM_Designation&lt; TaskBuild &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00218">218</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        this.mold.recipe = (processing ? this._recipe : this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>);</div>
+<div class="line"><span class="lineno">  221</span>        this.<a class="code hl_function" href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">SetAltitude</a>(this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>);</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>.</p>
 
 </div>
 </div>
@@ -655,6 +886,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00187">187</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>    {</div>
+<div class="line"><span class="lineno">  189</span>        base.Summary.SetRecipe(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  190</span>        this.recipe = (this.mold.recipe = <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  191</span>        this.houseBoard = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>)</div>
+<div class="line"><span class="lineno">  193</span>        {</div>
+<div class="line"><span class="lineno">  194</span>            <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.<a class="code hl_function" href="classBuildMenu.html#ab8e12217849f9805be1096d611ba06f9">Unselect</a>();</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="ttc" id="aclassBuildMenu_html"><div class="ttname"><a href="classBuildMenu.html">BuildMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00007">BuildMenu.cs:8</a></div></div>
+<div class="ttc" id="aclassBuildMenu_html_a37580e3789ed4b4e57ad109dbd08475a"><div class="ttname"><a href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">BuildMenu.Instance</a></div><div class="ttdeci">static BuildMenu Instance</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00709">BuildMenu.cs:709</a></div></div>
+<div class="ttc" id="aclassBuildMenu_html_ab8e12217849f9805be1096d611ba06f9"><div class="ttname"><a href="classBuildMenu.html#ab8e12217849f9805be1096d611ba06f9">BuildMenu.Unselect</a></div><div class="ttdeci">void Unselect()</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00369">BuildMenu.cs:369</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BuildMenu_8cs_source.html#l00709">BuildMenu.Instance</a>, and <a class="el" href="BuildMenu_8cs_source.html#l00369">BuildMenu.Unselect()</a>.</p>
 
 </div>
 </div>
@@ -682,6 +927,50 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00361">361</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  362</span>    {</div>
+<div class="line"><span class="lineno">  363</span>        base.OnFinishProcessTiles();</div>
+<div class="line"><span class="lineno">  364</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = this.<a class="code hl_variable" href="classAM__Build.html#a41deda74af76ac9197fbfa81c22343db">button</a>();</div>
+<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#ac86551430faa913221c614b73b368e84">UseStock</a>)</div>
+<div class="line"><span class="lineno">  366</span>        {</div>
+<div class="line"><span class="lineno">  367</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">ingredients</a>[0].thing;</div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">if</span> (thing == <span class="keyword">null</span> || thing.<a class="code hl_variable" href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">isDestroyed</a> || thing.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> || thing.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  369</span>            {</div>
+<div class="line"><span class="lineno">  370</span>                ActionMode.ignoreSound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">if</span> (buttonGrid)</div>
+<div class="line"><span class="lineno">  372</span>                {</div>
+<div class="line"><span class="lineno">  373</span>                    buttonGrid.selected = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  374</span>                    buttonGrid.DoNormalTransition(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  375</span>                }</div>
+<div class="line"><span class="lineno">  376</span>                <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.<a class="code hl_function" href="classBuildMenu.html#ab8e12217849f9805be1096d611ba06f9">Unselect</a>();</div>
+<div class="line"><span class="lineno">  377</span>                <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.<a class="code hl_function" href="classBuildMenu.html#acea1f800b136e1ecc8464eecc3ef58d1">RefreshCategory</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a449f0cea0e1adf7a0395cee0a9f7069b">pref</a>.lastBuildCategory);</div>
+<div class="line"><span class="lineno">  378</span>                <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085">Inspect</a>.<a class="code hl_function" href="classAM__MoveInstalled.html#acc4b380fcce0cc921fd59a9583aafce2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  379</span>                <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_variable" href="classBuildMenu.html#a37580e3789ed4b4e57ad109dbd08475a">Instance</a>.<a class="code hl_function" href="classBuildMenu.html#ab8e12217849f9805be1096d611ba06f9">Unselect</a>();</div>
+<div class="line"><span class="lineno">  380</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  381</span>            }</div>
+<div class="line"><span class="lineno">  382</span>        }</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (buttonGrid)</div>
+<div class="line"><span class="lineno">  384</span>        {</div>
+<div class="line"><span class="lineno">  385</span>            buttonGrid.<a class="code hl_function" href="classButtonGrid.html#a98a9dd03e3eea775314f54649e90dd53">SetRecipe</a>();</div>
+<div class="line"><span class="lineno">  386</span>        }</div>
+<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#ad57d23b10a9aa05731abe13c24b26065">IsBridge</a>)</div>
+<div class="line"><span class="lineno">  388</span>        {</div>
+<div class="line"><span class="lineno">  389</span>            this.<a class="code hl_function" href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">SetAltitude</a>(0);</div>
+<div class="line"><span class="lineno">  390</span>        }</div>
+<div class="line"><span class="lineno">  391</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a41deda74af76ac9197fbfa81c22343db"><div class="ttname"><a href="classAM__Build.html#a41deda74af76ac9197fbfa81c22343db">AM_Build.button</a></div><div class="ttdeci">Func&lt; ButtonGrid &gt; button</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00463">AM_Build.cs:463</a></div></div>
+<div class="ttc" id="aclassBuildMenu_html_acea1f800b136e1ecc8464eecc3ef58d1"><div class="ttname"><a href="classBuildMenu.html#acea1f800b136e1ecc8464eecc3ef58d1">BuildMenu.RefreshCategory</a></div><div class="ttdeci">void RefreshCategory(string cat)</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00419">BuildMenu.cs:419</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a98a9dd03e3eea775314f54649e90dd53"><div class="ttname"><a href="classButtonGrid.html#a98a9dd03e3eea775314f54649e90dd53">ButtonGrid.SetRecipe</a></div><div class="ttdeci">void SetRecipe()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00524">ButtonGrid.cs:524</a></div></div>
+<div class="ttc" id="aclassCard_html_a05dffd4f600c4a61fcabec797f77b221"><div class="ttname"><a href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">Card.isDestroyed</a></div><div class="ttdeci">bool isDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07316">Card.cs:7316</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02043">Card.cs:2044</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a449f0cea0e1adf7a0395cee0a9f7069b"><div class="ttname"><a href="classPlayer.html#a449f0cea0e1adf7a0395cee0a9f7069b">Player.pref</a></div><div class="ttdeci">Player.Pref pref</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01452">Player.cs:1452</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6c7bf4b0a53e229bea7bd21af75e0f61"><div class="ttname"><a href="classRecipe.html#a6c7bf4b0a53e229bea7bd21af75e0f61">Recipe.ingredients</a></div><div class="ttdeci">List&lt; Recipe.Ingredient &gt; ingredients</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00892">Recipe.cs:892</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ac86551430faa913221c614b73b368e84"><div class="ttname"><a href="classRecipe.html#ac86551430faa913221c614b73b368e84">Recipe.UseStock</a></div><div class="ttdeci">bool UseStock</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00895">Recipe.cs:895</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__MoveInstalled_8cs_source.html#l00103">AM_MoveInstalled.Activate()</a>, <a class="el" href="AM__Build_8cs_source.html#l00463">button</a>, <a class="el" href="Card_8cs_source.html#l02044">Card.ExistsOnMap</a>, <a class="el" href="Recipe_8cs_source.html#l00892">Recipe.ingredients</a>, <a class="el" href="ActionMode_8cs_source.html#l01707">ActionMode.Inspect</a>, <a class="el" href="BuildMenu_8cs_source.html#l00709">BuildMenu.Instance</a>, <a class="el" href="Recipe_8cs_source.html#l00201">Recipe.IsBridge</a>, <a class="el" href="Card_8cs_source.html#l07316">Card.isDestroyed</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="EClass_8cs_source.html#l00024">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01452">Player.pref</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, <a class="el" href="BuildMenu_8cs_source.html#l00419">BuildMenu.RefreshCategory()</a>, <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00524">ButtonGrid.SetRecipe()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00369">BuildMenu.Unselect()</a>, and <a class="el" href="Recipe_8cs_source.html#l00895">Recipe.UseStock</a>.</p>
 
 </div>
 </div>
@@ -720,6 +1009,40 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00333">333</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>    {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (dir != -1)</div>
+<div class="line"><span class="lineno">  336</span>        {</div>
+<div class="line"><span class="lineno">  337</span>            this.mold.dir = dir;</div>
+<div class="line"><span class="lineno">  338</span>        }</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  340</span>        {</div>
+<div class="line"><span class="lineno">  341</span>            this.mold.dir = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#aca331b776177d220f4c5fb9131d5bc54">_dir</a>;</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#a3da06753d1ee318d23771d684c34cd20">HasDesignation</a>)</div>
+<div class="line"><span class="lineno">  344</span>        {</div>
+<div class="line"><span class="lineno">  345</span>            <a class="code hl_class" href="classTaskBuild.html">TaskBuild</a> taskBuild = point.detail.designation as <a class="code hl_class" href="classTaskBuild.html">TaskBuild</a>;</div>
+<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">if</span> (taskBuild != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#aae5e1cf4c47a6af6408a78b1e5823cdb">IsWallOrFence</a> &amp;&amp; taskBuild.<a class="code hl_variable" href="classTaskBuild.html#a3e464e87eed4e43836f89064564eae75">recipe</a>.<a class="code hl_property" href="classRecipe.html#aae5e1cf4c47a6af6408a78b1e5823cdb">IsWallOrFence</a> &amp;&amp; taskBuild.<a class="code hl_variable" href="classTaskBuild.html#a89042e3f257f58dd6f7add40af4b672d">dir</a> != dir)</div>
+<div class="line"><span class="lineno">  347</span>            {</div>
+<div class="line"><span class="lineno">  348</span>                dir = (this.mold.dir = 2);</div>
+<div class="line"><span class="lineno">  349</span>            }</div>
+<div class="line"><span class="lineno">  350</span>            <a class="code hl_class" href="classCellDetail.html">CellDetail</a> detail = point.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a>;</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">if</span> (detail != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  352</span>            {</div>
+<div class="line"><span class="lineno">  353</span>                detail.<a class="code hl_variable" href="classCellDetail.html#a7b07584d994ec50ed5f78d809c2edd2a">designation</a>.<a class="code hl_function" href="classTask.html#a19951ce1e899cafbd2eef6955ab4be4e">Destroy</a>();</div>
+<div class="line"><span class="lineno">  354</span>            }</div>
+<div class="line"><span class="lineno">  355</span>        }</div>
+<div class="line"><span class="lineno">  356</span>        this.mold.bridgeHeight = this.<a class="code hl_variable" href="classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f">bridgeHeight</a>;</div>
+<div class="line"><span class="lineno">  357</span>        this.<a class="code hl_function" href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">SetAltitude</a>(this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>);</div>
+<div class="line"><span class="lineno">  358</span>        base.OnProcessTiles(point, dir);</div>
+<div class="line"><span class="lineno">  359</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_a4b113bb72fa32d65fb95a0a22d46483f"><div class="ttname"><a href="classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f">AM_Build.bridgeHeight</a></div><div class="ttdeci">int bridgeHeight</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00455">AM_Build.cs:455</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3da06753d1ee318d23771d684c34cd20"><div class="ttname"><a href="classPoint.html#a3da06753d1ee318d23771d684c34cd20">Point.HasDesignation</a></div><div class="ttdeci">bool HasDesignation</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00159">Point.cs:160</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aae5e1cf4c47a6af6408a78b1e5823cdb"><div class="ttname"><a href="classRecipe.html#aae5e1cf4c47a6af6408a78b1e5823cdb">Recipe.IsWallOrFence</a></div><div class="ttdeci">bool IsWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00192">Recipe.cs:193</a></div></div>
+<div class="ttc" id="aclassTaskBuild_html_a3e464e87eed4e43836f89064564eae75"><div class="ttname"><a href="classTaskBuild.html#a3e464e87eed4e43836f89064564eae75">TaskBuild.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00349">TaskBuild.cs:349</a></div></div>
+<div class="ttc" id="aclassTaskBuild_html_a89042e3f257f58dd6f7add40af4b672d"><div class="ttname"><a href="classTaskBuild.html#a89042e3f257f58dd6f7add40af4b672d">TaskBuild.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00352">TaskBuild.cs:352</a></div></div>
+<div class="ttc" id="aclassTask_html_a19951ce1e899cafbd2eef6955ab4be4e"><div class="ttname"><a href="classTask.html#a19951ce1e899cafbd2eef6955ab4be4e">Task.Destroy</a></div><div class="ttdeci">AIAct.Status Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00029">Task.cs:29</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00903">Recipe._dir</a>, <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>, <a class="el" href="AM__Build_8cs_source.html#l00455">bridgeHeight</a>, <a class="el" href="CellDetail_8cs_source.html#l00086">CellDetail.designation</a>, <a class="el" href="Task_8cs_source.html#l00029">Task.Destroy()</a>, <a class="el" href="Point_8cs_source.html#l00107">Point.detail</a>, <a class="el" href="TaskBuild_8cs_source.html#l00352">TaskBuild.dir</a>, <a class="el" href="Point_8cs_source.html#l00160">Point.HasDesignation</a>, <a class="el" href="Recipe_8cs_source.html#l00193">Recipe.IsWallOrFence</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, <a class="el" href="TaskBuild_8cs_source.html#l00349">TaskBuild.recipe</a>, and <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>.</p>
 
 </div>
 </div>
@@ -764,6 +1087,56 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00286">286</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>    {</div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  289</span>        {</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  291</span>        }</div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> is <a class="code hl_class" href="classRecipeBridgePillar.html">RecipeBridgePillar</a>)</div>
+<div class="line"><span class="lineno">  293</span>        {</div>
+<div class="line"><span class="lineno">  294</span>            base.OnRenderTile(point, result, dir);</div>
+<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">tileSelector</a>.<a class="code hl_variable" href="classBaseTileSelector.html#ab228cd7594b83ee2df14461c0415fcce">start</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  298</span>        {</div>
+<div class="line"><span class="lineno">  299</span>            this.<a class="code hl_function" href="classAM__Build.html#adccfb68497eb0152f5c1222b558af1da">FixBridge</a>(point, this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>);</div>
+<div class="line"><span class="lineno">  300</span>        }</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a6d007bf1eb74069f643227a978bcd9d4">IsFloorOrBridge</a> &amp;&amp; !<span class="keyword">this</span>.recipe.IsBridge &amp;&amp; point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#ad9e440b850957018738788fd3d259877">bridgeHeight</a> != 0)</div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>            base.OnRenderTileFloor(point, result);</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  305</span>        }</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (result != <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid &amp;&amp; result != <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning)</div>
+<div class="line"><span class="lineno">  307</span>        {</div>
+<div class="line"><span class="lineno">  308</span>            base.OnRenderTile(point, result, dir);</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  310</span>        }</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f">bridgeHeight</a> != -1)</div>
+<div class="line"><span class="lineno">  312</span>        {</div>
+<div class="line"><span class="lineno">  313</span>            Vector3 vector = *point.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">  314</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_variable" href="classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e">passGuideFloor</a>.<a class="code hl_function" href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">Add</a>(vector.x, vector.y, vector.z - 0.01f, (<span class="keywordtype">float</span>)result, 0f);</div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordtype">int</span> desiredDir = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_function" href="classTileType.html#ab0e2d32e4be2c7410c69978e77037a86">GetDesiredDir</a>(point, this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#aca331b776177d220f4c5fb9131d5bc54">_dir</a>);</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">if</span> (desiredDir != -1)</div>
+<div class="line"><span class="lineno">  318</span>        {</div>
+<div class="line"><span class="lineno">  319</span>            dir = (this.recipe._dir = desiredDir);</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordtype">bool</span> main = !base.tileSelector.multisize || (base.tileSelector.firstInMulti &amp;&amp; base.Summary.count == base.Summary.countValid);</div>
+<div class="line"><span class="lineno">  322</span>        this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_function" href="classRecipe.html#a896d49c1f56fb99c2e5657946f46992e">OnRenderMarker</a>(point, <span class="keyword">false</span>, result, main, dir, this.<a class="code hl_variable" href="classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f">bridgeHeight</a> + ((this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#a858b494afbf1c2c04c63d592b14e9691">AltitudeAsDir</a> &amp;&amp; !<span class="keyword">this</span>.IsRoofEditMode(<span class="keyword">null</span>)) ? 0 : this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>));</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
+<div class="ttc" id="aclassAM__Build_html_adccfb68497eb0152f5c1222b558af1da"><div class="ttname"><a href="classAM__Build.html#adccfb68497eb0152f5c1222b558af1da">AM_Build.FixBridge</a></div><div class="ttdeci">void FixBridge(Point point, Recipe recipe)</div><div class="ttdef"><b>Definition:</b> <a href="AM__Build_8cs_source.html#l00277">AM_Build.cs:277</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_ab228cd7594b83ee2df14461c0415fcce"><div class="ttname"><a href="classBaseTileSelector.html#ab228cd7594b83ee2df14461c0415fcce">BaseTileSelector.start</a></div><div class="ttdeci">Point start</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00498">BaseTileSelector.cs:498</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a158eea6c14dc4dedc1df1652d9495005"><div class="ttname"><a href="classMeshPass.html#a158eea6c14dc4dedc1df1652d9495005">MeshPass.Add</a></div><div class="ttdeci">unsafe void Add(Point point, float tile=0f, float color=0f)</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00033">MeshPass.cs:33</a></div></div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
+<div class="ttc" id="aclassRecipeBridgePillar_html"><div class="ttname"><a href="classRecipeBridgePillar.html">RecipeBridgePillar</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeBridgePillar_8cs_source.html#l00003">RecipeBridgePillar.cs:4</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6d007bf1eb74069f643227a978bcd9d4"><div class="ttname"><a href="classRecipe.html#a6d007bf1eb74069f643227a978bcd9d4">Recipe.IsFloorOrBridge</a></div><div class="ttdeci">virtual bool IsFloorOrBridge</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00140">Recipe.cs:141</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a896d49c1f56fb99c2e5657946f46992e"><div class="ttname"><a href="classRecipe.html#a896d49c1f56fb99c2e5657946f46992e">Recipe.OnRenderMarker</a></div><div class="ttdeci">virtual unsafe void OnRenderMarker(Point point, bool active, HitResult result, bool main, int dir, int bridgeHeight)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00629">Recipe.cs:629</a></div></div>
+<div class="ttc" id="aclassTileType_html_a858b494afbf1c2c04c63d592b14e9691"><div class="ttname"><a href="classTileType.html#a858b494afbf1c2c04c63d592b14e9691">TileType.AltitudeAsDir</a></div><div class="ttdeci">virtual bool AltitudeAsDir</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00369">TileType.cs:370</a></div></div>
+<div class="ttc" id="aclassTileType_html_ab0e2d32e4be2c7410c69978e77037a86"><div class="ttname"><a href="classTileType.html#ab0e2d32e4be2c7410c69978e77037a86">TileType.GetDesiredDir</a></div><div class="ttdeci">virtual int GetDesiredDir(Point p, int d)</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00701">TileType.cs:701</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00903">Recipe._dir</a>, <a class="el" href="MeshPass_8cs_source.html#l00033">MeshPass.Add()</a>, <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>, <a class="el" href="TileType_8cs_source.html#l00370">TileType.AltitudeAsDir</a>, <a class="el" href="AM__Build_8cs_source.html#l00455">bridgeHeight</a>, <a class="el" href="Cell_8cs_source.html#l01856">Cell.bridgeHeight</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="AM__Build_8cs_source.html#l00277">FixBridge()</a>, <a class="el" href="TileType_8cs_source.html#l00701">TileType.GetDesiredDir()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00861">BaseGameScreen.guide</a>, <a class="el" href="Recipe_8cs_source.html#l00141">Recipe.IsFloorOrBridge</a>, <a class="el" href="Recipe_8cs_source.html#l00629">Recipe.OnRenderMarker()</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00068">ScreenGuide.passGuideFloor</a>, <a class="el" href="Point_8cs_source.html#l00629">Point.Position()</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="BaseTileSelector_8cs_source.html#l00498">BaseTileSelector.start</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.tileSelector</a>, and <a class="el" href="Recipe_8cs_source.html#l00129">Recipe.tileType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00428">HotItemHeld.OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -791,7 +1164,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00176">176</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        base.SetCursorOnMap(CursorSystem.Build);</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a23ac87752d216d5f859f59ac9bfe5433" name="a23ac87752d216d5f859f59ac9bfe5433"></a>
@@ -818,6 +1194,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00393">393</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  394</span>    {</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a359cae3060cac19f2128b923bdfa12e6">CanRotate</a>)</div>
+<div class="line"><span class="lineno">  396</span>        {</div>
+<div class="line"><span class="lineno">  397</span>            SE.Rotate();</div>
+<div class="line"><span class="lineno">  398</span>            this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_function" href="classRecipe.html#a39d1201966828b2a7620f1e12ee1bc4d">Rotate</a>();</div>
+<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  400</span>        }</div>
+<div class="line"><span class="lineno">  401</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_a359cae3060cac19f2128b923bdfa12e6"><div class="ttname"><a href="classRecipe.html#a359cae3060cac19f2128b923bdfa12e6">Recipe.CanRotate</a></div><div class="ttdeci">virtual bool CanRotate</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00453">Recipe.cs:454</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a39d1201966828b2a7620f1e12ee1bc4d"><div class="ttname"><a href="classRecipe.html#a39d1201966828b2a7620f1e12ee1bc4d">Recipe.Rotate</a></div><div class="ttdeci">virtual void Rotate()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00775">Recipe.cs:775</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00454">Recipe.CanRotate</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="Recipe_8cs_source.html#l00775">Recipe.Rotate()</a>.</p>
 
 </div>
 </div>
@@ -846,6 +1234,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00444">444</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>    {</div>
+<div class="line"><span class="lineno">  446</span>        this.mold.altitude = a;</div>
+<div class="line"><span class="lineno">  447</span>        this.altitude = a;</div>
+<div class="line"><span class="lineno">  448</span>        this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_function" href="classRecipe.html#aeb751fb8ff11c6a0c7b0b026009fe6a0">OnChangeAltitude</a>(a);</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#a858b494afbf1c2c04c63d592b14e9691">AltitudeAsDir</a> &amp;&amp; !<span class="keyword">this</span>.IsRoofEditMode(<span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  450</span>        {</div>
+<div class="line"><span class="lineno">  451</span>            this.mold.dir = (this.recipe._dir = this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>);</div>
+<div class="line"><span class="lineno">  452</span>        }</div>
+<div class="line"><span class="lineno">  453</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_aeb751fb8ff11c6a0c7b0b026009fe6a0"><div class="ttname"><a href="classRecipe.html#aeb751fb8ff11c6a0c7b0b026009fe6a0">Recipe.OnChangeAltitude</a></div><div class="ttdeci">virtual void OnChangeAltitude(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00771">Recipe.cs:771</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>, <a class="el" href="TileType_8cs_source.html#l00370">TileType.AltitudeAsDir</a>, <a class="el" href="Recipe_8cs_source.html#l00771">Recipe.OnChangeAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00459">recipe</a>, and <a class="el" href="Recipe_8cs_source.html#l00129">Recipe.tileType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00430">ModAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00218">OnCreateMold()</a>, <a class="el" href="AM__Build_8cs_source.html#l00361">OnFinishProcessTiles()</a>, <a class="el" href="AM__Build_8cs_source.html#l00333">OnProcessTiles()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00203">StartBuild()</a>.</p>
 
 </div>
 </div>
@@ -884,6 +1286,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00203">203</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>    {</div>
+<div class="line"><span class="lineno">  205</span>        this.recipe = r;</div>
+<div class="line"><span class="lineno">  206</span>        this.button = _button;</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (!base.IsActive)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            base.Activate(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span>        base.CreateNewMold(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  212</span>        this.bridgeHeight = -1;</div>
+<div class="line"><span class="lineno">  213</span>        this.<a class="code hl_function" href="classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7">SetAltitude</a>(0);</div>
+<div class="line"><span class="lineno">  214</span>        base.Summary.SetRecipe(r);</div>
+<div class="line"><span class="lineno">  215</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.hud.hint.Refresh();</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00419">BuildMenu.RefreshCategory()</a>.</p>
 
 </div>
 </div>
@@ -912,6 +1332,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00082">82</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> this.bridgeHeight + (this.recipe.tileType.AltitudeAsDir ? 0 : this.<a class="code hl_variable" href="classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf">altitude</a>);</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AM__Build_8cs_source.html#l00457">altitude</a>.</p>
 
 </div>
 </div>
@@ -946,6 +1371,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00457">457</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RecipeCard_8cs_source.html#l00165">RecipeCard.CreateMold()</a>, <a class="el" href="AM__Build_8cs_source.html#l00430">ModAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00218">OnCreateMold()</a>, <a class="el" href="AM__Build_8cs_source.html#l00333">OnProcessTiles()</a>, <a class="el" href="AM__Build_8cs_source.html#l00286">OnRenderTile()</a>, <a class="el" href="UIPlaceHelper_8cs_source.html#l00006">UIPlaceHelper.Refresh()</a>, <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00082">TopHeight()</a>.</p>
+
 </div>
 </div>
 <a id="a4b113bb72fa32d65fb95a0a22d46483f" name="a4b113bb72fa32d65fb95a0a22d46483f"></a>
@@ -961,6 +1388,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00455">455</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00333">OnProcessTiles()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00252">TaskBuild.OnProgressComplete()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00286">OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -978,6 +1407,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00463">463</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00361">OnFinishProcessTiles()</a>.</p>
+
 </div>
 </div>
 <a id="a1c9b55489e0a3076e1636ddf6ada7ff9" name="a1c9b55489e0a3076e1636ddf6ada7ff9"></a>
@@ -994,6 +1425,8 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00465">465</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="RecipeCard_8cs_source.html#l00542">RecipeCard.Build()</a>.</p>
+
 </div>
 </div>
 <a id="a53b544fc59c344f015fc9f97f7dbfaf3" name="a53b544fc59c344f015fc9f97f7dbfaf3"></a>
@@ -1009,6 +1442,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00459">459</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00277">FixBridge()</a>, <a class="el" href="AM__Build_8cs_source.html#l00171">ForcedInstaComplete()</a>, <a class="el" href="AM__Build_8cs_source.html#l00162">GetGuidePass()</a>, <a class="el" href="ActionMode_8cs_source.html#l01562">ActionMode.GetHintText()</a>, <a class="el" href="AM__Build_8cs_source.html#l00224">HitTest()</a>, <a class="el" href="AM__Build_8cs_source.html#l00415">InputWheel()</a>, <a class="el" href="AM__Build_8cs_source.html#l00011">IsRoofEditMode()</a>, <a class="el" href="AM__Build_8cs_source.html#l00430">ModAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00325">OnBeforeProcessTiles()</a>, <a class="el" href="AM__Build_8cs_source.html#l00218">OnCreateMold()</a>, <a class="el" href="AM__Build_8cs_source.html#l00361">OnFinishProcessTiles()</a>, <a class="el" href="AM__Build_8cs_source.html#l00333">OnProcessTiles()</a>, <a class="el" href="AM__Build_8cs_source.html#l00286">OnRenderTile()</a>, <a class="el" href="AM__Build_8cs_source.html#l00393">RotateUnderMouse()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00444">SetAltitude()</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1469,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00058">58</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> this.recipe != <span class="keyword">null</span> &amp;&amp; !(this.recipe is <a class="code hl_class" href="classRecipeCard.html">RecipeCard</a>);</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassRecipeCard_html"><div class="ttname"><a href="classRecipeCard.html">RecipeCard</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeCard_8cs_source.html#l00006">RecipeCard.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1cc5016800110194bd994a6f3a28cdd1" name="a1cc5016800110194bd994a6f3a28cdd1"></a>
@@ -1058,7 +1500,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00066">66</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aadfa2372cbaa6ab2dbb96c1942f128e7" name="aadfa2372cbaa6ab2dbb96c1942f128e7"></a>
@@ -1082,7 +1530,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00123">123</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (recipe == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b">BoxType</a>.Box;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_function" href="classRecipe.html#aeb0b6af6cf49cfe7b8a435fee45f8829">GetBoxType</a>();</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html_a4265496d5196bab375a49a289d0f244b"><div class="ttname"><a href="classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b">BaseTileSelector.BoxType</a></div><div class="ttdeci">BoxType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00533">BaseTileSelector.cs:534</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aeb0b6af6cf49cfe7b8a435fee45f8829"><div class="ttname"><a href="classRecipe.html#aeb0b6af6cf49cfe7b8a435fee45f8829">Recipe.GetBoxType</a></div><div class="ttdeci">BaseTileSelector.BoxType GetBoxType()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00341">Recipe.cs:341</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af176d1b0c75e37c8febd395e5b59769f" name="af176d1b0c75e37c8febd395e5b59769f"></a>
@@ -1106,7 +1567,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00022">22</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBuildMenu.html">BuildMenu</a>.<a class="code hl_enumeration" href="classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299">Mode</a>.Build;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassBuildMenu_html_a42020f754bb7f8564cb3a8853597b299"><div class="ttname"><a href="classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299">BuildMenu.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="BuildMenu_8cs_source.html#l00723">BuildMenu.cs:724</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae998eaa806029f21d74fe2c82288bcbb" name="ae998eaa806029f21d74fe2c82288bcbb"></a>
@@ -1130,7 +1598,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00030">30</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> == <span class="keyword">null</span> || this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_variable" href="classRecipe.html#ac86551430faa913221c614b73b368e84">UseStock</a>)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> 10;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae812750799c078ee31b32f2edc14579c" name="ae812750799c078ee31b32f2edc14579c"></a>
@@ -1154,7 +1632,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00149">149</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (recipe == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a8725308b3668823e833db7036dd5f443">H</a>;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_a8725308b3668823e833db7036dd5f443"><div class="ttname"><a href="classRecipe.html#a8725308b3668823e833db7036dd5f443">Recipe.H</a></div><div class="ttdeci">virtual int H</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00267">Recipe.cs:268</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1484aa8b4dd861d3101c55d2f4516d51" name="a1484aa8b4dd861d3101c55d2f4516d51"></a>
@@ -1178,7 +1668,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00097">97</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (recipe == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6">HitType</a>.None;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#a3fe5cf2ea699656aa662804a4bf87f56">HitType</a>;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclassBaseTileSelector_html_aeb150efb90d481f6e6d19a43514de1a6"><div class="ttname"><a href="classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6">BaseTileSelector.HitType</a></div><div class="ttdeci">HitType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00524">BaseTileSelector.cs:525</a></div></div>
+<div class="ttc" id="aclassTileType_html_a3fe5cf2ea699656aa662804a4bf87f56"><div class="ttname"><a href="classTileType.html#a3fe5cf2ea699656aa662804a4bf87f56">TileType.HitType</a></div><div class="ttdeci">virtual BaseTileSelector.HitType HitType</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00601">TileType.cs:602</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35b5b604e9c1193061a9670f78165e91" name="a35b5b604e9c1193061a9670f78165e91"></a>
@@ -1202,7 +1705,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00136">136</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (recipe == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  142</span>            {</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#af249c1a508cebbbc321adc1560639378">W</a>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_af249c1a508cebbbc321adc1560639378"><div class="ttname"><a href="classRecipe.html#af249c1a508cebbbc321adc1560639378">Recipe.W</a></div><div class="ttdeci">virtual int W</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00255">Recipe.cs:256</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a623cf2b3721c945f06e1f8bf09bac21a" name="a623cf2b3721c945f06e1f8bf09bac21a"></a>
@@ -1226,7 +1741,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00050">50</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afce7bac41565c27511753064e595a9ff" name="afce7bac41565c27511753064e595a9ff"></a>
@@ -1250,7 +1771,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00042">42</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a92223aa73fa422cc2d2116e7f9509ff0" name="a92223aa73fa422cc2d2116e7f9509ff0"></a>
@@ -1274,6 +1801,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00403">403</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  404</span>    {</div>
+<div class="line"><span class="lineno">  405</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  406</span>        {</div>
+<div class="line"><span class="lineno">  407</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classAM__Build.html#a9e838e68e7fbe8dacc7654eb2d9e8709">IsRoofEditMode</a>(<span class="keyword">null</span>) || !(this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a> is <a class="code hl_class" href="classSourceBlock.html">SourceBlock</a>.<a class="code hl_class" href="classSourceBlock_1_1Row.html">Row</a>))</div>
+<div class="line"><span class="lineno">  408</span>            {</div>
+<div class="line"><span class="lineno">  409</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a97446d9f144851eee239e510affb2c5f">MaxAltitude</a>;</div>
+<div class="line"><span class="lineno">  410</span>            }</div>
+<div class="line"><span class="lineno">  411</span>            <span class="keywordflow">return</span> 63;</div>
+<div class="line"><span class="lineno">  412</span>        }</div>
+<div class="line"><span class="lineno">  413</span>    }</div>
+<div class="ttc" id="aclassRecipe_html_a5f08d818d63873d378c3b87bd5f04934"><div class="ttname"><a href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">Recipe.renderRow</a></div><div class="ttdeci">virtual RenderRow renderRow</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00112">Recipe.cs:113</a></div></div>
+<div class="ttc" id="aclassSourceBlock_1_1Row_html"><div class="ttname"><a href="classSourceBlock_1_1Row.html">SourceBlock.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00107">SourceBlock.cs:108</a></div></div>
+<div class="ttc" id="aclassSourceBlock_html"><div class="ttname"><a href="classSourceBlock.html">SourceBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00004">SourceBlock.cs:5</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ActionMode_8cs_source.html#l01562">ActionMode.GetHintText()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00430">ModAltitude()</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1840,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00074">74</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f">bridgeHeight</a>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac68b89b37049f2476222e12ce43cef49" name="ac68b89b37049f2476222e12ce43cef49"></a>
@@ -1322,16 +1870,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AM__Build_8cs_source.html#l00110">110</a> of file <a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_class" href="classRecipe.html">Recipe</a> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a> = this.<a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>;</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (recipe == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  116</span>            {</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileSelector.html">BaseTileSelector</a>.<a class="code hl_enumeration" href="classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1f">SelectType</a>.Single;</div>
+<div class="line"><span class="lineno">  118</span>            }</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAM__Build.html#a53b544fc59c344f015fc9f97f7dbfaf3">recipe</a>.<a class="code hl_property" href="classRecipe.html#a3d324d398c2b04a5384df28d7cebee16">tileType</a>.<a class="code hl_property" href="classTileType.html#a75c9998a41c9d0a9fd227051b0c8672e">SelectType</a>;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclassTileType_html_a75c9998a41c9d0a9fd227051b0c8672e"><div class="ttname"><a href="classTileType.html#a75c9998a41c9d0a9fd227051b0c8672e">TileType.SelectType</a></div><div class="ttdeci">virtual BaseTileSelector.SelectType SelectType</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00585">TileType.cs:586</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="AM__Build_8cs_source.html">AM_Build.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAM__Build.html">AM_Build</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

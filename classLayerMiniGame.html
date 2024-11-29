@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLayerMiniGame.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -209,6 +229,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a4232ed1de561b2d995253e55e6a480a8">SetNoGoal</a>();</div>
+<div class="line"><span class="lineno">    9</span>        EInput.Consume(<span class="keyword">true</span>, 1);</div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>)</div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassChara_html_a4232ed1de561b2d995253e55e6a480a8"><div class="ttname"><a href="classChara.html#a4232ed1de561b2d995253e55e6a480a8">Chara.SetNoGoal</a></div><div class="ttdeci">AIAct SetNoGoal()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07910">Chara.cs:7910</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html"><div class="ttname"><a href="classWidgetCurrentTool.html">WidgetCurrentTool</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00007">WidgetCurrentTool.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a026d2a629ff4d74acd15d5fe806bd04b"><div class="ttname"><a href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">WidgetCurrentTool.Instance</a></div><div class="ttdeci">static WidgetCurrentTool Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.cs:310</a></div></div>
+<div class="ttc" id="aclassWidgetEquip_html"><div class="ttname"><a href="classWidgetEquip.html">WidgetEquip</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetEquip_8cs_source.html#l00005">WidgetEquip.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetEquip_html_a1753986b456af886ef7e82f9ea10c92c"><div class="ttname"><a href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">WidgetEquip.Instance</a></div><div class="ttdeci">static WidgetEquip Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetEquip_8cs_source.html#l00137">WidgetEquip.cs:137</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00137">WidgetEquip.Instance</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="Chara_8cs_source.html#l07910">Chara.SetNoGoal()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -236,6 +279,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00042">42</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a> != <span class="keyword">null</span> &amp;&amp; !this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a>.<a class="code hl_function" href="classMiniGame.html#ac9e3840075a21dc0e617610a4f4f1719">CanExit</a>())</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> base.OnBack();</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassLayerMiniGame_html_a017680bed039c9f492ed608fa2c396e8"><div class="ttname"><a href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">LayerMiniGame.mini</a></div><div class="ttdeci">MiniGame mini</div><div class="ttdef"><b>Definition:</b> <a href="LayerMiniGame_8cs_source.html#l00080">LayerMiniGame.cs:80</a></div></div>
+<div class="ttc" id="aclassMiniGame_html_ac9e3840075a21dc0e617610a4f4f1719"><div class="ttname"><a href="classMiniGame.html#ac9e3840075a21dc0e617610a4f4f1719">MiniGame.CanExit</a></div><div class="ttdeci">virtual bool CanExit()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00090">MiniGame.cs:90</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00090">MiniGame.CanExit()</a>, and <a class="el" href="LayerMiniGame_8cs_source.html#l00080">mini</a>.</p>
 
 </div>
 </div>
@@ -263,6 +318,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00063">63</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a>.<a class="code hl_function" href="classMiniGame.html#ac3f960d254d0c26d8c74af2361c4cd87">Deactivate</a>();</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a>.<a class="code hl_variable" href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">Instance</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassMiniGame_html_ac3f960d254d0c26d8c74af2361c4cd87"><div class="ttname"><a href="classMiniGame.html#ac3f960d254d0c26d8c74af2361c4cd87">MiniGame.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00059">MiniGame.cs:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00059">MiniGame.Deactivate()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00310">WidgetCurrentTool.Instance</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00137">WidgetEquip.Instance</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00080">mini</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -290,6 +363,39 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00021">21</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a> == <span class="keyword">null</span> &amp;&amp; EInput.leftMouse.clicked)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            SE.Click();</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-10);</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>            Debug.Log(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.IsPauseGame);</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">string</span> str = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>.<a class="code hl_property" href="classActionMode.html#a71450cbdb462b951ff04a2f8c9e1d7d6">ShouldPauseGame</a>.ToString();</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">string</span> str2 = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a> actionMode = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>;</div>
+<div class="line"><span class="lineno">   32</span>            Debug.Log(str + str2 + ((actionMode != <span class="keyword">null</span>) ? actionMode.ToString() : <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">   33</span>            Debug.Log(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>.<a class="code hl_property" href="classActionMode.html#adcfbc9ac50366e79643e381f2a7ddf64">gameSpeed</a>);</div>
+<div class="line"><span class="lineno">   34</span>            Debug.Log(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#abae254127a569593cc928b22c316259e">turn</a>);</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#a5baabf25717e4393f49227ee45f01726">IsDisabled</a>)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                this.Close();</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a71450cbdb462b951ff04a2f8c9e1d7d6"><div class="ttname"><a href="classActionMode.html#a71450cbdb462b951ff04a2f8c9e1d7d6">ActionMode.ShouldPauseGame</a></div><div class="ttdeci">virtual bool ShouldPauseGame</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00252">ActionMode.cs:253</a></div></div>
+<div class="ttc" id="aclassActionMode_html_adcfbc9ac50366e79643e381f2a7ddf64"><div class="ttname"><a href="classActionMode.html#adcfbc9ac50366e79643e381f2a7ddf64">ActionMode.gameSpeed</a></div><div class="ttdeci">virtual float gameSpeed</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00068">ActionMode.cs:69</a></div></div>
+<div class="ttc" id="aclassCard_html_abae254127a569593cc928b22c316259e"><div class="ttname"><a href="classCard.html#abae254127a569593cc928b22c316259e">Card.turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07308">Card.cs:7308</a></div></div>
+<div class="ttc" id="aclassChara_html_a5baabf25717e4393f49227ee45f01726"><div class="ttname"><a href="classChara.html#a5baabf25717e4393f49227ee45f01726">Chara.IsDisabled</a></div><div class="ttdeci">override bool IsDisabled</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00467">Chara.cs:468</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08248">Chara.cs:8249</a></div></div>
+<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00196">Chara.cs:197</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0ab4ed57f34ce34e428ae56702787e05"><div class="ttname"><a href="classELayer.html#a0ab4ed57f34ce34e428ae56702787e05">ELayer.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00086">ELayer.cs:87</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a70760993376895e3e79c170a3ac751e9"><div class="ttname"><a href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">Player.EndTurn</a></div><div class="ttdeci">void EndTurn(bool consume=true)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00854">Player.cs:854</a></div></div>
+<div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01049">Scene.cs:1049</a></div></div>
+<div class="ttc" id="aclassStats_html_a2972d0d69579f77f16a038c181357c20"><div class="ttname"><a href="classStats.html#a2972d0d69579f77f16a038c181357c20">Stats.Mod</a></div><div class="ttdeci">virtual void Mod(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00112">Stats.cs:112</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l01049">Scene.actionMode</a>, <a class="el" href="Player_8cs_source.html#l00854">Player.EndTurn()</a>, <a class="el" href="ActionMode_8cs_source.html#l00069">ActionMode.gameSpeed</a>, <a class="el" href="Chara_8cs_source.html#l00197">Chara.isDead</a>, <a class="el" href="Chara_8cs_source.html#l00468">Chara.IsDisabled</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00080">mini</a>, <a class="el" href="Stats_8cs_source.html#l00112">Stats.Mod()</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="ELayer_8cs_source.html#l00087">ELayer.scene</a>, <a class="el" href="ActionMode_8cs_source.html#l00253">ActionMode.ShouldPauseGame</a>, <a class="el" href="Chara_8cs_source.html#l08249">Chara.stamina</a>, <a class="el" href="Card_8cs_source.html#l07308">Card.turn</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -317,6 +423,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00052">52</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        this.mini.balance.lastCoin = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;casino_coin&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>        this.mini.balance.changeCoin = 0;</div>
+<div class="line"><span class="lineno">   60</span>        this.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a>.<a class="code hl_function" href="classMiniGame.html#a8901d83bae518949c49d150a72280e06">OnActivate</a>();</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassCard_html_a6b8ed8f4280ec4fde249ed153321db75"><div class="ttname"><a href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">Card.GetCurrency</a></div><div class="ttdeci">int GetCurrency(string id=&quot;money&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03807">Card.cs:3807</a></div></div>
+<div class="ttc" id="aclassMiniGame_html_a8901d83bae518949c49d150a72280e06"><div class="ttname"><a href="classMiniGame.html#a8901d83bae518949c49d150a72280e06">MiniGame.OnActivate</a></div><div class="ttdeci">virtual void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00051">MiniGame.cs:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03807">Card.GetCurrency()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00080">mini</a>, <a class="el" href="MiniGame_8cs_source.html#l00051">MiniGame.OnActivate()</a>, and <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MiniGame_8cs_source.html#l00015">MiniGame.Activate()</a>.</p>
 
 </div>
 </div>
@@ -335,6 +456,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00080">80</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="LayerMiniGame_8cs_source.html#l00042">OnBack()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00063">OnKill()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00021">OnUpdateInput()</a>, and <a class="el" href="LayerMiniGame_8cs_source.html#l00052">Run()</a>.</p>
+
 </div>
 </div>
 <a id="a328589b85712ce9d356635f3551d16e3" name="a328589b85712ce9d356635f3551d16e3"></a>
@@ -351,15 +474,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerMiniGame_8cs_source.html#l00082">82</a> of file <a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MiniGame_8cs_source.html#l00105">MiniGame.OnPlay()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="LayerMiniGame_8cs_source.html">LayerMiniGame.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLayerMiniGame.html">LayerMiniGame</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>
