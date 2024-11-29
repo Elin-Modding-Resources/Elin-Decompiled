@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.41 hotfix1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.43 hotfix1</span>
    </div>
   </td>
  </tr>
@@ -694,7 +694,7 @@ $(function() {
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        {</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>            <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(a / 5 + num, 1, 5));</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num, 1, 5));</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>            this.&lt;<a class="code hl_function" href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Apply</a>&gt;<a class="code hl_function" href="classFeat.html#ad81c66c33242d720a67fe611391fe281">g__Note</a>|17_0(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), ref A_3);</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        }</div>
@@ -758,12 +758,12 @@ $(function() {
 <div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>}</div>
 <div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">Emo2.hint</a></div><div class="ttdeci">@ hint</div></div>
-<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01999">Card.cs:2000</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00331">Card.cs:332</a></div></div>
 <div class="ttc" id="aclassCharaBody_html_a5f69163ce90d4521c4303666e50bccf3"><div class="ttname"><a href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">CharaBody.UnequipAll</a></div><div class="ttdeci">void UnequipAll(int idSlot)</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00056">CharaBody.cs:56</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09409">Chara.cs:9409</a></div></div>
-<div class="ttc" id="aclassChara_html_aadee7ceb25515f2d8244fd5229f2acea"><div class="ttname"><a href="classChara.html#aadee7ceb25515f2d8244fd5229f2acea">Chara.faithElements</a></div><div class="ttdeci">ElementContainer faithElements</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09356">Chara.cs:9356</a></div></div>
+<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09410">Chara.cs:9410</a></div></div>
+<div class="ttc" id="aclassChara_html_aadee7ceb25515f2d8244fd5229f2acea"><div class="ttname"><a href="classChara.html#aadee7ceb25515f2d8244fd5229f2acea">Chara.faithElements</a></div><div class="ttdeci">ElementContainer faithElements</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09357">Chara.cs:9357</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
 <div class="ttc" id="aclassElementContainer_html"><div class="ttname"><a href="classElementContainer.html">ElementContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00010">ElementContainer.cs:11</a></div></div>
