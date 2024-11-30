@@ -294,6 +294,7 @@ var classCard =
     [ "c_IDTState", "classCard.html#a7a3e12b7aa6b7b1cb9ee14b81f8605ee", null ],
     [ "c_indexContainerIcon", "classCard.html#a3d5b1a9d02457be5a0f8d1fb9f49c041", null ],
     [ "c_invest", "classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef", null ],
+    [ "c_isDisableStockUse", "classCard.html#ad753744a62626b9e86a82e6eacef4517", null ],
     [ "c_isImportant", "classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6", null ],
     [ "c_isPrayed", "classCard.html#a66a3741ac2251b0da7d1a181f060397d", null ],
     [ "c_isTrained", "classCard.html#ae3817ffd1c5b2fa749a7f936515ba056", null ],

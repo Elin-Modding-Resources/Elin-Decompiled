@@ -104,6 +104,7 @@ var hierarchy =
     [ "CoreRef.Biomes", "classCoreRef_1_1Biomes.html", null ],
     [ "BLOCK", "classBLOCK.html", null ],
     [ "ColorProfile.BlockColors", "classColorProfile_1_1BlockColors.html", null ],
+    [ "Element.BonusInfo", "classElement_1_1BonusInfo.html", null ],
     [ "CoreRef.ButtonAssets", "classCoreRef_1_1ButtonAssets.html", null ],
     [ "CoreConfig.CameraConfig", "classCoreConfig_1_1CameraConfig.html", null ],
     [ "CardBlueprint", "classCardBlueprint.html", null ],

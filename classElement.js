@@ -1,12 +1,13 @@
 var classElement =
 [
+    [ "BonusInfo", "classElement_1_1BonusInfo.html", "classElement_1_1BonusInfo" ],
     [ "_WriteNote", "classElement.html#a44ec7d5b4683382abeda62c48e135e7f", null ],
     [ "_WriteNote", "classElement.html#ab4417f7aaa68076323cb399f346b58e8", null ],
     [ "CanLink", "classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34", null ],
     [ "CheckLevelBonus", "classElement.html#a6cfa1c445cd30ebe7c711a708fb069e8", null ],
     [ "Create", "classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e", null ],
     [ "Create", "classElement.html#a1300980d6fb4c23ef2b5727fc069844a", null ],
-    [ "g__Calc", "classElement.html#ac20de1b80d7a36e8bf3ee0eec8b5f45d", null ],
+    [ "g__Calc", "classElement.html#a5b997c4b6ae926539eefdd125cedbaa6", null ],
     [ "Get", "classElement.html#a45f91ccb1f460e77365964d80c24f3ba", null ],
     [ "GetCost", "classElement.html#a8ef0315fd456856fc442d460c5f7e310", null ],
     [ "GetDetail", "classElement.html#ac5cae304f4459e17b25fc9e87ebd958b", null ],
@@ -74,6 +75,7 @@ var classElement =
     [ "Potential", "classElement.html#a30300b8ad7b1c9e0d698c379ec93dfb8", null ],
     [ "PotentialAsStock", "classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398", null ],
     [ "ShortName", "classElement.html#afeba135500efd368d722410549c45457", null ],
+    [ "ShowBonuses", "classElement.html#a9b30a5bac9df19d822115383ad5761d3", null ],
     [ "ShowEncNumber", "classElement.html#a8f3cb9cd4f2d298d0349f2ef52a1dce2", null ],
     [ "ShowMsgOnValueChanged", "classElement.html#a0b7664e3a873ce2b533e36c447fc71f4", null ],
     [ "ShowPotential", "classElement.html#a0ab6e331a50e07734e58af38f0ff2fe0", null ],

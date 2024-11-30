@@ -33,6 +33,7 @@ var classLayerDragGrid =
     [ "buttonOwner", "classLayerDragGrid.html#ae1d1d17dda72f215e1dd7d3240c671c2", null ],
     [ "buttonRefuel", "classLayerDragGrid.html#a5ef3b5511814449e79e03a69ffc36b22", null ],
     [ "buttons", "classLayerDragGrid.html#a9602a9ccea8e02b387dc484274c27141", null ],
+    [ "buttonStock", "classLayerDragGrid.html#a64f55df9ac1cbfd1b9649693b9a7e3f0", null ],
     [ "currentIndex", "classLayerDragGrid.html#aebd8182ba46fe14d20b17dd0393e1b29", null ],
     [ "imageOwner", "classLayerDragGrid.html#aeab4a72fddc1e45f378adb74845738f9", null ],
     [ "info", "classLayerDragGrid.html#a4032732849ccbb4cd4923b0410a2a062", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.43 hotfix1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.44</span>
    </div>
   </td>
  </tr>
@@ -143,23 +143,29 @@ $(document).ready(function(){initNavTree('MiniGame__Blackjack_8cs_source.html','
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this.game.Money = this.balance.lastCoin;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">   52</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">OnDeactivate</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classMiniGame__Blackjack.html#aee53c1ddc658317d9b60a39fbaaf4f85">   52</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Blackjack.html#aee53c1ddc658317d9b60a39fbaaf4f85">SlidePosition</a>(<span class="keywordtype">float</span> w)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        this.balance.changeCoin = this.game.Money - this.balance.lastCoin;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.isGameStarted)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            this.balance.changeCoin += this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.chips;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        base.Kill();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">   62</a></span>    <span class="keyword">public</span> Blackjack <a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        this.game.transCanvas.anchoredPosition = <span class="keyword">new</span> Vector2(w / 2f, 75f);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">   57</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">OnDeactivate</a>()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        this.balance.changeCoin = this.game.Money - this.balance.lastCoin;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.isGameStarted)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            this.balance.changeCoin += this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.chips;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        base.Kill();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">   67</a></span>    <span class="keyword">public</span> Blackjack <a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 <div class="ttc" id="aclassMiniGame__Blackjack_html"><div class="ttname"><a href="classMiniGame__Blackjack.html">MiniGame_Blackjack</a></div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00005">MiniGame_Blackjack.cs:6</a></div></div>
-<div class="ttc" id="aclassMiniGame__Blackjack_html_a09c339f0f4ba29c91a60fcec7dd47b5e"><div class="ttname"><a href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">MiniGame_Blackjack.prefab</a></div><div class="ttdeci">Blackjack prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00062">MiniGame_Blackjack.cs:62</a></div></div>
+<div class="ttc" id="aclassMiniGame__Blackjack_html_a09c339f0f4ba29c91a60fcec7dd47b5e"><div class="ttname"><a href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">MiniGame_Blackjack.prefab</a></div><div class="ttdeci">Blackjack prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00067">MiniGame_Blackjack.cs:67</a></div></div>
 <div class="ttc" id="aclassMiniGame__Blackjack_html_aa8389a8a00db37606a968f0512c20ae7"><div class="ttname"><a href="classMiniGame__Blackjack.html#aa8389a8a00db37606a968f0512c20ae7">MiniGame_Blackjack.OnActivate</a></div><div class="ttdeci">override void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00020">MiniGame_Blackjack.cs:20</a></div></div>
 <div class="ttc" id="aclassMiniGame__Blackjack_html_ad3afa057dd04100a5164b9b36cc6e347"><div class="ttname"><a href="classMiniGame__Blackjack.html#ad3afa057dd04100a5164b9b36cc6e347">MiniGame_Blackjack.CanExit</a></div><div class="ttdeci">override bool CanExit()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00015">MiniGame_Blackjack.cs:15</a></div></div>
-<div class="ttc" id="aclassMiniGame__Blackjack_html_aeaba3b955b0c07ede7902d62511bc119"><div class="ttname"><a href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">MiniGame_Blackjack.OnDeactivate</a></div><div class="ttdeci">override void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00052">MiniGame_Blackjack.cs:52</a></div></div>
+<div class="ttc" id="aclassMiniGame__Blackjack_html_aeaba3b955b0c07ede7902d62511bc119"><div class="ttname"><a href="classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119">MiniGame_Blackjack.OnDeactivate</a></div><div class="ttdeci">override void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00057">MiniGame_Blackjack.cs:57</a></div></div>
+<div class="ttc" id="aclassMiniGame__Blackjack_html_aee53c1ddc658317d9b60a39fbaaf4f85"><div class="ttname"><a href="classMiniGame__Blackjack.html#aee53c1ddc658317d9b60a39fbaaf4f85">MiniGame_Blackjack.SlidePosition</a></div><div class="ttdeci">override void SlidePosition(float w)</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00052">MiniGame_Blackjack.cs:52</a></div></div>
 <div class="ttc" id="aclassModMinigame_html"><div class="ttname"><a href="classModMinigame.html">ModMinigame</a></div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00004">ModMinigame.cs:5</a></div></div>
 <div class="ttc" id="aclassModMinigame_html_a0c2512181f347ccc48e966d285225aac"><div class="ttname"><a href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">ModMinigame&lt; Blackjack &gt;::game</a></div><div class="ttdeci">T game</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00032">ModMinigame.cs:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

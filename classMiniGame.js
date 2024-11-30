@@ -19,6 +19,7 @@ var classMiniGame =
     [ "RegisterMiniGame", "classMiniGame.html#a1a8deb0f248753f137d64a61b2d30a01", null ],
     [ "Say", "classMiniGame.html#aca40b6dd9568979ce74b2a3dc9e09ef6", null ],
     [ "SetAudioMixer", "classMiniGame.html#a4456c4bf760b7da110ba58cbc76dc6d7", null ],
+    [ "SlidePosition", "classMiniGame.html#afcda7ba48b8833a6b0ef1f1c512843f3", null ],
     [ "asset", "classMiniGame.html#a5984df8380fd9f404bdd311f798aefda", null ],
     [ "balance", "classMiniGame.html#a2f1dc3250f733202d1d59b9027d8d1b1", null ],
     [ "go", "classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00", null ],

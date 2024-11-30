@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['w_0',['w',['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig.GraphicSetting.w()']]],
+  ['w_0',['w',['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig::GraphicSetting']]],
   ['w_1',['W',['../classRenderRow.html#a430cf4dd98a65d9e4ec2458b62de39ef',1,'RenderRow']]],
-  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()']]],
+  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()'],['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()']]],
   ['waist_3',['waist',['../classSLOT.html#a59f7f87538a64701a7e37f8c9ec1911c',1,'SLOT']]],
   ['wait_4',['Wait',['../classABILITY.html#a1126c6a12c07ed4e5af5321f4ec790bd',1,'ABILITY']]],
   ['wait_5',['wait',['../classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3',1,'DynamicAIAct']]],
@@ -113,8 +113,8 @@ var searchData=
   ['willautosave_110',['willAutoSave',['../classPlayer.html#a6231e2660aa1a43c1028a6e97ff08ae1',1,'Player']]],
   ['willendturn_111',['willEndTurn',['../classAM__Adv_1_1PressedAction.html#afcb50c7f03684c74daacb51fb4106649',1,'AM_Adv.PressedAction.willEndTurn()'],['../classPlayer.html#ae0a6d7d3d899ced46feaa99211dd70ed',1,'Player.willEndTurn()']]],
   ['wind_112',['Wind',['../classReligionManager.html#a036902825c693160d49a77bdd20db539',1,'ReligionManager']]],
-  ['window_113',['window',['../classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6',1,'ListOwner.window()'],['../classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71',1,'UIDragGridInfo.window()'],['../classUIInventory.html#ae720165e271881453db3251ae1356281',1,'UIInventory.window()'],['../classWidgetMemo.html#aaa19f33f66ab80f0de0cf972c64b054f',1,'WidgetMemo.window()']]],
-  ['window_114',['Window',['../classTileType.html#a59887377dd0f7f7246fb7e58657a44b7',1,'TileType']]],
+  ['window_113',['Window',['../classTileType.html#a59887377dd0f7f7246fb7e58657a44b7',1,'TileType']]],
+  ['window_114',['window',['../classListOwner.html#a9d3273fa305bf8fddb90262d603af6d6',1,'ListOwner.window()'],['../classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71',1,'UIDragGridInfo.window()'],['../classUIInventory.html#ae720165e271881453db3251ae1356281',1,'UIInventory.window()'],['../classWidgetMemo.html#aaa19f33f66ab80f0de0cf972c64b054f',1,'WidgetMemo.window()']]],
   ['windowallyinv_115',['windowAllyInv',['../classPlayer.html#a3609bf4c85562d1cbfcd07c4b8977071',1,'Player']]],
   ['windowchara_116',['windowChara',['../classUIInspector.html#a5129b2f70594b2ed16f47633c708dd34',1,'UIInspector.windowChara()'],['../classLayerChara.html#a756d9de6f937621249d42f612cbb8414',1,'LayerChara.windowChara()'],['../classLayerInteraction.html#a9b32f637eebba648eeacfbf519d92429',1,'LayerInteraction.windowChara()']]],
   ['windowcorner_117',['windowCorner',['../classUIHangIcon.html#a1bd945d4587ffd648e4064decd0e60d5',1,'UIHangIcon']]],

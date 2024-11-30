@@ -194,7 +194,7 @@ var classChara =
     [ "PickOrDrop", "classChara.html#a8934364893edc1418b613b346f6866de", null ],
     [ "Refresh", "classChara.html#a072be17eb82fa2059622c2d9c45a9673", null ],
     [ "RefreshFaithElement", "classChara.html#aade57562e3f4943d9bd0965d73553f52", null ],
-    [ "RefreshSpeed", "classChara.html#af320feee077597353cfcded6437fa1a8", null ],
+    [ "RefreshSpeed", "classChara.html#ab64fc6638b91c6205fa35e8e18b590f2", null ],
     [ "RefreshWorkElements", "classChara.html#a30f7c1afe3fea2b732490af476a54b77", null ],
     [ "ReleaseMinion", "classChara.html#a4f9d8ccce19d6289d45b9e058cfd2c34", null ],
     [ "RemoveCondition< T >", "classChara.html#aa5d80b670eca04fbcbcb3fc80baf817e", null ],

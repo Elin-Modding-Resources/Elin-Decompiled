@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.43 hotfix1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.44</span>
    </div>
   </td>
  </tr>
@@ -136,18 +136,24 @@ $(document).ready(function(){initNavTree('MiniGame__Basket_8cs_source.html','');
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        EClass.scene.audioListener.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">   45</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">OnDeactivate</a>()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classMiniGame__Basket.html#a2dd727ad662fe5f3d66101cd689cdc96">   45</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Basket.html#a2dd727ad662fe5f3d66101cd689cdc96">SlidePosition</a>(<span class="keywordtype">float</span> w)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        base.Kill();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        EClass.scene.audioListener.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">   51</a></span>    <span class="keyword">public</span> Shooter <a class="code hl_variable" href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">prefab</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.transCanvas.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(w / 2f, 0f);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">   50</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">OnDeactivate</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        base.Kill();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        EClass.scene.audioListener.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">   56</a></span>    <span class="keyword">public</span> Shooter <a class="code hl_variable" href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">prefab</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
 <div class="ttc" id="aclassMiniGame__Basket_html"><div class="ttname"><a href="classMiniGame__Basket.html">MiniGame_Basket</a></div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00004">MiniGame_Basket.cs:5</a></div></div>
+<div class="ttc" id="aclassMiniGame__Basket_html_a2dd727ad662fe5f3d66101cd689cdc96"><div class="ttname"><a href="classMiniGame__Basket.html#a2dd727ad662fe5f3d66101cd689cdc96">MiniGame_Basket.SlidePosition</a></div><div class="ttdeci">override void SlidePosition(float w)</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00045">MiniGame_Basket.cs:45</a></div></div>
 <div class="ttc" id="aclassMiniGame__Basket_html_a41d9dcbe5364d3f07b9b9adab70d8f4d"><div class="ttname"><a href="classMiniGame__Basket.html#a41d9dcbe5364d3f07b9b9adab70d8f4d">MiniGame_Basket.OnActivate</a></div><div class="ttdeci">override void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00014">MiniGame_Basket.cs:14</a></div></div>
-<div class="ttc" id="aclassMiniGame__Basket_html_a785a18d26793cf02ec49d95e5aa284d6"><div class="ttname"><a href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">MiniGame_Basket.OnDeactivate</a></div><div class="ttdeci">override void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00045">MiniGame_Basket.cs:45</a></div></div>
-<div class="ttc" id="aclassMiniGame__Basket_html_a97f37b74b9f4c1b0cfb451fb6fe9e026"><div class="ttname"><a href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">MiniGame_Basket.prefab</a></div><div class="ttdeci">Shooter prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00051">MiniGame_Basket.cs:51</a></div></div>
+<div class="ttc" id="aclassMiniGame__Basket_html_a785a18d26793cf02ec49d95e5aa284d6"><div class="ttname"><a href="classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6">MiniGame_Basket.OnDeactivate</a></div><div class="ttdeci">override void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00050">MiniGame_Basket.cs:50</a></div></div>
+<div class="ttc" id="aclassMiniGame__Basket_html_a97f37b74b9f4c1b0cfb451fb6fe9e026"><div class="ttname"><a href="classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026">MiniGame_Basket.prefab</a></div><div class="ttdeci">Shooter prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Basket_8cs_source.html#l00056">MiniGame_Basket.cs:56</a></div></div>
 <div class="ttc" id="aclassModMinigame_html"><div class="ttname"><a href="classModMinigame.html">ModMinigame</a></div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00004">ModMinigame.cs:5</a></div></div>
 <div class="ttc" id="aclassModMinigame_html_a0c2512181f347ccc48e966d285225aac"><div class="ttname"><a href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">ModMinigame&lt; Shooter &gt;::game</a></div><div class="ttdeci">T game</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00032">ModMinigame.cs:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

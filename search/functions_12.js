@@ -130,7 +130,7 @@ var searchData=
   ['refreshskill_127',['RefreshSkill',['../classWindowChara.html#aee0ab664bc701552793f2d1cffc3a84e',1,'WindowChara']]],
   ['refreshsky_128',['RefreshSky',['../classBaseGameScreen.html#ace7e04df042a675049e0b1a3ffad955f',1,'BaseGameScreen']]],
   ['refreshslots_129',['RefreshSlots',['../classLayerFaith.html#a63ddcbb76a1d1dbaf5858393bb9b6fa2',1,'LayerFaith']]],
-  ['refreshspeed_130',['RefreshSpeed',['../classChara.html#af320feee077597353cfcded6437fa1a8',1,'Chara']]],
+  ['refreshspeed_130',['RefreshSpeed',['../classChara.html#ab64fc6638b91c6205fa35e8e18b590f2',1,'Chara']]],
   ['refreshspots_131',['RefreshSpots',['../classLayerHome.html#af5a9b4904d826d9ef5b36f77f6fee355',1,'LayerHome']]],
   ['refreshsprite_132',['RefreshSprite',['../classCardActor.html#aa21a26b970022f688a9a32324f08e665',1,'CardActor.RefreshSprite()'],['../classCardRenderer.html#a3a6ffd1f1d8e607644d90f1b395be715',1,'CardRenderer.RefreshSprite()'],['../classCharaActor.html#ad09021b9b657eef4060dfb01f48e1236',1,'CharaActor.RefreshSprite()'],['../classCharaActorPCC.html#a7418b54118594bb70864c4cab537ee54',1,'CharaActorPCC.RefreshSprite()']]],
   ['refreshstateicon_133',['RefreshStateIcon',['../classCharaRenderer.html#a19a184e0e1037f635ab7090f2735658c',1,'CharaRenderer.RefreshStateIcon()'],['../classCardRenderer.html#a65ed18379e57b036b79a734c9919eb64',1,'CardRenderer.RefreshStateIcon()']]],

@@ -16,7 +16,7 @@ var classElementContainer =
     [ "CopyTo", "classElementContainer.html#a88a3cce1a14956cccef57e5bbf01fb24", null ],
     [ "CreateElement", "classElementContainer.html#ae702551253bf995ae2f5ad227d05ad13", null ],
     [ "Exp", "classElementContainer.html#a2d8ff0e0edc328c7afabb5a1e9ca0c14", null ],
-    [ "g__AddElements", "classElementContainer.html#a94fae9123bf7a13348e22cff36d14c60", null ],
+    [ "g__AddElements", "classElementContainer.html#a8afe3bb364986c652bb57cf68dccf67e", null ],
     [ "GetElement", "classElementContainer.html#ab18b5bb5c9177fa27c20dbe6b8d22e54", null ],
     [ "GetElement", "classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2", null ],
     [ "GetFeatRef", "classElementContainer.html#ab2dad57b0d19bb39c3eabaafb908ea9f", null ],

@@ -1,8 +1,8 @@
 var searchData=
 [
   ['quake_0',['Quake',['../classMap.html#aef166d9285541ac468df053d7e19041a',1,'Map.Quake()'],['../AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dac64c84c88b991458b38eeaaa0bbd44cb',1,'Quake():&#160;AnimeID.cs']]],
-  ['quality_1',['Quality',['../classCard.html#a8f2038e589c52be7dac3f2f2be6cb01e',1,'Card']]],
-  ['quality_2',['quality',['../classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903',1,'CardRow.quality()'],['../classCoreRef_1_1Icons.html#a37c4a59b14d366f7717b495df67e6c9c',1,'CoreRef.Icons.quality()'],['../classELEMENT.html#a8b88fabbdc12e1c405fd2f9773bbdb7f',1,'ELEMENT.quality()'],['../classSourceMaterial_1_1Row.html#a8400ca222c3dff6afdf29004eee489b2',1,'SourceMaterial.Row.quality()']]],
+  ['quality_1',['quality',['../classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903',1,'CardRow.quality()'],['../classCoreRef_1_1Icons.html#a37c4a59b14d366f7717b495df67e6c9c',1,'CoreRef.Icons.quality()'],['../classELEMENT.html#a8b88fabbdc12e1c405fd2f9773bbdb7f',1,'ELEMENT.quality()'],['../classSourceMaterial_1_1Row.html#a8400ca222c3dff6afdf29004eee489b2',1,'SourceMaterial.Row.quality()']]],
+  ['quality_2',['Quality',['../classCard.html#a8f2038e589c52be7dac3f2f2be6cb01e',1,'Card']]],
   ['qualitybarwidth_3',['qualityBarWidth',['../classLayerCraft.html#ab5e07c48629867a9702a48ca6ab944c7',1,'LayerCraft']]],
   ['qualitybonus_4',['qualityBonus',['../classCardBlueprint.html#a4fe21cf7f452ebaa644c881b3e566b5c',1,'CardBlueprint']]],
   ['qualitylv_5',['QualityLv',['../classCard.html#afb1f6856af8994dababd0ecb4c7ad901',1,'Card']]],
